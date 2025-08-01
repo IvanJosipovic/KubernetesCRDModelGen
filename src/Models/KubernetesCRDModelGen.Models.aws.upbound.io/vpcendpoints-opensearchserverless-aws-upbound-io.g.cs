@@ -180,11 +180,11 @@ public partial class V1beta1VPCEndpointSpecForProviderVpcIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecForProvider
 {
-    /// <summary>Name of the interface endpoint.</summary>
+    /// <summary>Name of the interface endpoint. Name of the interface endpoint.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -196,7 +196,7 @@ public partial class V1beta1VPCEndpointSpecForProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1VPCEndpointSpecForProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.</summary>
+    /// <summary>One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided. One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -208,11 +208,11 @@ public partial class V1beta1VPCEndpointSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1VPCEndpointSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.</summary>
+    /// <summary>One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided. One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
-    /// <summary>ID of the VPC from which you'll access OpenSearch Serverless.</summary>
+    /// <summary>ID of the VPC from which you'll access OpenSearch Serverless. ID of the VPC from which you'll access OpenSearch Serverless.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 
@@ -397,7 +397,7 @@ public partial class V1beta1VPCEndpointSpecInitProviderVpcIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSpecInitProvider
 {
-    /// <summary>Name of the interface endpoint.</summary>
+    /// <summary>Name of the interface endpoint. Name of the interface endpoint.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -409,7 +409,7 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1VPCEndpointSpecInitProviderSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.</summary>
+    /// <summary>One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided. One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -421,11 +421,11 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1VPCEndpointSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.</summary>
+    /// <summary>One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided. One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
-    /// <summary>ID of the VPC from which you'll access OpenSearch Serverless.</summary>
+    /// <summary>ID of the VPC from which you'll access OpenSearch Serverless. ID of the VPC from which you'll access OpenSearch Serverless.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 
@@ -578,19 +578,23 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Name of the interface endpoint.</summary>
+    /// <summary>Name of the interface endpoint. Name of the interface endpoint.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided. One or more security groups that define the ports, protocols, and sources for inbound traffic that you are authorizing into your endpoint. Up to 5 security groups can be provided.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.</summary>
+    /// <summary>One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided. One or more subnet IDs from which you'll access OpenSearch Serverless. Up to 6 subnets can be provided.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
-    /// <summary>ID of the VPC from which you'll access OpenSearch Serverless.</summary>
+    /// <summary>ID of the VPC from which you'll access OpenSearch Serverless. ID of the VPC from which you'll access OpenSearch Serverless.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }

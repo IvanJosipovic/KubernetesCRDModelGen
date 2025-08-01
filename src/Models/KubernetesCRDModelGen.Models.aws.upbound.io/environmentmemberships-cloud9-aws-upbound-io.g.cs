@@ -140,7 +140,7 @@ public partial class V1beta1EnvironmentMembershipSpecForProvider
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -313,6 +313,10 @@ public partial class V1beta1EnvironmentMembershipStatusAtProvider
     /// <summary>The type of environment member permissions you want to associate with this environment member. Allowed values are read-only and read-write .</summary>
     [JsonPropertyName("permissions")]
     public string? Permissions { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the environment member you want to add.</summary>
     [JsonPropertyName("userArn")]

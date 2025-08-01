@@ -372,6 +372,10 @@ public partial class V1beta1AccessPolicyAssociationStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
+
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

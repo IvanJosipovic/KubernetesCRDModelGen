@@ -176,32 +176,7 @@ public partial class V1beta1ClusterSpecForProviderKmsKeyIdSelector
     public V1beta1ClusterSpecForProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecForProviderLogging
-{
-    /// <summary>The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions. For more information on the permissions required for the bucket, please read the AWS documentation</summary>
-    [JsonPropertyName("bucketName")]
-    public string? BucketName { get; set; }
-
-    /// <summary>Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.</summary>
-    [JsonPropertyName("enable")]
-    public bool? Enable { get; set; }
-
-    /// <summary>The log destination type. An enum with possible values of s3 and cloudwatch.</summary>
-    [JsonPropertyName("logDestinationType")]
-    public string? LogDestinationType { get; set; }
-
-    /// <summary>The collection of exported log types. Log types include the connection log, user log and user activity log. Required when log_destination_type is cloudwatch. Valid log types are connectionlog, userlog, and useractivitylog.</summary>
-    [JsonPropertyName("logExports")]
-    public IList<string>? LogExports { get; set; }
-
-    /// <summary>The prefix applied to the log file names.</summary>
-    [JsonPropertyName("s3KeyPrefix")]
-    public string? S3KeyPrefix { get; set; }
-}
-
-/// <summary>Password for the master DB user. Conflicts with manage_master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
+/// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password_wo. One of master_password, master_password_wo or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderMasterPasswordSecretRef
 {
@@ -218,21 +193,21 @@ public partial class V1beta1ClusterSpecForProviderMasterPasswordSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password. One of master_password_wo, master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecForProviderSnapshotCopy
+public partial class V1beta1ClusterSpecForProviderMasterPasswordWoSecretRef
 {
-    /// <summary>The destination region that you want to copy snapshots to.</summary>
-    [JsonPropertyName("destinationRegion")]
-    public string? DestinationRegion { get; set; }
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
 
-    /// <summary>The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.</summary>
-    [JsonPropertyName("grantName")]
-    public string? GrantName { get; set; }
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
 
-    /// <summary>The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to 7.</summary>
-    [JsonPropertyName("retentionPeriod")]
-    public double? RetentionPeriod { get; set; }
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -323,14 +298,6 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("clusterParameterGroupName")]
     public string? ClusterParameterGroupName { get; set; }
 
-    /// <summary>The public key for the cluster</summary>
-    [JsonPropertyName("clusterPublicKey")]
-    public string? ClusterPublicKey { get; set; }
-
-    /// <summary>The specific revision number of the database in the cluster</summary>
-    [JsonPropertyName("clusterRevisionNumber")]
-    public string? ClusterRevisionNumber { get; set; }
-
     /// <summary>The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).</summary>
     [JsonPropertyName("clusterSubnetGroupName")]
     public string? ClusterSubnetGroupName { get; set; }
@@ -363,13 +330,9 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("elasticIp")]
     public string? ElasticIp { get; set; }
 
-    /// <summary>If true , the data in the cluster is encrypted at rest.</summary>
+    /// <summary>If true , the data in the cluster is encrypted at rest. Default is true.</summary>
     [JsonPropertyName("encrypted")]
-    public bool? Encrypted { get; set; }
-
-    /// <summary>The connection endpoint</summary>
-    [JsonPropertyName("endpoint")]
-    public string? Endpoint { get; set; }
+    public string? Encrypted { get; set; }
 
     /// <summary>If true , enhanced VPC routing is enabled.</summary>
     [JsonPropertyName("enhancedVpcRouting")]
@@ -403,15 +366,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1ClusterSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Logging, documented below.</summary>
-    [JsonPropertyName("logging")]
-    public IList<V1beta1ClusterSpecForProviderLogging>? Logging { get; set; }
-
     /// <summary>The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of  a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks. Default value is current.</summary>
     [JsonPropertyName("maintenanceTrackName")]
     public string? MaintenanceTrackName { get; set; }
 
-    /// <summary>Whether to use AWS SecretsManager to manage the cluster admin credentials. Conflicts with master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided.</summary>
+    /// <summary>Whether to use AWS SecretsManager to manage the cluster admin credentials. Conflicts with master_password and master_password_wo. One of master_password or manage_master_password is required unless snapshot_identifier is provided.</summary>
     [JsonPropertyName("manageMasterPassword")]
     public bool? ManageMasterPassword { get; set; }
 
@@ -423,9 +382,17 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("masterPasswordSecretKmsKeyId")]
     public string? MasterPasswordSecretKmsKeyId { get; set; }
 
-    /// <summary>Password for the master DB user. Conflicts with manage_master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
+    /// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password_wo. One of master_password, master_password_wo or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
     [JsonPropertyName("masterPasswordSecretRef")]
     public V1beta1ClusterSpecForProviderMasterPasswordSecretRef? MasterPasswordSecretRef { get; set; }
+
+    /// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password. One of master_password_wo, master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
+    [JsonPropertyName("masterPasswordWoSecretRef")]
+    public V1beta1ClusterSpecForProviderMasterPasswordWoSecretRef? MasterPasswordWoSecretRef { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
 
     /// <summary>Username for the master DB user.</summary>
     [JsonPropertyName("masterUsername")]
@@ -455,11 +422,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>If true, the cluster can be accessed from a public network. Default is true.</summary>
+    /// <summary>If true, the cluster can be accessed from a public network. Default is false.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -474,10 +441,6 @@ public partial class V1beta1ClusterSpecForProvider
     /// <summary>The name of the cluster the source snapshot was created from.</summary>
     [JsonPropertyName("snapshotClusterIdentifier")]
     public string? SnapshotClusterIdentifier { get; set; }
-
-    /// <summary>Configuration of automatic copy of snapshots from one region to another. Documented below.</summary>
-    [JsonPropertyName("snapshotCopy")]
-    public IList<V1beta1ClusterSpecForProviderSnapshotCopy>? SnapshotCopy { get; set; }
 
     /// <summary>The name of the snapshot from which to create the new cluster.  Conflicts with snapshot_arn.</summary>
     [JsonPropertyName("snapshotIdentifier")]
@@ -668,32 +631,7 @@ public partial class V1beta1ClusterSpecInitProviderKmsKeyIdSelector
     public V1beta1ClusterSpecInitProviderKmsKeyIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecInitProviderLogging
-{
-    /// <summary>The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions. For more information on the permissions required for the bucket, please read the AWS documentation</summary>
-    [JsonPropertyName("bucketName")]
-    public string? BucketName { get; set; }
-
-    /// <summary>Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.</summary>
-    [JsonPropertyName("enable")]
-    public bool? Enable { get; set; }
-
-    /// <summary>The log destination type. An enum with possible values of s3 and cloudwatch.</summary>
-    [JsonPropertyName("logDestinationType")]
-    public string? LogDestinationType { get; set; }
-
-    /// <summary>The collection of exported log types. Log types include the connection log, user log and user activity log. Required when log_destination_type is cloudwatch. Valid log types are connectionlog, userlog, and useractivitylog.</summary>
-    [JsonPropertyName("logExports")]
-    public IList<string>? LogExports { get; set; }
-
-    /// <summary>The prefix applied to the log file names.</summary>
-    [JsonPropertyName("s3KeyPrefix")]
-    public string? S3KeyPrefix { get; set; }
-}
-
-/// <summary>Password for the master DB user. Conflicts with manage_master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
+/// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password_wo. One of master_password, master_password_wo or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderMasterPasswordSecretRef
 {
@@ -710,21 +648,21 @@ public partial class V1beta1ClusterSpecInitProviderMasterPasswordSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary></summary>
+/// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password. One of master_password_wo, master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterSpecInitProviderSnapshotCopy
+public partial class V1beta1ClusterSpecInitProviderMasterPasswordWoSecretRef
 {
-    /// <summary>The destination region that you want to copy snapshots to.</summary>
-    [JsonPropertyName("destinationRegion")]
-    public string? DestinationRegion { get; set; }
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
 
-    /// <summary>The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.</summary>
-    [JsonPropertyName("grantName")]
-    public string? GrantName { get; set; }
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
 
-    /// <summary>The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to 7.</summary>
-    [JsonPropertyName("retentionPeriod")]
-    public double? RetentionPeriod { get; set; }
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -815,14 +753,6 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("clusterParameterGroupName")]
     public string? ClusterParameterGroupName { get; set; }
 
-    /// <summary>The public key for the cluster</summary>
-    [JsonPropertyName("clusterPublicKey")]
-    public string? ClusterPublicKey { get; set; }
-
-    /// <summary>The specific revision number of the database in the cluster</summary>
-    [JsonPropertyName("clusterRevisionNumber")]
-    public string? ClusterRevisionNumber { get; set; }
-
     /// <summary>The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).</summary>
     [JsonPropertyName("clusterSubnetGroupName")]
     public string? ClusterSubnetGroupName { get; set; }
@@ -855,13 +785,9 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("elasticIp")]
     public string? ElasticIp { get; set; }
 
-    /// <summary>If true , the data in the cluster is encrypted at rest.</summary>
+    /// <summary>If true , the data in the cluster is encrypted at rest. Default is true.</summary>
     [JsonPropertyName("encrypted")]
-    public bool? Encrypted { get; set; }
-
-    /// <summary>The connection endpoint</summary>
-    [JsonPropertyName("endpoint")]
-    public string? Endpoint { get; set; }
+    public string? Encrypted { get; set; }
 
     /// <summary>If true , enhanced VPC routing is enabled.</summary>
     [JsonPropertyName("enhancedVpcRouting")]
@@ -895,15 +821,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1ClusterSpecInitProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Logging, documented below.</summary>
-    [JsonPropertyName("logging")]
-    public IList<V1beta1ClusterSpecInitProviderLogging>? Logging { get; set; }
-
     /// <summary>The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of  a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks. Default value is current.</summary>
     [JsonPropertyName("maintenanceTrackName")]
     public string? MaintenanceTrackName { get; set; }
 
-    /// <summary>Whether to use AWS SecretsManager to manage the cluster admin credentials. Conflicts with master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided.</summary>
+    /// <summary>Whether to use AWS SecretsManager to manage the cluster admin credentials. Conflicts with master_password and master_password_wo. One of master_password or manage_master_password is required unless snapshot_identifier is provided.</summary>
     [JsonPropertyName("manageMasterPassword")]
     public bool? ManageMasterPassword { get; set; }
 
@@ -915,9 +837,17 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("masterPasswordSecretKmsKeyId")]
     public string? MasterPasswordSecretKmsKeyId { get; set; }
 
-    /// <summary>Password for the master DB user. Conflicts with manage_master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
+    /// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password_wo. One of master_password, master_password_wo or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs, and it will be stored in the state file. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
     [JsonPropertyName("masterPasswordSecretRef")]
     public V1beta1ClusterSpecInitProviderMasterPasswordSecretRef? MasterPasswordSecretRef { get; set; }
+
+    /// <summary>Password for the master DB user. Conflicts with manage_master_password and master_password. One of master_password_wo, master_password or manage_master_password is required unless snapshot_identifier is provided. Note that this may show up in logs. Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.</summary>
+    [JsonPropertyName("masterPasswordWoSecretRef")]
+    public V1beta1ClusterSpecInitProviderMasterPasswordWoSecretRef? MasterPasswordWoSecretRef { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
 
     /// <summary>Username for the master DB user.</summary>
     [JsonPropertyName("masterUsername")]
@@ -947,7 +877,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>If true, the cluster can be accessed from a public network. Default is true.</summary>
+    /// <summary>If true, the cluster can be accessed from a public network. Default is false.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
@@ -962,10 +892,6 @@ public partial class V1beta1ClusterSpecInitProvider
     /// <summary>The name of the cluster the source snapshot was created from.</summary>
     [JsonPropertyName("snapshotClusterIdentifier")]
     public string? SnapshotClusterIdentifier { get; set; }
-
-    /// <summary>Configuration of automatic copy of snapshots from one region to another. Documented below.</summary>
-    [JsonPropertyName("snapshotCopy")]
-    public IList<V1beta1ClusterSpecInitProviderSnapshotCopy>? SnapshotCopy { get; set; }
 
     /// <summary>The name of the snapshot from which to create the new cluster.  Conflicts with snapshot_arn.</summary>
     [JsonPropertyName("snapshotIdentifier")]
@@ -1139,48 +1065,6 @@ public partial class V1beta1ClusterStatusAtProviderClusterNodes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterStatusAtProviderLogging
-{
-    /// <summary>The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions. For more information on the permissions required for the bucket, please read the AWS documentation</summary>
-    [JsonPropertyName("bucketName")]
-    public string? BucketName { get; set; }
-
-    /// <summary>Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.</summary>
-    [JsonPropertyName("enable")]
-    public bool? Enable { get; set; }
-
-    /// <summary>The log destination type. An enum with possible values of s3 and cloudwatch.</summary>
-    [JsonPropertyName("logDestinationType")]
-    public string? LogDestinationType { get; set; }
-
-    /// <summary>The collection of exported log types. Log types include the connection log, user log and user activity log. Required when log_destination_type is cloudwatch. Valid log types are connectionlog, userlog, and useractivitylog.</summary>
-    [JsonPropertyName("logExports")]
-    public IList<string>? LogExports { get; set; }
-
-    /// <summary>The prefix applied to the log file names.</summary>
-    [JsonPropertyName("s3KeyPrefix")]
-    public string? S3KeyPrefix { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ClusterStatusAtProviderSnapshotCopy
-{
-    /// <summary>The destination region that you want to copy snapshots to.</summary>
-    [JsonPropertyName("destinationRegion")]
-    public string? DestinationRegion { get; set; }
-
-    /// <summary>The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.</summary>
-    [JsonPropertyName("grantName")]
-    public string? GrantName { get; set; }
-
-    /// <summary>The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to 7.</summary>
-    [JsonPropertyName("retentionPeriod")]
-    public double? RetentionPeriod { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
     /// <summary>If true , major version upgrades can be applied during the maintenance window to the Amazon Redshift engine that is running on the cluster. Default is true.</summary>
@@ -1259,9 +1143,9 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("elasticIp")]
     public string? ElasticIp { get; set; }
 
-    /// <summary>If true , the data in the cluster is encrypted at rest.</summary>
+    /// <summary>If true , the data in the cluster is encrypted at rest. Default is true.</summary>
     [JsonPropertyName("encrypted")]
-    public bool? Encrypted { get; set; }
+    public string? Encrypted { get; set; }
 
     /// <summary>The connection endpoint</summary>
     [JsonPropertyName("endpoint")]
@@ -1287,15 +1171,11 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Logging, documented below.</summary>
-    [JsonPropertyName("logging")]
-    public IList<V1beta1ClusterStatusAtProviderLogging>? Logging { get; set; }
-
     /// <summary>The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of  a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks. Default value is current.</summary>
     [JsonPropertyName("maintenanceTrackName")]
     public string? MaintenanceTrackName { get; set; }
 
-    /// <summary>Whether to use AWS SecretsManager to manage the cluster admin credentials. Conflicts with master_password. One of master_password or manage_master_password is required unless snapshot_identifier is provided.</summary>
+    /// <summary>Whether to use AWS SecretsManager to manage the cluster admin credentials. Conflicts with master_password and master_password_wo. One of master_password or manage_master_password is required unless snapshot_identifier is provided.</summary>
     [JsonPropertyName("manageMasterPassword")]
     public bool? ManageMasterPassword { get; set; }
 
@@ -1310,6 +1190,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>ID of the KMS key used to encrypt the cluster admin credentials secret.</summary>
     [JsonPropertyName("masterPasswordSecretKmsKeyId")]
     public string? MasterPasswordSecretKmsKeyId { get; set; }
+
+    /// <summary>Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.</summary>
+    [JsonPropertyName("masterPasswordWoVersion")]
+    public double? MasterPasswordWoVersion { get; set; }
 
     /// <summary>Username for the master DB user.</summary>
     [JsonPropertyName("masterUsername")]
@@ -1339,9 +1223,13 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>If true, the cluster can be accessed from a public network. Default is true.</summary>
+    /// <summary>If true, the cluster can be accessed from a public network. Default is false.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.</summary>
     [JsonPropertyName("skipFinalSnapshot")]
@@ -1354,10 +1242,6 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>The name of the cluster the source snapshot was created from.</summary>
     [JsonPropertyName("snapshotClusterIdentifier")]
     public string? SnapshotClusterIdentifier { get; set; }
-
-    /// <summary>Configuration of automatic copy of snapshots from one region to another. Documented below.</summary>
-    [JsonPropertyName("snapshotCopy")]
-    public IList<V1beta1ClusterStatusAtProviderSnapshotCopy>? SnapshotCopy { get; set; }
 
     /// <summary>The name of the snapshot from which to create the new cluster.  Conflicts with snapshot_arn.</summary>
     [JsonPropertyName("snapshotIdentifier")]

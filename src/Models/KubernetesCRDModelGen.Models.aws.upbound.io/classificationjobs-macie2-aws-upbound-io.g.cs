@@ -385,7 +385,7 @@ public partial class V1beta1ClassificationJobSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1342,6 +1342,10 @@ public partial class V1beta1ClassificationJobStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)</summary>
     [JsonPropertyName("s3JobDefinition")]
     public IList<V1beta1ClassificationJobStatusAtProviderS3JobDefinition>? S3JobDefinition { get; set; }
@@ -1358,11 +1362,11 @@ public partial class V1beta1ClassificationJobStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary></summary>
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>If the current status of the job is USER_PAUSED, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for job-status is USER_PAUSED.</summary>
+    /// <summary>If the current status of the job is USER_PAUSED, specifies when the job was paused and when the job or job run will expire and be canceled if it isn't resumed. This value is present only if the value for job-status is USER_PAUSED.</summary>
     [JsonPropertyName("userPausedDetails")]
     public IList<V1beta1ClassificationJobStatusAtProviderUserPausedDetails>? UserPausedDetails { get; set; }
 }

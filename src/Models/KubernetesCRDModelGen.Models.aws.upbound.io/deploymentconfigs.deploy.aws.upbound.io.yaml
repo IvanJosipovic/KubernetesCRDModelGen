@@ -107,7 +107,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   trafficRoutingConfig:
                     description: A traffic_routing_config block. Traffic Routing Config is documented below.
@@ -515,6 +518,12 @@ spec:
                           type: number
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   trafficRoutingConfig:
                     description: A traffic_routing_config block. Traffic Routing Config is documented below.
                     items:
@@ -727,7 +736,10 @@ spec:
                         type: number
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   trafficRoutingConfig:
                     description: A traffic_routing_config block. Traffic Routing Config is documented below.
@@ -1111,6 +1123,12 @@ spec:
                           When the type is HOST_COUNT, the value represents the minimum number of healthy instances as an absolute value.
                         type: number
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   trafficRoutingConfig:
                     description: A traffic_routing_config block. Traffic Routing Config is documented below.
                     properties:

@@ -96,7 +96,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("clusterIdentifierSelector")]
     public V1beta1ClusterInstanceSpecForProviderClusterIdentifierSelector? ClusterIdentifierSelector { get; set; }
 
-    /// <summary>–  Copy all DB instance tags to snapshots. Default is false.</summary>
+    /// <summary>Copy all DB instance tags to snapshots. Default is false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
@@ -124,7 +124,7 @@ public partial class V1beta1ClusterInstanceSpecForProvider
     [JsonPropertyName("promotionTier")]
     public double? PromotionTier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -221,7 +221,7 @@ public partial class V1beta1ClusterInstanceSpecInitProvider
     [JsonPropertyName("clusterIdentifierSelector")]
     public V1beta1ClusterInstanceSpecInitProviderClusterIdentifierSelector? ClusterIdentifierSelector { get; set; }
 
-    /// <summary>–  Copy all DB instance tags to snapshots. Default is false.</summary>
+    /// <summary>Copy all DB instance tags to snapshots. Default is false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
@@ -414,7 +414,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("clusterIdentifier")]
     public string? ClusterIdentifier { get; set; }
 
-    /// <summary>–  Copy all DB instance tags to snapshots. Default is false.</summary>
+    /// <summary>Copy all DB instance tags to snapshots. Default is false.</summary>
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
@@ -478,6 +478,10 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Specifies whether the DB cluster is encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
@@ -490,7 +494,7 @@ public partial class V1beta1ClusterInstanceStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>– Boolean indicating if this instance is writable. False indicates this instance is a read replica.</summary>
+    /// <summary>Boolean indicating if this instance is writable. False indicates this instance is a read replica.</summary>
     [JsonPropertyName("writer")]
     public bool? Writer { get; set; }
 }

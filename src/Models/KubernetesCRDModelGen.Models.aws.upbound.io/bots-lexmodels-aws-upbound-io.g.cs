@@ -137,7 +137,7 @@ public partial class V1beta1BotSpecForProvider
     [JsonPropertyName("processBehavior")]
     public string? ProcessBehavior { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -564,6 +564,10 @@ public partial class V1beta1BotStatusAtProvider
     /// <summary>If you set the process_behavior element to BUILD, Amazon Lex builds the bot so that it can be run. If you set the element to SAVE Amazon Lex saves the bot, but doesn't build it. Default is SAVE.</summary>
     [JsonPropertyName("processBehavior")]
     public string? ProcessBehavior { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>When you send a request to create or update a bot, Amazon Lex sets the status response element to BUILDING. After Amazon Lex builds the bot, it sets status to READY. If Amazon Lex can't build the bot, it sets status to FAILED. Amazon Lex returns the reason for the failure in the failure_reason response element.</summary>
     [JsonPropertyName("status")]

@@ -124,7 +124,7 @@ public partial class V1beta1FunctionSpecForProviderDataSourceSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecForProviderRuntime
 {
-    /// <summary>Function name. The function name does not have to be unique.</summary>
+    /// <summary>The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -154,7 +154,7 @@ public partial class V1beta1FunctionSpecForProviderSyncConfig
     [JsonPropertyName("conflictHandler")]
     public string? ConflictHandler { get; set; }
 
-    /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.</summary>
+    /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See lambda_conflict_handler_config Block for details.</summary>
     [JsonPropertyName("lambdaConflictHandlerConfig")]
     public IList<V1beta1FunctionSpecForProviderSyncConfigLambdaConflictHandlerConfig>? LambdaConflictHandlerConfig { get; set; }
 }
@@ -207,7 +207,7 @@ public partial class V1beta1FunctionSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -219,11 +219,11 @@ public partial class V1beta1FunctionSpecForProvider
     [JsonPropertyName("responseMappingTemplate")]
     public string? ResponseMappingTemplate { get; set; }
 
-    /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.</summary>
+    /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See runtime Block for details.</summary>
     [JsonPropertyName("runtime")]
     public IList<V1beta1FunctionSpecForProviderRuntime>? Runtime { get; set; }
 
-    /// <summary>Describes a Sync configuration for a resolver. See Sync Config.</summary>
+    /// <summary>Describes a Sync configuration for a resolver. See sync_config Block for details.</summary>
     [JsonPropertyName("syncConfig")]
     public IList<V1beta1FunctionSpecForProviderSyncConfig>? SyncConfig { get; set; }
 }
@@ -344,7 +344,7 @@ public partial class V1beta1FunctionSpecInitProviderDataSourceSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionSpecInitProviderRuntime
 {
-    /// <summary>Function name. The function name does not have to be unique.</summary>
+    /// <summary>The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -374,7 +374,7 @@ public partial class V1beta1FunctionSpecInitProviderSyncConfig
     [JsonPropertyName("conflictHandler")]
     public string? ConflictHandler { get; set; }
 
-    /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.</summary>
+    /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See lambda_conflict_handler_config Block for details.</summary>
     [JsonPropertyName("lambdaConflictHandlerConfig")]
     public IList<V1beta1FunctionSpecInitProviderSyncConfigLambdaConflictHandlerConfig>? LambdaConflictHandlerConfig { get; set; }
 }
@@ -435,11 +435,11 @@ public partial class V1beta1FunctionSpecInitProvider
     [JsonPropertyName("responseMappingTemplate")]
     public string? ResponseMappingTemplate { get; set; }
 
-    /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.</summary>
+    /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See runtime Block for details.</summary>
     [JsonPropertyName("runtime")]
     public IList<V1beta1FunctionSpecInitProviderRuntime>? Runtime { get; set; }
 
-    /// <summary>Describes a Sync configuration for a resolver. See Sync Config.</summary>
+    /// <summary>Describes a Sync configuration for a resolver. See sync_config Block for details.</summary>
     [JsonPropertyName("syncConfig")]
     public IList<V1beta1FunctionSpecInitProviderSyncConfig>? SyncConfig { get; set; }
 }
@@ -580,7 +580,7 @@ public partial class V1beta1FunctionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionStatusAtProviderRuntime
 {
-    /// <summary>Function name. The function name does not have to be unique.</summary>
+    /// <summary>The name of the runtime to use. Currently, the only allowed value is APPSYNC_JS.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -610,7 +610,7 @@ public partial class V1beta1FunctionStatusAtProviderSyncConfig
     [JsonPropertyName("conflictHandler")]
     public string? ConflictHandler { get; set; }
 
-    /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See Lambda Conflict Handler Config.</summary>
+    /// <summary>Lambda Conflict Handler Config when configuring LAMBDA as the Conflict Handler. See lambda_conflict_handler_config Block for details.</summary>
     [JsonPropertyName("lambdaConflictHandlerConfig")]
     public IList<V1beta1FunctionStatusAtProviderSyncConfigLambdaConflictHandlerConfig>? LambdaConflictHandlerConfig { get; set; }
 }
@@ -659,6 +659,10 @@ public partial class V1beta1FunctionStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Function request mapping template. Functions support only the 2018-05-29 version of the request mapping template.</summary>
     [JsonPropertyName("requestMappingTemplate")]
     public string? RequestMappingTemplate { get; set; }
@@ -667,11 +671,11 @@ public partial class V1beta1FunctionStatusAtProvider
     [JsonPropertyName("responseMappingTemplate")]
     public string? ResponseMappingTemplate { get; set; }
 
-    /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See Runtime.</summary>
+    /// <summary>Describes a runtime used by an AWS AppSync pipeline resolver or AWS AppSync function. Specifies the name and version of the runtime to use. Note that if a runtime is specified, code must also be specified. See runtime Block for details.</summary>
     [JsonPropertyName("runtime")]
     public IList<V1beta1FunctionStatusAtProviderRuntime>? Runtime { get; set; }
 
-    /// <summary>Describes a Sync configuration for a resolver. See Sync Config.</summary>
+    /// <summary>Describes a Sync configuration for a resolver. See sync_config Block for details.</summary>
     [JsonPropertyName("syncConfig")]
     public IList<V1beta1FunctionStatusAtProviderSyncConfig>? SyncConfig { get; set; }
 }

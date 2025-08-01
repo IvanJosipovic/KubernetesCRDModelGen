@@ -68,11 +68,11 @@ public partial class V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProviderOptions
 {
-    /// <summary>Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
+    /// <summary>Whether to enable appliance mode support. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
     [JsonPropertyName("applianceModeSupport")]
     public bool? ApplianceModeSupport { get; set; }
 
-    /// <summary>Indicates whether IPv6 is supported. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
+    /// <summary>Whether to enable IPv6 support. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
     [JsonPropertyName("ipv6Support")]
     public bool? Ipv6Support { get; set; }
 }
@@ -193,7 +193,7 @@ public partial class V1beta1VPCAttachmentSpecForProviderVpcArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecForProvider
 {
-    /// <summary>The ID of a core network for the VPC attachment.</summary>
+    /// <summary>ID of a core network for the VPC attachment.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
@@ -205,15 +205,11 @@ public partial class V1beta1VPCAttachmentSpecForProvider
     [JsonPropertyName("coreNetworkIdSelector")]
     public V1beta1VPCAttachmentSpecForProviderCoreNetworkIdSelector? CoreNetworkIdSelector { get; set; }
 
-    /// <summary>Options for the VPC attachment.</summary>
+    /// <summary>Options for the VPC attachment. See below.</summary>
     [JsonPropertyName("options")]
     public IList<V1beta1VPCAttachmentSpecForProviderOptions>? Options { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
-    /// <summary>The subnet ARN of the VPC attachment.</summary>
+    /// <summary>Subnet ARNs of the VPC attachment.</summary>
     [JsonPropertyName("subnetArns")]
     public IList<string>? SubnetArns { get; set; }
 
@@ -229,7 +225,7 @@ public partial class V1beta1VPCAttachmentSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The ARN of the VPC.</summary>
+    /// <summary>ARN of the VPC.</summary>
     [JsonPropertyName("vpcArn")]
     public string? VpcArn { get; set; }
 
@@ -302,11 +298,11 @@ public partial class V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProviderOptions
 {
-    /// <summary>Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
+    /// <summary>Whether to enable appliance mode support. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
     [JsonPropertyName("applianceModeSupport")]
     public bool? ApplianceModeSupport { get; set; }
 
-    /// <summary>Indicates whether IPv6 is supported. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
+    /// <summary>Whether to enable IPv6 support. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
     [JsonPropertyName("ipv6Support")]
     public bool? Ipv6Support { get; set; }
 }
@@ -427,7 +423,7 @@ public partial class V1beta1VPCAttachmentSpecInitProviderVpcArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentSpecInitProvider
 {
-    /// <summary>The ID of a core network for the VPC attachment.</summary>
+    /// <summary>ID of a core network for the VPC attachment.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
@@ -439,11 +435,11 @@ public partial class V1beta1VPCAttachmentSpecInitProvider
     [JsonPropertyName("coreNetworkIdSelector")]
     public V1beta1VPCAttachmentSpecInitProviderCoreNetworkIdSelector? CoreNetworkIdSelector { get; set; }
 
-    /// <summary>Options for the VPC attachment.</summary>
+    /// <summary>Options for the VPC attachment. See below.</summary>
     [JsonPropertyName("options")]
     public IList<V1beta1VPCAttachmentSpecInitProviderOptions>? Options { get; set; }
 
-    /// <summary>The subnet ARN of the VPC attachment.</summary>
+    /// <summary>Subnet ARNs of the VPC attachment.</summary>
     [JsonPropertyName("subnetArns")]
     public IList<string>? SubnetArns { get; set; }
 
@@ -459,7 +455,7 @@ public partial class V1beta1VPCAttachmentSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The ARN of the VPC.</summary>
+    /// <summary>ARN of the VPC.</summary>
     [JsonPropertyName("vpcArn")]
     public string? VpcArn { get; set; }
 
@@ -608,11 +604,11 @@ public partial class V1beta1VPCAttachmentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentStatusAtProviderOptions
 {
-    /// <summary>Indicates whether appliance mode is supported. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
+    /// <summary>Whether to enable appliance mode support. If enabled, traffic flow between a source and destination use the same Availability Zone for the VPC attachment for the lifetime of that flow. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
     [JsonPropertyName("applianceModeSupport")]
     public bool? ApplianceModeSupport { get; set; }
 
-    /// <summary>Indicates whether IPv6 is supported. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
+    /// <summary>Whether to enable IPv6 support. If the VPC attachment is pending acceptance, changing this value will recreate the resource.</summary>
     [JsonPropertyName("ipv6Support")]
     public bool? Ipv6Support { get; set; }
 }
@@ -621,55 +617,55 @@ public partial class V1beta1VPCAttachmentStatusAtProviderOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCAttachmentStatusAtProvider
 {
-    /// <summary>The ARN of the attachment.</summary>
+    /// <summary>ARN of the attachment.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The policy rule number associated with the attachment.</summary>
+    /// <summary>Policy rule number associated with the attachment.</summary>
     [JsonPropertyName("attachmentPolicyRuleNumber")]
     public double? AttachmentPolicyRuleNumber { get; set; }
 
-    /// <summary>The type of attachment.</summary>
+    /// <summary>Type of attachment.</summary>
     [JsonPropertyName("attachmentType")]
     public string? AttachmentType { get; set; }
 
-    /// <summary>The ARN of a core network.</summary>
+    /// <summary>ARN of a core network.</summary>
     [JsonPropertyName("coreNetworkArn")]
     public string? CoreNetworkArn { get; set; }
 
-    /// <summary>The ID of a core network for the VPC attachment.</summary>
+    /// <summary>ID of a core network for the VPC attachment.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
-    /// <summary>The Region where the edge is located.</summary>
+    /// <summary>Region where the edge is located.</summary>
     [JsonPropertyName("edgeLocation")]
     public string? EdgeLocation { get; set; }
 
-    /// <summary>The ID of the attachment.</summary>
+    /// <summary>ID of the attachment.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Options for the VPC attachment.</summary>
+    /// <summary>Options for the VPC attachment. See below.</summary>
     [JsonPropertyName("options")]
     public IList<V1beta1VPCAttachmentStatusAtProviderOptions>? Options { get; set; }
 
-    /// <summary>The ID of the attachment account owner.</summary>
+    /// <summary>ID of the attachment account owner.</summary>
     [JsonPropertyName("ownerAccountId")]
     public string? OwnerAccountId { get; set; }
 
-    /// <summary>The attachment resource ARN.</summary>
+    /// <summary>Attachment resource ARN.</summary>
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 
-    /// <summary>The name of the segment attachment.</summary>
+    /// <summary>Name of the segment attachment.</summary>
     [JsonPropertyName("segmentName")]
     public string? SegmentName { get; set; }
 
-    /// <summary>The state of the attachment.</summary>
+    /// <summary>State of the attachment.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
-    /// <summary>The subnet ARN of the VPC attachment.</summary>
+    /// <summary>Subnet ARNs of the VPC attachment.</summary>
     [JsonPropertyName("subnetArns")]
     public IList<string>? SubnetArns { get; set; }
 
@@ -677,11 +673,11 @@ public partial class V1beta1VPCAttachmentStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The ARN of the VPC.</summary>
+    /// <summary>ARN of the VPC.</summary>
     [JsonPropertyName("vpcArn")]
     public string? VpcArn { get; set; }
 }
@@ -732,7 +728,7 @@ public partial class V1beta1VPCAttachmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>VPCAttachment is the Schema for the VPCAttachments API.</summary>
+/// <summary>VPCAttachment is the Schema for the VPCAttachments API. Manages a Network Manager VPC attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1VPCAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VPCAttachmentSpec>, IStatus<V1beta1VPCAttachmentStatus>
@@ -762,7 +758,7 @@ public partial class V1beta1VPCAttachment : IKubernetesObject<V1ObjectMeta>, ISp
     public V1beta1VPCAttachmentStatus? Status { get; set; }
 }
 
-/// <summary>VPCAttachment is the Schema for the VPCAttachments API.</summary>
+/// <summary>VPCAttachment is the Schema for the VPCAttachments API. Manages a Network Manager VPC attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1VPCAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCAttachment>

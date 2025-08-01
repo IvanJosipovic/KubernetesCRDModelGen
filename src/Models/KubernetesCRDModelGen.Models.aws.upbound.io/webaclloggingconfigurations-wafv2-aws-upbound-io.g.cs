@@ -68,7 +68,7 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLogDestinat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecForProviderLoggingFilterFilterConditionActionCondition
 {
-    /// <summary>Action setting that a log record must contain in order to meet the condition. Valid values for action are ALLOW, BLOCK, and COUNT.</summary>
+    /// <summary>Action setting that a log record must contain in order to meet the condition. Valid values for action are ALLOW, BLOCK, COUNT, CAPTCHA, CHALLENGE and EXCLUDED_AS_COUNT.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
@@ -253,7 +253,7 @@ public partial class V1beta1WebACLLoggingConfigurationSpecForProvider
     [JsonPropertyName("redactedFields")]
     public IList<V1beta1WebACLLoggingConfigurationSpecForProviderRedactedFields>? RedactedFields { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -330,7 +330,7 @@ public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLogDestina
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationSpecInitProviderLoggingFilterFilterConditionActionCondition
 {
-    /// <summary>Action setting that a log record must contain in order to meet the condition. Valid values for action are ALLOW, BLOCK, and COUNT.</summary>
+    /// <summary>Action setting that a log record must contain in order to meet the condition. Valid values for action are ALLOW, BLOCK, COUNT, CAPTCHA, CHALLENGE and EXCLUDED_AS_COUNT.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
@@ -596,7 +596,7 @@ public partial class V1beta1WebACLLoggingConfigurationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLLoggingConfigurationStatusAtProviderLoggingFilterFilterConditionActionCondition
 {
-    /// <summary>Action setting that a log record must contain in order to meet the condition. Valid values for action are ALLOW, BLOCK, and COUNT.</summary>
+    /// <summary>Action setting that a log record must contain in order to meet the condition. Valid values for action are ALLOW, BLOCK, COUNT, CAPTCHA, CHALLENGE and EXCLUDED_AS_COUNT.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 }
@@ -720,6 +720,10 @@ public partial class V1beta1WebACLLoggingConfigurationStatusAtProvider
     /// <summary>Configuration for parts of the request that you want to keep out of the logs. Up to 100 redacted_fields blocks are supported. See Redacted Fields below for more details. Parts of the request to exclude from logs</summary>
     [JsonPropertyName("redactedFields")]
     public IList<V1beta1WebACLLoggingConfigurationStatusAtProviderRedactedFields>? RedactedFields { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of the web ACL that you want to associate with log_destination_configs. AWS WebACL ARN</summary>
     [JsonPropertyName("resourceArn")]

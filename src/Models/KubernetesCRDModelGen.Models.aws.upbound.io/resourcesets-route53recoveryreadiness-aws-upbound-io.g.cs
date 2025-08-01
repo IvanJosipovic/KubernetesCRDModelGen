@@ -153,10 +153,6 @@ public partial class V1beta1ResourceSetSpecForProviderResources
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Type of the resources in the resource set.</summary>
     [JsonPropertyName("resourceSetType")]
     public string? ResourceSetType { get; set; }

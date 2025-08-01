@@ -105,7 +105,10 @@ spec:
                     description: A custom name for the job. The name can contain as many as 500 characters. Conflicts with name_prefix.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   s3JobDefinition:
                     description: The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
@@ -938,6 +941,12 @@ spec:
                   name:
                     description: A custom name for the job. The name can contain as many as 500 characters. Conflicts with name_prefix.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   s3JobDefinition:
                     description: The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
                     items:
@@ -1209,10 +1218,11 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
                   userPausedDetails:
-                    description: If the current status of the job is USER_PAUSED, specifies when the job was paused and when the job or job run will expire and be cancelled if it isn't resumed. This value is present only if the value for job-status is USER_PAUSED.
+                    description: If the current status of the job is USER_PAUSED, specifies when the job was paused and when the job or job run will expire and be canceled if it isn't resumed. This value is present only if the value for job-status is USER_PAUSED.
                     items:
                       properties:
                         jobExpiresAt:
@@ -1378,7 +1388,10 @@ spec:
                     description: A custom name for the job. The name can contain as many as 500 characters. Conflicts with name_prefix.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   s3JobDefinition:
                     description: The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
@@ -2147,6 +2160,12 @@ spec:
                   name:
                     description: A custom name for the job. The name can contain as many as 500 characters. Conflicts with name_prefix.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   s3JobDefinition:
                     description: The S3 buckets that contain the objects to analyze, and the scope of that analysis. (documented below)
                     properties:
@@ -2386,6 +2405,7 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
+                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
                   userPausedDetails:

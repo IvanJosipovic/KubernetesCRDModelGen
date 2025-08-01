@@ -169,7 +169,7 @@ public partial class V1beta1BucketMetricSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -504,6 +504,10 @@ public partial class V1beta1BucketMetricStatusAtProvider
     /// <summary>Unique identifier of the metrics configuration for the bucket. Must be less than or equal to 64 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

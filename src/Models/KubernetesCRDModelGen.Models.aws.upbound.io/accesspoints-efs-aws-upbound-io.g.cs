@@ -131,7 +131,7 @@ public partial class V1beta1AccessPointSpecForProvider
     [JsonPropertyName("posixUser")]
     public IList<V1beta1AccessPointSpecForProviderPosixUser>? PosixUser { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -482,6 +482,10 @@ public partial class V1beta1AccessPointStatusAtProvider
     /// <summary>Operating system user and group applied to all file system requests made using the access point. Detailed below.</summary>
     [JsonPropertyName("posixUser")]
     public IList<V1beta1AccessPointStatusAtProviderPosixUser>? PosixUser { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Directory on the Amazon EFS file system that the access point provides access to. Detailed below.</summary>
     [JsonPropertyName("rootDirectory")]

@@ -12,19 +12,19 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyPairSpecForProvider
 {
-    /// <summary>The name of the Lightsail Key Pair</summary>
+    /// <summary>Name of the Lightsail Key Pair. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  An optional PGP key to encrypt the resulting private key material. Only used when creating a new key pair</summary>
+    /// <summary>PGP key to encrypt the resulting private key material. Only used when creating a new key pair.</summary>
     [JsonPropertyName("pgpKey")]
     public string? PgpKey { get; set; }
 
-    /// <summary>The public key material. This public key will be imported into Lightsail</summary>
+    /// <summary>Public key material. This public key will be imported into Lightsail.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -37,15 +37,15 @@ public partial class V1beta1KeyPairSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyPairSpecInitProvider
 {
-    /// <summary>The name of the Lightsail Key Pair</summary>
+    /// <summary>Name of the Lightsail Key Pair. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  An optional PGP key to encrypt the resulting private key material. Only used when creating a new key pair</summary>
+    /// <summary>PGP key to encrypt the resulting private key material. Only used when creating a new key pair.</summary>
     [JsonPropertyName("pgpKey")]
     public string? PgpKey { get; set; }
 
-    /// <summary>The public key material. This public key will be imported into Lightsail</summary>
+    /// <summary>Public key material. This public key will be imported into Lightsail.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
 
@@ -190,47 +190,51 @@ public partial class V1beta1KeyPairSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyPairStatusAtProvider
 {
-    /// <summary>The ARN of the Lightsail key pair.</summary>
+    /// <summary>ARN of the Lightsail key pair.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The MD5 public key fingerprint for the encrypted private key.</summary>
+    /// <summary>MD5 public key fingerprint for the encrypted private key.</summary>
     [JsonPropertyName("encryptedFingerprint")]
     public string? EncryptedFingerprint { get; set; }
 
-    /// <summary>– the private key material, base 64 encoded and encrypted with the given pgp_key. This is only populated when creating a new key and pgp_key is supplied.</summary>
+    /// <summary>Private key material, base 64 encoded and encrypted with the given pgp_key. This is only populated when creating a new key and pgp_key is supplied.</summary>
     [JsonPropertyName("encryptedPrivateKey")]
     public string? EncryptedPrivateKey { get; set; }
 
-    /// <summary>The MD5 public key fingerprint as specified in section 4 of RFC 4716.</summary>
+    /// <summary>MD5 public key fingerprint as specified in section 4 of RFC 4716.</summary>
     [JsonPropertyName("fingerprint")]
     public string? Fingerprint { get; set; }
 
-    /// <summary>The name used for this key pair.</summary>
+    /// <summary>Name used for this key pair.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name of the Lightsail Key Pair</summary>
+    /// <summary>Name of the Lightsail Key Pair. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  An optional PGP key to encrypt the resulting private key material. Only used when creating a new key pair</summary>
+    /// <summary>PGP key to encrypt the resulting private key material. Only used when creating a new key pair.</summary>
     [JsonPropertyName("pgpKey")]
     public string? PgpKey { get; set; }
 
-    /// <summary>the private key, base64 encoded. This is only populated when creating a new key, and when no pgp_key is provided.</summary>
+    /// <summary>Private key, base64 encoded. This is only populated when creating a new key, and when no pgp_key is provided.</summary>
     [JsonPropertyName("privateKey")]
     public string? PrivateKey { get; set; }
 
-    /// <summary>The public key material. This public key will be imported into Lightsail</summary>
+    /// <summary>Public key material. This public key will be imported into Lightsail.</summary>
     [JsonPropertyName("publicKey")]
     public string? PublicKey { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -281,7 +285,7 @@ public partial class V1beta1KeyPairStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>KeyPair is the Schema for the KeyPairs API. Provides an Lightsail Key Pair</summary>
+/// <summary>KeyPair is the Schema for the KeyPairs API. Manages a Lightsail Key Pair.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1KeyPair : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1KeyPairSpec>, IStatus<V1beta1KeyPairStatus>
@@ -311,7 +315,7 @@ public partial class V1beta1KeyPair : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     public V1beta1KeyPairStatus? Status { get; set; }
 }
 
-/// <summary>KeyPair is the Schema for the KeyPairs API. Provides an Lightsail Key Pair</summary>
+/// <summary>KeyPair is the Schema for the KeyPairs API. Manages a Lightsail Key Pair.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1KeyPairList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KeyPair>

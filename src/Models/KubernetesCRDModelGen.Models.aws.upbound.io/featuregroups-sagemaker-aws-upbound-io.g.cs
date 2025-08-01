@@ -246,7 +246,7 @@ public partial class V1beta1FeatureGroupSpecForProvider
     [JsonPropertyName("recordIdentifierFeatureName")]
     public string? RecordIdentifierFeatureName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -852,6 +852,10 @@ public partial class V1beta1FeatureGroupStatusAtProvider
     [JsonPropertyName("recordIdentifierFeatureName")]
     public string? RecordIdentifierFeatureName { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The Amazon Resource Name (ARN) of the IAM execution role used to persist data into the Offline Store if an offline_store_config is provided.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
@@ -915,7 +919,7 @@ public partial class V1beta1FeatureGroupStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker Feature Group resource.</summary>
+/// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FeatureGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FeatureGroupSpec>, IStatus<V1beta1FeatureGroupStatus>
@@ -945,7 +949,7 @@ public partial class V1beta1FeatureGroup : IKubernetesObject<V1ObjectMeta>, ISpe
     public V1beta1FeatureGroupStatus? Status { get; set; }
 }
 
-/// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker Feature Group resource.</summary>
+/// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1FeatureGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FeatureGroup>

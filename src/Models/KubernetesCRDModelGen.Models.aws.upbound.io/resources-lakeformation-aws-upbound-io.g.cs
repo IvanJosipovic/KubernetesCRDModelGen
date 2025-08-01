@@ -68,7 +68,7 @@ public partial class V1beta1ResourceSpecForProviderRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSpecForProvider
 {
-    /// <summary>–  Amazon Resource Name (ARN) of the resource.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the resource.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -76,11 +76,11 @@ public partial class V1beta1ResourceSpecForProvider
     [JsonPropertyName("hybridAccessEnabled")]
     public bool? HybridAccessEnabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  Role that has read/write access to the resource.</summary>
+    /// <summary>Role that has read/write access to the resource.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -96,7 +96,7 @@ public partial class V1beta1ResourceSpecForProvider
     [JsonPropertyName("useServiceLinkedRole")]
     public bool? UseServiceLinkedRole { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Whether or not the resource is a federated resource. Set to true when registering AWS Glue connections for federated catalog functionality.</summary>
     [JsonPropertyName("withFederation")]
     public bool? WithFederation { get; set; }
 }
@@ -161,7 +161,7 @@ public partial class V1beta1ResourceSpecInitProviderRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSpecInitProvider
 {
-    /// <summary>–  Amazon Resource Name (ARN) of the resource.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the resource.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -169,7 +169,7 @@ public partial class V1beta1ResourceSpecInitProvider
     [JsonPropertyName("hybridAccessEnabled")]
     public bool? HybridAccessEnabled { get; set; }
 
-    /// <summary>–  Role that has read/write access to the resource.</summary>
+    /// <summary>Role that has read/write access to the resource.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -185,7 +185,7 @@ public partial class V1beta1ResourceSpecInitProvider
     [JsonPropertyName("useServiceLinkedRole")]
     public bool? UseServiceLinkedRole { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Whether or not the resource is a federated resource. Set to true when registering AWS Glue connections for federated catalog functionality.</summary>
     [JsonPropertyName("withFederation")]
     public bool? WithFederation { get; set; }
 }
@@ -326,7 +326,7 @@ public partial class V1beta1ResourceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceStatusAtProvider
 {
-    /// <summary>–  Amazon Resource Name (ARN) of the resource.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the resource.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -342,7 +342,11 @@ public partial class V1beta1ResourceStatusAtProvider
     [JsonPropertyName("lastModified")]
     public string? LastModified { get; set; }
 
-    /// <summary>–  Role that has read/write access to the resource.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Role that has read/write access to the resource.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -350,7 +354,7 @@ public partial class V1beta1ResourceStatusAtProvider
     [JsonPropertyName("useServiceLinkedRole")]
     public bool? UseServiceLinkedRole { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Whether or not the resource is a federated resource. Set to true when registering AWS Glue connections for federated catalog functionality.</summary>
     [JsonPropertyName("withFederation")]
     public bool? WithFederation { get; set; }
 }

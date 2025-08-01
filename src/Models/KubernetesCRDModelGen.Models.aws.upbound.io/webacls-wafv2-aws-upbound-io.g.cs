@@ -140,6 +140,49 @@ public partial class V1beta1WebACLSpecForProviderCustomResponseBody
     public string? Key { get; set; }
 }
 
+/// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLSpecForProviderDataProtectionConfigDataProtectionField
+{
+    /// <summary>Array of strings to specify the keys to protect for the specified field type. If you don't specify any key, then all keys for the field type are protected.</summary>
+    [JsonPropertyName("fieldKeys")]
+    public IList<string>? FieldKeys { get; set; }
+
+    /// <summary>Specifies the web request component type to protect. Valid Values are SINGLE_HEADER, SINGLE_COOKIE, SINGLE_QUERY_ARGUMENT, QUERY_STRING, BODY.</summary>
+    [JsonPropertyName("fieldType")]
+    public string? FieldType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLSpecForProviderDataProtectionConfigDataProtection
+{
+    /// <summary>Specifies how to protect the field. Valid values are SUBSTITUTION or HASH.</summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    /// <summary>Boolean to specify whether to also exclude any rate-based rule details from the data protection you have enabled for a given field.</summary>
+    [JsonPropertyName("excludeRateBasedDetails")]
+    public bool? ExcludeRateBasedDetails { get; set; }
+
+    /// <summary>Boolean to specify whether to also exclude any rule match details from the data protection you have enabled for a given field. AWS WAF logs these details for non-terminating matching rules and for the terminating matching rule.</summary>
+    [JsonPropertyName("excludeRuleMatchDetails")]
+    public bool? ExcludeRuleMatchDetails { get; set; }
+
+    /// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
+    [JsonPropertyName("field")]
+    public V1beta1WebACLSpecForProviderDataProtectionConfigDataProtectionField? Field { get; set; }
+}
+
+/// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLSpecForProviderDataProtectionConfig
+{
+    /// <summary>A block for data protection configurations for specific web request field types. See data_protection block for details.</summary>
+    [JsonPropertyName("dataProtection")]
+    public IList<V1beta1WebACLSpecForProviderDataProtectionConfigDataProtection>? DataProtection { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecForProviderDefaultActionAllowCustomRequestHandlingInsertHeader
@@ -260,6 +303,10 @@ public partial class V1beta1WebACLSpecForProvider
     [JsonPropertyName("customResponseBody")]
     public IList<V1beta1WebACLSpecForProviderCustomResponseBody>? CustomResponseBody { get; set; }
 
+    /// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
+    [JsonPropertyName("dataProtectionConfig")]
+    public V1beta1WebACLSpecForProviderDataProtectionConfig? DataProtectionConfig { get; set; }
+
     /// <summary>Action to perform if none of the rules contained in the WebACL match. See default_action below for details.</summary>
     [JsonPropertyName("defaultAction")]
     public V1beta1WebACLSpecForProviderDefaultAction? DefaultAction { get; set; }
@@ -268,11 +315,11 @@ public partial class V1beta1WebACLSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Friendly name of the WebACL.</summary>
+    /// <summary>Friendly name of the WebACL. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -429,6 +476,49 @@ public partial class V1beta1WebACLSpecInitProviderCustomResponseBody
     public string? Key { get; set; }
 }
 
+/// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtectionField
+{
+    /// <summary>Array of strings to specify the keys to protect for the specified field type. If you don't specify any key, then all keys for the field type are protected.</summary>
+    [JsonPropertyName("fieldKeys")]
+    public IList<string>? FieldKeys { get; set; }
+
+    /// <summary>Specifies the web request component type to protect. Valid Values are SINGLE_HEADER, SINGLE_COOKIE, SINGLE_QUERY_ARGUMENT, QUERY_STRING, BODY.</summary>
+    [JsonPropertyName("fieldType")]
+    public string? FieldType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtection
+{
+    /// <summary>Specifies how to protect the field. Valid values are SUBSTITUTION or HASH.</summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    /// <summary>Boolean to specify whether to also exclude any rate-based rule details from the data protection you have enabled for a given field.</summary>
+    [JsonPropertyName("excludeRateBasedDetails")]
+    public bool? ExcludeRateBasedDetails { get; set; }
+
+    /// <summary>Boolean to specify whether to also exclude any rule match details from the data protection you have enabled for a given field. AWS WAF logs these details for non-terminating matching rules and for the terminating matching rule.</summary>
+    [JsonPropertyName("excludeRuleMatchDetails")]
+    public bool? ExcludeRuleMatchDetails { get; set; }
+
+    /// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
+    [JsonPropertyName("field")]
+    public V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtectionField? Field { get; set; }
+}
+
+/// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLSpecInitProviderDataProtectionConfig
+{
+    /// <summary>A block for data protection configurations for specific web request field types. See data_protection block for details.</summary>
+    [JsonPropertyName("dataProtection")]
+    public IList<V1beta1WebACLSpecInitProviderDataProtectionConfigDataProtection>? DataProtection { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLSpecInitProviderDefaultActionAllowCustomRequestHandlingInsertHeader
@@ -549,6 +639,10 @@ public partial class V1beta1WebACLSpecInitProvider
     [JsonPropertyName("customResponseBody")]
     public IList<V1beta1WebACLSpecInitProviderCustomResponseBody>? CustomResponseBody { get; set; }
 
+    /// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
+    [JsonPropertyName("dataProtectionConfig")]
+    public V1beta1WebACLSpecInitProviderDataProtectionConfig? DataProtectionConfig { get; set; }
+
     /// <summary>Action to perform if none of the rules contained in the WebACL match. See default_action below for details.</summary>
     [JsonPropertyName("defaultAction")]
     public V1beta1WebACLSpecInitProviderDefaultAction? DefaultAction { get; set; }
@@ -557,7 +651,7 @@ public partial class V1beta1WebACLSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Friendly name of the WebACL.</summary>
+    /// <summary>Friendly name of the WebACL. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -846,6 +940,49 @@ public partial class V1beta1WebACLStatusAtProviderCustomResponseBody
     public string? Key { get; set; }
 }
 
+/// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtectionField
+{
+    /// <summary>Array of strings to specify the keys to protect for the specified field type. If you don't specify any key, then all keys for the field type are protected.</summary>
+    [JsonPropertyName("fieldKeys")]
+    public IList<string>? FieldKeys { get; set; }
+
+    /// <summary>Specifies the web request component type to protect. Valid Values are SINGLE_HEADER, SINGLE_COOKIE, SINGLE_QUERY_ARGUMENT, QUERY_STRING, BODY.</summary>
+    [JsonPropertyName("fieldType")]
+    public string? FieldType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtection
+{
+    /// <summary>Specifies how to protect the field. Valid values are SUBSTITUTION or HASH.</summary>
+    [JsonPropertyName("action")]
+    public string? Action { get; set; }
+
+    /// <summary>Boolean to specify whether to also exclude any rate-based rule details from the data protection you have enabled for a given field.</summary>
+    [JsonPropertyName("excludeRateBasedDetails")]
+    public bool? ExcludeRateBasedDetails { get; set; }
+
+    /// <summary>Boolean to specify whether to also exclude any rule match details from the data protection you have enabled for a given field. AWS WAF logs these details for non-terminating matching rules and for the terminating matching rule.</summary>
+    [JsonPropertyName("excludeRuleMatchDetails")]
+    public bool? ExcludeRuleMatchDetails { get; set; }
+
+    /// <summary>Specifies the field type and optional keys to apply the protection behavior to. See field block below for details.</summary>
+    [JsonPropertyName("field")]
+    public V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtectionField? Field { get; set; }
+}
+
+/// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1WebACLStatusAtProviderDataProtectionConfig
+{
+    /// <summary>A block for data protection configurations for specific web request field types. See data_protection block for details.</summary>
+    [JsonPropertyName("dataProtection")]
+    public IList<V1beta1WebACLStatusAtProviderDataProtectionConfigDataProtection>? DataProtection { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebACLStatusAtProviderDefaultActionAllowCustomRequestHandlingInsertHeader
@@ -978,6 +1115,10 @@ public partial class V1beta1WebACLStatusAtProvider
     [JsonPropertyName("customResponseBody")]
     public IList<V1beta1WebACLStatusAtProviderCustomResponseBody>? CustomResponseBody { get; set; }
 
+    /// <summary>Specifies data protection to apply to the web request data for the web ACL. This is a web ACL level data protection option. See data_protection_config below for details.</summary>
+    [JsonPropertyName("dataProtectionConfig")]
+    public V1beta1WebACLStatusAtProviderDataProtectionConfig? DataProtectionConfig { get; set; }
+
     /// <summary>Action to perform if none of the rules contained in the WebACL match. See default_action below for details.</summary>
     [JsonPropertyName("defaultAction")]
     public V1beta1WebACLStatusAtProviderDefaultAction? DefaultAction { get; set; }
@@ -994,9 +1135,13 @@ public partial class V1beta1WebACLStatusAtProvider
     [JsonPropertyName("lockToken")]
     public string? LockToken { get; set; }
 
-    /// <summary>Friendly name of the WebACL.</summary>
+    /// <summary>Friendly name of the WebACL. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A raw JSON string used to define the rules for allowing, blocking, or counting web requests. When this field is used, Crossplane cannot observe changes in the configuration through the AWS API; therefore, drift detection cannot be performed. Refer to the AWS documentation for the expected JSON structure: https://docs.aws.amazon.com/waf/latest/APIReference/API_CreateWebACL.html</summary>
     [JsonPropertyName("ruleJson")]

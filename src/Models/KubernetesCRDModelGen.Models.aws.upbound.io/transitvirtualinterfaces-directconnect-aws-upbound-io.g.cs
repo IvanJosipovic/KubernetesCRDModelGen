@@ -176,7 +176,7 @@ public partial class V1beta1TransitVirtualInterfaceSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -565,6 +565,10 @@ public partial class V1beta1TransitVirtualInterfaceStatusAtProvider
     /// <summary>The name for the virtual interface.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Indicates whether to enable or disable SiteLink.</summary>
     [JsonPropertyName("sitelinkEnabled")]

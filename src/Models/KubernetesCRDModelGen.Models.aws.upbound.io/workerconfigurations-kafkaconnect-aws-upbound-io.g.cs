@@ -24,7 +24,7 @@ public partial class V1beta1WorkerConfigurationSpecForProvider
     [JsonPropertyName("propertiesFileContent")]
     public string? PropertiesFileContent { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -209,6 +209,10 @@ public partial class V1beta1WorkerConfigurationStatusAtProvider
     /// <summary>Contents of connect-distributed.properties file. The value can be either base64 encoded or in raw format.</summary>
     [JsonPropertyName("propertiesFileContent")]
     public string? PropertiesFileContent { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

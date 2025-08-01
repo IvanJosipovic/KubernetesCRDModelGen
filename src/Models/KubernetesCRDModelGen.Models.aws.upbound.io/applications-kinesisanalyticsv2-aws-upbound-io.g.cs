@@ -1263,11 +1263,11 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("forceStop")]
     public bool? ForceStop { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The runtime environment for the application. Valid values: SQL-1_0, FLINK-1_6, FLINK-1_8, FLINK-1_11, FLINK-1_13, FLINK-1_15, FLINK-1_18.</summary>
+    /// <summary>The runtime environment for the application. Valid values: SQL-1_0, FLINK-1_6, FLINK-1_8, FLINK-1_11, FLINK-1_13, FLINK-1_15, FLINK-1_18, FLINK-1_19.</summary>
     [JsonPropertyName("runtimeEnvironment")]
     public string? RuntimeEnvironment { get; set; }
 
@@ -2547,7 +2547,7 @@ public partial class V1beta1ApplicationSpecInitProvider
     [JsonPropertyName("forceStop")]
     public bool? ForceStop { get; set; }
 
-    /// <summary>The runtime environment for the application. Valid values: SQL-1_0, FLINK-1_6, FLINK-1_8, FLINK-1_11, FLINK-1_13, FLINK-1_15, FLINK-1_18.</summary>
+    /// <summary>The runtime environment for the application. Valid values: SQL-1_0, FLINK-1_6, FLINK-1_8, FLINK-1_11, FLINK-1_13, FLINK-1_15, FLINK-1_18, FLINK-1_19.</summary>
     [JsonPropertyName("runtimeEnvironment")]
     public string? RuntimeEnvironment { get; set; }
 
@@ -3371,7 +3371,11 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("lastUpdateTimestamp")]
     public string? LastUpdateTimestamp { get; set; }
 
-    /// <summary>The runtime environment for the application. Valid values: SQL-1_0, FLINK-1_6, FLINK-1_8, FLINK-1_11, FLINK-1_13, FLINK-1_15, FLINK-1_18.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The runtime environment for the application. Valid values: SQL-1_0, FLINK-1_6, FLINK-1_8, FLINK-1_11, FLINK-1_13, FLINK-1_15, FLINK-1_18, FLINK-1_19.</summary>
     [JsonPropertyName("runtimeEnvironment")]
     public string? RuntimeEnvironment { get; set; }
 

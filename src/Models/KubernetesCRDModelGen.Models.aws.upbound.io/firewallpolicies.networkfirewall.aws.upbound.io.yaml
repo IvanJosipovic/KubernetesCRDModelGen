@@ -160,6 +160,9 @@ spec:
                           description: Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
                           items:
                             properties:
+                              deepThreatInspection:
+                                description: Whether to enable deep threat inspection, which allows AWS to analyze service logs of network traffic processed by these rule groups to identify threat indicators across customers. AWS will use these threat indicators to improve the active threat defense managed rule groups and protect the security of AWS customers and services. This only applies to active threat defense maanaged rule groups.
+                                type: string
                               override:
                                 description: Configuration block for override values
                                 items:
@@ -415,7 +418,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -524,6 +530,9 @@ spec:
                           description: Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
                           items:
                             properties:
+                              deepThreatInspection:
+                                description: Whether to enable deep threat inspection, which allows AWS to analyze service logs of network traffic processed by these rule groups to identify threat indicators across customers. AWS will use these threat indicators to improve the active threat defense managed rule groups and protect the security of AWS customers and services. This only applies to active threat defense maanaged rule groups.
+                                type: string
                               override:
                                 description: Configuration block for override values
                                 items:
@@ -1080,6 +1089,9 @@ spec:
                           description: Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
                           items:
                             properties:
+                              deepThreatInspection:
+                                description: Whether to enable deep threat inspection, which allows AWS to analyze service logs of network traffic processed by these rule groups to identify threat indicators across customers. AWS will use these threat indicators to improve the active threat defense managed rule groups and protect the security of AWS customers and services. This only applies to active threat defense maanaged rule groups.
+                                type: string
                               override:
                                 description: Configuration block for override values
                                 items:
@@ -1164,6 +1176,12 @@ spec:
                     type: array
                   id:
                     description: The Amazon Resource Name (ARN) that identifies the firewall policy.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -1379,6 +1397,9 @@ spec:
                         description: Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
                         items:
                           properties:
+                            deepThreatInspection:
+                              description: Whether to enable deep threat inspection, which allows AWS to analyze service logs of network traffic processed by these rule groups to identify threat indicators across customers. AWS will use these threat indicators to improve the active threat defense managed rule groups and protect the security of AWS customers and services. This only applies to active threat defense maanaged rule groups.
+                              type: string
                             override:
                               description: Configuration block for override values
                               properties:
@@ -1627,7 +1648,10 @@ spec:
                         type: string
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -1725,6 +1749,9 @@ spec:
                         description: Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
                         items:
                           properties:
+                            deepThreatInspection:
+                              description: Whether to enable deep threat inspection, which allows AWS to analyze service logs of network traffic processed by these rule groups to identify threat indicators across customers. AWS will use these threat indicators to improve the active threat defense managed rule groups and protect the security of AWS customers and services. This only applies to active threat defense maanaged rule groups.
+                              type: string
                             override:
                               description: Configuration block for override values
                               properties:
@@ -2263,6 +2290,9 @@ spec:
                         description: Set of configuration blocks containing references to the stateful rule groups that are used in the policy. See Stateful Rule Group Reference below for details.
                         items:
                           properties:
+                            deepThreatInspection:
+                              description: Whether to enable deep threat inspection, which allows AWS to analyze service logs of network traffic processed by these rule groups to identify threat indicators across customers. AWS will use these threat indicators to improve the active threat defense managed rule groups and protect the security of AWS customers and services. This only applies to active threat defense maanaged rule groups.
+                              type: string
                             override:
                               description: Configuration block for override values
                               properties:
@@ -2340,6 +2370,12 @@ spec:
                     type: object
                   id:
                     description: The Amazon Resource Name (ARN) that identifies the firewall policy.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:

@@ -106,7 +106,7 @@ public partial class V1beta1ModelSpecForProviderContainer
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker Developer Guide.</summary>
+    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker AI Developer Guide.</summary>
     [JsonPropertyName("modelDataSource")]
     public IList<V1beta1ModelSpecForProviderContainerModelDataSource>? ModelDataSource { get; set; }
 
@@ -286,7 +286,7 @@ public partial class V1beta1ModelSpecForProviderPrimaryContainer
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker Developer Guide.</summary>
+    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker AI Developer Guide.</summary>
     [JsonPropertyName("modelDataSource")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainerModelDataSource>? ModelDataSource { get; set; }
 
@@ -328,7 +328,7 @@ public partial class V1beta1ModelSpecForProvider
     [JsonPropertyName("enableNetworkIsolation")]
     public bool? EnableNetworkIsolation { get; set; }
 
-    /// <summary>A role that SageMaker can assume to access model artifacts and docker images for deployment.</summary>
+    /// <summary>A role that SageMaker AI can assume to access model artifacts and docker images for deployment.</summary>
     [JsonPropertyName("executionRoleArn")]
     public string? ExecutionRoleArn { get; set; }
 
@@ -348,7 +348,7 @@ public partial class V1beta1ModelSpecForProvider
     [JsonPropertyName("primaryContainer")]
     public IList<V1beta1ModelSpecForProviderPrimaryContainer>? PrimaryContainer { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -459,7 +459,7 @@ public partial class V1beta1ModelSpecInitProviderContainer
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker Developer Guide.</summary>
+    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker AI Developer Guide.</summary>
     [JsonPropertyName("modelDataSource")]
     public IList<V1beta1ModelSpecInitProviderContainerModelDataSource>? ModelDataSource { get; set; }
 
@@ -639,7 +639,7 @@ public partial class V1beta1ModelSpecInitProviderPrimaryContainer
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker Developer Guide.</summary>
+    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker AI Developer Guide.</summary>
     [JsonPropertyName("modelDataSource")]
     public IList<V1beta1ModelSpecInitProviderPrimaryContainerModelDataSource>? ModelDataSource { get; set; }
 
@@ -681,7 +681,7 @@ public partial class V1beta1ModelSpecInitProvider
     [JsonPropertyName("enableNetworkIsolation")]
     public bool? EnableNetworkIsolation { get; set; }
 
-    /// <summary>A role that SageMaker can assume to access model artifacts and docker images for deployment.</summary>
+    /// <summary>A role that SageMaker AI can assume to access model artifacts and docker images for deployment.</summary>
     [JsonPropertyName("executionRoleArn")]
     public string? ExecutionRoleArn { get; set; }
 
@@ -940,7 +940,7 @@ public partial class V1beta1ModelStatusAtProviderContainer
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker Developer Guide.</summary>
+    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker AI Developer Guide.</summary>
     [JsonPropertyName("modelDataSource")]
     public IList<V1beta1ModelStatusAtProviderContainerModelDataSource>? ModelDataSource { get; set; }
 
@@ -1064,7 +1064,7 @@ public partial class V1beta1ModelStatusAtProviderPrimaryContainer
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker Developer Guide.</summary>
+    /// <summary>The location of model data to deploy. Use this for uncompressed model deployment. For information about how to deploy an uncompressed model, see Deploying uncompressed models in the AWS SageMaker AI Developer Guide.</summary>
     [JsonPropertyName("modelDataSource")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainerModelDataSource>? ModelDataSource { get; set; }
 
@@ -1110,7 +1110,7 @@ public partial class V1beta1ModelStatusAtProvider
     [JsonPropertyName("enableNetworkIsolation")]
     public bool? EnableNetworkIsolation { get; set; }
 
-    /// <summary>A role that SageMaker can assume to access model artifacts and docker images for deployment.</summary>
+    /// <summary>A role that SageMaker AI can assume to access model artifacts and docker images for deployment.</summary>
     [JsonPropertyName("executionRoleArn")]
     public string? ExecutionRoleArn { get; set; }
 
@@ -1125,6 +1125,10 @@ public partial class V1beta1ModelStatusAtProvider
     /// <summary>The primary docker image containing inference code that is used when the model is deployed for predictions.  If not specified, the container argument is required. Fields are documented below.</summary>
     [JsonPropertyName("primaryContainer")]
     public IList<V1beta1ModelStatusAtProviderPrimaryContainer>? PrimaryContainer { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -1185,7 +1189,7 @@ public partial class V1beta1ModelStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Model is the Schema for the Models API. Provides a SageMaker model resource.</summary>
+/// <summary>Model is the Schema for the Models API. Provides a SageMaker AI model resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Model : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ModelSpec>, IStatus<V1beta1ModelStatus>
@@ -1215,7 +1219,7 @@ public partial class V1beta1Model : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     public V1beta1ModelStatus? Status { get; set; }
 }
 
-/// <summary>Model is the Schema for the Models API. Provides a SageMaker model resource.</summary>
+/// <summary>Model is the Schema for the Models API. Provides a SageMaker AI model resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ModelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Model>

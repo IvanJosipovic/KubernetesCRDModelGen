@@ -16,7 +16,7 @@ public partial class V1beta1ClusterSpecForProviderAccessConfig
     [JsonPropertyName("authenticationMode")]
     public string? AuthenticationMode { get; set; }
 
-    /// <summary>Whether or not to bootstrap the access config values to the cluster. Default is true.</summary>
+    /// <summary>Whether or not to bootstrap the access config values to the cluster. Default is false.</summary>
     [JsonPropertyName("bootstrapClusterCreatorAdminPermissions")]
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
@@ -203,7 +203,7 @@ public partial class V1beta1ClusterSpecForProviderRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderStorageConfigBlockStorage
 {
-    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    /// <summary>Indicates if the block storage capability is enabled on your EKS Auto Mode cluster. If the block storage capability is enabled, EKS Auto Mode will create and delete block storage volumes in your Amazon Web Services account.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -212,7 +212,7 @@ public partial class V1beta1ClusterSpecForProviderStorageConfigBlockStorage
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderStorageConfig
 {
-    /// <summary></summary>
+    /// <summary>Configuration block with block storage configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("blockStorage")]
     public IList<V1beta1ClusterSpecForProviderStorageConfigBlockStorage>? BlockStorage { get; set; }
 }
@@ -366,7 +366,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfig
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1ClusterSpecForProviderVpcConfigSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.</summary>
+    /// <summary>List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -378,7 +378,7 @@ public partial class V1beta1ClusterSpecForProviderVpcConfig
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ClusterSpecForProviderVpcConfigSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.</summary>
+    /// <summary>List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
@@ -396,7 +396,7 @@ public partial class V1beta1ClusterSpecForProviderZonalShiftConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
-    /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
+    /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries. Detailed below.</summary>
     [JsonPropertyName("accessConfig")]
     public IList<V1beta1ClusterSpecForProviderAccessConfig>? AccessConfig { get; set; }
 
@@ -412,9 +412,13 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("enabledClusterLogTypes")]
     public IList<string>? EnabledClusterLogTypes { get; set; }
 
-    /// <summary>Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.</summary>
+    /// <summary>Configuration block with encryption configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("encryptionConfig")]
     public IList<V1beta1ClusterSpecForProviderEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>Force version update by overriding upgrade-blocking readiness checks when updating a cluster.</summary>
+    [JsonPropertyName("forceUpdateVersion")]
+    public bool? ForceUpdateVersion { get; set; }
 
     /// <summary>Configuration block with kubernetes network configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("kubernetesNetworkConfig")]
@@ -424,7 +428,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("outpostConfig")]
     public IList<V1beta1ClusterSpecForProviderOutpostConfig>? OutpostConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -456,7 +460,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("upgradePolicy")]
     public IList<V1beta1ClusterSpecForProviderUpgradePolicy>? UpgradePolicy { get; set; }
 
-    /// <summary>–  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
+    /// <summary>Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 
@@ -477,7 +481,7 @@ public partial class V1beta1ClusterSpecInitProviderAccessConfig
     [JsonPropertyName("authenticationMode")]
     public string? AuthenticationMode { get; set; }
 
-    /// <summary>Whether or not to bootstrap the access config values to the cluster. Default is true.</summary>
+    /// <summary>Whether or not to bootstrap the access config values to the cluster. Default is false.</summary>
     [JsonPropertyName("bootstrapClusterCreatorAdminPermissions")]
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
@@ -664,7 +668,7 @@ public partial class V1beta1ClusterSpecInitProviderRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderStorageConfigBlockStorage
 {
-    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    /// <summary>Indicates if the block storage capability is enabled on your EKS Auto Mode cluster. If the block storage capability is enabled, EKS Auto Mode will create and delete block storage volumes in your Amazon Web Services account.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -673,7 +677,7 @@ public partial class V1beta1ClusterSpecInitProviderStorageConfigBlockStorage
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderStorageConfig
 {
-    /// <summary></summary>
+    /// <summary>Configuration block with block storage configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("blockStorage")]
     public IList<V1beta1ClusterSpecInitProviderStorageConfigBlockStorage>? BlockStorage { get; set; }
 }
@@ -827,7 +831,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfig
     [JsonPropertyName("securityGroupIdSelector")]
     public V1beta1ClusterSpecInitProviderVpcConfigSecurityGroupIdSelector? SecurityGroupIdSelector { get; set; }
 
-    /// <summary>account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.</summary>
+    /// <summary>List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
@@ -839,7 +843,7 @@ public partial class V1beta1ClusterSpecInitProviderVpcConfig
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1ClusterSpecInitProviderVpcConfigSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.</summary>
+    /// <summary>List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 }
@@ -857,7 +861,7 @@ public partial class V1beta1ClusterSpecInitProviderZonalShiftConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
 {
-    /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
+    /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries. Detailed below.</summary>
     [JsonPropertyName("accessConfig")]
     public IList<V1beta1ClusterSpecInitProviderAccessConfig>? AccessConfig { get; set; }
 
@@ -873,9 +877,13 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("enabledClusterLogTypes")]
     public IList<string>? EnabledClusterLogTypes { get; set; }
 
-    /// <summary>Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.</summary>
+    /// <summary>Configuration block with encryption configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("encryptionConfig")]
     public IList<V1beta1ClusterSpecInitProviderEncryptionConfig>? EncryptionConfig { get; set; }
+
+    /// <summary>Force version update by overriding upgrade-blocking readiness checks when updating a cluster.</summary>
+    [JsonPropertyName("forceUpdateVersion")]
+    public bool? ForceUpdateVersion { get; set; }
 
     /// <summary>Configuration block with kubernetes network configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("kubernetesNetworkConfig")]
@@ -913,7 +921,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("upgradePolicy")]
     public IList<V1beta1ClusterSpecInitProviderUpgradePolicy>? UpgradePolicy { get; set; }
 
-    /// <summary>–  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
+    /// <summary>Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 
@@ -1066,7 +1074,7 @@ public partial class V1beta1ClusterStatusAtProviderAccessConfig
     [JsonPropertyName("authenticationMode")]
     public string? AuthenticationMode { get; set; }
 
-    /// <summary>Whether or not to bootstrap the access config values to the cluster. Default is true.</summary>
+    /// <summary>Whether or not to bootstrap the access config values to the cluster. Default is false.</summary>
     [JsonPropertyName("bootstrapClusterCreatorAdminPermissions")]
     public bool? BootstrapClusterCreatorAdminPermissions { get; set; }
 }
@@ -1162,7 +1170,7 @@ public partial class V1beta1ClusterStatusAtProviderKubernetesNetworkConfig
     [JsonPropertyName("serviceIpv4Cidr")]
     public string? ServiceIpv4Cidr { get; set; }
 
-    /// <summary>The CIDR block that Kubernetes pod and service IP addresses are assigned from if you specified ipv6 for ipFamily when you created the cluster. Kubernetes assigns service addresses from the unique local address range (fc00::/7) because you can't specify a custom IPv6 CIDR block when you create the cluster.</summary>
+    /// <summary>(Computed) The CIDR block that Kubernetes pod and service IP addresses are assigned from if you specify ipv6 for ip_family when you create the cluster. Kubernetes assigns service addresses from the unique local address range (fc00::/7) because you can't specify a custom IPv6 CIDR block when you create the cluster.</summary>
     [JsonPropertyName("serviceIpv6Cidr")]
     public string? ServiceIpv6Cidr { get; set; }
 }
@@ -1228,7 +1236,7 @@ public partial class V1beta1ClusterStatusAtProviderRemoteNetworkConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderStorageConfigBlockStorage
 {
-    /// <summary>Whether zonal shift is enabled for the cluster.</summary>
+    /// <summary>Indicates if the block storage capability is enabled on your EKS Auto Mode cluster. If the block storage capability is enabled, EKS Auto Mode will create and delete block storage volumes in your Amazon Web Services account.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 }
@@ -1237,7 +1245,7 @@ public partial class V1beta1ClusterStatusAtProviderStorageConfigBlockStorage
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderStorageConfig
 {
-    /// <summary></summary>
+    /// <summary>Configuration block with block storage configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("blockStorage")]
     public IList<V1beta1ClusterStatusAtProviderStorageConfigBlockStorage>? BlockStorage { get; set; }
 }
@@ -1255,7 +1263,7 @@ public partial class V1beta1ClusterStatusAtProviderUpgradePolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderVpcConfig
 {
-    /// <summary>Cluster security group that was created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.</summary>
+    /// <summary>(Computed) Cluster security group that is created by Amazon EKS for the cluster. Managed node groups use this security group for control-plane-to-data-plane communication.</summary>
     [JsonPropertyName("clusterSecurityGroupId")]
     public string? ClusterSecurityGroupId { get; set; }
 
@@ -1275,15 +1283,15 @@ public partial class V1beta1ClusterStatusAtProviderVpcConfig
     [JsonPropertyName("publicAccessCidrs")]
     public IList<string>? PublicAccessCidrs { get; set; }
 
-    /// <summary>account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.</summary>
+    /// <summary>List of security group IDs for the cross-account elastic network interfaces that Amazon EKS creates to use to allow communication between your worker nodes and the Kubernetes control plane.</summary>
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.</summary>
+    /// <summary>List of subnet IDs. Must be in at least two different availability zones. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
-    /// <summary>ID of the VPC associated with your cluster.</summary>
+    /// <summary>(Computed) ID of the VPC associated with your cluster.</summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 }
@@ -1301,7 +1309,7 @@ public partial class V1beta1ClusterStatusAtProviderZonalShiftConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
-    /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries.</summary>
+    /// <summary>Configuration block for the access config associated with your cluster, see Amazon EKS Access Entries. Detailed below.</summary>
     [JsonPropertyName("accessConfig")]
     public IList<V1beta1ClusterStatusAtProviderAccessConfig>? AccessConfig { get; set; }
 
@@ -1333,13 +1341,17 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("enabledClusterLogTypes")]
     public IList<string>? EnabledClusterLogTypes { get; set; }
 
-    /// <summary>Configuration block with encryption configuration for the cluster. Only available on Kubernetes 1.13 and above clusters created after March 6, 2020. Detailed below.</summary>
+    /// <summary>Configuration block with encryption configuration for the cluster. Detailed below.</summary>
     [JsonPropertyName("encryptionConfig")]
     public IList<V1beta1ClusterStatusAtProviderEncryptionConfig>? EncryptionConfig { get; set; }
 
     /// <summary>Endpoint for your Kubernetes API server.</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
+
+    /// <summary>Force version update by overriding upgrade-blocking readiness checks when updating a cluster.</summary>
+    [JsonPropertyName("forceUpdateVersion")]
+    public bool? ForceUpdateVersion { get; set; }
 
     /// <summary>Name of the cluster.</summary>
     [JsonPropertyName("id")]
@@ -1360,6 +1372,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>Platform version for the cluster.</summary>
     [JsonPropertyName("platformVersion")]
     public string? PlatformVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block with remote network configuration for EKS Hybrid Nodes. Detailed below.</summary>
     [JsonPropertyName("remoteNetworkConfig")]
@@ -1389,7 +1405,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("upgradePolicy")]
     public IList<V1beta1ClusterStatusAtProviderUpgradePolicy>? UpgradePolicy { get; set; }
 
-    /// <summary>–  Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
+    /// <summary>Desired Kubernetes master version. If you do not specify a value, the latest available version at resource creation is used and no upgrades will occur except those automatically triggered by EKS. The value must be configured and increased to upgrade the version when desired. Downgrades are not supported by EKS.</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 

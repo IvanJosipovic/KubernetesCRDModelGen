@@ -517,6 +517,22 @@ public partial class V1beta1FleetSpecForProviderSpotOptions
     /// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
     [JsonPropertyName("maintenanceStrategies")]
     public V1beta1FleetSpecForProviderSpotOptionsMaintenanceStrategies? MaintenanceStrategies { get; set; }
+
+    /// <summary>The maximum amount per hour for Spot Instances that you're willing to pay.</summary>
+    [JsonPropertyName("maxTotalPrice")]
+    public string? MaxTotalPrice { get; set; }
+
+    /// <summary>The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the fleet launches no instances. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("minTargetCapacity")]
+    public double? MinTargetCapacity { get; set; }
+
+    /// <summary>Indicates that the fleet launches all Spot Instances into a single Availability Zone. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("singleAvailabilityZone")]
+    public bool? SingleAvailabilityZone { get; set; }
+
+    /// <summary>Indicates that the fleet uses a single instance type to launch all Spot Instances in the fleet. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("singleInstanceType")]
+    public bool? SingleInstanceType { get; set; }
 }
 
 /// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
@@ -580,7 +596,7 @@ public partial class V1beta1FleetSpecForProvider
     [JsonPropertyName("onDemandOptions")]
     public V1beta1FleetSpecForProviderOnDemandOptions? OnDemandOptions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1130,6 +1146,22 @@ public partial class V1beta1FleetSpecInitProviderSpotOptions
     /// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
     [JsonPropertyName("maintenanceStrategies")]
     public V1beta1FleetSpecInitProviderSpotOptionsMaintenanceStrategies? MaintenanceStrategies { get; set; }
+
+    /// <summary>The maximum amount per hour for Spot Instances that you're willing to pay.</summary>
+    [JsonPropertyName("maxTotalPrice")]
+    public string? MaxTotalPrice { get; set; }
+
+    /// <summary>The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the fleet launches no instances. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("minTargetCapacity")]
+    public double? MinTargetCapacity { get; set; }
+
+    /// <summary>Indicates that the fleet launches all Spot Instances into a single Availability Zone. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("singleAvailabilityZone")]
+    public bool? SingleAvailabilityZone { get; set; }
+
+    /// <summary>Indicates that the fleet uses a single instance type to launch all Spot Instances in the fleet. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("singleInstanceType")]
+    public bool? SingleInstanceType { get; set; }
 }
 
 /// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
@@ -1743,6 +1775,22 @@ public partial class V1beta1FleetStatusAtProviderSpotOptions
     /// <summary>Nested argument containing maintenance strategies for managing your Spot Instances that are at an elevated risk of being interrupted. Defined below.</summary>
     [JsonPropertyName("maintenanceStrategies")]
     public V1beta1FleetStatusAtProviderSpotOptionsMaintenanceStrategies? MaintenanceStrategies { get; set; }
+
+    /// <summary>The maximum amount per hour for Spot Instances that you're willing to pay.</summary>
+    [JsonPropertyName("maxTotalPrice")]
+    public string? MaxTotalPrice { get; set; }
+
+    /// <summary>The minimum target capacity for Spot Instances in the fleet. If the minimum target capacity is not reached, the fleet launches no instances. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("minTargetCapacity")]
+    public double? MinTargetCapacity { get; set; }
+
+    /// <summary>Indicates that the fleet launches all Spot Instances into a single Availability Zone. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("singleAvailabilityZone")]
+    public bool? SingleAvailabilityZone { get; set; }
+
+    /// <summary>Indicates that the fleet uses a single instance type to launch all Spot Instances in the fleet. Supported only for fleets of type instant.</summary>
+    [JsonPropertyName("singleInstanceType")]
+    public bool? SingleInstanceType { get; set; }
 }
 
 /// <summary>Nested argument containing target capacity configurations. Defined below.</summary>
@@ -1813,6 +1861,10 @@ public partial class V1beta1FleetStatusAtProvider
     /// <summary>Nested argument containing On-Demand configurations. Defined below.</summary>
     [JsonPropertyName("onDemandOptions")]
     public V1beta1FleetStatusAtProviderOnDemandOptions? OnDemandOptions { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether EC2 Fleet should replace unhealthy instances. Defaults to false. Supported only for fleets of type maintain.</summary>
     [JsonPropertyName("replaceUnhealthyInstances")]

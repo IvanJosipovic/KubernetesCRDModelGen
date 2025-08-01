@@ -88,7 +88,7 @@ public partial class V1beta1CatalogDatabaseSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>Region of the target database. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -397,6 +397,10 @@ public partial class V1beta1CatalogDatabaseStatusAtProvider
     /// <summary>List of key-value pairs that define parameters and properties of the database.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

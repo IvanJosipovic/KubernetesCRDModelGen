@@ -128,7 +128,7 @@ public partial class V1beta1SubnetSpecForProvider
     [JsonPropertyName("privateDnsHostnameTypeOnLaunch")]
     public string? PrivateDnsHostnameTypeOnLaunch { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -497,6 +497,10 @@ public partial class V1beta1SubnetStatusAtProvider
     /// <summary>The type of hostnames to assign to instances in the subnet at launch. For IPv6-only subnets, an instance DNS name must be based on the instance ID. For dual-stack and IPv4-only subnets, you can specify whether DNS names use the instance IPv4 address or the instance ID. Valid values: ip-name, resource-name.</summary>
     [JsonPropertyName("privateDnsHostnameTypeOnLaunch")]
     public string? PrivateDnsHostnameTypeOnLaunch { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -100,7 +100,7 @@ public partial class V1beta1UsageLimitSpecForProvider
     [JsonPropertyName("period")]
     public string? Period { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -373,6 +373,10 @@ public partial class V1beta1UsageLimitStatusAtProvider
     /// <summary>The time period that the amount applies to. A weekly period begins on Sunday. The default is monthly. Valid values are daily, weekly, and monthly.</summary>
     [JsonPropertyName("period")]
     public string? Period { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

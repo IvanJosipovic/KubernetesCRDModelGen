@@ -483,7 +483,7 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("observabilityConfiguration")]
     public IList<V1beta1ServiceSpecForProviderObservabilityConfiguration>? ObservabilityConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1410,6 +1410,10 @@ public partial class V1beta1ServiceStatusAtProvider
     /// <summary>The observability configuration of your service. See Observability Configuration below for more details.</summary>
     [JsonPropertyName("observabilityConfiguration")]
     public IList<V1beta1ServiceStatusAtProviderObservabilityConfiguration>? ObservabilityConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>An alphanumeric ID that App Runner generated for this service. Unique within the AWS Region.</summary>
     [JsonPropertyName("serviceId")]

@@ -192,7 +192,7 @@ public partial class V1beta1ReplicationTaskSpecForProvider
     [JsonPropertyName("migrationType")]
     public string? MigrationType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -645,6 +645,10 @@ public partial class V1beta1ReplicationTaskStatusAtProvider
     /// <summary>Migration type. Can be one of full-load | cdc | full-load-and-cdc.</summary>
     [JsonPropertyName("migrationType")]
     public string? MigrationType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the replication instance.</summary>
     [JsonPropertyName("replicationInstanceArn")]

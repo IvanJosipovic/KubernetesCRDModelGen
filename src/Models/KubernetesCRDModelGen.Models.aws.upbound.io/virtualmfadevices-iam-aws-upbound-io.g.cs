@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.iam.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMfaDeviceSpecForProvider
 {
-    /// <summary>–  The path for the virtual MFA device.</summary>
+    /// <summary>The path for the virtual MFA device.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -29,7 +29,7 @@ public partial class V1beta1VirtualMfaDeviceSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMfaDeviceSpecInitProvider
 {
-    /// <summary>–  The path for the virtual MFA device.</summary>
+    /// <summary>The path for the virtual MFA device.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
@@ -194,7 +194,7 @@ public partial class V1beta1VirtualMfaDeviceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  The path for the virtual MFA device.</summary>
+    /// <summary>The path for the virtual MFA device.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 

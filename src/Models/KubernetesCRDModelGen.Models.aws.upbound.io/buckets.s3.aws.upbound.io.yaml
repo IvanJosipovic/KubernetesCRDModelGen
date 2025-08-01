@@ -92,7 +92,7 @@ spec:
                     type: boolean
                   region:
                     description: >-
-                      AWS region this bucket resides in.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -368,6 +368,9 @@ spec:
                   bucketDomainName:
                     description: Bucket domain name. Will be of format bucketname.s3.amazonaws.com.
                     type: string
+                  bucketRegion:
+                    description: AWS region this bucket resides in.
+                    type: string
                   bucketRegionalDomainName:
                     description: 'The bucket region-specific domain name. The bucket domain name including the region name. Please refer to the S3 endpoints reference for format. Note: AWS CloudFront allows specifying an S3 region-specific endpoint when creating an S3 origin. This will prevent redirect issues from CloudFront to the S3 Origin URL. For more information, see the Virtual Hosted-Style Requests for Other Regions section in the AWS S3 User Guide.'
                     type: string
@@ -567,7 +570,7 @@ spec:
                     type: string
                   region:
                     description: >-
-                      AWS region this bucket resides in.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -930,7 +933,7 @@ spec:
                     type: boolean
                   region:
                     description: >-
-                      AWS region this bucket resides in.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string
@@ -1206,6 +1209,9 @@ spec:
                   bucketDomainName:
                     description: Bucket domain name. Will be of format bucketname.s3.amazonaws.com.
                     type: string
+                  bucketRegion:
+                    description: AWS region this bucket resides in.
+                    type: string
                   bucketRegionalDomainName:
                     description: 'The bucket region-specific domain name. The bucket domain name including the region name. Please refer to the S3 endpoints reference for format. Note: AWS CloudFront allows specifying an S3 region-specific endpoint when creating an S3 origin. This will prevent redirect issues from CloudFront to the S3 Origin URL. For more information, see the Virtual Hosted-Style Requests for Other Regions section in the AWS S3 User Guide.'
                     type: string
@@ -1393,7 +1399,7 @@ spec:
                     type: string
                   region:
                     description: >-
-                      AWS region this bucket resides in.
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
 
                       Region is the region you'd like your resource to be created in.
                     type: string

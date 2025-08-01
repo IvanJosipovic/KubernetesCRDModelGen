@@ -136,7 +136,7 @@ public partial class V1beta1NetworkInterfaceSgAttachmentSpecForProvider
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1NetworkInterfaceSgAttachmentSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1NetworkInterfaceSgAttachmentStatusAtProvider
     /// <summary>The ID of the network interface to attach to.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the security group.</summary>
     [JsonPropertyName("securityGroupId")]

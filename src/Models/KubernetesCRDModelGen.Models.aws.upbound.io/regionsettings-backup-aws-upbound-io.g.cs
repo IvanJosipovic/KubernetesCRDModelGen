@@ -12,15 +12,15 @@ namespace KubernetesCRDModelGen.Models.backup.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSettingsSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>A map of services along with the management preferences for the Region. For more information, see the AWS Documentation.  WARNING: All parameters are required to be given: EFS, DynamoDB</summary>
+    /// <summary>A map of service names to their full management preferences for the Region. For more information, see the AWS Documentation on what full management is and which services support full management.  WARNING: All parameters are required to be given: EFS, DynamoDB</summary>
     [JsonPropertyName("resourceTypeManagementPreference")]
     public IDictionary<string, bool>? ResourceTypeManagementPreference { get; set; }
 
-    /// <summary>A map of services along with the opt-in preferences for the Region.  WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine</summary>
+    /// <summary>A map of service names to their opt-in preferences for the Region. See AWS Documentation on which services support backup.  WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine</summary>
     [JsonPropertyName("resourceTypeOptInPreference")]
     public IDictionary<string, bool>? ResourceTypeOptInPreference { get; set; }
 }
@@ -29,11 +29,11 @@ public partial class V1beta1RegionSettingsSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSettingsSpecInitProvider
 {
-    /// <summary>A map of services along with the management preferences for the Region. For more information, see the AWS Documentation.  WARNING: All parameters are required to be given: EFS, DynamoDB</summary>
+    /// <summary>A map of service names to their full management preferences for the Region. For more information, see the AWS Documentation on what full management is and which services support full management.  WARNING: All parameters are required to be given: EFS, DynamoDB</summary>
     [JsonPropertyName("resourceTypeManagementPreference")]
     public IDictionary<string, bool>? ResourceTypeManagementPreference { get; set; }
 
-    /// <summary>A map of services along with the opt-in preferences for the Region.  WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine</summary>
+    /// <summary>A map of service names to their opt-in preferences for the Region. See AWS Documentation on which services support backup.  WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine</summary>
     [JsonPropertyName("resourceTypeOptInPreference")]
     public IDictionary<string, bool>? ResourceTypeOptInPreference { get; set; }
 }
@@ -178,11 +178,15 @@ public partial class V1beta1RegionSettingsStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A map of services along with the management preferences for the Region. For more information, see the AWS Documentation.  WARNING: All parameters are required to be given: EFS, DynamoDB</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>A map of service names to their full management preferences for the Region. For more information, see the AWS Documentation on what full management is and which services support full management.  WARNING: All parameters are required to be given: EFS, DynamoDB</summary>
     [JsonPropertyName("resourceTypeManagementPreference")]
     public IDictionary<string, bool>? ResourceTypeManagementPreference { get; set; }
 
-    /// <summary>A map of services along with the opt-in preferences for the Region.  WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine</summary>
+    /// <summary>A map of service names to their opt-in preferences for the Region. See AWS Documentation on which services support backup.  WARNING: All parameters are required to be given: EFS, DynamoDB, EBS, EC2, FSx, S3, Aurora, RDS, Storage Gateway, VirtualMachine</summary>
     [JsonPropertyName("resourceTypeOptInPreference")]
     public IDictionary<string, bool>? ResourceTypeOptInPreference { get; set; }
 }

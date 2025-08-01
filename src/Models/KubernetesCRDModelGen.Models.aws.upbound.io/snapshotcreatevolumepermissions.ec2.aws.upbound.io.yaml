@@ -88,7 +88,10 @@ spec:
                     description: An AWS Account ID to add create volume permissions. The AWS Account cannot be the snapshot's owner
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   snapshotId:
                     description: A snapshot ID
@@ -518,6 +521,12 @@ spec:
                     type: string
                   id:
                     description: A combination of "snapshot_id-account_id".
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   snapshotId:
                     description: A snapshot ID

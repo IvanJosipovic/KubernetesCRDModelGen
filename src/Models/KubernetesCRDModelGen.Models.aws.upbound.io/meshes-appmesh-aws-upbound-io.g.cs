@@ -43,7 +43,7 @@ public partial class V1beta1MeshSpecForProviderSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MeshSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -286,6 +286,10 @@ public partial class V1beta1MeshStatusAtProvider
     /// <summary>AWS account ID of the service mesh's owner.</summary>
     [JsonPropertyName("meshOwner")]
     public string? MeshOwner { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Resource owner's AWS account ID.</summary>
     [JsonPropertyName("resourceOwner")]

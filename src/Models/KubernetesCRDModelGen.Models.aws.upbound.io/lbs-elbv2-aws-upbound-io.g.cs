@@ -106,6 +106,24 @@ public partial class V1beta1LBSpecForProviderConnectionLogs
     public string? Prefix { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBSpecForProviderIpamPools
+{
+    /// <summary>The ID of the IPv4 IPAM pool.</summary>
+    [JsonPropertyName("ipv4IpamPoolId")]
+    public string? Ipv4IpamPoolId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBSpecForProviderMinimumLoadBalancerCapacity
+{
+    /// <summary>The number of capacity units.</summary>
+    [JsonPropertyName("capacityUnits")]
+    public double? CapacityUnits { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBSpecForProviderSecurityGroupRefsPolicy
@@ -375,13 +393,21 @@ public partial class V1beta1LBSpecForProvider
     [JsonPropertyName("internal")]
     public bool? Internal { get; set; }
 
-    /// <summary>Type of IP addresses used by the subnets for your load balancer. The possible values are ipv4 and dualstack.</summary>
+    /// <summary>Type of IP addresses used by the subnets for your load balancer. The possible values depend upon the load balancer type: ipv4 (all load balancer types), dualstack (all load balancer types), and dualstack-without-public-ipv4 (type application only).</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
+
+    /// <summary>. The IPAM pools to use with the load balancer.  Only valid for Load Balancers of type application. See ipam_pools for more information.</summary>
+    [JsonPropertyName("ipamPools")]
+    public IList<V1beta1LBSpecForProviderIpamPools>? IpamPools { get; set; }
 
     /// <summary>Type of load balancer to create. Possible values are application, gateway, or network. The default value is application.</summary>
     [JsonPropertyName("loadBalancerType")]
     public string? LoadBalancerType { get; set; }
+
+    /// <summary>Minimum capacity for a load balancer. Only valid for Load Balancers of type application or network.</summary>
+    [JsonPropertyName("minimumLoadBalancerCapacity")]
+    public IList<V1beta1LBSpecForProviderMinimumLoadBalancerCapacity>? MinimumLoadBalancerCapacity { get; set; }
 
     /// <summary>Name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters, must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.</summary>
     [JsonPropertyName("name")]
@@ -391,7 +417,7 @@ public partial class V1beta1LBSpecForProvider
     [JsonPropertyName("preserveHostHeader")]
     public bool? PreserveHostHeader { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -528,6 +554,24 @@ public partial class V1beta1LBSpecInitProviderConnectionLogs
     /// <summary>S3 bucket prefix. Logs are stored in the root if not configured.</summary>
     [JsonPropertyName("prefix")]
     public string? Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBSpecInitProviderIpamPools
+{
+    /// <summary>The ID of the IPv4 IPAM pool.</summary>
+    [JsonPropertyName("ipv4IpamPoolId")]
+    public string? Ipv4IpamPoolId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBSpecInitProviderMinimumLoadBalancerCapacity
+{
+    /// <summary>The number of capacity units.</summary>
+    [JsonPropertyName("capacityUnits")]
+    public double? CapacityUnits { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -799,13 +843,21 @@ public partial class V1beta1LBSpecInitProvider
     [JsonPropertyName("internal")]
     public bool? Internal { get; set; }
 
-    /// <summary>Type of IP addresses used by the subnets for your load balancer. The possible values are ipv4 and dualstack.</summary>
+    /// <summary>Type of IP addresses used by the subnets for your load balancer. The possible values depend upon the load balancer type: ipv4 (all load balancer types), dualstack (all load balancer types), and dualstack-without-public-ipv4 (type application only).</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
+
+    /// <summary>. The IPAM pools to use with the load balancer.  Only valid for Load Balancers of type application. See ipam_pools for more information.</summary>
+    [JsonPropertyName("ipamPools")]
+    public IList<V1beta1LBSpecInitProviderIpamPools>? IpamPools { get; set; }
 
     /// <summary>Type of load balancer to create. Possible values are application, gateway, or network. The default value is application.</summary>
     [JsonPropertyName("loadBalancerType")]
     public string? LoadBalancerType { get; set; }
+
+    /// <summary>Minimum capacity for a load balancer. Only valid for Load Balancers of type application or network.</summary>
+    [JsonPropertyName("minimumLoadBalancerCapacity")]
+    public IList<V1beta1LBSpecInitProviderMinimumLoadBalancerCapacity>? MinimumLoadBalancerCapacity { get; set; }
 
     /// <summary>Name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters, must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.</summary>
     [JsonPropertyName("name")]
@@ -1020,6 +1072,24 @@ public partial class V1beta1LBStatusAtProviderConnectionLogs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBStatusAtProviderIpamPools
+{
+    /// <summary>The ID of the IPv4 IPAM pool.</summary>
+    [JsonPropertyName("ipv4IpamPoolId")]
+    public string? Ipv4IpamPoolId { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LBStatusAtProviderMinimumLoadBalancerCapacity
+{
+    /// <summary>The number of capacity units.</summary>
+    [JsonPropertyName("capacityUnits")]
+    public double? CapacityUnits { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBStatusAtProviderSubnetMapping
 {
     /// <summary>Allocation ID of the Elastic IP address for an internet-facing load balancer.</summary>
@@ -1051,7 +1121,7 @@ public partial class V1beta1LBStatusAtProvider
     [JsonPropertyName("accessLogs")]
     public IList<V1beta1LBStatusAtProviderAccessLogs>? AccessLogs { get; set; }
 
-    /// <summary>ARN of the load balancer (matches id).</summary>
+    /// <summary>ARN of the load balancer.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -1119,7 +1189,7 @@ public partial class V1beta1LBStatusAtProvider
     [JsonPropertyName("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")]
     public string? EnforceSecurityGroupInboundRulesOnPrivateLinkTraffic { get; set; }
 
-    /// <summary>ARN of the load balancer (matches arn).</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1131,13 +1201,21 @@ public partial class V1beta1LBStatusAtProvider
     [JsonPropertyName("internal")]
     public bool? Internal { get; set; }
 
-    /// <summary>Type of IP addresses used by the subnets for your load balancer. The possible values are ipv4 and dualstack.</summary>
+    /// <summary>Type of IP addresses used by the subnets for your load balancer. The possible values depend upon the load balancer type: ipv4 (all load balancer types), dualstack (all load balancer types), and dualstack-without-public-ipv4 (type application only).</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
+
+    /// <summary>. The IPAM pools to use with the load balancer.  Only valid for Load Balancers of type application. See ipam_pools for more information.</summary>
+    [JsonPropertyName("ipamPools")]
+    public IList<V1beta1LBStatusAtProviderIpamPools>? IpamPools { get; set; }
 
     /// <summary>Type of load balancer to create. Possible values are application, gateway, or network. The default value is application.</summary>
     [JsonPropertyName("loadBalancerType")]
     public string? LoadBalancerType { get; set; }
+
+    /// <summary>Minimum capacity for a load balancer. Only valid for Load Balancers of type application or network.</summary>
+    [JsonPropertyName("minimumLoadBalancerCapacity")]
+    public IList<V1beta1LBStatusAtProviderMinimumLoadBalancerCapacity>? MinimumLoadBalancerCapacity { get; set; }
 
     /// <summary>Name of the LB. This name must be unique within your AWS account, can have a maximum of 32 characters, must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.</summary>
     [JsonPropertyName("name")]
@@ -1146,6 +1224,10 @@ public partial class V1beta1LBStatusAtProvider
     /// <summary>Whether the Application Load Balancer should preserve the Host header in the HTTP request and send it to the target without any change. Defaults to false.</summary>
     [JsonPropertyName("preserveHostHeader")]
     public bool? PreserveHostHeader { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of security group IDs to assign to the LB. Only valid for Load Balancers of type application or network. For load balancers of type network security groups cannot be added if none are currently present, and cannot all be removed once added. If either of these conditions are met, this will force a recreation of the resource.</summary>
     [JsonPropertyName("securityGroups")]
@@ -1167,7 +1249,7 @@ public partial class V1beta1LBStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>ARN of the load balancer (matches arn).</summary>
+    /// <summary></summary>
     [JsonPropertyName("vpcId")]
     public string? VpcId { get; set; }
 

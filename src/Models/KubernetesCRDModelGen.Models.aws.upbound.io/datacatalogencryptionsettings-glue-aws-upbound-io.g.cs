@@ -183,15 +183,15 @@ public partial class V1beta1DataCatalogEncryptionSettingsSpecForProviderDataCata
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogEncryptionSettingsSpecForProvider
 {
-    /// <summary>–  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.</summary>
+    /// <summary>The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  The security configuration to set. see Data Catalog Encryption Settings.</summary>
+    /// <summary>The security configuration to set. see Data Catalog Encryption Settings.</summary>
     [JsonPropertyName("dataCatalogEncryptionSettings")]
     public IList<V1beta1DataCatalogEncryptionSettingsSpecForProviderDataCatalogEncryptionSettings>? DataCatalogEncryptionSettings { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -371,11 +371,11 @@ public partial class V1beta1DataCatalogEncryptionSettingsSpecInitProviderDataCat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogEncryptionSettingsSpecInitProvider
 {
-    /// <summary>–  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.</summary>
+    /// <summary>The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  The security configuration to set. see Data Catalog Encryption Settings.</summary>
+    /// <summary>The security configuration to set. see Data Catalog Encryption Settings.</summary>
     [JsonPropertyName("dataCatalogEncryptionSettings")]
     public IList<V1beta1DataCatalogEncryptionSettingsSpecInitProviderDataCatalogEncryptionSettings>? DataCatalogEncryptionSettings { get; set; }
 }
@@ -559,17 +559,21 @@ public partial class V1beta1DataCatalogEncryptionSettingsStatusAtProviderDataCat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataCatalogEncryptionSettingsStatusAtProvider
 {
-    /// <summary>–  The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.</summary>
+    /// <summary>The ID of the Data Catalog to set the security configuration for. If none is provided, the AWS account ID is used by default.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
-    /// <summary>–  The security configuration to set. see Data Catalog Encryption Settings.</summary>
+    /// <summary>The security configuration to set. see Data Catalog Encryption Settings.</summary>
     [JsonPropertyName("dataCatalogEncryptionSettings")]
     public IList<V1beta1DataCatalogEncryptionSettingsStatusAtProviderDataCatalogEncryptionSettings>? DataCatalogEncryptionSettings { get; set; }
 
     /// <summary>The ID of the Data Catalog to set the security configuration for.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

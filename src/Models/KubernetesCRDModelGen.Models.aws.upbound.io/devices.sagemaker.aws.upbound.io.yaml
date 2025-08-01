@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Device is the Schema for the Devices API. Provides a SageMaker Device resource.
+        description: Device is the Schema for the Devices API. Provides a SageMaker AI Device resource.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   device:
-                    description: The device to register with SageMaker Edge Manager. See Device details below.
+                    description: The device to register with SageMaker AI Edge Manager. See Device details below.
                     items:
                       properties:
                         description:
@@ -189,7 +189,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -217,7 +220,7 @@ spec:
                   autoscaler.
                 properties:
                   device:
-                    description: The device to register with SageMaker Edge Manager. See Device details below.
+                    description: The device to register with SageMaker AI Edge Manager. See Device details below.
                     items:
                       properties:
                         description:
@@ -543,7 +546,7 @@ spec:
                     description: The Amazon Resource Name (ARN) assigned by AWS to this Device.
                     type: string
                   device:
-                    description: The device to register with SageMaker Edge Manager. See Device details below.
+                    description: The device to register with SageMaker AI Edge Manager. See Device details below.
                     items:
                       properties:
                         description:
@@ -562,6 +565,12 @@ spec:
                     type: string
                   id:
                     description: The id is constructed from device-fleet-name/device-name.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:
@@ -646,7 +655,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: Device is the Schema for the Devices API. Provides a SageMaker Device resource.
+        description: Device is the Schema for the Devices API. Provides a SageMaker AI Device resource.
         properties:
           apiVersion:
             description: >-
@@ -698,7 +707,7 @@ spec:
               forProvider:
                 properties:
                   device:
-                    description: The device to register with SageMaker Edge Manager. See Device details below.
+                    description: The device to register with SageMaker AI Edge Manager. See Device details below.
                     properties:
                       description:
                         description: A description for the device.
@@ -800,7 +809,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -828,7 +840,7 @@ spec:
                   autoscaler.
                 properties:
                   device:
-                    description: The device to register with SageMaker Edge Manager. See Device details below.
+                    description: The device to register with SageMaker AI Edge Manager. See Device details below.
                     properties:
                       description:
                         description: A description for the device.
@@ -1152,7 +1164,7 @@ spec:
                     description: The Amazon Resource Name (ARN) assigned by AWS to this Device.
                     type: string
                   device:
-                    description: The device to register with SageMaker Edge Manager. See Device details below.
+                    description: The device to register with SageMaker AI Edge Manager. See Device details below.
                     properties:
                       description:
                         description: A description for the device.
@@ -1169,6 +1181,12 @@ spec:
                     type: string
                   id:
                     description: The id is constructed from device-fleet-name/device-name.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

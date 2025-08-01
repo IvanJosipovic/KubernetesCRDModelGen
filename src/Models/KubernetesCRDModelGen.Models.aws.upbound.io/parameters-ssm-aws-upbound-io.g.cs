@@ -25,6 +25,23 @@ public partial class V1beta1ParameterSpecForProviderValueSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Value of the parameter. Additionally, write-only values are never stored to state. value_wo_version can be used to trigger an update and is required with this argument.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ParameterSpecForProviderValueWoSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ParameterSpecForProvider
@@ -53,11 +70,11 @@ public partial class V1beta1ParameterSpecForProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>Overwrite an existing parameter.</summary>
+    /// <summary>Overwrite an existing parameter. Lifecycle rules should be used to manage non-standard update behavior.</summary>
     [JsonPropertyName("overwrite")]
     public bool? Overwrite { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -76,11 +93,36 @@ public partial class V1beta1ParameterSpecForProvider
     /// <summary>Value of the parameter.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
     [JsonPropertyName("valueSecretRef")]
     public V1beta1ParameterSpecForProviderValueSecretRef? ValueSecretRef { get; set; }
+
+    /// <summary>Value of the parameter. Additionally, write-only values are never stored to state. value_wo_version can be used to trigger an update and is required with this argument.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
+    [JsonPropertyName("valueWoSecretRef")]
+    public V1beta1ParameterSpecForProviderValueWoSecretRef? ValueWoSecretRef { get; set; }
+
+    /// <summary>Used together with value_wo to trigger an update. Increment this value when an update to the value_wo is required.</summary>
+    [JsonPropertyName("valueWoVersion")]
+    public double? ValueWoVersion { get; set; }
 }
 
 /// <summary>Value of the parameter.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ParameterSpecInitProviderValueSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary>Value of the parameter. Additionally, write-only values are never stored to state. value_wo_version can be used to trigger an update and is required with this argument.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ParameterSpecInitProviderValueWoSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -123,7 +165,7 @@ public partial class V1beta1ParameterSpecInitProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>Overwrite an existing parameter.</summary>
+    /// <summary>Overwrite an existing parameter. Lifecycle rules should be used to manage non-standard update behavior.</summary>
     [JsonPropertyName("overwrite")]
     public bool? Overwrite { get; set; }
 
@@ -142,6 +184,14 @@ public partial class V1beta1ParameterSpecInitProvider
     /// <summary>Value of the parameter.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
     [JsonPropertyName("valueSecretRef")]
     public V1beta1ParameterSpecInitProviderValueSecretRef? ValueSecretRef { get; set; }
+
+    /// <summary>Value of the parameter. Additionally, write-only values are never stored to state. value_wo_version can be used to trigger an update and is required with this argument.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
+    [JsonPropertyName("valueWoSecretRef")]
+    public V1beta1ParameterSpecInitProviderValueWoSecretRef? ValueWoSecretRef { get; set; }
+
+    /// <summary>Used together with value_wo to trigger an update. Increment this value when an update to the value_wo is required.</summary>
+    [JsonPropertyName("valueWoVersion")]
+    public double? ValueWoVersion { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -296,6 +346,10 @@ public partial class V1beta1ParameterStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
+    /// <summary>Indicates whether the resource has a value_wo set.</summary>
+    [JsonPropertyName("hasValueWo")]
+    public bool? HasValueWo { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -308,9 +362,13 @@ public partial class V1beta1ParameterStatusAtProvider
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
 
-    /// <summary>Overwrite an existing parameter.</summary>
+    /// <summary>Overwrite an existing parameter. Lifecycle rules should be used to manage non-standard update behavior.</summary>
     [JsonPropertyName("overwrite")]
     public bool? Overwrite { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -327,6 +385,10 @@ public partial class V1beta1ParameterStatusAtProvider
     /// <summary>Type of the parameter. Valid types are String, StringList and SecureString.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
+
+    /// <summary>Used together with value_wo to trigger an update. Increment this value when an update to the value_wo is required.</summary>
+    [JsonPropertyName("valueWoVersion")]
+    public double? ValueWoVersion { get; set; }
 
     /// <summary>Version of the parameter.</summary>
     [JsonPropertyName("version")]

@@ -111,7 +111,10 @@ spec:
                     description: name of Multiplex.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   startMultiplex:
                     description: Whether to start the Multiplex. Defaults to false.
@@ -431,6 +434,12 @@ spec:
                     type: array
                   name:
                     description: name of Multiplex.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   startMultiplex:
                     description: Whether to start the Multiplex. Defaults to false.
@@ -605,7 +614,10 @@ spec:
                     description: name of Multiplex.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   startMultiplex:
                     description: Whether to start the Multiplex. Defaults to false.
@@ -921,6 +933,12 @@ spec:
                     type: object
                   name:
                     description: name of Multiplex.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   startMultiplex:
                     description: Whether to start the Multiplex. Defaults to false.

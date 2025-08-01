@@ -243,10 +243,6 @@ public partial class V1beta1WebACLSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Configuration blocks containing rules to associate with the web ACL and the settings for each rule. Detailed below.</summary>
     [JsonPropertyName("rules")]
     public IList<V1beta1WebACLSpecForProviderRules>? Rules { get; set; }

@@ -182,7 +182,7 @@ public partial class V1beta1ConfigurationProfileSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -586,6 +586,10 @@ public partial class V1beta1ConfigurationProfileStatusAtProvider
     /// <summary>Name for the configuration profile. Must be between 1 and 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of an IAM role with permission to access the configuration at the specified location_uri. A retrieval role ARN is not required for configurations stored in the AWS AppConfig hosted configuration store. It is required for all other sources that store your configuration.</summary>
     [JsonPropertyName("retrievalRoleArn")]

@@ -195,7 +195,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   source:
                     description: The S3 bucket that contains the object to sign. See Source below for details.
@@ -642,6 +645,12 @@ spec:
                     type: string
                   profileVersion:
                     description: The version of the signing profile used to initiate the signing job.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   requestedBy:
                     description: The IAM principal that requested the signing job.
@@ -947,7 +956,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   source:
                     description: The S3 bucket that contains the object to sign. See Source below for details.
@@ -1378,6 +1390,12 @@ spec:
                     type: string
                   profileVersion:
                     description: The version of the signing profile used to initiate the signing job.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   requestedBy:
                     description: The IAM principal that requested the signing job.

@@ -16,7 +16,7 @@ public partial class V1beta1AccountSettingDefaultSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -174,7 +174,7 @@ public partial class V1beta1AccountSettingDefaultSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountSettingDefaultStatusAtProvider
 {
-    /// <summary>ARN that identifies the account setting.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -185,6 +185,10 @@ public partial class V1beta1AccountSettingDefaultStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>State of the setting.</summary>
     [JsonPropertyName("value")]

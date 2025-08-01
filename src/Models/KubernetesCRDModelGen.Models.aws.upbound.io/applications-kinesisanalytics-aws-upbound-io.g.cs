@@ -795,7 +795,7 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("referenceDataSources")]
     public IList<V1beta1ApplicationSpecForProviderReferenceDataSources>? ReferenceDataSources { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -2182,6 +2182,10 @@ public partial class V1beta1ApplicationStatusAtProvider
     /// <summary>An S3 Reference Data Source for the application. See Reference Data Sources below for more details.</summary>
     [JsonPropertyName("referenceDataSources")]
     public IList<V1beta1ApplicationStatusAtProviderReferenceDataSources>? ReferenceDataSources { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined starting_position must be configured. To modify an application's starting position, first stop the application by setting start_application = false, then update starting_position and set start_application = true.</summary>
     [JsonPropertyName("startApplication")]

@@ -189,7 +189,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -763,6 +766,12 @@ spec:
                   peerVpcId:
                     description: The ID of the target VPC with which you are creating the VPC Peering Connection.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   requester:
                     description: >-
                       A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requests
@@ -1032,7 +1041,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -1603,6 +1615,12 @@ spec:
                     type: string
                   peerVpcId:
                     description: The ID of the target VPC with which you are creating the VPC Peering Connection.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   requester:
                     description: >-

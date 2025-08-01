@@ -50,7 +50,7 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("authenticationMode")]
     public IList<V1beta1UserSpecForProviderAuthenticationMode>? AuthenticationMode { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -257,6 +257,10 @@ public partial class V1beta1UserStatusAtProvider
     /// <summary>Minimum engine version supported for the user.</summary>
     [JsonPropertyName("minimumEngineVersion")]
     public string? MinimumEngineVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

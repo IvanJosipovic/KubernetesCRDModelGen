@@ -124,7 +124,7 @@ public partial class V1beta1GroupMembershipSpecForProviderUserSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GroupMembershipSpecForProvider
 {
-    /// <summary>–  The IAM Group name to attach the list of users to</summary>
+    /// <summary>The IAM Group name to attach the list of users to</summary>
     [JsonPropertyName("group")]
     public string? Group { get; set; }
 
@@ -269,7 +269,7 @@ public partial class V1beta1GroupMembershipSpecInitProviderUserSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GroupMembershipSpecInitProvider
 {
-    /// <summary>–  The IAM Group name to attach the list of users to</summary>
+    /// <summary>The IAM Group name to attach the list of users to</summary>
     [JsonPropertyName("group")]
     public string? Group { get; set; }
 
@@ -434,7 +434,7 @@ public partial class V1beta1GroupMembershipSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GroupMembershipStatusAtProvider
 {
-    /// <summary>–  The IAM Group name to attach the list of users to</summary>
+    /// <summary>The IAM Group name to attach the list of users to</summary>
     [JsonPropertyName("group")]
     public string? Group { get; set; }
 

@@ -80,7 +80,7 @@ public partial class V1beta1EncryptionConfigSpecForProvider
     [JsonPropertyName("keyIdSelector")]
     public V1beta1EncryptionConfigSpecForProviderKeyIdSelector? KeyIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1EncryptionConfigStatusAtProvider
     /// <summary>An AWS KMS customer master key (CMK) ARN.</summary>
     [JsonPropertyName("keyId")]
     public string? KeyId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The type of encryption. Set to KMS to use your own key for encryption. Set to NONE for default encryption.</summary>
     [JsonPropertyName("type")]

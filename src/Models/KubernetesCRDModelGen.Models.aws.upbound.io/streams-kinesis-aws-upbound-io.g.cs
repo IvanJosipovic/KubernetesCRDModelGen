@@ -97,7 +97,7 @@ public partial class V1beta1StreamSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1StreamSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -105,7 +105,7 @@ public partial class V1beta1StreamSpecForProvider
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
 
-    /// <summary>–  The number of shards that the stream will use. If the stream_mode is PROVISIONED, this field is required. Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See Amazon Kinesis Streams for more.</summary>
+    /// <summary>The number of shards that the stream will use. If the stream_mode is PROVISIONED, this field is required. Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See Amazon Kinesis Streams for more.</summary>
     [JsonPropertyName("shardCount")]
     public double? ShardCount { get; set; }
 
@@ -215,7 +215,7 @@ public partial class V1beta1StreamSpecInitProvider
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
 
-    /// <summary>–  The number of shards that the stream will use. If the stream_mode is PROVISIONED, this field is required. Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See Amazon Kinesis Streams for more.</summary>
+    /// <summary>The number of shards that the stream will use. If the stream_mode is PROVISIONED, this field is required. Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See Amazon Kinesis Streams for more.</summary>
     [JsonPropertyName("shardCount")]
     public double? ShardCount { get; set; }
 
@@ -397,11 +397,15 @@ public partial class V1beta1StreamStatusAtProvider
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Length of time data records are accessible after they are added to the stream. The maximum value of a stream's retention period is 8760 hours. Minimum value is 24. Default is 24.</summary>
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
 
-    /// <summary>–  The number of shards that the stream will use. If the stream_mode is PROVISIONED, this field is required. Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See Amazon Kinesis Streams for more.</summary>
+    /// <summary>The number of shards that the stream will use. If the stream_mode is PROVISIONED, this field is required. Amazon has guidelines for specifying the Stream size that should be referenced when creating a Kinesis stream. See Amazon Kinesis Streams for more.</summary>
     [JsonPropertyName("shardCount")]
     public double? ShardCount { get; set; }
 

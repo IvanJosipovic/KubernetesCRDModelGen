@@ -104,7 +104,7 @@ public partial class V1beta1ProvisioningArtifactSpecForProvider
     [JsonPropertyName("productIdSelector")]
     public V1beta1ProvisioningArtifactSpecForProviderProductIdSelector? ProductIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -405,6 +405,10 @@ public partial class V1beta1ProvisioningArtifactStatusAtProvider
     /// <summary>Provisioning artifact identifier.</summary>
     [JsonPropertyName("provisioningArtifactId")]
     public string? ProvisioningArtifactId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Template source as the physical ID of the resource that contains the template. Currently only supports CloudFormation stack ARN. Specify the physical ID as arn:[partition]:cloudformation:[region]:[account ID]:stack/[stack name]/[resource ID].</summary>
     [JsonPropertyName("templatePhysicalId")]

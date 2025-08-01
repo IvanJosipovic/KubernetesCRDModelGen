@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecForProvider
 {
-    /// <summary>The name of the Lightsail domain to manage</summary>
+    /// <summary>Name of the Lightsail domain to manage.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -25,7 +25,7 @@ public partial class V1beta1DomainSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecInitProvider
 {
-    /// <summary>The name of the Lightsail domain to manage</summary>
+    /// <summary>Name of the Lightsail domain to manage.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 }
@@ -166,17 +166,21 @@ public partial class V1beta1DomainSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainStatusAtProvider
 {
-    /// <summary>The ARN of the Lightsail domain</summary>
+    /// <summary>ARN of the Lightsail domain.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The name of the Lightsail domain to manage</summary>
+    /// <summary>Name of the Lightsail domain to manage.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>The name used for this domain</summary>
+    /// <summary>Name used for this domain.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -225,7 +229,7 @@ public partial class V1beta1DomainStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Domain is the Schema for the Domains API. Provides an Lightsail Domain</summary>
+/// <summary>Domain is the Schema for the Domains API. Manages a Lightsail domain for DNS management.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Domain : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainSpec>, IStatus<V1beta1DomainStatus>
@@ -255,7 +259,7 @@ public partial class V1beta1Domain : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     public V1beta1DomainStatus? Status { get; set; }
 }
 
-/// <summary>Domain is the Schema for the Domains API. Provides an Lightsail Domain</summary>
+/// <summary>Domain is the Schema for the Domains API. Manages a Lightsail domain for DNS management.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DomainList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Domain>

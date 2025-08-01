@@ -180,7 +180,7 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProviderT
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProvider
 {
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -192,7 +192,7 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -204,15 +204,11 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
-    /// <summary>The Amazon Resource Name (ARN) of the Connect peer.</summary>
+    /// <summary>ARN of the Connect peer.</summary>
     [JsonPropertyName("transitGatewayConnectPeerArn")]
     public string? TransitGatewayConnectPeerArn { get; set; }
 
@@ -285,7 +281,7 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
 {
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -297,7 +293,7 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpecInitProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1TransitGatewayConnectPeerAssociationSpecInitProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
@@ -438,11 +434,11 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayConnectPeerAssociationStatusAtProvider
 {
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -450,11 +446,11 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the Connect peer.</summary>
+    /// <summary>ARN of the Connect peer.</summary>
     [JsonPropertyName("transitGatewayConnectPeerArn")]
     public string? TransitGatewayConnectPeerArn { get; set; }
 }
@@ -505,7 +501,7 @@ public partial class V1beta1TransitGatewayConnectPeerAssociationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Associates a transit gateway Connect peer with a device, and optionally, with a link.</summary>
+/// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Manages a Network Manager transit gateway Connect peer association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TransitGatewayConnectPeerAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TransitGatewayConnectPeerAssociationSpec>, IStatus<V1beta1TransitGatewayConnectPeerAssociationStatus>
@@ -535,7 +531,7 @@ public partial class V1beta1TransitGatewayConnectPeerAssociation : IKubernetesOb
     public V1beta1TransitGatewayConnectPeerAssociationStatus? Status { get; set; }
 }
 
-/// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Associates a transit gateway Connect peer with a device, and optionally, with a link.</summary>
+/// <summary>TransitGatewayConnectPeerAssociation is the Schema for the TransitGatewayConnectPeerAssociations API. Manages a Network Manager transit gateway Connect peer association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TransitGatewayConnectPeerAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayConnectPeerAssociation>

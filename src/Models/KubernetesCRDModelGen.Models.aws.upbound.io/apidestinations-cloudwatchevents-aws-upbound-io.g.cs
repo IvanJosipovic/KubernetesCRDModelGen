@@ -96,7 +96,7 @@ public partial class V1beta1APIDestinationSpecForProvider
     [JsonPropertyName("invocationRateLimitPerSecond")]
     public double? InvocationRateLimitPerSecond { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -353,6 +353,10 @@ public partial class V1beta1APIDestinationStatusAtProvider
     /// <summary>Enter the maximum number of invocations per second to allow for this destination. Enter a value greater than 0 (default 300).</summary>
     [JsonPropertyName("invocationRateLimitPerSecond")]
     public double? InvocationRateLimitPerSecond { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -100,7 +100,7 @@ public partial class V1beta1ComponentSpecForProvider
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -417,6 +417,10 @@ public partial class V1beta1ComponentStatusAtProvider
     /// <summary>Platform of the component.</summary>
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether to retain the old version when the resource is destroyed or replacement is necessary. Defaults to false.</summary>
     [JsonPropertyName("skipDestroy")]

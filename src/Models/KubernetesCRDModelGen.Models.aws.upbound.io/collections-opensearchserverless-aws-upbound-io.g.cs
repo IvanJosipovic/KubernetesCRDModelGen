@@ -12,19 +12,19 @@ namespace KubernetesCRDModelGen.Models.opensearchserverless.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CollectionSpecForProvider
 {
-    /// <summary>Description of the collection.</summary>
+    /// <summary>Description of the collection. Description of the collection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the collection.</summary>
+    /// <summary>Name of the collection. Name of the collection.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Indicates whether standby replicas should be used for a collection. One of ENABLED or DISABLED. Defaults to ENABLED.</summary>
+    /// <summary>Indicates whether standby replicas should be used for a collection. One of ENABLED or DISABLED. Defaults to ENABLED. Indicates whether standby replicas should be used for a collection. One of `ENABLED` or `DISABLED`. Defaults to `ENABLED`.</summary>
     [JsonPropertyName("standbyReplicas")]
     public string? StandbyReplicas { get; set; }
 
@@ -32,7 +32,7 @@ public partial class V1beta1CollectionSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Type of collection. One of SEARCH, TIMESERIES, or VECTORSEARCH. Defaults to TIMESERIES.</summary>
+    /// <summary>Type of collection. One of SEARCH, TIMESERIES, or VECTORSEARCH. Defaults to TIMESERIES. Type of collection. One of `SEARCH`, `TIMESERIES`, or `VECTORSEARCH`. Defaults to `TIMESERIES`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -41,15 +41,15 @@ public partial class V1beta1CollectionSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CollectionSpecInitProvider
 {
-    /// <summary>Description of the collection.</summary>
+    /// <summary>Description of the collection. Description of the collection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Name of the collection.</summary>
+    /// <summary>Name of the collection. Name of the collection.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Indicates whether standby replicas should be used for a collection. One of ENABLED or DISABLED. Defaults to ENABLED.</summary>
+    /// <summary>Indicates whether standby replicas should be used for a collection. One of ENABLED or DISABLED. Defaults to ENABLED. Indicates whether standby replicas should be used for a collection. One of `ENABLED` or `DISABLED`. Defaults to `ENABLED`.</summary>
     [JsonPropertyName("standbyReplicas")]
     public string? StandbyReplicas { get; set; }
 
@@ -57,7 +57,7 @@ public partial class V1beta1CollectionSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Type of collection. One of SEARCH, TIMESERIES, or VECTORSEARCH. Defaults to TIMESERIES.</summary>
+    /// <summary>Type of collection. One of SEARCH, TIMESERIES, or VECTORSEARCH. Defaults to TIMESERIES. Type of collection. One of `SEARCH`, `TIMESERIES`, or `VECTORSEARCH`. Defaults to `TIMESERIES`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -202,15 +202,15 @@ public partial class V1beta1CollectionStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection.</summary>
+    /// <summary>Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection. Collection-specific endpoint used to submit index, search, and data upload requests to an OpenSearch Serverless collection.</summary>
     [JsonPropertyName("collectionEndpoint")]
     public string? CollectionEndpoint { get; set; }
 
-    /// <summary>Collection-specific endpoint used to access OpenSearch Dashboards.</summary>
+    /// <summary>Collection-specific endpoint used to access OpenSearch Dashboards. Collection-specific endpoint used to access OpenSearch Dashboards.</summary>
     [JsonPropertyName("dashboardEndpoint")]
     public string? DashboardEndpoint { get; set; }
 
-    /// <summary>Description of the collection.</summary>
+    /// <summary>Description of the collection. Description of the collection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -218,15 +218,19 @@ public partial class V1beta1CollectionStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ARN of the Amazon Web Services KMS key used to encrypt the collection.</summary>
+    /// <summary>The ARN of the Amazon Web Services KMS key used to encrypt the collection. The ARN of the Amazon Web Services KMS key used to encrypt the collection.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
-    /// <summary>Name of the collection.</summary>
+    /// <summary>Name of the collection. Name of the collection.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Indicates whether standby replicas should be used for a collection. One of ENABLED or DISABLED. Defaults to ENABLED.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Indicates whether standby replicas should be used for a collection. One of ENABLED or DISABLED. Defaults to ENABLED. Indicates whether standby replicas should be used for a collection. One of `ENABLED` or `DISABLED`. Defaults to `ENABLED`.</summary>
     [JsonPropertyName("standbyReplicas")]
     public string? StandbyReplicas { get; set; }
 
@@ -238,7 +242,7 @@ public partial class V1beta1CollectionStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Type of collection. One of SEARCH, TIMESERIES, or VECTORSEARCH. Defaults to TIMESERIES.</summary>
+    /// <summary>Type of collection. One of SEARCH, TIMESERIES, or VECTORSEARCH. Defaults to TIMESERIES. Type of collection. One of `SEARCH`, `TIMESERIES`, or `VECTORSEARCH`. Defaults to `TIMESERIES`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

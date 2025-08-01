@@ -84,6 +84,24 @@ public partial class V1beta1ObjectCopySpecForProviderKmsKeyIdSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Override the provider default_tags configuration block.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ObjectCopySpecForProviderOverrideProviderDefaultTags
+{
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ObjectCopySpecForProviderOverrideProvider
+{
+    /// <summary>Override the provider default_tags configuration block.</summary>
+    [JsonPropertyName("defaultTags")]
+    public V1beta1ObjectCopySpecForProviderOverrideProviderDefaultTags? DefaultTags { get; set; }
+}
+
 /// <summary>Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectCopySpecForProviderSourceCustomerKeySecretRef
@@ -121,7 +139,7 @@ public partial class V1beta1ObjectCopySpecForProvider
     [JsonPropertyName("cacheControl")]
     public string? CacheControl { get; set; }
 
-    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, SHA1, SHA256.</summary>
+    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, CRC64NVME SHA1, SHA256.</summary>
     [JsonPropertyName("checksumAlgorithm")]
     public string? ChecksumAlgorithm { get; set; }
 
@@ -221,7 +239,11 @@ public partial class V1beta1ObjectCopySpecForProvider
     [JsonPropertyName("objectLockRetainUntilDate")]
     public string? ObjectLockRetainUntilDate { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary></summary>
+    [JsonPropertyName("overrideProvider")]
+    public V1beta1ObjectCopySpecForProviderOverrideProvider? OverrideProvider { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -342,6 +364,24 @@ public partial class V1beta1ObjectCopySpecInitProviderKmsKeyIdSecretRef
     public string Namespace { get; set; }
 }
 
+/// <summary>Override the provider default_tags configuration block.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ObjectCopySpecInitProviderOverrideProviderDefaultTags
+{
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ObjectCopySpecInitProviderOverrideProvider
+{
+    /// <summary>Override the provider default_tags configuration block.</summary>
+    [JsonPropertyName("defaultTags")]
+    public V1beta1ObjectCopySpecInitProviderOverrideProviderDefaultTags? DefaultTags { get; set; }
+}
+
 /// <summary>Specifies the customer-provided encryption key for Amazon S3 to use to decrypt the source object. The encryption key provided in this header must be one that was used when the source object was created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectCopySpecInitProviderSourceCustomerKeySecretRef
@@ -379,7 +419,7 @@ public partial class V1beta1ObjectCopySpecInitProvider
     [JsonPropertyName("cacheControl")]
     public string? CacheControl { get; set; }
 
-    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, SHA1, SHA256.</summary>
+    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, CRC64NVME SHA1, SHA256.</summary>
     [JsonPropertyName("checksumAlgorithm")]
     public string? ChecksumAlgorithm { get; set; }
 
@@ -478,6 +518,10 @@ public partial class V1beta1ObjectCopySpecInitProvider
     /// <summary>Date and time, in RFC3339 format, when this object's object lock will expire.</summary>
     [JsonPropertyName("objectLockRetainUntilDate")]
     public string? ObjectLockRetainUntilDate { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("overrideProvider")]
+    public V1beta1ObjectCopySpecInitProviderOverrideProvider? OverrideProvider { get; set; }
 
     /// <summary>Confirms that the requester knows that they will be charged for the request. Bucket owners need not specify this parameter in their requests. For information about downloading objects from requester pays buckets, see Downloading Objects in Requestor Pays Buckets (https://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectsinRequesterPaysBuckets.html) in the Amazon S3 Developer Guide. If included, the only valid value is requester.</summary>
     [JsonPropertyName("requestPayer")]
@@ -677,6 +721,24 @@ public partial class V1beta1ObjectCopyStatusAtProviderGrant
     public string? Uri { get; set; }
 }
 
+/// <summary>Override the provider default_tags configuration block.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ObjectCopyStatusAtProviderOverrideProviderDefaultTags
+{
+    /// <summary>Key-value map of resource tags.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ObjectCopyStatusAtProviderOverrideProvider
+{
+    /// <summary>Override the provider default_tags configuration block.</summary>
+    [JsonPropertyName("defaultTags")]
+    public V1beta1ObjectCopyStatusAtProviderOverrideProviderDefaultTags? DefaultTags { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectCopyStatusAtProvider
@@ -701,7 +763,7 @@ public partial class V1beta1ObjectCopyStatusAtProvider
     [JsonPropertyName("cacheControl")]
     public string? CacheControl { get; set; }
 
-    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, SHA1, SHA256.</summary>
+    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, CRC64NVME SHA1, SHA256.</summary>
     [JsonPropertyName("checksumAlgorithm")]
     public string? ChecksumAlgorithm { get; set; }
 
@@ -712,6 +774,10 @@ public partial class V1beta1ObjectCopyStatusAtProvider
     /// <summary>The base64-encoded, 32-bit CRC32C checksum of the object.</summary>
     [JsonPropertyName("checksumCrc32C")]
     public string? ChecksumCrc32C { get; set; }
+
+    /// <summary>The base64-encoded, 64-bit CRC64NVME checksum of the object.</summary>
+    [JsonPropertyName("checksumCrc64Nvme")]
+    public string? ChecksumCrc64Nvme { get; set; }
 
     /// <summary>The base64-encoded, 160-bit SHA-1 digest of the object.</summary>
     [JsonPropertyName("checksumSha1")]
@@ -820,6 +886,14 @@ public partial class V1beta1ObjectCopyStatusAtProvider
     /// <summary>Date and time, in RFC3339 format, when this object's object lock will expire.</summary>
     [JsonPropertyName("objectLockRetainUntilDate")]
     public string? ObjectLockRetainUntilDate { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("overrideProvider")]
+    public V1beta1ObjectCopyStatusAtProviderOverrideProvider? OverrideProvider { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>If present, indicates that the requester was successfully charged for the request.</summary>
     [JsonPropertyName("requestCharged")]

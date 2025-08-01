@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Connection is the Schema for the Connections API. Creates a connection between two devices.
+        description: Connection is the Schema for the Connections API. Manages a Network Manager Connection.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   connectedDeviceId:
-                    description: The ID of the second device in the connection.
+                    description: ID of the second device in the connection.
                     type: string
                   connectedDeviceIdRef:
                     description: Reference to a Device in networkmanager to populate connectedDeviceId.
@@ -174,13 +174,13 @@ spec:
                         type: object
                     type: object
                   connectedLinkId:
-                    description: The ID of the link for the second device.
+                    description: ID of the link for the second device.
                     type: string
                   description:
-                    description: A description of the connection.
+                    description: Description of the connection.
                     type: string
                   deviceId:
-                    description: The ID of the first device in the connection.
+                    description: ID of the first device in the connection.
                     type: string
                   deviceIdRef:
                     description: Reference to a Device in networkmanager to populate deviceId.
@@ -269,7 +269,7 @@ spec:
                         type: object
                     type: object
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -358,10 +358,7 @@ spec:
                         type: object
                     type: object
                   linkId:
-                    description: The ID of the link for the first device.
-                    type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: ID of the link for the first device.
                     type: string
                   tags:
                     additionalProperties:
@@ -369,8 +366,6 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -395,7 +390,7 @@ spec:
                   autoscaler.
                 properties:
                   connectedDeviceId:
-                    description: The ID of the second device in the connection.
+                    description: ID of the second device in the connection.
                     type: string
                   connectedDeviceIdRef:
                     description: Reference to a Device in networkmanager to populate connectedDeviceId.
@@ -484,13 +479,13 @@ spec:
                         type: object
                     type: object
                   connectedLinkId:
-                    description: The ID of the link for the second device.
+                    description: ID of the link for the second device.
                     type: string
                   description:
-                    description: A description of the connection.
+                    description: Description of the connection.
                     type: string
                   deviceId:
-                    description: The ID of the first device in the connection.
+                    description: ID of the first device in the connection.
                     type: string
                   deviceIdRef:
                     description: Reference to a Device in networkmanager to populate deviceId.
@@ -579,7 +574,7 @@ spec:
                         type: object
                     type: object
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -668,7 +663,7 @@ spec:
                         type: object
                     type: object
                   linkId:
-                    description: The ID of the link for the first device.
+                    description: ID of the link for the first device.
                     type: string
                   tags:
                     additionalProperties:
@@ -891,27 +886,27 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: The Amazon Resource Name (ARN) of the connection.
+                    description: ARN of the connection.
                     type: string
                   connectedDeviceId:
-                    description: The ID of the second device in the connection.
+                    description: ID of the second device in the connection.
                     type: string
                   connectedLinkId:
-                    description: The ID of the link for the second device.
+                    description: ID of the link for the second device.
                     type: string
                   description:
-                    description: A description of the connection.
+                    description: Description of the connection.
                     type: string
                   deviceId:
-                    description: The ID of the first device in the connection.
+                    description: ID of the first device in the connection.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   id:
                     type: string
                   linkId:
-                    description: The ID of the link for the first device.
+                    description: ID of the link for the first device.
                     type: string
                   tags:
                     additionalProperties:
@@ -922,7 +917,7 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
                 type: object

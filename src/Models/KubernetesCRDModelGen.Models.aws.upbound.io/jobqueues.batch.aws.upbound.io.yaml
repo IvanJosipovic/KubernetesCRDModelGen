@@ -182,11 +182,6 @@ spec:
                           type: number
                       type: object
                     type: array
-                  computeEnvironments:
-                    description: (Deprecated)  This parameter is deprecated, please use compute_environment_order instead. List of compute environment ARNs mapped to a job queue. The position of the compute environments in the list will dictate the order. When importing a AWS Batch Job Queue, the parameter compute_environments will always be used over compute_environment_order. Please adjust your HCL accordingly.
-                    items:
-                      type: string
-                    type: array
                   jobStateTimeLimitAction:
                     description: The set of job state time limit actions mapped to a job queue. Specifies an action that AWS Batch will take after the job has remained at the head of the queue in the specified state for longer than the specified time.
                     items:
@@ -212,7 +207,10 @@ spec:
                       are evaluated first when associated with the same compute environment.
                     type: number
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedulingPolicyArn:
                     description: The ARN of the fair share scheduling policy. If this parameter is specified, the job queue uses a fair share scheduling policy. If this parameter isn't specified, the job queue uses a first in, first out (FIFO) scheduling policy. After a job queue is created, you can replace but can't remove the fair share scheduling policy.
@@ -434,11 +432,6 @@ spec:
                           description: The order of the compute environment. Compute environments are tried in ascending order. For example, if two compute environments are associated with a job queue, the compute environment with a lower order integer value is tried for job placement first.
                           type: number
                       type: object
-                    type: array
-                  computeEnvironments:
-                    description: (Deprecated)  This parameter is deprecated, please use compute_environment_order instead. List of compute environment ARNs mapped to a job queue. The position of the compute environments in the list will dictate the order. When importing a AWS Batch Job Queue, the parameter compute_environments will always be used over compute_environment_order. Please adjust your HCL accordingly.
-                    items:
-                      type: string
                     type: array
                   jobStateTimeLimitAction:
                     description: The set of job state time limit actions mapped to a job queue. Specifies an action that AWS Batch will take after the job has remained at the head of the queue in the specified state for longer than the specified time.
@@ -796,11 +789,6 @@ spec:
                           type: number
                       type: object
                     type: array
-                  computeEnvironments:
-                    description: (Deprecated)  This parameter is deprecated, please use compute_environment_order instead. List of compute environment ARNs mapped to a job queue. The position of the compute environments in the list will dictate the order. When importing a AWS Batch Job Queue, the parameter compute_environments will always be used over compute_environment_order. Please adjust your HCL accordingly.
-                    items:
-                      type: string
-                    type: array
                   id:
                     type: string
                   jobStateTimeLimitAction:
@@ -827,6 +815,12 @@ spec:
 
                       are evaluated first when associated with the same compute environment.
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   schedulingPolicyArn:
                     description: The ARN of the fair share scheduling policy. If this parameter is specified, the job queue uses a fair share scheduling policy. If this parameter isn't specified, the job queue uses a first in, first out (FIFO) scheduling policy. After a job queue is created, you can replace but can't remove the fair share scheduling policy.
                     type: string

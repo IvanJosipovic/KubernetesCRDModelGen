@@ -269,17 +269,9 @@ public partial class V1beta1ResponseHeadersPolicySpecForProvider
     [JsonPropertyName("customHeadersConfig")]
     public IList<V1beta1ResponseHeadersPolicySpecForProviderCustomHeadersConfig>? CustomHeadersConfig { get; set; }
 
-    /// <summary>The current version of the response headers policy.</summary>
-    [JsonPropertyName("etag")]
-    public string? Etag { get; set; }
-
     /// <summary>A unique name to identify the response headers policy.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 
     /// <summary>A configuration for a set of HTTP headers to remove from the HTTP response. Object that contains an attribute items that contains a list of headers. See Remove Header for more information.</summary>
     [JsonPropertyName("removeHeadersConfig")]
@@ -554,10 +546,6 @@ public partial class V1beta1ResponseHeadersPolicySpecInitProvider
     /// <summary>Object that contains an attribute items that contains a list of custom headers. See Custom Header for more information.</summary>
     [JsonPropertyName("customHeadersConfig")]
     public IList<V1beta1ResponseHeadersPolicySpecInitProviderCustomHeadersConfig>? CustomHeadersConfig { get; set; }
-
-    /// <summary>The current version of the response headers policy.</summary>
-    [JsonPropertyName("etag")]
-    public string? Etag { get; set; }
 
     /// <summary>A unique name to identify the response headers policy.</summary>
     [JsonPropertyName("name")]
@@ -957,6 +945,10 @@ public partial class V1beta1ResponseHeadersPolicyStatusAtProviderServerTimingHea
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicyStatusAtProvider
 {
+    /// <summary>The response headers policy ARN.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>A comment to describe the response headers policy. The comment cannot be longer than 128 characters.</summary>
     [JsonPropertyName("comment")]
     public string? Comment { get; set; }

@@ -72,11 +72,7 @@ public partial class V1beta1CoreNetworkSpecForProvider
     [JsonPropertyName("basePolicyDocument")]
     public string? BasePolicyDocument { get; set; }
 
-    /// <summary>The base policy created by setting the create_base_policy argument to true requires a region to be set in the edge-locations, location key. If base_policy_region is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
-    [JsonPropertyName("basePolicyRegion")]
-    public string? BasePolicyRegion { get; set; }
-
-    /// <summary>A list of regions to add to the base policy. The base policy created by setting the create_base_policy argument to true requires one or more regions to be set in the edge-locations, location key. If base_policy_regions is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
+    /// <summary>List of regions to add to the base policy. The base policy created by setting the create_base_policy argument to true requires one or more regions to be set in the edge-locations, location key. If base_policy_regions is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
     [JsonPropertyName("basePolicyRegions")]
     public IList<string>? BasePolicyRegions { get; set; }
 
@@ -88,7 +84,7 @@ public partial class V1beta1CoreNetworkSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network that a core network will be a part of.</summary>
+    /// <summary>ID of the global network that a core network will be a part of.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -99,10 +95,6 @@ public partial class V1beta1CoreNetworkSpecForProvider
     /// <summary>Selector for a GlobalNetwork in networkmanager to populate globalNetworkId.</summary>
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1CoreNetworkSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -173,11 +165,7 @@ public partial class V1beta1CoreNetworkSpecInitProvider
     [JsonPropertyName("basePolicyDocument")]
     public string? BasePolicyDocument { get; set; }
 
-    /// <summary>The base policy created by setting the create_base_policy argument to true requires a region to be set in the edge-locations, location key. If base_policy_region is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
-    [JsonPropertyName("basePolicyRegion")]
-    public string? BasePolicyRegion { get; set; }
-
-    /// <summary>A list of regions to add to the base policy. The base policy created by setting the create_base_policy argument to true requires one or more regions to be set in the edge-locations, location key. If base_policy_regions is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
+    /// <summary>List of regions to add to the base policy. The base policy created by setting the create_base_policy argument to true requires one or more regions to be set in the edge-locations, location key. If base_policy_regions is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
     [JsonPropertyName("basePolicyRegions")]
     public IList<string>? BasePolicyRegions { get; set; }
 
@@ -189,7 +177,7 @@ public partial class V1beta1CoreNetworkSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network that a core network will be a part of.</summary>
+    /// <summary>ID of the global network that a core network will be a part of.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -376,7 +364,7 @@ public partial class V1beta1CoreNetworkStatusAtProviderSegments
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CoreNetworkStatusAtProvider
 {
-    /// <summary>Core Network Amazon Resource Name (ARN).</summary>
+    /// <summary>Core Network ARN.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -384,11 +372,7 @@ public partial class V1beta1CoreNetworkStatusAtProvider
     [JsonPropertyName("basePolicyDocument")]
     public string? BasePolicyDocument { get; set; }
 
-    /// <summary>The base policy created by setting the create_base_policy argument to true requires a region to be set in the edge-locations, location key. If base_policy_region is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
-    [JsonPropertyName("basePolicyRegion")]
-    public string? BasePolicyRegion { get; set; }
-
-    /// <summary>A list of regions to add to the base policy. The base policy created by setting the create_base_policy argument to true requires one or more regions to be set in the edge-locations, location key. If base_policy_regions is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
+    /// <summary>List of regions to add to the base policy. The base policy created by setting the create_base_policy argument to true requires one or more regions to be set in the edge-locations, location key. If base_policy_regions is not specified, the region used in the base policy defaults to the region specified in the provider block.</summary>
     [JsonPropertyName("basePolicyRegions")]
     public IList<string>? BasePolicyRegions { get; set; }
 
@@ -408,7 +392,7 @@ public partial class V1beta1CoreNetworkStatusAtProvider
     [JsonPropertyName("edges")]
     public IList<V1beta1CoreNetworkStatusAtProviderEdges>? Edges { get; set; }
 
-    /// <summary>The ID of the global network that a core network will be a part of.</summary>
+    /// <summary>ID of the global network that a core network will be a part of.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -428,7 +412,7 @@ public partial class V1beta1CoreNetworkStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -479,7 +463,7 @@ public partial class V1beta1CoreNetworkStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>CoreNetwork is the Schema for the CoreNetworks API. Provides a core network resource.</summary>
+/// <summary>CoreNetwork is the Schema for the CoreNetworks API. Manages a Network Manager Core Network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CoreNetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CoreNetworkSpec>, IStatus<V1beta1CoreNetworkStatus>
@@ -509,7 +493,7 @@ public partial class V1beta1CoreNetwork : IKubernetesObject<V1ObjectMeta>, ISpec
     public V1beta1CoreNetworkStatus? Status { get; set; }
 }
 
-/// <summary>CoreNetwork is the Schema for the CoreNetworks API. Provides a core network resource.</summary>
+/// <summary>CoreNetwork is the Schema for the CoreNetworks API. Manages a Network Manager Core Network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CoreNetworkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CoreNetwork>

@@ -178,10 +178,6 @@ public partial class V1beta1RealtimeLogConfigSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>The sampling rate for this real-time log configuration. The sampling rate determines the percentage of viewer requests that are represented in the real-time log data. An integer between 1 and 100, inclusive.</summary>
     [JsonPropertyName("samplingRate")]
     public double? SamplingRate { get; set; }

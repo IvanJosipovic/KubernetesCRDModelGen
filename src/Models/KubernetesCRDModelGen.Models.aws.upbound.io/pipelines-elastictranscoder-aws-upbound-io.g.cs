@@ -369,7 +369,7 @@ public partial class V1beta1PipelineSpecForProvider
     [JsonPropertyName("outputBucket")]
     public string? OutputBucket { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1028,6 +1028,10 @@ public partial class V1beta1PipelineStatusAtProvider
     /// <summary>The Amazon S3 bucket in which you want Elastic Transcoder to save the transcoded files.</summary>
     [JsonPropertyName("outputBucket")]
     public string? OutputBucket { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IAM Amazon Resource Name (ARN) for the role that you want Elastic Transcoder to use to transcode jobs for this pipeline.</summary>
     [JsonPropertyName("role")]

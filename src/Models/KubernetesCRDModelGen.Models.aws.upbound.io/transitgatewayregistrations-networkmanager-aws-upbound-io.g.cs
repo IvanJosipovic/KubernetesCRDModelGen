@@ -124,7 +124,7 @@ public partial class V1beta1TransitGatewayRegistrationSpecForProviderTransitGate
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayRegistrationSpecForProvider
 {
-    /// <summary>The ID of the Global Network to register to.</summary>
+    /// <summary>ID of the Global Network to register to.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -136,11 +136,7 @@ public partial class V1beta1TransitGatewayRegistrationSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1TransitGatewayRegistrationSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
-    /// <summary>The ARN of the Transit Gateway to register.</summary>
+    /// <summary>ARN of the Transit Gateway to register.</summary>
     [JsonPropertyName("transitGatewayArn")]
     public string? TransitGatewayArn { get; set; }
 
@@ -295,7 +291,7 @@ public partial class V1beta1TransitGatewayRegistrationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayRegistrationStatusAtProvider
 {
-    /// <summary>The ID of the Global Network to register to.</summary>
+    /// <summary>ID of the Global Network to register to.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -303,7 +299,7 @@ public partial class V1beta1TransitGatewayRegistrationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ARN of the Transit Gateway to register.</summary>
+    /// <summary>ARN of the Transit Gateway to register.</summary>
     [JsonPropertyName("transitGatewayArn")]
     public string? TransitGatewayArn { get; set; }
 }
@@ -354,7 +350,7 @@ public partial class V1beta1TransitGatewayRegistrationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>TransitGatewayRegistration is the Schema for the TransitGatewayRegistrations API. Registers a transit gateway to a global network.</summary>
+/// <summary>TransitGatewayRegistration is the Schema for the TransitGatewayRegistrations API. Manages a Network Manager transit gateway registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TransitGatewayRegistration : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TransitGatewayRegistrationSpec>, IStatus<V1beta1TransitGatewayRegistrationStatus>
@@ -384,7 +380,7 @@ public partial class V1beta1TransitGatewayRegistration : IKubernetesObject<V1Obj
     public V1beta1TransitGatewayRegistrationStatus? Status { get; set; }
 }
 
-/// <summary>TransitGatewayRegistration is the Schema for the TransitGatewayRegistrations API. Registers a transit gateway to a global network.</summary>
+/// <summary>TransitGatewayRegistration is the Schema for the TransitGatewayRegistrations API. Manages a Network Manager transit gateway registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1TransitGatewayRegistrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayRegistration>

@@ -92,7 +92,7 @@ public partial class V1beta1VaultLockConfigurationSpecForProvider
     [JsonPropertyName("minRetentionDays")]
     public double? MinRetentionDays { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -341,6 +341,10 @@ public partial class V1beta1VaultLockConfigurationStatusAtProvider
     /// <summary>The minimum retention period that the vault retains its recovery points.</summary>
     [JsonPropertyName("minRetentionDays")]
     public double? MinRetentionDays { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

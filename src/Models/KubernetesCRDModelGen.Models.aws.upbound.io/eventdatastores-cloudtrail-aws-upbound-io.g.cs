@@ -146,13 +146,17 @@ public partial class V1beta1EventDataStoreSpecForProvider
     [JsonPropertyName("organizationEnabled")]
     public bool? OrganizationEnabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
     /// <summary>The retention period of the event data store, in days. You can set a retention period of up to 2555 days, the equivalent of seven years. Default: 2555.</summary>
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
+
+    /// <summary>Specifies whether to stop ingesting new events into the event data store. If set to true, ingestion is suspended while maintaining the ability to query existing events. If set to false, ingestion is active.</summary>
+    [JsonPropertyName("suspend")]
+    public string? Suspend { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -304,6 +308,10 @@ public partial class V1beta1EventDataStoreSpecInitProvider
     /// <summary>The retention period of the event data store, in days. You can set a retention period of up to 2555 days, the equivalent of seven years. Default: 2555.</summary>
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
+
+    /// <summary>Specifies whether to stop ingesting new events into the event data store. If set to true, ingestion is suspended while maintaining the ability to query existing events. If set to false, ingestion is active.</summary>
+    [JsonPropertyName("suspend")]
+    public string? Suspend { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -528,9 +536,17 @@ public partial class V1beta1EventDataStoreStatusAtProvider
     [JsonPropertyName("organizationEnabled")]
     public bool? OrganizationEnabled { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The retention period of the event data store, in days. You can set a retention period of up to 2555 days, the equivalent of seven years. Default: 2555.</summary>
     [JsonPropertyName("retentionPeriod")]
     public double? RetentionPeriod { get; set; }
+
+    /// <summary>Specifies whether to stop ingesting new events into the event data store. If set to true, ingestion is suspended while maintaining the ability to query existing events. If set to false, ingestion is active.</summary>
+    [JsonPropertyName("suspend")]
+    public string? Suspend { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

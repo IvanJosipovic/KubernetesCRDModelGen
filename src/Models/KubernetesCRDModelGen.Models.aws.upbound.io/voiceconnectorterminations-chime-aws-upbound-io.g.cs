@@ -88,7 +88,7 @@ public partial class V1beta1VoiceConnectorTerminationSpecForProvider
     [JsonPropertyName("disabled")]
     public bool? Disabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -357,6 +357,10 @@ public partial class V1beta1VoiceConnectorTerminationStatusAtProvider
     /// <summary>The Amazon Chime Voice Connector ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Chime Voice Connector ID.</summary>
     [JsonPropertyName("voiceConnectorId")]

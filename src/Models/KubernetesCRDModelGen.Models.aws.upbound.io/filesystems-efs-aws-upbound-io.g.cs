@@ -134,7 +134,7 @@ public partial class V1beta1FileSystemSpecForProvider
     [JsonPropertyName("provisionedThroughputInMibps")]
     public double? ProvisionedThroughputInMibps { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -520,6 +520,10 @@ public partial class V1beta1FileSystemStatusAtProvider
     /// <summary>The throughput, measured in MiB/s, that you want to provision for the file system. Only applicable with throughput_mode set to provisioned.</summary>
     [JsonPropertyName("provisionedThroughputInMibps")]
     public double? ProvisionedThroughputInMibps { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The latest known metered size (in bytes) of data stored in the file system, the value is not the exact size that the file system was at any point in time. See Size In Bytes.</summary>
     [JsonPropertyName("sizeInBytes")]

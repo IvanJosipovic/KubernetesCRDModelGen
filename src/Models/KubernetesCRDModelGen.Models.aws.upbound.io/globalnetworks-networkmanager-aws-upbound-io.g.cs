@@ -16,10 +16,6 @@ public partial class V1beta1GlobalNetworkSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -174,7 +170,7 @@ public partial class V1beta1GlobalNetworkSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalNetworkStatusAtProvider
 {
-    /// <summary>Global Network Amazon Resource Name (ARN)</summary>
+    /// <summary>Global Network ARN.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -190,7 +186,7 @@ public partial class V1beta1GlobalNetworkStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -241,7 +237,7 @@ public partial class V1beta1GlobalNetworkStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>GlobalNetwork is the Schema for the GlobalNetworks API. Provides a global network resource.</summary>
+/// <summary>GlobalNetwork is the Schema for the GlobalNetworks API. Manages a Network Manager Global Network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1GlobalNetwork : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GlobalNetworkSpec>, IStatus<V1beta1GlobalNetworkStatus>
@@ -271,7 +267,7 @@ public partial class V1beta1GlobalNetwork : IKubernetesObject<V1ObjectMeta>, ISp
     public V1beta1GlobalNetworkStatus? Status { get; set; }
 }
 
-/// <summary>GlobalNetwork is the Schema for the GlobalNetworks API. Provides a global network resource.</summary>
+/// <summary>GlobalNetwork is the Schema for the GlobalNetworks API. Manages a Network Manager Global Network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1GlobalNetworkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalNetwork>

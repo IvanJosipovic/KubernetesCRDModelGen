@@ -68,7 +68,7 @@ public partial class V1beta1BrokerSpecForProviderConfigurationIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderConfiguration
 {
-    /// <summary>The Configuration ID.</summary>
+    /// <summary>Configuration ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -145,11 +145,11 @@ public partial class V1beta1BrokerSpecForProviderDataReplicationPrimaryBrokerArn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderEncryptionOptions
 {
-    /// <summary>Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
+    /// <summary>ARN of KMS CMK to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Whether to enable an AWS-owned KMS CMK that is not in your account. Defaults to true. Setting to false without configuring kms_key_id will create an AWS-managed CMK aliased to aws/mq in your account.</summary>
+    /// <summary>Whether to enable an AWS-owned KMS CMK not in your account. Defaults to true. Setting to false without configuring kms_key_id creates an AWS-managed CMK aliased to aws/mq in your account.</summary>
     [JsonPropertyName("useAwsOwnedKey")]
     public bool? UseAwsOwnedKey { get; set; }
 }
@@ -175,15 +175,15 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadataServiceAccoun
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
 {
-    /// <summary>List of a fully qualified domain name of the LDAP server and an optional failover server.</summary>
+    /// <summary>List of fully qualified domain names of the LDAP server and optional failover server.</summary>
     [JsonPropertyName("hosts")]
     public IList<string>? Hosts { get; set; }
 
-    /// <summary>Fully qualified name of the directory to search for a user’s groups.</summary>
+    /// <summary>Fully qualified name of the directory to search for a user's groups.</summary>
     [JsonPropertyName("roleBase")]
     public string? RoleBase { get; set; }
 
-    /// <summary>Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</summary>
+    /// <summary>LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</summary>
     [JsonPropertyName("roleName")]
     public string? RoleName { get; set; }
 
@@ -207,7 +207,7 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
     [JsonPropertyName("userBase")]
     public string? UserBase { get; set; }
 
-    /// <summary>Specifies the name of the LDAP attribute for the user group membership.</summary>
+    /// <summary>Name of the LDAP attribute for the user group membership.</summary>
     [JsonPropertyName("userRoleName")]
     public string? UserRoleName { get; set; }
 
@@ -224,11 +224,11 @@ public partial class V1beta1BrokerSpecForProviderLdapServerMetadata
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderLogs
 {
-    /// <summary>Enables audit logging. Auditing is only possible for engine_type of ActiveMQ. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to false.</summary>
+    /// <summary>Whether to enable audit logging. Only possible for engine_type of ActiveMQ. Logs user management actions via JMX or ActiveMQ Web Console. Defaults to false.</summary>
     [JsonPropertyName("audit")]
     public string? Audit { get; set; }
 
-    /// <summary>Enables general logging via CloudWatch. Defaults to false.</summary>
+    /// <summary>Whether to enable general logging via CloudWatch. Defaults to false.</summary>
     [JsonPropertyName("general")]
     public bool? General { get; set; }
 }
@@ -362,7 +362,7 @@ public partial class V1beta1BrokerSpecForProviderSubnetIdSelector
     public V1beta1BrokerSpecForProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</summary>
+/// <summary>Password of the user. Must be 12 to 250 characters long, contain at least 4 unique characters, and must not contain commas.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProviderUserPasswordSecretRef
 {
@@ -391,11 +391,11 @@ public partial class V1beta1BrokerSpecForProviderUser
     [JsonPropertyName("groups")]
     public IList<string>? Groups { get; set; }
 
-    /// <summary>Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</summary>
+    /// <summary>Password of the user. Must be 12 to 250 characters long, contain at least 4 unique characters, and must not contain commas.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1BrokerSpecForProviderUserPasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>Whether to set set replication user. Defaults to false.</summary>
+    /// <summary>Whether to set replication user. Defaults to false.</summary>
     [JsonPropertyName("replicationUser")]
     public bool? ReplicationUser { get; set; }
 
@@ -408,7 +408,7 @@ public partial class V1beta1BrokerSpecForProviderUser
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecForProvider
 {
-    /// <summary>Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
+    /// <summary>Whether to apply broker modifications immediately. Default is false.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
@@ -428,11 +428,11 @@ public partial class V1beta1BrokerSpecForProvider
     [JsonPropertyName("configuration")]
     public IList<V1beta1BrokerSpecForProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Defines whether this broker is a part of a data replication pair. Valid values are CRDR and NONE.</summary>
+    /// <summary>Whether this broker is part of a data replication pair. Valid values are CRDR and NONE.</summary>
     [JsonPropertyName("dataReplicationMode")]
     public string? DataReplicationMode { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the primary broker that is used to replicate data from in a data replication pair, and is applied to the replica broker. Must be set when data_replication_mode is CRDR.</summary>
+    /// <summary>ARN of the primary broker used to replicate data in a data replication pair. Required when data_replication_mode is CRDR.</summary>
     [JsonPropertyName("dataReplicationPrimaryBrokerArn")]
     public string? DataReplicationPrimaryBrokerArn { get; set; }
 
@@ -456,7 +456,7 @@ public partial class V1beta1BrokerSpecForProvider
     [JsonPropertyName("engineType")]
     public string? EngineType { get; set; }
 
-    /// <summary>Version of the broker engine. See the AmazonMQ Broker Engine docs for supported versions. For example, 5.17.6.</summary>
+    /// <summary>Version of the broker engine.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -464,11 +464,11 @@ public partial class V1beta1BrokerSpecForProvider
     [JsonPropertyName("hostInstanceType")]
     public string? HostInstanceType { get; set; }
 
-    /// <summary>Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for engine_type RabbitMQ. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)</summary>
+    /// <summary>Configuration block for the LDAP server used to authenticate and authorize connections. Not supported for engine_type RabbitMQ. Detailed below.</summary>
     [JsonPropertyName("ldapServerMetadata")]
     public IList<V1beta1BrokerSpecForProviderLdapServerMetadata>? LdapServerMetadata { get; set; }
 
-    /// <summary>Configuration block for the logging configuration of the broker. Detailed below.</summary>
+    /// <summary>Configuration block for the logging configuration. Detailed below.</summary>
     [JsonPropertyName("logs")]
     public IList<V1beta1BrokerSpecForProviderLogs>? Logs { get; set; }
 
@@ -480,7 +480,7 @@ public partial class V1beta1BrokerSpecForProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -496,7 +496,7 @@ public partial class V1beta1BrokerSpecForProvider
     [JsonPropertyName("securityGroups")]
     public IList<string>? SecurityGroups { get; set; }
 
-    /// <summary>Storage type of the broker. For engine_type ActiveMQ, the valid values are efs and ebs, and the AWS-default is efs. For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.</summary>
+    /// <summary>Storage type of the broker. For engine_type ActiveMQ, valid values are efs and ebs (AWS-default is efs). For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -581,7 +581,7 @@ public partial class V1beta1BrokerSpecInitProviderConfigurationIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderConfiguration
 {
-    /// <summary>The Configuration ID.</summary>
+    /// <summary>Configuration ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -658,11 +658,11 @@ public partial class V1beta1BrokerSpecInitProviderDataReplicationPrimaryBrokerAr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderEncryptionOptions
 {
-    /// <summary>Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
+    /// <summary>ARN of KMS CMK to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Whether to enable an AWS-owned KMS CMK that is not in your account. Defaults to true. Setting to false without configuring kms_key_id will create an AWS-managed CMK aliased to aws/mq in your account.</summary>
+    /// <summary>Whether to enable an AWS-owned KMS CMK not in your account. Defaults to true. Setting to false without configuring kms_key_id creates an AWS-managed CMK aliased to aws/mq in your account.</summary>
     [JsonPropertyName("useAwsOwnedKey")]
     public bool? UseAwsOwnedKey { get; set; }
 }
@@ -688,15 +688,15 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadataServiceAccou
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
 {
-    /// <summary>List of a fully qualified domain name of the LDAP server and an optional failover server.</summary>
+    /// <summary>List of fully qualified domain names of the LDAP server and optional failover server.</summary>
     [JsonPropertyName("hosts")]
     public IList<string>? Hosts { get; set; }
 
-    /// <summary>Fully qualified name of the directory to search for a user’s groups.</summary>
+    /// <summary>Fully qualified name of the directory to search for a user's groups.</summary>
     [JsonPropertyName("roleBase")]
     public string? RoleBase { get; set; }
 
-    /// <summary>Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</summary>
+    /// <summary>LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</summary>
     [JsonPropertyName("roleName")]
     public string? RoleName { get; set; }
 
@@ -720,7 +720,7 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
     [JsonPropertyName("userBase")]
     public string? UserBase { get; set; }
 
-    /// <summary>Specifies the name of the LDAP attribute for the user group membership.</summary>
+    /// <summary>Name of the LDAP attribute for the user group membership.</summary>
     [JsonPropertyName("userRoleName")]
     public string? UserRoleName { get; set; }
 
@@ -737,11 +737,11 @@ public partial class V1beta1BrokerSpecInitProviderLdapServerMetadata
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderLogs
 {
-    /// <summary>Enables audit logging. Auditing is only possible for engine_type of ActiveMQ. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to false.</summary>
+    /// <summary>Whether to enable audit logging. Only possible for engine_type of ActiveMQ. Logs user management actions via JMX or ActiveMQ Web Console. Defaults to false.</summary>
     [JsonPropertyName("audit")]
     public string? Audit { get; set; }
 
-    /// <summary>Enables general logging via CloudWatch. Defaults to false.</summary>
+    /// <summary>Whether to enable general logging via CloudWatch. Defaults to false.</summary>
     [JsonPropertyName("general")]
     public bool? General { get; set; }
 }
@@ -875,7 +875,7 @@ public partial class V1beta1BrokerSpecInitProviderSubnetIdSelector
     public V1beta1BrokerSpecInitProviderSubnetIdSelectorPolicy? Policy { get; set; }
 }
 
-/// <summary>Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</summary>
+/// <summary>Password of the user. Must be 12 to 250 characters long, contain at least 4 unique characters, and must not contain commas.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProviderUserPasswordSecretRef
 {
@@ -904,11 +904,11 @@ public partial class V1beta1BrokerSpecInitProviderUser
     [JsonPropertyName("groups")]
     public IList<string>? Groups { get; set; }
 
-    /// <summary>Password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.</summary>
+    /// <summary>Password of the user. Must be 12 to 250 characters long, contain at least 4 unique characters, and must not contain commas.</summary>
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1BrokerSpecInitProviderUserPasswordSecretRef PasswordSecretRef { get; set; }
 
-    /// <summary>Whether to set set replication user. Defaults to false.</summary>
+    /// <summary>Whether to set replication user. Defaults to false.</summary>
     [JsonPropertyName("replicationUser")]
     public bool? ReplicationUser { get; set; }
 
@@ -921,7 +921,7 @@ public partial class V1beta1BrokerSpecInitProviderUser
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerSpecInitProvider
 {
-    /// <summary>Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
+    /// <summary>Whether to apply broker modifications immediately. Default is false.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
@@ -941,11 +941,11 @@ public partial class V1beta1BrokerSpecInitProvider
     [JsonPropertyName("configuration")]
     public IList<V1beta1BrokerSpecInitProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Defines whether this broker is a part of a data replication pair. Valid values are CRDR and NONE.</summary>
+    /// <summary>Whether this broker is part of a data replication pair. Valid values are CRDR and NONE.</summary>
     [JsonPropertyName("dataReplicationMode")]
     public string? DataReplicationMode { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the primary broker that is used to replicate data from in a data replication pair, and is applied to the replica broker. Must be set when data_replication_mode is CRDR.</summary>
+    /// <summary>ARN of the primary broker used to replicate data in a data replication pair. Required when data_replication_mode is CRDR.</summary>
     [JsonPropertyName("dataReplicationPrimaryBrokerArn")]
     public string? DataReplicationPrimaryBrokerArn { get; set; }
 
@@ -969,7 +969,7 @@ public partial class V1beta1BrokerSpecInitProvider
     [JsonPropertyName("engineType")]
     public string? EngineType { get; set; }
 
-    /// <summary>Version of the broker engine. See the AmazonMQ Broker Engine docs for supported versions. For example, 5.17.6.</summary>
+    /// <summary>Version of the broker engine.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -977,11 +977,11 @@ public partial class V1beta1BrokerSpecInitProvider
     [JsonPropertyName("hostInstanceType")]
     public string? HostInstanceType { get; set; }
 
-    /// <summary>Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for engine_type RabbitMQ. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)</summary>
+    /// <summary>Configuration block for the LDAP server used to authenticate and authorize connections. Not supported for engine_type RabbitMQ. Detailed below.</summary>
     [JsonPropertyName("ldapServerMetadata")]
     public IList<V1beta1BrokerSpecInitProviderLdapServerMetadata>? LdapServerMetadata { get; set; }
 
-    /// <summary>Configuration block for the logging configuration of the broker. Detailed below.</summary>
+    /// <summary>Configuration block for the logging configuration. Detailed below.</summary>
     [JsonPropertyName("logs")]
     public IList<V1beta1BrokerSpecInitProviderLogs>? Logs { get; set; }
 
@@ -1005,7 +1005,7 @@ public partial class V1beta1BrokerSpecInitProvider
     [JsonPropertyName("securityGroups")]
     public IList<string>? SecurityGroups { get; set; }
 
-    /// <summary>Storage type of the broker. For engine_type ActiveMQ, the valid values are efs and ebs, and the AWS-default is efs. For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.</summary>
+    /// <summary>Storage type of the broker. For engine_type ActiveMQ, valid values are efs and ebs (AWS-default is efs). For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -1166,7 +1166,7 @@ public partial class V1beta1BrokerSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderConfiguration
 {
-    /// <summary>The Configuration ID.</summary>
+    /// <summary>Configuration ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1179,11 +1179,11 @@ public partial class V1beta1BrokerStatusAtProviderConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderEncryptionOptions
 {
-    /// <summary>Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
+    /// <summary>ARN of KMS CMK to use for encryption at rest. Requires setting use_aws_owned_key to false. To perform drift detection when AWS-managed CMKs or customer-managed CMKs are in use, this value must be configured.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Whether to enable an AWS-owned KMS CMK that is not in your account. Defaults to true. Setting to false without configuring kms_key_id will create an AWS-managed CMK aliased to aws/mq in your account.</summary>
+    /// <summary>Whether to enable an AWS-owned KMS CMK not in your account. Defaults to true. Setting to false without configuring kms_key_id creates an AWS-managed CMK aliased to aws/mq in your account.</summary>
     [JsonPropertyName("useAwsOwnedKey")]
     public bool? UseAwsOwnedKey { get; set; }
 }
@@ -1192,7 +1192,7 @@ public partial class V1beta1BrokerStatusAtProviderEncryptionOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderInstances
 {
-    /// <summary>The URL of the ActiveMQ Web Console or the RabbitMQ Management UI depending on engine_type.</summary>
+    /// <summary>URL of the ActiveMQ Web Console or the RabbitMQ Management UI depending on engine_type.</summary>
     [JsonPropertyName("consoleUrl")]
     public string? ConsoleUrl { get; set; }
 
@@ -1209,15 +1209,15 @@ public partial class V1beta1BrokerStatusAtProviderInstances
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
 {
-    /// <summary>List of a fully qualified domain name of the LDAP server and an optional failover server.</summary>
+    /// <summary>List of fully qualified domain names of the LDAP server and optional failover server.</summary>
     [JsonPropertyName("hosts")]
     public IList<string>? Hosts { get; set; }
 
-    /// <summary>Fully qualified name of the directory to search for a user’s groups.</summary>
+    /// <summary>Fully qualified name of the directory to search for a user's groups.</summary>
     [JsonPropertyName("roleBase")]
     public string? RoleBase { get; set; }
 
-    /// <summary>Specifies the LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</summary>
+    /// <summary>LDAP attribute that identifies the group name attribute in the object returned from the group membership query.</summary>
     [JsonPropertyName("roleName")]
     public string? RoleName { get; set; }
 
@@ -1237,7 +1237,7 @@ public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
     [JsonPropertyName("userBase")]
     public string? UserBase { get; set; }
 
-    /// <summary>Specifies the name of the LDAP attribute for the user group membership.</summary>
+    /// <summary>Name of the LDAP attribute for the user group membership.</summary>
     [JsonPropertyName("userRoleName")]
     public string? UserRoleName { get; set; }
 
@@ -1254,11 +1254,11 @@ public partial class V1beta1BrokerStatusAtProviderLdapServerMetadata
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProviderLogs
 {
-    /// <summary>Enables audit logging. Auditing is only possible for engine_type of ActiveMQ. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to false.</summary>
+    /// <summary>Whether to enable audit logging. Only possible for engine_type of ActiveMQ. Logs user management actions via JMX or ActiveMQ Web Console. Defaults to false.</summary>
     [JsonPropertyName("audit")]
     public string? Audit { get; set; }
 
-    /// <summary>Enables general logging via CloudWatch. Defaults to false.</summary>
+    /// <summary>Whether to enable general logging via CloudWatch. Defaults to false.</summary>
     [JsonPropertyName("general")]
     public bool? General { get; set; }
 }
@@ -1292,7 +1292,7 @@ public partial class V1beta1BrokerStatusAtProviderUser
     [JsonPropertyName("groups")]
     public IList<string>? Groups { get; set; }
 
-    /// <summary>Whether to set set replication user. Defaults to false.</summary>
+    /// <summary>Whether to set replication user. Defaults to false.</summary>
     [JsonPropertyName("replicationUser")]
     public bool? ReplicationUser { get; set; }
 
@@ -1305,7 +1305,7 @@ public partial class V1beta1BrokerStatusAtProviderUser
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BrokerStatusAtProvider
 {
-    /// <summary>Specifies whether any broker modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
+    /// <summary>Whether to apply broker modifications immediately. Default is false.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
@@ -1329,11 +1329,11 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("configuration")]
     public IList<V1beta1BrokerStatusAtProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Defines whether this broker is a part of a data replication pair. Valid values are CRDR and NONE.</summary>
+    /// <summary>Whether this broker is part of a data replication pair. Valid values are CRDR and NONE.</summary>
     [JsonPropertyName("dataReplicationMode")]
     public string? DataReplicationMode { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the primary broker that is used to replicate data from in a data replication pair, and is applied to the replica broker. Must be set when data_replication_mode is CRDR.</summary>
+    /// <summary>ARN of the primary broker used to replicate data in a data replication pair. Required when data_replication_mode is CRDR.</summary>
     [JsonPropertyName("dataReplicationPrimaryBrokerArn")]
     public string? DataReplicationPrimaryBrokerArn { get; set; }
 
@@ -1349,7 +1349,7 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("engineType")]
     public string? EngineType { get; set; }
 
-    /// <summary>Version of the broker engine. See the AmazonMQ Broker Engine docs for supported versions. For example, 5.17.6.</summary>
+    /// <summary>Version of the broker engine.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
@@ -1365,11 +1365,11 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("instances")]
     public IList<V1beta1BrokerStatusAtProviderInstances>? Instances { get; set; }
 
-    /// <summary>Configuration block for the LDAP server used to authenticate and authorize connections to the broker. Not supported for engine_type RabbitMQ. Detailed below. (Currently, AWS may not process changes to LDAP server metadata.)</summary>
+    /// <summary>Configuration block for the LDAP server used to authenticate and authorize connections. Not supported for engine_type RabbitMQ. Detailed below.</summary>
     [JsonPropertyName("ldapServerMetadata")]
     public IList<V1beta1BrokerStatusAtProviderLdapServerMetadata>? LdapServerMetadata { get; set; }
 
-    /// <summary>Configuration block for the logging configuration of the broker. Detailed below.</summary>
+    /// <summary>Configuration block for the logging configuration. Detailed below.</summary>
     [JsonPropertyName("logs")]
     public IList<V1beta1BrokerStatusAtProviderLogs>? Logs { get; set; }
 
@@ -1377,7 +1377,7 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("maintenanceWindowStartTime")]
     public IList<V1beta1BrokerStatusAtProviderMaintenanceWindowStartTime>? MaintenanceWindowStartTime { get; set; }
 
-    /// <summary>The data replication mode that will be applied after reboot.</summary>
+    /// <summary>Data replication mode that will be applied after reboot.</summary>
     [JsonPropertyName("pendingDataReplicationMode")]
     public string? PendingDataReplicationMode { get; set; }
 
@@ -1385,11 +1385,15 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>List of security group IDs assigned to the broker.</summary>
     [JsonPropertyName("securityGroups")]
     public IList<string>? SecurityGroups { get; set; }
 
-    /// <summary>Storage type of the broker. For engine_type ActiveMQ, the valid values are efs and ebs, and the AWS-default is efs. For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.</summary>
+    /// <summary>Storage type of the broker. For engine_type ActiveMQ, valid values are efs and ebs (AWS-default is efs). For engine_type RabbitMQ, only ebs is supported. When using ebs, only the mq.m5 broker instance type family is supported.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -1401,7 +1405,7 @@ public partial class V1beta1BrokerStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
@@ -1456,7 +1460,7 @@ public partial class V1beta1BrokerStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Broker is the Schema for the Brokers API. Provides an MQ Broker Resource</summary>
+/// <summary>Broker is the Schema for the Brokers API. Manages an AWS MQ broker</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Broker : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BrokerSpec>, IStatus<V1beta1BrokerStatus>
@@ -1486,7 +1490,7 @@ public partial class V1beta1Broker : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     public V1beta1BrokerStatus? Status { get; set; }
 }
 
-/// <summary>Broker is the Schema for the Brokers API. Provides an MQ Broker Resource</summary>
+/// <summary>Broker is the Schema for the Brokers API. Manages an AWS MQ broker</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1BrokerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Broker>

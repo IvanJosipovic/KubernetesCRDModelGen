@@ -192,7 +192,10 @@ spec:
                     description: Unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: 'Specifies the status of the configuration. Valid values: Enabled, Disabled.'
@@ -597,6 +600,12 @@ spec:
                     type: string
                   name:
                     description: Unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: 'Specifies the status of the configuration. Valid values: Enabled, Disabled.'
@@ -853,7 +862,10 @@ spec:
                     description: Unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: 'Specifies the status of the configuration. Valid values: Enabled, Disabled.'
@@ -1254,6 +1266,12 @@ spec:
                     type: string
                   name:
                     description: Unique name used to identify the S3 Intelligent-Tiering configuration for the bucket.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   status:
                     description: 'Specifies the status of the configuration. Valid values: Enabled, Disabled.'

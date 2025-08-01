@@ -136,7 +136,7 @@ public partial class V1beta1AssociationSpecForProvider
     [JsonPropertyName("licenseConfigurationArnSelector")]
     public V1beta1AssociationSpecForProviderLicenseConfigurationArnSelector? LicenseConfigurationArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1AssociationStatusAtProvider
     /// <summary>ARN of the license configuration.</summary>
     [JsonPropertyName("licenseConfigurationArn")]
     public string? LicenseConfigurationArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the resource associated with the license configuration.</summary>
     [JsonPropertyName("resourceArn")]

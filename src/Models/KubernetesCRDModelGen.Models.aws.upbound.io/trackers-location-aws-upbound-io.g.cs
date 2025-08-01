@@ -88,7 +88,7 @@ public partial class V1beta1TrackerSpecForProvider
     [JsonPropertyName("positionFiltering")]
     public string? PositionFiltering { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -337,6 +337,10 @@ public partial class V1beta1TrackerStatusAtProvider
     /// <summary>The position filtering method of the tracker resource. Valid values: TimeBased, DistanceBased, AccuracyBased. Default: TimeBased.</summary>
     [JsonPropertyName("positionFiltering")]
     public string? PositionFiltering { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

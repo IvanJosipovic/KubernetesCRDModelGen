@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StudioLifecycleConfigSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -190,6 +190,10 @@ public partial class V1beta1StudioLifecycleConfigStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The App type that the Lifecycle Configuration is attached to. Valid values are JupyterServer, JupyterLab, CodeEditor and KernelGateway.</summary>
     [JsonPropertyName("studioLifecycleConfigAppType")]
     public string? StudioLifecycleConfigAppType { get; set; }
@@ -253,7 +257,7 @@ public partial class V1beta1StudioLifecycleConfigStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>StudioLifecycleConfig is the Schema for the StudioLifecycleConfigs API. Provides a SageMaker Studio Lifecycle Config resource.</summary>
+/// <summary>StudioLifecycleConfig is the Schema for the StudioLifecycleConfigs API. Provides a SageMaker AI Studio Lifecycle Config resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StudioLifecycleConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StudioLifecycleConfigSpec>, IStatus<V1beta1StudioLifecycleConfigStatus>
@@ -283,7 +287,7 @@ public partial class V1beta1StudioLifecycleConfig : IKubernetesObject<V1ObjectMe
     public V1beta1StudioLifecycleConfigStatus? Status { get; set; }
 }
 
-/// <summary>StudioLifecycleConfig is the Schema for the StudioLifecycleConfigs API. Provides a SageMaker Studio Lifecycle Config resource.</summary>
+/// <summary>StudioLifecycleConfig is the Schema for the StudioLifecycleConfigs API. Provides a SageMaker AI Studio Lifecycle Config resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1StudioLifecycleConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StudioLifecycleConfig>

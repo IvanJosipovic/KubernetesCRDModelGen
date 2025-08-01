@@ -68,7 +68,7 @@ public partial class V1beta1EBSVolumeSpecForProviderKmsKeyIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSVolumeSpecForProvider
 {
-    /// <summary>The AZ where the EBS volume will exist.</summary>
+    /// <summary>Availability zone where the EBS volume will exist.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
@@ -80,11 +80,11 @@ public partial class V1beta1EBSVolumeSpecForProvider
     [JsonPropertyName("finalSnapshot")]
     public bool? FinalSnapshot { get; set; }
 
-    /// <summary>The amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.</summary>
+    /// <summary>Amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</summary>
+    /// <summary>ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -100,15 +100,15 @@ public partial class V1beta1EBSVolumeSpecForProvider
     [JsonPropertyName("multiAttachEnabled")]
     public bool? MultiAttachEnabled { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the Outpost.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the Outpost.</summary>
     [JsonPropertyName("outpostArn")]
     public string? OutpostArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The size of the drive in GiBs.</summary>
+    /// <summary>Size of the drive in GiBs.</summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 
@@ -120,11 +120,11 @@ public partial class V1beta1EBSVolumeSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The throughput that the volume supports, in MiB/s. Only valid for type of gp3.</summary>
+    /// <summary>Throughput that the volume supports, in MiB/s. Only valid for type of gp3.</summary>
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 
-    /// <summary>The type of EBS volume. Can be standard, gp2, gp3, io1, io2, sc1 or st1 (Default: gp2).</summary>
+    /// <summary>Type of EBS volume. Can be standard, gp2, gp3, io1, io2, sc1 or st1 (Default: gp2).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -189,7 +189,7 @@ public partial class V1beta1EBSVolumeSpecInitProviderKmsKeyIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSVolumeSpecInitProvider
 {
-    /// <summary>The AZ where the EBS volume will exist.</summary>
+    /// <summary>Availability zone where the EBS volume will exist.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
@@ -201,11 +201,11 @@ public partial class V1beta1EBSVolumeSpecInitProvider
     [JsonPropertyName("finalSnapshot")]
     public bool? FinalSnapshot { get; set; }
 
-    /// <summary>The amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.</summary>
+    /// <summary>Amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</summary>
+    /// <summary>ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -221,11 +221,11 @@ public partial class V1beta1EBSVolumeSpecInitProvider
     [JsonPropertyName("multiAttachEnabled")]
     public bool? MultiAttachEnabled { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the Outpost.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the Outpost.</summary>
     [JsonPropertyName("outpostArn")]
     public string? OutpostArn { get; set; }
 
-    /// <summary>The size of the drive in GiBs.</summary>
+    /// <summary>Size of the drive in GiBs.</summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 
@@ -237,11 +237,11 @@ public partial class V1beta1EBSVolumeSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The throughput that the volume supports, in MiB/s. Only valid for type of gp3.</summary>
+    /// <summary>Throughput that the volume supports, in MiB/s. Only valid for type of gp3.</summary>
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 
-    /// <summary>The type of EBS volume. Can be standard, gp2, gp3, io1, io2, sc1 or st1 (Default: gp2).</summary>
+    /// <summary>Type of EBS volume. Can be standard, gp2, gp3, io1, io2, sc1 or st1 (Default: gp2).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -382,13 +382,17 @@ public partial class V1beta1EBSVolumeSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EBSVolumeStatusAtProvider
 {
-    /// <summary>The volume ARN (e.g., arn:aws:ec2:us-east-1:123456789012:volume/vol-59fcb34e).</summary>
+    /// <summary>Volume ARN (e.g., arn:aws:ec2:us-east-1:123456789012:volume/vol-59fcb34e).</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The AZ where the EBS volume will exist.</summary>
+    /// <summary>Availability zone where the EBS volume will exist.</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
+
+    /// <summary>Timestamp when volume creation was initiated.</summary>
+    [JsonPropertyName("createTime")]
+    public string? CreateTime { get; set; }
 
     /// <summary>If true, the disk will be encrypted.</summary>
     [JsonPropertyName("encrypted")]
@@ -398,15 +402,15 @@ public partial class V1beta1EBSVolumeStatusAtProvider
     [JsonPropertyName("finalSnapshot")]
     public bool? FinalSnapshot { get; set; }
 
-    /// <summary>The volume ID (e.g., vol-59fcb34e).</summary>
+    /// <summary>Volume ID (e.g., vol-59fcb34e).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.</summary>
+    /// <summary>Amount of IOPS to provision for the disk. Only valid for type of io1, io2 or gp3.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</summary>
+    /// <summary>ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -414,11 +418,15 @@ public partial class V1beta1EBSVolumeStatusAtProvider
     [JsonPropertyName("multiAttachEnabled")]
     public bool? MultiAttachEnabled { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the Outpost.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the Outpost.</summary>
     [JsonPropertyName("outpostArn")]
     public string? OutpostArn { get; set; }
 
-    /// <summary>The size of the drive in GiBs.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Size of the drive in GiBs.</summary>
     [JsonPropertyName("size")]
     public double? Size { get; set; }
 
@@ -434,11 +442,11 @@ public partial class V1beta1EBSVolumeStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The throughput that the volume supports, in MiB/s. Only valid for type of gp3.</summary>
+    /// <summary>Throughput that the volume supports, in MiB/s. Only valid for type of gp3.</summary>
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 
-    /// <summary>The type of EBS volume. Can be standard, gp2, gp3, io1, io2, sc1 or st1 (Default: gp2).</summary>
+    /// <summary>Type of EBS volume. Can be standard, gp2, gp3, io1, io2, sc1 or st1 (Default: gp2).</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

@@ -176,17 +176,13 @@ public partial class V1beta1EIPSpecForProvider
     [JsonPropertyName("publicIpv4Pool")]
     public string? PublicIpv4Pool { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Boolean if the EIP is in a VPC or not. Use domain instead. Defaults to true unless the region supports EC2-Classic.</summary>
-    [JsonPropertyName("vpc")]
-    public bool? Vpc { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -360,10 +356,6 @@ public partial class V1beta1EIPSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
-
-    /// <summary>Boolean if the EIP is in a VPC or not. Use domain instead. Defaults to true unless the region supports EC2-Classic.</summary>
-    [JsonPropertyName("vpc")]
-    public bool? Vpc { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -582,6 +574,10 @@ public partial class V1beta1EIPStatusAtProvider
     [JsonPropertyName("publicIpv4Pool")]
     public string? PublicIpv4Pool { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -589,10 +585,6 @@ public partial class V1beta1EIPStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
-
-    /// <summary>Boolean if the EIP is in a VPC or not. Use domain instead. Defaults to true unless the region supports EC2-Classic.</summary>
-    [JsonPropertyName("vpc")]
-    public bool? Vpc { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

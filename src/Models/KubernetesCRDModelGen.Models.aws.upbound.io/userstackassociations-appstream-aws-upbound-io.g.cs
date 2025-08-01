@@ -192,7 +192,7 @@ public partial class V1beta1UserStackAssociationSpecForProvider
     [JsonPropertyName("authenticationTypeSelector")]
     public V1beta1UserStackAssociationSpecForProviderAuthenticationTypeSelector? AuthenticationTypeSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -377,6 +377,10 @@ public partial class V1beta1UserStackAssociationStatusAtProvider
     /// <summary>Unique ID of the appstream User Stack association.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether a welcome email is sent to a user after the user is created in the user pool.</summary>
     [JsonPropertyName("sendEmailNotification")]

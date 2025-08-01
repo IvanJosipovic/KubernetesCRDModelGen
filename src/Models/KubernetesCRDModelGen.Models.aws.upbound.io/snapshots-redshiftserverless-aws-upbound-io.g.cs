@@ -80,7 +80,7 @@ public partial class V1beta1SnapshotSpecForProvider
     [JsonPropertyName("namespaceNameSelector")]
     public V1beta1SnapshotSpecForProviderNamespaceNameSelector? NamespaceNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -337,6 +337,10 @@ public partial class V1beta1SnapshotStatusAtProvider
     /// <summary>The owner Amazon Web Services; account of the snapshot.</summary>
     [JsonPropertyName("ownerAccount")]
     public string? OwnerAccount { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>How long to retain the created snapshot. Default value is -1.</summary>
     [JsonPropertyName("retentionPeriod")]

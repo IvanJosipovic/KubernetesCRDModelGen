@@ -76,7 +76,7 @@ public partial class V1beta1LoggingConfigurationSpecForProviderLoggingConfigurat
     [JsonPropertyName("logDestinationType")]
     public string? LogDestinationType { get; set; }
 
-    /// <summary>The type of log to send. Valid values: ALERT or FLOW. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.</summary>
+    /// <summary>The type of log to send. Valid values: ALERT or FLOW or TLS. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.</summary>
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
@@ -85,7 +85,7 @@ public partial class V1beta1LoggingConfigurationSpecForProviderLoggingConfigurat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingConfigurationSpecForProviderLoggingConfiguration
 {
-    /// <summary>Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for FLOW logs and one for ALERT logs.</summary>
+    /// <summary>Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only Three blocks can be specified; one for FLOW logs and one for ALERT logs and one for TLS logs.</summary>
     [JsonPropertyName("logDestinationConfig")]
     public IList<V1beta1LoggingConfigurationSpecForProviderLoggingConfigurationLogDestinationConfig>? LogDestinationConfig { get; set; }
 }
@@ -110,7 +110,7 @@ public partial class V1beta1LoggingConfigurationSpecForProvider
     [JsonPropertyName("loggingConfiguration")]
     public IList<V1beta1LoggingConfigurationSpecForProviderLoggingConfiguration>? LoggingConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -183,7 +183,7 @@ public partial class V1beta1LoggingConfigurationSpecInitProviderLoggingConfigura
     [JsonPropertyName("logDestinationType")]
     public string? LogDestinationType { get; set; }
 
-    /// <summary>The type of log to send. Valid values: ALERT or FLOW. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.</summary>
+    /// <summary>The type of log to send. Valid values: ALERT or FLOW or TLS. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.</summary>
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
@@ -192,7 +192,7 @@ public partial class V1beta1LoggingConfigurationSpecInitProviderLoggingConfigura
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingConfigurationSpecInitProviderLoggingConfiguration
 {
-    /// <summary>Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for FLOW logs and one for ALERT logs.</summary>
+    /// <summary>Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only Three blocks can be specified; one for FLOW logs and one for ALERT logs and one for TLS logs.</summary>
     [JsonPropertyName("logDestinationConfig")]
     public IList<V1beta1LoggingConfigurationSpecInitProviderLoggingConfigurationLogDestinationConfig>? LogDestinationConfig { get; set; }
 }
@@ -362,7 +362,7 @@ public partial class V1beta1LoggingConfigurationStatusAtProviderLoggingConfigura
     [JsonPropertyName("logDestinationType")]
     public string? LogDestinationType { get; set; }
 
-    /// <summary>The type of log to send. Valid values: ALERT or FLOW. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.</summary>
+    /// <summary>The type of log to send. Valid values: ALERT or FLOW or TLS. Alert logs report traffic that matches a StatefulRule with an action setting that sends a log message. Flow logs are standard network traffic flow logs.</summary>
     [JsonPropertyName("logType")]
     public string? LogType { get; set; }
 }
@@ -371,7 +371,7 @@ public partial class V1beta1LoggingConfigurationStatusAtProviderLoggingConfigura
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingConfigurationStatusAtProviderLoggingConfiguration
 {
-    /// <summary>Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only two blocks can be specified; one for FLOW logs and one for ALERT logs.</summary>
+    /// <summary>Set of configuration blocks describing the logging details for a firewall. See Log Destination Config below for details. At most, only Three blocks can be specified; one for FLOW logs and one for ALERT logs and one for TLS logs.</summary>
     [JsonPropertyName("logDestinationConfig")]
     public IList<V1beta1LoggingConfigurationStatusAtProviderLoggingConfigurationLogDestinationConfig>? LogDestinationConfig { get; set; }
 }
@@ -391,6 +391,10 @@ public partial class V1beta1LoggingConfigurationStatusAtProvider
     /// <summary>A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public IList<V1beta1LoggingConfigurationStatusAtProviderLoggingConfiguration>? LoggingConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

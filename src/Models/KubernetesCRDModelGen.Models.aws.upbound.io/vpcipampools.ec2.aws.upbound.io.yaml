@@ -216,7 +216,10 @@ spec:
                     description: Defines whether or not IPv6 pool space is publicly advertisable over the internet. This argument is required if address_family = "ipv6" and public_ip_source = "byoip", default is false. This option is not available for IPv4 pool space or if public_ip_source = "amazon". Setting this argument to true when it is not available may result in erroneous differences being reported.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceIpamPoolId:
                     description: The ID of the source IPAM pool. Use this argument to create a child pool within an existing pool.
@@ -836,6 +839,12 @@ spec:
                   publiclyAdvertisable:
                     description: Defines whether or not IPv6 pool space is publicly advertisable over the internet. This argument is required if address_family = "ipv6" and public_ip_source = "byoip", default is false. This option is not available for IPv4 pool space or if public_ip_source = "amazon". Setting this argument to true when it is not available may result in erroneous differences being reported.
                     type: boolean
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   sourceIpamPoolId:
                     description: The ID of the source IPAM pool. Use this argument to create a child pool within an existing pool.
                     type: string

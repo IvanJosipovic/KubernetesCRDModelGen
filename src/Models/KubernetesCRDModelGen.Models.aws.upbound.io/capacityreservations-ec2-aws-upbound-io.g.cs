@@ -56,7 +56,7 @@ public partial class V1beta1CapacityReservationSpecForProvider
     [JsonPropertyName("placementGroupArn")]
     public string? PlacementGroupArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -317,6 +317,10 @@ public partial class V1beta1CapacityReservationStatusAtProvider
     /// <summary>The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation.</summary>
     [JsonPropertyName("placementGroupArn")]
     public string? PlacementGroupArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

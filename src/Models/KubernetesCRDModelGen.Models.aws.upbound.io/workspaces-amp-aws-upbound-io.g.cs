@@ -97,7 +97,7 @@ public partial class V1beta1WorkspaceSpecForProvider
     [JsonPropertyName("loggingConfiguration")]
     public IList<V1beta1WorkspaceSpecForProviderLoggingConfiguration>? LoggingConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -368,6 +368,10 @@ public partial class V1beta1WorkspaceStatusAtProvider
     /// <summary>Prometheus endpoint available for this workspace.</summary>
     [JsonPropertyName("prometheusEndpoint")]
     public string? PrometheusEndpoint { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

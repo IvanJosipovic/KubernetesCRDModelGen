@@ -208,7 +208,7 @@ public partial class V1beta1APIMappingSpecForProvider
     [JsonPropertyName("domainNameSelector")]
     public V1beta1APIMappingSpecForProviderDomainNameSelector? DomainNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -589,6 +589,10 @@ public partial class V1beta1APIMappingStatusAtProvider
     /// <summary>API mapping identifier.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>API stage. Use the aws_apigatewayv2_stage resource to configure an API stage.</summary>
     [JsonPropertyName("stage")]

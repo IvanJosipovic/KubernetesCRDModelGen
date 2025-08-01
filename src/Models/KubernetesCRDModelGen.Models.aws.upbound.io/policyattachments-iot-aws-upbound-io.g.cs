@@ -136,7 +136,7 @@ public partial class V1beta1PolicyAttachmentSpecForProvider
     [JsonPropertyName("policySelector")]
     public V1beta1PolicyAttachmentSpecForProviderPolicySelector? PolicySelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1PolicyAttachmentStatusAtProvider
     /// <summary>The name of the policy to attach.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The identity to which the policy is attached.</summary>
     [JsonPropertyName("target")]

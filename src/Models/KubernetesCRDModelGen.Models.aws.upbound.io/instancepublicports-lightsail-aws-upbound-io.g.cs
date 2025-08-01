@@ -72,23 +72,23 @@ public partial class V1beta1InstancePublicPortsSpecForProviderPortInfo
     [JsonPropertyName("cidrListAliases")]
     public IList<string>? CidrListAliases { get; set; }
 
-    /// <summary>Set of CIDR blocks.</summary>
+    /// <summary>Set of IPv4 addresses or ranges of IPv4 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</summary>
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 
-    /// <summary>First port in a range of open ports on an instance.</summary>
+    /// <summary>First port in a range of open ports on an instance. See PortInfo for details.</summary>
     [JsonPropertyName("fromPort")]
     public double? FromPort { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Set of IPv6 addresses or ranges of IPv6 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</summary>
     [JsonPropertyName("ipv6Cidrs")]
     public IList<string>? Ipv6Cidrs { get; set; }
 
-    /// <summary>IP protocol name. Valid values are tcp, all, udp, and icmp.</summary>
+    /// <summary>IP protocol name. Valid values: tcp, all, udp, icmp, icmpv6. See PortInfo for details.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Last port in a range of open ports on an instance.</summary>
+    /// <summary>Last port in a range of open ports on an instance. See PortInfo for details.</summary>
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
@@ -97,7 +97,7 @@ public partial class V1beta1InstancePublicPortsSpecForProviderPortInfo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecForProvider
 {
-    /// <summary>Name of the Lightsail Instance.</summary>
+    /// <summary>Name of the instance for which to open ports.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -109,11 +109,11 @@ public partial class V1beta1InstancePublicPortsSpecForProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1InstancePublicPortsSpecForProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>Configuration block with port information. AWS closes all currently open ports that are not included in the port_info. Detailed below.</summary>
+    /// <summary>Descriptor of the ports to open for the specified instance. AWS closes all currently open ports that are not included in this argument. See port_info Block for details.</summary>
     [JsonPropertyName("portInfo")]
     public IList<V1beta1InstancePublicPortsSpecForProviderPortInfo>? PortInfo { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -182,23 +182,23 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderPortInfo
     [JsonPropertyName("cidrListAliases")]
     public IList<string>? CidrListAliases { get; set; }
 
-    /// <summary>Set of CIDR blocks.</summary>
+    /// <summary>Set of IPv4 addresses or ranges of IPv4 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</summary>
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 
-    /// <summary>First port in a range of open ports on an instance.</summary>
+    /// <summary>First port in a range of open ports on an instance. See PortInfo for details.</summary>
     [JsonPropertyName("fromPort")]
     public double? FromPort { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Set of IPv6 addresses or ranges of IPv6 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</summary>
     [JsonPropertyName("ipv6Cidrs")]
     public IList<string>? Ipv6Cidrs { get; set; }
 
-    /// <summary>IP protocol name. Valid values are tcp, all, udp, and icmp.</summary>
+    /// <summary>IP protocol name. Valid values: tcp, all, udp, icmp, icmpv6. See PortInfo for details.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Last port in a range of open ports on an instance.</summary>
+    /// <summary>Last port in a range of open ports on an instance. See PortInfo for details.</summary>
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
@@ -207,7 +207,7 @@ public partial class V1beta1InstancePublicPortsSpecInitProviderPortInfo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstancePublicPortsSpecInitProvider
 {
-    /// <summary>Name of the Lightsail Instance.</summary>
+    /// <summary>Name of the instance for which to open ports.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -219,7 +219,7 @@ public partial class V1beta1InstancePublicPortsSpecInitProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1InstancePublicPortsSpecInitProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>Configuration block with port information. AWS closes all currently open ports that are not included in the port_info. Detailed below.</summary>
+    /// <summary>Descriptor of the ports to open for the specified instance. AWS closes all currently open ports that are not included in this argument. See port_info Block for details.</summary>
     [JsonPropertyName("portInfo")]
     public IList<V1beta1InstancePublicPortsSpecInitProviderPortInfo>? PortInfo { get; set; }
 }
@@ -364,23 +364,23 @@ public partial class V1beta1InstancePublicPortsStatusAtProviderPortInfo
     [JsonPropertyName("cidrListAliases")]
     public IList<string>? CidrListAliases { get; set; }
 
-    /// <summary>Set of CIDR blocks.</summary>
+    /// <summary>Set of IPv4 addresses or ranges of IPv4 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</summary>
     [JsonPropertyName("cidrs")]
     public IList<string>? Cidrs { get; set; }
 
-    /// <summary>First port in a range of open ports on an instance.</summary>
+    /// <summary>First port in a range of open ports on an instance. See PortInfo for details.</summary>
     [JsonPropertyName("fromPort")]
     public double? FromPort { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Set of IPv6 addresses or ranges of IPv6 addresses (in CIDR notation) that are allowed to connect to an instance through the ports, and the protocol.</summary>
     [JsonPropertyName("ipv6Cidrs")]
     public IList<string>? Ipv6Cidrs { get; set; }
 
-    /// <summary>IP protocol name. Valid values are tcp, all, udp, and icmp.</summary>
+    /// <summary>IP protocol name. Valid values: tcp, all, udp, icmp, icmpv6. See PortInfo for details.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Last port in a range of open ports on an instance.</summary>
+    /// <summary>Last port in a range of open ports on an instance. See PortInfo for details.</summary>
     [JsonPropertyName("toPort")]
     public double? ToPort { get; set; }
 }
@@ -393,13 +393,17 @@ public partial class V1beta1InstancePublicPortsStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Name of the Lightsail Instance.</summary>
+    /// <summary>Name of the instance for which to open ports.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
-    /// <summary>Configuration block with port information. AWS closes all currently open ports that are not included in the port_info. Detailed below.</summary>
+    /// <summary>Descriptor of the ports to open for the specified instance. AWS closes all currently open ports that are not included in this argument. See port_info Block for details.</summary>
     [JsonPropertyName("portInfo")]
     public IList<V1beta1InstancePublicPortsStatusAtProviderPortInfo>? PortInfo { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -448,7 +452,7 @@ public partial class V1beta1InstancePublicPortsStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>InstancePublicPorts is the Schema for the InstancePublicPortss API. Provides an Lightsail Instance</summary>
+/// <summary>InstancePublicPorts is the Schema for the InstancePublicPortss API. Manages public ports for a Lightsail instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InstancePublicPorts : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1InstancePublicPortsSpec>, IStatus<V1beta1InstancePublicPortsStatus>
@@ -478,7 +482,7 @@ public partial class V1beta1InstancePublicPorts : IKubernetesObject<V1ObjectMeta
     public V1beta1InstancePublicPortsStatus? Status { get; set; }
 }
 
-/// <summary>InstancePublicPorts is the Schema for the InstancePublicPortss API. Provides an Lightsail Instance</summary>
+/// <summary>InstancePublicPorts is the Schema for the InstancePublicPortss API. Manages public ports for a Lightsail instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1InstancePublicPortsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstancePublicPorts>

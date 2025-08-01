@@ -141,15 +141,15 @@ public partial class V1beta1LocationS3SpecForProviderS3Config
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecForProvider
 {
-    /// <summary>A list of DataSync Agent ARNs with which this location will be associated.</summary>
+    /// <summary>(Amazon S3 on Outposts only) Amazon Resource Name (ARN) of the DataSync agent on the Outpost.</summary>
     [JsonPropertyName("agentArns")]
     public IList<string>? AgentArns { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of the S3 Bucket.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the S3 bucket, or the Amazon S3 access point if the S3 bucket is located on an AWS Outposts resource.</summary>
     [JsonPropertyName("s3BucketArn")]
     public string? S3BucketArn { get; set; }
 
@@ -165,7 +165,7 @@ public partial class V1beta1LocationS3SpecForProvider
     [JsonPropertyName("s3Config")]
     public IList<V1beta1LocationS3SpecForProviderS3Config>? S3Config { get; set; }
 
-    /// <summary>The Amazon S3 storage class that you want to store your files in when this location is used as a task destination. Valid values</summary>
+    /// <summary>Amazon S3 storage class that you want to store your files in when this location is used as a task destination. Valid values</summary>
     [JsonPropertyName("s3StorageClass")]
     public string? S3StorageClass { get; set; }
 
@@ -311,11 +311,11 @@ public partial class V1beta1LocationS3SpecInitProviderS3Config
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3SpecInitProvider
 {
-    /// <summary>A list of DataSync Agent ARNs with which this location will be associated.</summary>
+    /// <summary>(Amazon S3 on Outposts only) Amazon Resource Name (ARN) of the DataSync agent on the Outpost.</summary>
     [JsonPropertyName("agentArns")]
     public IList<string>? AgentArns { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of the S3 Bucket.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the S3 bucket, or the Amazon S3 access point if the S3 bucket is located on an AWS Outposts resource.</summary>
     [JsonPropertyName("s3BucketArn")]
     public string? S3BucketArn { get; set; }
 
@@ -331,7 +331,7 @@ public partial class V1beta1LocationS3SpecInitProvider
     [JsonPropertyName("s3Config")]
     public IList<V1beta1LocationS3SpecInitProviderS3Config>? S3Config { get; set; }
 
-    /// <summary>The Amazon S3 storage class that you want to store your files in when this location is used as a task destination. Valid values</summary>
+    /// <summary>Amazon S3 storage class that you want to store your files in when this location is used as a task destination. Valid values</summary>
     [JsonPropertyName("s3StorageClass")]
     public string? S3StorageClass { get; set; }
 
@@ -489,7 +489,7 @@ public partial class V1beta1LocationS3StatusAtProviderS3Config
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LocationS3StatusAtProvider
 {
-    /// <summary>A list of DataSync Agent ARNs with which this location will be associated.</summary>
+    /// <summary>(Amazon S3 on Outposts only) Amazon Resource Name (ARN) of the DataSync agent on the Outpost.</summary>
     [JsonPropertyName("agentArns")]
     public IList<string>? AgentArns { get; set; }
 
@@ -501,7 +501,11 @@ public partial class V1beta1LocationS3StatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) of the S3 Bucket.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the S3 bucket, or the Amazon S3 access point if the S3 bucket is located on an AWS Outposts resource.</summary>
     [JsonPropertyName("s3BucketArn")]
     public string? S3BucketArn { get; set; }
 
@@ -509,7 +513,7 @@ public partial class V1beta1LocationS3StatusAtProvider
     [JsonPropertyName("s3Config")]
     public IList<V1beta1LocationS3StatusAtProviderS3Config>? S3Config { get; set; }
 
-    /// <summary>The Amazon S3 storage class that you want to store your files in when this location is used as a task destination. Valid values</summary>
+    /// <summary>Amazon S3 storage class that you want to store your files in when this location is used as a task destination. Valid values</summary>
     [JsonPropertyName("s3StorageClass")]
     public string? S3StorageClass { get; set; }
 

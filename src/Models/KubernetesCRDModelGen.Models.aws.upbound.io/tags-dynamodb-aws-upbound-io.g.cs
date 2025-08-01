@@ -16,7 +16,7 @@ public partial class V1beta1TagSpecForProvider
     [JsonPropertyName("key")]
     public string Key { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -181,6 +181,10 @@ public partial class V1beta1TagStatusAtProvider
     /// <summary>Tag name.</summary>
     [JsonPropertyName("key")]
     public string? Key { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of the DynamoDB resource to tag.</summary>
     [JsonPropertyName("resourceArn")]

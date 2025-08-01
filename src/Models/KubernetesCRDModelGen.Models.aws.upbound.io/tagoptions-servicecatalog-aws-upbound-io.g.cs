@@ -20,7 +20,7 @@ public partial class V1beta1TagOptionSpecForProvider
     [JsonPropertyName("key")]
     public string? Key { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -197,6 +197,10 @@ public partial class V1beta1TagOptionStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("owner")]
     public string? Owner { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Tag option value.</summary>
     [JsonPropertyName("value")]

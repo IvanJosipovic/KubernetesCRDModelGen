@@ -77,7 +77,7 @@ public partial class V1beta1DeliveryChannelSpecForProviderSnapshotDeliveryProper
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryChannelSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -356,6 +356,10 @@ public partial class V1beta1DeliveryChannelStatusAtProvider
     /// <summary>The name of the delivery channel.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the S3 bucket used to store the configuration history.</summary>
     [JsonPropertyName("s3BucketName")]

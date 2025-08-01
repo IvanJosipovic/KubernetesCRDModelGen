@@ -61,11 +61,11 @@ public partial class V1beta1ProductSpecForProvider
     [JsonPropertyName("owner")]
     public string? Owner { get; set; }
 
-    /// <summary>Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.</summary>
+    /// <summary>Configuration block for provisioning artifact (i.e., version) parameters. See provisioning_artifact_parameters Block for details.</summary>
     [JsonPropertyName("provisioningArtifactParameters")]
     public IList<V1beta1ProductSpecForProviderProvisioningArtifactParameters>? ProvisioningArtifactParameters { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -143,7 +143,7 @@ public partial class V1beta1ProductSpecInitProvider
     [JsonPropertyName("owner")]
     public string? Owner { get; set; }
 
-    /// <summary>Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.</summary>
+    /// <summary>Configuration block for provisioning artifact (i.e., version) parameters. See provisioning_artifact_parameters Block for details.</summary>
     [JsonPropertyName("provisioningArtifactParameters")]
     public IList<V1beta1ProductSpecInitProviderProvisioningArtifactParameters>? ProvisioningArtifactParameters { get; set; }
 
@@ -369,9 +369,13 @@ public partial class V1beta1ProductStatusAtProvider
     [JsonPropertyName("owner")]
     public string? Owner { get; set; }
 
-    /// <summary>Configuration block for provisioning artifact (i.e., version) parameters. Detailed below.</summary>
+    /// <summary>Configuration block for provisioning artifact (i.e., version) parameters. See provisioning_artifact_parameters Block for details.</summary>
     [JsonPropertyName("provisioningArtifactParameters")]
     public IList<V1beta1ProductStatusAtProviderProvisioningArtifactParameters>? ProvisioningArtifactParameters { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Status of the product.</summary>
     [JsonPropertyName("status")]

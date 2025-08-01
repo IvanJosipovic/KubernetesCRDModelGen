@@ -133,6 +133,10 @@ public partial class V1beta1BranchSpecForProvider
     [JsonPropertyName("enablePullRequestPreview")]
     public bool? EnablePullRequestPreview { get; set; }
 
+    /// <summary>Enables skew protection for the branch.</summary>
+    [JsonPropertyName("enableSkewProtection")]
+    public bool? EnableSkewProtection { get; set; }
+
     /// <summary>Environment variables for the branch.</summary>
     [JsonPropertyName("environmentVariables")]
     public IDictionary<string, string>? EnvironmentVariables { get; set; }
@@ -145,7 +149,7 @@ public partial class V1beta1BranchSpecForProvider
     [JsonPropertyName("pullRequestEnvironmentName")]
     public string? PullRequestEnvironmentName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -218,6 +222,10 @@ public partial class V1beta1BranchSpecInitProvider
     /// <summary>Enables pull request previews for this branch.</summary>
     [JsonPropertyName("enablePullRequestPreview")]
     public bool? EnablePullRequestPreview { get; set; }
+
+    /// <summary>Enables skew protection for the branch.</summary>
+    [JsonPropertyName("enableSkewProtection")]
+    public bool? EnableSkewProtection { get; set; }
 
     /// <summary>Environment variables for the branch.</summary>
     [JsonPropertyName("environmentVariables")]
@@ -432,6 +440,10 @@ public partial class V1beta1BranchStatusAtProvider
     [JsonPropertyName("enablePullRequestPreview")]
     public bool? EnablePullRequestPreview { get; set; }
 
+    /// <summary>Enables skew protection for the branch.</summary>
+    [JsonPropertyName("enableSkewProtection")]
+    public bool? EnableSkewProtection { get; set; }
+
     /// <summary>Environment variables for the branch.</summary>
     [JsonPropertyName("environmentVariables")]
     public IDictionary<string, string>? EnvironmentVariables { get; set; }
@@ -447,6 +459,10 @@ public partial class V1beta1BranchStatusAtProvider
     /// <summary>Amplify environment name for the pull request.</summary>
     [JsonPropertyName("pullRequestEnvironmentName")]
     public string? PullRequestEnvironmentName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Source branch if the branch is a pull request branch.</summary>
     [JsonPropertyName("sourceBranch")]

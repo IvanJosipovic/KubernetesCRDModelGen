@@ -28,7 +28,7 @@ public partial class V1beta1GroupSpecForProvider
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -213,6 +213,10 @@ public partial class V1beta1GroupStatusAtProvider
     /// <summary>The namespace. Currently, you should set this to default.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

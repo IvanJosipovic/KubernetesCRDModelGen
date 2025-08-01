@@ -93,7 +93,7 @@ public partial class V1beta1TargetSpecForProvider
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -416,6 +416,10 @@ public partial class V1beta1TargetStatusAtProvider
     /// <summary>Min capacity of the scalable target.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Resource type and unique identifier string for the resource associated with the scaling policy. Documentation can be found in the ResourceId parameter at: AWS Application Auto Scaling API Reference</summary>
     [JsonPropertyName("resourceId")]

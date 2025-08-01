@@ -394,10 +394,6 @@ public partial class V1beta1BudgetActionSpecForProvider
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
 
-    /// <summary>The Region to run the SSM document. Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>A list of subscribers. See Subscriber.</summary>
     [JsonPropertyName("subscriber")]
     public IList<V1beta1BudgetActionSpecForProviderSubscriber>? Subscriber { get; set; }

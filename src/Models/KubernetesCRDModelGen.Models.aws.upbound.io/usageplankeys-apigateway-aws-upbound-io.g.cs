@@ -140,7 +140,7 @@ public partial class V1beta1UsagePlanKeySpecForProvider
     [JsonPropertyName("keyType")]
     public string? KeyType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -453,6 +453,10 @@ public partial class V1beta1UsagePlanKeyStatusAtProvider
     /// <summary>Name of a usage plan key.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Id of the usage plan resource representing to associate the key to.</summary>
     [JsonPropertyName("usagePlanId")]

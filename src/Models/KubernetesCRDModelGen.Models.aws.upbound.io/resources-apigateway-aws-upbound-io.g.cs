@@ -140,7 +140,7 @@ public partial class V1beta1ResourceSpecForProvider
     [JsonPropertyName("pathPart")]
     public string? PathPart { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -453,6 +453,10 @@ public partial class V1beta1ResourceStatusAtProvider
     /// <summary>Last path segment of this API resource.</summary>
     [JsonPropertyName("pathPart")]
     public string? PathPart { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the associated REST API</summary>
     [JsonPropertyName("restApiId")]

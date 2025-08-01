@@ -148,7 +148,7 @@ public partial class V1beta1VPCPeeringConnectionSpecForProvider
     [JsonPropertyName("peerVpcIdSelector")]
     public V1beta1VPCPeeringConnectionSpecForProviderPeerVpcIdSelector? PeerVpcIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -507,6 +507,10 @@ public partial class V1beta1VPCPeeringConnectionStatusAtProvider
     /// <summary>The ID of the target VPC with which you are creating the VPC Peering Connection.</summary>
     [JsonPropertyName("peerVpcId")]
     public string? PeerVpcId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A optional configuration block that allows for VPC Peering Connection options to be set for the VPC that requests the peering connection (a maximum of one).</summary>
     [JsonPropertyName("requester")]

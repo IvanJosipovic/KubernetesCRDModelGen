@@ -152,7 +152,7 @@ public partial class V1beta1ProxyTargetSpecForProvider
     [JsonPropertyName("dbProxyNameSelector")]
     public V1beta1ProxyTargetSpecForProviderDbProxyNameSelector? DbProxyNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -473,6 +473,10 @@ public partial class V1beta1ProxyTargetStatusAtProvider
     /// <summary>Identifier representing the DB Instance or DB Cluster target.</summary>
     [JsonPropertyName("rdsResourceId")]
     public string? RdsResourceId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) for the DB instance or DB cluster. Currently not returned by the RDS API.</summary>
     [JsonPropertyName("targetArn")]

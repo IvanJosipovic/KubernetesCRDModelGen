@@ -124,7 +124,7 @@ public partial class V1beta1MainRouteTableAssociationSpecForProviderVpcIdSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MainRouteTableAssociationSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1MainRouteTableAssociationStatusAtProvider
     /// <summary>Used internally, see Notes below</summary>
     [JsonPropertyName("originalRouteTableId")]
     public string? OriginalRouteTableId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the Route Table to set as the new main route table for the target VPC</summary>
     [JsonPropertyName("routeTableId")]

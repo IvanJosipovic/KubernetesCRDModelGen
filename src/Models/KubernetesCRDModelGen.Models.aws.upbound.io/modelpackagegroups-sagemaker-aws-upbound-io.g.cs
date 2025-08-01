@@ -16,7 +16,7 @@ public partial class V1beta1ModelPackageGroupSpecForProvider
     [JsonPropertyName("modelPackageGroupDescription")]
     public string? ModelPackageGroupDescription { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -186,6 +186,10 @@ public partial class V1beta1ModelPackageGroupStatusAtProvider
     [JsonPropertyName("modelPackageGroupDescription")]
     public string? ModelPackageGroupDescription { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
@@ -241,7 +245,7 @@ public partial class V1beta1ModelPackageGroupStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ModelPackageGroup is the Schema for the ModelPackageGroups API. Provides a SageMaker Model Package Group resource.</summary>
+/// <summary>ModelPackageGroup is the Schema for the ModelPackageGroups API. Provides a SageMaker AI Model Package Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ModelPackageGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ModelPackageGroupSpec>, IStatus<V1beta1ModelPackageGroupStatus>
@@ -271,7 +275,7 @@ public partial class V1beta1ModelPackageGroup : IKubernetesObject<V1ObjectMeta>,
     public V1beta1ModelPackageGroupStatus? Status { get; set; }
 }
 
-/// <summary>ModelPackageGroup is the Schema for the ModelPackageGroups API. Provides a SageMaker Model Package Group resource.</summary>
+/// <summary>ModelPackageGroup is the Schema for the ModelPackageGroups API. Provides a SageMaker AI Model Package Group resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ModelPackageGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ModelPackageGroup>

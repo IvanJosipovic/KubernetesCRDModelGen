@@ -238,11 +238,15 @@ public partial class V1beta1VPCEndpointSpecForProvider
     [JsonPropertyName("privateDnsEnabled")]
     public bool? PrivateDnsEnabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook).</summary>
+    /// <summary>The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
+    [JsonPropertyName("resourceConfigurationArn")]
+    public string? ResourceConfigurationArn { get; set; }
+
+    /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 
@@ -253,6 +257,10 @@ public partial class V1beta1VPCEndpointSpecForProvider
     /// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1VPCEndpointSpecForProviderServiceNameSelector? ServiceNameSelector { get; set; }
+
+    /// <summary>The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
+    [JsonPropertyName("serviceNetworkArn")]
+    public string? ServiceNetworkArn { get; set; }
 
     /// <summary>- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.</summary>
     [JsonPropertyName("serviceRegion")]
@@ -266,7 +274,7 @@ public partial class V1beta1VPCEndpointSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.</summary>
+    /// <summary>The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.</summary>
     [JsonPropertyName("vpcEndpointType")]
     public string? VpcEndpointType { get; set; }
 
@@ -513,7 +521,11 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     [JsonPropertyName("privateDnsEnabled")]
     public bool? PrivateDnsEnabled { get; set; }
 
-    /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook).</summary>
+    /// <summary>The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
+    [JsonPropertyName("resourceConfigurationArn")]
+    public string? ResourceConfigurationArn { get; set; }
+
+    /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
 
@@ -524,6 +536,10 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     /// <summary>Selector for a VPCEndpointService in ec2 to populate serviceName.</summary>
     [JsonPropertyName("serviceNameSelector")]
     public V1beta1VPCEndpointSpecInitProviderServiceNameSelector? ServiceNameSelector { get; set; }
+
+    /// <summary>The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
+    [JsonPropertyName("serviceNetworkArn")]
+    public string? ServiceNetworkArn { get; set; }
 
     /// <summary>- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.</summary>
     [JsonPropertyName("serviceRegion")]
@@ -537,7 +553,7 @@ public partial class V1beta1VPCEndpointSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.</summary>
+    /// <summary>The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.</summary>
     [JsonPropertyName("vpcEndpointType")]
     public string? VpcEndpointType { get; set; }
 
@@ -781,9 +797,17 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     [JsonPropertyName("privateDnsEnabled")]
     public bool? PrivateDnsEnabled { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Whether or not the VPC Endpoint is being managed by its service - true or false.</summary>
     [JsonPropertyName("requesterManaged")]
     public bool? RequesterManaged { get; set; }
+
+    /// <summary>The ARN of a Resource Configuration to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
+    [JsonPropertyName("resourceConfigurationArn")]
+    public string? ResourceConfigurationArn { get; set; }
 
     /// <summary>One or more route table IDs. Applicable for endpoints of type Gateway.</summary>
     [JsonPropertyName("routeTableIds")]
@@ -793,9 +817,13 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     [JsonPropertyName("securityGroupIds")]
     public IList<string>? SecurityGroupIds { get; set; }
 
-    /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook).</summary>
+    /// <summary>The service name. For AWS services the service name is usually in the form com.amazonaws.&lt;region&gt;.&lt;service&gt; (the SageMaker AI Notebook service is an exception to this rule, the service name is in the form aws.sagemaker.&lt;region&gt;.notebook). Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
     [JsonPropertyName("serviceName")]
     public string? ServiceName { get; set; }
+
+    /// <summary>The ARN of a Service Network to connect this VPC Endpoint to. Exactly one of resource_configuration_arn, service_name or service_network_arn is required.</summary>
+    [JsonPropertyName("serviceNetworkArn")]
+    public string? ServiceNetworkArn { get; set; }
 
     /// <summary>- The AWS region of the VPC Endpoint Service. If specified, the VPC endpoint will connect to the service in the provided region. Applicable for endpoints of type Interface.</summary>
     [JsonPropertyName("serviceRegion")]
@@ -821,7 +849,7 @@ public partial class V1beta1VPCEndpointStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The VPC endpoint type, Gateway, GatewayLoadBalancer, or Interface. Defaults to Gateway.</summary>
+    /// <summary>The VPC endpoint type, Gateway, GatewayLoadBalancer,Interface, Resource or ServiceNetwork. Defaults to Gateway.</summary>
     [JsonPropertyName("vpcEndpointType")]
     public string? VpcEndpointType { get; set; }
 

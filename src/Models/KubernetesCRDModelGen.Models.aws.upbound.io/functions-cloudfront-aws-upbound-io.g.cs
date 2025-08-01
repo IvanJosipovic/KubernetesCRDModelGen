@@ -45,10 +45,6 @@ public partial class V1beta1FunctionSpecForProvider
     [JsonPropertyName("publish")]
     public bool? Publish { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Identifier of the function's runtime. Valid values are cloudfront-js-1.0 and cloudfront-js-2.0.</summary>
     [JsonPropertyName("runtime")]
     public string? Runtime { get; set; }

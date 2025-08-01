@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.elbv2.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCognito
 {
-    /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.</summary>
+    /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. See below.</summary>
     [JsonPropertyName("authenticationRequestExtraParams")]
     public IDictionary<string, string>? AuthenticationRequestExtraParams { get; set; }
 
@@ -222,11 +222,11 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionForwardTargetG
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionForward
 {
-    /// <summary>Configuration block for target group stickiness for the rule. Detailed below.</summary>
+    /// <summary>Configuration block for target group stickiness for the rule. See below.</summary>
     [JsonPropertyName("stickiness")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionForwardStickiness>? Stickiness { get; set; }
 
-    /// <summary>Set of 1-5 target group blocks. Detailed below.</summary>
+    /// <summary>Set of 1-5 target group blocks. See below.</summary>
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionForwardTargetGroup>? TargetGroup { get; set; }
 }
@@ -320,11 +320,11 @@ public partial class V1beta1LBListenerSpecForProviderDefaultActionTargetGroupArn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultAction
 {
-    /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.</summary>
+    /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.</summary>
     [JsonPropertyName("authenticateCognito")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCognito>? AuthenticateCognito { get; set; }
 
-    /// <summary>Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. Detailed below.</summary>
+    /// <summary>Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. See below.</summary>
     [JsonPropertyName("authenticateOidc")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionAuthenticateOidc>? AuthenticateOidc { get; set; }
 
@@ -332,7 +332,7 @@ public partial class V1beta1LBListenerSpecForProviderDefaultAction
     [JsonPropertyName("fixedResponse")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionFixedResponse>? FixedResponse { get; set; }
 
-    /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. Cannot be specified with target_group_arn. Detailed below.</summary>
+    /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. See below.</summary>
     [JsonPropertyName("forward")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionForward>? Forward { get; set; }
 
@@ -340,15 +340,15 @@ public partial class V1beta1LBListenerSpecForProviderDefaultAction
     [JsonPropertyName("index")]
     public string? Index { get; set; }
 
-    /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
+    /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions. Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
-    /// <summary>Configuration block for creating a redirect action. Required if type is redirect. Detailed below.</summary>
+    /// <summary>Configuration block for creating a redirect action. Required if type is redirect. See below.</summary>
     [JsonPropertyName("redirect")]
     public IList<V1beta1LBListenerSpecForProviderDefaultActionRedirect>? Redirect { get; set; }
 
-    /// <summary>ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Cannot be specified with forward.</summary>
+    /// <summary>ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Can be specified with forward but ARNs must match.</summary>
     [JsonPropertyName("targetGroupArn")]
     public string? TargetGroupArn { get; set; }
 
@@ -433,7 +433,7 @@ public partial class V1beta1LBListenerSpecForProviderMutualAuthentication
     [JsonPropertyName("ignoreClientCertificateExpiry")]
     public bool? IgnoreClientCertificateExpiry { get; set; }
 
-    /// <summary>Valid values are off, verify and passthrough.</summary>
+    /// <summary>Valid values are off, passthrough, and verify.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
@@ -454,7 +454,7 @@ public partial class V1beta1LBListenerSpecForProvider
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 
-    /// <summary>Configuration block for default actions. Detailed below.</summary>
+    /// <summary>Configuration block for default actions. See below.</summary>
     [JsonPropertyName("defaultAction")]
     public IList<V1beta1LBListenerSpecForProviderDefaultAction>? DefaultAction { get; set; }
 
@@ -470,7 +470,7 @@ public partial class V1beta1LBListenerSpecForProvider
     [JsonPropertyName("loadBalancerArnSelector")]
     public V1beta1LBListenerSpecForProviderLoadBalancerArnSelector? LoadBalancerArnSelector { get; set; }
 
-    /// <summary>The mutual authentication configuration information. Detailed below.</summary>
+    /// <summary>The mutual authentication configuration information. See below.</summary>
     [JsonPropertyName("mutualAuthentication")]
     public IList<V1beta1LBListenerSpecForProviderMutualAuthentication>? MutualAuthentication { get; set; }
 
@@ -482,11 +482,87 @@ public partial class V1beta1LBListenerSpecForProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS.</summary>
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Issuer HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertIssuerHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertIssuerHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Leaf HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertLeafHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertLeafHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Serial-Number HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Subject HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertSubjectHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertSubjectHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Validity HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertValidityHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertValidityHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Tls-Cipher-Suite HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznTlsCipherSuiteHeaderName")]
+    public string? RoutingHttpRequestXAmznTlsCipherSuiteHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Tls-Version HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznTlsVersionHeaderName")]
+    public string? RoutingHttpRequestXAmznTlsVersionHeaderName { get; set; }
+
+    /// <summary>Specifies which headers the browser can expose to the requesting client. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid value is true.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowCredentialsHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowCredentialsHeaderValue { get; set; }
+
+    /// <summary>Specifies which headers can be used during the request. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are *, Accept, Accept-Language, Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma. Dependent on your use-case other headers can be exposed and then set as a value consult the Access-Control-Allow-Headers documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowHeadersHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowHeadersHeaderValue { get; set; }
+
+    /// <summary>Set which HTTP methods are allowed when accessing the server from a different origin. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are GET, HEAD, POST, DELETE, CONNECT, OPTIONS, TRACE or PATCH.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowMethodsHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowMethodsHeaderValue { get; set; }
+
+    /// <summary>Specifies which origins are allowed to access the server. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. A valid value is a URI, eg: https://example.com.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowOriginHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowOriginHeaderValue { get; set; }
+
+    /// <summary>Specifies whether the browser should include credentials such as cookies or authentication when making requests. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are *, Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, or Pragma. Dependent on your use-case other headers can be exposed, consult the Access-Control-Expose-Headers documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlExposeHeadersHeaderValue")]
+    public string? RoutingHttpResponseAccessControlExposeHeadersHeaderValue { get; set; }
+
+    /// <summary>Specifies how long the results of a preflight request can be cached, in seconds. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are between 0 and 86400. This value is browser specific, consult the Access-Control-Max-Age documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlMaxAgeHeaderValue")]
+    public string? RoutingHttpResponseAccessControlMaxAgeHeaderValue { get; set; }
+
+    /// <summary>Specifies restrictions enforced by the browser to help minimize the risk of certain types of security threats. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Values for this are extensive, and can be impactful when set, consult Content-Security-Policy documentation.</summary>
+    [JsonPropertyName("routingHttpResponseContentSecurityPolicyHeaderValue")]
+    public string? RoutingHttpResponseContentSecurityPolicyHeaderValue { get; set; }
+
+    /// <summary>Enables you to allow or remove the HTTP response server header. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are true or false.</summary>
+    [JsonPropertyName("routingHttpResponseServerEnabled")]
+    public bool? RoutingHttpResponseServerEnabled { get; set; }
+
+    /// <summary>Informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS. Default values are max-age=31536000; includeSubDomains; preload consult the Strict-Transport-Security documentation for further details.</summary>
+    [JsonPropertyName("routingHttpResponseStrictTransportSecurityHeaderValue")]
+    public string? RoutingHttpResponseStrictTransportSecurityHeaderValue { get; set; }
+
+    /// <summary>Indicates whether the MIME types advertised in the Content-Type headers should be followed and not be changed. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid value is nosniff.</summary>
+    [JsonPropertyName("routingHttpResponseXContentTypeOptionsHeaderValue")]
+    public string? RoutingHttpResponseXContentTypeOptionsHeaderValue { get; set; }
+
+    /// <summary>Indicates whether the browser is allowed to render a page in a frame, iframe, embed or object. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid values are DENY, SAMEORIGIN, or ALLOW-FROM https://example.com.</summary>
+    [JsonPropertyName("routingHttpResponseXFrameOptionsHeaderValue")]
+    public string? RoutingHttpResponseXFrameOptionsHeaderValue { get; set; }
+
+    /// <summary>Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS. Default is ELBSecurityPolicy-2016-08.</summary>
     [JsonPropertyName("sslPolicy")]
     public string? SslPolicy { get; set; }
 
@@ -503,7 +579,7 @@ public partial class V1beta1LBListenerSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateCognito
 {
-    /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.</summary>
+    /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. See below.</summary>
     [JsonPropertyName("authenticationRequestExtraParams")]
     public IDictionary<string, string>? AuthenticationRequestExtraParams { get; set; }
 
@@ -713,11 +789,11 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionForwardTarget
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultActionForward
 {
-    /// <summary>Configuration block for target group stickiness for the rule. Detailed below.</summary>
+    /// <summary>Configuration block for target group stickiness for the rule. See below.</summary>
     [JsonPropertyName("stickiness")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionForwardStickiness>? Stickiness { get; set; }
 
-    /// <summary>Set of 1-5 target group blocks. Detailed below.</summary>
+    /// <summary>Set of 1-5 target group blocks. See below.</summary>
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionForwardTargetGroup>? TargetGroup { get; set; }
 }
@@ -811,11 +887,11 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultActionTargetGroupAr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecInitProviderDefaultAction
 {
-    /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.</summary>
+    /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.</summary>
     [JsonPropertyName("authenticateCognito")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateCognito>? AuthenticateCognito { get; set; }
 
-    /// <summary>Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. Detailed below.</summary>
+    /// <summary>Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. See below.</summary>
     [JsonPropertyName("authenticateOidc")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionAuthenticateOidc>? AuthenticateOidc { get; set; }
 
@@ -823,7 +899,7 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultAction
     [JsonPropertyName("fixedResponse")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionFixedResponse>? FixedResponse { get; set; }
 
-    /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. Cannot be specified with target_group_arn. Detailed below.</summary>
+    /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. See below.</summary>
     [JsonPropertyName("forward")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionForward>? Forward { get; set; }
 
@@ -831,15 +907,15 @@ public partial class V1beta1LBListenerSpecInitProviderDefaultAction
     [JsonPropertyName("index")]
     public string? Index { get; set; }
 
-    /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
+    /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions. Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
-    /// <summary>Configuration block for creating a redirect action. Required if type is redirect. Detailed below.</summary>
+    /// <summary>Configuration block for creating a redirect action. Required if type is redirect. See below.</summary>
     [JsonPropertyName("redirect")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultActionRedirect>? Redirect { get; set; }
 
-    /// <summary>ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Cannot be specified with forward.</summary>
+    /// <summary>ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Can be specified with forward but ARNs must match.</summary>
     [JsonPropertyName("targetGroupArn")]
     public string? TargetGroupArn { get; set; }
 
@@ -924,7 +1000,7 @@ public partial class V1beta1LBListenerSpecInitProviderMutualAuthentication
     [JsonPropertyName("ignoreClientCertificateExpiry")]
     public bool? IgnoreClientCertificateExpiry { get; set; }
 
-    /// <summary>Valid values are off, verify and passthrough.</summary>
+    /// <summary>Valid values are off, passthrough, and verify.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
@@ -945,7 +1021,7 @@ public partial class V1beta1LBListenerSpecInitProvider
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 
-    /// <summary>Configuration block for default actions. Detailed below.</summary>
+    /// <summary>Configuration block for default actions. Detailed below. Configuration block for default actions. See below.</summary>
     [JsonPropertyName("defaultAction")]
     public IList<V1beta1LBListenerSpecInitProviderDefaultAction>? DefaultAction { get; set; }
 
@@ -961,7 +1037,7 @@ public partial class V1beta1LBListenerSpecInitProvider
     [JsonPropertyName("loadBalancerArnSelector")]
     public V1beta1LBListenerSpecInitProviderLoadBalancerArnSelector? LoadBalancerArnSelector { get; set; }
 
-    /// <summary>The mutual authentication configuration information. Detailed below.</summary>
+    /// <summary>The mutual authentication configuration information. See below.</summary>
     [JsonPropertyName("mutualAuthentication")]
     public IList<V1beta1LBListenerSpecInitProviderMutualAuthentication>? MutualAuthentication { get; set; }
 
@@ -973,7 +1049,83 @@ public partial class V1beta1LBListenerSpecInitProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS.</summary>
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Issuer HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertIssuerHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertIssuerHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Leaf HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertLeafHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertLeafHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Serial-Number HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Subject HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertSubjectHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertSubjectHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Validity HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertValidityHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertValidityHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Tls-Cipher-Suite HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznTlsCipherSuiteHeaderName")]
+    public string? RoutingHttpRequestXAmznTlsCipherSuiteHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Tls-Version HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznTlsVersionHeaderName")]
+    public string? RoutingHttpRequestXAmznTlsVersionHeaderName { get; set; }
+
+    /// <summary>Specifies which headers the browser can expose to the requesting client. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid value is true.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowCredentialsHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowCredentialsHeaderValue { get; set; }
+
+    /// <summary>Specifies which headers can be used during the request. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are *, Accept, Accept-Language, Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma. Dependent on your use-case other headers can be exposed and then set as a value consult the Access-Control-Allow-Headers documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowHeadersHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowHeadersHeaderValue { get; set; }
+
+    /// <summary>Set which HTTP methods are allowed when accessing the server from a different origin. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are GET, HEAD, POST, DELETE, CONNECT, OPTIONS, TRACE or PATCH.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowMethodsHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowMethodsHeaderValue { get; set; }
+
+    /// <summary>Specifies which origins are allowed to access the server. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. A valid value is a URI, eg: https://example.com.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowOriginHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowOriginHeaderValue { get; set; }
+
+    /// <summary>Specifies whether the browser should include credentials such as cookies or authentication when making requests. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are *, Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, or Pragma. Dependent on your use-case other headers can be exposed, consult the Access-Control-Expose-Headers documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlExposeHeadersHeaderValue")]
+    public string? RoutingHttpResponseAccessControlExposeHeadersHeaderValue { get; set; }
+
+    /// <summary>Specifies how long the results of a preflight request can be cached, in seconds. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are between 0 and 86400. This value is browser specific, consult the Access-Control-Max-Age documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlMaxAgeHeaderValue")]
+    public string? RoutingHttpResponseAccessControlMaxAgeHeaderValue { get; set; }
+
+    /// <summary>Specifies restrictions enforced by the browser to help minimize the risk of certain types of security threats. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Values for this are extensive, and can be impactful when set, consult Content-Security-Policy documentation.</summary>
+    [JsonPropertyName("routingHttpResponseContentSecurityPolicyHeaderValue")]
+    public string? RoutingHttpResponseContentSecurityPolicyHeaderValue { get; set; }
+
+    /// <summary>Enables you to allow or remove the HTTP response server header. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are true or false.</summary>
+    [JsonPropertyName("routingHttpResponseServerEnabled")]
+    public bool? RoutingHttpResponseServerEnabled { get; set; }
+
+    /// <summary>Informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS. Default values are max-age=31536000; includeSubDomains; preload consult the Strict-Transport-Security documentation for further details.</summary>
+    [JsonPropertyName("routingHttpResponseStrictTransportSecurityHeaderValue")]
+    public string? RoutingHttpResponseStrictTransportSecurityHeaderValue { get; set; }
+
+    /// <summary>Indicates whether the MIME types advertised in the Content-Type headers should be followed and not be changed. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid value is nosniff.</summary>
+    [JsonPropertyName("routingHttpResponseXContentTypeOptionsHeaderValue")]
+    public string? RoutingHttpResponseXContentTypeOptionsHeaderValue { get; set; }
+
+    /// <summary>Indicates whether the browser is allowed to render a page in a frame, iframe, embed or object. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid values are DENY, SAMEORIGIN, or ALLOW-FROM https://example.com.</summary>
+    [JsonPropertyName("routingHttpResponseXFrameOptionsHeaderValue")]
+    public string? RoutingHttpResponseXFrameOptionsHeaderValue { get; set; }
+
+    /// <summary>Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS. Default is ELBSecurityPolicy-2016-08.</summary>
     [JsonPropertyName("sslPolicy")]
     public string? SslPolicy { get; set; }
 
@@ -1122,7 +1274,7 @@ public partial class V1beta1LBListenerSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateCognito
 {
-    /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. Detailed below.</summary>
+    /// <summary>Query parameters to include in the redirect request to the authorization endpoint. Max: 10. See below.</summary>
     [JsonPropertyName("authenticationRequestExtraParams")]
     public IDictionary<string, string>? AuthenticationRequestExtraParams { get; set; }
 
@@ -1247,11 +1399,11 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionForwardTarget
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultActionForward
 {
-    /// <summary>Configuration block for target group stickiness for the rule. Detailed below.</summary>
+    /// <summary>Configuration block for target group stickiness for the rule. See below.</summary>
     [JsonPropertyName("stickiness")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionForwardStickiness>? Stickiness { get; set; }
 
-    /// <summary>Set of 1-5 target group blocks. Detailed below.</summary>
+    /// <summary>Set of 1-5 target group blocks. See below.</summary>
     [JsonPropertyName("targetGroup")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionForwardTargetGroup>? TargetGroup { get; set; }
 }
@@ -1289,11 +1441,11 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultActionRedirect
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerStatusAtProviderDefaultAction
 {
-    /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. Detailed below.</summary>
+    /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.</summary>
     [JsonPropertyName("authenticateCognito")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateCognito>? AuthenticateCognito { get; set; }
 
-    /// <summary>Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. Detailed below.</summary>
+    /// <summary>Configuration block for an identity provider that is compliant with OpenID Connect (OIDC). Specify only when type is authenticate-oidc. See below.</summary>
     [JsonPropertyName("authenticateOidc")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionAuthenticateOidc>? AuthenticateOidc { get; set; }
 
@@ -1301,7 +1453,7 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultAction
     [JsonPropertyName("fixedResponse")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionFixedResponse>? FixedResponse { get; set; }
 
-    /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. Cannot be specified with target_group_arn. Detailed below.</summary>
+    /// <summary>Configuration block for creating an action that distributes requests among one or more target groups. Specify only if type is forward. See below.</summary>
     [JsonPropertyName("forward")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionForward>? Forward { get; set; }
 
@@ -1309,15 +1461,15 @@ public partial class V1beta1LBListenerStatusAtProviderDefaultAction
     [JsonPropertyName("index")]
     public string? Index { get; set; }
 
-    /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
+    /// <summary>Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions. Order for the action. The action with the lowest value for order is performed first. Valid values are between 1 and 50000. Defaults to the position in the list of actions.</summary>
     [JsonPropertyName("order")]
     public double? Order { get; set; }
 
-    /// <summary>Configuration block for creating a redirect action. Required if type is redirect. Detailed below.</summary>
+    /// <summary>Configuration block for creating a redirect action. Required if type is redirect. See below.</summary>
     [JsonPropertyName("redirect")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultActionRedirect>? Redirect { get; set; }
 
-    /// <summary>ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Cannot be specified with forward.</summary>
+    /// <summary>ARN of the Target Group to which to route traffic. Specify only if type is forward and you want to route to a single target group. To route to one or more target groups, use a forward block instead. Can be specified with forward but ARNs must match.</summary>
     [JsonPropertyName("targetGroupArn")]
     public string? TargetGroupArn { get; set; }
 
@@ -1338,7 +1490,7 @@ public partial class V1beta1LBListenerStatusAtProviderMutualAuthentication
     [JsonPropertyName("ignoreClientCertificateExpiry")]
     public bool? IgnoreClientCertificateExpiry { get; set; }
 
-    /// <summary>Valid values are off, verify and passthrough.</summary>
+    /// <summary>Valid values are off, passthrough, and verify.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
@@ -1355,7 +1507,7 @@ public partial class V1beta1LBListenerStatusAtProvider
     [JsonPropertyName("alpnPolicy")]
     public string? AlpnPolicy { get; set; }
 
-    /// <summary>ARN of the listener (matches id).</summary>
+    /// <summary>ARN of the listener.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -1363,11 +1515,11 @@ public partial class V1beta1LBListenerStatusAtProvider
     [JsonPropertyName("certificateArn")]
     public string? CertificateArn { get; set; }
 
-    /// <summary>Configuration block for default actions. Detailed below.</summary>
+    /// <summary>Configuration block for default actions. Detailed below. Configuration block for default actions. See below.</summary>
     [JsonPropertyName("defaultAction")]
     public IList<V1beta1LBListenerStatusAtProviderDefaultAction>? DefaultAction { get; set; }
 
-    /// <summary>ARN of the listener (matches arn).</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1375,7 +1527,7 @@ public partial class V1beta1LBListenerStatusAtProvider
     [JsonPropertyName("loadBalancerArn")]
     public string? LoadBalancerArn { get; set; }
 
-    /// <summary>The mutual authentication configuration information. Detailed below.</summary>
+    /// <summary>The mutual authentication configuration information. See below.</summary>
     [JsonPropertyName("mutualAuthentication")]
     public IList<V1beta1LBListenerStatusAtProviderMutualAuthentication>? MutualAuthentication { get; set; }
 
@@ -1387,7 +1539,87 @@ public partial class V1beta1LBListenerStatusAtProvider
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Issuer HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertIssuerHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertIssuerHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Leaf HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertLeafHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertLeafHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Serial-Number HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertSerialNumberHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Subject HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertSubjectHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertSubjectHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Mtls-Clientcert-Validity HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznMtlsClientcertValidityHeaderName")]
+    public string? RoutingHttpRequestXAmznMtlsClientcertValidityHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Tls-Cipher-Suite HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznTlsCipherSuiteHeaderName")]
+    public string? RoutingHttpRequestXAmznTlsCipherSuiteHeaderName { get; set; }
+
+    /// <summary>Enables you to modify the header name of the X-Amzn-Tls-Version HTTP request header. Can only be set if protocol is HTTPS for Application Load Balancers.</summary>
+    [JsonPropertyName("routingHttpRequestXAmznTlsVersionHeaderName")]
+    public string? RoutingHttpRequestXAmznTlsVersionHeaderName { get; set; }
+
+    /// <summary>Specifies which headers the browser can expose to the requesting client. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid value is true.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowCredentialsHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowCredentialsHeaderValue { get; set; }
+
+    /// <summary>Specifies which headers can be used during the request. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are *, Accept, Accept-Language, Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, Pragma. Dependent on your use-case other headers can be exposed and then set as a value consult the Access-Control-Allow-Headers documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowHeadersHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowHeadersHeaderValue { get; set; }
+
+    /// <summary>Set which HTTP methods are allowed when accessing the server from a different origin. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are GET, HEAD, POST, DELETE, CONNECT, OPTIONS, TRACE or PATCH.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowMethodsHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowMethodsHeaderValue { get; set; }
+
+    /// <summary>Specifies which origins are allowed to access the server. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. A valid value is a URI, eg: https://example.com.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlAllowOriginHeaderValue")]
+    public string? RoutingHttpResponseAccessControlAllowOriginHeaderValue { get; set; }
+
+    /// <summary>Specifies whether the browser should include credentials such as cookies or authentication when making requests. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are *, Cache-Control, Content-Language, Content-Length, Content-Type, Expires, Last-Modified, or Pragma. Dependent on your use-case other headers can be exposed, consult the Access-Control-Expose-Headers documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlExposeHeadersHeaderValue")]
+    public string? RoutingHttpResponseAccessControlExposeHeadersHeaderValue { get; set; }
+
+    /// <summary>Specifies how long the results of a preflight request can be cached, in seconds. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are between 0 and 86400. This value is browser specific, consult the Access-Control-Max-Age documentation.</summary>
+    [JsonPropertyName("routingHttpResponseAccessControlMaxAgeHeaderValue")]
+    public string? RoutingHttpResponseAccessControlMaxAgeHeaderValue { get; set; }
+
+    /// <summary>Specifies restrictions enforced by the browser to help minimize the risk of certain types of security threats. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Values for this are extensive, and can be impactful when set, consult Content-Security-Policy documentation.</summary>
+    [JsonPropertyName("routingHttpResponseContentSecurityPolicyHeaderValue")]
+    public string? RoutingHttpResponseContentSecurityPolicyHeaderValue { get; set; }
+
+    /// <summary>Enables you to allow or remove the HTTP response server header. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. Valid values are true or false.</summary>
+    [JsonPropertyName("routingHttpResponseServerEnabled")]
+    public bool? RoutingHttpResponseServerEnabled { get; set; }
+
+    /// <summary>Informs browsers that the site should only be accessed using HTTPS, and that any future attempts to access it using HTTP should automatically be converted to HTTPS. Default values are max-age=31536000; includeSubDomains; preload consult the Strict-Transport-Security documentation for further details.</summary>
+    [JsonPropertyName("routingHttpResponseStrictTransportSecurityHeaderValue")]
+    public string? RoutingHttpResponseStrictTransportSecurityHeaderValue { get; set; }
+
+    /// <summary>Indicates whether the MIME types advertised in the Content-Type headers should be followed and not be changed. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid value is nosniff.</summary>
+    [JsonPropertyName("routingHttpResponseXContentTypeOptionsHeaderValue")]
+    public string? RoutingHttpResponseXContentTypeOptionsHeaderValue { get; set; }
+
+    /// <summary>Indicates whether the browser is allowed to render a page in a frame, iframe, embed or object. Can only be set if protocol is HTTP or HTTPS for Application Load Balancers. Not supported for Network Load Balancer, or with a Gateway Load Balancer. The only valid values are DENY, SAMEORIGIN, or ALLOW-FROM https://example.com.</summary>
+    [JsonPropertyName("routingHttpResponseXFrameOptionsHeaderValue")]
+    public string? RoutingHttpResponseXFrameOptionsHeaderValue { get; set; }
+
+    /// <summary>Name of the SSL Policy for the listener. Required if protocol is HTTPS or TLS. Default is ELBSecurityPolicy-2016-08.</summary>
     [JsonPropertyName("sslPolicy")]
     public string? SslPolicy { get; set; }
 

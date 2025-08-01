@@ -68,7 +68,7 @@ public partial class V1beta1AliasSpecForProviderFunctionNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AliasSpecForProviderRoutingConfig
 {
-    /// <summary>A map that defines the proportion of events that should be sent to different versions of a lambda function.</summary>
+    /// <summary>Map that defines the proportion of events that should be sent to different versions of a Lambda function.</summary>
     [JsonPropertyName("additionalVersionWeights")]
     public IDictionary<string, double>? AdditionalVersionWeights { get; set; }
 }
@@ -81,7 +81,7 @@ public partial class V1beta1AliasSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Lambda Function name or ARN.</summary>
+    /// <summary>Name or ARN of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -97,11 +97,11 @@ public partial class V1beta1AliasSpecForProvider
     [JsonPropertyName("functionVersion")]
     public string? FunctionVersion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The Lambda alias' route configuration settings. Fields documented below</summary>
+    /// <summary>Lambda alias' route configuration settings. See below.</summary>
     [JsonPropertyName("routingConfig")]
     public IList<V1beta1AliasSpecForProviderRoutingConfig>? RoutingConfig { get; set; }
 }
@@ -110,7 +110,7 @@ public partial class V1beta1AliasSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AliasSpecInitProviderRoutingConfig
 {
-    /// <summary>A map that defines the proportion of events that should be sent to different versions of a lambda function.</summary>
+    /// <summary>Map that defines the proportion of events that should be sent to different versions of a Lambda function.</summary>
     [JsonPropertyName("additionalVersionWeights")]
     public IDictionary<string, double>? AdditionalVersionWeights { get; set; }
 }
@@ -127,7 +127,7 @@ public partial class V1beta1AliasSpecInitProvider
     [JsonPropertyName("functionVersion")]
     public string? FunctionVersion { get; set; }
 
-    /// <summary>The Lambda alias' route configuration settings. Fields documented below</summary>
+    /// <summary>Lambda alias' route configuration settings. See below.</summary>
     [JsonPropertyName("routingConfig")]
     public IList<V1beta1AliasSpecInitProviderRoutingConfig>? RoutingConfig { get; set; }
 }
@@ -268,7 +268,7 @@ public partial class V1beta1AliasSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AliasStatusAtProviderRoutingConfig
 {
-    /// <summary>A map that defines the proportion of events that should be sent to different versions of a lambda function.</summary>
+    /// <summary>Map that defines the proportion of events that should be sent to different versions of a Lambda function.</summary>
     [JsonPropertyName("additionalVersionWeights")]
     public IDictionary<string, double>? AdditionalVersionWeights { get; set; }
 }
@@ -277,7 +277,7 @@ public partial class V1beta1AliasStatusAtProviderRoutingConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AliasStatusAtProvider
 {
-    /// <summary>The Amazon Resource Name (ARN) identifying your Lambda function alias.</summary>
+    /// <summary>ARN identifying your Lambda function alias.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -285,7 +285,7 @@ public partial class V1beta1AliasStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Lambda Function name or ARN.</summary>
+    /// <summary>Name or ARN of the Lambda function.</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -297,11 +297,15 @@ public partial class V1beta1AliasStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration's uri</summary>
+    /// <summary>ARN to be used for invoking Lambda Function from API Gateway - to be used in aws_api_gateway_integration's uri.</summary>
     [JsonPropertyName("invokeArn")]
     public string? InvokeArn { get; set; }
 
-    /// <summary>The Lambda alias' route configuration settings. Fields documented below</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Lambda alias' route configuration settings. See below.</summary>
     [JsonPropertyName("routingConfig")]
     public IList<V1beta1AliasStatusAtProviderRoutingConfig>? RoutingConfig { get; set; }
 }
@@ -352,7 +356,7 @@ public partial class V1beta1AliasStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Alias is the Schema for the Aliass API. Creates a Lambda function alias.</summary>
+/// <summary>Alias is the Schema for the Aliass API. Manages an AWS Lambda Alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Alias : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AliasSpec>, IStatus<V1beta1AliasStatus>
@@ -382,7 +386,7 @@ public partial class V1beta1Alias : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     public V1beta1AliasStatus? Status { get; set; }
 }
 
-/// <summary>Alias is the Schema for the Aliass API. Creates a Lambda function alias.</summary>
+/// <summary>Alias is the Schema for the Aliass API. Manages an AWS Lambda Alias.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1AliasList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Alias>

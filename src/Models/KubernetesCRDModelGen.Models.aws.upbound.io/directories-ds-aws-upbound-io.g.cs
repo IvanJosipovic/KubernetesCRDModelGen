@@ -351,7 +351,7 @@ public partial class V1beta1DirectorySpecForProvider
     [JsonPropertyName("passwordSecretRef")]
     public V1beta1DirectorySpecForProviderPasswordSecretRef? PasswordSecretRef { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -961,6 +961,10 @@ public partial class V1beta1DirectoryStatusAtProvider
     /// <summary>The fully qualified name for the directory, such as corp.example.com</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the security group created by the directory.</summary>
     [JsonPropertyName("securityGroupId")]

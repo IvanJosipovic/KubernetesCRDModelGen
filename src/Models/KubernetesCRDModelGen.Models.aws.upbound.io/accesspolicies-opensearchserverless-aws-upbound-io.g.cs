@@ -12,19 +12,19 @@ namespace KubernetesCRDModelGen.Models.opensearchserverless.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecForProvider
 {
-    /// <summary>Description of the policy. Typically used to store information about the permissions defined in the policy.</summary>
+    /// <summary>Description of the policy. Typically used to store information about the permissions defined in the policy. Description of the policy. Typically used to store information about the permissions defined in the policy.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>JSON policy document to use as the content for the new policy</summary>
+    /// <summary>JSON policy document to use as the content for the new policy JSON policy document to use as the content for the new policy.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Type of access policy. Must be data.</summary>
+    /// <summary>Type of access policy. Must be data. Type of access policy. Must be `data`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -33,15 +33,15 @@ public partial class V1beta1AccessPolicySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicySpecInitProvider
 {
-    /// <summary>Description of the policy. Typically used to store information about the permissions defined in the policy.</summary>
+    /// <summary>Description of the policy. Typically used to store information about the permissions defined in the policy. Description of the policy. Typically used to store information about the permissions defined in the policy.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>JSON policy document to use as the content for the new policy</summary>
+    /// <summary>JSON policy document to use as the content for the new policy JSON policy document to use as the content for the new policy.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Type of access policy. Must be data.</summary>
+    /// <summary>Type of access policy. Must be data. Type of access policy. Must be `data`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -182,7 +182,7 @@ public partial class V1beta1AccessPolicySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPolicyStatusAtProvider
 {
-    /// <summary>Description of the policy. Typically used to store information about the permissions defined in the policy.</summary>
+    /// <summary>Description of the policy. Typically used to store information about the permissions defined in the policy. Description of the policy. Typically used to store information about the permissions defined in the policy.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -190,15 +190,19 @@ public partial class V1beta1AccessPolicyStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>JSON policy document to use as the content for the new policy</summary>
+    /// <summary>JSON policy document to use as the content for the new policy JSON policy document to use as the content for the new policy.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Version of the policy.</summary>
+    /// <summary>Version of the policy. Version of the policy.</summary>
     [JsonPropertyName("policyVersion")]
     public string? PolicyVersion { get; set; }
 
-    /// <summary>Type of access policy. Must be data.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Type of access policy. Must be data. Type of access policy. Must be `data`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

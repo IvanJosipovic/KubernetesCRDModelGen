@@ -329,7 +329,7 @@ public partial class V1beta1TrailSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1TrailSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -349,7 +349,7 @@ public partial class V1beta1TrailSpecForProvider
     [JsonPropertyName("s3KeyPrefix")]
     public string? S3KeyPrefix { get; set; }
 
-    /// <summary>Name of the Amazon SNS topic defined for notification of log file delivery.</summary>
+    /// <summary>Name of the Amazon SNS topic defined for notification of log file delivery. Specify the SNS topic ARN if it resides in another region.</summary>
     [JsonPropertyName("snsTopicName")]
     public string? SnsTopicName { get; set; }
 
@@ -695,7 +695,7 @@ public partial class V1beta1TrailSpecInitProvider
     [JsonPropertyName("s3KeyPrefix")]
     public string? S3KeyPrefix { get; set; }
 
-    /// <summary>Name of the Amazon SNS topic defined for notification of log file delivery.</summary>
+    /// <summary>Name of the Amazon SNS topic defined for notification of log file delivery. Specify the SNS topic ARN if it resides in another region.</summary>
     [JsonPropertyName("snsTopicName")]
     public string? SnsTopicName { get; set; }
 
@@ -985,6 +985,10 @@ public partial class V1beta1TrailStatusAtProvider
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Name of the S3 bucket designated for publishing log files.</summary>
     [JsonPropertyName("s3BucketName")]
     public string? S3BucketName { get; set; }
@@ -993,7 +997,11 @@ public partial class V1beta1TrailStatusAtProvider
     [JsonPropertyName("s3KeyPrefix")]
     public string? S3KeyPrefix { get; set; }
 
-    /// <summary>Name of the Amazon SNS topic defined for notification of log file delivery.</summary>
+    /// <summary>ARN of the Amazon SNS topic that CloudTrail uses to send notifications when log files are delivered.</summary>
+    [JsonPropertyName("snsTopicArn")]
+    public string? SnsTopicArn { get; set; }
+
+    /// <summary>Name of the Amazon SNS topic defined for notification of log file delivery. Specify the SNS topic ARN if it resides in another region.</summary>
     [JsonPropertyName("snsTopicName")]
     public string? SnsTopicName { get; set; }
 

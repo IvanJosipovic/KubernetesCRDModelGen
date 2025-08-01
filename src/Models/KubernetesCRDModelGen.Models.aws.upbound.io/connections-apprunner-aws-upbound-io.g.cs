@@ -16,7 +16,7 @@ public partial class V1beta1ConnectionSpecForProvider
     [JsonPropertyName("providerType")]
     public string? ProviderType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -185,6 +185,10 @@ public partial class V1beta1ConnectionStatusAtProvider
     /// <summary>Source repository provider. Valid values: GITHUB.</summary>
     [JsonPropertyName("providerType")]
     public string? ProviderType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Current state of the App Runner connection. When the state is AVAILABLE, you can use the connection to create an aws_apprunner_service resource.</summary>
     [JsonPropertyName("status")]

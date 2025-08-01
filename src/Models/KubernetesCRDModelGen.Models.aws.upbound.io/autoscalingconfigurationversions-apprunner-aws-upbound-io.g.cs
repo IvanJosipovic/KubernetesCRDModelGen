@@ -28,7 +28,7 @@ public partial class V1beta1AutoScalingConfigurationVersionSpecForProvider
     [JsonPropertyName("minSize")]
     public double? MinSize { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -237,6 +237,10 @@ public partial class V1beta1AutoScalingConfigurationVersionStatusAtProvider
     /// <summary>Minimal number of instances that App Runner provisions for your service.</summary>
     [JsonPropertyName("minSize")]
     public double? MinSize { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Current state of the auto scaling configuration. An INACTIVE configuration revision has been deleted and can't be used. It is permanently removed some time after deletion.</summary>
     [JsonPropertyName("status")]

@@ -91,7 +91,10 @@ spec:
                     description: Name used to label and identify the VPC link.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -551,6 +554,12 @@ spec:
                     type: string
                   name:
                     description: Name used to label and identify the VPC link.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:

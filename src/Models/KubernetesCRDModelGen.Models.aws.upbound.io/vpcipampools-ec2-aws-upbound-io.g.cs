@@ -184,7 +184,7 @@ public partial class V1beta1VPCIpamPoolSpecForProvider
     [JsonPropertyName("publiclyAdvertisable")]
     public bool? PubliclyAdvertisable { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -601,6 +601,10 @@ public partial class V1beta1VPCIpamPoolStatusAtProvider
     /// <summary>Defines whether or not IPv6 pool space is publicly advertisable over the internet. This argument is required if address_family = "ipv6" and public_ip_source = "byoip", default is false. This option is not available for IPv4 pool space or if public_ip_source = "amazon". Setting this argument to true when it is not available may result in erroneous differences being reported.</summary>
     [JsonPropertyName("publiclyAdvertisable")]
     public bool? PubliclyAdvertisable { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the source IPAM pool. Use this argument to create a child pool within an existing pool.</summary>
     [JsonPropertyName("sourceIpamPoolId")]

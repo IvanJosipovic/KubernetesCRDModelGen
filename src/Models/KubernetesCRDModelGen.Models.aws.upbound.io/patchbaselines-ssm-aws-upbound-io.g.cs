@@ -112,7 +112,7 @@ public partial class V1beta1PatchBaselineSpecForProvider
     [JsonPropertyName("operatingSystem")]
     public string? OperatingSystem { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -501,6 +501,10 @@ public partial class V1beta1PatchBaselineStatusAtProvider
     /// <summary>Operating system the patch baseline applies to. Valid values are ALMA_LINUX, AMAZON_LINUX, AMAZON_LINUX_2, AMAZON_LINUX_2022, AMAZON_LINUX_2023, CENTOS, DEBIAN, MACOS, ORACLE_LINUX, RASPBIAN, REDHAT_ENTERPRISE_LINUX, ROCKY_LINUX, SUSE, UBUNTU, and WINDOWS. The default value is WINDOWS.</summary>
     [JsonPropertyName("operatingSystem")]
     public string? OperatingSystem { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of rejected patches.</summary>
     [JsonPropertyName("rejectedPatches")]

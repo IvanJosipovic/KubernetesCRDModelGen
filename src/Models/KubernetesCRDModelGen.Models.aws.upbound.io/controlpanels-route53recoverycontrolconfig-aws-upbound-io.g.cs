@@ -83,10 +83,6 @@ public partial class V1beta1ControlPanelSpecForProvider
     /// <summary>Name describing the control panel.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>

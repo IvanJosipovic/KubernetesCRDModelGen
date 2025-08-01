@@ -124,15 +124,15 @@ public partial class V1beta1PermissionSpecForProviderQualifierSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSpecForProvider
 {
-    /// <summary>The AWS Lambda action you want to allow in this statement. (e.g., lambda:InvokeFunction)</summary>
+    /// <summary>Lambda action to allow in this statement (e.g., lambda:InvokeFunction)</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>The Event Source Token to validate.  Used with Alexa Skills.</summary>
+    /// <summary>Event Source Token for Alexa Skills</summary>
     [JsonPropertyName("eventSourceToken")]
     public string? EventSourceToken { get; set; }
 
-    /// <summary>Name of the Lambda function whose resource policy you are updating</summary>
+    /// <summary>Name of the Lambda function</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -144,19 +144,19 @@ public partial class V1beta1PermissionSpecForProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1PermissionSpecForProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>Lambda Function URLs authentication type. Valid values are: AWS_IAM or NONE. Only supported for lambda:InvokeFunctionUrl action.</summary>
+    /// <summary>Lambda Function URL authentication type. Valid values: AWS_IAM or NONE. Only valid with lambda:InvokeFunctionUrl action</summary>
     [JsonPropertyName("functionUrlAuthType")]
     public string? FunctionUrlAuthType { get; set; }
 
-    /// <summary>The principal who is getting this permission e.g., s3.amazonaws.com, an AWS account ID, or AWS IAM principal, or AWS service principal such as events.amazonaws.com or sns.amazonaws.com.</summary>
+    /// <summary>AWS service or account that invokes the function (e.g., s3.amazonaws.com, sns.amazonaws.com, AWS account ID, or AWS IAM principal)</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.</summary>
+    /// <summary>AWS Organizations ID to grant permission to all accounts under this organization</summary>
     [JsonPropertyName("principalOrgId")]
     public string? PrincipalOrgId { get; set; }
 
-    /// <summary>Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., arn:aws:lambda:aws-region:acct-id:function:function-name:2</summary>
+    /// <summary>Lambda function version or alias name</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
@@ -168,23 +168,23 @@ public partial class V1beta1PermissionSpecForProvider
     [JsonPropertyName("qualifierSelector")]
     public V1beta1PermissionSpecForProviderQualifierSelector? QualifierSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>This parameter is used when allowing cross-account access, or for S3 and SES. The AWS account ID (without a hyphen) of the source owner.</summary>
+    /// <summary>AWS account ID of the source owner for cross-account access, S3, or SES</summary>
     [JsonPropertyName("sourceAccount")]
     public string? SourceAccount { get; set; }
 
-    /// <summary>When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to. Without this, any resource from principal will be granted permission – even if that resource is from another account. For S3, this should be the ARN of the S3 Bucket. For EventBridge events, this should be the ARN of the EventBridge Rule. For API Gateway, this should be the ARN of the API, as described here.</summary>
+    /// <summary>ARN of the source resource granting permission to invoke the Lambda function</summary>
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 
-    /// <summary>A unique statement identifier.</summary>
+    /// <summary>Statement identifier</summary>
     [JsonPropertyName("statementId")]
     public string? StatementId { get; set; }
 
-    /// <summary>A statement identifier prefix. Conflicts with statement_id.</summary>
+    /// <summary>Statement identifier prefix. Conflicts with statement_id</summary>
     [JsonPropertyName("statementIdPrefix")]
     public string? StatementIdPrefix { get; set; }
 }
@@ -305,15 +305,15 @@ public partial class V1beta1PermissionSpecInitProviderQualifierSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSpecInitProvider
 {
-    /// <summary>The AWS Lambda action you want to allow in this statement. (e.g., lambda:InvokeFunction)</summary>
+    /// <summary>Lambda action to allow in this statement (e.g., lambda:InvokeFunction)</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>The Event Source Token to validate.  Used with Alexa Skills.</summary>
+    /// <summary>Event Source Token for Alexa Skills</summary>
     [JsonPropertyName("eventSourceToken")]
     public string? EventSourceToken { get; set; }
 
-    /// <summary>Name of the Lambda function whose resource policy you are updating</summary>
+    /// <summary>Name of the Lambda function</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
@@ -325,19 +325,19 @@ public partial class V1beta1PermissionSpecInitProvider
     [JsonPropertyName("functionNameSelector")]
     public V1beta1PermissionSpecInitProviderFunctionNameSelector? FunctionNameSelector { get; set; }
 
-    /// <summary>Lambda Function URLs authentication type. Valid values are: AWS_IAM or NONE. Only supported for lambda:InvokeFunctionUrl action.</summary>
+    /// <summary>Lambda Function URL authentication type. Valid values: AWS_IAM or NONE. Only valid with lambda:InvokeFunctionUrl action</summary>
     [JsonPropertyName("functionUrlAuthType")]
     public string? FunctionUrlAuthType { get; set; }
 
-    /// <summary>The principal who is getting this permission e.g., s3.amazonaws.com, an AWS account ID, or AWS IAM principal, or AWS service principal such as events.amazonaws.com or sns.amazonaws.com.</summary>
+    /// <summary>AWS service or account that invokes the function (e.g., s3.amazonaws.com, sns.amazonaws.com, AWS account ID, or AWS IAM principal)</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.</summary>
+    /// <summary>AWS Organizations ID to grant permission to all accounts under this organization</summary>
     [JsonPropertyName("principalOrgId")]
     public string? PrincipalOrgId { get; set; }
 
-    /// <summary>Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., arn:aws:lambda:aws-region:acct-id:function:function-name:2</summary>
+    /// <summary>Lambda function version or alias name</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
@@ -349,19 +349,19 @@ public partial class V1beta1PermissionSpecInitProvider
     [JsonPropertyName("qualifierSelector")]
     public V1beta1PermissionSpecInitProviderQualifierSelector? QualifierSelector { get; set; }
 
-    /// <summary>This parameter is used when allowing cross-account access, or for S3 and SES. The AWS account ID (without a hyphen) of the source owner.</summary>
+    /// <summary>AWS account ID of the source owner for cross-account access, S3, or SES</summary>
     [JsonPropertyName("sourceAccount")]
     public string? SourceAccount { get; set; }
 
-    /// <summary>When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to. Without this, any resource from principal will be granted permission – even if that resource is from another account. For S3, this should be the ARN of the S3 Bucket. For EventBridge events, this should be the ARN of the EventBridge Rule. For API Gateway, this should be the ARN of the API, as described here.</summary>
+    /// <summary>ARN of the source resource granting permission to invoke the Lambda function</summary>
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 
-    /// <summary>A unique statement identifier.</summary>
+    /// <summary>Statement identifier</summary>
     [JsonPropertyName("statementId")]
     public string? StatementId { get; set; }
 
-    /// <summary>A statement identifier prefix. Conflicts with statement_id.</summary>
+    /// <summary>Statement identifier prefix. Conflicts with statement_id</summary>
     [JsonPropertyName("statementIdPrefix")]
     public string? StatementIdPrefix { get; set; }
 }
@@ -502,19 +502,19 @@ public partial class V1beta1PermissionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionStatusAtProvider
 {
-    /// <summary>The AWS Lambda action you want to allow in this statement. (e.g., lambda:InvokeFunction)</summary>
+    /// <summary>Lambda action to allow in this statement (e.g., lambda:InvokeFunction)</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>The Event Source Token to validate.  Used with Alexa Skills.</summary>
+    /// <summary>Event Source Token for Alexa Skills</summary>
     [JsonPropertyName("eventSourceToken")]
     public string? EventSourceToken { get; set; }
 
-    /// <summary>Name of the Lambda function whose resource policy you are updating</summary>
+    /// <summary>Name of the Lambda function</summary>
     [JsonPropertyName("functionName")]
     public string? FunctionName { get; set; }
 
-    /// <summary>Lambda Function URLs authentication type. Valid values are: AWS_IAM or NONE. Only supported for lambda:InvokeFunctionUrl action.</summary>
+    /// <summary>Lambda Function URL authentication type. Valid values: AWS_IAM or NONE. Only valid with lambda:InvokeFunctionUrl action</summary>
     [JsonPropertyName("functionUrlAuthType")]
     public string? FunctionUrlAuthType { get; set; }
 
@@ -522,31 +522,35 @@ public partial class V1beta1PermissionStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The principal who is getting this permission e.g., s3.amazonaws.com, an AWS account ID, or AWS IAM principal, or AWS service principal such as events.amazonaws.com or sns.amazonaws.com.</summary>
+    /// <summary>AWS service or account that invokes the function (e.g., s3.amazonaws.com, sns.amazonaws.com, AWS account ID, or AWS IAM principal)</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>The identifier for your organization in AWS Organizations. Use this to grant permissions to all the AWS accounts under this organization.</summary>
+    /// <summary>AWS Organizations ID to grant permission to all accounts under this organization</summary>
     [JsonPropertyName("principalOrgId")]
     public string? PrincipalOrgId { get; set; }
 
-    /// <summary>Query parameter to specify function version or alias name. The permission will then apply to the specific qualified ARN e.g., arn:aws:lambda:aws-region:acct-id:function:function-name:2</summary>
+    /// <summary>Lambda function version or alias name</summary>
     [JsonPropertyName("qualifier")]
     public string? Qualifier { get; set; }
 
-    /// <summary>This parameter is used when allowing cross-account access, or for S3 and SES. The AWS account ID (without a hyphen) of the source owner.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>AWS account ID of the source owner for cross-account access, S3, or SES</summary>
     [JsonPropertyName("sourceAccount")]
     public string? SourceAccount { get; set; }
 
-    /// <summary>When the principal is an AWS service, the ARN of the specific resource within that service to grant permission to. Without this, any resource from principal will be granted permission – even if that resource is from another account. For S3, this should be the ARN of the S3 Bucket. For EventBridge events, this should be the ARN of the EventBridge Rule. For API Gateway, this should be the ARN of the API, as described here.</summary>
+    /// <summary>ARN of the source resource granting permission to invoke the Lambda function</summary>
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
 
-    /// <summary>A unique statement identifier.</summary>
+    /// <summary>Statement identifier</summary>
     [JsonPropertyName("statementId")]
     public string? StatementId { get; set; }
 
-    /// <summary>A statement identifier prefix. Conflicts with statement_id.</summary>
+    /// <summary>Statement identifier prefix. Conflicts with statement_id</summary>
     [JsonPropertyName("statementIdPrefix")]
     public string? StatementIdPrefix { get; set; }
 }
@@ -597,7 +601,7 @@ public partial class V1beta1PermissionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Permission is the Schema for the Permissions API. Creates a Lambda function permission.</summary>
+/// <summary>Permission is the Schema for the Permissions API. Manages an AWS Lambda permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Permission : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PermissionSpec>, IStatus<V1beta1PermissionStatus>
@@ -627,7 +631,7 @@ public partial class V1beta1Permission : IKubernetesObject<V1ObjectMeta>, ISpec<
     public V1beta1PermissionStatus? Status { get; set; }
 }
 
-/// <summary>Permission is the Schema for the Permissions API. Creates a Lambda function permission.</summary>
+/// <summary>Permission is the Schema for the Permissions API. Manages an AWS Lambda permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1PermissionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Permission>

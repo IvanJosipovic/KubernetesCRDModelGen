@@ -148,7 +148,7 @@ public partial class V1beta1LBListenerCertificateSpecForProvider
     [JsonPropertyName("listenerArnSelector")]
     public V1beta1LBListenerCertificateSpecForProviderListenerArnSelector? ListenerArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -441,6 +441,10 @@ public partial class V1beta1LBListenerCertificateStatusAtProvider
     /// <summary>The ARN of the listener to which to attach the certificate.</summary>
     [JsonPropertyName("listenerArn")]
     public string? ListenerArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: App is the Schema for the Apps API. Provides a SageMaker App resource.
+        description: App is the Schema for the Apps API. Provides a SageMaker AI App resource.
         properties:
           apiVersion:
             description: >-
@@ -88,7 +88,7 @@ spec:
                     description: The name of the app.
                     type: string
                   appType:
-                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.
+                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.
                     type: string
                   domainId:
                     description: The domain ID.
@@ -180,23 +180,26 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceSpec:
-                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.
                     items:
                       properties:
                         instanceType:
-                          description: The instance type that the image version runs on. For valid values see SageMaker Instance Types.
+                          description: The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.
                           type: string
                         lifecycleConfigArn:
                           description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
                           type: string
                         sagemakerImageArn:
-                          description: The ARN of the SageMaker image that the image version belongs to.
+                          description: The ARN of the SageMaker AI image that the image version belongs to.
                           type: string
                         sagemakerImageVersionAlias:
-                          description: The SageMaker Image Version Alias.
+                          description: The SageMaker AI Image Version Alias.
                           type: string
                         sagemakerImageVersionArn:
                           description: The ARN of the image version created on the instance.
@@ -330,7 +333,7 @@ spec:
                     description: The name of the app.
                     type: string
                   appType:
-                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.
+                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.
                     type: string
                   domainId:
                     description: The domain ID.
@@ -422,20 +425,20 @@ spec:
                         type: object
                     type: object
                   resourceSpec:
-                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.
                     items:
                       properties:
                         instanceType:
-                          description: The instance type that the image version runs on. For valid values see SageMaker Instance Types.
+                          description: The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.
                           type: string
                         lifecycleConfigArn:
                           description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
                           type: string
                         sagemakerImageArn:
-                          description: The ARN of the SageMaker image that the image version belongs to.
+                          description: The ARN of the SageMaker AI image that the image version belongs to.
                           type: string
                         sagemakerImageVersionAlias:
-                          description: The SageMaker Image Version Alias.
+                          description: The SageMaker AI Image Version Alias.
                           type: string
                         sagemakerImageVersionArn:
                           description: The ARN of the image version created on the instance.
@@ -763,7 +766,7 @@ spec:
                     description: The name of the app.
                     type: string
                   appType:
-                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway and TensorBoard.
+                    description: The type of app. Valid values are JupyterServer, KernelGateway, RStudioServerPro, RSessionGateway, TensorBoard, CodeEditor, JupyterLab, DetailedProfiler, and Canvas.
                     type: string
                   arn:
                     description: The Amazon Resource Name (ARN) of the app.
@@ -774,21 +777,27 @@ spec:
                   id:
                     description: The Amazon Resource Name (ARN) of the app.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   resourceSpec:
-                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.
                     items:
                       properties:
                         instanceType:
-                          description: The instance type that the image version runs on. For valid values see SageMaker Instance Types.
+                          description: The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.
                           type: string
                         lifecycleConfigArn:
                           description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
                           type: string
                         sagemakerImageArn:
-                          description: The ARN of the SageMaker image that the image version belongs to.
+                          description: The ARN of the SageMaker AI image that the image version belongs to.
                           type: string
                         sagemakerImageVersionAlias:
-                          description: The SageMaker Image Version Alias.
+                          description: The SageMaker AI Image Version Alias.
                           type: string
                         sagemakerImageVersionArn:
                           description: The ARN of the image version created on the instance.
@@ -896,7 +905,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: App is the Schema for the Apps API. Provides a SageMaker App resource.
+        description: App is the Schema for the Apps API. Provides a SageMaker AI App resource.
         properties:
           apiVersion:
             description: >-
@@ -1043,22 +1052,25 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceSpec:
-                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.
                     properties:
                       instanceType:
-                        description: The instance type that the image version runs on. For valid values see SageMaker Instance Types.
+                        description: The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.
                         type: string
                       lifecycleConfigArn:
                         description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
                         type: string
                       sagemakerImageArn:
-                        description: The ARN of the SageMaker image that the image version belongs to.
+                        description: The ARN of the SageMaker AI image that the image version belongs to.
                         type: string
                       sagemakerImageVersionAlias:
-                        description: The SageMaker Image Version Alias.
+                        description: The SageMaker AI Image Version Alias.
                         type: string
                       sagemakerImageVersionArn:
                         description: The ARN of the image version created on the instance.
@@ -1283,19 +1295,19 @@ spec:
                         type: object
                     type: object
                   resourceSpec:
-                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.
                     properties:
                       instanceType:
-                        description: The instance type that the image version runs on. For valid values see SageMaker Instance Types.
+                        description: The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.
                         type: string
                       lifecycleConfigArn:
                         description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
                         type: string
                       sagemakerImageArn:
-                        description: The ARN of the SageMaker image that the image version belongs to.
+                        description: The ARN of the SageMaker AI image that the image version belongs to.
                         type: string
                       sagemakerImageVersionAlias:
-                        description: The SageMaker Image Version Alias.
+                        description: The SageMaker AI Image Version Alias.
                         type: string
                       sagemakerImageVersionArn:
                         description: The ARN of the image version created on the instance.
@@ -1633,20 +1645,26 @@ spec:
                   id:
                     description: The Amazon Resource Name (ARN) of the app.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   resourceSpec:
-                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance.See Resource Spec below.
+                    description: The instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.See Resource Spec below.
                     properties:
                       instanceType:
-                        description: The instance type that the image version runs on. For valid values see SageMaker Instance Types.
+                        description: The instance type that the image version runs on. For valid values see SageMaker AI Instance Types.
                         type: string
                       lifecycleConfigArn:
                         description: The Amazon Resource Name (ARN) of the Lifecycle Configuration attached to the Resource.
                         type: string
                       sagemakerImageArn:
-                        description: The ARN of the SageMaker image that the image version belongs to.
+                        description: The ARN of the SageMaker AI image that the image version belongs to.
                         type: string
                       sagemakerImageVersionAlias:
-                        description: The SageMaker Image Version Alias.
+                        description: The SageMaker AI Image Version Alias.
                         type: string
                       sagemakerImageVersionArn:
                         description: The ARN of the image version created on the instance.

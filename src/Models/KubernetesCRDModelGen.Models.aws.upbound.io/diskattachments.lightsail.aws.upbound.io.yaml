@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: DiskAttachment is the Schema for the DiskAttachments API. Attaches a Lightsail disk to a Lightsail Instance
+        description: DiskAttachment is the Schema for the DiskAttachments API. Manages the attachment of a Lightsail disk to an instance.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   diskName:
-                    description: The name of the Lightsail Disk.
+                    description: Name of the Lightsail disk.
                     type: string
                   diskNameRef:
                     description: Reference to a Disk in lightsail to populate diskName.
@@ -174,10 +174,10 @@ spec:
                         type: object
                     type: object
                   diskPath:
-                    description: The disk path to expose to the instance.
+                    description: Disk path to expose to the instance.
                     type: string
                   instanceName:
-                    description: The name of the Lightsail Instance to attach to.
+                    description: Name of the Lightsail instance to attach to.
                     type: string
                   instanceNameRef:
                     description: Reference to a Instance in lightsail to populate instanceName.
@@ -266,7 +266,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -294,7 +297,7 @@ spec:
                   autoscaler.
                 properties:
                   diskName:
-                    description: The name of the Lightsail Disk.
+                    description: Name of the Lightsail disk.
                     type: string
                   diskNameRef:
                     description: Reference to a Disk in lightsail to populate diskName.
@@ -383,10 +386,10 @@ spec:
                         type: object
                     type: object
                   diskPath:
-                    description: The disk path to expose to the instance.
+                    description: Disk path to expose to the instance.
                     type: string
                   instanceName:
-                    description: The name of the Lightsail Instance to attach to.
+                    description: Name of the Lightsail instance to attach to.
                     type: string
                   instanceNameRef:
                     description: Reference to a Instance in lightsail to populate instanceName.
@@ -692,16 +695,22 @@ spec:
               atProvider:
                 properties:
                   diskName:
-                    description: The name of the Lightsail Disk.
+                    description: Name of the Lightsail disk.
                     type: string
                   diskPath:
-                    description: The disk path to expose to the instance.
+                    description: Disk path to expose to the instance.
                     type: string
                   id:
-                    description: 'A combination of attributes to create a unique id: disk_name,instance_name'
+                    description: 'Combination of attributes to create a unique id: disk_name,instance_name.'
                     type: string
                   instanceName:
-                    description: The name of the Lightsail Instance to attach to.
+                    description: Name of the Lightsail instance to attach to.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

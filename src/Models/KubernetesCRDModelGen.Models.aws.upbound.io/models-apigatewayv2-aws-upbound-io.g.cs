@@ -92,7 +92,7 @@ public partial class V1beta1ModelSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -345,6 +345,10 @@ public partial class V1beta1ModelStatusAtProvider
     /// <summary>Name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Schema for the model. This should be a JSON schema draft 4 model. Must be less than or equal to 32768 characters in length.</summary>
     [JsonPropertyName("schema")]

@@ -660,7 +660,7 @@ public partial class V1beta1CrawlerSpecForProvider
     [JsonPropertyName("recrawlPolicy")]
     public IList<V1beta1CrawlerSpecForProviderRecrawlPolicy>? RecrawlPolicy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1805,6 +1805,10 @@ public partial class V1beta1CrawlerStatusAtProvider
     /// <summary>A policy that specifies whether to crawl the entire dataset again, or to crawl only folders that were added since the last crawler run.. See Recrawl Policy below.</summary>
     [JsonPropertyName("recrawlPolicy")]
     public IList<V1beta1CrawlerStatusAtProviderRecrawlPolicy>? RecrawlPolicy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The IAM role friendly name (including path without leading slash), or ARN of an IAM role, used by the crawler to access other resources.</summary>
     [JsonPropertyName("role")]

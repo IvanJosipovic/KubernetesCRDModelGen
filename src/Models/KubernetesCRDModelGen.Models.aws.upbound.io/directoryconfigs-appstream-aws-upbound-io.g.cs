@@ -50,7 +50,7 @@ public partial class V1beta1DirectoryConfigSpecForProvider
     [JsonPropertyName("organizationalUnitDistinguishedNames")]
     public IList<string>? OrganizationalUnitDistinguishedNames { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -266,6 +266,10 @@ public partial class V1beta1DirectoryConfigStatusAtProvider
     /// <summary>Distinguished names of the organizational units for computer accounts.</summary>
     [JsonPropertyName("organizationalUnitDistinguishedNames")]
     public IList<string>? OrganizationalUnitDistinguishedNames { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for the name of the directory and organizational unit (OU) to use to join the directory config to a Microsoft Active Directory domain. See service_account_credentials below.</summary>
     [JsonPropertyName("serviceAccountCredentials")]

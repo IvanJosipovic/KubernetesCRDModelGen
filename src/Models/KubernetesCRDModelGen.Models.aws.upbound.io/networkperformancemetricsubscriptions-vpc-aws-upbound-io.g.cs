@@ -20,7 +20,7 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionSpecForProvider
     [JsonPropertyName("metric")]
     public string? Metric { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -205,6 +205,10 @@ public partial class V1beta1NetworkPerformanceMetricSubscriptionStatusAtProvider
     /// <summary>The data aggregation time for the subscription.</summary>
     [JsonPropertyName("period")]
     public string? Period { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The source Region or Availability Zone that the metric subscription is enabled for. For example, us-east-1.</summary>
     [JsonPropertyName("source")]

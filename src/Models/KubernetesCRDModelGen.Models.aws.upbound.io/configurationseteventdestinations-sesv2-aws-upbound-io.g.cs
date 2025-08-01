@@ -85,7 +85,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEvent
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationCloudWatchDestination
 {
-    /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.</summary>
+    /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.</summary>
     [JsonPropertyName("dimensionConfiguration")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationCloudWatchDestinationDimensionConfiguration>? DimensionConfiguration { get; set; }
 }
@@ -390,7 +390,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEvent
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestination
 {
-    /// <summary>An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below</summary>
+    /// <summary>An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.</summary>
     [JsonPropertyName("cloudWatchDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationCloudWatchDestination>? CloudWatchDestination { get; set; }
 
@@ -402,7 +402,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEvent
     [JsonPropertyName("eventBridgeDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationEventBridgeDestination>? EventBridgeDestination { get; set; }
 
-    /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.</summary>
+    /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.</summary>
     [JsonPropertyName("kinesisFirehoseDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationKinesisFirehoseDestination>? KinesisFirehoseDestination { get; set; }
 
@@ -410,11 +410,11 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProviderEvent
     [JsonPropertyName("matchingEventTypes")]
     public IList<string>? MatchingEventTypes { get; set; }
 
-    /// <summary>An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.</summary>
+    /// <summary>An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.</summary>
     [JsonPropertyName("pinpointDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationPinpointDestination>? PinpointDestination { get; set; }
 
-    /// <summary>An object that defines an Amazon SNS destination for email events. See sns_destination below.</summary>
+    /// <summary>An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.</summary>
     [JsonPropertyName("snsDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestinationSnsDestination>? SnsDestination { get; set; }
 }
@@ -439,11 +439,11 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecForProvider
     [JsonPropertyName("eventDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecForProviderEventDestination>? EventDestination { get; set; }
 
-    /// <summary>An object that defines the event destination. See event_destination below.</summary>
+    /// <summary>An object that defines the event destination. See event_destination Block for details.</summary>
     [JsonPropertyName("eventDestinationName")]
     public string? EventDestinationName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -525,7 +525,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEven
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationCloudWatchDestination
 {
-    /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.</summary>
+    /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.</summary>
     [JsonPropertyName("dimensionConfiguration")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationCloudWatchDestinationDimensionConfiguration>? DimensionConfiguration { get; set; }
 }
@@ -830,7 +830,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEven
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestination
 {
-    /// <summary>An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below</summary>
+    /// <summary>An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.</summary>
     [JsonPropertyName("cloudWatchDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationCloudWatchDestination>? CloudWatchDestination { get; set; }
 
@@ -842,7 +842,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEven
     [JsonPropertyName("eventBridgeDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationEventBridgeDestination>? EventBridgeDestination { get; set; }
 
-    /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.</summary>
+    /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.</summary>
     [JsonPropertyName("kinesisFirehoseDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationKinesisFirehoseDestination>? KinesisFirehoseDestination { get; set; }
 
@@ -850,11 +850,11 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProviderEven
     [JsonPropertyName("matchingEventTypes")]
     public IList<string>? MatchingEventTypes { get; set; }
 
-    /// <summary>An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.</summary>
+    /// <summary>An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.</summary>
     [JsonPropertyName("pinpointDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationPinpointDestination>? PinpointDestination { get; set; }
 
-    /// <summary>An object that defines an Amazon SNS destination for email events. See sns_destination below.</summary>
+    /// <summary>An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.</summary>
     [JsonPropertyName("snsDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestinationSnsDestination>? SnsDestination { get; set; }
 }
@@ -879,7 +879,7 @@ public partial class V1beta1ConfigurationSetEventDestinationSpecInitProvider
     [JsonPropertyName("eventDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationSpecInitProviderEventDestination>? EventDestination { get; set; }
 
-    /// <summary>An object that defines the event destination. See event_destination below.</summary>
+    /// <summary>An object that defines the event destination. See event_destination Block for details.</summary>
     [JsonPropertyName("eventDestinationName")]
     public string? EventDestinationName { get; set; }
 }
@@ -1037,7 +1037,7 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEven
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationCloudWatchDestination
 {
-    /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.</summary>
+    /// <summary>An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.</summary>
     [JsonPropertyName("dimensionConfiguration")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationCloudWatchDestinationDimensionConfiguration>? DimensionConfiguration { get; set; }
 }
@@ -1086,7 +1086,7 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEven
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestination
 {
-    /// <summary>An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below</summary>
+    /// <summary>An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.</summary>
     [JsonPropertyName("cloudWatchDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationCloudWatchDestination>? CloudWatchDestination { get; set; }
 
@@ -1098,7 +1098,7 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEven
     [JsonPropertyName("eventBridgeDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationEventBridgeDestination>? EventBridgeDestination { get; set; }
 
-    /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.</summary>
+    /// <summary>An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.</summary>
     [JsonPropertyName("kinesisFirehoseDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationKinesisFirehoseDestination>? KinesisFirehoseDestination { get; set; }
 
@@ -1106,11 +1106,11 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProviderEven
     [JsonPropertyName("matchingEventTypes")]
     public IList<string>? MatchingEventTypes { get; set; }
 
-    /// <summary>An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.</summary>
+    /// <summary>An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.</summary>
     [JsonPropertyName("pinpointDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationPinpointDestination>? PinpointDestination { get; set; }
 
-    /// <summary>An object that defines an Amazon SNS destination for email events. See sns_destination below.</summary>
+    /// <summary>An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.</summary>
     [JsonPropertyName("snsDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestinationSnsDestination>? SnsDestination { get; set; }
 }
@@ -1127,13 +1127,17 @@ public partial class V1beta1ConfigurationSetEventDestinationStatusAtProvider
     [JsonPropertyName("eventDestination")]
     public IList<V1beta1ConfigurationSetEventDestinationStatusAtProviderEventDestination>? EventDestination { get; set; }
 
-    /// <summary>An object that defines the event destination. See event_destination below.</summary>
+    /// <summary>An object that defines the event destination. See event_destination Block for details.</summary>
     [JsonPropertyName("eventDestinationName")]
     public string? EventDestinationName { get; set; }
 
     /// <summary>A pipe-delimited string combining configuration_set_name and event_destination_name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

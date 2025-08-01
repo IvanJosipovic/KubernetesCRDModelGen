@@ -472,7 +472,7 @@ spec:
                                   type: object
                                 type: array
                               targetGroup:
-                                description: One or more target groups block.
+                                description: One or more target group blocks.
                                 items:
                                   properties:
                                     arn:
@@ -880,7 +880,10 @@ spec:
                     description: The priority for the rule between 1 and 50000. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
                     type: number
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -1303,7 +1306,7 @@ spec:
                                   type: object
                                 type: array
                               targetGroup:
-                                description: One or more target groups block.
+                                description: One or more target group blocks.
                                 items:
                                   properties:
                                     arn:
@@ -2048,7 +2051,7 @@ spec:
                                   type: object
                                 type: array
                               targetGroup:
-                                description: One or more target groups block.
+                                description: One or more target group blocks.
                                 items:
                                   properties:
                                     arn:
@@ -2203,6 +2206,12 @@ spec:
                   priority:
                     description: The priority for the rule between 1 and 50000. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -3123,7 +3132,10 @@ spec:
                     description: The priority for the rule between 1 and 50000. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
                     type: number
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -4402,6 +4414,12 @@ spec:
                   priority:
                     description: The priority for the rule between 1 and 50000. Leaving it unset will automatically set the rule with next available priority after currently existing highest rule. A listener can't have multiple rules with the same priority.
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   tags:
                     additionalProperties:
                       type: string

@@ -115,7 +115,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - analyzerName
@@ -419,6 +422,12 @@ spec:
                     type: array
                   id:
                     description: 'Resource ID in the format: analyzer_name/rule_name.'
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

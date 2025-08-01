@@ -129,47 +129,47 @@ public partial class V1beta1ApplicationSpecForProviderNetworkConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProvider
 {
-    /// <summary>–  The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.</summary>
+    /// <summary>The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.</summary>
     [JsonPropertyName("architecture")]
     public string? Architecture { get; set; }
 
-    /// <summary>–  The configuration for an application to automatically start on job submission.</summary>
+    /// <summary>The configuration for an application to automatically start on job submission.</summary>
     [JsonPropertyName("autoStartConfiguration")]
     public IList<V1beta1ApplicationSpecForProviderAutoStartConfiguration>? AutoStartConfiguration { get; set; }
 
-    /// <summary>–  The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
+    /// <summary>The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
     [JsonPropertyName("autoStopConfiguration")]
     public IList<V1beta1ApplicationSpecForProviderAutoStopConfiguration>? AutoStopConfiguration { get; set; }
 
-    /// <summary>–  The image configuration applied to all worker types.</summary>
+    /// <summary>The image configuration applied to all worker types.</summary>
     [JsonPropertyName("imageConfiguration")]
     public IList<V1beta1ApplicationSpecForProviderImageConfiguration>? ImageConfiguration { get; set; }
 
-    /// <summary>–  The capacity to initialize when the application is created.</summary>
+    /// <summary>The capacity to initialize when the application is created.</summary>
     [JsonPropertyName("initialCapacity")]
     public IList<V1beta1ApplicationSpecForProviderInitialCapacity>? InitialCapacity { get; set; }
 
-    /// <summary>–  Enables the interactive use cases to use when running an application.</summary>
+    /// <summary>Enables the interactive use cases to use when running an application.</summary>
     [JsonPropertyName("interactiveConfiguration")]
     public IList<V1beta1ApplicationSpecForProviderInteractiveConfiguration>? InteractiveConfiguration { get; set; }
 
-    /// <summary>–  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
+    /// <summary>The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
     [JsonPropertyName("maximumCapacity")]
     public IList<V1beta1ApplicationSpecForProviderMaximumCapacity>? MaximumCapacity { get; set; }
 
-    /// <summary>–  The name of the application.</summary>
+    /// <summary>The name of the application.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  The network configuration for customer VPC connectivity.</summary>
+    /// <summary>The network configuration for customer VPC connectivity.</summary>
     [JsonPropertyName("networkConfiguration")]
     public IList<V1beta1ApplicationSpecForProviderNetworkConfiguration>? NetworkConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  The EMR release version associated with the application.</summary>
+    /// <summary>The EMR release version associated with the application.</summary>
     [JsonPropertyName("releaseLabel")]
     public string? ReleaseLabel { get; set; }
 
@@ -177,7 +177,7 @@ public partial class V1beta1ApplicationSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  The type of application you want to start, such as spark or hive.</summary>
+    /// <summary>The type of application you want to start, such as spark or hive.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -303,43 +303,43 @@ public partial class V1beta1ApplicationSpecInitProviderNetworkConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecInitProvider
 {
-    /// <summary>–  The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.</summary>
+    /// <summary>The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.</summary>
     [JsonPropertyName("architecture")]
     public string? Architecture { get; set; }
 
-    /// <summary>–  The configuration for an application to automatically start on job submission.</summary>
+    /// <summary>The configuration for an application to automatically start on job submission.</summary>
     [JsonPropertyName("autoStartConfiguration")]
     public IList<V1beta1ApplicationSpecInitProviderAutoStartConfiguration>? AutoStartConfiguration { get; set; }
 
-    /// <summary>–  The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
+    /// <summary>The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
     [JsonPropertyName("autoStopConfiguration")]
     public IList<V1beta1ApplicationSpecInitProviderAutoStopConfiguration>? AutoStopConfiguration { get; set; }
 
-    /// <summary>–  The image configuration applied to all worker types.</summary>
+    /// <summary>The image configuration applied to all worker types.</summary>
     [JsonPropertyName("imageConfiguration")]
     public IList<V1beta1ApplicationSpecInitProviderImageConfiguration>? ImageConfiguration { get; set; }
 
-    /// <summary>–  The capacity to initialize when the application is created.</summary>
+    /// <summary>The capacity to initialize when the application is created.</summary>
     [JsonPropertyName("initialCapacity")]
     public IList<V1beta1ApplicationSpecInitProviderInitialCapacity>? InitialCapacity { get; set; }
 
-    /// <summary>–  Enables the interactive use cases to use when running an application.</summary>
+    /// <summary>Enables the interactive use cases to use when running an application.</summary>
     [JsonPropertyName("interactiveConfiguration")]
     public IList<V1beta1ApplicationSpecInitProviderInteractiveConfiguration>? InteractiveConfiguration { get; set; }
 
-    /// <summary>–  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
+    /// <summary>The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
     [JsonPropertyName("maximumCapacity")]
     public IList<V1beta1ApplicationSpecInitProviderMaximumCapacity>? MaximumCapacity { get; set; }
 
-    /// <summary>–  The name of the application.</summary>
+    /// <summary>The name of the application.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  The network configuration for customer VPC connectivity.</summary>
+    /// <summary>The network configuration for customer VPC connectivity.</summary>
     [JsonPropertyName("networkConfiguration")]
     public IList<V1beta1ApplicationSpecInitProviderNetworkConfiguration>? NetworkConfiguration { get; set; }
 
-    /// <summary>–  The EMR release version associated with the application.</summary>
+    /// <summary>The EMR release version associated with the application.</summary>
     [JsonPropertyName("releaseLabel")]
     public string? ReleaseLabel { get; set; }
 
@@ -347,7 +347,7 @@ public partial class V1beta1ApplicationSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  The type of application you want to start, such as spark or hive.</summary>
+    /// <summary>The type of application you want to start, such as spark or hive.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -605,7 +605,7 @@ public partial class V1beta1ApplicationStatusAtProviderNetworkConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationStatusAtProvider
 {
-    /// <summary>–  The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.</summary>
+    /// <summary>The CPU architecture of an application. Valid values are ARM64 or X86_64. Default value is X86_64.</summary>
     [JsonPropertyName("architecture")]
     public string? Architecture { get; set; }
 
@@ -613,11 +613,11 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  The configuration for an application to automatically start on job submission.</summary>
+    /// <summary>The configuration for an application to automatically start on job submission.</summary>
     [JsonPropertyName("autoStartConfiguration")]
     public IList<V1beta1ApplicationStatusAtProviderAutoStartConfiguration>? AutoStartConfiguration { get; set; }
 
-    /// <summary>–  The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
+    /// <summary>The configuration for an application to automatically stop after a certain amount of time being idle.</summary>
     [JsonPropertyName("autoStopConfiguration")]
     public IList<V1beta1ApplicationStatusAtProviderAutoStopConfiguration>? AutoStopConfiguration { get; set; }
 
@@ -625,31 +625,35 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  The image configuration applied to all worker types.</summary>
+    /// <summary>The image configuration applied to all worker types.</summary>
     [JsonPropertyName("imageConfiguration")]
     public IList<V1beta1ApplicationStatusAtProviderImageConfiguration>? ImageConfiguration { get; set; }
 
-    /// <summary>–  The capacity to initialize when the application is created.</summary>
+    /// <summary>The capacity to initialize when the application is created.</summary>
     [JsonPropertyName("initialCapacity")]
     public IList<V1beta1ApplicationStatusAtProviderInitialCapacity>? InitialCapacity { get; set; }
 
-    /// <summary>–  Enables the interactive use cases to use when running an application.</summary>
+    /// <summary>Enables the interactive use cases to use when running an application.</summary>
     [JsonPropertyName("interactiveConfiguration")]
     public IList<V1beta1ApplicationStatusAtProviderInteractiveConfiguration>? InteractiveConfiguration { get; set; }
 
-    /// <summary>–  The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
+    /// <summary>The maximum capacity to allocate when the application is created. This is cumulative across all workers at any given point in time, not just when an application is created. No new resources will be created once any one of the defined limits is hit.</summary>
     [JsonPropertyName("maximumCapacity")]
     public IList<V1beta1ApplicationStatusAtProviderMaximumCapacity>? MaximumCapacity { get; set; }
 
-    /// <summary>–  The name of the application.</summary>
+    /// <summary>The name of the application.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  The network configuration for customer VPC connectivity.</summary>
+    /// <summary>The network configuration for customer VPC connectivity.</summary>
     [JsonPropertyName("networkConfiguration")]
     public IList<V1beta1ApplicationStatusAtProviderNetworkConfiguration>? NetworkConfiguration { get; set; }
 
-    /// <summary>–  The EMR release version associated with the application.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The EMR release version associated with the application.</summary>
     [JsonPropertyName("releaseLabel")]
     public string? ReleaseLabel { get; set; }
 
@@ -661,7 +665,7 @@ public partial class V1beta1ApplicationStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>–  The type of application you want to start, such as spark or hive.</summary>
+    /// <summary>The type of application you want to start, such as spark or hive.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

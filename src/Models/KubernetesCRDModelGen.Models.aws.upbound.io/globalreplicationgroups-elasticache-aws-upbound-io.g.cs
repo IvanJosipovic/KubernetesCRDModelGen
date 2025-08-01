@@ -80,11 +80,11 @@ public partial class V1beta1GlobalReplicationGroupSpecForProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>created description for the global replication group.</summary>
+    /// <summary>A user-created description for the global replication group.</summary>
     [JsonPropertyName("globalReplicationGroupDescription")]
     public string? GlobalReplicationGroupDescription { get; set; }
 
-    /// <summary>–  The suffix name of a Global Datastore. If global_replication_group_id_suffix is changed, creates a new resource.</summary>
+    /// <summary>The suffix name of a Global Datastore. If global_replication_group_id_suffix is changed, creates a new resource.</summary>
     [JsonPropertyName("globalReplicationGroupIdSuffix")]
     public string? GlobalReplicationGroupIdSuffix { get; set; }
 
@@ -96,7 +96,7 @@ public partial class V1beta1GlobalReplicationGroupSpecForProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>–  The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If primary_replication_group_id is changed, creates a new resource.</summary>
+    /// <summary>The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If primary_replication_group_id is changed, creates a new resource.</summary>
     [JsonPropertyName("primaryReplicationGroupId")]
     public string? PrimaryReplicationGroupId { get; set; }
 
@@ -108,7 +108,7 @@ public partial class V1beta1GlobalReplicationGroupSpecForProvider
     [JsonPropertyName("primaryReplicationGroupIdSelector")]
     public V1beta1GlobalReplicationGroupSpecForProviderPrimaryReplicationGroupIdSelector? PrimaryReplicationGroupIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -185,11 +185,11 @@ public partial class V1beta1GlobalReplicationGroupSpecInitProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>created description for the global replication group.</summary>
+    /// <summary>A user-created description for the global replication group.</summary>
     [JsonPropertyName("globalReplicationGroupDescription")]
     public string? GlobalReplicationGroupDescription { get; set; }
 
-    /// <summary>–  The suffix name of a Global Datastore. If global_replication_group_id_suffix is changed, creates a new resource.</summary>
+    /// <summary>The suffix name of a Global Datastore. If global_replication_group_id_suffix is changed, creates a new resource.</summary>
     [JsonPropertyName("globalReplicationGroupIdSuffix")]
     public string? GlobalReplicationGroupIdSuffix { get; set; }
 
@@ -201,7 +201,7 @@ public partial class V1beta1GlobalReplicationGroupSpecInitProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>–  The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If primary_replication_group_id is changed, creates a new resource.</summary>
+    /// <summary>The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If primary_replication_group_id is changed, creates a new resource.</summary>
     [JsonPropertyName("primaryReplicationGroupId")]
     public string? PrimaryReplicationGroupId { get; set; }
 
@@ -403,7 +403,7 @@ public partial class V1beta1GlobalReplicationGroupStatusAtProvider
     [JsonPropertyName("globalNodeGroups")]
     public IList<V1beta1GlobalReplicationGroupStatusAtProviderGlobalNodeGroups>? GlobalNodeGroups { get; set; }
 
-    /// <summary>created description for the global replication group.</summary>
+    /// <summary>A user-created description for the global replication group.</summary>
     [JsonPropertyName("globalReplicationGroupDescription")]
     public string? GlobalReplicationGroupDescription { get; set; }
 
@@ -411,7 +411,7 @@ public partial class V1beta1GlobalReplicationGroupStatusAtProvider
     [JsonPropertyName("globalReplicationGroupId")]
     public string? GlobalReplicationGroupId { get; set; }
 
-    /// <summary>–  The suffix name of a Global Datastore. If global_replication_group_id_suffix is changed, creates a new resource.</summary>
+    /// <summary>The suffix name of a Global Datastore. If global_replication_group_id_suffix is changed, creates a new resource.</summary>
     [JsonPropertyName("globalReplicationGroupIdSuffix")]
     public string? GlobalReplicationGroupIdSuffix { get; set; }
 
@@ -427,9 +427,13 @@ public partial class V1beta1GlobalReplicationGroupStatusAtProvider
     [JsonPropertyName("parameterGroupName")]
     public string? ParameterGroupName { get; set; }
 
-    /// <summary>–  The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If primary_replication_group_id is changed, creates a new resource.</summary>
+    /// <summary>The ID of the primary cluster that accepts writes and will replicate updates to the secondary cluster. If primary_replication_group_id is changed, creates a new resource.</summary>
     [JsonPropertyName("primaryReplicationGroupId")]
     public string? PrimaryReplicationGroupId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A flag that indicates whether the encryption in transit is enabled.</summary>
     [JsonPropertyName("transitEncryptionEnabled")]

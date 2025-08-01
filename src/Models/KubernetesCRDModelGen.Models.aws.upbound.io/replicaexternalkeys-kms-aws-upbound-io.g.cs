@@ -121,7 +121,7 @@ public partial class V1beta1ReplicaExternalKeySpecForProvider
     [JsonPropertyName("primaryKeyArnSelector")]
     public V1beta1ReplicaExternalKeySpecForProviderPrimaryKeyArnSelector? PrimaryKeyArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -439,6 +439,10 @@ public partial class V1beta1ReplicaExternalKeyStatusAtProvider
     /// <summary>The ARN of the multi-Region primary key to replicate. The primary key must be in a different AWS Region of the same AWS Partition. You can create only one replica of a given primary key in each AWS Region.</summary>
     [JsonPropertyName("primaryKeyArn")]
     public string? PrimaryKeyArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

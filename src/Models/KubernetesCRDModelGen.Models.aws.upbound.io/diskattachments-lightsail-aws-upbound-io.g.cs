@@ -124,7 +124,7 @@ public partial class V1beta1DiskAttachmentSpecForProviderInstanceNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecForProvider
 {
-    /// <summary>The name of the Lightsail Disk.</summary>
+    /// <summary>Name of the Lightsail disk.</summary>
     [JsonPropertyName("diskName")]
     public string? DiskName { get; set; }
 
@@ -136,11 +136,11 @@ public partial class V1beta1DiskAttachmentSpecForProvider
     [JsonPropertyName("diskNameSelector")]
     public V1beta1DiskAttachmentSpecForProviderDiskNameSelector? DiskNameSelector { get; set; }
 
-    /// <summary>The disk path to expose to the instance.</summary>
+    /// <summary>Disk path to expose to the instance.</summary>
     [JsonPropertyName("diskPath")]
     public string? DiskPath { get; set; }
 
-    /// <summary>The name of the Lightsail Instance to attach to.</summary>
+    /// <summary>Name of the Lightsail instance to attach to.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -152,7 +152,7 @@ public partial class V1beta1DiskAttachmentSpecForProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1DiskAttachmentSpecForProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -273,7 +273,7 @@ public partial class V1beta1DiskAttachmentSpecInitProviderInstanceNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentSpecInitProvider
 {
-    /// <summary>The name of the Lightsail Disk.</summary>
+    /// <summary>Name of the Lightsail disk.</summary>
     [JsonPropertyName("diskName")]
     public string? DiskName { get; set; }
 
@@ -285,11 +285,11 @@ public partial class V1beta1DiskAttachmentSpecInitProvider
     [JsonPropertyName("diskNameSelector")]
     public V1beta1DiskAttachmentSpecInitProviderDiskNameSelector? DiskNameSelector { get; set; }
 
-    /// <summary>The disk path to expose to the instance.</summary>
+    /// <summary>Disk path to expose to the instance.</summary>
     [JsonPropertyName("diskPath")]
     public string? DiskPath { get; set; }
 
-    /// <summary>The name of the Lightsail Instance to attach to.</summary>
+    /// <summary>Name of the Lightsail instance to attach to.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -438,21 +438,25 @@ public partial class V1beta1DiskAttachmentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskAttachmentStatusAtProvider
 {
-    /// <summary>The name of the Lightsail Disk.</summary>
+    /// <summary>Name of the Lightsail disk.</summary>
     [JsonPropertyName("diskName")]
     public string? DiskName { get; set; }
 
-    /// <summary>The disk path to expose to the instance.</summary>
+    /// <summary>Disk path to expose to the instance.</summary>
     [JsonPropertyName("diskPath")]
     public string? DiskPath { get; set; }
 
-    /// <summary>A combination of attributes to create a unique id: disk_name,instance_name</summary>
+    /// <summary>Combination of attributes to create a unique id: disk_name,instance_name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name of the Lightsail Instance to attach to.</summary>
+    /// <summary>Name of the Lightsail instance to attach to.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -501,7 +505,7 @@ public partial class V1beta1DiskAttachmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>DiskAttachment is the Schema for the DiskAttachments API. Attaches a Lightsail disk to a Lightsail Instance</summary>
+/// <summary>DiskAttachment is the Schema for the DiskAttachments API. Manages the attachment of a Lightsail disk to an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DiskAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DiskAttachmentSpec>, IStatus<V1beta1DiskAttachmentStatus>
@@ -531,7 +535,7 @@ public partial class V1beta1DiskAttachment : IKubernetesObject<V1ObjectMeta>, IS
     public V1beta1DiskAttachmentStatus? Status { get; set; }
 }
 
-/// <summary>DiskAttachment is the Schema for the DiskAttachments API. Attaches a Lightsail disk to a Lightsail Instance</summary>
+/// <summary>DiskAttachment is the Schema for the DiskAttachments API. Manages the attachment of a Lightsail disk to an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DiskAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DiskAttachment>

@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Link is the Schema for the Links API. Creates a link for a site.
+        description: Link is the Schema for the Links API. Manages a Network Manager link.
         properties:
           apiVersion:
             description: >-
@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   bandwidth:
-                    description: The upload speed and download speed in Mbps. Documented below.
+                    description: Upload speed and download speed in Mbps. See below.
                     items:
                       properties:
                         downloadSpeed:
@@ -97,10 +97,10 @@ spec:
                       type: object
                     type: array
                   description:
-                    description: A description of the link.
+                    description: Description of the link.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -189,13 +189,10 @@ spec:
                         type: object
                     type: object
                   providerName:
-                    description: The provider of the link.
-                    type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: Provider of the link.
                     type: string
                   siteId:
-                    description: The ID of the site.
+                    description: ID of the site.
                     type: string
                   siteIdRef:
                     description: Reference to a Site in networkmanager to populate siteId.
@@ -290,10 +287,8 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of the link.
+                    description: Type of the link.
                     type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -318,7 +313,7 @@ spec:
                   autoscaler.
                 properties:
                   bandwidth:
-                    description: The upload speed and download speed in Mbps. Documented below.
+                    description: Upload speed and download speed in Mbps. See below.
                     items:
                       properties:
                         downloadSpeed:
@@ -330,10 +325,10 @@ spec:
                       type: object
                     type: array
                   description:
-                    description: A description of the link.
+                    description: Description of the link.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -422,10 +417,10 @@ spec:
                         type: object
                     type: object
                   providerName:
-                    description: The provider of the link.
+                    description: Provider of the link.
                     type: string
                   siteId:
-                    description: The ID of the site.
+                    description: ID of the site.
                     type: string
                   siteIdRef:
                     description: Reference to a Site in networkmanager to populate siteId.
@@ -520,7 +515,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of the link.
+                    description: Type of the link.
                     type: string
                 type: object
               managementPolicies:
@@ -740,10 +735,10 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: Link Amazon Resource Name (ARN).
+                    description: Link ARN.
                     type: string
                   bandwidth:
-                    description: The upload speed and download speed in Mbps. Documented below.
+                    description: Upload speed and download speed in Mbps. See below.
                     items:
                       properties:
                         downloadSpeed:
@@ -755,18 +750,18 @@ spec:
                       type: object
                     type: array
                   description:
-                    description: A description of the link.
+                    description: Description of the link.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   id:
                     type: string
                   providerName:
-                    description: The provider of the link.
+                    description: Provider of the link.
                     type: string
                   siteId:
-                    description: The ID of the site.
+                    description: ID of the site.
                     type: string
                   tags:
                     additionalProperties:
@@ -777,11 +772,11 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of the link.
+                    description: Type of the link.
                     type: string
                 type: object
               conditions:
@@ -866,7 +861,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: Link is the Schema for the Links API. Creates a link for a site.
+        description: Link is the Schema for the Links API. Manages a Network Manager link.
         properties:
           apiVersion:
             description: >-
@@ -918,7 +913,7 @@ spec:
               forProvider:
                 properties:
                   bandwidth:
-                    description: The upload speed and download speed in Mbps. Documented below.
+                    description: Upload speed and download speed in Mbps. See below.
                     properties:
                       downloadSpeed:
                         description: Download speed in Mbps.
@@ -928,10 +923,10 @@ spec:
                         type: number
                     type: object
                   description:
-                    description: A description of the link.
+                    description: Description of the link.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -1020,13 +1015,10 @@ spec:
                         type: object
                     type: object
                   providerName:
-                    description: The provider of the link.
-                    type: string
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: Provider of the link.
                     type: string
                   siteId:
-                    description: The ID of the site.
+                    description: ID of the site.
                     type: string
                   siteIdRef:
                     description: Reference to a Site in networkmanager to populate siteId.
@@ -1121,10 +1113,8 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of the link.
+                    description: Type of the link.
                     type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -1149,7 +1139,7 @@ spec:
                   autoscaler.
                 properties:
                   bandwidth:
-                    description: The upload speed and download speed in Mbps. Documented below.
+                    description: Upload speed and download speed in Mbps. See below.
                     properties:
                       downloadSpeed:
                         description: Download speed in Mbps.
@@ -1159,10 +1149,10 @@ spec:
                         type: number
                     type: object
                   description:
-                    description: A description of the link.
+                    description: Description of the link.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   globalNetworkIdRef:
                     description: Reference to a GlobalNetwork in networkmanager to populate globalNetworkId.
@@ -1251,10 +1241,10 @@ spec:
                         type: object
                     type: object
                   providerName:
-                    description: The provider of the link.
+                    description: Provider of the link.
                     type: string
                   siteId:
-                    description: The ID of the site.
+                    description: ID of the site.
                     type: string
                   siteIdRef:
                     description: Reference to a Site in networkmanager to populate siteId.
@@ -1349,7 +1339,7 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of the link.
+                    description: Type of the link.
                     type: string
                 type: object
               managementPolicies:
@@ -1569,10 +1559,10 @@ spec:
               atProvider:
                 properties:
                   arn:
-                    description: Link Amazon Resource Name (ARN).
+                    description: Link ARN.
                     type: string
                   bandwidth:
-                    description: The upload speed and download speed in Mbps. Documented below.
+                    description: Upload speed and download speed in Mbps. See below.
                     properties:
                       downloadSpeed:
                         description: Download speed in Mbps.
@@ -1582,18 +1572,18 @@ spec:
                         type: number
                     type: object
                   description:
-                    description: A description of the link.
+                    description: Description of the link.
                     type: string
                   globalNetworkId:
-                    description: The ID of the global network.
+                    description: ID of the global network.
                     type: string
                   id:
                     type: string
                   providerName:
-                    description: The provider of the link.
+                    description: Provider of the link.
                     type: string
                   siteId:
-                    description: The ID of the site.
+                    description: ID of the site.
                     type: string
                   tags:
                     additionalProperties:
@@ -1604,11 +1594,11 @@ spec:
                   tagsAll:
                     additionalProperties:
                       type: string
-                    description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: The type of the link.
+                    description: Type of the link.
                     type: string
                 type: object
               conditions:

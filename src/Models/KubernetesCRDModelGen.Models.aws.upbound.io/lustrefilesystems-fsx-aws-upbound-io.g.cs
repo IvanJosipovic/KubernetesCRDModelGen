@@ -8,6 +8,19 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.fsx.aws.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LustreFileSystemSpecForProviderDataReadCacheConfiguration
+{
+    /// <summary>Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.</summary>
+    [JsonPropertyName("size")]
+    public double? Size { get; set; }
+
+    /// <summary>Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.</summary>
+    [JsonPropertyName("sizingMode")]
+    public string? SizingMode { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderKmsKeyIdRefPolicy
@@ -77,15 +90,15 @@ public partial class V1beta1LustreFileSystemSpecForProviderLogConfiguration
     public string? Level { get; set; }
 }
 
-/// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecForProviderMetadataConfiguration
 {
-    /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.</summary>
+    /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.</summary>
+    /// <summary>Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
@@ -243,6 +256,10 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("dataCompressionType")]
     public string? DataCompressionType { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("dataReadCacheConfiguration")]
+    public IList<V1beta1LustreFileSystemSpecForProviderDataReadCacheConfiguration>? DataReadCacheConfiguration { get; set; }
+
     /// <summary>- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.</summary>
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
@@ -287,23 +304,23 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1LustreFileSystemSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.</summary>
+    /// <summary>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1LustreFileSystemSpecForProviderLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
+    /// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.</summary>
     [JsonPropertyName("metadataConfiguration")]
-    public V1beta1LustreFileSystemSpecForProviderMetadataConfiguration? MetadataConfiguration { get; set; }
+    public IList<V1beta1LustreFileSystemSpecForProviderMetadataConfiguration>? MetadataConfiguration { get; set; }
 
     /// <summary>- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.</summary>
     [JsonPropertyName("perUnitStorageThroughput")]
     public double? PerUnitStorageThroughput { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.</summary>
+    /// <summary>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.</summary>
     [JsonPropertyName("rootSquashConfiguration")]
     public IList<V1beta1LustreFileSystemSpecForProviderRootSquashConfiguration>? RootSquashConfiguration { get; set; }
 
@@ -327,7 +344,7 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("storageCapacity")]
     public double? StorageCapacity { get; set; }
 
-    /// <summary>- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.</summary>
+    /// <summary>- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -347,9 +364,26 @@ public partial class V1beta1LustreFileSystemSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
+    /// <summary>Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.</summary>
+    [JsonPropertyName("throughputCapacity")]
+    public double? ThroughputCapacity { get; set; }
+
     /// <summary>The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.</summary>
     [JsonPropertyName("weeklyMaintenanceStartTime")]
     public string? WeeklyMaintenanceStartTime { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LustreFileSystemSpecInitProviderDataReadCacheConfiguration
+{
+    /// <summary>Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.</summary>
+    [JsonPropertyName("size")]
+    public double? Size { get; set; }
+
+    /// <summary>Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.</summary>
+    [JsonPropertyName("sizingMode")]
+    public string? SizingMode { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -421,15 +455,15 @@ public partial class V1beta1LustreFileSystemSpecInitProviderLogConfiguration
     public string? Level { get; set; }
 }
 
-/// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemSpecInitProviderMetadataConfiguration
 {
-    /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.</summary>
+    /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.</summary>
+    /// <summary>Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
@@ -587,6 +621,10 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     [JsonPropertyName("dataCompressionType")]
     public string? DataCompressionType { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("dataReadCacheConfiguration")]
+    public IList<V1beta1LustreFileSystemSpecInitProviderDataReadCacheConfiguration>? DataReadCacheConfiguration { get; set; }
+
     /// <summary>- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.</summary>
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
@@ -631,19 +669,19 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1LustreFileSystemSpecInitProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.</summary>
+    /// <summary>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1LustreFileSystemSpecInitProviderLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
+    /// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.</summary>
     [JsonPropertyName("metadataConfiguration")]
-    public V1beta1LustreFileSystemSpecInitProviderMetadataConfiguration? MetadataConfiguration { get; set; }
+    public IList<V1beta1LustreFileSystemSpecInitProviderMetadataConfiguration>? MetadataConfiguration { get; set; }
 
     /// <summary>- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.</summary>
     [JsonPropertyName("perUnitStorageThroughput")]
     public double? PerUnitStorageThroughput { get; set; }
 
-    /// <summary>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.</summary>
+    /// <summary>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.</summary>
     [JsonPropertyName("rootSquashConfiguration")]
     public IList<V1beta1LustreFileSystemSpecInitProviderRootSquashConfiguration>? RootSquashConfiguration { get; set; }
 
@@ -667,7 +705,7 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     [JsonPropertyName("storageCapacity")]
     public double? StorageCapacity { get; set; }
 
-    /// <summary>- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.</summary>
+    /// <summary>- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -686,6 +724,10 @@ public partial class V1beta1LustreFileSystemSpecInitProvider
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.</summary>
+    [JsonPropertyName("throughputCapacity")]
+    public double? ThroughputCapacity { get; set; }
 
     /// <summary>The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.</summary>
     [JsonPropertyName("weeklyMaintenanceStartTime")]
@@ -826,6 +868,19 @@ public partial class V1beta1LustreFileSystemSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LustreFileSystemStatusAtProviderDataReadCacheConfiguration
+{
+    /// <summary>Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.</summary>
+    [JsonPropertyName("size")]
+    public double? Size { get; set; }
+
+    /// <summary>Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.</summary>
+    [JsonPropertyName("sizingMode")]
+    public string? SizingMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProviderLogConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) that specifies the destination of the logs. The name of the Amazon CloudWatch Logs log group must begin with the /aws/fsx prefix. If you do not provide a destination, Amazon FSx will create and use a log stream in the CloudWatch Logs /aws/fsx/lustre log group.</summary>
@@ -837,15 +892,15 @@ public partial class V1beta1LustreFileSystemStatusAtProviderLogConfiguration
     public string? Level { get; set; }
 }
 
-/// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LustreFileSystemStatusAtProviderMetadataConfiguration
 {
-    /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.</summary>
+    /// <summary>Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.</summary>
     [JsonPropertyName("iops")]
     public double? Iops { get; set; }
 
-    /// <summary>Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.</summary>
+    /// <summary>Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 }
@@ -895,6 +950,10 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     [JsonPropertyName("dataCompressionType")]
     public string? DataCompressionType { get; set; }
 
+    /// <summary></summary>
+    [JsonPropertyName("dataReadCacheConfiguration")]
+    public IList<V1beta1LustreFileSystemStatusAtProviderDataReadCacheConfiguration>? DataReadCacheConfiguration { get; set; }
+
     /// <summary>- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.</summary>
     [JsonPropertyName("deploymentType")]
     public string? DeploymentType { get; set; }
@@ -939,13 +998,13 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.</summary>
+    /// <summary>The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1LustreFileSystemStatusAtProviderLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.</summary>
+    /// <summary>The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.</summary>
     [JsonPropertyName("metadataConfiguration")]
-    public V1beta1LustreFileSystemStatusAtProviderMetadataConfiguration? MetadataConfiguration { get; set; }
+    public IList<V1beta1LustreFileSystemStatusAtProviderMetadataConfiguration>? MetadataConfiguration { get; set; }
 
     /// <summary>The value to be used when mounting the filesystem.</summary>
     [JsonPropertyName("mountName")]
@@ -963,7 +1022,11 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     [JsonPropertyName("perUnitStorageThroughput")]
     public double? PerUnitStorageThroughput { get; set; }
 
-    /// <summary>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.</summary>
     [JsonPropertyName("rootSquashConfiguration")]
     public IList<V1beta1LustreFileSystemStatusAtProviderRootSquashConfiguration>? RootSquashConfiguration { get; set; }
 
@@ -979,7 +1042,7 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     [JsonPropertyName("storageCapacity")]
     public double? StorageCapacity { get; set; }
 
-    /// <summary>- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.</summary>
+    /// <summary>- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -994,6 +1057,10 @@ public partial class V1beta1LustreFileSystemStatusAtProvider
     /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
+
+    /// <summary>Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.</summary>
+    [JsonPropertyName("throughputCapacity")]
+    public double? ThroughputCapacity { get; set; }
 
     /// <summary>Identifier of the Virtual Private Cloud for the file system.</summary>
     [JsonPropertyName("vpcId")]

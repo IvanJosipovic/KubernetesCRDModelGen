@@ -34,7 +34,7 @@ public partial class V1beta1ConfigurationSetSpecForProvider
     [JsonPropertyName("deliveryOptions")]
     public IList<V1beta1ConfigurationSetSpecForProviderDeliveryOptions>? DeliveryOptions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -259,6 +259,10 @@ public partial class V1beta1ConfigurationSetStatusAtProvider
     /// <summary>Date and time at which the reputation metrics for the configuration set were last reset. Resetting these metrics is known as a fresh start.</summary>
     [JsonPropertyName("lastFreshStart")]
     public string? LastFreshStart { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether or not Amazon SES publishes reputation metrics for the configuration set, such as bounce and complaint rates, to Amazon CloudWatch. The default value is false.</summary>
     [JsonPropertyName("reputationMetricsEnabled")]

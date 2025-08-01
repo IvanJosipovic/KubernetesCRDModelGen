@@ -160,7 +160,7 @@ public partial class V1beta1ImageRecipeSpecForProviderComponent
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecForProviderSystemsManagerAgent
 {
-    /// <summary>Whether to remove the Systems Manager Agent after the image has been built. Defaults to false.</summary>
+    /// <summary>Whether to remove the Systems Manager Agent after the image has been built.</summary>
     [JsonPropertyName("uninstallAfterBuild")]
     public bool? UninstallAfterBuild { get; set; }
 }
@@ -189,7 +189,7 @@ public partial class V1beta1ImageRecipeSpecForProvider
     [JsonPropertyName("parentImage")]
     public string? ParentImage { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -366,7 +366,7 @@ public partial class V1beta1ImageRecipeSpecInitProviderComponent
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeSpecInitProviderSystemsManagerAgent
 {
-    /// <summary>Whether to remove the Systems Manager Agent after the image has been built. Defaults to false.</summary>
+    /// <summary>Whether to remove the Systems Manager Agent after the image has been built.</summary>
     [JsonPropertyName("uninstallAfterBuild")]
     public bool? UninstallAfterBuild { get; set; }
 }
@@ -636,7 +636,7 @@ public partial class V1beta1ImageRecipeStatusAtProviderComponent
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImageRecipeStatusAtProviderSystemsManagerAgent
 {
-    /// <summary>Whether to remove the Systems Manager Agent after the image has been built. Defaults to false.</summary>
+    /// <summary>Whether to remove the Systems Manager Agent after the image has been built.</summary>
     [JsonPropertyName("uninstallAfterBuild")]
     public bool? UninstallAfterBuild { get; set; }
 }
@@ -684,6 +684,10 @@ public partial class V1beta1ImageRecipeStatusAtProvider
     /// <summary>Platform of the image recipe.</summary>
     [JsonPropertyName("platform")]
     public string? Platform { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for the Systems Manager Agent installed by default by Image Builder. Detailed below.</summary>
     [JsonPropertyName("systemsManagerAgent")]

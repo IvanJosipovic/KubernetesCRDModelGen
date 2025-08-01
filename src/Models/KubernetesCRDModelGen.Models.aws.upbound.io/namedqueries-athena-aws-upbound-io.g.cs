@@ -148,7 +148,7 @@ public partial class V1beta1NamedQuerySpecForProvider
     [JsonPropertyName("query")]
     public string? Query { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -473,6 +473,10 @@ public partial class V1beta1NamedQueryStatusAtProvider
     /// <summary>Text of the query itself. In other words, all query statements. Maximum length of 262144.</summary>
     [JsonPropertyName("query")]
     public string? Query { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Workgroup to which the query belongs. Defaults to primary</summary>
     [JsonPropertyName("workgroup")]

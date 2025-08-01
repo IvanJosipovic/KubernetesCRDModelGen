@@ -94,7 +94,10 @@ spec:
                     description: The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   registryName:
                     description: The name of the registry in which this schema belongs.
@@ -563,6 +566,12 @@ spec:
                     type: string
                   name:
                     description: The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   registryName:
                     description: The name of the registry in which this schema belongs.

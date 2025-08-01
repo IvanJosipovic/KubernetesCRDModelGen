@@ -180,7 +180,7 @@ public partial class V1beta1ConnectionSpecForProviderGlobalNetworkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecForProvider
 {
-    /// <summary>The ID of the second device in the connection.</summary>
+    /// <summary>ID of the second device in the connection.</summary>
     [JsonPropertyName("connectedDeviceId")]
     public string? ConnectedDeviceId { get; set; }
 
@@ -192,15 +192,15 @@ public partial class V1beta1ConnectionSpecForProvider
     [JsonPropertyName("connectedDeviceIdSelector")]
     public V1beta1ConnectionSpecForProviderConnectedDeviceIdSelector? ConnectedDeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the link for the second device.</summary>
+    /// <summary>ID of the link for the second device.</summary>
     [JsonPropertyName("connectedLinkId")]
     public string? ConnectedLinkId { get; set; }
 
-    /// <summary>A description of the connection.</summary>
+    /// <summary>Description of the connection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the first device in the connection.</summary>
+    /// <summary>ID of the first device in the connection.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -212,7 +212,7 @@ public partial class V1beta1ConnectionSpecForProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1ConnectionSpecForProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -224,13 +224,9 @@ public partial class V1beta1ConnectionSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1ConnectionSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The ID of the link for the first device.</summary>
+    /// <summary>ID of the link for the first device.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -409,7 +405,7 @@ public partial class V1beta1ConnectionSpecInitProviderGlobalNetworkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionSpecInitProvider
 {
-    /// <summary>The ID of the second device in the connection.</summary>
+    /// <summary>ID of the second device in the connection.</summary>
     [JsonPropertyName("connectedDeviceId")]
     public string? ConnectedDeviceId { get; set; }
 
@@ -421,15 +417,15 @@ public partial class V1beta1ConnectionSpecInitProvider
     [JsonPropertyName("connectedDeviceIdSelector")]
     public V1beta1ConnectionSpecInitProviderConnectedDeviceIdSelector? ConnectedDeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the link for the second device.</summary>
+    /// <summary>ID of the link for the second device.</summary>
     [JsonPropertyName("connectedLinkId")]
     public string? ConnectedLinkId { get; set; }
 
-    /// <summary>A description of the connection.</summary>
+    /// <summary>Description of the connection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the first device in the connection.</summary>
+    /// <summary>ID of the first device in the connection.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -441,7 +437,7 @@ public partial class V1beta1ConnectionSpecInitProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1ConnectionSpecInitProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -453,7 +449,7 @@ public partial class V1beta1ConnectionSpecInitProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1ConnectionSpecInitProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The ID of the link for the first device.</summary>
+    /// <summary>ID of the link for the first device.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 
@@ -598,27 +594,27 @@ public partial class V1beta1ConnectionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionStatusAtProvider
 {
-    /// <summary>The Amazon Resource Name (ARN) of the connection.</summary>
+    /// <summary>ARN of the connection.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The ID of the second device in the connection.</summary>
+    /// <summary>ID of the second device in the connection.</summary>
     [JsonPropertyName("connectedDeviceId")]
     public string? ConnectedDeviceId { get; set; }
 
-    /// <summary>The ID of the link for the second device.</summary>
+    /// <summary>ID of the link for the second device.</summary>
     [JsonPropertyName("connectedLinkId")]
     public string? ConnectedLinkId { get; set; }
 
-    /// <summary>A description of the connection.</summary>
+    /// <summary>Description of the connection.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the first device in the connection.</summary>
+    /// <summary>ID of the first device in the connection.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -626,7 +622,7 @@ public partial class V1beta1ConnectionStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ID of the link for the first device.</summary>
+    /// <summary>ID of the link for the first device.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 
@@ -634,7 +630,7 @@ public partial class V1beta1ConnectionStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -685,7 +681,7 @@ public partial class V1beta1ConnectionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Connection is the Schema for the Connections API. Creates a connection between two devices.</summary>
+/// <summary>Connection is the Schema for the Connections API. Manages a Network Manager Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Connection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectionSpec>, IStatus<V1beta1ConnectionStatus>
@@ -715,7 +711,7 @@ public partial class V1beta1Connection : IKubernetesObject<V1ObjectMeta>, ISpec<
     public V1beta1ConnectionStatus? Status { get; set; }
 }
 
-/// <summary>Connection is the Schema for the Connections API. Creates a connection between two devices.</summary>
+/// <summary>Connection is the Schema for the Connections API. Manages a Network Manager Connection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Connection>

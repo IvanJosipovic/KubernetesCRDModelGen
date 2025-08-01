@@ -84,7 +84,7 @@ public partial class V1beta1GeofenceCollectionSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1GeofenceCollectionSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -329,6 +329,10 @@ public partial class V1beta1GeofenceCollectionStatusAtProvider
     /// <summary>A key identifier for an AWS KMS customer managed key assigned to the Amazon Location resource.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

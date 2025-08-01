@@ -77,7 +77,7 @@ public partial class V1beta1SpaceSpecForProviderOwnershipSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
 {
-    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    /// <summary>The time that SageMaker AI waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
@@ -103,11 +103,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -124,7 +124,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettin
     [JsonPropertyName("appLifecycleManagement")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
@@ -142,7 +142,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfs
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
 {
-    /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
+    /// <summary>A custom file system in Amazon EFS. See efs_file_system Block below.</summary>
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
@@ -151,7 +151,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
 {
-    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    /// <summary>The time that SageMaker AI waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
@@ -186,11 +186,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -207,11 +207,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettin
     [JsonPropertyName("appLifecycleManagement")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
 
-    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
+    /// <summary>A list of Git repositories that SageMaker AI automatically displays to users for cloning in the JupyterServer application. See code_repository Block below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
@@ -237,11 +237,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -254,11 +254,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettings
 {
-    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
+    /// <summary>A list of Git repositories that SageMaker AI automatically displays to users for cloning in the JupyterServer application. See code_repository Block below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettingsCodeRepository>? CodeRepository { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 
@@ -296,11 +296,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -313,11 +313,11 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettings
 {
-    /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
+    /// <summary>A list of custom SageMaker AI images that are configured to run as a KernelGateway app. See custom_image Block below.</summary>
     [JsonPropertyName("customImage")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettingsCustomImage>? CustomImage { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 
@@ -330,7 +330,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSet
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
 {
-    /// <summary></summary>
+    /// <summary>The size of an EBS storage volume for a space.</summary>
     [JsonPropertyName("ebsVolumeSizeInGb")]
     public double? EbsVolumeSizeInGb { get; set; }
 }
@@ -339,7 +339,7 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSetting
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettings
 {
-    /// <summary></summary>
+    /// <summary>A collection of EBS storage settings for a space. See ebs_storage_settings Block below.</summary>
     [JsonPropertyName("ebsStorageSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
@@ -352,27 +352,27 @@ public partial class V1beta1SpaceSpecForProviderSpaceSettings
     [JsonPropertyName("appType")]
     public string? AppType { get; set; }
 
-    /// <summary>The Code Editor application settings. See Code Editor App Settings below.</summary>
+    /// <summary>The Code Editor application settings. See code_editor_app_settings Block below.</summary>
     [JsonPropertyName("codeEditorAppSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCodeEditorAppSettings>? CodeEditorAppSettings { get; set; }
 
-    /// <summary>A file system, created by you, that you assign to a space for an Amazon SageMaker Domain. See Custom File System below.</summary>
+    /// <summary>A file system, created by you, that you assign to a space for an Amazon SageMaker AI Domain. See custom_file_system Block below.</summary>
     [JsonPropertyName("customFileSystem")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsCustomFileSystem>? CustomFileSystem { get; set; }
 
-    /// <summary>The settings for the JupyterLab application. See Jupyter Lab App Settings below.</summary>
+    /// <summary>The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.</summary>
     [JsonPropertyName("jupyterLabAppSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterLabAppSettings>? JupyterLabAppSettings { get; set; }
 
-    /// <summary>The Jupyter server's app settings. See Jupyter Server App Settings below.</summary>
+    /// <summary>The Jupyter server's app settings. See jupyter_server_app_settings Block below.</summary>
     [JsonPropertyName("jupyterServerAppSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsJupyterServerAppSettings>? JupyterServerAppSettings { get; set; }
 
-    /// <summary>The kernel gateway app settings. See Kernel Gateway App Settings below.</summary>
+    /// <summary>The kernel gateway app settings. See kernel_gateway_app_settings Block below.</summary>
     [JsonPropertyName("kernelGatewayAppSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsKernelGatewayAppSettings>? KernelGatewayAppSettings { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The storage settings. See space_storage_settings Block below.</summary>
     [JsonPropertyName("spaceStorageSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
@@ -402,15 +402,15 @@ public partial class V1beta1SpaceSpecForProvider
     [JsonPropertyName("domainIdSelector")]
     public V1beta1SpaceSpecForProviderDomainIdSelector? DomainIdSelector { get; set; }
 
-    /// <summary>A collection of ownership settings. See Ownership Settings below.</summary>
+    /// <summary>A collection of ownership settings. Required if space_sharing_settings is set. See ownership_settings Block below.</summary>
     [JsonPropertyName("ownershipSettings")]
     public IList<V1beta1SpaceSpecForProviderOwnershipSettings>? OwnershipSettings { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The name of the space that appears in the SageMaker Studio UI.</summary>
+    /// <summary>The name of the space that appears in the SageMaker AI Studio UI.</summary>
     [JsonPropertyName("spaceDisplayName")]
     public string? SpaceDisplayName { get; set; }
 
@@ -418,11 +418,11 @@ public partial class V1beta1SpaceSpecForProvider
     [JsonPropertyName("spaceName")]
     public string? SpaceName { get; set; }
 
-    /// <summary>A collection of space settings. See Space Settings below.</summary>
+    /// <summary>A collection of space settings. See space_settings Block below.</summary>
     [JsonPropertyName("spaceSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSettings>? SpaceSettings { get; set; }
 
-    /// <summary>A collection of space sharing settings. See Space Sharing Settings below.</summary>
+    /// <summary>A collection of space sharing settings. Required if ownership_settings is set. See space_sharing_settings Block below.</summary>
     [JsonPropertyName("spaceSharingSettings")]
     public IList<V1beta1SpaceSpecForProviderSpaceSharingSettings>? SpaceSharingSettings { get; set; }
 
@@ -500,7 +500,7 @@ public partial class V1beta1SpaceSpecInitProviderOwnershipSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
 {
-    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    /// <summary>The time that SageMaker AI waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
@@ -526,11 +526,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -547,7 +547,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("appLifecycleManagement")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
@@ -565,7 +565,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
 {
-    /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
+    /// <summary>A custom file system in Amazon EFS. See efs_file_system Block below.</summary>
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
@@ -574,7 +574,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
 {
-    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    /// <summary>The time that SageMaker AI waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
@@ -609,11 +609,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -630,11 +630,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("appLifecycleManagement")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
 
-    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
+    /// <summary>A list of Git repositories that SageMaker AI automatically displays to users for cloning in the JupyterServer application. See code_repository Block below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
@@ -660,11 +660,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -677,11 +677,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettings
 {
-    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
+    /// <summary>A list of Git repositories that SageMaker AI automatically displays to users for cloning in the JupyterServer application. See code_repository Block below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettingsCodeRepository>? CodeRepository { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 
@@ -719,11 +719,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -736,11 +736,11 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettings
 {
-    /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
+    /// <summary>A list of custom SageMaker AI images that are configured to run as a KernelGateway app. See custom_image Block below.</summary>
     [JsonPropertyName("customImage")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettingsCustomImage>? CustomImage { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 
@@ -753,7 +753,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
 {
-    /// <summary></summary>
+    /// <summary>The size of an EBS storage volume for a space.</summary>
     [JsonPropertyName("ebsVolumeSizeInGb")]
     public double? EbsVolumeSizeInGb { get; set; }
 }
@@ -762,7 +762,7 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettings
 {
-    /// <summary></summary>
+    /// <summary>A collection of EBS storage settings for a space. See ebs_storage_settings Block below.</summary>
     [JsonPropertyName("ebsStorageSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
@@ -775,27 +775,27 @@ public partial class V1beta1SpaceSpecInitProviderSpaceSettings
     [JsonPropertyName("appType")]
     public string? AppType { get; set; }
 
-    /// <summary>The Code Editor application settings. See Code Editor App Settings below.</summary>
+    /// <summary>The Code Editor application settings. See code_editor_app_settings Block below.</summary>
     [JsonPropertyName("codeEditorAppSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCodeEditorAppSettings>? CodeEditorAppSettings { get; set; }
 
-    /// <summary>A file system, created by you, that you assign to a space for an Amazon SageMaker Domain. See Custom File System below.</summary>
+    /// <summary>A file system, created by you, that you assign to a space for an Amazon SageMaker AI Domain. See custom_file_system Block below.</summary>
     [JsonPropertyName("customFileSystem")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsCustomFileSystem>? CustomFileSystem { get; set; }
 
-    /// <summary>The settings for the JupyterLab application. See Jupyter Lab App Settings below.</summary>
+    /// <summary>The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.</summary>
     [JsonPropertyName("jupyterLabAppSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterLabAppSettings>? JupyterLabAppSettings { get; set; }
 
-    /// <summary>The Jupyter server's app settings. See Jupyter Server App Settings below.</summary>
+    /// <summary>The Jupyter server's app settings. See jupyter_server_app_settings Block below.</summary>
     [JsonPropertyName("jupyterServerAppSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsJupyterServerAppSettings>? JupyterServerAppSettings { get; set; }
 
-    /// <summary>The kernel gateway app settings. See Kernel Gateway App Settings below.</summary>
+    /// <summary>The kernel gateway app settings. See kernel_gateway_app_settings Block below.</summary>
     [JsonPropertyName("kernelGatewayAppSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsKernelGatewayAppSettings>? KernelGatewayAppSettings { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The storage settings. See space_storage_settings Block below.</summary>
     [JsonPropertyName("spaceStorageSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
@@ -825,11 +825,11 @@ public partial class V1beta1SpaceSpecInitProvider
     [JsonPropertyName("domainIdSelector")]
     public V1beta1SpaceSpecInitProviderDomainIdSelector? DomainIdSelector { get; set; }
 
-    /// <summary>A collection of ownership settings. See Ownership Settings below.</summary>
+    /// <summary>A collection of ownership settings. Required if space_sharing_settings is set. See ownership_settings Block below.</summary>
     [JsonPropertyName("ownershipSettings")]
     public IList<V1beta1SpaceSpecInitProviderOwnershipSettings>? OwnershipSettings { get; set; }
 
-    /// <summary>The name of the space that appears in the SageMaker Studio UI.</summary>
+    /// <summary>The name of the space that appears in the SageMaker AI Studio UI.</summary>
     [JsonPropertyName("spaceDisplayName")]
     public string? SpaceDisplayName { get; set; }
 
@@ -837,11 +837,11 @@ public partial class V1beta1SpaceSpecInitProvider
     [JsonPropertyName("spaceName")]
     public string? SpaceName { get; set; }
 
-    /// <summary>A collection of space settings. See Space Settings below.</summary>
+    /// <summary>A collection of space settings. See space_settings Block below.</summary>
     [JsonPropertyName("spaceSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSettings>? SpaceSettings { get; set; }
 
-    /// <summary>A collection of space sharing settings. See Space Sharing Settings below.</summary>
+    /// <summary>A collection of space sharing settings. Required if ownership_settings is set. See space_sharing_settings Block below.</summary>
     [JsonPropertyName("spaceSharingSettings")]
     public IList<V1beta1SpaceSpecInitProviderSpaceSharingSettings>? SpaceSharingSettings { get; set; }
 
@@ -995,7 +995,7 @@ public partial class V1beta1SpaceStatusAtProviderOwnershipSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagementIdleSettings
 {
-    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    /// <summary>The time that SageMaker AI waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
@@ -1021,11 +1021,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -1042,7 +1042,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSetti
     [JsonPropertyName("appLifecycleManagement")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
@@ -1060,7 +1060,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEf
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
 {
-    /// <summary>A custom file system in Amazon EFS. see EFS File System below.</summary>
+    /// <summary>A custom file system in Amazon EFS. See efs_file_system Block below.</summary>
     [JsonPropertyName("efsFileSystem")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystemEfsFileSystem>? EfsFileSystem { get; set; }
 }
@@ -1069,7 +1069,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagementIdleSettings
 {
-    /// <summary>The time that SageMaker waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
+    /// <summary>The time that SageMaker AI waits after the application becomes idle before shutting it down. Valid values are between 60 and 525600.</summary>
     [JsonPropertyName("idleTimeoutInMinutes")]
     public double? IdleTimeoutInMinutes { get; set; }
 }
@@ -1104,11 +1104,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -1125,11 +1125,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSetti
     [JsonPropertyName("appLifecycleManagement")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsAppLifecycleManagement>? AppLifecycleManagement { get; set; }
 
-    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
+    /// <summary>A list of Git repositories that SageMaker AI automatically displays to users for cloning in the JupyterServer application. See code_repository Block below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsCodeRepository>? CodeRepository { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 }
@@ -1155,11 +1155,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -1172,11 +1172,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettings
 {
-    /// <summary>A list of Git repositories that SageMaker automatically displays to users for cloning in the JupyterServer application. see Code Repository below.</summary>
+    /// <summary>A list of Git repositories that SageMaker AI automatically displays to users for cloning in the JupyterServer application. See code_repository Block below.</summary>
     [JsonPropertyName("codeRepository")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettingsCodeRepository>? CodeRepository { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 
@@ -1214,11 +1214,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
     [JsonPropertyName("lifecycleConfigArn")]
     public string? LifecycleConfigArn { get; set; }
 
-    /// <summary>The Amazon Resource Name (ARN) of the SageMaker image created on the instance.</summary>
+    /// <summary>The Amazon Resource Name (ARN) of the SageMaker AI image created on the instance.</summary>
     [JsonPropertyName("sagemakerImageArn")]
     public string? SagemakerImageArn { get; set; }
 
-    /// <summary>The SageMaker Image Version Alias.</summary>
+    /// <summary>The SageMaker AI Image Version Alias.</summary>
     [JsonPropertyName("sagemakerImageVersionAlias")]
     public string? SagemakerImageVersionAlias { get; set; }
 
@@ -1231,11 +1231,11 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettings
 {
-    /// <summary>A list of custom SageMaker images that are configured to run as a KernelGateway app. see Custom Image below.</summary>
+    /// <summary>A list of custom SageMaker AI images that are configured to run as a KernelGateway app. See custom_image Block below.</summary>
     [JsonPropertyName("customImage")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettingsCustomImage>? CustomImage { get; set; }
 
-    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker image created on the instance. see Default Resource Spec below.</summary>
+    /// <summary>The default instance type and the Amazon Resource Name (ARN) of the SageMaker AI image created on the instance. See default_resource_spec Block below.</summary>
     [JsonPropertyName("defaultResourceSpec")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettingsDefaultResourceSpec>? DefaultResourceSpec { get; set; }
 
@@ -1248,7 +1248,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings
 {
-    /// <summary></summary>
+    /// <summary>The size of an EBS storage volume for a space.</summary>
     [JsonPropertyName("ebsVolumeSizeInGb")]
     public double? EbsVolumeSizeInGb { get; set; }
 }
@@ -1257,7 +1257,7 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettin
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettings
 {
-    /// <summary></summary>
+    /// <summary>A collection of EBS storage settings for a space. See ebs_storage_settings Block below.</summary>
     [JsonPropertyName("ebsStorageSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettingsEbsStorageSettings>? EbsStorageSettings { get; set; }
 }
@@ -1270,27 +1270,27 @@ public partial class V1beta1SpaceStatusAtProviderSpaceSettings
     [JsonPropertyName("appType")]
     public string? AppType { get; set; }
 
-    /// <summary>The Code Editor application settings. See Code Editor App Settings below.</summary>
+    /// <summary>The Code Editor application settings. See code_editor_app_settings Block below.</summary>
     [JsonPropertyName("codeEditorAppSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCodeEditorAppSettings>? CodeEditorAppSettings { get; set; }
 
-    /// <summary>A file system, created by you, that you assign to a space for an Amazon SageMaker Domain. See Custom File System below.</summary>
+    /// <summary>A file system, created by you, that you assign to a space for an Amazon SageMaker AI Domain. See custom_file_system Block below.</summary>
     [JsonPropertyName("customFileSystem")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsCustomFileSystem>? CustomFileSystem { get; set; }
 
-    /// <summary>The settings for the JupyterLab application. See Jupyter Lab App Settings below.</summary>
+    /// <summary>The settings for the JupyterLab application. See jupyter_lab_app_settings Block below.</summary>
     [JsonPropertyName("jupyterLabAppSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterLabAppSettings>? JupyterLabAppSettings { get; set; }
 
-    /// <summary>The Jupyter server's app settings. See Jupyter Server App Settings below.</summary>
+    /// <summary>The Jupyter server's app settings. See jupyter_server_app_settings Block below.</summary>
     [JsonPropertyName("jupyterServerAppSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsJupyterServerAppSettings>? JupyterServerAppSettings { get; set; }
 
-    /// <summary>The kernel gateway app settings. See Kernel Gateway App Settings below.</summary>
+    /// <summary>The kernel gateway app settings. See kernel_gateway_app_settings Block below.</summary>
     [JsonPropertyName("kernelGatewayAppSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsKernelGatewayAppSettings>? KernelGatewayAppSettings { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The storage settings. See space_storage_settings Block below.</summary>
     [JsonPropertyName("spaceStorageSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettingsSpaceStorageSettings>? SpaceStorageSettings { get; set; }
 }
@@ -1324,11 +1324,15 @@ public partial class V1beta1SpaceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A collection of ownership settings. See Ownership Settings below.</summary>
+    /// <summary>A collection of ownership settings. Required if space_sharing_settings is set. See ownership_settings Block below.</summary>
     [JsonPropertyName("ownershipSettings")]
     public IList<V1beta1SpaceStatusAtProviderOwnershipSettings>? OwnershipSettings { get; set; }
 
-    /// <summary>The name of the space that appears in the SageMaker Studio UI.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The name of the space that appears in the SageMaker AI Studio UI.</summary>
     [JsonPropertyName("spaceDisplayName")]
     public string? SpaceDisplayName { get; set; }
 
@@ -1336,11 +1340,11 @@ public partial class V1beta1SpaceStatusAtProvider
     [JsonPropertyName("spaceName")]
     public string? SpaceName { get; set; }
 
-    /// <summary>A collection of space settings. See Space Settings below.</summary>
+    /// <summary>A collection of space settings. See space_settings Block below.</summary>
     [JsonPropertyName("spaceSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSettings>? SpaceSettings { get; set; }
 
-    /// <summary>A collection of space sharing settings. See Space Sharing Settings below.</summary>
+    /// <summary>A collection of space sharing settings. Required if ownership_settings is set. See space_sharing_settings Block below.</summary>
     [JsonPropertyName("spaceSharingSettings")]
     public IList<V1beta1SpaceStatusAtProviderSpaceSharingSettings>? SpaceSharingSettings { get; set; }
 
@@ -1403,7 +1407,7 @@ public partial class V1beta1SpaceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Space is the Schema for the Spaces API. Provides a SageMaker Space resource.</summary>
+/// <summary>Space is the Schema for the Spaces API. Provides a SageMaker AI Space resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Space : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SpaceSpec>, IStatus<V1beta1SpaceStatus>
@@ -1433,7 +1437,7 @@ public partial class V1beta1Space : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     public V1beta1SpaceStatus? Status { get; set; }
 }
 
-/// <summary>Space is the Schema for the Spaces API. Provides a SageMaker Space resource.</summary>
+/// <summary>Space is the Schema for the Spaces API. Provides a SageMaker AI Space resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1SpaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Space>

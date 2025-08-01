@@ -180,7 +180,10 @@ spec:
                     description: 'Specifies the mode of the database activity stream. Database events such as a change or access generate an activity stream event. The database session can handle these events either synchronously or asynchronously. One of: sync, async.'
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceArn:
                     description: The Amazon Resource Name (ARN) of the DB cluster.
@@ -711,6 +714,12 @@ spec:
                     type: string
                   mode:
                     description: 'Specifies the mode of the database activity stream. Database events such as a change or access generate an activity stream event. The database session can handle these events either synchronously or asynchronously. One of: sync, async.'
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceArn:
                     description: The Amazon Resource Name (ARN) of the DB cluster.

@@ -79,6 +79,19 @@ public partial class V1beta1AgentSpecForProviderGuardrailConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecForProviderMemoryConfiguration
+{
+    /// <summary>The type of memory being stored by the agent. See AWS API documentation for possible values.</summary>
+    [JsonPropertyName("enabledMemoryTypes")]
+    public IList<string>? EnabledMemoryTypes { get; set; }
+
+    /// <summary>The number of days the agent is configured to retain the conversational context. Minimum value of 0, maximum value of 30.</summary>
+    [JsonPropertyName("storageDays")]
+    public double? StorageDays { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentSpecForProviderPromptOverrideConfigurationPromptConfigurationsInferenceConfiguration
 {
     /// <summary>Maximum number of tokens to allow in the generated response.</summary>
@@ -188,9 +201,13 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
 
-    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.</summary>
+    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 20000 characters.</summary>
     [JsonPropertyName("instruction")]
     public string? Instruction { get; set; }
+
+    /// <summary>Configurations for the agent's ability to retain the conversational context.</summary>
+    [JsonPropertyName("memoryConfiguration")]
+    public IList<V1beta1AgentSpecForProviderMemoryConfiguration>? MemoryConfiguration { get; set; }
 
     /// <summary>Whether to prepare the agent after creation or modification. Defaults to true.</summary>
     [JsonPropertyName("prepareAgent")]
@@ -200,7 +217,7 @@ public partial class V1beta1AgentSpecForProvider
     [JsonPropertyName("promptOverrideConfiguration")]
     public IList<V1beta1AgentSpecForProviderPromptOverrideConfiguration>? PromptOverrideConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -280,6 +297,19 @@ public partial class V1beta1AgentSpecInitProviderGuardrailConfiguration
     /// <summary>Version of the guardrail.</summary>
     [JsonPropertyName("guardrailVersion")]
     public string? GuardrailVersion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentSpecInitProviderMemoryConfiguration
+{
+    /// <summary>The type of memory being stored by the agent. See AWS API documentation for possible values.</summary>
+    [JsonPropertyName("enabledMemoryTypes")]
+    public IList<string>? EnabledMemoryTypes { get; set; }
+
+    /// <summary>The number of days the agent is configured to retain the conversational context. Minimum value of 0, maximum value of 30.</summary>
+    [JsonPropertyName("storageDays")]
+    public double? StorageDays { get; set; }
 }
 
 /// <summary></summary>
@@ -393,9 +423,13 @@ public partial class V1beta1AgentSpecInitProvider
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
 
-    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.</summary>
+    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 20000 characters.</summary>
     [JsonPropertyName("instruction")]
     public string? Instruction { get; set; }
+
+    /// <summary>Configurations for the agent's ability to retain the conversational context.</summary>
+    [JsonPropertyName("memoryConfiguration")]
+    public IList<V1beta1AgentSpecInitProviderMemoryConfiguration>? MemoryConfiguration { get; set; }
 
     /// <summary>Whether to prepare the agent after creation or modification. Defaults to true.</summary>
     [JsonPropertyName("prepareAgent")]
@@ -561,6 +595,19 @@ public partial class V1beta1AgentStatusAtProviderGuardrailConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AgentStatusAtProviderMemoryConfiguration
+{
+    /// <summary>The type of memory being stored by the agent. See AWS API documentation for possible values.</summary>
+    [JsonPropertyName("enabledMemoryTypes")]
+    public IList<string>? EnabledMemoryTypes { get; set; }
+
+    /// <summary>The number of days the agent is configured to retain the conversational context. Minimum value of 0, maximum value of 30.</summary>
+    [JsonPropertyName("storageDays")]
+    public double? StorageDays { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AgentStatusAtProviderPromptOverrideConfigurationPromptConfigurationsInferenceConfiguration
 {
     /// <summary>Maximum number of tokens to allow in the generated response.</summary>
@@ -678,17 +725,29 @@ public partial class V1beta1AgentStatusAtProvider
     [JsonPropertyName("idleSessionTtlInSeconds")]
     public double? IdleSessionTtlInSeconds { get; set; }
 
-    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 8000 characters.</summary>
+    /// <summary>Instructions that tell the agent what it should do and how it should interact with users. The valid range is 40 - 20000 characters.</summary>
     [JsonPropertyName("instruction")]
     public string? Instruction { get; set; }
+
+    /// <summary>Configurations for the agent's ability to retain the conversational context.</summary>
+    [JsonPropertyName("memoryConfiguration")]
+    public IList<V1beta1AgentStatusAtProviderMemoryConfiguration>? MemoryConfiguration { get; set; }
 
     /// <summary>Whether to prepare the agent after creation or modification. Defaults to true.</summary>
     [JsonPropertyName("prepareAgent")]
     public bool? PrepareAgent { get; set; }
 
+    /// <summary>Timestamp of when the agent was last prepared.</summary>
+    [JsonPropertyName("preparedAt")]
+    public string? PreparedAt { get; set; }
+
     /// <summary>Configurations to override prompt templates in different parts of an agent sequence. For more information, see Advanced prompts. See prompt_override_configuration Block for details.</summary>
     [JsonPropertyName("promptOverrideConfiguration")]
     public IList<V1beta1AgentStatusAtProviderPromptOverrideConfiguration>? PromptOverrideConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether the in-use check is skipped when deleting the agent.</summary>
     [JsonPropertyName("skipResourceInUseCheck")]

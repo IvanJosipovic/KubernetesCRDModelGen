@@ -8,6 +8,118 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3BucketRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Object in s3 to populate s3Bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3BucketRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecForProviderS3BucketRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3BucketSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Object in s3 to populate s3Bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3BucketSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecForProviderS3BucketSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3KeyRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Object in s3 to populate s3Key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3KeyRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecForProviderS3KeyRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3KeySelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Object in s3 to populate s3Key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecForProviderS3KeySelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecForProviderS3KeySelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionSpecForProvider
@@ -24,11 +136,11 @@ public partial class V1beta1LayerVersionSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>prefixed options cannot be used.</summary>
+    /// <summary>Path to the function's deployment package within the local filesystem. If defined, The s3_-prefixed options cannot be used.</summary>
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 
-    /// <summary>Unique name for your Lambda Layer</summary>
+    /// <summary>Unique name for your Lambda Layer.</summary>
     [JsonPropertyName("layerName")]
     public string? LayerName { get; set; }
 
@@ -36,7 +148,7 @@ public partial class V1beta1LayerVersionSpecForProvider
     [JsonPropertyName("licenseInfo")]
     public string? LicenseInfo { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -44,9 +156,25 @@ public partial class V1beta1LayerVersionSpecForProvider
     [JsonPropertyName("s3Bucket")]
     public string? S3Bucket { get; set; }
 
+    /// <summary>Reference to a Object in s3 to populate s3Bucket.</summary>
+    [JsonPropertyName("s3BucketRef")]
+    public V1beta1LayerVersionSpecForProviderS3BucketRef? S3BucketRef { get; set; }
+
+    /// <summary>Selector for a Object in s3 to populate s3Bucket.</summary>
+    [JsonPropertyName("s3BucketSelector")]
+    public V1beta1LayerVersionSpecForProviderS3BucketSelector? S3BucketSelector { get; set; }
+
     /// <summary>S3 key of an object containing the function's deployment package. Conflicts with filename.</summary>
     [JsonPropertyName("s3Key")]
     public string? S3Key { get; set; }
+
+    /// <summary>Reference to a Object in s3 to populate s3Key.</summary>
+    [JsonPropertyName("s3KeyRef")]
+    public V1beta1LayerVersionSpecForProviderS3KeyRef? S3KeyRef { get; set; }
+
+    /// <summary>Selector for a Object in s3 to populate s3Key.</summary>
+    [JsonPropertyName("s3KeySelector")]
+    public V1beta1LayerVersionSpecForProviderS3KeySelector? S3KeySelector { get; set; }
 
     /// <summary>Object version containing the function's deployment package. Conflicts with filename.</summary>
     [JsonPropertyName("s3ObjectVersion")]
@@ -56,9 +184,121 @@ public partial class V1beta1LayerVersionSpecForProvider
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 
-    /// <summary>Virtual attribute used to trigger replacement when source code changes. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. The usual way to set this is ${filebase64sha256("file.11.12 or later) or ${base64sha256(file("file.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.</summary>
+    /// <summary>Virtual attribute used to trigger replacement when source code changes. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. The usual way to set this is filebase64sha256("file.11.12 or later) or base64sha256(file("file.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.</summary>
     [JsonPropertyName("sourceCodeHash")]
     public string? SourceCodeHash { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3BucketRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Object in s3 to populate s3Bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3BucketRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecInitProviderS3BucketRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3BucketSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Object in s3 to populate s3Bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3BucketSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecInitProviderS3BucketSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3KeyRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Object in s3 to populate s3Key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3KeyRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecInitProviderS3KeyRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3KeySelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Object in s3 to populate s3Key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionSpecInitProviderS3KeySelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionSpecInitProviderS3KeySelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -77,11 +317,11 @@ public partial class V1beta1LayerVersionSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>prefixed options cannot be used.</summary>
+    /// <summary>Path to the function's deployment package within the local filesystem. If defined, The s3_-prefixed options cannot be used.</summary>
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 
-    /// <summary>Unique name for your Lambda Layer</summary>
+    /// <summary>Unique name for your Lambda Layer.</summary>
     [JsonPropertyName("layerName")]
     public string? LayerName { get; set; }
 
@@ -93,9 +333,25 @@ public partial class V1beta1LayerVersionSpecInitProvider
     [JsonPropertyName("s3Bucket")]
     public string? S3Bucket { get; set; }
 
+    /// <summary>Reference to a Object in s3 to populate s3Bucket.</summary>
+    [JsonPropertyName("s3BucketRef")]
+    public V1beta1LayerVersionSpecInitProviderS3BucketRef? S3BucketRef { get; set; }
+
+    /// <summary>Selector for a Object in s3 to populate s3Bucket.</summary>
+    [JsonPropertyName("s3BucketSelector")]
+    public V1beta1LayerVersionSpecInitProviderS3BucketSelector? S3BucketSelector { get; set; }
+
     /// <summary>S3 key of an object containing the function's deployment package. Conflicts with filename.</summary>
     [JsonPropertyName("s3Key")]
     public string? S3Key { get; set; }
+
+    /// <summary>Reference to a Object in s3 to populate s3Key.</summary>
+    [JsonPropertyName("s3KeyRef")]
+    public V1beta1LayerVersionSpecInitProviderS3KeyRef? S3KeyRef { get; set; }
+
+    /// <summary>Selector for a Object in s3 to populate s3Key.</summary>
+    [JsonPropertyName("s3KeySelector")]
+    public V1beta1LayerVersionSpecInitProviderS3KeySelector? S3KeySelector { get; set; }
 
     /// <summary>Object version containing the function's deployment package. Conflicts with filename.</summary>
     [JsonPropertyName("s3ObjectVersion")]
@@ -105,7 +361,7 @@ public partial class V1beta1LayerVersionSpecInitProvider
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 
-    /// <summary>Virtual attribute used to trigger replacement when source code changes. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. The usual way to set this is ${filebase64sha256("file.11.12 or later) or ${base64sha256(file("file.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.</summary>
+    /// <summary>Virtual attribute used to trigger replacement when source code changes. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. The usual way to set this is filebase64sha256("file.11.12 or later) or base64sha256(file("file.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.</summary>
     [JsonPropertyName("sourceCodeHash")]
     public string? SourceCodeHash { get; set; }
 }
@@ -270,7 +526,7 @@ public partial class V1beta1LayerVersionStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>prefixed options cannot be used.</summary>
+    /// <summary>Path to the function's deployment package within the local filesystem. If defined, The s3_-prefixed options cannot be used.</summary>
     [JsonPropertyName("filename")]
     public string? Filename { get; set; }
 
@@ -282,13 +538,17 @@ public partial class V1beta1LayerVersionStatusAtProvider
     [JsonPropertyName("layerArn")]
     public string? LayerArn { get; set; }
 
-    /// <summary>Unique name for your Lambda Layer</summary>
+    /// <summary>Unique name for your Lambda Layer.</summary>
     [JsonPropertyName("layerName")]
     public string? LayerName { get; set; }
 
     /// <summary>License info for your Lambda Layer. See License Info.</summary>
     [JsonPropertyName("licenseInfo")]
     public string? LicenseInfo { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>S3 bucket location containing the function's deployment package. Conflicts with filename. This bucket must reside in the same AWS region where you are creating the Lambda function.</summary>
     [JsonPropertyName("s3Bucket")]
@@ -314,7 +574,7 @@ public partial class V1beta1LayerVersionStatusAtProvider
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 
-    /// <summary>Virtual attribute used to trigger replacement when source code changes. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. The usual way to set this is ${filebase64sha256("file.11.12 or later) or ${base64sha256(file("file.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.</summary>
+    /// <summary>Virtual attribute used to trigger replacement when source code changes. Must be set to a base64-encoded SHA256 hash of the package file specified with either filename or s3_key. The usual way to set this is filebase64sha256("file.11.12 or later) or base64sha256(file("file.11.11 and earlier), where "file.zip" is the local filename of the lambda layer source archive.</summary>
     [JsonPropertyName("sourceCodeHash")]
     public string? SourceCodeHash { get; set; }
 
@@ -373,7 +633,7 @@ public partial class V1beta1LayerVersionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LayerVersion is the Schema for the LayerVersions API. Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</summary>
+/// <summary>LayerVersion is the Schema for the LayerVersions API. Manages an AWS Lambda Layer Version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LayerVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LayerVersionSpec>, IStatus<V1beta1LayerVersionStatus>
@@ -403,7 +663,7 @@ public partial class V1beta1LayerVersion : IKubernetesObject<V1ObjectMeta>, ISpe
     public V1beta1LayerVersionStatus? Status { get; set; }
 }
 
-/// <summary>LayerVersion is the Schema for the LayerVersions API. Provides a Lambda Layer Version resource. Lambda Layers allow you to reuse shared bits of code across multiple lambda functions.</summary>
+/// <summary>LayerVersion is the Schema for the LayerVersions API. Manages an AWS Lambda Layer Version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LayerVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LayerVersion>

@@ -124,7 +124,7 @@ public partial class V1beta1VPCEndpointSubnetAssociationSpecForProviderVpcEndpoi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSubnetAssociationSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -433,6 +433,10 @@ public partial class V1beta1VPCEndpointSubnetAssociationStatusAtProvider
     /// <summary>The ID of the association.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the subnet to be associated with the VPC endpoint.</summary>
     [JsonPropertyName("subnetId")]

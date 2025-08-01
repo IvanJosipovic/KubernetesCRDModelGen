@@ -76,7 +76,7 @@ public partial class V1beta1SecretPolicySpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -321,6 +321,10 @@ public partial class V1beta1SecretPolicyStatusAtProvider
     /// <summary>Valid JSON document representing a resource policy. Unlike aws_secretsmanager_secret, where policy can be set to "{}" to delete the policy, "{}" is not a valid policy since policy is required.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Secret ARN.</summary>
     [JsonPropertyName("secretArn")]

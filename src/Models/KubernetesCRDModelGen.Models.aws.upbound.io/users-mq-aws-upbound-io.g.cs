@@ -384,6 +384,10 @@ public partial class V1alpha1UserStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("replicationUser")]
     public bool? ReplicationUser { get; set; }

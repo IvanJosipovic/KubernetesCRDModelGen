@@ -8,7 +8,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.aws.upbound.io;
-/// <summary>encoded format.</summary>
+/// <summary>The contents of the private key in PEM-encoded format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerCertificateSpecForProviderPrivateKeySecretRef
 {
@@ -29,11 +29,11 @@ public partial class V1beta1ServerCertificateSpecForProviderPrivateKeySecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerCertificateSpecForProvider
 {
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the public key certificate in PEM-encoded format.</summary>
     [JsonPropertyName("certificateBody")]
     public string? CertificateBody { get; set; }
 
-    /// <summary>encoded public key certificates of the chain.</summary>
+    /// <summary>The contents of the certificate chain. This is typically a concatenation of the PEM-encoded public key certificates of the chain.</summary>
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 
@@ -41,7 +41,7 @@ public partial class V1beta1ServerCertificateSpecForProvider
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the private key in PEM-encoded format.</summary>
     [JsonPropertyName("privateKeySecretRef")]
     public V1beta1ServerCertificateSpecForProviderPrivateKeySecretRef? PrivateKeySecretRef { get; set; }
 
@@ -50,7 +50,7 @@ public partial class V1beta1ServerCertificateSpecForProvider
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>encoded format.</summary>
+/// <summary>The contents of the private key in PEM-encoded format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerCertificateSpecInitProviderPrivateKeySecretRef
 {
@@ -71,11 +71,11 @@ public partial class V1beta1ServerCertificateSpecInitProviderPrivateKeySecretRef
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerCertificateSpecInitProvider
 {
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the public key certificate in PEM-encoded format.</summary>
     [JsonPropertyName("certificateBody")]
     public string? CertificateBody { get; set; }
 
-    /// <summary>encoded public key certificates of the chain.</summary>
+    /// <summary>The contents of the certificate chain. This is typically a concatenation of the PEM-encoded public key certificates of the chain.</summary>
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 
@@ -83,7 +83,7 @@ public partial class V1beta1ServerCertificateSpecInitProvider
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the private key in PEM-encoded format.</summary>
     [JsonPropertyName("privateKeySecretRef")]
     public V1beta1ServerCertificateSpecInitProviderPrivateKeySecretRef PrivateKeySecretRef { get; set; }
 
@@ -232,11 +232,11 @@ public partial class V1beta1ServerCertificateStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>encoded format.</summary>
+    /// <summary>The contents of the public key certificate in PEM-encoded format.</summary>
     [JsonPropertyName("certificateBody")]
     public string? CertificateBody { get; set; }
 
-    /// <summary>encoded public key certificates of the chain.</summary>
+    /// <summary>The contents of the certificate chain. This is typically a concatenation of the PEM-encoded public key certificates of the chain.</summary>
     [JsonPropertyName("certificateChain")]
     public string? CertificateChain { get; set; }
 

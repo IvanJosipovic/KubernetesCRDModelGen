@@ -68,11 +68,11 @@ public partial class V1beta1SubnetGroupSpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetGroupSpecForProvider
 {
-    /// <summary>–  Description for the cache subnet group.</summary>
+    /// <summary>Description for the cache subnet group.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -84,7 +84,7 @@ public partial class V1beta1SubnetGroupSpecForProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetGroupSpecForProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  List of VPC Subnet IDs for the cache subnet group</summary>
+    /// <summary>List of VPC Subnet IDs for the cache subnet group</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
@@ -153,7 +153,7 @@ public partial class V1beta1SubnetGroupSpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetGroupSpecInitProvider
 {
-    /// <summary>–  Description for the cache subnet group.</summary>
+    /// <summary>Description for the cache subnet group.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -165,7 +165,7 @@ public partial class V1beta1SubnetGroupSpecInitProvider
     [JsonPropertyName("subnetIdSelector")]
     public V1beta1SubnetGroupSpecInitProviderSubnetIdSelector? SubnetIdSelector { get; set; }
 
-    /// <summary>–  List of VPC Subnet IDs for the cache subnet group</summary>
+    /// <summary>List of VPC Subnet IDs for the cache subnet group</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 
@@ -314,7 +314,7 @@ public partial class V1beta1SubnetGroupStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  Description for the cache subnet group.</summary>
+    /// <summary>Description for the cache subnet group.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -322,7 +322,11 @@ public partial class V1beta1SubnetGroupStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  List of VPC Subnet IDs for the cache subnet group</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>List of VPC Subnet IDs for the cache subnet group</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
 

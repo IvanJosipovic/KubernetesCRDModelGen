@@ -100,6 +100,10 @@ public partial class V1beta1LaunchTemplateSpecForProviderBlockDeviceMappingsEbs
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 
+    /// <summary>The volume initialization rate in MiB/s (specified as an integer, e.g. 100), with a minimum of 100 MiB/s and maximum of 300 MiB/s.</summary>
+    [JsonPropertyName("volumeInitializationRate")]
+    public double? VolumeInitializationRate { get; set; }
+
     /// <summary>The size of the volume in gigabytes.</summary>
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
@@ -180,24 +184,6 @@ public partial class V1beta1LaunchTemplateSpecForProviderCreditSpecification
     /// <summary>The credit option for CPU usage. Can be standard or unlimited. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.</summary>
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LaunchTemplateSpecForProviderElasticGpuSpecifications
-{
-    /// <summary>The Elastic GPU Type</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LaunchTemplateSpecForProviderElasticInferenceAccelerator
-{
-    /// <summary>Accelerator type.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
 }
 
 /// <summary></summary>
@@ -602,7 +588,7 @@ public partial class V1beta1LaunchTemplateSpecForProviderInstanceRequirements
     [JsonPropertyName("requireHibernateSupport")]
     public bool? RequireHibernateSupport { get; set; }
 
-    /// <summary>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as 999999. Default is 100.</summary>
+    /// <summary>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as 999999. Default is 100. Conflicts with max_spot_price_as_percentage_of_optimal_on_demand_price</summary>
     [JsonPropertyName("spotMaxPricePercentageOverLowestPrice")]
     public double? SpotMaxPricePercentageOverLowestPrice { get; set; }
 
@@ -665,6 +651,45 @@ public partial class V1beta1LaunchTemplateSpecForProviderMonitoring
     /// <summary>If true, the launched EC2 instance will have detailed monitoring enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesConnectionTrackingSpecification
+{
+    /// <summary>Timeout (in seconds) for idle TCP connections in an established state. Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less than 432000 seconds.</summary>
+    [JsonPropertyName("tcpEstablishedTimeout")]
+    public double? TcpEstablishedTimeout { get; set; }
+
+    /// <summary>Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction or a single request-response transaction. Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.</summary>
+    [JsonPropertyName("udpStreamTimeout")]
+    public double? UdpStreamTimeout { get; set; }
+
+    /// <summary>Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one request-response transaction. Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.</summary>
+    [JsonPropertyName("udpTimeout")]
+    public double? UdpTimeout { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification
+{
+    /// <summary>Whether to enable UDP traffic optimization through ENA Express. Requires ena_srd_enabled to be true.</summary>
+    [JsonPropertyName("enaSrdUdpEnabled")]
+    public bool? EnaSrdUdpEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecification
+{
+    /// <summary>Whether to enable ENA Express. ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to improve the performance of TCP traffic.</summary>
+    [JsonPropertyName("enaSrdEnabled")]
+    public bool? EnaSrdEnabled { get; set; }
+
+    /// <summary>Configuration for ENA Express UDP optimization. See details below.</summary>
+    [JsonPropertyName("enaSrdUdpSpecification")]
+    public IList<V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification>? EnaSrdUdpSpecification { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -847,6 +872,10 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfaces
     [JsonPropertyName("associatePublicIpAddress")]
     public string? AssociatePublicIpAddress { get; set; }
 
+    /// <summary>The Connection Tracking Configuration for the network interface. See Amazon EC2 security group connection tracking</summary>
+    [JsonPropertyName("connectionTrackingSpecification")]
+    public IList<V1beta1LaunchTemplateSpecForProviderNetworkInterfacesConnectionTrackingSpecification>? ConnectionTrackingSpecification { get; set; }
+
     /// <summary>Whether the network interface should be destroyed on instance termination.</summary>
     [JsonPropertyName("deleteOnTermination")]
     public string? DeleteOnTermination { get; set; }
@@ -858,6 +887,10 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfaces
     /// <summary>The integer index of the network interface attachment.</summary>
     [JsonPropertyName("deviceIndex")]
     public double? DeviceIndex { get; set; }
+
+    /// <summary>Configuration for Elastic Network Adapter (ENA) Express settings. Applies to network interfaces that use the ena Express feature. See details below.</summary>
+    [JsonPropertyName("enaSrdSpecification")]
+    public IList<V1beta1LaunchTemplateSpecForProviderNetworkInterfacesEnaSrdSpecification>? EnaSrdSpecification { get; set; }
 
     /// <summary>The type of network interface. To create an Elastic Fabric Adapter (EFA), specify efa.</summary>
     [JsonPropertyName("interfaceType")]
@@ -911,7 +944,7 @@ public partial class V1beta1LaunchTemplateSpecForProviderNetworkInterfaces
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1LaunchTemplateSpecForProviderNetworkInterfacesNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Whether the first IPv6 GUA will be made the primary IPv6 address.</summary>
     [JsonPropertyName("primaryIpv6")]
     public string? PrimaryIpv6 { get; set; }
 
@@ -1163,14 +1196,6 @@ public partial class V1beta1LaunchTemplateSpecForProvider
     [JsonPropertyName("ebsOptimized")]
     public string? EbsOptimized { get; set; }
 
-    /// <summary>The elastic GPU to attach to the instance. See Elastic GPU below for more details.</summary>
-    [JsonPropertyName("elasticGpuSpecifications")]
-    public IList<V1beta1LaunchTemplateSpecForProviderElasticGpuSpecifications>? ElasticGpuSpecifications { get; set; }
-
-    /// <summary>Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.</summary>
-    [JsonPropertyName("elasticInferenceAccelerator")]
-    public IList<V1beta1LaunchTemplateSpecForProviderElasticInferenceAccelerator>? ElasticInferenceAccelerator { get; set; }
-
     /// <summary>Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.</summary>
     [JsonPropertyName("enclaveOptions")]
     public IList<V1beta1LaunchTemplateSpecForProviderEnclaveOptions>? EnclaveOptions { get; set; }
@@ -1183,7 +1208,7 @@ public partial class V1beta1LaunchTemplateSpecForProvider
     [JsonPropertyName("iamInstanceProfile")]
     public IList<V1beta1LaunchTemplateSpecForProviderIamInstanceProfile>? IamInstanceProfile { get; set; }
 
-    /// <summary>The AMI from which to launch the instance.</summary>
+    /// <summary>The AMI from which to launch the instance or use a Systems Manager parameter convention e.g. resolve:ssm:parameter-name. See docs for more details.</summary>
     [JsonPropertyName("imageId")]
     public string? ImageId { get; set; }
 
@@ -1247,7 +1272,7 @@ public partial class V1beta1LaunchTemplateSpecForProvider
     [JsonPropertyName("ramDiskId")]
     public string? RamDiskId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1384,6 +1409,10 @@ public partial class V1beta1LaunchTemplateSpecInitProviderBlockDeviceMappingsEbs
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 
+    /// <summary>The volume initialization rate in MiB/s (specified as an integer, e.g. 100), with a minimum of 100 MiB/s and maximum of 300 MiB/s.</summary>
+    [JsonPropertyName("volumeInitializationRate")]
+    public double? VolumeInitializationRate { get; set; }
+
     /// <summary>The size of the volume in gigabytes.</summary>
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
@@ -1464,24 +1493,6 @@ public partial class V1beta1LaunchTemplateSpecInitProviderCreditSpecification
     /// <summary>The credit option for CPU usage. Can be standard or unlimited. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.</summary>
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LaunchTemplateSpecInitProviderElasticGpuSpecifications
-{
-    /// <summary>The Elastic GPU Type</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LaunchTemplateSpecInitProviderElasticInferenceAccelerator
-{
-    /// <summary>Accelerator type.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
 }
 
 /// <summary></summary>
@@ -1886,7 +1897,7 @@ public partial class V1beta1LaunchTemplateSpecInitProviderInstanceRequirements
     [JsonPropertyName("requireHibernateSupport")]
     public bool? RequireHibernateSupport { get; set; }
 
-    /// <summary>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as 999999. Default is 100.</summary>
+    /// <summary>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as 999999. Default is 100. Conflicts with max_spot_price_as_percentage_of_optimal_on_demand_price</summary>
     [JsonPropertyName("spotMaxPricePercentageOverLowestPrice")]
     public double? SpotMaxPricePercentageOverLowestPrice { get; set; }
 
@@ -1949,6 +1960,45 @@ public partial class V1beta1LaunchTemplateSpecInitProviderMonitoring
     /// <summary>If true, the launched EC2 instance will have detailed monitoring enabled.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesConnectionTrackingSpecification
+{
+    /// <summary>Timeout (in seconds) for idle TCP connections in an established state. Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less than 432000 seconds.</summary>
+    [JsonPropertyName("tcpEstablishedTimeout")]
+    public double? TcpEstablishedTimeout { get; set; }
+
+    /// <summary>Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction or a single request-response transaction. Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.</summary>
+    [JsonPropertyName("udpStreamTimeout")]
+    public double? UdpStreamTimeout { get; set; }
+
+    /// <summary>Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one request-response transaction. Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.</summary>
+    [JsonPropertyName("udpTimeout")]
+    public double? UdpTimeout { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification
+{
+    /// <summary>Whether to enable UDP traffic optimization through ENA Express. Requires ena_srd_enabled to be true.</summary>
+    [JsonPropertyName("enaSrdUdpEnabled")]
+    public bool? EnaSrdUdpEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecification
+{
+    /// <summary>Whether to enable ENA Express. ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to improve the performance of TCP traffic.</summary>
+    [JsonPropertyName("enaSrdEnabled")]
+    public bool? EnaSrdEnabled { get; set; }
+
+    /// <summary>Configuration for ENA Express UDP optimization. See details below.</summary>
+    [JsonPropertyName("enaSrdUdpSpecification")]
+    public IList<V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification>? EnaSrdUdpSpecification { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2131,6 +2181,10 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfaces
     [JsonPropertyName("associatePublicIpAddress")]
     public string? AssociatePublicIpAddress { get; set; }
 
+    /// <summary>The Connection Tracking Configuration for the network interface. See Amazon EC2 security group connection tracking</summary>
+    [JsonPropertyName("connectionTrackingSpecification")]
+    public IList<V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesConnectionTrackingSpecification>? ConnectionTrackingSpecification { get; set; }
+
     /// <summary>Whether the network interface should be destroyed on instance termination.</summary>
     [JsonPropertyName("deleteOnTermination")]
     public string? DeleteOnTermination { get; set; }
@@ -2142,6 +2196,10 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfaces
     /// <summary>The integer index of the network interface attachment.</summary>
     [JsonPropertyName("deviceIndex")]
     public double? DeviceIndex { get; set; }
+
+    /// <summary>Configuration for Elastic Network Adapter (ENA) Express settings. Applies to network interfaces that use the ena Express feature. See details below.</summary>
+    [JsonPropertyName("enaSrdSpecification")]
+    public IList<V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesEnaSrdSpecification>? EnaSrdSpecification { get; set; }
 
     /// <summary>The type of network interface. To create an Elastic Fabric Adapter (EFA), specify efa.</summary>
     [JsonPropertyName("interfaceType")]
@@ -2195,7 +2253,7 @@ public partial class V1beta1LaunchTemplateSpecInitProviderNetworkInterfaces
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1LaunchTemplateSpecInitProviderNetworkInterfacesNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Whether the first IPv6 GUA will be made the primary IPv6 address.</summary>
     [JsonPropertyName("primaryIpv6")]
     public string? PrimaryIpv6 { get; set; }
 
@@ -2447,14 +2505,6 @@ public partial class V1beta1LaunchTemplateSpecInitProvider
     [JsonPropertyName("ebsOptimized")]
     public string? EbsOptimized { get; set; }
 
-    /// <summary>The elastic GPU to attach to the instance. See Elastic GPU below for more details.</summary>
-    [JsonPropertyName("elasticGpuSpecifications")]
-    public IList<V1beta1LaunchTemplateSpecInitProviderElasticGpuSpecifications>? ElasticGpuSpecifications { get; set; }
-
-    /// <summary>Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.</summary>
-    [JsonPropertyName("elasticInferenceAccelerator")]
-    public IList<V1beta1LaunchTemplateSpecInitProviderElasticInferenceAccelerator>? ElasticInferenceAccelerator { get; set; }
-
     /// <summary>Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.</summary>
     [JsonPropertyName("enclaveOptions")]
     public IList<V1beta1LaunchTemplateSpecInitProviderEnclaveOptions>? EnclaveOptions { get; set; }
@@ -2467,7 +2517,7 @@ public partial class V1beta1LaunchTemplateSpecInitProvider
     [JsonPropertyName("iamInstanceProfile")]
     public IList<V1beta1LaunchTemplateSpecInitProviderIamInstanceProfile>? IamInstanceProfile { get; set; }
 
-    /// <summary>The AMI from which to launch the instance.</summary>
+    /// <summary>The AMI from which to launch the instance or use a Systems Manager parameter convention e.g. resolve:ssm:parameter-name. See docs for more details.</summary>
     [JsonPropertyName("imageId")]
     public string? ImageId { get; set; }
 
@@ -2732,6 +2782,10 @@ public partial class V1beta1LaunchTemplateStatusAtProviderBlockDeviceMappingsEbs
     [JsonPropertyName("throughput")]
     public double? Throughput { get; set; }
 
+    /// <summary>The volume initialization rate in MiB/s (specified as an integer, e.g. 100), with a minimum of 100 MiB/s and maximum of 300 MiB/s.</summary>
+    [JsonPropertyName("volumeInitializationRate")]
+    public double? VolumeInitializationRate { get; set; }
+
     /// <summary>The size of the volume in gigabytes.</summary>
     [JsonPropertyName("volumeSize")]
     public double? VolumeSize { get; set; }
@@ -2812,24 +2866,6 @@ public partial class V1beta1LaunchTemplateStatusAtProviderCreditSpecification
     /// <summary>The credit option for CPU usage. Can be standard or unlimited. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.</summary>
     [JsonPropertyName("cpuCredits")]
     public string? CpuCredits { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LaunchTemplateStatusAtProviderElasticGpuSpecifications
-{
-    /// <summary>The Elastic GPU Type</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1LaunchTemplateStatusAtProviderElasticInferenceAccelerator
-{
-    /// <summary>Accelerator type.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
 }
 
 /// <summary></summary>
@@ -3106,7 +3142,7 @@ public partial class V1beta1LaunchTemplateStatusAtProviderInstanceRequirements
     [JsonPropertyName("requireHibernateSupport")]
     public bool? RequireHibernateSupport { get; set; }
 
-    /// <summary>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as 999999. Default is 100.</summary>
+    /// <summary>The price protection threshold for Spot Instances. This is the maximum you’ll pay for a Spot Instance, expressed as a percentage higher than the cheapest M, C, or R instance type with your specified attributes. When Amazon EC2 Auto Scaling selects instance types with your attributes, we will exclude instance types whose price is higher than your threshold. The parameter accepts an integer, which Amazon EC2 Auto Scaling interprets as a percentage. To turn off price protection, specify a high value, such as 999999. Default is 100. Conflicts with max_spot_price_as_percentage_of_optimal_on_demand_price</summary>
     [JsonPropertyName("spotMaxPricePercentageOverLowestPrice")]
     public double? SpotMaxPricePercentageOverLowestPrice { get; set; }
 
@@ -3173,6 +3209,45 @@ public partial class V1beta1LaunchTemplateStatusAtProviderMonitoring
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesConnectionTrackingSpecification
+{
+    /// <summary>Timeout (in seconds) for idle TCP connections in an established state. Min: 60 seconds. Max: 432000 seconds (5 days). Default: 432000 seconds. Recommended: Less than 432000 seconds.</summary>
+    [JsonPropertyName("tcpEstablishedTimeout")]
+    public double? TcpEstablishedTimeout { get; set; }
+
+    /// <summary>Timeout (in seconds) for idle UDP flows that have seen traffic only in a single direction or a single request-response transaction. Min: 30 seconds. Max: 60 seconds. Default: 30 seconds.</summary>
+    [JsonPropertyName("udpStreamTimeout")]
+    public double? UdpStreamTimeout { get; set; }
+
+    /// <summary>Timeout (in seconds) for idle UDP flows classified as streams which have seen more than one request-response transaction. Min: 60 seconds. Max: 180 seconds (3 minutes). Default: 180 seconds.</summary>
+    [JsonPropertyName("udpTimeout")]
+    public double? UdpTimeout { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification
+{
+    /// <summary>Whether to enable UDP traffic optimization through ENA Express. Requires ena_srd_enabled to be true.</summary>
+    [JsonPropertyName("enaSrdUdpEnabled")]
+    public bool? EnaSrdUdpEnabled { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecification
+{
+    /// <summary>Whether to enable ENA Express. ENA Express uses AWS Scalable Reliable Datagram (SRD) technology to improve the performance of TCP traffic.</summary>
+    [JsonPropertyName("enaSrdEnabled")]
+    public bool? EnaSrdEnabled { get; set; }
+
+    /// <summary>Configuration for ENA Express UDP optimization. See details below.</summary>
+    [JsonPropertyName("enaSrdUdpSpecification")]
+    public IList<V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecificationEnaSrdUdpSpecification>? EnaSrdUdpSpecification { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfaces
 {
     /// <summary>Associate a Carrier IP address with eth0 for a new network interface. Use this option when you launch an instance in a Wavelength Zone and want to associate a Carrier IP address with the network interface. Boolean value, can be left unset.</summary>
@@ -3182,6 +3257,10 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfaces
     /// <summary>Associate a public ip address with the network interface. Boolean value, can be left unset.</summary>
     [JsonPropertyName("associatePublicIpAddress")]
     public string? AssociatePublicIpAddress { get; set; }
+
+    /// <summary>The Connection Tracking Configuration for the network interface. See Amazon EC2 security group connection tracking</summary>
+    [JsonPropertyName("connectionTrackingSpecification")]
+    public IList<V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesConnectionTrackingSpecification>? ConnectionTrackingSpecification { get; set; }
 
     /// <summary>Whether the network interface should be destroyed on instance termination.</summary>
     [JsonPropertyName("deleteOnTermination")]
@@ -3194,6 +3273,10 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfaces
     /// <summary>The integer index of the network interface attachment.</summary>
     [JsonPropertyName("deviceIndex")]
     public double? DeviceIndex { get; set; }
+
+    /// <summary>Configuration for Elastic Network Adapter (ENA) Express settings. Applies to network interfaces that use the ena Express feature. See details below.</summary>
+    [JsonPropertyName("enaSrdSpecification")]
+    public IList<V1beta1LaunchTemplateStatusAtProviderNetworkInterfacesEnaSrdSpecification>? EnaSrdSpecification { get; set; }
 
     /// <summary>The type of network interface. To create an Elastic Fabric Adapter (EFA), specify efa.</summary>
     [JsonPropertyName("interfaceType")]
@@ -3239,7 +3322,7 @@ public partial class V1beta1LaunchTemplateStatusAtProviderNetworkInterfaces
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Whether the first IPv6 GUA will be made the primary IPv6 address.</summary>
     [JsonPropertyName("primaryIpv6")]
     public string? PrimaryIpv6 { get; set; }
 
@@ -3367,14 +3450,6 @@ public partial class V1beta1LaunchTemplateStatusAtProvider
     [JsonPropertyName("ebsOptimized")]
     public string? EbsOptimized { get; set; }
 
-    /// <summary>The elastic GPU to attach to the instance. See Elastic GPU below for more details.</summary>
-    [JsonPropertyName("elasticGpuSpecifications")]
-    public IList<V1beta1LaunchTemplateStatusAtProviderElasticGpuSpecifications>? ElasticGpuSpecifications { get; set; }
-
-    /// <summary>Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.</summary>
-    [JsonPropertyName("elasticInferenceAccelerator")]
-    public IList<V1beta1LaunchTemplateStatusAtProviderElasticInferenceAccelerator>? ElasticInferenceAccelerator { get; set; }
-
     /// <summary>Enable Nitro Enclaves on launched instances. See Enclave Options below for more details.</summary>
     [JsonPropertyName("enclaveOptions")]
     public IList<V1beta1LaunchTemplateStatusAtProviderEnclaveOptions>? EnclaveOptions { get; set; }
@@ -3391,7 +3466,7 @@ public partial class V1beta1LaunchTemplateStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The AMI from which to launch the instance.</summary>
+    /// <summary>The AMI from which to launch the instance or use a Systems Manager parameter convention e.g. resolve:ssm:parameter-name. See docs for more details.</summary>
     [JsonPropertyName("imageId")]
     public string? ImageId { get; set; }
 
@@ -3458,6 +3533,10 @@ public partial class V1beta1LaunchTemplateStatusAtProvider
     /// <summary>The ID of the RAM disk.</summary>
     [JsonPropertyName("ramDiskId")]
     public string? RamDiskId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A list of security group names to associate with. If you are creating Instances in a VPC, use vpc_security_group_ids instead.</summary>
     [JsonPropertyName("securityGroupNames")]

@@ -97,7 +97,7 @@ public partial class V1beta1VaultSpecForProvider
     [JsonPropertyName("notification")]
     public IList<V1beta1VaultSpecForProviderNotification>? Notification { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -368,6 +368,10 @@ public partial class V1beta1VaultStatusAtProvider
     /// <summary>The notifications for the Vault. Fields documented below.</summary>
     [JsonPropertyName("notification")]
     public IList<V1beta1VaultStatusAtProviderNotification>? Notification { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an asynchronous invocation configuration for a Lambda Function or Alias.
+        description: FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an AWS Lambda Function Event Invoke Config.
         properties:
           apiVersion:
             description: >-
@@ -85,15 +85,15 @@ spec:
               forProvider:
                 properties:
                   destinationConfig:
-                    description: Configuration block with destination configuration. See below for details.
+                    description: Configuration block with destination configuration. See below.
                     items:
                       properties:
                         onFailure:
-                          description: Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+                          description: Configuration block with destination configuration for failed asynchronous invocations. See below.
                           items:
                             properties:
                               destination:
-                                description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                                description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                                 type: string
                               destinationRef:
                                 description: Reference to a Queue in sqs to populate destination.
@@ -184,11 +184,11 @@ spec:
                             type: object
                           type: array
                         onSuccess:
-                          description: Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+                          description: Configuration block with destination configuration for successful asynchronous invocations. See below.
                           items:
                             properties:
                               destination:
-                                description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                                description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                                 type: string
                               destinationRef:
                                 description: Reference to a Topic in sns to populate destination.
@@ -281,7 +281,7 @@ spec:
                       type: object
                     type: array
                   functionName:
-                    description: Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+                    description: Name or ARN of the Lambda Function, omitting any version or alias qualifier.
                     type: string
                   maximumEventAgeInSeconds:
                     description: Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
@@ -293,7 +293,10 @@ spec:
                     description: Lambda Function published version, $LATEST, or Lambda Alias name.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -321,15 +324,15 @@ spec:
                   autoscaler.
                 properties:
                   destinationConfig:
-                    description: Configuration block with destination configuration. See below for details.
+                    description: Configuration block with destination configuration. See below.
                     items:
                       properties:
                         onFailure:
-                          description: Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+                          description: Configuration block with destination configuration for failed asynchronous invocations. See below.
                           items:
                             properties:
                               destination:
-                                description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                                description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                                 type: string
                               destinationRef:
                                 description: Reference to a Queue in sqs to populate destination.
@@ -420,11 +423,11 @@ spec:
                             type: object
                           type: array
                         onSuccess:
-                          description: Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+                          description: Configuration block with destination configuration for successful asynchronous invocations. See below.
                           items:
                             properties:
                               destination:
-                                description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                                description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                                 type: string
                               destinationRef:
                                 description: Reference to a Topic in sns to populate destination.
@@ -517,7 +520,7 @@ spec:
                       type: object
                     type: array
                   functionName:
-                    description: Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+                    description: Name or ARN of the Lambda Function, omitting any version or alias qualifier.
                     type: string
                   maximumEventAgeInSeconds:
                     description: Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
@@ -746,34 +749,34 @@ spec:
               atProvider:
                 properties:
                   destinationConfig:
-                    description: Configuration block with destination configuration. See below for details.
+                    description: Configuration block with destination configuration. See below.
                     items:
                       properties:
                         onFailure:
-                          description: Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+                          description: Configuration block with destination configuration for failed asynchronous invocations. See below.
                           items:
                             properties:
                               destination:
-                                description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                                description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                                 type: string
                             type: object
                           type: array
                         onSuccess:
-                          description: Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+                          description: Configuration block with destination configuration for successful asynchronous invocations. See below.
                           items:
                             properties:
                               destination:
-                                description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                                description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                                 type: string
                             type: object
                           type: array
                       type: object
                     type: array
                   functionName:
-                    description: Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+                    description: Name or ARN of the Lambda Function, omitting any version or alias qualifier.
                     type: string
                   id:
-                    description: Fully qualified Lambda Function name or Amazon Resource Name (ARN)
+                    description: Fully qualified Lambda Function name or ARN.
                     type: string
                   maximumEventAgeInSeconds:
                     description: Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
@@ -783,6 +786,12 @@ spec:
                     type: number
                   qualifier:
                     description: Lambda Function published version, $LATEST, or Lambda Alias name.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:
@@ -867,7 +876,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an asynchronous invocation configuration for a Lambda Function or Alias.
+        description: FunctionEventInvokeConfig is the Schema for the FunctionEventInvokeConfigs API. Manages an AWS Lambda Function Event Invoke Config.
         properties:
           apiVersion:
             description: >-
@@ -919,13 +928,13 @@ spec:
               forProvider:
                 properties:
                   destinationConfig:
-                    description: Configuration block with destination configuration. See below for details.
+                    description: Configuration block with destination configuration. See below.
                     properties:
                       onFailure:
-                        description: Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+                        description: Configuration block with destination configuration for failed asynchronous invocations. See below.
                         properties:
                           destination:
-                            description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                            description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                             type: string
                           destinationRef:
                             description: Reference to a Queue in sqs to populate destination.
@@ -1015,10 +1024,10 @@ spec:
                             type: object
                         type: object
                       onSuccess:
-                        description: Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+                        description: Configuration block with destination configuration for successful asynchronous invocations. See below.
                         properties:
                           destination:
-                            description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                            description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                             type: string
                           destinationRef:
                             description: Reference to a Topic in sns to populate destination.
@@ -1109,7 +1118,7 @@ spec:
                         type: object
                     type: object
                   functionName:
-                    description: Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+                    description: Name or ARN of the Lambda Function, omitting any version or alias qualifier.
                     type: string
                   maximumEventAgeInSeconds:
                     description: Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
@@ -1121,7 +1130,10 @@ spec:
                     description: Lambda Function published version, $LATEST, or Lambda Alias name.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -1149,13 +1161,13 @@ spec:
                   autoscaler.
                 properties:
                   destinationConfig:
-                    description: Configuration block with destination configuration. See below for details.
+                    description: Configuration block with destination configuration. See below.
                     properties:
                       onFailure:
-                        description: Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+                        description: Configuration block with destination configuration for failed asynchronous invocations. See below.
                         properties:
                           destination:
-                            description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                            description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                             type: string
                           destinationRef:
                             description: Reference to a Queue in sqs to populate destination.
@@ -1245,10 +1257,10 @@ spec:
                             type: object
                         type: object
                       onSuccess:
-                        description: Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+                        description: Configuration block with destination configuration for successful asynchronous invocations. See below.
                         properties:
                           destination:
-                            description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                            description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                             type: string
                           destinationRef:
                             description: Reference to a Topic in sns to populate destination.
@@ -1339,7 +1351,7 @@ spec:
                         type: object
                     type: object
                   functionName:
-                    description: Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+                    description: Name or ARN of the Lambda Function, omitting any version or alias qualifier.
                     type: string
                   maximumEventAgeInSeconds:
                     description: Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
@@ -1568,28 +1580,28 @@ spec:
               atProvider:
                 properties:
                   destinationConfig:
-                    description: Configuration block with destination configuration. See below for details.
+                    description: Configuration block with destination configuration. See below.
                     properties:
                       onFailure:
-                        description: Configuration block with destination configuration for failed asynchronous invocations. See below for details.
+                        description: Configuration block with destination configuration for failed asynchronous invocations. See below.
                         properties:
                           destination:
-                            description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                            description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                             type: string
                         type: object
                       onSuccess:
-                        description: Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+                        description: Configuration block with destination configuration for successful asynchronous invocations. See below.
                         properties:
                           destination:
-                            description: Amazon Resource Name (ARN) of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
+                            description: ARN of the destination resource. See the Lambda Developer Guide for acceptable resource types and associated IAM permissions.
                             type: string
                         type: object
                     type: object
                   functionName:
-                    description: Name or Amazon Resource Name (ARN) of the Lambda Function, omitting any version or alias qualifier.
+                    description: Name or ARN of the Lambda Function, omitting any version or alias qualifier.
                     type: string
                   id:
-                    description: Fully qualified Lambda Function name or Amazon Resource Name (ARN)
+                    description: Fully qualified Lambda Function name or ARN.
                     type: string
                   maximumEventAgeInSeconds:
                     description: Maximum age of a request that Lambda sends to a function for processing in seconds. Valid values between 60 and 21600.
@@ -1599,6 +1611,12 @@ spec:
                     type: number
                   qualifier:
                     description: Lambda Function published version, $LATEST, or Lambda Alias name.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

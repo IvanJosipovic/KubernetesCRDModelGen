@@ -20,7 +20,7 @@ public partial class V1beta1ApprovalRuleTemplateSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -201,6 +201,10 @@ public partial class V1beta1ApprovalRuleTemplateStatusAtProvider
     /// <summary>The Amazon Resource Name (ARN) of the user who made the most recent changes to the approval rule template.</summary>
     [JsonPropertyName("lastModifiedUser")]
     public string? LastModifiedUser { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The SHA-256 hash signature for the content of the approval rule template.</summary>
     [JsonPropertyName("ruleContentSha256")]

@@ -152,7 +152,7 @@ public partial class V1beta1ProductPortfolioAssociationSpecForProvider
     [JsonPropertyName("productIdSelector")]
     public V1beta1ProductPortfolioAssociationSpecForProviderProductIdSelector? ProductIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -461,6 +461,10 @@ public partial class V1beta1ProductPortfolioAssociationStatusAtProvider
     /// <summary>Product identifier.</summary>
     [JsonPropertyName("productId")]
     public string? ProductId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Identifier of the source portfolio.</summary>
     [JsonPropertyName("sourcePortfolioId")]

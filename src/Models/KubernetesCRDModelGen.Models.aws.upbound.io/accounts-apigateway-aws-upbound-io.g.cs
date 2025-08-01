@@ -80,13 +80,9 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("cloudwatchRoleArnSelector")]
     public V1beta1AccountSpecForProviderCloudwatchRoleArnSelector? CloudwatchRoleArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
-
-    /// <summary>If true, destroying the resource will reset account settings to default, otherwise account settings are not modified. Defaults to false. Will be removed in a future major version of the provider.</summary>
-    [JsonPropertyName("resetOnDelete")]
-    public bool? ResetOnDelete { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -160,10 +156,6 @@ public partial class V1beta1AccountSpecInitProvider
     /// <summary>Selector for a Role in iam to populate cloudwatchRoleArn.</summary>
     [JsonPropertyName("cloudwatchRoleArnSelector")]
     public V1beta1AccountSpecInitProviderCloudwatchRoleArnSelector? CloudwatchRoleArnSelector { get; set; }
-
-    /// <summary>If true, destroying the resource will reset account settings to default, otherwise account settings are not modified. Defaults to false. Will be removed in a future major version of the provider.</summary>
-    [JsonPropertyName("resetOnDelete")]
-    public bool? ResetOnDelete { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -331,9 +323,9 @@ public partial class V1beta1AccountStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>If true, destroying the resource will reset account settings to default, otherwise account settings are not modified. Defaults to false. Will be removed in a future major version of the provider.</summary>
-    [JsonPropertyName("resetOnDelete")]
-    public bool? ResetOnDelete { get; set; }
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Account-Level throttle settings. See exported fields below.</summary>
     [JsonPropertyName("throttleSettings")]

@@ -212,7 +212,7 @@ public partial class V1beta1MethodSpecForProvider
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -657,6 +657,10 @@ public partial class V1beta1MethodStatusAtProvider
     /// <summary>Function name that will be given to the method when generating an SDK through API Gateway. If omitted, API Gateway will generate a function name based on the resource path and HTTP verb.</summary>
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Map of the API models used for the request's content type where key is the content type (e.g., application/json) and value is either Error, Empty (built-in models) or aws_api_gateway_model's name.</summary>
     [JsonPropertyName("requestModels")]

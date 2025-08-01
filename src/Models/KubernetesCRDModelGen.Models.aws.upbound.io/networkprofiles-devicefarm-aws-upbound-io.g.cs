@@ -104,7 +104,7 @@ public partial class V1beta1NetworkProfileSpecForProvider
     [JsonPropertyName("projectArnSelector")]
     public V1beta1NetworkProfileSpecForProviderProjectArnSelector? ProjectArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -425,6 +425,10 @@ public partial class V1beta1NetworkProfileStatusAtProvider
     /// <summary>The ARN of the project for the network profile.</summary>
     [JsonPropertyName("projectArn")]
     public string? ProjectArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

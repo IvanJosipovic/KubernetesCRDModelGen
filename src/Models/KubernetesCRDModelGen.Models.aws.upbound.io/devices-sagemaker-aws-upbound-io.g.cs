@@ -85,7 +85,7 @@ public partial class V1beta1DeviceSpecForProviderDeviceFleetNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecForProvider
 {
-    /// <summary>The device to register with SageMaker Edge Manager. See Device details below.</summary>
+    /// <summary>The device to register with SageMaker AI Edge Manager. See Device details below.</summary>
     [JsonPropertyName("device")]
     public IList<V1beta1DeviceSpecForProviderDevice>? Device { get; set; }
 
@@ -101,7 +101,7 @@ public partial class V1beta1DeviceSpecForProvider
     [JsonPropertyName("deviceFleetNameSelector")]
     public V1beta1DeviceSpecForProviderDeviceFleetNameSelector? DeviceFleetNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -183,7 +183,7 @@ public partial class V1beta1DeviceSpecInitProviderDeviceFleetNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecInitProvider
 {
-    /// <summary>The device to register with SageMaker Edge Manager. See Device details below.</summary>
+    /// <summary>The device to register with SageMaker AI Edge Manager. See Device details below.</summary>
     [JsonPropertyName("device")]
     public IList<V1beta1DeviceSpecInitProviderDevice>? Device { get; set; }
 
@@ -361,7 +361,7 @@ public partial class V1beta1DeviceStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The device to register with SageMaker Edge Manager. See Device details below.</summary>
+    /// <summary>The device to register with SageMaker AI Edge Manager. See Device details below.</summary>
     [JsonPropertyName("device")]
     public IList<V1beta1DeviceStatusAtProviderDevice>? Device { get; set; }
 
@@ -372,6 +372,10 @@ public partial class V1beta1DeviceStatusAtProvider
     /// <summary>The id is constructed from device-fleet-name/device-name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -420,7 +424,7 @@ public partial class V1beta1DeviceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Device is the Schema for the Devices API. Provides a SageMaker Device resource.</summary>
+/// <summary>Device is the Schema for the Devices API. Provides a SageMaker AI Device resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Device : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DeviceSpec>, IStatus<V1beta1DeviceStatus>
@@ -450,7 +454,7 @@ public partial class V1beta1Device : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     public V1beta1DeviceStatus? Status { get; set; }
 }
 
-/// <summary>Device is the Schema for the Devices API. Provides a SageMaker Device resource.</summary>
+/// <summary>Device is the Schema for the Devices API. Provides a SageMaker AI Device resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DeviceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Device>

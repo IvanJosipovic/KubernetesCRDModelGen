@@ -16,7 +16,7 @@ public partial class V1beta1VocabularyFilterSpecForProvider
     [JsonPropertyName("languageCode")]
     public string? LanguageCode { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -205,6 +205,10 @@ public partial class V1beta1VocabularyFilterStatusAtProvider
     /// <summary>The language code you selected for your vocabulary filter. Refer to the supported languages page for accepted codes.</summary>
     [JsonPropertyName("languageCode")]
     public string? LanguageCode { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

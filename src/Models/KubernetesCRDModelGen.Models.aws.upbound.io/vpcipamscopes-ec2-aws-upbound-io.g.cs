@@ -84,7 +84,7 @@ public partial class V1beta1VPCIpamScopeSpecForProvider
     [JsonPropertyName("ipamIdSelector")]
     public V1beta1VPCIpamScopeSpecForProviderIpamIdSelector? IpamIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -341,6 +341,10 @@ public partial class V1beta1VPCIpamScopeStatusAtProvider
     /// <summary>The number of pools in the scope.</summary>
     [JsonPropertyName("poolCount")]
     public double? PoolCount { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

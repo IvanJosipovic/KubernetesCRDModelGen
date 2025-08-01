@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   architecture:
-                    description: Machine architecture for created instances. Defaults to "x86_64".
+                    description: Machine architecture for created instances. Defaults to x86_64.
                     type: string
                   bootMode:
                     description: Boot mode of the AMI. For more information, see Boot modes in the Amazon Elastic Compute Cloud User Guide.
@@ -280,7 +280,10 @@ spec:
                       created instances.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootDeviceName:
                     description: Name of the root device (for example, /dev/sda1, or /dev/xvda).
@@ -299,6 +302,9 @@ spec:
                     x-kubernetes-map-type: granular
                   tpmSupport:
                     description: If the image is configured for NitroTPM support, the value is v2.0. For more information, see NitroTPM in the Amazon Elastic Compute Cloud User Guide.
+                    type: string
+                  uefiData:
+                    description: Base64 representation of the non-volatile UEFI variable store.
                     type: string
                   virtualizationType:
                     description: >-
@@ -334,7 +340,7 @@ spec:
                   autoscaler.
                 properties:
                   architecture:
-                    description: Machine architecture for created instances. Defaults to "x86_64".
+                    description: Machine architecture for created instances. Defaults to x86_64.
                     type: string
                   bootMode:
                     description: Boot mode of the AMI. For more information, see Boot modes in the Amazon Elastic Compute Cloud User Guide.
@@ -545,6 +551,9 @@ spec:
                     x-kubernetes-map-type: granular
                   tpmSupport:
                     description: If the image is configured for NitroTPM support, the value is v2.0. For more information, see NitroTPM in the Amazon Elastic Compute Cloud User Guide.
+                    type: string
+                  uefiData:
+                    description: Base64 representation of the non-volatile UEFI variable store.
                     type: string
                   virtualizationType:
                     description: >-
@@ -772,7 +781,7 @@ spec:
               atProvider:
                 properties:
                   architecture:
-                    description: Machine architecture for created instances. Defaults to "x86_64".
+                    description: Machine architecture for created instances. Defaults to x86_64.
                     type: string
                   arn:
                     description: ARN of the AMI.
@@ -886,6 +895,9 @@ spec:
 
                       kernel in created instances.
                     type: string
+                  lastLaunchedTime:
+                    description: (Computed) Date and time, in ISO 8601 date-time format , when the AMI was last used to launch an EC2 instance. When the AMI is used to launch an instance, there is a 24-hour delay before that usage is reported. For more information, see the following AWS document.
+                    type: string
                   manageEbsSnapshots:
                     type: boolean
                   name:
@@ -908,6 +920,12 @@ spec:
                       ID of an initrd image (ARI) that will be used when booting the
 
                       created instances.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootDeviceName:
                     description: Name of the root device (for example, /dev/sda1, or /dev/xvda).
@@ -935,6 +953,9 @@ spec:
                     x-kubernetes-map-type: granular
                   tpmSupport:
                     description: If the image is configured for NitroTPM support, the value is v2.0. For more information, see NitroTPM in the Amazon Elastic Compute Cloud User Guide.
+                    type: string
+                  uefiData:
+                    description: Base64 representation of the non-volatile UEFI variable store.
                     type: string
                   usageOperation:
                     description: Operation of the Amazon EC2 instance and the billing code that is associated with the AMI.

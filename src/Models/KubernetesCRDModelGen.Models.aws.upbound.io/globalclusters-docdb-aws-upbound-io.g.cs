@@ -88,7 +88,7 @@ public partial class V1beta1GlobalClusterSpecForProvider
     [JsonPropertyName("globalClusterIdentifier")]
     public string? GlobalClusterIdentifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -390,6 +390,10 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     /// <summary>DocumentDB Global Cluster ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]

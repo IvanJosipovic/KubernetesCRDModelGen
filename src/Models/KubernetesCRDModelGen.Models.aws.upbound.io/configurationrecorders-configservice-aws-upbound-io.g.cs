@@ -59,7 +59,7 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingModeRec
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Default reecording frequency. CONTINUOUS or DAILY.</summary>
+    /// <summary>Default recording frequency. CONTINUOUS or DAILY.</summary>
     [JsonPropertyName("recordingFrequency")]
     public string? RecordingFrequency { get; set; }
 
@@ -72,7 +72,7 @@ public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingModeRec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecForProviderRecordingMode
 {
-    /// <summary>Default reecording frequency. CONTINUOUS or DAILY.</summary>
+    /// <summary>Default recording frequency. CONTINUOUS or DAILY.</summary>
     [JsonPropertyName("recordingFrequency")]
     public string? RecordingFrequency { get; set; }
 
@@ -149,7 +149,7 @@ public partial class V1beta1ConfigurationRecorderSpecForProvider
     [JsonPropertyName("recordingMode")]
     public IList<V1beta1ConfigurationRecorderSpecForProviderRecordingMode>? RecordingMode { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -217,7 +217,7 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingModeRe
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Default reecording frequency. CONTINUOUS or DAILY.</summary>
+    /// <summary>Default recording frequency. CONTINUOUS or DAILY.</summary>
     [JsonPropertyName("recordingFrequency")]
     public string? RecordingFrequency { get; set; }
 
@@ -230,7 +230,7 @@ public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingModeRe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderSpecInitProviderRecordingMode
 {
-    /// <summary>Default reecording frequency. CONTINUOUS or DAILY.</summary>
+    /// <summary>Default recording frequency. CONTINUOUS or DAILY.</summary>
     [JsonPropertyName("recordingFrequency")]
     public string? RecordingFrequency { get; set; }
 
@@ -503,7 +503,7 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingModeRe
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Default reecording frequency. CONTINUOUS or DAILY.</summary>
+    /// <summary>Default recording frequency. CONTINUOUS or DAILY.</summary>
     [JsonPropertyName("recordingFrequency")]
     public string? RecordingFrequency { get; set; }
 
@@ -516,7 +516,7 @@ public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingModeRe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationRecorderStatusAtProviderRecordingMode
 {
-    /// <summary>Default reecording frequency. CONTINUOUS or DAILY.</summary>
+    /// <summary>Default recording frequency. CONTINUOUS or DAILY.</summary>
     [JsonPropertyName("recordingFrequency")]
     public string? RecordingFrequency { get; set; }
 
@@ -540,6 +540,10 @@ public partial class V1beta1ConfigurationRecorderStatusAtProvider
     /// <summary>Recording mode - see below.</summary>
     [JsonPropertyName("recordingMode")]
     public IList<V1beta1ConfigurationRecorderStatusAtProviderRecordingMode>? RecordingMode { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of the IAM role. Used to make read or write requests to the delivery channel and to describe the AWS resources associated with the account. See AWS Docs for more details.</summary>
     [JsonPropertyName("roleArn")]

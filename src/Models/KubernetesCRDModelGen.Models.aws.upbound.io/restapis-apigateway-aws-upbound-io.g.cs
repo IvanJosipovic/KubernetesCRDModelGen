@@ -68,6 +68,10 @@ public partial class V1beta1RestAPISpecForProviderEndpointConfigurationVpcEndpoi
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecForProviderEndpointConfiguration
 {
+    /// <summary>The IP address types that can invoke an API (RestApi). Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke an API, or use dualstack to allow both IPv4 and IPv6 addresses to invoke an API. For the PRIVATE endpoint type, only dualstack is supported.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>List of endpoint types. This resource currently only supports managing a single value. Valid values: EDGE, REGIONAL or PRIVATE. If unspecified, defaults to EDGE. If set to PRIVATE recommend to set put_rest_api_mode = merge to not cause the endpoints and associated Route53 records to be deleted. Refer to the documentation for more information on the difference between edge-optimized and regional APIs.</summary>
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
@@ -133,7 +137,7 @@ public partial class V1beta1RestAPISpecForProvider
     [JsonPropertyName("putRestApiMode")]
     public string? PutRestApiMode { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -202,6 +206,10 @@ public partial class V1beta1RestAPISpecInitProviderEndpointConfigurationVpcEndpo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPISpecInitProviderEndpointConfiguration
 {
+    /// <summary>The IP address types that can invoke an API (RestApi). Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke an API, or use dualstack to allow both IPv4 and IPv6 addresses to invoke an API. For the PRIVATE endpoint type, only dualstack is supported.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>List of endpoint types. This resource currently only supports managing a single value. Valid values: EDGE, REGIONAL or PRIVATE. If unspecified, defaults to EDGE. If set to PRIVATE recommend to set put_rest_api_mode = merge to not cause the endpoints and associated Route53 records to be deleted. Refer to the documentation for more information on the difference between edge-optimized and regional APIs.</summary>
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
@@ -408,6 +416,10 @@ public partial class V1beta1RestAPISpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RestAPIStatusAtProviderEndpointConfiguration
 {
+    /// <summary>The IP address types that can invoke an API (RestApi). Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke an API, or use dualstack to allow both IPv4 and IPv6 addresses to invoke an API. For the PRIVATE endpoint type, only dualstack is supported.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>List of endpoint types. This resource currently only supports managing a single value. Valid values: EDGE, REGIONAL or PRIVATE. If unspecified, defaults to EDGE. If set to PRIVATE recommend to set put_rest_api_mode = merge to not cause the endpoints and associated Route53 records to be deleted. Refer to the documentation for more information on the difference between edge-optimized and regional APIs.</summary>
     [JsonPropertyName("types")]
     public IList<string>? Types { get; set; }
@@ -484,6 +496,10 @@ public partial class V1beta1RestAPIStatusAtProvider
     /// <summary>Mode of the PutRestApi operation when importing an OpenAPI specification via the body argument (create or update operation). Valid values are merge and overwrite. If unspecificed, defaults to overwrite (for backwards compatibility). This corresponds to the x-amazon-apigateway-put-integration-method extension. If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value.</summary>
     [JsonPropertyName("putRestApiMode")]
     public string? PutRestApiMode { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Resource ID of the REST API's root</summary>
     [JsonPropertyName("rootResourceId")]

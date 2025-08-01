@@ -92,11 +92,11 @@ public partial class V1beta1GlobalClusterSpecForProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
+    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. NOTE: After initial creation, this argument can be removed and replaced with engine and engine_version. This allows upgrading the engine version of the Global Cluster.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]
     public string? SourceDbClusterIdentifier { get; set; }
 
@@ -201,7 +201,7 @@ public partial class V1beta1GlobalClusterSpecInitProvider
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
+    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. NOTE: After initial creation, this argument can be removed and replaced with engine and engine_version. This allows upgrading the engine version of the Global Cluster.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]
     public string? SourceDbClusterIdentifier { get; set; }
 
@@ -419,7 +419,11 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation. NOTE: After initial creation, this argument can be removed and replaced with engine and engine_version. This allows upgrading the engine version of the Global Cluster.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]
     public string? SourceDbClusterIdentifier { get; set; }
 

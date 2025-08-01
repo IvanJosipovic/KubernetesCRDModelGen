@@ -32,7 +32,7 @@ public partial class V1beta1MemberSpecForProvider
     [JsonPropertyName("invite")]
     public bool? Invite { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -254,6 +254,10 @@ public partial class V1beta1MemberStatusAtProvider
     [JsonPropertyName("masterAccountId")]
     public string? MasterAccountId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The current status of the relationship between the account and the administrator account.</summary>
     [JsonPropertyName("relationshipStatus")]
     public string? RelationshipStatus { get; set; }
@@ -266,7 +270,7 @@ public partial class V1beta1MemberStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary></summary>
+    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 

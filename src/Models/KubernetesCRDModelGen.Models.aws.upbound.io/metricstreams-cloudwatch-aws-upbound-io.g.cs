@@ -208,7 +208,7 @@ public partial class V1beta1MetricStreamSpecForProvider
     [JsonPropertyName("outputFormat")]
     public string? OutputFormat { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -681,6 +681,10 @@ public partial class V1beta1MetricStreamStatusAtProvider
     /// <summary>Output format for the stream. Possible values are json, opentelemetry0.7, and opentelemetry1.0. For more information about output formats, see Metric streams output formats.</summary>
     [JsonPropertyName("outputFormat")]
     public string? OutputFormat { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the IAM role that this metric stream will use to access Amazon Kinesis Firehose resources. For more information about role permissions, see Trust between CloudWatch and Kinesis Data Firehose.</summary>
     [JsonPropertyName("roleArn")]

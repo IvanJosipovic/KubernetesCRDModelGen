@@ -192,7 +192,10 @@ spec:
                     description: The language code you selected for your language model. Refer to the supported languages page for accepted codes.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -586,6 +589,12 @@ spec:
                   languageCode:
                     description: The language code you selected for your language model. Refer to the supported languages page for accepted codes.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -837,7 +846,10 @@ spec:
                     description: The language code you selected for your language model. Refer to the supported languages page for accepted codes.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -1226,6 +1238,12 @@ spec:
                     type: object
                   languageCode:
                     description: The language code you selected for your language model. Refer to the supported languages page for accepted codes.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:

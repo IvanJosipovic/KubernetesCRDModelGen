@@ -102,6 +102,17 @@ spec:
                   dataCompressionType:
                     description: Sets the data compression configuration for the file system. Valid values are LZ4 and NONE. Default value is NONE. Unsetting this value reverts the compression type back to NONE.
                     type: string
+                  dataReadCacheConfiguration:
+                    items:
+                      properties:
+                        size:
+                          description: Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.
+                          type: number
+                        sizingMode:
+                          description: Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.
+                          type: string
+                      type: object
+                    type: array
                   deploymentType:
                     description: '- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.'
                     type: string
@@ -219,7 +230,7 @@ spec:
                         type: object
                     type: object
                   logConfiguration:
-                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.
                     items:
                       properties:
                         destination:
@@ -231,23 +242,28 @@ spec:
                       type: object
                     type: array
                   metadataConfiguration:
-                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.
-                    properties:
-                      iops:
-                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
-                        type: number
-                      mode:
-                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.
-                        type: string
-                    type: object
+                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
+                    items:
+                      properties:
+                        iops:
+                          description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.
+                          type: number
+                        mode:
+                          description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.
+                          type: string
+                      type: object
+                    type: array
                   perUnitStorageThroughput:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootSquashConfiguration:
-                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.
+                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     items:
                       properties:
                         noSquashNids:
@@ -363,7 +379,7 @@ spec:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
                   storageType:
-                    description: '- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.'
+                    description: '- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.'
                     type: string
                   subnetIdRefs:
                     description: References to Subnet in ec2 to populate subnetIds.
@@ -465,6 +481,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  throughputCapacity:
+                    description: Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.
+                    type: number
                   weeklyMaintenanceStartTime:
                     description: The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.
                     type: string
@@ -511,6 +530,17 @@ spec:
                   dataCompressionType:
                     description: Sets the data compression configuration for the file system. Valid values are LZ4 and NONE. Default value is NONE. Unsetting this value reverts the compression type back to NONE.
                     type: string
+                  dataReadCacheConfiguration:
+                    items:
+                      properties:
+                        size:
+                          description: Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.
+                          type: number
+                        sizingMode:
+                          description: Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.
+                          type: string
+                      type: object
+                    type: array
                   deploymentType:
                     description: '- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.'
                     type: string
@@ -628,7 +658,7 @@ spec:
                         type: object
                     type: object
                   logConfiguration:
-                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.
                     items:
                       properties:
                         destination:
@@ -640,20 +670,22 @@ spec:
                       type: object
                     type: array
                   metadataConfiguration:
-                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.
-                    properties:
-                      iops:
-                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
-                        type: number
-                      mode:
-                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.
-                        type: string
-                    type: object
+                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
+                    items:
+                      properties:
+                        iops:
+                          description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.
+                          type: number
+                        mode:
+                          description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.
+                          type: string
+                      type: object
+                    type: array
                   perUnitStorageThroughput:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
                   rootSquashConfiguration:
-                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.
+                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     items:
                       properties:
                         noSquashNids:
@@ -769,7 +801,7 @@ spec:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
                   storageType:
-                    description: '- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.'
+                    description: '- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.'
                     type: string
                   subnetIdRefs:
                     description: References to Subnet in ec2 to populate subnetIds.
@@ -871,6 +903,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  throughputCapacity:
+                    description: Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.
+                    type: number
                   weeklyMaintenanceStartTime:
                     description: The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.
                     type: string
@@ -1109,6 +1144,17 @@ spec:
                   dataCompressionType:
                     description: Sets the data compression configuration for the file system. Valid values are LZ4 and NONE. Default value is NONE. Unsetting this value reverts the compression type back to NONE.
                     type: string
+                  dataReadCacheConfiguration:
+                    items:
+                      properties:
+                        size:
+                          description: Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.
+                          type: number
+                        sizingMode:
+                          description: Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.
+                          type: string
+                      type: object
+                    type: array
                   deploymentType:
                     description: '- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.'
                     type: string
@@ -1146,7 +1192,7 @@ spec:
                     description: ARN for the KMS Key to encrypt the file system at rest, applicable for PERSISTENT_1 and PERSISTENT_2 deployment_type. Defaults to an AWS managed KMS Key.
                     type: string
                   logConfiguration:
-                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs.
+                    description: The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon CloudWatch Logs. See log_configuration Block for details.
                     items:
                       properties:
                         destination:
@@ -1158,15 +1204,17 @@ spec:
                       type: object
                     type: array
                   metadataConfiguration:
-                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See Metadata Configuration below.
-                    properties:
-                      iops:
-                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
-                        type: number
-                      mode:
-                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.
-                        type: string
-                    type: object
+                    description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
+                    items:
+                      properties:
+                        iops:
+                          description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.
+                          type: number
+                        mode:
+                          description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.
+                          type: string
+                      type: object
+                    type: array
                   mountName:
                     description: The value to be used when mounting the filesystem.
                     type: string
@@ -1181,8 +1229,14 @@ spec:
                   perUnitStorageThroughput:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   rootSquashConfiguration:
-                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user.
+                    description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     items:
                       properties:
                         noSquashNids:
@@ -1209,7 +1263,7 @@ spec:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
                   storageType:
-                    description: '- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.'
+                    description: '- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.'
                     type: string
                   subnetIds:
                     description: A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
@@ -1228,6 +1282,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  throughputCapacity:
+                    description: Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.
+                    type: number
                   vpcId:
                     description: Identifier of the Virtual Private Cloud for the file system.
                     type: string
@@ -1386,6 +1443,15 @@ spec:
                   dataCompressionType:
                     description: Sets the data compression configuration for the file system. Valid values are LZ4 and NONE. Default value is NONE. Unsetting this value reverts the compression type back to NONE.
                     type: string
+                  dataReadCacheConfiguration:
+                    properties:
+                      size:
+                        description: Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.
+                        type: number
+                      sizingMode:
+                        description: Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.
+                        type: string
+                    type: object
                   deploymentType:
                     description: '- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.'
                     type: string
@@ -1516,17 +1582,20 @@ spec:
                     description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
                     properties:
                       iops:
-                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
+                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.
                         type: number
                       mode:
-                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.
+                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.
                         type: string
                     type: object
                   perUnitStorageThroughput:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootSquashConfiguration:
                     description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
@@ -1643,7 +1712,7 @@ spec:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
                   storageType:
-                    description: '- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.'
+                    description: '- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.'
                     type: string
                   subnetIdRefs:
                     description: References to Subnet in ec2 to populate subnetIds.
@@ -1745,6 +1814,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  throughputCapacity:
+                    description: Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.
+                    type: number
                   weeklyMaintenanceStartTime:
                     description: The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.
                     type: string
@@ -1791,6 +1863,15 @@ spec:
                   dataCompressionType:
                     description: Sets the data compression configuration for the file system. Valid values are LZ4 and NONE. Default value is NONE. Unsetting this value reverts the compression type back to NONE.
                     type: string
+                  dataReadCacheConfiguration:
+                    properties:
+                      size:
+                        description: Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.
+                        type: number
+                      sizingMode:
+                        description: Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.
+                        type: string
+                    type: object
                   deploymentType:
                     description: '- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.'
                     type: string
@@ -1921,10 +2002,10 @@ spec:
                     description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
                     properties:
                       iops:
-                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
+                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.
                         type: number
                       mode:
-                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.
+                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.
                         type: string
                     type: object
                   perUnitStorageThroughput:
@@ -2045,7 +2126,7 @@ spec:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
                   storageType:
-                    description: '- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.'
+                    description: '- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.'
                     type: string
                   subnetIdRefs:
                     description: References to Subnet in ec2 to populate subnetIds.
@@ -2147,6 +2228,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  throughputCapacity:
+                    description: Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.
+                    type: number
                   weeklyMaintenanceStartTime:
                     description: The preferred start time (in d:HH:MM format) to perform weekly maintenance, in the UTC time zone.
                     type: string
@@ -2385,6 +2469,15 @@ spec:
                   dataCompressionType:
                     description: Sets the data compression configuration for the file system. Valid values are LZ4 and NONE. Default value is NONE. Unsetting this value reverts the compression type back to NONE.
                     type: string
+                  dataReadCacheConfiguration:
+                    properties:
+                      size:
+                        description: Size of the file system's SSD read cache, in gibibytes (GiB). Required when the sizing_mode is USER_PROVISIONED.
+                        type: number
+                      sizingMode:
+                        description: Sizing mode for the cache. Valud values are NO_CACHE, USER_PROVISIONED, and PROPORTIONAL_TO_THROUGHPUT_CAPACITY.
+                        type: string
+                    type: object
                   deploymentType:
                     description: '- The filesystem deployment type. One of: SCRATCH_1, SCRATCH_2, PERSISTENT_1, PERSISTENT_2.'
                     type: string
@@ -2435,10 +2528,10 @@ spec:
                     description: The Lustre metadata configuration used when creating an Amazon FSx for Lustre file system. This can be used to specify a user provisioned metadata scale. This is only supported when deployment_type is set to PERSISTENT_2. See metadata_configuration Block for details.
                     properties:
                       iops:
-                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000.
+                        description: Amount of IOPS provisioned for metadata. This parameter should only be used when the mode is set to USER_PROVISIONED. Valid Values are 1500,3000,6000 and 12000 through 192000 in increments of 12000. Valid values for INTELLIGENT_TIERING storage type are 6000 or 12000.
                         type: number
                       mode:
-                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED.
+                        description: Mode for the metadata configuration of the file system. Valid values are AUTOMATIC, and USER_PROVISIONED. Must be set to USER_PROVISIONED for INTELLIGENT_TIERING storage type.
                         type: string
                     type: object
                   mountName:
@@ -2455,6 +2548,12 @@ spec:
                   perUnitStorageThroughput:
                     description: '- Describes the amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB, required for the PERSISTENT_1 and PERSISTENT_2 deployment_type. Valid values for PERSISTENT_1 deployment_type and SSD storage_type are 50, 100, 200. Valid values for PERSISTENT_1 deployment_type and HDD storage_type are 12, 40. Valid values for PERSISTENT_2 deployment_type and  SSD storage_type are 125, 250, 500, 1000.'
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   rootSquashConfiguration:
                     description: The Lustre root squash configuration used when creating an Amazon FSx for Lustre file system. When enabled, root squash restricts root-level access from clients that try to access your file system as a root user. See root_squash_configuration Block for details.
                     properties:
@@ -2481,7 +2580,7 @@ spec:
                     description: The storage capacity (GiB) of the file system. Minimum of 1200. See more details at Allowed values for Fsx storage capacity. Update is allowed only for SCRATCH_2, PERSISTENT_1 and PERSISTENT_2 deployment types, See more details at Fsx Storage Capacity Update. Required when not creating filesystem for a backup.
                     type: number
                   storageType:
-                    description: '- The filesystem storage type. Either SSD or HDD, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types.'
+                    description: '- The filesystem storage type. One of SSD, HDD or INTELLIGENT_TIERING, defaults to SSD. HDD is only supported on PERSISTENT_1 deployment types. INTELLIGENT_TIERING requires data_read_cache_configuration and metadata_configuration to be set and is only supported for PERSISTENT_2 deployment types.'
                     type: string
                   subnetIds:
                     description: A list of IDs for the subnets that the file system will be accessible from. File systems currently support only one subnet. The file server is also launched in that subnet's Availability Zone.
@@ -2500,6 +2599,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  throughputCapacity:
+                    description: Throughput in MBps required for the INTELLIGENT_TIERING storage type. Must be 4000 or multiples of 4000.
+                    type: number
                   vpcId:
                     description: Identifier of the Virtual Private Cloud for the file system.
                     type: string

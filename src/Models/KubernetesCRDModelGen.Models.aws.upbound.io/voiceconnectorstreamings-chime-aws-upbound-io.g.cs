@@ -93,7 +93,7 @@ public partial class V1beta1VoiceConnectorStreamingSpecForProvider
     [JsonPropertyName("mediaInsightsConfiguration")]
     public IList<V1beta1VoiceConnectorStreamingSpecForProviderMediaInsightsConfiguration>? MediaInsightsConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -380,6 +380,10 @@ public partial class V1beta1VoiceConnectorStreamingStatusAtProvider
     /// <summary>The media insights configuration. See media_insights_configuration.</summary>
     [JsonPropertyName("mediaInsightsConfiguration")]
     public IList<V1beta1VoiceConnectorStreamingStatusAtProviderMediaInsightsConfiguration>? MediaInsightsConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The streaming notification targets. Valid Values: EventBridge | SNS | SQS</summary>
     [JsonPropertyName("streamingNotificationTargets")]

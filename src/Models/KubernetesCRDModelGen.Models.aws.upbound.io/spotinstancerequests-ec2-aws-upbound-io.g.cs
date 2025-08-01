@@ -393,25 +393,13 @@ public partial class V1beta1SpotInstanceRequestSpecForProvider
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360). The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates. Note that you can't specify an Availability Zone group or a launch group if you specify a duration.</summary>
-    [JsonPropertyName("blockDurationMinutes")]
-    public double? BlockDurationMinutes { get; set; }
-
     /// <summary></summary>
     [JsonPropertyName("capacityReservationSpecification")]
     public IList<V1beta1SpotInstanceRequestSpecForProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("cpuCoreCount")]
-    public double? CpuCoreCount { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("cpuOptions")]
     public IList<V1beta1SpotInstanceRequestSpecForProviderCpuOptions>? CpuOptions { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("cpuThreadsPerCore")]
-    public double? CpuThreadsPerCore { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("creditSpecification")]
@@ -529,7 +517,7 @@ public partial class V1beta1SpotInstanceRequestSpecForProvider
     [JsonPropertyName("privateIp")]
     public string? PrivateIp { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Spot Instance Requests support all the same arguments as aws_instance, with the addition of: Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1003,25 +991,13 @@ public partial class V1beta1SpotInstanceRequestSpecInitProvider
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360). The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates. Note that you can't specify an Availability Zone group or a launch group if you specify a duration.</summary>
-    [JsonPropertyName("blockDurationMinutes")]
-    public double? BlockDurationMinutes { get; set; }
-
     /// <summary></summary>
     [JsonPropertyName("capacityReservationSpecification")]
     public IList<V1beta1SpotInstanceRequestSpecInitProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("cpuCoreCount")]
-    public double? CpuCoreCount { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("cpuOptions")]
     public IList<V1beta1SpotInstanceRequestSpecInitProviderCpuOptions>? CpuOptions { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("cpuThreadsPerCore")]
-    public double? CpuThreadsPerCore { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("creditSpecification")]
@@ -1645,25 +1621,13 @@ public partial class V1beta1SpotInstanceRequestStatusAtProvider
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary>The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360). The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates. Note that you can't specify an Availability Zone group or a launch group if you specify a duration.</summary>
-    [JsonPropertyName("blockDurationMinutes")]
-    public double? BlockDurationMinutes { get; set; }
-
     /// <summary></summary>
     [JsonPropertyName("capacityReservationSpecification")]
     public IList<V1beta1SpotInstanceRequestStatusAtProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
 
     /// <summary></summary>
-    [JsonPropertyName("cpuCoreCount")]
-    public double? CpuCoreCount { get; set; }
-
-    /// <summary></summary>
     [JsonPropertyName("cpuOptions")]
     public IList<V1beta1SpotInstanceRequestStatusAtProviderCpuOptions>? CpuOptions { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("cpuThreadsPerCore")]
-    public double? CpuThreadsPerCore { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("creditSpecification")]
@@ -1812,6 +1776,10 @@ public partial class V1beta1SpotInstanceRequestStatusAtProvider
     /// <summary>The public IP address assigned to the instance, if applicable.</summary>
     [JsonPropertyName("publicIp")]
     public string? PublicIp { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Spot Instance Requests support all the same arguments as aws_instance, with the addition of: Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("rootBlockDevice")]

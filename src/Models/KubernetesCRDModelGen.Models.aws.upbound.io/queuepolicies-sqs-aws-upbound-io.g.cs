@@ -68,11 +68,11 @@ public partial class V1beta1QueuePolicySpecForProviderQueueUrlSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueuePolicySpecForProvider
 {
-    /// <summary>The JSON policy for the SQS queue.</summary>
+    /// <summary>JSON policy for the SQS queue. Ensure that Version = "2012-10-17" is set in the policy or AWS may hang in creating the queue.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>The URL of the SQS Queue to which to attach the policy</summary>
+    /// <summary>URL of the SQS Queue to which to attach the policy.</summary>
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 
@@ -84,7 +84,7 @@ public partial class V1beta1QueuePolicySpecForProvider
     [JsonPropertyName("queueUrlSelector")]
     public V1beta1QueuePolicySpecForProviderQueueUrlSelector? QueueUrlSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -149,11 +149,11 @@ public partial class V1beta1QueuePolicySpecInitProviderQueueUrlSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueuePolicySpecInitProvider
 {
-    /// <summary>The JSON policy for the SQS queue.</summary>
+    /// <summary>JSON policy for the SQS queue. Ensure that Version = "2012-10-17" is set in the policy or AWS may hang in creating the queue.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>The URL of the SQS Queue to which to attach the policy</summary>
+    /// <summary>URL of the SQS Queue to which to attach the policy.</summary>
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
 
@@ -306,13 +306,17 @@ public partial class V1beta1QueuePolicyStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The JSON policy for the SQS queue.</summary>
+    /// <summary>JSON policy for the SQS queue. Ensure that Version = "2012-10-17" is set in the policy or AWS may hang in creating the queue.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>The URL of the SQS Queue to which to attach the policy</summary>
+    /// <summary>URL of the SQS Queue to which to attach the policy.</summary>
     [JsonPropertyName("queueUrl")]
     public string? QueueUrl { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

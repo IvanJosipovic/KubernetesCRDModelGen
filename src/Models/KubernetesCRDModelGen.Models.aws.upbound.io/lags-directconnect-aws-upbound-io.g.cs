@@ -16,7 +16,7 @@ public partial class V1beta1LagSpecForProvider
     [JsonPropertyName("connectionId")]
     public string? ConnectionId { get; set; }
 
-    /// <summary>The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.</summary>
+    /// <summary>The bandwidth of the individual dedicated connections bundled by the LAG. Valid values: 1Gbps, 10Gbps, 100Gbps, and 400Gbps. Case sensitive. Refer to the AWS Direct Connection supported bandwidths for Dedicated Connections.</summary>
     [JsonPropertyName("connectionsBandwidth")]
     public string? ConnectionsBandwidth { get; set; }
 
@@ -36,7 +36,7 @@ public partial class V1beta1LagSpecForProvider
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -53,7 +53,7 @@ public partial class V1beta1LagSpecInitProvider
     [JsonPropertyName("connectionId")]
     public string? ConnectionId { get; set; }
 
-    /// <summary>The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.</summary>
+    /// <summary>The bandwidth of the individual dedicated connections bundled by the LAG. Valid values: 1Gbps, 10Gbps, 100Gbps, and 400Gbps. Case sensitive. Refer to the AWS Direct Connection supported bandwidths for Dedicated Connections.</summary>
     [JsonPropertyName("connectionsBandwidth")]
     public string? ConnectionsBandwidth { get; set; }
 
@@ -222,7 +222,7 @@ public partial class V1beta1LagStatusAtProvider
     [JsonPropertyName("connectionId")]
     public string? ConnectionId { get; set; }
 
-    /// <summary>The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.</summary>
+    /// <summary>The bandwidth of the individual dedicated connections bundled by the LAG. Valid values: 1Gbps, 10Gbps, 100Gbps, and 400Gbps. Case sensitive. Refer to the AWS Direct Connection supported bandwidths for Dedicated Connections.</summary>
     [JsonPropertyName("connectionsBandwidth")]
     public string? ConnectionsBandwidth { get; set; }
 
@@ -257,6 +257,10 @@ public partial class V1beta1LagStatusAtProvider
     /// <summary>The name of the service provider associated with the LAG.</summary>
     [JsonPropertyName("providerName")]
     public string? ProviderName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

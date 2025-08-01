@@ -72,11 +72,11 @@ public partial class V1beta1StreamConsumerSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the data stream the consumer is registered with.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the data stream the consumer is registered with.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 
@@ -87,6 +87,10 @@ public partial class V1beta1StreamConsumerSpecForProvider
     /// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
     [JsonPropertyName("streamArnSelector")]
     public V1beta1StreamConsumerSpecForProviderStreamArnSelector? StreamArnSelector { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -153,7 +157,7 @@ public partial class V1beta1StreamConsumerSpecInitProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the data stream the consumer is registered with.</summary>
+    /// <summary>Amazon Resource Name (ARN) of the data stream the consumer is registered with.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
 
@@ -164,6 +168,10 @@ public partial class V1beta1StreamConsumerSpecInitProvider
     /// <summary>Selector for a Stream in kinesis to populate streamArn.</summary>
     [JsonPropertyName("streamArnSelector")]
     public V1beta1StreamConsumerSpecInitProviderStreamArnSelector? StreamArnSelector { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -318,9 +326,21 @@ public partial class V1beta1StreamConsumerStatusAtProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>–  Amazon Resource Name (ARN) of the data stream the consumer is registered with.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Amazon Resource Name (ARN) of the data stream the consumer is registered with.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("tagsAll")]
+    public IDictionary<string, string>? TagsAll { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

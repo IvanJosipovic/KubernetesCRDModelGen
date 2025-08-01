@@ -232,7 +232,7 @@ public partial class V1beta1ReplicationInstanceSpecForProvider
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -709,6 +709,10 @@ public partial class V1beta1ReplicationInstanceStatusAtProvider
     /// <summary>Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.</summary>
     [JsonPropertyName("publiclyAccessible")]
     public bool? PubliclyAccessible { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the replication instance.</summary>
     [JsonPropertyName("replicationInstanceArn")]

@@ -20,7 +20,7 @@ public partial class V1beta1VocabularySpecForProvider
     [JsonPropertyName("phrases")]
     public IList<string>? Phrases { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -209,6 +209,10 @@ public partial class V1beta1VocabularyStatusAtProvider
     /// <summary>- A list of terms to include in the vocabulary. Conflicts with vocabulary_file_uri</summary>
     [JsonPropertyName("phrases")]
     public IList<string>? Phrases { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -80,7 +80,7 @@ public partial class V1beta1EBSSnapshotSpecForProvider
     [JsonPropertyName("permanentRestore")]
     public bool? PermanentRestore { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -381,6 +381,10 @@ public partial class V1beta1EBSSnapshotStatusAtProvider
     /// <summary>Indicates whether to permanently restore an archived snapshot.</summary>
     [JsonPropertyName("permanentRestore")]
     public bool? PermanentRestore { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the storage tier. Valid values are archive and standard. Default value is standard.</summary>
     [JsonPropertyName("storageTier")]

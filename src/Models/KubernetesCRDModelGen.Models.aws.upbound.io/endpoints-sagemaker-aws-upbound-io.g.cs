@@ -21,7 +21,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfiguration
 {
-    /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.</summary>
+    /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker AI rolls back the deployment. See Alarms.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
@@ -68,7 +68,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpda
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The length of the baking period, during which SageMaker monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
+    /// <summary>The length of the baking period, during which SageMaker AI monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
@@ -132,7 +132,7 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdate
     [JsonPropertyName("rollbackMaximumBatchSize")]
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize>? RollbackMaximumBatchSize { get; set; }
 
-    /// <summary>The length of the baking period, during which SageMaker monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
+    /// <summary>The length of the baking period, during which SageMaker AI monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
@@ -145,11 +145,11 @@ public partial class V1beta1EndpointSpecForProviderDeploymentConfig
     [JsonPropertyName("autoRollbackConfiguration")]
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigAutoRollbackConfiguration>? AutoRollbackConfiguration { get; set; }
 
-    /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
+    /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker AI creates a new fleet during the deployment while maintaining the old fleet. SageMaker AI flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker AI uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
     [JsonPropertyName("blueGreenUpdatePolicy")]
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigBlueGreenUpdatePolicy>? BlueGreenUpdatePolicy { get; set; }
 
-    /// <summary>Specifies a rolling deployment strategy for updating a SageMaker endpoint. See Rolling Update Policy.</summary>
+    /// <summary>Specifies a rolling deployment strategy for updating a SageMaker AI endpoint. See Rolling Update Policy.</summary>
     [JsonPropertyName("rollingUpdatePolicy")]
     public IList<V1beta1EndpointSpecForProviderDeploymentConfigRollingUpdatePolicy>? RollingUpdatePolicy { get; set; }
 }
@@ -230,7 +230,7 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("endpointConfigNameSelector")]
     public V1beta1EndpointSpecForProviderEndpointConfigNameSelector? EndpointConfigNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -252,7 +252,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollback
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfiguration
 {
-    /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.</summary>
+    /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker AI rolls back the deployment. See Alarms.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
@@ -299,7 +299,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The length of the baking period, during which SageMaker monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
+    /// <summary>The length of the baking period, during which SageMaker AI monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
@@ -363,7 +363,7 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("rollbackMaximumBatchSize")]
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize>? RollbackMaximumBatchSize { get; set; }
 
-    /// <summary>The length of the baking period, during which SageMaker monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
+    /// <summary>The length of the baking period, during which SageMaker AI monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
@@ -376,11 +376,11 @@ public partial class V1beta1EndpointSpecInitProviderDeploymentConfig
     [JsonPropertyName("autoRollbackConfiguration")]
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigAutoRollbackConfiguration>? AutoRollbackConfiguration { get; set; }
 
-    /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
+    /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker AI creates a new fleet during the deployment while maintaining the old fleet. SageMaker AI flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker AI uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
     [JsonPropertyName("blueGreenUpdatePolicy")]
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigBlueGreenUpdatePolicy>? BlueGreenUpdatePolicy { get; set; }
 
-    /// <summary>Specifies a rolling deployment strategy for updating a SageMaker endpoint. See Rolling Update Policy.</summary>
+    /// <summary>Specifies a rolling deployment strategy for updating a SageMaker AI endpoint. See Rolling Update Policy.</summary>
     [JsonPropertyName("rollingUpdatePolicy")]
     public IList<V1beta1EndpointSpecInitProviderDeploymentConfigRollingUpdatePolicy>? RollingUpdatePolicy { get; set; }
 }
@@ -611,7 +611,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollback
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfiguration
 {
-    /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker rolls back the deployment. See Alarms.</summary>
+    /// <summary>List of CloudWatch alarms in your account that are configured to monitor metrics on an endpoint. If any alarms are tripped during a deployment, SageMaker AI rolls back the deployment. See Alarms.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfigurationAlarms>? Alarms { get; set; }
 }
@@ -658,7 +658,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpd
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The length of the baking period, during which SageMaker monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
+    /// <summary>The length of the baking period, during which SageMaker AI monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
@@ -722,7 +722,7 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdat
     [JsonPropertyName("rollbackMaximumBatchSize")]
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicyRollbackMaximumBatchSize>? RollbackMaximumBatchSize { get; set; }
 
-    /// <summary>The length of the baking period, during which SageMaker monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
+    /// <summary>The length of the baking period, during which SageMaker AI monitors alarms for each batch on the new fleet. Valid values are between 0 and 3600.</summary>
     [JsonPropertyName("waitIntervalInSeconds")]
     public double? WaitIntervalInSeconds { get; set; }
 }
@@ -735,11 +735,11 @@ public partial class V1beta1EndpointStatusAtProviderDeploymentConfig
     [JsonPropertyName("autoRollbackConfiguration")]
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigAutoRollbackConfiguration>? AutoRollbackConfiguration { get; set; }
 
-    /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker creates a new fleet during the deployment while maintaining the old fleet. SageMaker flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
+    /// <summary>Update policy for a blue/green deployment. If this update policy is specified, SageMaker AI creates a new fleet during the deployment while maintaining the old fleet. SageMaker AI flips traffic to the new fleet according to the specified traffic routing configuration. Only one update policy should be used in the deployment configuration. If no update policy is specified, SageMaker AI uses a blue/green deployment strategy with all at once traffic shifting by default. See Blue Green Update Config.</summary>
     [JsonPropertyName("blueGreenUpdatePolicy")]
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigBlueGreenUpdatePolicy>? BlueGreenUpdatePolicy { get; set; }
 
-    /// <summary>Specifies a rolling deployment strategy for updating a SageMaker endpoint. See Rolling Update Policy.</summary>
+    /// <summary>Specifies a rolling deployment strategy for updating a SageMaker AI endpoint. See Rolling Update Policy.</summary>
     [JsonPropertyName("rollingUpdatePolicy")]
     public IList<V1beta1EndpointStatusAtProviderDeploymentConfigRollingUpdatePolicy>? RollingUpdatePolicy { get; set; }
 }
@@ -763,6 +763,10 @@ public partial class V1beta1EndpointStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -819,7 +823,7 @@ public partial class V1beta1EndpointStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker Endpoint resource.</summary>
+/// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker AI Endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EndpointSpec>, IStatus<V1beta1EndpointStatus>
@@ -849,7 +853,7 @@ public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     public V1beta1EndpointStatus? Status { get; set; }
 }
 
-/// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker Endpoint resource.</summary>
+/// <summary>Endpoint is the Schema for the Endpoints API. Provides a SageMaker AI Endpoint resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1EndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Endpoint>

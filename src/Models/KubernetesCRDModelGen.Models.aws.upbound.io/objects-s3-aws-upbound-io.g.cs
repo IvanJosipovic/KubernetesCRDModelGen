@@ -166,7 +166,7 @@ public partial class V1beta1ObjectSpecForProvider
     [JsonPropertyName("cacheControl")]
     public string? CacheControl { get; set; }
 
-    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, SHA1, SHA256.</summary>
+    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, CRC64NVME, SHA1, SHA256.</summary>
     [JsonPropertyName("checksumAlgorithm")]
     public string? ChecksumAlgorithm { get; set; }
 
@@ -238,7 +238,7 @@ public partial class V1beta1ObjectSpecForProvider
     [JsonPropertyName("overrideProvider")]
     public IList<V1beta1ObjectSpecForProviderOverrideProvider>? OverrideProvider { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -425,7 +425,7 @@ public partial class V1beta1ObjectSpecInitProvider
     [JsonPropertyName("cacheControl")]
     public string? CacheControl { get; set; }
 
-    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, SHA1, SHA256.</summary>
+    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, CRC64NVME, SHA1, SHA256.</summary>
     [JsonPropertyName("checksumAlgorithm")]
     public string? ChecksumAlgorithm { get; set; }
 
@@ -696,7 +696,7 @@ public partial class V1beta1ObjectStatusAtProvider
     [JsonPropertyName("cacheControl")]
     public string? CacheControl { get; set; }
 
-    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, SHA1, SHA256.</summary>
+    /// <summary>Indicates the algorithm used to create the checksum for the object. If a value is specified and the object is encrypted with KMS, you must have permission to use the kms:Decrypt action. Valid values: CRC32, CRC32C, CRC64NVME, SHA1, SHA256.</summary>
     [JsonPropertyName("checksumAlgorithm")]
     public string? ChecksumAlgorithm { get; set; }
 
@@ -707,6 +707,10 @@ public partial class V1beta1ObjectStatusAtProvider
     /// <summary>The base64-encoded, 32-bit CRC32C checksum of the object.</summary>
     [JsonPropertyName("checksumCrc32C")]
     public string? ChecksumCrc32C { get; set; }
+
+    /// <summary>The base64-encoded, 64-bit CRC64NVME checksum of the object.</summary>
+    [JsonPropertyName("checksumCrc64Nvme")]
+    public string? ChecksumCrc64Nvme { get; set; }
 
     /// <summary>The base64-encoded, 160-bit SHA-1 digest of the object.</summary>
     [JsonPropertyName("checksumSha1")]
@@ -779,6 +783,10 @@ public partial class V1beta1ObjectStatusAtProvider
     /// <summary>Override provider-level configuration options. See Override Provider below for more details.</summary>
     [JsonPropertyName("overrideProvider")]
     public IList<V1beta1ObjectStatusAtProviderOverrideProvider>? OverrideProvider { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Server-side encryption of the object in S3. Valid values are "AES256" and "aws:kms".</summary>
     [JsonPropertyName("serverSideEncryption")]

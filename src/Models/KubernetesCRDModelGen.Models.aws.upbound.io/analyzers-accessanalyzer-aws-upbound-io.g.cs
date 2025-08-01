@@ -10,9 +10,70 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.accessanalyzer.aws.upbound.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRuleInclusion
+{
+    /// <summary>List of AWS account IDs to apply to the internal access analysis rule criteria. Account IDs can only be applied to the analysis rule criteria for organization-level analyzers.</summary>
+    [JsonPropertyName("accountIds")]
+    public IList<string>? AccountIds { get; set; }
+
+    /// <summary>List of resource ARNs to apply to the internal access analysis rule criteria. The analyzer will only generate findings for resources that match these ARNs.</summary>
+    [JsonPropertyName("resourceArns")]
+    public IList<string>? ResourceArns { get; set; }
+
+    /// <summary>List of resource types to apply to the internal access analysis rule criteria. The analyzer will only generate findings for resources of these types. Refer to InternalAccessAnalysisRuleCriteria in the AWS IAM Access Analyzer API Reference for valid values.</summary>
+    [JsonPropertyName("resourceTypes")]
+    public IList<string>? ResourceTypes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRule
+{
+    /// <summary>List of rules for the internal access analyzer containing criteria to include in analysis. Only resources that meet the rule criteria will generate findings. See inclusion Block for details.</summary>
+    [JsonPropertyName("inclusion")]
+    public IList<V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRuleInclusion>? Inclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecForProviderConfigurationInternalAccess
+{
+    /// <summary>Information about analysis rules for the internal access analyzer. These rules determine which resources and access patterns will be analyzed. See analysis_rule Block for Internal Access Analyzer for details.</summary>
+    [JsonPropertyName("analysisRule")]
+    public IList<V1beta1AnalyzerSpecForProviderConfigurationInternalAccessAnalysisRule>? AnalysisRule { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRuleExclusion
+{
+    /// <summary>List of AWS account IDs to apply to the analysis rule criteria. The accounts cannot include the organization analyzer owner account. Account IDs can only be applied to the analysis rule criteria for organization-level analyzers.</summary>
+    [JsonPropertyName("accountIds")]
+    public IList<string>? AccountIds { get; set; }
+
+    /// <summary>List of key-value pairs for resource tags to exclude from the analysis.</summary>
+    [JsonPropertyName("resourceTags")]
+    public IList<IDictionary<string, string>>? ResourceTags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRule
+{
+    /// <summary>List of rules for the analyzer containing criteria to exclude from analysis. Entities that meet the rule criteria will not generate findings. See exclusion Block for details.</summary>
+    [JsonPropertyName("exclusion")]
+    public IList<V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRuleExclusion>? Exclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccess
 {
-    /// <summary>The specified access age in days for which to generate findings for unused access.</summary>
+    /// <summary>Information about analysis rules for the analyzer. Analysis rules determine which entities will generate findings based on the criteria you define when you create the rule. See analysis_rule Block for Unused Access Analyzer for details.</summary>
+    [JsonPropertyName("analysisRule")]
+    public IList<V1beta1AnalyzerSpecForProviderConfigurationUnusedAccessAnalysisRule>? AnalysisRule { get; set; }
+
+    /// <summary>Specified access age in days for which to generate findings for unused access.</summary>
     [JsonPropertyName("unusedAccessAge")]
     public double? UnusedAccessAge { get; set; }
 }
@@ -21,7 +82,11 @@ public partial class V1beta1AnalyzerSpecForProviderConfigurationUnusedAccess
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProviderConfiguration
 {
-    /// <summary>A block that specifies the configuration of an unused access analyzer for an AWS organization or account. Documented below</summary>
+    /// <summary>Specifies the configuration of an internal access analyzer for an AWS organization or account. This configuration determines how the analyzer evaluates access within your AWS environment. See internal_access Block for details.</summary>
+    [JsonPropertyName("internalAccess")]
+    public IList<V1beta1AnalyzerSpecForProviderConfigurationInternalAccess>? InternalAccess { get; set; }
+
+    /// <summary>Specifies the configuration of an unused access analyzer for an AWS organization or account. See unused_access Block for details.</summary>
     [JsonPropertyName("unusedAccess")]
     public IList<V1beta1AnalyzerSpecForProviderConfigurationUnusedAccess>? UnusedAccess { get; set; }
 }
@@ -30,11 +95,11 @@ public partial class V1beta1AnalyzerSpecForProviderConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecForProvider
 {
-    /// <summary>A block that specifies the configuration of the analyzer. Documented below</summary>
+    /// <summary>A block that specifies the configuration of the analyzer. See configuration Block for details.</summary>
     [JsonPropertyName("configuration")]
     public IList<V1beta1AnalyzerSpecForProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -42,16 +107,77 @@ public partial class V1beta1AnalyzerSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Type of Analyzer. Valid values are ACCOUNT, ORGANIZATION, ACCOUNT_UNUSED_ACCESS , ORGANIZATION_UNUSED_ACCESS. Defaults to ACCOUNT.</summary>
+    /// <summary>Type that represents the zone of trust or scope for the analyzer. Valid values are ACCOUNT, ACCOUNT_INTERNAL_ACCESS, ACCOUNT_UNUSED_ACCESS, ORGANIZATION, ORGANIZATION_INTERNAL_ACCESS, ORGANIZATION_UNUSED_ACCESS. Defaults to ACCOUNT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRuleInclusion
+{
+    /// <summary>List of AWS account IDs to apply to the internal access analysis rule criteria. Account IDs can only be applied to the analysis rule criteria for organization-level analyzers.</summary>
+    [JsonPropertyName("accountIds")]
+    public IList<string>? AccountIds { get; set; }
+
+    /// <summary>List of resource ARNs to apply to the internal access analysis rule criteria. The analyzer will only generate findings for resources that match these ARNs.</summary>
+    [JsonPropertyName("resourceArns")]
+    public IList<string>? ResourceArns { get; set; }
+
+    /// <summary>List of resource types to apply to the internal access analysis rule criteria. The analyzer will only generate findings for resources of these types. Refer to InternalAccessAnalysisRuleCriteria in the AWS IAM Access Analyzer API Reference for valid values.</summary>
+    [JsonPropertyName("resourceTypes")]
+    public IList<string>? ResourceTypes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRule
+{
+    /// <summary>List of rules for the internal access analyzer containing criteria to include in analysis. Only resources that meet the rule criteria will generate findings. See inclusion Block for details.</summary>
+    [JsonPropertyName("inclusion")]
+    public IList<V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRuleInclusion>? Inclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecInitProviderConfigurationInternalAccess
+{
+    /// <summary>Information about analysis rules for the internal access analyzer. These rules determine which resources and access patterns will be analyzed. See analysis_rule Block for Internal Access Analyzer for details.</summary>
+    [JsonPropertyName("analysisRule")]
+    public IList<V1beta1AnalyzerSpecInitProviderConfigurationInternalAccessAnalysisRule>? AnalysisRule { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRuleExclusion
+{
+    /// <summary>List of AWS account IDs to apply to the analysis rule criteria. The accounts cannot include the organization analyzer owner account. Account IDs can only be applied to the analysis rule criteria for organization-level analyzers.</summary>
+    [JsonPropertyName("accountIds")]
+    public IList<string>? AccountIds { get; set; }
+
+    /// <summary>List of key-value pairs for resource tags to exclude from the analysis.</summary>
+    [JsonPropertyName("resourceTags")]
+    public IList<IDictionary<string, string>>? ResourceTags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRule
+{
+    /// <summary>List of rules for the analyzer containing criteria to exclude from analysis. Entities that meet the rule criteria will not generate findings. See exclusion Block for details.</summary>
+    [JsonPropertyName("exclusion")]
+    public IList<V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRuleExclusion>? Exclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccess
 {
-    /// <summary>The specified access age in days for which to generate findings for unused access.</summary>
+    /// <summary>Information about analysis rules for the analyzer. Analysis rules determine which entities will generate findings based on the criteria you define when you create the rule. See analysis_rule Block for Unused Access Analyzer for details.</summary>
+    [JsonPropertyName("analysisRule")]
+    public IList<V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccessAnalysisRule>? AnalysisRule { get; set; }
+
+    /// <summary>Specified access age in days for which to generate findings for unused access.</summary>
     [JsonPropertyName("unusedAccessAge")]
     public double? UnusedAccessAge { get; set; }
 }
@@ -60,7 +186,11 @@ public partial class V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccess
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProviderConfiguration
 {
-    /// <summary>A block that specifies the configuration of an unused access analyzer for an AWS organization or account. Documented below</summary>
+    /// <summary>Specifies the configuration of an internal access analyzer for an AWS organization or account. This configuration determines how the analyzer evaluates access within your AWS environment. See internal_access Block for details.</summary>
+    [JsonPropertyName("internalAccess")]
+    public IList<V1beta1AnalyzerSpecInitProviderConfigurationInternalAccess>? InternalAccess { get; set; }
+
+    /// <summary>Specifies the configuration of an unused access analyzer for an AWS organization or account. See unused_access Block for details.</summary>
     [JsonPropertyName("unusedAccess")]
     public IList<V1beta1AnalyzerSpecInitProviderConfigurationUnusedAccess>? UnusedAccess { get; set; }
 }
@@ -69,7 +199,7 @@ public partial class V1beta1AnalyzerSpecInitProviderConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerSpecInitProvider
 {
-    /// <summary>A block that specifies the configuration of the analyzer. Documented below</summary>
+    /// <summary>A block that specifies the configuration of the analyzer. See configuration Block for details.</summary>
     [JsonPropertyName("configuration")]
     public IList<V1beta1AnalyzerSpecInitProviderConfiguration>? Configuration { get; set; }
 
@@ -77,7 +207,7 @@ public partial class V1beta1AnalyzerSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Type of Analyzer. Valid values are ACCOUNT, ORGANIZATION, ACCOUNT_UNUSED_ACCESS , ORGANIZATION_UNUSED_ACCESS. Defaults to ACCOUNT.</summary>
+    /// <summary>Type that represents the zone of trust or scope for the analyzer. Valid values are ACCOUNT, ACCOUNT_INTERNAL_ACCESS, ACCOUNT_UNUSED_ACCESS, ORGANIZATION, ORGANIZATION_INTERNAL_ACCESS, ORGANIZATION_UNUSED_ACCESS. Defaults to ACCOUNT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -216,9 +346,70 @@ public partial class V1beta1AnalyzerSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRuleInclusion
+{
+    /// <summary>List of AWS account IDs to apply to the internal access analysis rule criteria. Account IDs can only be applied to the analysis rule criteria for organization-level analyzers.</summary>
+    [JsonPropertyName("accountIds")]
+    public IList<string>? AccountIds { get; set; }
+
+    /// <summary>List of resource ARNs to apply to the internal access analysis rule criteria. The analyzer will only generate findings for resources that match these ARNs.</summary>
+    [JsonPropertyName("resourceArns")]
+    public IList<string>? ResourceArns { get; set; }
+
+    /// <summary>List of resource types to apply to the internal access analysis rule criteria. The analyzer will only generate findings for resources of these types. Refer to InternalAccessAnalysisRuleCriteria in the AWS IAM Access Analyzer API Reference for valid values.</summary>
+    [JsonPropertyName("resourceTypes")]
+    public IList<string>? ResourceTypes { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRule
+{
+    /// <summary>List of rules for the internal access analyzer containing criteria to include in analysis. Only resources that meet the rule criteria will generate findings. See inclusion Block for details.</summary>
+    [JsonPropertyName("inclusion")]
+    public IList<V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRuleInclusion>? Inclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerStatusAtProviderConfigurationInternalAccess
+{
+    /// <summary>Information about analysis rules for the internal access analyzer. These rules determine which resources and access patterns will be analyzed. See analysis_rule Block for Internal Access Analyzer for details.</summary>
+    [JsonPropertyName("analysisRule")]
+    public IList<V1beta1AnalyzerStatusAtProviderConfigurationInternalAccessAnalysisRule>? AnalysisRule { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRuleExclusion
+{
+    /// <summary>List of AWS account IDs to apply to the analysis rule criteria. The accounts cannot include the organization analyzer owner account. Account IDs can only be applied to the analysis rule criteria for organization-level analyzers.</summary>
+    [JsonPropertyName("accountIds")]
+    public IList<string>? AccountIds { get; set; }
+
+    /// <summary>List of key-value pairs for resource tags to exclude from the analysis.</summary>
+    [JsonPropertyName("resourceTags")]
+    public IList<IDictionary<string, string>>? ResourceTags { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRule
+{
+    /// <summary>List of rules for the analyzer containing criteria to exclude from analysis. Entities that meet the rule criteria will not generate findings. See exclusion Block for details.</summary>
+    [JsonPropertyName("exclusion")]
+    public IList<V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRuleExclusion>? Exclusion { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccess
 {
-    /// <summary>The specified access age in days for which to generate findings for unused access.</summary>
+    /// <summary>Information about analysis rules for the analyzer. Analysis rules determine which entities will generate findings based on the criteria you define when you create the rule. See analysis_rule Block for Unused Access Analyzer for details.</summary>
+    [JsonPropertyName("analysisRule")]
+    public IList<V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccessAnalysisRule>? AnalysisRule { get; set; }
+
+    /// <summary>Specified access age in days for which to generate findings for unused access.</summary>
     [JsonPropertyName("unusedAccessAge")]
     public double? UnusedAccessAge { get; set; }
 }
@@ -227,7 +418,11 @@ public partial class V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccess
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyzerStatusAtProviderConfiguration
 {
-    /// <summary>A block that specifies the configuration of an unused access analyzer for an AWS organization or account. Documented below</summary>
+    /// <summary>Specifies the configuration of an internal access analyzer for an AWS organization or account. This configuration determines how the analyzer evaluates access within your AWS environment. See internal_access Block for details.</summary>
+    [JsonPropertyName("internalAccess")]
+    public IList<V1beta1AnalyzerStatusAtProviderConfigurationInternalAccess>? InternalAccess { get; set; }
+
+    /// <summary>Specifies the configuration of an unused access analyzer for an AWS organization or account. See unused_access Block for details.</summary>
     [JsonPropertyName("unusedAccess")]
     public IList<V1beta1AnalyzerStatusAtProviderConfigurationUnusedAccess>? UnusedAccess { get; set; }
 }
@@ -240,13 +435,17 @@ public partial class V1beta1AnalyzerStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>A block that specifies the configuration of the analyzer. Documented below</summary>
+    /// <summary>A block that specifies the configuration of the analyzer. See configuration Block for details.</summary>
     [JsonPropertyName("configuration")]
     public IList<V1beta1AnalyzerStatusAtProviderConfiguration>? Configuration { get; set; }
 
-    /// <summary>Analyzer name.</summary>
+    /// <summary>Name of the analyzer.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -256,7 +455,7 @@ public partial class V1beta1AnalyzerStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Type of Analyzer. Valid values are ACCOUNT, ORGANIZATION, ACCOUNT_UNUSED_ACCESS , ORGANIZATION_UNUSED_ACCESS. Defaults to ACCOUNT.</summary>
+    /// <summary>Type that represents the zone of trust or scope for the analyzer. Valid values are ACCOUNT, ACCOUNT_INTERNAL_ACCESS, ACCOUNT_UNUSED_ACCESS, ORGANIZATION, ORGANIZATION_INTERNAL_ACCESS, ORGANIZATION_UNUSED_ACCESS. Defaults to ACCOUNT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

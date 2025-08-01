@@ -113,10 +113,6 @@ public partial class V1beta1RegexMatchSetSpecForProvider
     /// <summary>The regular expression pattern that you want AWS WAF to search for in web requests, the location in requests that you want AWS WAF to search, and other settings. See below.</summary>
     [JsonPropertyName("regexMatchTuple")]
     public IList<V1beta1RegexMatchSetSpecForProviderRegexMatchTuple>? RegexMatchTuple { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary></summary>

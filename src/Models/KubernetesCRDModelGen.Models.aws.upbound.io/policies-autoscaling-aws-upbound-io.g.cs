@@ -119,7 +119,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -127,7 +127,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -140,7 +140,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecification
 {
-    /// <summary>List of up to 10 structures that defines custom capacity metric in predictive scaling policy</summary>
+    /// <summary>List of up to 10 structures that defines custom scaling metric in predictive scaling policy</summary>
     [JsonPropertyName("metricDataQueries")]
     public IList<V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueries>? MetricDataQueries { get; set; }
 }
@@ -200,7 +200,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -208,7 +208,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -221,7 +221,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecification
 {
-    /// <summary>List of up to 10 structures that defines custom load metric in predictive scaling policy</summary>
+    /// <summary>List of up to 10 structures that defines custom scaling metric in predictive scaling policy</summary>
     [JsonPropertyName("metricDataQueries")]
     public IList<V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueries>? MetricDataQueries { get; set; }
 }
@@ -281,7 +281,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -289,7 +289,7 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -311,11 +311,11 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification
 {
-    /// <summary>Metric type. Valid values are ASGTotalCPUUtilization, ASGTotalNetworkIn, ASGTotalNetworkOut, or ALBTargetGroupRequestCount.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -324,11 +324,11 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification
 {
-    /// <summary>Which metrics to use. There are two different types of metrics for each metric type: one is a load metric and one is a scaling metric. For example, if the metric type is ASGCPUUtilization, the Auto Scaling group's total CPU metric is used as the load metric, and the average CPU metric is used for the scaling metric. Valid values are ASGCPUUtilization, ASGNetworkIn, ASGNetworkOut, or ALBRequestCount.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -337,11 +337,11 @@ public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationM
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification
 {
-    /// <summary>Describes a scaling metric for a predictive scaling policy. Valid values are ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, or ALBRequestCountPerTarget.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -472,6 +472,10 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingConfigurationCust
     [JsonPropertyName("metric")]
     public IList<V1beta1PolicySpecForProviderTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetric>? Metric { get; set; }
 
+    /// <summary>The period of the metric in seconds.</summary>
+    [JsonPropertyName("period")]
+    public double? Period { get; set; }
+
     /// <summary>Statistic of the metrics to return.</summary>
     [JsonPropertyName("stat")]
     public string? Stat { get; set; }
@@ -489,7 +493,7 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingConfigurationCust
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -497,7 +501,7 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingConfigurationCust
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecForProviderTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStat>? MetricStat { get; set; }
 
@@ -526,6 +530,10 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingConfigurationCust
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
+    /// <summary>The period of the metric in seconds.</summary>
+    [JsonPropertyName("period")]
+    public double? Period { get; set; }
+
     /// <summary>Statistic of the metric.</summary>
     [JsonPropertyName("statistic")]
     public string? Statistic { get; set; }
@@ -539,11 +547,11 @@ public partial class V1beta1PolicySpecForProviderTargetTrackingConfigurationCust
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecForProviderTargetTrackingConfigurationPredefinedMetricSpecification
 {
-    /// <summary>Describes a scaling metric for a predictive scaling policy. Valid values are ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, or ALBRequestCountPerTarget.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -617,7 +625,7 @@ public partial class V1beta1PolicySpecForProvider
     [JsonPropertyName("predictiveScalingConfiguration")]
     public IList<V1beta1PolicySpecForProviderPredictiveScalingConfiguration>? PredictiveScalingConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -689,7 +697,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -697,7 +705,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -710,7 +718,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecification
 {
-    /// <summary>List of up to 10 structures that defines custom capacity metric in predictive scaling policy</summary>
+    /// <summary>List of up to 10 structures that defines custom scaling metric in predictive scaling policy</summary>
     [JsonPropertyName("metricDataQueries")]
     public IList<V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueries>? MetricDataQueries { get; set; }
 }
@@ -770,7 +778,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -778,7 +786,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -791,7 +799,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecification
 {
-    /// <summary>List of up to 10 structures that defines custom load metric in predictive scaling policy</summary>
+    /// <summary>List of up to 10 structures that defines custom scaling metric in predictive scaling policy</summary>
     [JsonPropertyName("metricDataQueries")]
     public IList<V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueries>? MetricDataQueries { get; set; }
 }
@@ -851,7 +859,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -859,7 +867,7 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -881,11 +889,11 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification
 {
-    /// <summary>Metric type. Valid values are ASGTotalCPUUtilization, ASGTotalNetworkIn, ASGTotalNetworkOut, or ALBTargetGroupRequestCount.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -894,11 +902,11 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification
 {
-    /// <summary>Which metrics to use. There are two different types of metrics for each metric type: one is a load metric and one is a scaling metric. For example, if the metric type is ASGCPUUtilization, the Auto Scaling group's total CPU metric is used as the load metric, and the average CPU metric is used for the scaling metric. Valid values are ASGCPUUtilization, ASGNetworkIn, ASGNetworkOut, or ALBRequestCount.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -907,11 +915,11 @@ public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification
 {
-    /// <summary>Describes a scaling metric for a predictive scaling policy. Valid values are ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, or ALBRequestCountPerTarget.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -1042,6 +1050,10 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingConfigurationCus
     [JsonPropertyName("metric")]
     public IList<V1beta1PolicySpecInitProviderTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetric>? Metric { get; set; }
 
+    /// <summary>The period of the metric in seconds.</summary>
+    [JsonPropertyName("period")]
+    public double? Period { get; set; }
+
     /// <summary>Statistic of the metrics to return.</summary>
     [JsonPropertyName("stat")]
     public string? Stat { get; set; }
@@ -1059,7 +1071,7 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingConfigurationCus
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1067,7 +1079,7 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingConfigurationCus
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicySpecInitProviderTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStat>? MetricStat { get; set; }
 
@@ -1096,6 +1108,10 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingConfigurationCus
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
+    /// <summary>The period of the metric in seconds.</summary>
+    [JsonPropertyName("period")]
+    public double? Period { get; set; }
+
     /// <summary>Statistic of the metric.</summary>
     [JsonPropertyName("statistic")]
     public string? Statistic { get; set; }
@@ -1109,11 +1125,11 @@ public partial class V1beta1PolicySpecInitProviderTargetTrackingConfigurationCus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySpecInitProviderTargetTrackingConfigurationPredefinedMetricSpecification
 {
-    /// <summary>Describes a scaling metric for a predictive scaling policy. Valid values are ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, or ALBRequestCountPerTarget.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -1375,7 +1391,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1383,7 +1399,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -1396,7 +1412,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecification
 {
-    /// <summary>List of up to 10 structures that defines custom capacity metric in predictive scaling policy</summary>
+    /// <summary>List of up to 10 structures that defines custom scaling metric in predictive scaling policy</summary>
     [JsonPropertyName("metricDataQueries")]
     public IList<V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedCapacityMetricSpecificationMetricDataQueries>? MetricDataQueries { get; set; }
 }
@@ -1456,7 +1472,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1464,7 +1480,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -1477,7 +1493,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecification
 {
-    /// <summary>List of up to 10 structures that defines custom load metric in predictive scaling policy</summary>
+    /// <summary>List of up to 10 structures that defines custom scaling metric in predictive scaling policy</summary>
     [JsonPropertyName("metricDataQueries")]
     public IList<V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedLoadMetricSpecificationMetricDataQueries>? MetricDataQueries { get; set; }
 }
@@ -1537,7 +1553,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1545,7 +1561,7 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationCustomizedScalingMetricSpecificationMetricDataQueriesMetricStat>? MetricStat { get; set; }
 
@@ -1567,11 +1583,11 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationPredefinedLoadMetricSpecification
 {
-    /// <summary>Metric type. Valid values are ASGTotalCPUUtilization, ASGTotalNetworkIn, ASGTotalNetworkOut, or ALBTargetGroupRequestCount.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -1580,11 +1596,11 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationPredefinedMetricPairSpecification
 {
-    /// <summary>Which metrics to use. There are two different types of metrics for each metric type: one is a load metric and one is a scaling metric. For example, if the metric type is ASGCPUUtilization, the Auto Scaling group's total CPU metric is used as the load metric, and the average CPU metric is used for the scaling metric. Valid values are ASGCPUUtilization, ASGNetworkIn, ASGNetworkOut, or ALBRequestCount.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -1593,11 +1609,11 @@ public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderPredictiveScalingConfigurationMetricSpecificationPredefinedScalingMetricSpecification
 {
-    /// <summary>Describes a scaling metric for a predictive scaling policy. Valid values are ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, or ALBRequestCountPerTarget.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -1728,6 +1744,10 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCus
     [JsonPropertyName("metric")]
     public IList<V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStatMetric>? Metric { get; set; }
 
+    /// <summary>The period of the metric in seconds.</summary>
+    [JsonPropertyName("period")]
+    public double? Period { get; set; }
+
     /// <summary>Statistic of the metrics to return.</summary>
     [JsonPropertyName("stat")]
     public string? Stat { get; set; }
@@ -1745,7 +1765,7 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCus
     [JsonPropertyName("expression")]
     public string? Expression { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1753,7 +1773,7 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCus
     [JsonPropertyName("label")]
     public string? Label { get; set; }
 
-    /// <summary>Structure that defines CloudWatch metric to be used in predictive scaling policy. You must specify either expression or metric_stat, but not both.</summary>
+    /// <summary>Structure that defines CloudWatch metric to be used in target tracking scaling policy. You must specify either expression or metric_stat, but not both.</summary>
     [JsonPropertyName("metricStat")]
     public IList<V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCustomizedMetricSpecificationMetricsMetricStat>? MetricStat { get; set; }
 
@@ -1782,6 +1802,10 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCus
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
+    /// <summary>The period of the metric in seconds.</summary>
+    [JsonPropertyName("period")]
+    public double? Period { get; set; }
+
     /// <summary>Statistic of the metric.</summary>
     [JsonPropertyName("statistic")]
     public string? Statistic { get; set; }
@@ -1795,11 +1819,11 @@ public partial class V1beta1PolicyStatusAtProviderTargetTrackingConfigurationCus
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyStatusAtProviderTargetTrackingConfigurationPredefinedMetricSpecification
 {
-    /// <summary>Describes a scaling metric for a predictive scaling policy. Valid values are ASGAverageCPUUtilization, ASGAverageNetworkIn, ASGAverageNetworkOut, or ALBRequestCountPerTarget.</summary>
+    /// <summary>Metric type.</summary>
     [JsonPropertyName("predefinedMetricType")]
     public string? PredefinedMetricType { get; set; }
 
-    /// <summary>Label that uniquely identifies a specific Application Load Balancer target group from which to determine the request count served by your Auto Scaling group. You create the resource label by appending the final portion of the load balancer ARN and the final portion of the target group ARN into a single value, separated by a forward slash (/). Refer to PredefinedMetricSpecification for more information.</summary>
+    /// <summary>Identifies the resource associated with the metric type.</summary>
     [JsonPropertyName("resourceLabel")]
     public string? ResourceLabel { get; set; }
 }
@@ -1853,7 +1877,7 @@ public partial class V1beta1PolicyStatusAtProvider
     [JsonPropertyName("estimatedInstanceWarmup")]
     public double? EstimatedInstanceWarmup { get; set; }
 
-    /// <summary>Short name for the metric used in predictive scaling policy.</summary>
+    /// <summary>Short name for the metric used in target tracking scaling policy.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -1872,6 +1896,10 @@ public partial class V1beta1PolicyStatusAtProvider
     /// <summary>Predictive scaling policy configuration to use with Amazon EC2 Auto Scaling.</summary>
     [JsonPropertyName("predictiveScalingConfiguration")]
     public IList<V1beta1PolicyStatusAtProviderPredictiveScalingConfiguration>? PredictiveScalingConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Number of instances by which to scale. adjustment_type determines the interpretation of this number (e.g., as an absolute number or as a percentage of the existing Auto Scaling group size). A positive increment adds to the current capacity and a negative value removes from the current capacity.</summary>
     [JsonPropertyName("scalingAdjustment")]

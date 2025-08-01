@@ -218,17 +218,12 @@ spec:
                           type: number
                       type: object
                     type: array
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   thresholdCount:
                     description: The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
                     type: number
                   trafficDialPercentage:
                     description: The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
                     type: number
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-

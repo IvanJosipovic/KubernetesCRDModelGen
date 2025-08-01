@@ -24,10 +24,6 @@ public partial class V1beta1OriginAccessControlSpecForProvider
     [JsonPropertyName("originAccessControlOriginType")]
     public string? OriginAccessControlOriginType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Specifies which requests CloudFront signs. Specify always for the most common use case. Allowed values: always, never, and no-override.</summary>
     [JsonPropertyName("signingBehavior")]
     public string? SigningBehavior { get; set; }
@@ -198,6 +194,10 @@ public partial class V1beta1OriginAccessControlSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginAccessControlStatusAtProvider
 {
+    /// <summary>The Origin Access Control ARN.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>The description of the Origin Access Control.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }

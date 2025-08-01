@@ -84,7 +84,7 @@ public partial class V1beta1ContainerPolicySpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -313,6 +313,10 @@ public partial class V1beta1ContainerPolicyStatusAtProvider
     /// <summary>The contents of the policy.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

@@ -334,7 +334,10 @@ spec:
                     description: Name of the authorizer. Must be between 1 and 128 characters in length.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -908,6 +911,12 @@ spec:
                     type: array
                   name:
                     description: Name of the authorizer. Must be between 1 and 128 characters in length.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:
@@ -1291,7 +1300,10 @@ spec:
                     description: Name of the authorizer. Must be between 1 and 128 characters in length.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -1861,6 +1873,12 @@ spec:
                     type: object
                   name:
                     description: Name of the authorizer. Must be between 1 and 128 characters in length.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

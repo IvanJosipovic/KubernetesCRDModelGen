@@ -90,7 +90,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProviderRule
     public IList<V1beta1BucketObjectLockConfigurationSpecForProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
 
-/// <summary>Token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's "Object Lock token". The token is generated in the back-end when versioning is enabled on a bucket. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
+/// <summary>This argument is deprecated and no longer needed to enable Object Lock. To enable Object Lock for an existing bucket, you must first enable versioning on the bucket and then enable Object Lock. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecForProviderTokenSecretRef
 {
@@ -131,7 +131,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProvider
     [JsonPropertyName("objectLockEnabled")]
     public string? ObjectLockEnabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -139,7 +139,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecForProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketObjectLockConfigurationSpecForProviderRule>? Rule { get; set; }
 
-    /// <summary>Token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's "Object Lock token". The token is generated in the back-end when versioning is enabled on a bucket. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
+    /// <summary>This argument is deprecated and no longer needed to enable Object Lock. To enable Object Lock for an existing bucket, you must first enable versioning on the bucket and then enable Object Lock. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
     [JsonPropertyName("tokenSecretRef")]
     public V1beta1BucketObjectLockConfigurationSpecForProviderTokenSecretRef? TokenSecretRef { get; set; }
 }
@@ -226,7 +226,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderRule
     public IList<V1beta1BucketObjectLockConfigurationSpecInitProviderRuleDefaultRetention>? DefaultRetention { get; set; }
 }
 
-/// <summary>Token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's "Object Lock token". The token is generated in the back-end when versioning is enabled on a bucket. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
+/// <summary>This argument is deprecated and no longer needed to enable Object Lock. To enable Object Lock for an existing bucket, you must first enable versioning on the bucket and then enable Object Lock. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSecretRef
 {
@@ -271,7 +271,7 @@ public partial class V1beta1BucketObjectLockConfigurationSpecInitProvider
     [JsonPropertyName("rule")]
     public IList<V1beta1BucketObjectLockConfigurationSpecInitProviderRule>? Rule { get; set; }
 
-    /// <summary>Token to allow Object Lock to be enabled for an existing bucket. You must contact AWS support for the bucket's "Object Lock token". The token is generated in the back-end when versioning is enabled on a bucket. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
+    /// <summary>This argument is deprecated and no longer needed to enable Object Lock. To enable Object Lock for an existing bucket, you must first enable versioning on the bucket and then enable Object Lock. For more details on versioning, see the aws_s3_bucket_versioning resource.</summary>
     [JsonPropertyName("tokenSecretRef")]
     public V1beta1BucketObjectLockConfigurationSpecInitProviderTokenSecretRef? TokenSecretRef { get; set; }
 }
@@ -453,6 +453,10 @@ public partial class V1beta1BucketObjectLockConfigurationStatusAtProvider
     /// <summary>Indicates whether this bucket has an Object Lock configuration enabled. Defaults to Enabled. Valid values: Enabled.</summary>
     [JsonPropertyName("objectLockEnabled")]
     public string? ObjectLockEnabled { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for specifying the Object Lock rule for the specified object. See below.</summary>
     [JsonPropertyName("rule")]

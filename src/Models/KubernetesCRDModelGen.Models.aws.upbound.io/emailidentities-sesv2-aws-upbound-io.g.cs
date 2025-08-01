@@ -118,7 +118,7 @@ public partial class V1beta1EmailIdentitySpecForProvider
     [JsonPropertyName("dkimSigningAttributes")]
     public IList<V1beta1EmailIdentitySpecForProviderDkimSigningAttributes>? DkimSigningAttributes { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -430,6 +430,10 @@ public partial class V1beta1EmailIdentityStatusAtProvider
     /// <summary>The email identity type. Valid values: EMAIL_ADDRESS, DOMAIN.</summary>
     [JsonPropertyName("identityType")]
     public string? IdentityType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

@@ -192,7 +192,7 @@ public partial class V1beta1TransitGatewayVPCAttachmentSpecForProvider
     [JsonPropertyName("ipv6Support")]
     public string? Ipv6Support { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -626,17 +626,25 @@ public partial class V1beta1TransitGatewayVPCAttachmentStatusAtProvider
     [JsonPropertyName("applianceModeSupport")]
     public string? ApplianceModeSupport { get; set; }
 
+    /// <summary>ARN of the attachment.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>Whether DNS support is enabled. Valid values: disable, enable. Default value: enable.</summary>
     [JsonPropertyName("dnsSupport")]
     public string? DnsSupport { get; set; }
 
-    /// <summary>EC2 Transit Gateway Attachment identifier</summary>
+    /// <summary>EC2 Transit Gateway Attachment identifier.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
     /// <summary>Whether IPv6 support is enabled. Valid values: disable, enable. Default value: disable.</summary>
     [JsonPropertyName("ipv6Support")]
     public string? Ipv6Support { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable.</summary>
     [JsonPropertyName("securityGroupReferencingSupport")]

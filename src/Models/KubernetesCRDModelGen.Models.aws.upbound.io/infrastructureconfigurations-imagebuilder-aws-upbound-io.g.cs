@@ -219,6 +219,27 @@ public partial class V1beta1InfrastructureConfigurationSpecForProviderLogging
     public IList<V1beta1InfrastructureConfigurationSpecForProviderLoggingS3Logs>? S3Logs { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InfrastructureConfigurationSpecForProviderPlacement
+{
+    /// <summary>Availability Zone where your build and test instances will launch.</summary>
+    [JsonPropertyName("availabilityZone")]
+    public string? AvailabilityZone { get; set; }
+
+    /// <summary>ID of the Dedicated Host on which build and test instances run. Conflicts with host_resource_group_arn.</summary>
+    [JsonPropertyName("hostId")]
+    public string? HostId { get; set; }
+
+    /// <summary>ARN of the host resource group in which to launch build and test instances. Conflicts with host_id.</summary>
+    [JsonPropertyName("hostResourceGroupArn")]
+    public string? HostResourceGroupArn { get; set; }
+
+    /// <summary>Placement tenancy of the instance. Valid values: default, dedicated and host.</summary>
+    [JsonPropertyName("tenancy")]
+    public string? Tenancy { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecForProviderSecurityGroupIdRefsPolicy
@@ -435,7 +456,11 @@ public partial class V1beta1InfrastructureConfigurationSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Configuration block with placement settings that define where the instances that are launched from your image will run. Detailed below.</summary>
+    [JsonPropertyName("placement")]
+    public IList<V1beta1InfrastructureConfigurationSpecForProviderPlacement>? Placement { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -699,6 +724,27 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProviderLogging
     public IList<V1beta1InfrastructureConfigurationSpecInitProviderLoggingS3Logs>? S3Logs { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InfrastructureConfigurationSpecInitProviderPlacement
+{
+    /// <summary>Availability Zone where your build and test instances will launch.</summary>
+    [JsonPropertyName("availabilityZone")]
+    public string? AvailabilityZone { get; set; }
+
+    /// <summary>ID of the Dedicated Host on which build and test instances run. Conflicts with host_resource_group_arn.</summary>
+    [JsonPropertyName("hostId")]
+    public string? HostId { get; set; }
+
+    /// <summary>ARN of the host resource group in which to launch build and test instances. Conflicts with host_id.</summary>
+    [JsonPropertyName("hostResourceGroupArn")]
+    public string? HostResourceGroupArn { get; set; }
+
+    /// <summary>Placement tenancy of the instance. Valid values: default, dedicated and host.</summary>
+    [JsonPropertyName("tenancy")]
+    public string? Tenancy { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationSpecInitProviderSecurityGroupIdRefsPolicy
@@ -914,6 +960,10 @@ public partial class V1beta1InfrastructureConfigurationSpecInitProvider
     /// <summary>Name for the configuration.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Configuration block with placement settings that define where the instances that are launched from your image will run. Detailed below.</summary>
+    [JsonPropertyName("placement")]
+    public IList<V1beta1InfrastructureConfigurationSpecInitProviderPlacement>? Placement { get; set; }
 
     /// <summary>Key-value map of resource tags to assign to infrastructure created by the configuration.</summary>
     [JsonPropertyName("resourceTags")]
@@ -1133,6 +1183,27 @@ public partial class V1beta1InfrastructureConfigurationStatusAtProviderLogging
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1InfrastructureConfigurationStatusAtProviderPlacement
+{
+    /// <summary>Availability Zone where your build and test instances will launch.</summary>
+    [JsonPropertyName("availabilityZone")]
+    public string? AvailabilityZone { get; set; }
+
+    /// <summary>ID of the Dedicated Host on which build and test instances run. Conflicts with host_resource_group_arn.</summary>
+    [JsonPropertyName("hostId")]
+    public string? HostId { get; set; }
+
+    /// <summary>ARN of the host resource group in which to launch build and test instances. Conflicts with host_id.</summary>
+    [JsonPropertyName("hostResourceGroupArn")]
+    public string? HostResourceGroupArn { get; set; }
+
+    /// <summary>Placement tenancy of the instance. Valid values: default, dedicated and host.</summary>
+    [JsonPropertyName("tenancy")]
+    public string? Tenancy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InfrastructureConfigurationStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of the configuration.</summary>
@@ -1178,6 +1249,14 @@ public partial class V1beta1InfrastructureConfigurationStatusAtProvider
     /// <summary>Name for the configuration.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Configuration block with placement settings that define where the instances that are launched from your image will run. Detailed below.</summary>
+    [JsonPropertyName("placement")]
+    public IList<V1beta1InfrastructureConfigurationStatusAtProviderPlacement>? Placement { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags to assign to infrastructure created by the configuration.</summary>
     [JsonPropertyName("resourceTags")]

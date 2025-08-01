@@ -101,7 +101,7 @@ public partial class V1beta1DocumentationPartSpecForProvider
     [JsonPropertyName("properties")]
     public string? Properties { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -400,6 +400,10 @@ public partial class V1beta1DocumentationPartStatusAtProvider
     /// <summary>Content map of API-specific key-value pairs describing the targeted API entity. The map must be encoded as a JSON string, e.g., "{ "description": "The API does ..." }". Only Swagger-compliant key-value pairs can be exported and, hence, published.</summary>
     [JsonPropertyName("properties")]
     public string? Properties { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the associated Rest API</summary>
     [JsonPropertyName("restApiId")]

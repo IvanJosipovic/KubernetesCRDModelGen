@@ -136,7 +136,7 @@ public partial class V1beta1SingleScramSecretAssociationSpecForProvider
     [JsonPropertyName("clusterArnSelector")]
     public V1beta1SingleScramSecretAssociationSpecForProviderClusterArnSelector? ClusterArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -302,6 +302,10 @@ public partial class V1beta1SingleScramSecretAssociationStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>AWS Secrets Manager secret ARN.</summary>
     [JsonPropertyName("secretArn")]

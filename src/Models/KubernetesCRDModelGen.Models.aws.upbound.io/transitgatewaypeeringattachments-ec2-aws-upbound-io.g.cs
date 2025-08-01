@@ -157,7 +157,7 @@ public partial class V1beta1TransitGatewayPeeringAttachmentSpecForProvider
     [JsonPropertyName("peerTransitGatewayIdSelector")]
     public V1beta1TransitGatewayPeeringAttachmentSpecForProviderPeerTransitGatewayIdSelector? PeerTransitGatewayIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -489,7 +489,11 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProviderOptio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProvider
 {
-    /// <summary>EC2 Transit Gateway Attachment identifier</summary>
+    /// <summary>ARN of the attachment.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
+    /// <summary>EC2 Transit Gateway Attachment identifier.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -508,6 +512,10 @@ public partial class V1beta1TransitGatewayPeeringAttachmentStatusAtProvider
     /// <summary>Identifier of EC2 Transit Gateway to peer with.</summary>
     [JsonPropertyName("peerTransitGatewayId")]
     public string? PeerTransitGatewayId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("state")]

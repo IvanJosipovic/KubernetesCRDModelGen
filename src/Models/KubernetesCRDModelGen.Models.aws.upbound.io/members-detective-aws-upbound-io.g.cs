@@ -96,7 +96,7 @@ public partial class V1beta1MemberSpecForProvider
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -361,6 +361,10 @@ public partial class V1beta1MemberStatusAtProvider
     /// <summary>A custom message to include in the invitation. Amazon Detective adds this message to the standard content that it sends for an invitation.</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Current membership status of the member account.</summary>
     [JsonPropertyName("status")]

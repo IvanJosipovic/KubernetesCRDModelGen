@@ -144,7 +144,7 @@ public partial class V1beta1ClusterActivityStreamSpecForProvider
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -465,6 +465,10 @@ public partial class V1beta1ClusterActivityStreamStatusAtProvider
     /// <summary>Specifies the mode of the database activity stream. Database events such as a change or access generate an activity stream event. The database session can handle these events either synchronously or asynchronously. One of: sync, async.</summary>
     [JsonPropertyName("mode")]
     public string? Mode { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the DB cluster.</summary>
     [JsonPropertyName("resourceArn")]

@@ -136,7 +136,7 @@ public partial class V1beta1SnapshotScheduleAssociationSpecForProvider
     [JsonPropertyName("clusterIdentifierSelector")]
     public V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierSelector? ClusterIdentifierSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1SnapshotScheduleAssociationStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The snapshot schedule identifier.</summary>
     [JsonPropertyName("scheduleIdentifier")]

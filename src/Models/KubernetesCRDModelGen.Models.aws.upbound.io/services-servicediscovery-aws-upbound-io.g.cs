@@ -81,7 +81,7 @@ public partial class V1beta1ServiceSpecForProviderDnsConfigNamespaceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderDnsConfig
 {
-    /// <summary>An array that contains one DnsRecord object for each resource record set.</summary>
+    /// <summary>An array that contains one DnsRecord object for each resource record set. See dns_records Block for details.</summary>
     [JsonPropertyName("dnsRecords")]
     public IList<V1beta1ServiceSpecForProviderDnsConfigDnsRecords>? DnsRecords { get; set; }
 
@@ -123,7 +123,7 @@ public partial class V1beta1ServiceSpecForProviderHealthCheckConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderHealthCheckCustomConfig
 {
-    /// <summary>The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</summary>
+    /// <summary>The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Value is always set to 1.</summary>
     [JsonPropertyName("failureThreshold")]
     public double? FailureThreshold { get; set; }
 }
@@ -136,19 +136,19 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.</summary>
+    /// <summary>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance. See dns_config Block for details.</summary>
     [JsonPropertyName("dnsConfig")]
     public IList<V1beta1ServiceSpecForProviderDnsConfig>? DnsConfig { get; set; }
 
-    /// <summary>A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.</summary>
+    /// <summary>A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable. Defaults to false.</summary>
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>A complex type that contains settings for an optional health check. Only for Public DNS namespaces.</summary>
+    /// <summary>A complex type that contains settings for an optional health check. Only for Public DNS namespaces. See health_check_config Block for details.</summary>
     [JsonPropertyName("healthCheckConfig")]
     public IList<V1beta1ServiceSpecForProviderHealthCheckConfig>? HealthCheckConfig { get; set; }
 
-    /// <summary>A complex type that contains settings for ECS managed health checks.</summary>
+    /// <summary>A complex type that contains settings for ECS managed health checks. See health_check_custom_config Block for details.</summary>
     [JsonPropertyName("healthCheckCustomConfig")]
     public IList<V1beta1ServiceSpecForProviderHealthCheckCustomConfig>? HealthCheckCustomConfig { get; set; }
 
@@ -160,7 +160,7 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -246,7 +246,7 @@ public partial class V1beta1ServiceSpecInitProviderDnsConfigNamespaceIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderDnsConfig
 {
-    /// <summary>An array that contains one DnsRecord object for each resource record set.</summary>
+    /// <summary>An array that contains one DnsRecord object for each resource record set. See dns_records Block for details.</summary>
     [JsonPropertyName("dnsRecords")]
     public IList<V1beta1ServiceSpecInitProviderDnsConfigDnsRecords>? DnsRecords { get; set; }
 
@@ -288,7 +288,7 @@ public partial class V1beta1ServiceSpecInitProviderHealthCheckConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderHealthCheckCustomConfig
 {
-    /// <summary>The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</summary>
+    /// <summary>The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Value is always set to 1.</summary>
     [JsonPropertyName("failureThreshold")]
     public double? FailureThreshold { get; set; }
 }
@@ -301,19 +301,19 @@ public partial class V1beta1ServiceSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.</summary>
+    /// <summary>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance. See dns_config Block for details.</summary>
     [JsonPropertyName("dnsConfig")]
     public IList<V1beta1ServiceSpecInitProviderDnsConfig>? DnsConfig { get; set; }
 
-    /// <summary>A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.</summary>
+    /// <summary>A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable. Defaults to false.</summary>
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>A complex type that contains settings for an optional health check. Only for Public DNS namespaces.</summary>
+    /// <summary>A complex type that contains settings for an optional health check. Only for Public DNS namespaces. See health_check_config Block for details.</summary>
     [JsonPropertyName("healthCheckConfig")]
     public IList<V1beta1ServiceSpecInitProviderHealthCheckConfig>? HealthCheckConfig { get; set; }
 
-    /// <summary>A complex type that contains settings for ECS managed health checks.</summary>
+    /// <summary>A complex type that contains settings for ECS managed health checks. See health_check_custom_config Block for details.</summary>
     [JsonPropertyName("healthCheckCustomConfig")]
     public IList<V1beta1ServiceSpecInitProviderHealthCheckCustomConfig>? HealthCheckCustomConfig { get; set; }
 
@@ -483,7 +483,7 @@ public partial class V1beta1ServiceStatusAtProviderDnsConfigDnsRecords
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderDnsConfig
 {
-    /// <summary>An array that contains one DnsRecord object for each resource record set.</summary>
+    /// <summary>An array that contains one DnsRecord object for each resource record set. See dns_records Block for details.</summary>
     [JsonPropertyName("dnsRecords")]
     public IList<V1beta1ServiceStatusAtProviderDnsConfigDnsRecords>? DnsRecords { get; set; }
 
@@ -517,7 +517,7 @@ public partial class V1beta1ServiceStatusAtProviderHealthCheckConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderHealthCheckCustomConfig
 {
-    /// <summary>The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Maximum value of 10.</summary>
+    /// <summary>The number of 30-second intervals that you want service discovery to wait before it changes the health status of a service instance.  Value is always set to 1.</summary>
     [JsonPropertyName("failureThreshold")]
     public double? FailureThreshold { get; set; }
 }
@@ -534,19 +534,19 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance.</summary>
+    /// <summary>A complex type that contains information about the resource record sets that you want Amazon Route 53 to create when you register an instance. See dns_config Block for details.</summary>
     [JsonPropertyName("dnsConfig")]
     public IList<V1beta1ServiceStatusAtProviderDnsConfig>? DnsConfig { get; set; }
 
-    /// <summary>A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable.</summary>
+    /// <summary>A boolean that indicates all instances should be deleted from the service so that the service can be destroyed without error. These instances are not recoverable. Defaults to false.</summary>
     [JsonPropertyName("forceDestroy")]
     public bool? ForceDestroy { get; set; }
 
-    /// <summary>A complex type that contains settings for an optional health check. Only for Public DNS namespaces.</summary>
+    /// <summary>A complex type that contains settings for an optional health check. Only for Public DNS namespaces. See health_check_config Block for details.</summary>
     [JsonPropertyName("healthCheckConfig")]
     public IList<V1beta1ServiceStatusAtProviderHealthCheckConfig>? HealthCheckConfig { get; set; }
 
-    /// <summary>A complex type that contains settings for ECS managed health checks.</summary>
+    /// <summary>A complex type that contains settings for ECS managed health checks. See health_check_custom_config Block for details.</summary>
     [JsonPropertyName("healthCheckCustomConfig")]
     public IList<V1beta1ServiceStatusAtProviderHealthCheckCustomConfig>? HealthCheckCustomConfig { get; set; }
 
@@ -562,11 +562,15 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("namespaceId")]
     public string? NamespaceId { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary></summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 

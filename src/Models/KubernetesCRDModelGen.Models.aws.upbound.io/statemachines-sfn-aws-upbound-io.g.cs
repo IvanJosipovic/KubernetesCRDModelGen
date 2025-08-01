@@ -183,7 +183,7 @@ public partial class V1beta1StateMachineSpecForProvider
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1StateMachineSpecForProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
-    /// <summary>Defines what execution history events are logged and where they are logged. The logging_configuration parameter is only valid when type is set to EXPRESS. Defaults to OFF. For more information see Logging Express Workflows and Log Levels in the AWS Step Functions User Guide.</summary>
+    /// <summary>Defines what execution history events are logged and where they are logged. The logging_configuration parameter is valid when type is set to STANDARD or EXPRESS. Defaults to OFF. For more information see Logging Express Workflows, Log Levels and Logging Configuration in the AWS Step Functions User Guide.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public IList<V1beta1StateMachineSpecForProviderLoggingConfiguration>? LoggingConfiguration { get; set; }
 
@@ -191,7 +191,7 @@ public partial class V1beta1StateMachineSpecForProvider
     [JsonPropertyName("publish")]
     public bool? Publish { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -395,7 +395,7 @@ public partial class V1beta1StateMachineSpecInitProvider
     [JsonPropertyName("encryptionConfiguration")]
     public IList<V1beta1StateMachineSpecInitProviderEncryptionConfiguration>? EncryptionConfiguration { get; set; }
 
-    /// <summary>Defines what execution history events are logged and where they are logged. The logging_configuration parameter is only valid when type is set to EXPRESS. Defaults to OFF. For more information see Logging Express Workflows and Log Levels in the AWS Step Functions User Guide.</summary>
+    /// <summary>Defines what execution history events are logged and where they are logged. The logging_configuration parameter is valid when type is set to STANDARD or EXPRESS. Defaults to OFF. For more information see Logging Express Workflows, Log Levels and Logging Configuration in the AWS Step Functions User Guide.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public IList<V1beta1StateMachineSpecInitProviderLoggingConfiguration>? LoggingConfiguration { get; set; }
 
@@ -631,13 +631,17 @@ public partial class V1beta1StateMachineStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Defines what execution history events are logged and where they are logged. The logging_configuration parameter is only valid when type is set to EXPRESS. Defaults to OFF. For more information see Logging Express Workflows and Log Levels in the AWS Step Functions User Guide.</summary>
+    /// <summary>Defines what execution history events are logged and where they are logged. The logging_configuration parameter is valid when type is set to STANDARD or EXPRESS. Defaults to OFF. For more information see Logging Express Workflows, Log Levels and Logging Configuration in the AWS Step Functions User Guide.</summary>
     [JsonPropertyName("loggingConfiguration")]
     public IList<V1beta1StateMachineStatusAtProviderLoggingConfiguration>? LoggingConfiguration { get; set; }
 
     /// <summary>Set to true to publish a version of the state machine during creation. Default: false.</summary>
     [JsonPropertyName("publish")]
     public bool? Publish { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARN of the state machine.</summary>
     [JsonPropertyName("revisionId")]

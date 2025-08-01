@@ -59,6 +59,10 @@ public partial class V1beta1PipelineSpecForProviderVpcOptions
     /// <summary>A list of subnet IDs associated with the VPC endpoint.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
+
+    /// <summary>Whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the pipeline. Valid values are CUSTOMER or SERVICE</summary>
+    [JsonPropertyName("vpcEndpointManagement")]
+    public string? VpcEndpointManagement { get; set; }
 }
 
 /// <summary></summary>
@@ -89,7 +93,7 @@ public partial class V1beta1PipelineSpecForProvider
     [JsonPropertyName("pipelineConfigurationBody")]
     public string? PipelineConfigurationBody { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -153,6 +157,10 @@ public partial class V1beta1PipelineSpecInitProviderVpcOptions
     /// <summary>A list of subnet IDs associated with the VPC endpoint.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
+
+    /// <summary>Whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the pipeline. Valid values are CUSTOMER or SERVICE</summary>
+    [JsonPropertyName("vpcEndpointManagement")]
+    public string? VpcEndpointManagement { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -375,6 +383,10 @@ public partial class V1beta1PipelineStatusAtProviderVpcOptions
     /// <summary>A list of subnet IDs associated with the VPC endpoint.</summary>
     [JsonPropertyName("subnetIds")]
     public IList<string>? SubnetIds { get; set; }
+
+    /// <summary>Whether you or Amazon OpenSearch Ingestion service create and manage the VPC endpoint configured for the pipeline. Valid values are CUSTOMER or SERVICE</summary>
+    [JsonPropertyName("vpcEndpointManagement")]
+    public string? VpcEndpointManagement { get; set; }
 }
 
 /// <summary></summary>
@@ -416,6 +428,10 @@ public partial class V1beta1PipelineStatusAtProvider
     /// <summary>The pipeline configuration in YAML format. This argument accepts the pipeline configuration as a string or within a .yaml file. If you provide the configuration as a string, each new line must be escaped with \n.</summary>
     [JsonPropertyName("pipelineConfigurationBody")]
     public string? PipelineConfigurationBody { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

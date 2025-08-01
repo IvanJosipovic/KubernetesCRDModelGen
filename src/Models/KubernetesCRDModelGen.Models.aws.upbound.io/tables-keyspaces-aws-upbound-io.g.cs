@@ -235,7 +235,7 @@ public partial class V1beta1TableSpecForProvider
     [JsonPropertyName("pointInTimeRecovery")]
     public IList<V1beta1TableSpecForProviderPointInTimeRecovery>? PointInTimeRecovery { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -802,6 +802,10 @@ public partial class V1beta1TableStatusAtProvider
     /// <summary>Specifies if point-in-time recovery is enabled or disabled for the table. More information can be found in the Developer Guide.</summary>
     [JsonPropertyName("pointInTimeRecovery")]
     public IList<V1beta1TableStatusAtProviderPointInTimeRecovery>? PointInTimeRecovery { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Describes the schema of the table.</summary>
     [JsonPropertyName("schemaDefinition")]

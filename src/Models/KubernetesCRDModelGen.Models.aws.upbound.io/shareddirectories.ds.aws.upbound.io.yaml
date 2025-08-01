@@ -194,7 +194,10 @@ spec:
                     - namespace
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   target:
                     description: Identifier for the directory consumer account with whom the directory is to be shared. See below.
@@ -579,6 +582,12 @@ spec:
                     type: string
                   method:
                     description: Method used when sharing a directory. Valid values are ORGANIZATIONS and HANDSHAKE. Default is HANDSHAKE.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sharedDirectoryId:
                     description: Identifier of the directory that is stored in the directory consumer account that corresponds to the shared directory in the owner account.
@@ -839,7 +848,10 @@ spec:
                     - namespace
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   target:
                     description: Identifier for the directory consumer account with whom the directory is to be shared. See below.
@@ -1220,6 +1232,12 @@ spec:
                     type: string
                   method:
                     description: Method used when sharing a directory. Valid values are ORGANIZATIONS and HANDSHAKE. Default is HANDSHAKE.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sharedDirectoryId:
                     description: Identifier of the directory that is stored in the directory consumer account that corresponds to the shared directory in the owner account.

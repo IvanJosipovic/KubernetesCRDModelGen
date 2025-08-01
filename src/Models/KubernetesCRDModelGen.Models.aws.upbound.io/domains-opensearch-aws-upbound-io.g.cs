@@ -125,6 +125,36 @@ public partial class V1beta1DomainSpecForProviderClusterConfigColdStorageOptions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderClusterConfigNodeOptionsNodeConfig
+{
+    /// <summary>Number of nodes of a particular node type in the cluster.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>Whether a particular node type is enabled.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The instance type of a particular node type in the cluster.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecForProviderClusterConfigNodeOptions
+{
+    /// <summary>Container to specify sizing of a node type.</summary>
+    [JsonPropertyName("nodeConfig")]
+    public IList<V1beta1DomainSpecForProviderClusterConfigNodeOptionsNodeConfig>? NodeConfig { get; set; }
+
+    /// <summary>Type of node this configuration describes. Valid values: coordinator.</summary>
+    [JsonPropertyName("nodeType")]
+    public string? NodeType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecForProviderClusterConfigZoneAwarenessConfig
 {
     /// <summary>Number of Availability Zones for the domain to use with zone_awareness_enabled. Defaults to 2. Valid values: 2 or 3.</summary>
@@ -163,6 +193,10 @@ public partial class V1beta1DomainSpecForProviderClusterConfig
     /// <summary>Whether a multi-AZ domain is turned on with a standby AZ. For more information, see Configuring a multi-AZ domain in Amazon OpenSearch Service.</summary>
     [JsonPropertyName("multiAzWithStandbyEnabled")]
     public bool? MultiAzWithStandbyEnabled { get; set; }
+
+    /// <summary>List of node options for the domain.</summary>
+    [JsonPropertyName("nodeOptions")]
+    public IList<V1beta1DomainSpecForProviderClusterConfigNodeOptions>? NodeOptions { get; set; }
 
     /// <summary>Number of warm nodes in the cluster. Valid values are between 2 and 150. warm_count can be only and must be set when warm_enabled is set to true.</summary>
     [JsonPropertyName("warmCount")]
@@ -677,7 +711,7 @@ public partial class V1beta1DomainSpecForProvider
     [JsonPropertyName("offPeakWindowOptions")]
     public IList<V1beta1DomainSpecForProviderOffPeakWindowOptions>? OffPeakWindowOptions { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -815,6 +849,36 @@ public partial class V1beta1DomainSpecInitProviderClusterConfigColdStorageOption
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderClusterConfigNodeOptionsNodeConfig
+{
+    /// <summary>Number of nodes of a particular node type in the cluster.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>Whether a particular node type is enabled.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The instance type of a particular node type in the cluster.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainSpecInitProviderClusterConfigNodeOptions
+{
+    /// <summary>Container to specify sizing of a node type.</summary>
+    [JsonPropertyName("nodeConfig")]
+    public IList<V1beta1DomainSpecInitProviderClusterConfigNodeOptionsNodeConfig>? NodeConfig { get; set; }
+
+    /// <summary>Type of node this configuration describes. Valid values: coordinator.</summary>
+    [JsonPropertyName("nodeType")]
+    public string? NodeType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainSpecInitProviderClusterConfigZoneAwarenessConfig
 {
     /// <summary>Number of Availability Zones for the domain to use with zone_awareness_enabled. Defaults to 2. Valid values: 2 or 3.</summary>
@@ -853,6 +917,10 @@ public partial class V1beta1DomainSpecInitProviderClusterConfig
     /// <summary>Whether a multi-AZ domain is turned on with a standby AZ. For more information, see Configuring a multi-AZ domain in Amazon OpenSearch Service.</summary>
     [JsonPropertyName("multiAzWithStandbyEnabled")]
     public bool? MultiAzWithStandbyEnabled { get; set; }
+
+    /// <summary>List of node options for the domain.</summary>
+    [JsonPropertyName("nodeOptions")]
+    public IList<V1beta1DomainSpecInitProviderClusterConfigNodeOptions>? NodeOptions { get; set; }
 
     /// <summary>Number of warm nodes in the cluster. Valid values are between 2 and 150. warm_count can be only and must be set when warm_enabled is set to true.</summary>
     [JsonPropertyName("warmCount")]
@@ -1612,6 +1680,36 @@ public partial class V1beta1DomainStatusAtProviderClusterConfigColdStorageOption
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderClusterConfigNodeOptionsNodeConfig
+{
+    /// <summary>Number of nodes of a particular node type in the cluster.</summary>
+    [JsonPropertyName("count")]
+    public double? Count { get; set; }
+
+    /// <summary>Whether a particular node type is enabled.</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>The instance type of a particular node type in the cluster.</summary>
+    [JsonPropertyName("type")]
+    public string? Type { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DomainStatusAtProviderClusterConfigNodeOptions
+{
+    /// <summary>Container to specify sizing of a node type.</summary>
+    [JsonPropertyName("nodeConfig")]
+    public IList<V1beta1DomainStatusAtProviderClusterConfigNodeOptionsNodeConfig>? NodeConfig { get; set; }
+
+    /// <summary>Type of node this configuration describes. Valid values: coordinator.</summary>
+    [JsonPropertyName("nodeType")]
+    public string? NodeType { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainStatusAtProviderClusterConfigZoneAwarenessConfig
 {
     /// <summary>Number of Availability Zones for the domain to use with zone_awareness_enabled. Defaults to 2. Valid values: 2 or 3.</summary>
@@ -1650,6 +1748,10 @@ public partial class V1beta1DomainStatusAtProviderClusterConfig
     /// <summary>Whether a multi-AZ domain is turned on with a standby AZ. For more information, see Configuring a multi-AZ domain in Amazon OpenSearch Service.</summary>
     [JsonPropertyName("multiAzWithStandbyEnabled")]
     public bool? MultiAzWithStandbyEnabled { get; set; }
+
+    /// <summary>List of node options for the domain.</summary>
+    [JsonPropertyName("nodeOptions")]
+    public IList<V1beta1DomainStatusAtProviderClusterConfigNodeOptions>? NodeOptions { get; set; }
 
     /// <summary>Number of warm nodes in the cluster. Valid values are between 2 and 150. warm_count can be only and must be set when warm_enabled is set to true.</summary>
     [JsonPropertyName("warmCount")]
@@ -1940,10 +2042,6 @@ public partial class V1beta1DomainStatusAtProvider
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
-    /// <summary>(Deprecated) Domain-specific endpoint for kibana without https scheme. Use the dashboard_endpoint attribute instead.</summary>
-    [JsonPropertyName("kibanaEndpoint")]
-    public string? KibanaEndpoint { get; set; }
-
     /// <summary>Configuration block for publishing slow and application logs to CloudWatch Logs. This block can be declared multiple times, for each log_type, within the same resource. Detailed below.</summary>
     [JsonPropertyName("logPublishingOptions")]
     public IList<V1beta1DomainStatusAtProviderLogPublishingOptions>? LogPublishingOptions { get; set; }
@@ -1955,6 +2053,10 @@ public partial class V1beta1DomainStatusAtProvider
     /// <summary>Configuration to add Off Peak update options. (documentation). Detailed below.</summary>
     [JsonPropertyName("offPeakWindowOptions")]
     public IList<V1beta1DomainStatusAtProviderOffPeakWindowOptions>? OffPeakWindowOptions { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for snapshot related options. Detailed below. DEPRECATED. For domains running OpenSearch 5.3 and later, Amazon OpenSearch takes hourly automated snapshots, making this setting irrelevant. For domains running earlier versions, OpenSearch takes daily automated snapshots.</summary>
     [JsonPropertyName("snapshotOptions")]

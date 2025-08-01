@@ -163,6 +163,19 @@ public partial class V1beta1UserPoolClientSpecForProviderAnalyticsConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolClientSpecForProviderRefreshTokenRotation
+{
+    /// <summary>The state of refresh token rotation for the current app client. Valid values are ENABLED or DISABLED.</summary>
+    [JsonPropertyName("feature")]
+    public string? Feature { get; set; }
+
+    /// <summary>A period of time in seconds that the user has to use the old refresh token before it is invalidated. Valid values are between 0 and 60.</summary>
+    [JsonPropertyName("retryGracePeriodSeconds")]
+    public double? RetryGracePeriodSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolClientSpecForProviderTokenValidityUnits
 {
     /// <summary>Time unit in for the value in access_token_validity, defaults to hours.</summary>
@@ -278,7 +291,7 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("enableTokenRevocation")]
     public bool? EnableTokenRevocation { get; set; }
 
-    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, and ALLOW_REFRESH_TOKEN_AUTH.</summary>
+    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH, and ALLOW_USER_AUTH.</summary>
     [JsonPropertyName("explicitAuthFlows")]
     public IList<string>? ExplicitAuthFlows { get; set; }
 
@@ -306,11 +319,15 @@ public partial class V1beta1UserPoolClientSpecForProvider
     [JsonPropertyName("readAttributes")]
     public IList<string>? ReadAttributes { get; set; }
 
+    /// <summary>A block that specifies the configuration of refresh token rotation. Detailed below.</summary>
+    [JsonPropertyName("refreshTokenRotation")]
+    public IList<V1beta1UserPoolClientSpecForProviderRefreshTokenRotation>? RefreshTokenRotation { get; set; }
+
     /// <summary>Time limit, between 60 minutes and 10 years, after which the refresh token is no longer valid and cannot be used. By default, the unit is days. The unit can be overridden by a value in token_validity_units.refresh_token.</summary>
     [JsonPropertyName("refreshTokenValidity")]
     public double? RefreshTokenValidity { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -494,6 +511,19 @@ public partial class V1beta1UserPoolClientSpecInitProviderAnalyticsConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolClientSpecInitProviderRefreshTokenRotation
+{
+    /// <summary>The state of refresh token rotation for the current app client. Valid values are ENABLED or DISABLED.</summary>
+    [JsonPropertyName("feature")]
+    public string? Feature { get; set; }
+
+    /// <summary>A period of time in seconds that the user has to use the old refresh token before it is invalidated. Valid values are between 0 and 60.</summary>
+    [JsonPropertyName("retryGracePeriodSeconds")]
+    public double? RetryGracePeriodSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolClientSpecInitProviderTokenValidityUnits
 {
     /// <summary>Time unit in for the value in access_token_validity, defaults to hours.</summary>
@@ -609,7 +639,7 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     [JsonPropertyName("enableTokenRevocation")]
     public bool? EnableTokenRevocation { get; set; }
 
-    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, and ALLOW_REFRESH_TOKEN_AUTH.</summary>
+    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH, and ALLOW_USER_AUTH.</summary>
     [JsonPropertyName("explicitAuthFlows")]
     public IList<string>? ExplicitAuthFlows { get; set; }
 
@@ -636,6 +666,10 @@ public partial class V1beta1UserPoolClientSpecInitProvider
     /// <summary>List of user pool attributes that the application client can read from.</summary>
     [JsonPropertyName("readAttributes")]
     public IList<string>? ReadAttributes { get; set; }
+
+    /// <summary>A block that specifies the configuration of refresh token rotation. Detailed below.</summary>
+    [JsonPropertyName("refreshTokenRotation")]
+    public IList<V1beta1UserPoolClientSpecInitProviderRefreshTokenRotation>? RefreshTokenRotation { get; set; }
 
     /// <summary>Time limit, between 60 minutes and 10 years, after which the refresh token is no longer valid and cannot be used. By default, the unit is days. The unit can be overridden by a value in token_validity_units.refresh_token.</summary>
     [JsonPropertyName("refreshTokenValidity")]
@@ -825,6 +859,19 @@ public partial class V1beta1UserPoolClientStatusAtProviderAnalyticsConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolClientStatusAtProviderRefreshTokenRotation
+{
+    /// <summary>The state of refresh token rotation for the current app client. Valid values are ENABLED or DISABLED.</summary>
+    [JsonPropertyName("feature")]
+    public string? Feature { get; set; }
+
+    /// <summary>A period of time in seconds that the user has to use the old refresh token before it is invalidated. Valid values are between 0 and 60.</summary>
+    [JsonPropertyName("retryGracePeriodSeconds")]
+    public double? RetryGracePeriodSeconds { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolClientStatusAtProviderTokenValidityUnits
 {
     /// <summary>Time unit in for the value in access_token_validity, defaults to hours.</summary>
@@ -884,7 +931,7 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("enableTokenRevocation")]
     public bool? EnableTokenRevocation { get; set; }
 
-    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, and ALLOW_REFRESH_TOKEN_AUTH.</summary>
+    /// <summary>List of authentication flows. The available options include ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY, USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH, and ALLOW_USER_AUTH.</summary>
     [JsonPropertyName("explicitAuthFlows")]
     public IList<string>? ExplicitAuthFlows { get; set; }
 
@@ -916,9 +963,17 @@ public partial class V1beta1UserPoolClientStatusAtProvider
     [JsonPropertyName("readAttributes")]
     public IList<string>? ReadAttributes { get; set; }
 
+    /// <summary>A block that specifies the configuration of refresh token rotation. Detailed below.</summary>
+    [JsonPropertyName("refreshTokenRotation")]
+    public IList<V1beta1UserPoolClientStatusAtProviderRefreshTokenRotation>? RefreshTokenRotation { get; set; }
+
     /// <summary>Time limit, between 60 minutes and 10 years, after which the refresh token is no longer valid and cannot be used. By default, the unit is days. The unit can be overridden by a value in token_validity_units.refresh_token.</summary>
     [JsonPropertyName("refreshTokenValidity")]
     public double? RefreshTokenValidity { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>List of provider names for the identity providers that are supported on this client. It uses the provider_name attribute of the aws_cognito_identity_provider resource(s), or the equivalent string(s).</summary>
     [JsonPropertyName("supportedIdentityProviders")]

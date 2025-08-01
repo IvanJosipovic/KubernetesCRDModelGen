@@ -144,7 +144,7 @@ public partial class V1beta1IdentityNotificationTopicSpecForProvider
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -461,6 +461,10 @@ public partial class V1beta1IdentityNotificationTopicStatusAtProvider
     /// <summary>The type of notifications that will be published to the specified Amazon SNS topic. Valid Values: Bounce, Complaint or Delivery.</summary>
     [JsonPropertyName("notificationType")]
     public string? NotificationType { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the Amazon SNS topic. Can be set to "" (an empty string) to disable publishing.</summary>
     [JsonPropertyName("topicArn")]

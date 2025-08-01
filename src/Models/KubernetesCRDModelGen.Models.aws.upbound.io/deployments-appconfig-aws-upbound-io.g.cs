@@ -424,7 +424,7 @@ public partial class V1beta1DeploymentSpecForProvider
     [JsonPropertyName("kmsKeyIdentifierSelector")]
     public V1beta1DeploymentSpecForProviderKmsKeyIdentifierSelector? KmsKeyIdentifierSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1033,6 +1033,10 @@ public partial class V1beta1DeploymentStatusAtProvider
     /// <summary>The KMS key identifier (key ID, key alias, or key ARN). AppConfig uses this to encrypt the configuration data using a customer managed key.</summary>
     [JsonPropertyName("kmsKeyIdentifier")]
     public string? KmsKeyIdentifier { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>State of the deployment.</summary>
     [JsonPropertyName("state")]

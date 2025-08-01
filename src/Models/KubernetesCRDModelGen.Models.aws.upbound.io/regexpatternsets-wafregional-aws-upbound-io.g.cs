@@ -20,7 +20,7 @@ public partial class V1beta1RegexPatternSetSpecForProvider
     [JsonPropertyName("regexPatternStrings")]
     public IList<string>? RegexPatternStrings { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -185,6 +185,10 @@ public partial class V1beta1RegexPatternSetStatusAtProvider
     /// <summary>A list of regular expression (regex) patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t.</summary>
     [JsonPropertyName("regexPatternStrings")]
     public IList<string>? RegexPatternStrings { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

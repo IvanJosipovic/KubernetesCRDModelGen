@@ -136,7 +136,7 @@ public partial class V1beta1PrincipalAssociationSpecForProvider
     [JsonPropertyName("principalSelector")]
     public V1beta1PrincipalAssociationSpecForProviderPrincipalSelector? PrincipalSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1PrincipalAssociationStatusAtProvider
     /// <summary>The principal to associate with the resource share. Possible values are an AWS account ID, an AWS Organizations Organization ARN, or an AWS Organizations Organization Unit ARN.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the resource share.</summary>
     [JsonPropertyName("resourceShareArn")]

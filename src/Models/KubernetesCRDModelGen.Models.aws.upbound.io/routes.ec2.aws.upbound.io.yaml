@@ -634,7 +634,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   routeTableId:
                     description: The ID of the routing table.
@@ -2178,6 +2181,12 @@ spec:
                   origin:
                     description: How the route was created - CreateRouteTable, CreateRoute or EnableVgwRoutePropagation.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   routeTableId:
                     description: The ID of the routing table.
                     type: string
@@ -2788,7 +2797,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   routeTableId:
                     description: The ID of the routing table.
@@ -4242,6 +4254,12 @@ spec:
                     type: string
                   origin:
                     description: How the route was created - CreateRouteTable, CreateRoute or EnableVgwRoutePropagation.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   routeTableId:
                     description: The ID of the routing table.

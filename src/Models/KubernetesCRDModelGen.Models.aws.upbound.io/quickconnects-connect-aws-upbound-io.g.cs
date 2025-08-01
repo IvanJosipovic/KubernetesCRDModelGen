@@ -148,7 +148,7 @@ public partial class V1beta1QuickConnectSpecForProvider
     [JsonPropertyName("quickConnectConfig")]
     public IList<V1beta1QuickConnectSpecForProviderQuickConnectConfig>? QuickConnectConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -521,6 +521,10 @@ public partial class V1beta1QuickConnectStatusAtProvider
     /// <summary>The identifier for the Quick Connect.</summary>
     [JsonPropertyName("quickConnectId")]
     public string? QuickConnectId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

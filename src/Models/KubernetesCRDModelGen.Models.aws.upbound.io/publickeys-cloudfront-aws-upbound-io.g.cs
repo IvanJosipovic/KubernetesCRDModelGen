@@ -40,10 +40,6 @@ public partial class V1beta1PublicKeySpecForProvider
     /// <summary>The name for the public key.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>The encoded public key that you want to add to CloudFront to use with features like field-level encryption.</summary>

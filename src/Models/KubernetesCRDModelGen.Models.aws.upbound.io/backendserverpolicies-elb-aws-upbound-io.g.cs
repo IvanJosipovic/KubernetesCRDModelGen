@@ -152,7 +152,7 @@ public partial class V1beta1BackendServerPolicySpecForProvider
     [JsonPropertyName("policyNamesSelector")]
     public V1beta1BackendServerPolicySpecForProviderPolicyNamesSelector? PolicyNamesSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -453,6 +453,10 @@ public partial class V1beta1BackendServerPolicyStatusAtProvider
     /// <summary>List of Policy Names to apply to the backend server.</summary>
     [JsonPropertyName("policyNames")]
     public IList<string>? PolicyNames { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

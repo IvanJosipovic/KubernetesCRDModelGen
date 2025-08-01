@@ -110,7 +110,7 @@ public partial class V1beta1TrafficMirrorFilterRuleSpecForProvider
     [JsonPropertyName("protocol")]
     public double? Protocol { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -467,6 +467,10 @@ public partial class V1beta1TrafficMirrorFilterRuleStatusAtProvider
     /// <summary>Protocol number, for example 17 (UDP), to assign to the Traffic Mirror rule. For information about the protocol value, see Protocol Numbers on the Internet Assigned Numbers Authority (IANA) website.</summary>
     [JsonPropertyName("protocol")]
     public double? Protocol { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Action to take (accept | reject) on the filtered traffic. Valid values are accept and reject</summary>
     [JsonPropertyName("ruleAction")]

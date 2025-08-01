@@ -42,10 +42,6 @@ public partial class V1beta1SQLInjectionMatchSetSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>The parts of web requests that you want AWS WAF to inspect for malicious SQL code and, if you want AWS WAF to inspect a header, the name of the header.</summary>
     [JsonPropertyName("sqlInjectionMatchTuples")]
     public IList<V1beta1SQLInjectionMatchSetSpecForProviderSqlInjectionMatchTuples>? SqlInjectionMatchTuples { get; set; }
@@ -252,6 +248,10 @@ public partial class V1beta1SQLInjectionMatchSetStatusAtProviderSqlInjectionMatc
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInjectionMatchSetStatusAtProvider
 {
+    /// <summary>Amazon Resource Name (ARN) of the SQL injection match set.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>The ID of the WAF SQL Injection Match Set.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }

@@ -88,7 +88,10 @@ spec:
                     description: the alert manager definition that you want to be applied. See more in AWS Docs.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   workspaceId:
                     description: ID of the prometheus workspace the alert manager definition should be linked to
@@ -517,6 +520,12 @@ spec:
                     description: the alert manager definition that you want to be applied. See more in AWS Docs.
                     type: string
                   id:
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   workspaceId:
                     description: ID of the prometheus workspace the alert manager definition should be linked to

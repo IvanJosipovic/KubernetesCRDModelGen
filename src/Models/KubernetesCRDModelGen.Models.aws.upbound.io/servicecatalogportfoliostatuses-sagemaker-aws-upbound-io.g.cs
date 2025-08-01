@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServicecatalogPortfolioStatusSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -170,6 +170,10 @@ public partial class V1beta1ServicecatalogPortfolioStatusStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Whether Service Catalog is enabled or disabled in SageMaker. Valid values are Enabled and Disabled.</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
@@ -221,7 +225,7 @@ public partial class V1beta1ServicecatalogPortfolioStatusStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ServicecatalogPortfolioStatus is the Schema for the ServicecatalogPortfolioStatuss API. Manages status of Service Catalog in SageMaker. Service Catalog is used to create SageMaker projects.</summary>
+/// <summary>ServicecatalogPortfolioStatus is the Schema for the ServicecatalogPortfolioStatuss API. Manages status of Service Catalog in SageMaker. Service Catalog is used to create SageMaker AI projects.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServicecatalogPortfolioStatus : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServicecatalogPortfolioStatusSpec>, IStatus<V1beta1ServicecatalogPortfolioStatusStatus>
@@ -251,7 +255,7 @@ public partial class V1beta1ServicecatalogPortfolioStatus : IKubernetesObject<V1
     public V1beta1ServicecatalogPortfolioStatusStatus? Status { get; set; }
 }
 
-/// <summary>ServicecatalogPortfolioStatus is the Schema for the ServicecatalogPortfolioStatuss API. Manages status of Service Catalog in SageMaker. Service Catalog is used to create SageMaker projects.</summary>
+/// <summary>ServicecatalogPortfolioStatus is the Schema for the ServicecatalogPortfolioStatuss API. Manages status of Service Catalog in SageMaker. Service Catalog is used to create SageMaker AI projects.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ServicecatalogPortfolioStatusList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServicecatalogPortfolioStatus>

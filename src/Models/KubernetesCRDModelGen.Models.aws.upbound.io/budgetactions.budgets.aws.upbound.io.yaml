@@ -529,12 +529,6 @@ spec:
                   notificationType:
                     description: The type of a notification. Valid values are ACTUAL or FORECASTED.
                     type: string
-                  region:
-                    description: >-
-                      The Region to run the SSM document.
-
-                      Region is the region you'd like your resource to be created in.
-                    type: string
                   subscriber:
                     description: A list of subscribers. See Subscriber.
                     items:
@@ -553,8 +547,6 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -1964,12 +1956,6 @@ spec:
                   notificationType:
                     description: The type of a notification. Valid values are ACTUAL or FORECASTED.
                     type: string
-                  region:
-                    description: >-
-                      The Region to run the SSM document.
-
-                      Region is the region you'd like your resource to be created in.
-                    type: string
                   subscriber:
                     description: A list of subscribers. See Subscriber.
                     items:
@@ -1988,8 +1974,6 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-

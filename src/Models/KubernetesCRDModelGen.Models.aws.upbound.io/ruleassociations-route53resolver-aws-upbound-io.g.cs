@@ -128,7 +128,7 @@ public partial class V1beta1RuleAssociationSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -445,6 +445,10 @@ public partial class V1beta1RuleAssociationStatusAtProvider
     /// <summary>A name for the association that you're creating between a resolver rule and a VPC.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the resolver rule that you want to associate with the VPC.</summary>
     [JsonPropertyName("resolverRuleId")]

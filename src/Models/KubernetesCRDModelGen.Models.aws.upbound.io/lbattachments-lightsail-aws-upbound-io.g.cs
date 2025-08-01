@@ -124,7 +124,7 @@ public partial class V1beta1LBAttachmentSpecForProviderLbNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecForProvider
 {
-    /// <summary>The name of the instance to attach to the load balancer.</summary>
+    /// <summary>Name of the instance to attach to the load balancer.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -136,7 +136,7 @@ public partial class V1beta1LBAttachmentSpecForProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1LBAttachmentSpecForProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>The name of the Lightsail load balancer.</summary>
+    /// <summary>Name of the Lightsail load balancer.</summary>
     [JsonPropertyName("lbName")]
     public string? LbName { get; set; }
 
@@ -148,7 +148,7 @@ public partial class V1beta1LBAttachmentSpecForProvider
     [JsonPropertyName("lbNameSelector")]
     public V1beta1LBAttachmentSpecForProviderLbNameSelector? LbNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -269,7 +269,7 @@ public partial class V1beta1LBAttachmentSpecInitProviderLbNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentSpecInitProvider
 {
-    /// <summary>The name of the instance to attach to the load balancer.</summary>
+    /// <summary>Name of the instance to attach to the load balancer.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
@@ -281,7 +281,7 @@ public partial class V1beta1LBAttachmentSpecInitProvider
     [JsonPropertyName("instanceNameSelector")]
     public V1beta1LBAttachmentSpecInitProviderInstanceNameSelector? InstanceNameSelector { get; set; }
 
-    /// <summary>The name of the Lightsail load balancer.</summary>
+    /// <summary>Name of the Lightsail load balancer.</summary>
     [JsonPropertyName("lbName")]
     public string? LbName { get; set; }
 
@@ -430,17 +430,21 @@ public partial class V1beta1LBAttachmentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBAttachmentStatusAtProvider
 {
-    /// <summary>A combination of attributes to create a unique id: lb_name,instance_name</summary>
+    /// <summary>Combination of attributes to create a unique ID: lb_name,instance_name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name of the instance to attach to the load balancer.</summary>
+    /// <summary>Name of the instance to attach to the load balancer.</summary>
     [JsonPropertyName("instanceName")]
     public string? InstanceName { get; set; }
 
-    /// <summary>The name of the Lightsail load balancer.</summary>
+    /// <summary>Name of the Lightsail load balancer.</summary>
     [JsonPropertyName("lbName")]
     public string? LbName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
@@ -489,7 +493,7 @@ public partial class V1beta1LBAttachmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LBAttachment is the Schema for the LBAttachments API. Attaches a Lightsail Instance to a Lightsail Load Balancer</summary>
+/// <summary>LBAttachment is the Schema for the LBAttachments API. Manages a Lightsail Load Balancer Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBAttachmentSpec>, IStatus<V1beta1LBAttachmentStatus>
@@ -519,7 +523,7 @@ public partial class V1beta1LBAttachment : IKubernetesObject<V1ObjectMeta>, ISpe
     public V1beta1LBAttachmentStatus? Status { get; set; }
 }
 
-/// <summary>LBAttachment is the Schema for the LBAttachments API. Attaches a Lightsail Instance to a Lightsail Load Balancer</summary>
+/// <summary>LBAttachment is the Schema for the LBAttachments API. Manages a Lightsail Load Balancer Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBAttachment>

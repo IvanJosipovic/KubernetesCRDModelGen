@@ -338,7 +338,7 @@ public partial class V1beta1IntegrationSpecForProvider
     [JsonPropertyName("payloadFormatVersion")]
     public string? PayloadFormatVersion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -935,6 +935,10 @@ public partial class V1beta1IntegrationStatusAtProvider
     /// <summary>The format of the payload sent to an integration. Valid values: 1.0, 2.0. Default is 1.0.</summary>
     [JsonPropertyName("payloadFormatVersion")]
     public string? PayloadFormatVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>For WebSocket APIs, a key-value map specifying request parameters that are passed from the method request to the backend. For HTTP APIs with a specified integration_subtype, a key-value map specifying parameters that are passed to AWS_PROXY integrations. For HTTP APIs without a specified integration_subtype, a key-value map specifying how to transform HTTP requests before sending them to the backend. See the Amazon API Gateway Developer Guide for details.</summary>
     [JsonPropertyName("requestParameters")]

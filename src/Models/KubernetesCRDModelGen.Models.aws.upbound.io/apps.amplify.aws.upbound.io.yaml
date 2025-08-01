@@ -102,7 +102,7 @@ spec:
                     - namespace
                     type: object
                   autoBranchCreationConfig:
-                    description: Automated branch creation configuration for an Amplify app. An auto_branch_creation_config block is documented below.
+                    description: Automated branch creation configuration for an Amplify app. See auto_branch_creation_config Block for details.
                     items:
                       properties:
                         basicAuthCredentialsSecretRef:
@@ -189,11 +189,100 @@ spec:
                           type: string
                       type: object
                     type: array
+                  computeRoleArn:
+                    description: AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.
+                    type: string
+                  computeRoleArnRef:
+                    description: Reference to a Role in iam to populate computeRoleArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  computeRoleArnSelector:
+                    description: Selector for a Role in iam to populate computeRoleArn.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   customHeaders:
                     description: The custom HTTP headers for an Amplify app.
                     type: string
                   customRule:
-                    description: Custom rewrite and redirect rules for an Amplify app. A custom_rule block is documented below.
+                    description: Custom rewrite and redirect rules for an Amplify app. See custom_rule Block for details.
                     items:
                       properties:
                         condition:
@@ -320,6 +409,15 @@ spec:
                             type: string
                         type: object
                     type: object
+                  jobConfig:
+                    description: Used to configure the Amplify Application build settings. See job_config Block for details.
+                    items:
+                      properties:
+                        buildComputeType:
+                          description: 'Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.'
+                          type: string
+                      type: object
+                    type: array
                   name:
                     description: Name for an Amplify app.
                     type: string
@@ -344,7 +442,10 @@ spec:
                     description: 'Platform or framework for an Amplify app. Valid values: WEB, WEB_COMPUTE. Default value: WEB.'
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   repository:
                     description: Repository for an Amplify app.
@@ -398,7 +499,7 @@ spec:
                     - namespace
                     type: object
                   autoBranchCreationConfig:
-                    description: Automated branch creation configuration for an Amplify app. An auto_branch_creation_config block is documented below.
+                    description: Automated branch creation configuration for an Amplify app. See auto_branch_creation_config Block for details.
                     items:
                       properties:
                         basicAuthCredentialsSecretRef:
@@ -485,11 +586,100 @@ spec:
                           type: string
                       type: object
                     type: array
+                  computeRoleArn:
+                    description: AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.
+                    type: string
+                  computeRoleArnRef:
+                    description: Reference to a Role in iam to populate computeRoleArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  computeRoleArnSelector:
+                    description: Selector for a Role in iam to populate computeRoleArn.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   customHeaders:
                     description: The custom HTTP headers for an Amplify app.
                     type: string
                   customRule:
-                    description: Custom rewrite and redirect rules for an Amplify app. A custom_rule block is documented below.
+                    description: Custom rewrite and redirect rules for an Amplify app. See custom_rule Block for details.
                     items:
                       properties:
                         condition:
@@ -616,6 +806,15 @@ spec:
                             type: string
                         type: object
                     type: object
+                  jobConfig:
+                    description: Used to configure the Amplify Application build settings. See job_config Block for details.
+                    items:
+                      properties:
+                        buildComputeType:
+                          description: 'Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.'
+                          type: string
+                      type: object
+                    type: array
                   name:
                     description: Name for an Amplify app.
                     type: string
@@ -869,7 +1068,7 @@ spec:
                     description: ARN of the Amplify app.
                     type: string
                   autoBranchCreationConfig:
-                    description: Automated branch creation configuration for an Amplify app. An auto_branch_creation_config block is documented below.
+                    description: Automated branch creation configuration for an Amplify app. See auto_branch_creation_config Block for details.
                     items:
                       properties:
                         buildSpec:
@@ -922,11 +1121,14 @@ spec:
                           type: string
                       type: object
                     type: array
+                  computeRoleArn:
+                    description: AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.
+                    type: string
                   customHeaders:
                     description: The custom HTTP headers for an Amplify app.
                     type: string
                   customRule:
-                    description: Custom rewrite and redirect rules for an Amplify app. A custom_rule block is documented below.
+                    description: Custom rewrite and redirect rules for an Amplify app. See custom_rule Block for details.
                     items:
                       properties:
                         condition:
@@ -973,6 +1175,15 @@ spec:
                   id:
                     description: Unique ID of the Amplify app.
                     type: string
+                  jobConfig:
+                    description: Used to configure the Amplify Application build settings. See job_config Block for details.
+                    items:
+                      properties:
+                        buildComputeType:
+                          description: 'Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.'
+                          type: string
+                      type: object
+                    type: array
                   name:
                     description: Name for an Amplify app.
                     type: string
@@ -997,6 +1208,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   repository:
                     description: Repository for an Amplify app.
                     type: string
@@ -1247,6 +1464,95 @@ spec:
                         description: 'Type of cache configuration to use for an Amplify app. Valid values: AMPLIFY_MANAGED, AMPLIFY_MANAGED_NO_COOKIES.'
                         type: string
                     type: object
+                  computeRoleArn:
+                    description: AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.
+                    type: string
+                  computeRoleArnRef:
+                    description: Reference to a Role in iam to populate computeRoleArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  computeRoleArnSelector:
+                    description: Selector for a Role in iam to populate computeRoleArn.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   customHeaders:
                     description: The custom HTTP headers for an Amplify app.
                     type: string
@@ -1378,6 +1684,13 @@ spec:
                             type: string
                         type: object
                     type: object
+                  jobConfig:
+                    description: Used to configure the Amplify Application build settings. See job_config Block for details.
+                    properties:
+                      buildComputeType:
+                        description: 'Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.'
+                        type: string
+                    type: object
                   name:
                     description: Name for an Amplify app.
                     type: string
@@ -1402,7 +1715,10 @@ spec:
                     description: 'Platform or framework for an Amplify app. Valid values: WEB, WEB_COMPUTE. Default value: WEB.'
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   repository:
                     description: Repository for an Amplify app.
@@ -1539,6 +1855,95 @@ spec:
                         description: 'Type of cache configuration to use for an Amplify app. Valid values: AMPLIFY_MANAGED, AMPLIFY_MANAGED_NO_COOKIES.'
                         type: string
                     type: object
+                  computeRoleArn:
+                    description: AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.
+                    type: string
+                  computeRoleArnRef:
+                    description: Reference to a Role in iam to populate computeRoleArn.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  computeRoleArnSelector:
+                    description: Selector for a Role in iam to populate computeRoleArn.
+                    properties:
+                      matchControllerRef:
+                        description: >-
+                          MatchControllerRef ensures an object with the same controller reference
+
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: >-
+                              Resolution specifies whether resolution of this reference is required.
+
+                              The default is 'Required', which means the reconcile will fail if the
+
+                              reference cannot be resolved. 'Optional' means this reference will be
+
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: >-
+                              Resolve specifies when this reference should be resolved. The default
+
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+
+                              the corresponding field is not present. Use 'Always' to resolve the
+
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
                   customHeaders:
                     description: The custom HTTP headers for an Amplify app.
                     type: string
@@ -1669,6 +2074,13 @@ spec:
                             - IfNotPresent
                             type: string
                         type: object
+                    type: object
+                  jobConfig:
+                    description: Used to configure the Amplify Application build settings. See job_config Block for details.
+                    properties:
+                      buildComputeType:
+                        description: 'Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.'
+                        type: string
                     type: object
                   name:
                     description: Name for an Amplify app.
@@ -1972,6 +2384,9 @@ spec:
                         description: 'Type of cache configuration to use for an Amplify app. Valid values: AMPLIFY_MANAGED, AMPLIFY_MANAGED_NO_COOKIES.'
                         type: string
                     type: object
+                  computeRoleArn:
+                    description: AWS Identity and Access Management (IAM) SSR compute role for an Amplify app.
+                    type: string
                   customHeaders:
                     description: The custom HTTP headers for an Amplify app.
                     type: string
@@ -2023,6 +2438,13 @@ spec:
                   id:
                     description: Unique ID of the Amplify app.
                     type: string
+                  jobConfig:
+                    description: Used to configure the Amplify Application build settings. See job_config Block for details.
+                    properties:
+                      buildComputeType:
+                        description: 'Size of the build instance. Valid values: STANDARD_8GB, LARGE_16GB, and XLARGE_72GB. Default: STANDARD_8GB.'
+                        type: string
+                    type: object
                   name:
                     description: Name for an Amplify app.
                     type: string
@@ -2047,6 +2469,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   repository:
                     description: Repository for an Amplify app.
                     type: string

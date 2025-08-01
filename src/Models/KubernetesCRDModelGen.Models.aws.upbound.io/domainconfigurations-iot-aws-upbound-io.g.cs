@@ -90,6 +90,14 @@ public partial class V1beta1DomainConfigurationSpecForProviderTlsConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProvider
 {
+    /// <summary>An enumerated string that speciﬁes the application-layer protocol. Valid values are SECURE_MQTT, MQTT_WSS, HTTPS or DEFAULT.</summary>
+    [JsonPropertyName("applicationProtocol")]
+    public string? ApplicationProtocol { get; set; }
+
+    /// <summary>An enumerated string that speciﬁes the authentication type. Valid values are CUSTOM_AUTH_X509, CUSTOM_AUTH, AWS_X509, AWS_SIGV4 or DEFAULT.</summary>
+    [JsonPropertyName("authenticationType")]
+    public string? AuthenticationType { get; set; }
+
     /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
     [JsonPropertyName("authorizerConfig")]
     public V1beta1DomainConfigurationSpecForProviderAuthorizerConfig? AuthorizerConfig { get; set; }
@@ -98,7 +106,7 @@ public partial class V1beta1DomainConfigurationSpecForProvider
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -217,6 +225,14 @@ public partial class V1beta1DomainConfigurationSpecInitProviderTlsConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecInitProvider
 {
+    /// <summary>An enumerated string that speciﬁes the application-layer protocol. Valid values are SECURE_MQTT, MQTT_WSS, HTTPS or DEFAULT.</summary>
+    [JsonPropertyName("applicationProtocol")]
+    public string? ApplicationProtocol { get; set; }
+
+    /// <summary>An enumerated string that speciﬁes the authentication type. Valid values are CUSTOM_AUTH_X509, CUSTOM_AUTH, AWS_X509, AWS_SIGV4 or DEFAULT.</summary>
+    [JsonPropertyName("authenticationType")]
+    public string? AuthenticationType { get; set; }
+
     /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
     [JsonPropertyName("authorizerConfig")]
     public V1beta1DomainConfigurationSpecInitProviderAuthorizerConfig? AuthorizerConfig { get; set; }
@@ -416,9 +432,17 @@ public partial class V1beta1DomainConfigurationStatusAtProviderTlsConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationStatusAtProvider
 {
+    /// <summary>An enumerated string that speciﬁes the application-layer protocol. Valid values are SECURE_MQTT, MQTT_WSS, HTTPS or DEFAULT.</summary>
+    [JsonPropertyName("applicationProtocol")]
+    public string? ApplicationProtocol { get; set; }
+
     /// <summary>The ARN of the domain configuration.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
+
+    /// <summary>An enumerated string that speciﬁes the authentication type. Valid values are CUSTOM_AUTH_X509, CUSTOM_AUTH, AWS_X509, AWS_SIGV4 or DEFAULT.</summary>
+    [JsonPropertyName("authenticationType")]
+    public string? AuthenticationType { get; set; }
 
     /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
     [JsonPropertyName("authorizerConfig")]
@@ -435,6 +459,10 @@ public partial class V1beta1DomainConfigurationStatusAtProvider
     /// <summary>The name of the created domain configuration.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARNs of the certificates that IoT passes to the device during the TLS handshake. Currently you can specify only one certificate ARN. This value is not required for Amazon Web Services-managed domains. When using a custom domain_name, the cert must include it.</summary>
     [JsonPropertyName("serverCertificateArns")]

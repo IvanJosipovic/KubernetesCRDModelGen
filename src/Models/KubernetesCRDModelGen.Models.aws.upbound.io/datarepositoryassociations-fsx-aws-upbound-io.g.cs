@@ -131,7 +131,7 @@ public partial class V1beta1DataRepositoryAssociationSpecForProvider
     [JsonPropertyName("importedFileChunkSize")]
     public double? ImportedFileChunkSize { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -478,6 +478,10 @@ public partial class V1beta1DataRepositoryAssociationStatusAtProvider
     /// <summary>For files imported from a data repository, this value determines the stripe count and maximum amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a single file can be striped across is limited by the total number of disks that make up the file system.</summary>
     [JsonPropertyName("importedFileChunkSize")]
     public double? ImportedFileChunkSize { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>See the s3 configuration block. Max of 1. The configuration for an Amazon S3 data repository linked to an Amazon FSx Lustre file system with a data repository association. The configuration defines which file events (new, changed, or deleted files or directories) are automatically imported from the linked data repository to the file system or automatically exported from the file system to the data repository.</summary>
     [JsonPropertyName("s3")]

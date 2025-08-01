@@ -16,11 +16,11 @@ public partial class V1beta1ServiceSpecForProviderAlarms
     [JsonPropertyName("alarmNames")]
     public IList<string>? AlarmNames { get; set; }
 
-    /// <summary>Determines whether to use the CloudWatch alarm option in the service deployment process.</summary>
+    /// <summary>Whether to use the CloudWatch alarm option in the service deployment process.</summary>
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 
-    /// <summary>Determines whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.</summary>
+    /// <summary>Whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.</summary>
     [JsonPropertyName("rollback")]
     public bool? Rollback { get; set; }
 }
@@ -436,11 +436,11 @@ public partial class V1beta1ServiceSpecForProviderPlacementConstraints
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfigurationSecretOption
 {
-    /// <summary>The name of the secret.</summary>
+    /// <summary>Name of the secret.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.</summary>
+    /// <summary>Secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.</summary>
     [JsonPropertyName("valueFrom")]
     public string? ValueFrom { get; set; }
 }
@@ -449,15 +449,15 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLog
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfiguration
 {
-    /// <summary>The log driver to use for the container.</summary>
+    /// <summary>Log driver to use for the container.</summary>
     [JsonPropertyName("logDriver")]
     public string? LogDriver { get; set; }
 
-    /// <summary>The configuration options to send to the log driver.</summary>
+    /// <summary>Configuration options to send to the log driver.</summary>
     [JsonPropertyName("options")]
     public IDictionary<string, string>? Options { get; set; }
 
-    /// <summary>The secrets to pass to the log configuration. See below.</summary>
+    /// <summary>Secrets to pass to the log configuration. See below.</summary>
     [JsonPropertyName("secretOption")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfigurationSecretOption>? SecretOption { get; set; }
 }
@@ -466,11 +466,11 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationLog
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceClientAlias
 {
-    /// <summary>The name that you use in the applications of client tasks to connect to this service.</summary>
+    /// <summary>Name that you use in the applications of client tasks to connect to this service.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
-    /// <summary>The listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.</summary>
+    /// <summary>Listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -479,11 +479,11 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTimeout
 {
-    /// <summary>The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
+    /// <summary>Amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
     [JsonPropertyName("idleTimeoutSeconds")]
     public double? IdleTimeoutSeconds { get; set; }
 
-    /// <summary>The amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.</summary>
+    /// <summary>Amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.</summary>
     [JsonPropertyName("perRequestTimeoutSeconds")]
     public double? PerRequestTimeoutSeconds { get; set; }
 }
@@ -492,7 +492,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority
 {
-    /// <summary>The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
+    /// <summary>ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
     [JsonPropertyName("awsPcaAuthorityArn")]
     public string? AwsPcaAuthorityArn { get; set; }
 }
@@ -501,15 +501,15 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTls
 {
-    /// <summary>The details of the certificate authority which will issue the certificate.</summary>
+    /// <summary>Details of the certificate authority which will issue the certificate.</summary>
     [JsonPropertyName("issuerCertAuthority")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority>? IssuerCertAuthority { get; set; }
 
-    /// <summary>The KMS key used to encrypt the private key in Secrets Manager.</summary>
+    /// <summary>KMS key used to encrypt the private key in Secrets Manager.</summary>
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 
-    /// <summary>The ARN of the IAM Role that's associated with the Service Connect TLS.</summary>
+    /// <summary>ARN of the IAM Role that's associated with the Service Connect TLS.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
@@ -518,19 +518,19 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationService
 {
-    /// <summary>The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
+    /// <summary>List of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
     [JsonPropertyName("clientAlias")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceClientAlias>? ClientAlias { get; set; }
 
-    /// <summary>The name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.</summary>
+    /// <summary>Name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.</summary>
     [JsonPropertyName("discoveryName")]
     public string? DiscoveryName { get; set; }
 
-    /// <summary>The port number for the Service Connect proxy to listen on.</summary>
+    /// <summary>Port number for the Service Connect proxy to listen on.</summary>
     [JsonPropertyName("ingressPortOverride")]
     public double? IngressPortOverride { get; set; }
 
-    /// <summary>The name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.</summary>
+    /// <summary>Name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.</summary>
     [JsonPropertyName("portName")]
     public string? PortName { get; set; }
 
@@ -538,7 +538,7 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
     [JsonPropertyName("timeout")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTimeout>? Timeout { get; set; }
 
-    /// <summary>The configuration for enabling Transport Layer Security (TLS)</summary>
+    /// <summary>Configuration for enabling Transport Layer Security (TLS)</summary>
     [JsonPropertyName("tls")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationServiceTls>? Tls { get; set; }
 }
@@ -547,19 +547,19 @@ public partial class V1beta1ServiceSpecForProviderServiceConnectConfigurationSer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderServiceConnectConfiguration
 {
-    /// <summary>Specifies whether to use Service Connect with this service.</summary>
+    /// <summary>Whether to use Service Connect with this service.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The log configuration for the container. See below.</summary>
+    /// <summary>Log configuration for the container. See below.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.</summary>
+    /// <summary>Namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>The list of Service Connect service objects. See below.</summary>
+    /// <summary>List of Service Connect service objects. See below.</summary>
     [JsonPropertyName("service")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfigurationService>? Service { get; set; }
 }
@@ -645,7 +645,7 @@ public partial class V1beta1ServiceSpecForProviderTaskDefinitionSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolumeTagSpecifications
 {
-    /// <summary>Determines whether to propagate the tags from the task definition to the Amazon EBS volume.</summary>
+    /// <summary>Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
     [JsonPropertyName("propagateTags")]
     public string? PropagateTags { get; set; }
 
@@ -653,12 +653,12 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsV
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>The tags applied to this Amazon EBS volume. AmazonECSCreated and AmazonECSManaged are reserved tags that can't be used.</summary>
+    /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolume
 {
@@ -678,7 +678,7 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsV
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.</summary>
+    /// <summary>The ARN of the IAM role to associate with this volume. This is the Amazon ECS infrastructure IAM role that is used to manage your AWS infrastructure.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -696,20 +696,24 @@ public partial class V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsV
 
     /// <summary>Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.</summary>
     [JsonPropertyName("throughput")]
-    public string? Throughput { get; set; }
+    public double? Throughput { get; set; }
+
+    /// <summary>Volume Initialization Rate in MiB/s. You must also specify a snapshot_id.</summary>
+    [JsonPropertyName("volumeInitializationRate")]
+    public double? VolumeInitializationRate { get; set; }
 
     /// <summary>Volume type.</summary>
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
 
-/// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecForProviderVolumeConfiguration
 {
     /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
     [JsonPropertyName("managedEbsVolume")]
-    public V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolume? ManagedEbsVolume { get; set; }
+    public IList<V1beta1ServiceSpecForProviderVolumeConfigurationManagedEbsVolume>? ManagedEbsVolume { get; set; }
 
     /// <summary>Name of the volume.</summary>
     [JsonPropertyName("name")]
@@ -781,11 +785,11 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("desiredCount")]
     public double? DesiredCount { get; set; }
 
-    /// <summary>Specifies whether to enable Amazon ECS managed tags for the tasks within the service.</summary>
+    /// <summary>Whether to enable Amazon ECS managed tags for the tasks within the service.</summary>
     [JsonPropertyName("enableEcsManagedTags")]
     public bool? EnableEcsManagedTags { get; set; }
 
-    /// <summary>Specifies whether to enable Amazon ECS Exec for the tasks within the service.</summary>
+    /// <summary>Whether to enable Amazon ECS Exec for the tasks within the service.</summary>
     [JsonPropertyName("enableExecuteCommand")]
     public bool? EnableExecuteCommand { get; set; }
 
@@ -837,11 +841,11 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("platformVersion")]
     public string? PlatformVersion { get; set; }
 
-    /// <summary>Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
+    /// <summary>Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
     [JsonPropertyName("propagateTags")]
     public string? PropagateTags { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -849,7 +853,7 @@ public partial class V1beta1ServiceSpecForProvider
     [JsonPropertyName("schedulingStrategy")]
     public string? SchedulingStrategy { get; set; }
 
-    /// <summary>The ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.</summary>
+    /// <summary>ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.</summary>
     [JsonPropertyName("serviceConnectConfiguration")]
     public IList<V1beta1ServiceSpecForProviderServiceConnectConfiguration>? ServiceConnectConfiguration { get; set; }
 
@@ -879,7 +883,7 @@ public partial class V1beta1ServiceSpecForProvider
 
     /// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
     [JsonPropertyName("volumeConfiguration")]
-    public V1beta1ServiceSpecForProviderVolumeConfiguration? VolumeConfiguration { get; set; }
+    public IList<V1beta1ServiceSpecForProviderVolumeConfiguration>? VolumeConfiguration { get; set; }
 
     /// <summary>The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs. See below.</summary>
     [JsonPropertyName("vpcLatticeConfigurations")]
@@ -898,11 +902,11 @@ public partial class V1beta1ServiceSpecInitProviderAlarms
     [JsonPropertyName("alarmNames")]
     public IList<string>? AlarmNames { get; set; }
 
-    /// <summary>Determines whether to use the CloudWatch alarm option in the service deployment process.</summary>
+    /// <summary>Whether to use the CloudWatch alarm option in the service deployment process.</summary>
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 
-    /// <summary>Determines whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.</summary>
+    /// <summary>Whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.</summary>
     [JsonPropertyName("rollback")]
     public bool? Rollback { get; set; }
 }
@@ -1318,11 +1322,11 @@ public partial class V1beta1ServiceSpecInitProviderPlacementConstraints
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfigurationSecretOption
 {
-    /// <summary>The name of the secret.</summary>
+    /// <summary>Name of the secret.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.</summary>
+    /// <summary>Secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.</summary>
     [JsonPropertyName("valueFrom")]
     public string? ValueFrom { get; set; }
 }
@@ -1331,15 +1335,15 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfiguration
 {
-    /// <summary>The log driver to use for the container.</summary>
+    /// <summary>Log driver to use for the container.</summary>
     [JsonPropertyName("logDriver")]
     public string? LogDriver { get; set; }
 
-    /// <summary>The configuration options to send to the log driver.</summary>
+    /// <summary>Configuration options to send to the log driver.</summary>
     [JsonPropertyName("options")]
     public IDictionary<string, string>? Options { get; set; }
 
-    /// <summary>The secrets to pass to the log configuration. See below.</summary>
+    /// <summary>Secrets to pass to the log configuration. See below.</summary>
     [JsonPropertyName("secretOption")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfigurationSecretOption>? SecretOption { get; set; }
 }
@@ -1348,11 +1352,11 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationLo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceClientAlias
 {
-    /// <summary>The name that you use in the applications of client tasks to connect to this service.</summary>
+    /// <summary>Name that you use in the applications of client tasks to connect to this service.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
-    /// <summary>The listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.</summary>
+    /// <summary>Listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -1361,11 +1365,11 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTimeout
 {
-    /// <summary>The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
+    /// <summary>Amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
     [JsonPropertyName("idleTimeoutSeconds")]
     public double? IdleTimeoutSeconds { get; set; }
 
-    /// <summary>The amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.</summary>
+    /// <summary>Amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.</summary>
     [JsonPropertyName("perRequestTimeoutSeconds")]
     public double? PerRequestTimeoutSeconds { get; set; }
 }
@@ -1374,7 +1378,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority
 {
-    /// <summary>The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
+    /// <summary>ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
     [JsonPropertyName("awsPcaAuthorityArn")]
     public string? AwsPcaAuthorityArn { get; set; }
 }
@@ -1383,15 +1387,15 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTls
 {
-    /// <summary>The details of the certificate authority which will issue the certificate.</summary>
+    /// <summary>Details of the certificate authority which will issue the certificate.</summary>
     [JsonPropertyName("issuerCertAuthority")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority>? IssuerCertAuthority { get; set; }
 
-    /// <summary>The KMS key used to encrypt the private key in Secrets Manager.</summary>
+    /// <summary>KMS key used to encrypt the private key in Secrets Manager.</summary>
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 
-    /// <summary>The ARN of the IAM Role that's associated with the Service Connect TLS.</summary>
+    /// <summary>ARN of the IAM Role that's associated with the Service Connect TLS.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
@@ -1400,19 +1404,19 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationService
 {
-    /// <summary>The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
+    /// <summary>List of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
     [JsonPropertyName("clientAlias")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceClientAlias>? ClientAlias { get; set; }
 
-    /// <summary>The name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.</summary>
+    /// <summary>Name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.</summary>
     [JsonPropertyName("discoveryName")]
     public string? DiscoveryName { get; set; }
 
-    /// <summary>The port number for the Service Connect proxy to listen on.</summary>
+    /// <summary>Port number for the Service Connect proxy to listen on.</summary>
     [JsonPropertyName("ingressPortOverride")]
     public double? IngressPortOverride { get; set; }
 
-    /// <summary>The name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.</summary>
+    /// <summary>Name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.</summary>
     [JsonPropertyName("portName")]
     public string? PortName { get; set; }
 
@@ -1420,7 +1424,7 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
     [JsonPropertyName("timeout")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTimeout>? Timeout { get; set; }
 
-    /// <summary>The configuration for enabling Transport Layer Security (TLS)</summary>
+    /// <summary>Configuration for enabling Transport Layer Security (TLS)</summary>
     [JsonPropertyName("tls")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationServiceTls>? Tls { get; set; }
 }
@@ -1429,19 +1433,19 @@ public partial class V1beta1ServiceSpecInitProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderServiceConnectConfiguration
 {
-    /// <summary>Specifies whether to use Service Connect with this service.</summary>
+    /// <summary>Whether to use Service Connect with this service.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The log configuration for the container. See below.</summary>
+    /// <summary>Log configuration for the container. See below.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.</summary>
+    /// <summary>Namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>The list of Service Connect service objects. See below.</summary>
+    /// <summary>List of Service Connect service objects. See below.</summary>
     [JsonPropertyName("service")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfigurationService>? Service { get; set; }
 }
@@ -1527,7 +1531,7 @@ public partial class V1beta1ServiceSpecInitProviderTaskDefinitionSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolumeTagSpecifications
 {
-    /// <summary>Determines whether to propagate the tags from the task definition to the Amazon EBS volume.</summary>
+    /// <summary>Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
     [JsonPropertyName("propagateTags")]
     public string? PropagateTags { get; set; }
 
@@ -1535,12 +1539,12 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbs
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>The tags applied to this Amazon EBS volume. AmazonECSCreated and AmazonECSManaged are reserved tags that can't be used.</summary>
+    /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolume
 {
@@ -1560,7 +1564,7 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbs
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.</summary>
+    /// <summary>The ARN of the IAM role to associate with this volume. This is the Amazon ECS infrastructure IAM role that is used to manage your AWS infrastructure.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -1578,20 +1582,24 @@ public partial class V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbs
 
     /// <summary>Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.</summary>
     [JsonPropertyName("throughput")]
-    public string? Throughput { get; set; }
+    public double? Throughput { get; set; }
+
+    /// <summary>Volume Initialization Rate in MiB/s. You must also specify a snapshot_id.</summary>
+    [JsonPropertyName("volumeInitializationRate")]
+    public double? VolumeInitializationRate { get; set; }
 
     /// <summary>Volume type.</summary>
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
 
-/// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecInitProviderVolumeConfiguration
 {
     /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
     [JsonPropertyName("managedEbsVolume")]
-    public V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolume? ManagedEbsVolume { get; set; }
+    public IList<V1beta1ServiceSpecInitProviderVolumeConfigurationManagedEbsVolume>? ManagedEbsVolume { get; set; }
 
     /// <summary>Name of the volume.</summary>
     [JsonPropertyName("name")]
@@ -1663,11 +1671,11 @@ public partial class V1beta1ServiceSpecInitProvider
     [JsonPropertyName("desiredCount")]
     public double? DesiredCount { get; set; }
 
-    /// <summary>Specifies whether to enable Amazon ECS managed tags for the tasks within the service.</summary>
+    /// <summary>Whether to enable Amazon ECS managed tags for the tasks within the service.</summary>
     [JsonPropertyName("enableEcsManagedTags")]
     public bool? EnableEcsManagedTags { get; set; }
 
-    /// <summary>Specifies whether to enable Amazon ECS Exec for the tasks within the service.</summary>
+    /// <summary>Whether to enable Amazon ECS Exec for the tasks within the service.</summary>
     [JsonPropertyName("enableExecuteCommand")]
     public bool? EnableExecuteCommand { get; set; }
 
@@ -1719,7 +1727,7 @@ public partial class V1beta1ServiceSpecInitProvider
     [JsonPropertyName("platformVersion")]
     public string? PlatformVersion { get; set; }
 
-    /// <summary>Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
+    /// <summary>Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
     [JsonPropertyName("propagateTags")]
     public string? PropagateTags { get; set; }
 
@@ -1727,7 +1735,7 @@ public partial class V1beta1ServiceSpecInitProvider
     [JsonPropertyName("schedulingStrategy")]
     public string? SchedulingStrategy { get; set; }
 
-    /// <summary>The ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.</summary>
+    /// <summary>ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.</summary>
     [JsonPropertyName("serviceConnectConfiguration")]
     public IList<V1beta1ServiceSpecInitProviderServiceConnectConfiguration>? ServiceConnectConfiguration { get; set; }
 
@@ -1757,7 +1765,7 @@ public partial class V1beta1ServiceSpecInitProvider
 
     /// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
     [JsonPropertyName("volumeConfiguration")]
-    public V1beta1ServiceSpecInitProviderVolumeConfiguration? VolumeConfiguration { get; set; }
+    public IList<V1beta1ServiceSpecInitProviderVolumeConfiguration>? VolumeConfiguration { get; set; }
 
     /// <summary>The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs. See below.</summary>
     [JsonPropertyName("vpcLatticeConfigurations")]
@@ -1908,11 +1916,11 @@ public partial class V1beta1ServiceStatusAtProviderAlarms
     [JsonPropertyName("alarmNames")]
     public IList<string>? AlarmNames { get; set; }
 
-    /// <summary>Determines whether to use the CloudWatch alarm option in the service deployment process.</summary>
+    /// <summary>Whether to use the CloudWatch alarm option in the service deployment process.</summary>
     [JsonPropertyName("enable")]
     public bool? Enable { get; set; }
 
-    /// <summary>Determines whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.</summary>
+    /// <summary>Whether to configure Amazon ECS to roll back the service if a service deployment fails. If rollback is used, when a service deployment fails, the service is rolled back to the last deployment that completed successfully.</summary>
     [JsonPropertyName("rollback")]
     public bool? Rollback { get; set; }
 }
@@ -2024,11 +2032,11 @@ public partial class V1beta1ServiceStatusAtProviderPlacementConstraints
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfigurationSecretOption
 {
-    /// <summary>The name of the secret.</summary>
+    /// <summary>Name of the secret.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.</summary>
+    /// <summary>Secret to expose to the container. The supported values are either the full ARN of the AWS Secrets Manager secret or the full ARN of the parameter in the SSM Parameter Store.</summary>
     [JsonPropertyName("valueFrom")]
     public string? ValueFrom { get; set; }
 }
@@ -2037,15 +2045,15 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfiguration
 {
-    /// <summary>The log driver to use for the container.</summary>
+    /// <summary>Log driver to use for the container.</summary>
     [JsonPropertyName("logDriver")]
     public string? LogDriver { get; set; }
 
-    /// <summary>The configuration options to send to the log driver.</summary>
+    /// <summary>Configuration options to send to the log driver.</summary>
     [JsonPropertyName("options")]
     public IDictionary<string, string>? Options { get; set; }
 
-    /// <summary>The secrets to pass to the log configuration. See below.</summary>
+    /// <summary>Secrets to pass to the log configuration. See below.</summary>
     [JsonPropertyName("secretOption")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfigurationSecretOption>? SecretOption { get; set; }
 }
@@ -2054,11 +2062,11 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationLo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceClientAlias
 {
-    /// <summary>The name that you use in the applications of client tasks to connect to this service.</summary>
+    /// <summary>Name that you use in the applications of client tasks to connect to this service.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
-    /// <summary>The listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.</summary>
+    /// <summary>Listening port number for the Service Connect proxy. This port is available inside of all of the tasks within the same namespace.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 }
@@ -2067,11 +2075,11 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTimeout
 {
-    /// <summary>The amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
+    /// <summary>Amount of time in seconds a connection will stay active while idle. A value of 0 can be set to disable idleTimeout.</summary>
     [JsonPropertyName("idleTimeoutSeconds")]
     public double? IdleTimeoutSeconds { get; set; }
 
-    /// <summary>The amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.</summary>
+    /// <summary>Amount of time in seconds for the upstream to respond with a complete response per request. A value of 0 can be set to disable perRequestTimeout. Can only be set when appProtocol isn't TCP.</summary>
     [JsonPropertyName("perRequestTimeoutSeconds")]
     public double? PerRequestTimeoutSeconds { get; set; }
 }
@@ -2080,7 +2088,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority
 {
-    /// <summary>The ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
+    /// <summary>ARN of the aws_acmpca_certificate_authority used to create the TLS Certificates.</summary>
     [JsonPropertyName("awsPcaAuthorityArn")]
     public string? AwsPcaAuthorityArn { get; set; }
 }
@@ -2089,15 +2097,15 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTls
 {
-    /// <summary>The details of the certificate authority which will issue the certificate.</summary>
+    /// <summary>Details of the certificate authority which will issue the certificate.</summary>
     [JsonPropertyName("issuerCertAuthority")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTlsIssuerCertAuthority>? IssuerCertAuthority { get; set; }
 
-    /// <summary>The KMS key used to encrypt the private key in Secrets Manager.</summary>
+    /// <summary>KMS key used to encrypt the private key in Secrets Manager.</summary>
     [JsonPropertyName("kmsKey")]
     public string? KmsKey { get; set; }
 
-    /// <summary>The ARN of the IAM Role that's associated with the Service Connect TLS.</summary>
+    /// <summary>ARN of the IAM Role that's associated with the Service Connect TLS.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 }
@@ -2106,19 +2114,19 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationService
 {
-    /// <summary>The list of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
+    /// <summary>List of client aliases for this Service Connect service. You use these to assign names that can be used by client applications. The maximum number of client aliases that you can have in this list is 1. See below.</summary>
     [JsonPropertyName("clientAlias")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceClientAlias>? ClientAlias { get; set; }
 
-    /// <summary>The name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.</summary>
+    /// <summary>Name of the new AWS Cloud Map service that Amazon ECS creates for this Amazon ECS service.</summary>
     [JsonPropertyName("discoveryName")]
     public string? DiscoveryName { get; set; }
 
-    /// <summary>The port number for the Service Connect proxy to listen on.</summary>
+    /// <summary>Port number for the Service Connect proxy to listen on.</summary>
     [JsonPropertyName("ingressPortOverride")]
     public double? IngressPortOverride { get; set; }
 
-    /// <summary>The name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.</summary>
+    /// <summary>Name of one of the portMappings from all the containers in the task definition of this Amazon ECS service.</summary>
     [JsonPropertyName("portName")]
     public string? PortName { get; set; }
 
@@ -2126,7 +2134,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
     [JsonPropertyName("timeout")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTimeout>? Timeout { get; set; }
 
-    /// <summary>The configuration for enabling Transport Layer Security (TLS)</summary>
+    /// <summary>Configuration for enabling Transport Layer Security (TLS)</summary>
     [JsonPropertyName("tls")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationServiceTls>? Tls { get; set; }
 }
@@ -2135,19 +2143,19 @@ public partial class V1beta1ServiceStatusAtProviderServiceConnectConfigurationSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderServiceConnectConfiguration
 {
-    /// <summary>Specifies whether to use Service Connect with this service.</summary>
+    /// <summary>Whether to use Service Connect with this service.</summary>
     [JsonPropertyName("enabled")]
     public bool? Enabled { get; set; }
 
-    /// <summary>The log configuration for the container. See below.</summary>
+    /// <summary>Log configuration for the container. See below.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>The namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.</summary>
+    /// <summary>Namespace name or ARN of the aws_service_discovery_http_namespace for use with Service Connect.</summary>
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>The list of Service Connect service objects. See below.</summary>
+    /// <summary>List of Service Connect service objects. See below.</summary>
     [JsonPropertyName("service")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfigurationService>? Service { get; set; }
 }
@@ -2177,7 +2185,7 @@ public partial class V1beta1ServiceStatusAtProviderServiceRegistries
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolumeTagSpecifications
 {
-    /// <summary>Determines whether to propagate the tags from the task definition to the Amazon EBS volume.</summary>
+    /// <summary>Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
     [JsonPropertyName("propagateTags")]
     public string? PropagateTags { get; set; }
 
@@ -2185,12 +2193,12 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbs
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>The tags applied to this Amazon EBS volume. AmazonECSCreated and AmazonECSManaged are reserved tags that can't be used.</summary>
+    /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 }
 
-/// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolume
 {
@@ -2210,7 +2218,7 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbs
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
-    /// <summary>Amazon ECS infrastructure IAM role that is used to manage your Amazon Web Services infrastructure. Recommended using the Amazon ECS-managed AmazonECSInfrastructureRolePolicyForVolumes IAM policy with this role.</summary>
+    /// <summary>The ARN of the IAM role to associate with this volume. This is the Amazon ECS infrastructure IAM role that is used to manage your AWS infrastructure.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -2228,20 +2236,24 @@ public partial class V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbs
 
     /// <summary>Throughput to provision for a volume, in MiB/s, with a maximum of 1,000 MiB/s.</summary>
     [JsonPropertyName("throughput")]
-    public string? Throughput { get; set; }
+    public double? Throughput { get; set; }
+
+    /// <summary>Volume Initialization Rate in MiB/s. You must also specify a snapshot_id.</summary>
+    [JsonPropertyName("volumeInitializationRate")]
+    public double? VolumeInitializationRate { get; set; }
 
     /// <summary>Volume type.</summary>
     [JsonPropertyName("volumeType")]
     public string? VolumeType { get; set; }
 }
 
-/// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
+/// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceStatusAtProviderVolumeConfiguration
 {
     /// <summary>Configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf. See below.</summary>
     [JsonPropertyName("managedEbsVolume")]
-    public V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolume? ManagedEbsVolume { get; set; }
+    public IList<V1beta1ServiceStatusAtProviderVolumeConfigurationManagedEbsVolume>? ManagedEbsVolume { get; set; }
 
     /// <summary>Name of the volume.</summary>
     [JsonPropertyName("name")]
@@ -2272,6 +2284,10 @@ public partial class V1beta1ServiceStatusAtProvider
     /// <summary>Information about the CloudWatch alarms. See below.</summary>
     [JsonPropertyName("alarms")]
     public IList<V1beta1ServiceStatusAtProviderAlarms>? Alarms { get; set; }
+
+    /// <summary>ARN that identifies the service.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
 
     /// <summary>ECS automatically redistributes tasks within a service across Availability Zones (AZs) to mitigate the risk of impaired application availability due to underlying infrastructure failures and task lifecycle activities. The valid values are ENABLED and DISABLED. Defaults to DISABLED.</summary>
     [JsonPropertyName("availabilityZoneRebalancing")]
@@ -2305,11 +2321,11 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("desiredCount")]
     public double? DesiredCount { get; set; }
 
-    /// <summary>Specifies whether to enable Amazon ECS managed tags for the tasks within the service.</summary>
+    /// <summary>Whether to enable Amazon ECS managed tags for the tasks within the service.</summary>
     [JsonPropertyName("enableEcsManagedTags")]
     public bool? EnableEcsManagedTags { get; set; }
 
-    /// <summary>Specifies whether to enable Amazon ECS Exec for the tasks within the service.</summary>
+    /// <summary>Whether to enable Amazon ECS Exec for the tasks within the service.</summary>
     [JsonPropertyName("enableExecuteCommand")]
     public bool? EnableExecuteCommand { get; set; }
 
@@ -2329,7 +2345,7 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("iamRole")]
     public string? IamRole { get; set; }
 
-    /// <summary>ARN that identifies the service.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -2357,15 +2373,19 @@ public partial class V1beta1ServiceStatusAtProvider
     [JsonPropertyName("platformVersion")]
     public string? PlatformVersion { get; set; }
 
-    /// <summary>Specifies whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
+    /// <summary>Whether to propagate the tags from the task definition or the service to the tasks. The valid values are SERVICE and TASK_DEFINITION.</summary>
     [JsonPropertyName("propagateTags")]
     public string? PropagateTags { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Scheduling strategy to use for the service. The valid values are REPLICA and DAEMON. Defaults to REPLICA. Note that Tasks using the Fargate launch type or the .</summary>
     [JsonPropertyName("schedulingStrategy")]
     public string? SchedulingStrategy { get; set; }
 
-    /// <summary>The ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.</summary>
+    /// <summary>ECS Service Connect configuration for this service to discover and connect to services, and be discovered by, and connected from, other services within a namespace. See below.</summary>
     [JsonPropertyName("serviceConnectConfiguration")]
     public IList<V1beta1ServiceStatusAtProviderServiceConnectConfiguration>? ServiceConnectConfiguration { get; set; }
 
@@ -2391,7 +2411,7 @@ public partial class V1beta1ServiceStatusAtProvider
 
     /// <summary>Configuration for a volume specified in the task definition as a volume that is configured at launch time. Currently, the only supported volume type is an Amazon EBS volume. See below.</summary>
     [JsonPropertyName("volumeConfiguration")]
-    public V1beta1ServiceStatusAtProviderVolumeConfiguration? VolumeConfiguration { get; set; }
+    public IList<V1beta1ServiceStatusAtProviderVolumeConfiguration>? VolumeConfiguration { get; set; }
 
     /// <summary>The VPC Lattice configuration for your service that allows Lattice to connect, secure, and monitor your service across multiple accounts and VPCs. See below.</summary>
     [JsonPropertyName("vpcLatticeConfigurations")]

@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecForProvider
 {
-    /// <summary>–  A description of the registry.</summary>
+    /// <summary>A description of the registry.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -29,7 +29,7 @@ public partial class V1beta1RegistrySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistrySpecInitProvider
 {
-    /// <summary>–  A description of the registry.</summary>
+    /// <summary>A description of the registry.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -178,13 +178,17 @@ public partial class V1beta1RegistryStatusAtProvider
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  A description of the registry.</summary>
+    /// <summary>A description of the registry.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
     /// <summary>Amazon Resource Name (ARN) of Glue Registry.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

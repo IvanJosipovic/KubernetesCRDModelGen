@@ -152,7 +152,7 @@ public partial class V1beta1ScheduledActionSpecForProvider
     [JsonPropertyName("iamRoleSelector")]
     public V1beta1ScheduledActionSpecForProviderIamRoleSelector? IamRoleSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -541,6 +541,10 @@ public partial class V1beta1ScheduledActionStatusAtProvider
     /// <summary>The Redshift Scheduled Action name.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The schedule of action. The schedule is defined format of "at expression" or "cron expression", for example at(2016-03-04T17:27:00) or cron(0 10 ? * MON *). See Scheduled Action for more information.</summary>
     [JsonPropertyName("schedule")]

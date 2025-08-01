@@ -222,10 +222,13 @@ spec:
                     description: Description of the stage.
                     type: string
                   documentationVersion:
-                    description: Version of the associated API documentation
+                    description: Version of the associated API documentation.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
                     description: ID of the associated REST API
@@ -328,7 +331,7 @@ spec:
                   variables:
                     additionalProperties:
                       type: string
-                    description: Map that defines the stage variables
+                    description: Map that defines the stage variables.
                     type: object
                     x-kubernetes-map-type: granular
                   xrayTracingEnabled:
@@ -497,7 +500,7 @@ spec:
                     description: Description of the stage.
                     type: string
                   documentationVersion:
-                    description: Version of the associated API documentation
+                    description: Version of the associated API documentation.
                     type: string
                   restApiId:
                     description: ID of the associated REST API
@@ -600,7 +603,7 @@ spec:
                   variables:
                     additionalProperties:
                       type: string
-                    description: Map that defines the stage variables
+                    description: Map that defines the stage variables.
                     type: object
                     x-kubernetes-map-type: granular
                   xrayTracingEnabled:
@@ -878,7 +881,7 @@ spec:
                     description: Description of the stage.
                     type: string
                   documentationVersion:
-                    description: Version of the associated API documentation
+                    description: Version of the associated API documentation.
                     type: string
                   executionArn:
                     description: >-
@@ -896,6 +899,12 @@ spec:
                       URL to invoke the API pointing to the stage,
 
                       e.g., https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
                     description: ID of the associated REST API
@@ -918,7 +927,7 @@ spec:
                   variables:
                     additionalProperties:
                       type: string
-                    description: Map that defines the stage variables
+                    description: Map that defines the stage variables.
                     type: object
                     x-kubernetes-map-type: granular
                   webAclArn:
@@ -1195,10 +1204,13 @@ spec:
                     description: Description of the stage.
                     type: string
                   documentationVersion:
-                    description: Version of the associated API documentation
+                    description: Version of the associated API documentation.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
                     description: ID of the associated REST API
@@ -1301,7 +1313,7 @@ spec:
                   variables:
                     additionalProperties:
                       type: string
-                    description: Map that defines the stage variables
+                    description: Map that defines the stage variables.
                     type: object
                     x-kubernetes-map-type: granular
                   xrayTracingEnabled:
@@ -1466,7 +1478,7 @@ spec:
                     description: Description of the stage.
                     type: string
                   documentationVersion:
-                    description: Version of the associated API documentation
+                    description: Version of the associated API documentation.
                     type: string
                   restApiId:
                     description: ID of the associated REST API
@@ -1569,7 +1581,7 @@ spec:
                   variables:
                     additionalProperties:
                       type: string
-                    description: Map that defines the stage variables
+                    description: Map that defines the stage variables.
                     type: object
                     x-kubernetes-map-type: granular
                   xrayTracingEnabled:
@@ -1843,7 +1855,7 @@ spec:
                     description: Description of the stage.
                     type: string
                   documentationVersion:
-                    description: Version of the associated API documentation
+                    description: Version of the associated API documentation.
                     type: string
                   executionArn:
                     description: >-
@@ -1861,6 +1873,12 @@ spec:
                       URL to invoke the API pointing to the stage,
 
                       e.g., https://z4675bid1j.execute-api.eu-west-2.amazonaws.com/prod
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   restApiId:
                     description: ID of the associated REST API
@@ -1883,7 +1901,7 @@ spec:
                   variables:
                     additionalProperties:
                       type: string
-                    description: Map that defines the stage variables
+                    description: Map that defines the stage variables.
                     type: object
                     x-kubernetes-map-type: granular
                   webAclArn:

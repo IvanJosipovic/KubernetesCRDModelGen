@@ -212,7 +212,7 @@ public partial class V1beta1BucketObjectSpecForProvider
     [JsonPropertyName("objectLockRetainUntilDate")]
     public string? ObjectLockRetainUntilDate { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -685,6 +685,10 @@ public partial class V1beta1BucketObjectStatusAtProvider
     /// <summary>Date and time, in RFC3339 format, when this object's object lock will expire.</summary>
     [JsonPropertyName("objectLockRetainUntilDate")]
     public string? ObjectLockRetainUntilDate { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Server-side encryption of the object in S3. Valid values are "AES256" and "aws:kms".</summary>
     [JsonPropertyName("serverSideEncryption")]

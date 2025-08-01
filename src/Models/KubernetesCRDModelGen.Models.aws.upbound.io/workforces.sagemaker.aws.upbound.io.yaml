@@ -33,7 +33,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: Workforce is the Schema for the Workforces API. Provides a SageMaker Workforce resource.
+        description: Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.
         properties:
           apiVersion:
             description: >-
@@ -322,7 +322,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceIpConfig:
                     description: A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
@@ -922,6 +925,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   sourceIpConfig:
                     description: A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
                     items:
@@ -1044,7 +1053,7 @@ spec:
     name: v1beta2
     schema:
       openAPIV3Schema:
-        description: Workforce is the Schema for the Workforces API. Provides a SageMaker Workforce resource.
+        description: Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.
         properties:
           apiVersion:
             description: >-
@@ -1329,7 +1338,10 @@ spec:
                         type: string
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceIpConfig:
                     description: A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
@@ -1913,6 +1925,12 @@ spec:
                         description: The OIDC IdP user information endpoint used to configure your private workforce.
                         type: string
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   sourceIpConfig:
                     description: A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.
                     properties:

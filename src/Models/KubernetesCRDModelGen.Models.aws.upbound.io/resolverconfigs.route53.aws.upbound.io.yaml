@@ -88,7 +88,10 @@ spec:
                     description: 'Indicates whether or not the Resolver will create autodefined rules for reverse DNS lookups. Valid values: ENABLE, DISABLE.'
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceId:
                     description: The ID of the VPC that the configuration is for.
@@ -521,6 +524,12 @@ spec:
                     type: string
                   ownerId:
                     description: The AWS account ID of the owner of the VPC that this resolver configuration applies to.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   resourceId:
                     description: The ID of the VPC that the configuration is for.

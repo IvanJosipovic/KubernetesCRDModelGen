@@ -403,6 +403,9 @@ spec:
                                 description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                                 items:
                                   properties:
+                                    dataTransferApi:
+                                      description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                      type: string
                                     errorHandlingConfig:
                                       description: Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.
                                       items:
@@ -612,7 +615,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
@@ -820,6 +826,9 @@ spec:
                                 description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                                 items:
                                   properties:
+                                    dataTransferApi:
+                                      description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                      type: string
                                     enableDynamicFieldUpdate:
                                       description: Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.
                                       type: boolean
@@ -1396,6 +1405,9 @@ spec:
                                 description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                                 items:
                                   properties:
+                                    dataTransferApi:
+                                      description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                      type: string
                                     errorHandlingConfig:
                                       description: Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.
                                       items:
@@ -1810,6 +1822,9 @@ spec:
                                 description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                                 items:
                                   properties:
+                                    dataTransferApi:
+                                      description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                      type: string
                                     enableDynamicFieldUpdate:
                                       description: Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.
                                       type: boolean
@@ -2501,6 +2516,9 @@ spec:
                                 description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                                 items:
                                   properties:
+                                    dataTransferApi:
+                                      description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                      type: string
                                     errorHandlingConfig:
                                       description: Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.
                                       items:
@@ -2714,6 +2732,12 @@ spec:
                           type: array
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
                     items:
@@ -2834,6 +2858,9 @@ spec:
                                 description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                                 items:
                                   properties:
+                                    dataTransferApi:
+                                      description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                      type: string
                                     enableDynamicFieldUpdate:
                                       description: Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.
                                       type: boolean
@@ -3491,6 +3518,9 @@ spec:
                             salesforce:
                               description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                               properties:
+                                dataTransferApi:
+                                  description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                  type: string
                                 errorHandlingConfig:
                                   description: Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.
                                   properties:
@@ -3670,7 +3700,10 @@ spec:
                         type: object
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
@@ -3855,6 +3888,9 @@ spec:
                           salesforce:
                             description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                             properties:
+                              dataTransferApi:
+                                description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                type: string
                               enableDynamicFieldUpdate:
                                 description: Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.
                                 type: boolean
@@ -4370,6 +4406,9 @@ spec:
                             salesforce:
                               description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                               properties:
+                                dataTransferApi:
+                                  description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                  type: string
                                 errorHandlingConfig:
                                   description: Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.
                                   properties:
@@ -4731,6 +4770,9 @@ spec:
                           salesforce:
                             description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                             properties:
+                              dataTransferApi:
+                                description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                type: string
                               enableDynamicFieldUpdate:
                                 description: Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.
                                 type: boolean
@@ -5361,6 +5403,9 @@ spec:
                             salesforce:
                               description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                               properties:
+                                dataTransferApi:
+                                  description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                  type: string
                                 errorHandlingConfig:
                                   description: Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.
                                   properties:
@@ -5544,6 +5589,12 @@ spec:
                             type: string
                         type: object
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   sourceFlowConfig:
                     description: The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.
                     properties:
@@ -5641,6 +5692,9 @@ spec:
                           salesforce:
                             description: Properties that are required to query Salesforce. See Salesforce Destination Properties for more details.
                             properties:
+                              dataTransferApi:
+                                description: Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.
+                                type: string
                               enableDynamicFieldUpdate:
                                 description: Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.
                                 type: boolean

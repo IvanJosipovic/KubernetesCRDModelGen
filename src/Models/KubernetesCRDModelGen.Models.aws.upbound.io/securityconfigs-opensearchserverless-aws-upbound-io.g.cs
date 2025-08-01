@@ -12,19 +12,19 @@ namespace KubernetesCRDModelGen.Models.opensearchserverless.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigSpecForProviderSamlOptions
 {
-    /// <summary>Group attribute for this SAML integration.</summary>
+    /// <summary>Group attribute for this SAML integration. Group attribute for this SAML integration.</summary>
     [JsonPropertyName("groupAttribute")]
     public string? GroupAttribute { get; set; }
 
-    /// <summary>The XML IdP metadata file generated from your identity provider.</summary>
+    /// <summary>The XML IdP metadata file generated from your identity provider. The XML IdP metadata file generated from your identity provider.</summary>
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 
-    /// <summary>Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.</summary>
+    /// <summary>Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes. Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.</summary>
     [JsonPropertyName("sessionTimeout")]
     public double? SessionTimeout { get; set; }
 
-    /// <summary>User attribute for this SAML integration.</summary>
+    /// <summary>User attribute for this SAML integration. User attribute for this SAML integration.</summary>
     [JsonPropertyName("userAttribute")]
     public string? UserAttribute { get; set; }
 }
@@ -33,11 +33,11 @@ public partial class V1beta1SecurityConfigSpecForProviderSamlOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigSpecForProvider
 {
-    /// <summary>Description of the security configuration.</summary>
+    /// <summary>Description of the security configuration. Description of the security configuration.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -45,7 +45,7 @@ public partial class V1beta1SecurityConfigSpecForProvider
     [JsonPropertyName("samlOptions")]
     public V1beta1SecurityConfigSpecForProviderSamlOptions? SamlOptions { get; set; }
 
-    /// <summary>Type of configuration. Must be saml.</summary>
+    /// <summary>Type of configuration. Must be saml. Type of configuration. Must be `saml`.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -54,19 +54,19 @@ public partial class V1beta1SecurityConfigSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigSpecInitProviderSamlOptions
 {
-    /// <summary>Group attribute for this SAML integration.</summary>
+    /// <summary>Group attribute for this SAML integration. Group attribute for this SAML integration.</summary>
     [JsonPropertyName("groupAttribute")]
     public string? GroupAttribute { get; set; }
 
-    /// <summary>The XML IdP metadata file generated from your identity provider.</summary>
+    /// <summary>The XML IdP metadata file generated from your identity provider. The XML IdP metadata file generated from your identity provider.</summary>
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 
-    /// <summary>Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.</summary>
+    /// <summary>Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes. Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.</summary>
     [JsonPropertyName("sessionTimeout")]
     public double? SessionTimeout { get; set; }
 
-    /// <summary>User attribute for this SAML integration.</summary>
+    /// <summary>User attribute for this SAML integration. User attribute for this SAML integration.</summary>
     [JsonPropertyName("userAttribute")]
     public string? UserAttribute { get; set; }
 }
@@ -75,7 +75,7 @@ public partial class V1beta1SecurityConfigSpecInitProviderSamlOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigSpecInitProvider
 {
-    /// <summary>Description of the security configuration.</summary>
+    /// <summary>Description of the security configuration. Description of the security configuration.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -220,19 +220,19 @@ public partial class V1beta1SecurityConfigSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigStatusAtProviderSamlOptions
 {
-    /// <summary>Group attribute for this SAML integration.</summary>
+    /// <summary>Group attribute for this SAML integration. Group attribute for this SAML integration.</summary>
     [JsonPropertyName("groupAttribute")]
     public string? GroupAttribute { get; set; }
 
-    /// <summary>The XML IdP metadata file generated from your identity provider.</summary>
+    /// <summary>The XML IdP metadata file generated from your identity provider. The XML IdP metadata file generated from your identity provider.</summary>
     [JsonPropertyName("metadata")]
     public string? Metadata { get; set; }
 
-    /// <summary>Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.</summary>
+    /// <summary>Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes. Session timeout, in minutes. Minimum is 5 minutes and maximum is 720 minutes (12 hours). Default is 60 minutes.</summary>
     [JsonPropertyName("sessionTimeout")]
     public double? SessionTimeout { get; set; }
 
-    /// <summary>User attribute for this SAML integration.</summary>
+    /// <summary>User attribute for this SAML integration. User attribute for this SAML integration.</summary>
     [JsonPropertyName("userAttribute")]
     public string? UserAttribute { get; set; }
 }
@@ -241,11 +241,11 @@ public partial class V1beta1SecurityConfigStatusAtProviderSamlOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecurityConfigStatusAtProvider
 {
-    /// <summary>Version of the configuration.</summary>
+    /// <summary>Version of the configuration. Version of the configuration.</summary>
     [JsonPropertyName("configVersion")]
     public string? ConfigVersion { get; set; }
 
-    /// <summary>Description of the security configuration.</summary>
+    /// <summary>Description of the security configuration. Description of the security configuration.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -253,11 +253,15 @@ public partial class V1beta1SecurityConfigStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Configuration block for SAML options.</summary>
     [JsonPropertyName("samlOptions")]
     public V1beta1SecurityConfigStatusAtProviderSamlOptions? SamlOptions { get; set; }
 
-    /// <summary>Type of configuration. Must be saml.</summary>
+    /// <summary>Type of configuration. Must be saml. Type of configuration. Must be `saml`.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

@@ -350,6 +350,10 @@ public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforce
 {
+    /// <summary>Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.</summary>
+    [JsonPropertyName("dataTransferApi")]
+    public string? DataTransferApi { get; set; }
+
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
     [JsonPropertyName("errorHandlingConfig")]
     public IList<V1beta1FlowSpecForProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig>? ErrorHandlingConfig { get; set; }
@@ -832,6 +836,10 @@ public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecForProviderSourceFlowConfigSourceConnectorPropertiesSalesforce
 {
+    /// <summary>Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.</summary>
+    [JsonPropertyName("dataTransferApi")]
+    public string? DataTransferApi { get; set; }
+
     /// <summary>Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.</summary>
     [JsonPropertyName("enableDynamicFieldUpdate")]
     public bool? EnableDynamicFieldUpdate { get; set; }
@@ -1213,7 +1221,7 @@ public partial class V1beta1FlowSpecForProvider
     [JsonPropertyName("metadataCatalogConfig")]
     public IList<V1beta1FlowSpecForProviderMetadataCatalogConfig>? MetadataCatalogConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1576,6 +1584,10 @@ public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforce
 {
+    /// <summary>Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.</summary>
+    [JsonPropertyName("dataTransferApi")]
+    public string? DataTransferApi { get; set; }
+
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
     [JsonPropertyName("errorHandlingConfig")]
     public IList<V1beta1FlowSpecInitProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig>? ErrorHandlingConfig { get; set; }
@@ -2058,6 +2070,10 @@ public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowSpecInitProviderSourceFlowConfigSourceConnectorPropertiesSalesforce
 {
+    /// <summary>Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.</summary>
+    [JsonPropertyName("dataTransferApi")]
+    public string? DataTransferApi { get; set; }
+
     /// <summary>Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.</summary>
     [JsonPropertyName("enableDynamicFieldUpdate")]
     public bool? EnableDynamicFieldUpdate { get; set; }
@@ -2866,6 +2882,10 @@ public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestination
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforce
 {
+    /// <summary>Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.</summary>
+    [JsonPropertyName("dataTransferApi")]
+    public string? DataTransferApi { get; set; }
+
     /// <summary>Settings that determine how Amazon AppFlow handles an error when placing data in the destination. See Error Handling Config for more details.</summary>
     [JsonPropertyName("errorHandlingConfig")]
     public IList<V1beta1FlowStatusAtProviderDestinationFlowConfigDestinationConnectorPropertiesSalesforceErrorHandlingConfig>? ErrorHandlingConfig { get; set; }
@@ -3284,6 +3304,10 @@ public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorP
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowStatusAtProviderSourceFlowConfigSourceConnectorPropertiesSalesforce
 {
+    /// <summary>Specifies which Salesforce API is used by Amazon AppFlow when your flow transfers data to Salesforce.</summary>
+    [JsonPropertyName("dataTransferApi")]
+    public string? DataTransferApi { get; set; }
+
     /// <summary>Flag that enables dynamic fetching of new (recently added) fields in the Salesforce objects while running a flow.</summary>
     [JsonPropertyName("enableDynamicFieldUpdate")]
     public bool? EnableDynamicFieldUpdate { get; set; }
@@ -3676,6 +3700,10 @@ public partial class V1beta1FlowStatusAtProvider
     /// <summary>A Catalog that determines the configuration that Amazon AppFlow uses when it catalogs the data that’s transferred by the associated flow. When Amazon AppFlow catalogs the data from a flow, it stores metadata in a data catalog.</summary>
     [JsonPropertyName("metadataCatalogConfig")]
     public IList<V1beta1FlowStatusAtProviderMetadataCatalogConfig>? MetadataCatalogConfig { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Source Flow Config that controls how Amazon AppFlow retrieves data from the source connector.</summary>
     [JsonPropertyName("sourceFlowConfig")]

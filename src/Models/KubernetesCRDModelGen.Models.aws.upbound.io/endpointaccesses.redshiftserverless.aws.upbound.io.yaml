@@ -88,7 +88,10 @@ spec:
                     description: The owner Amazon Web Services account for the Amazon Redshift Serverless workgroup.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   subnetIdRefs:
                     description: References to Subnet in ec2 to populate subnetIds.
@@ -736,6 +739,12 @@ spec:
                   port:
                     description: The port that Amazon Redshift Serverless listens on.
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   subnetIds:
                     description: An array of VPC subnet IDs to associate with the endpoint.
                     items:

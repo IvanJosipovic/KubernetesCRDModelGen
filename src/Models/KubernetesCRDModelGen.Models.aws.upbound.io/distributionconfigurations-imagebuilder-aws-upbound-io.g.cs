@@ -179,6 +179,23 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionConfigurationSpecForProviderDistributionSsmParameterConfiguration
+{
+    /// <summary>AWS account ID that will own the parameter in the given region. This account must be specified as a target account in the distribution settings.</summary>
+    [JsonPropertyName("amiAccountId")]
+    public string? AmiAccountId { get; set; }
+
+    /// <summary>Data type of the SSM parameter. Valid values are text and aws:ec2:image. AWS recommends using aws:ec2:image.</summary>
+    [JsonPropertyName("dataType")]
+    public string? DataType { get; set; }
+
+    /// <summary>Name of the SSM parameter that will store the AMI ID after distribution.</summary>
+    [JsonPropertyName("parameterName")]
+    public string? ParameterName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -208,6 +225,10 @@ public partial class V1beta1DistributionConfigurationSpecForProviderDistribution
     /// <summary>Configuration block with S3 export settings. Detailed below.</summary>
     [JsonPropertyName("s3ExportConfiguration")]
     public IList<V1beta1DistributionConfigurationSpecForProviderDistributionS3ExportConfiguration>? S3ExportConfiguration { get; set; }
+
+    /// <summary>Configuration block with SSM parameter configuration to use as AMI id output. Detailed below.</summary>
+    [JsonPropertyName("ssmParameterConfiguration")]
+    public IList<V1beta1DistributionConfigurationSpecForProviderDistributionSsmParameterConfiguration>? SsmParameterConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -226,7 +247,7 @@ public partial class V1beta1DistributionConfigurationSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>AWS Region for the distribution. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -406,6 +427,23 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionConfigurationSpecInitProviderDistributionSsmParameterConfiguration
+{
+    /// <summary>AWS account ID that will own the parameter in the given region. This account must be specified as a target account in the distribution settings.</summary>
+    [JsonPropertyName("amiAccountId")]
+    public string? AmiAccountId { get; set; }
+
+    /// <summary>Data type of the SSM parameter. Valid values are text and aws:ec2:image. AWS recommends using aws:ec2:image.</summary>
+    [JsonPropertyName("dataType")]
+    public string? DataType { get; set; }
+
+    /// <summary>Name of the SSM parameter that will store the AMI ID after distribution.</summary>
+    [JsonPropertyName("parameterName")]
+    public string? ParameterName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecInitProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -431,6 +469,10 @@ public partial class V1beta1DistributionConfigurationSpecInitProviderDistributio
     /// <summary>Configuration block with S3 export settings. Detailed below.</summary>
     [JsonPropertyName("s3ExportConfiguration")]
     public IList<V1beta1DistributionConfigurationSpecInitProviderDistributionS3ExportConfiguration>? S3ExportConfiguration { get; set; }
+
+    /// <summary>Configuration block with SSM parameter configuration to use as AMI id output. Detailed below.</summary>
+    [JsonPropertyName("ssmParameterConfiguration")]
+    public IList<V1beta1DistributionConfigurationSpecInitProviderDistributionSsmParameterConfiguration>? SsmParameterConfiguration { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
@@ -757,6 +799,23 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DistributionConfigurationStatusAtProviderDistributionSsmParameterConfiguration
+{
+    /// <summary>AWS account ID that will own the parameter in the given region. This account must be specified as a target account in the distribution settings.</summary>
+    [JsonPropertyName("amiAccountId")]
+    public string? AmiAccountId { get; set; }
+
+    /// <summary>Data type of the SSM parameter. Valid values are text and aws:ec2:image. AWS recommends using aws:ec2:image.</summary>
+    [JsonPropertyName("dataType")]
+    public string? DataType { get; set; }
+
+    /// <summary>Name of the SSM parameter that will store the AMI ID after distribution.</summary>
+    [JsonPropertyName("parameterName")]
+    public string? ParameterName { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationStatusAtProviderDistribution
 {
     /// <summary>Configuration block with Amazon Machine Image (AMI) distribution settings. Detailed below.</summary>
@@ -786,6 +845,10 @@ public partial class V1beta1DistributionConfigurationStatusAtProviderDistributio
     /// <summary>Configuration block with S3 export settings. Detailed below.</summary>
     [JsonPropertyName("s3ExportConfiguration")]
     public IList<V1beta1DistributionConfigurationStatusAtProviderDistributionS3ExportConfiguration>? S3ExportConfiguration { get; set; }
+
+    /// <summary>Configuration block with SSM parameter configuration to use as AMI id output. Detailed below.</summary>
+    [JsonPropertyName("ssmParameterConfiguration")]
+    public IList<V1beta1DistributionConfigurationStatusAtProviderDistributionSsmParameterConfiguration>? SsmParameterConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -819,6 +882,10 @@ public partial class V1beta1DistributionConfigurationStatusAtProvider
     /// <summary>Name of the distribution configuration.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

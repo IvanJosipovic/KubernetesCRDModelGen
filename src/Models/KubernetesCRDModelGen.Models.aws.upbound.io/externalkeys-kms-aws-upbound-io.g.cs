@@ -57,7 +57,7 @@ public partial class V1beta1ExternalKeySpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -307,6 +307,10 @@ public partial class V1beta1ExternalKeyStatusAtProvider
     /// <summary>A key policy JSON document. If you do not provide a key policy, AWS KMS attaches a default key policy to the CMK.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

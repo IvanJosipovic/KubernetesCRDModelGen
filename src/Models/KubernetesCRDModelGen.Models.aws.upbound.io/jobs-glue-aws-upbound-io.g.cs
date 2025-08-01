@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCommand
 {
-    /// <summary>–  The name you assign to this job. It must be unique in your account.</summary>
+    /// <summary>The name you assign to this job. It must be unique in your account.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The Python version being used to execute a Python shell job. Allowed values are 2, 3 or 3.9. Version 3 refers to Python 3.6.</summary>
+    /// <summary>The Python version being used to execute a Python shell job. Allowed values are 2, 3 or 3.9. Version 3 refers to Python 3.11 when glue_version is set to 5.0.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -27,6 +27,62 @@ public partial class V1beta1JobSpecForProviderCommand
     /// <summary>Specifies the S3 path to a script that executes a job.</summary>
     [JsonPropertyName("scriptLocation")]
     public string? ScriptLocation { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderConnectionsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderConnectionsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderConnectionsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderConnectionsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Connection in glue to populate connections.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderConnectionsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecForProviderConnectionsSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -103,23 +159,85 @@ public partial class V1beta1JobSpecForProviderRoleArnSelector
     public V1beta1JobSpecForProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The value of an authorization token.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderSourceControlDetailsAuthTokenSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecForProviderSourceControlDetails
+{
+    /// <summary>The type of authentication, which can be an authentication token stored in Amazon Web Services Secrets Manager, or a personal access token. Valid values are: PERSONAL_ACCESS_TOKEN and AWS_SECRETS_MANAGER.</summary>
+    [JsonPropertyName("authStrategy")]
+    public string? AuthStrategy { get; set; }
+
+    /// <summary>The value of an authorization token.</summary>
+    [JsonPropertyName("authTokenSecretRef")]
+    public V1beta1JobSpecForProviderSourceControlDetailsAuthTokenSecretRef? AuthTokenSecretRef { get; set; }
+
+    /// <summary>A branch in the remote repository.</summary>
+    [JsonPropertyName("branch")]
+    public string? Branch { get; set; }
+
+    /// <summary>A folder in the remote repository.</summary>
+    [JsonPropertyName("folder")]
+    public string? Folder { get; set; }
+
+    /// <summary>The last commit ID for a commit in the remote repository.</summary>
+    [JsonPropertyName("lastCommitId")]
+    public string? LastCommitId { get; set; }
+
+    /// <summary>The owner of the remote repository that contains the job artifacts.</summary>
+    [JsonPropertyName("owner")]
+    public string? Owner { get; set; }
+
+    /// <summary>The provider for the remote repository. Valid values are: GITHUB, GITLAB, BITBUCKET, and AWS_CODE_COMMIT.</summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary>The name of the remote repository that contains the job artifacts.</summary>
+    [JsonPropertyName("repository")]
+    public string? Repository { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProvider
 {
-    /// <summary>–  The command of the job. Defined below.</summary>
+    /// <summary>The command of the job. Defined below.</summary>
     [JsonPropertyName("command")]
     public IList<V1beta1JobSpecForProviderCommand>? Command { get; set; }
 
-    /// <summary>–  The list of connections used for this job.</summary>
+    /// <summary>The list of connections used for this job.</summary>
     [JsonPropertyName("connections")]
     public IList<string>? Connections { get; set; }
 
-    /// <summary>execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</summary>
+    /// <summary>References to Connection in glue to populate connections.</summary>
+    [JsonPropertyName("connectionsRefs")]
+    public IList<V1beta1JobSpecForProviderConnectionsRefs>? ConnectionsRefs { get; set; }
+
+    /// <summary>Selector for a list of Connection in glue to populate connections.</summary>
+    [JsonPropertyName("connectionsSelector")]
+    public V1beta1JobSpecForProviderConnectionsSelector? ConnectionsSelector { get; set; }
+
+    /// <summary>The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</summary>
     [JsonPropertyName("defaultArguments")]
     public IDictionary<string, string>? DefaultArguments { get; set; }
 
-    /// <summary>–  Description of the job.</summary>
+    /// <summary>Description of the job.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -127,7 +245,7 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("executionClass")]
     public string? ExecutionClass { get; set; }
 
-    /// <summary>–  Execution property of the job. Defined below.</summary>
+    /// <summary>Execution property of the job. Defined below.</summary>
     [JsonPropertyName("executionProperty")]
     public IList<V1beta1JobSpecForProviderExecutionProperty>? ExecutionProperty { get; set; }
 
@@ -135,23 +253,27 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("glueVersion")]
     public string? GlueVersion { get; set; }
 
+    /// <summary>Describes how a job was created. Valid values are SCRIPT, NOTEBOOK and VISUAL.</summary>
+    [JsonPropertyName("jobMode")]
+    public string? JobMode { get; set; }
+
     /// <summary>Specifies whether job run queuing is enabled for the job runs for this job. A value of true means job run queuing is enabled for the job runs. If false or not populated, the job runs will not be considered for queueing.</summary>
     [JsonPropertyName("jobRunQueuingEnabled")]
     public bool? JobRunQueuingEnabled { get; set; }
 
-    /// <summary>–  Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
+    /// <summary>Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
-    /// <summary>–  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.</summary>
+    /// <summary>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.</summary>
     [JsonPropertyName("maxCapacity")]
     public double? MaxCapacity { get; set; }
 
-    /// <summary>–  The maximum number of times to retry this job if it fails.</summary>
+    /// <summary>The maximum number of times to retry this job if it fails.</summary>
     [JsonPropertyName("maxRetries")]
     public double? MaxRetries { get; set; }
 
-    /// <summary>overridable arguments for this job, specified as name-value pairs.</summary>
+    /// <summary>Non-overridable arguments for this job, specified as name-value pairs.</summary>
     [JsonPropertyName("nonOverridableArguments")]
     public IDictionary<string, string>? NonOverridableArguments { get; set; }
 
@@ -163,11 +285,11 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("numberOfWorkers")]
     public double? NumberOfWorkers { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  The ARN of the IAM role associated with this job.</summary>
+    /// <summary>The ARN of the IAM role associated with this job.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -183,11 +305,15 @@ public partial class V1beta1JobSpecForProvider
     [JsonPropertyName("securityConfiguration")]
     public string? SecurityConfiguration { get; set; }
 
+    /// <summary>The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a remote repository. Defined below.</summary>
+    [JsonPropertyName("sourceControlDetails")]
+    public IList<V1beta1JobSpecForProviderSourceControlDetails>? SourceControlDetails { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.</summary>
+    /// <summary>The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.</summary>
     [JsonPropertyName("timeout")]
     public double? Timeout { get; set; }
 
@@ -200,11 +326,11 @@ public partial class V1beta1JobSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProviderCommand
 {
-    /// <summary>–  The name you assign to this job. It must be unique in your account.</summary>
+    /// <summary>The name you assign to this job. It must be unique in your account.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The Python version being used to execute a Python shell job. Allowed values are 2, 3 or 3.9. Version 3 refers to Python 3.6.</summary>
+    /// <summary>The Python version being used to execute a Python shell job. Allowed values are 2, 3 or 3.9. Version 3 refers to Python 3.11 when glue_version is set to 5.0.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -215,6 +341,62 @@ public partial class V1beta1JobSpecInitProviderCommand
     /// <summary>Specifies the S3 path to a script that executes a job.</summary>
     [JsonPropertyName("scriptLocation")]
     public string? ScriptLocation { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderConnectionsRefsPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>A Reference to a named object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderConnectionsRefs
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderConnectionsRefsPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderConnectionsSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a list of Connection in glue to populate connections.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderConnectionsSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1JobSpecInitProviderConnectionsSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary></summary>
@@ -291,23 +473,85 @@ public partial class V1beta1JobSpecInitProviderRoleArnSelector
     public V1beta1JobSpecInitProviderRoleArnSelectorPolicy? Policy { get; set; }
 }
 
+/// <summary>The value of an authorization token.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderSourceControlDetailsAuthTokenSecretRef
+{
+    /// <summary>The key to select.</summary>
+    [JsonPropertyName("key")]
+    public string Key { get; set; }
+
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the secret.</summary>
+    [JsonPropertyName("namespace")]
+    public string Namespace { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobSpecInitProviderSourceControlDetails
+{
+    /// <summary>The type of authentication, which can be an authentication token stored in Amazon Web Services Secrets Manager, or a personal access token. Valid values are: PERSONAL_ACCESS_TOKEN and AWS_SECRETS_MANAGER.</summary>
+    [JsonPropertyName("authStrategy")]
+    public string? AuthStrategy { get; set; }
+
+    /// <summary>The value of an authorization token.</summary>
+    [JsonPropertyName("authTokenSecretRef")]
+    public V1beta1JobSpecInitProviderSourceControlDetailsAuthTokenSecretRef? AuthTokenSecretRef { get; set; }
+
+    /// <summary>A branch in the remote repository.</summary>
+    [JsonPropertyName("branch")]
+    public string? Branch { get; set; }
+
+    /// <summary>A folder in the remote repository.</summary>
+    [JsonPropertyName("folder")]
+    public string? Folder { get; set; }
+
+    /// <summary>The last commit ID for a commit in the remote repository.</summary>
+    [JsonPropertyName("lastCommitId")]
+    public string? LastCommitId { get; set; }
+
+    /// <summary>The owner of the remote repository that contains the job artifacts.</summary>
+    [JsonPropertyName("owner")]
+    public string? Owner { get; set; }
+
+    /// <summary>The provider for the remote repository. Valid values are: GITHUB, GITLAB, BITBUCKET, and AWS_CODE_COMMIT.</summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary>The name of the remote repository that contains the job artifacts.</summary>
+    [JsonPropertyName("repository")]
+    public string? Repository { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecInitProvider
 {
-    /// <summary>–  The command of the job. Defined below.</summary>
+    /// <summary>The command of the job. Defined below.</summary>
     [JsonPropertyName("command")]
     public IList<V1beta1JobSpecInitProviderCommand>? Command { get; set; }
 
-    /// <summary>–  The list of connections used for this job.</summary>
+    /// <summary>The list of connections used for this job.</summary>
     [JsonPropertyName("connections")]
     public IList<string>? Connections { get; set; }
 
-    /// <summary>execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</summary>
+    /// <summary>References to Connection in glue to populate connections.</summary>
+    [JsonPropertyName("connectionsRefs")]
+    public IList<V1beta1JobSpecInitProviderConnectionsRefs>? ConnectionsRefs { get; set; }
+
+    /// <summary>Selector for a list of Connection in glue to populate connections.</summary>
+    [JsonPropertyName("connectionsSelector")]
+    public V1beta1JobSpecInitProviderConnectionsSelector? ConnectionsSelector { get; set; }
+
+    /// <summary>The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</summary>
     [JsonPropertyName("defaultArguments")]
     public IDictionary<string, string>? DefaultArguments { get; set; }
 
-    /// <summary>–  Description of the job.</summary>
+    /// <summary>Description of the job.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -315,7 +559,7 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("executionClass")]
     public string? ExecutionClass { get; set; }
 
-    /// <summary>–  Execution property of the job. Defined below.</summary>
+    /// <summary>Execution property of the job. Defined below.</summary>
     [JsonPropertyName("executionProperty")]
     public IList<V1beta1JobSpecInitProviderExecutionProperty>? ExecutionProperty { get; set; }
 
@@ -323,23 +567,27 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("glueVersion")]
     public string? GlueVersion { get; set; }
 
+    /// <summary>Describes how a job was created. Valid values are SCRIPT, NOTEBOOK and VISUAL.</summary>
+    [JsonPropertyName("jobMode")]
+    public string? JobMode { get; set; }
+
     /// <summary>Specifies whether job run queuing is enabled for the job runs for this job. A value of true means job run queuing is enabled for the job runs. If false or not populated, the job runs will not be considered for queueing.</summary>
     [JsonPropertyName("jobRunQueuingEnabled")]
     public bool? JobRunQueuingEnabled { get; set; }
 
-    /// <summary>–  Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
+    /// <summary>Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
-    /// <summary>–  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.</summary>
+    /// <summary>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.</summary>
     [JsonPropertyName("maxCapacity")]
     public double? MaxCapacity { get; set; }
 
-    /// <summary>–  The maximum number of times to retry this job if it fails.</summary>
+    /// <summary>The maximum number of times to retry this job if it fails.</summary>
     [JsonPropertyName("maxRetries")]
     public double? MaxRetries { get; set; }
 
-    /// <summary>overridable arguments for this job, specified as name-value pairs.</summary>
+    /// <summary>Non-overridable arguments for this job, specified as name-value pairs.</summary>
     [JsonPropertyName("nonOverridableArguments")]
     public IDictionary<string, string>? NonOverridableArguments { get; set; }
 
@@ -351,7 +599,7 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("numberOfWorkers")]
     public double? NumberOfWorkers { get; set; }
 
-    /// <summary>–  The ARN of the IAM role associated with this job.</summary>
+    /// <summary>The ARN of the IAM role associated with this job.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
@@ -367,11 +615,15 @@ public partial class V1beta1JobSpecInitProvider
     [JsonPropertyName("securityConfiguration")]
     public string? SecurityConfiguration { get; set; }
 
+    /// <summary>The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a remote repository. Defined below.</summary>
+    [JsonPropertyName("sourceControlDetails")]
+    public IList<V1beta1JobSpecInitProviderSourceControlDetails>? SourceControlDetails { get; set; }
+
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.</summary>
+    /// <summary>The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.</summary>
     [JsonPropertyName("timeout")]
     public double? Timeout { get; set; }
 
@@ -516,11 +768,11 @@ public partial class V1beta1JobSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProviderCommand
 {
-    /// <summary>–  The name you assign to this job. It must be unique in your account.</summary>
+    /// <summary>The name you assign to this job. It must be unique in your account.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The Python version being used to execute a Python shell job. Allowed values are 2, 3 or 3.9. Version 3 refers to Python 3.6.</summary>
+    /// <summary>The Python version being used to execute a Python shell job. Allowed values are 2, 3 or 3.9. Version 3 refers to Python 3.11 when glue_version is set to 5.0.</summary>
     [JsonPropertyName("pythonVersion")]
     public string? PythonVersion { get; set; }
 
@@ -553,25 +805,58 @@ public partial class V1beta1JobStatusAtProviderNotificationProperty
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1JobStatusAtProviderSourceControlDetails
+{
+    /// <summary>The type of authentication, which can be an authentication token stored in Amazon Web Services Secrets Manager, or a personal access token. Valid values are: PERSONAL_ACCESS_TOKEN and AWS_SECRETS_MANAGER.</summary>
+    [JsonPropertyName("authStrategy")]
+    public string? AuthStrategy { get; set; }
+
+    /// <summary>A branch in the remote repository.</summary>
+    [JsonPropertyName("branch")]
+    public string? Branch { get; set; }
+
+    /// <summary>A folder in the remote repository.</summary>
+    [JsonPropertyName("folder")]
+    public string? Folder { get; set; }
+
+    /// <summary>The last commit ID for a commit in the remote repository.</summary>
+    [JsonPropertyName("lastCommitId")]
+    public string? LastCommitId { get; set; }
+
+    /// <summary>The owner of the remote repository that contains the job artifacts.</summary>
+    [JsonPropertyName("owner")]
+    public string? Owner { get; set; }
+
+    /// <summary>The provider for the remote repository. Valid values are: GITHUB, GITLAB, BITBUCKET, and AWS_CODE_COMMIT.</summary>
+    [JsonPropertyName("provider")]
+    public string? Provider { get; set; }
+
+    /// <summary>The name of the remote repository that contains the job artifacts.</summary>
+    [JsonPropertyName("repository")]
+    public string? Repository { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobStatusAtProvider
 {
     /// <summary>Amazon Resource Name (ARN) of Glue Job</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>–  The command of the job. Defined below.</summary>
+    /// <summary>The command of the job. Defined below.</summary>
     [JsonPropertyName("command")]
     public IList<V1beta1JobStatusAtProviderCommand>? Command { get; set; }
 
-    /// <summary>–  The list of connections used for this job.</summary>
+    /// <summary>The list of connections used for this job.</summary>
     [JsonPropertyName("connections")]
     public IList<string>? Connections { get; set; }
 
-    /// <summary>execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</summary>
+    /// <summary>The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the Calling AWS Glue APIs in Python topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the Special Parameters Used by AWS Glue topic in the developer guide.</summary>
     [JsonPropertyName("defaultArguments")]
     public IDictionary<string, string>? DefaultArguments { get; set; }
 
-    /// <summary>–  Description of the job.</summary>
+    /// <summary>Description of the job.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -579,7 +864,7 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("executionClass")]
     public string? ExecutionClass { get; set; }
 
-    /// <summary>–  Execution property of the job. Defined below.</summary>
+    /// <summary>Execution property of the job. Defined below.</summary>
     [JsonPropertyName("executionProperty")]
     public IList<V1beta1JobStatusAtProviderExecutionProperty>? ExecutionProperty { get; set; }
 
@@ -591,23 +876,27 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
+    /// <summary>Describes how a job was created. Valid values are SCRIPT, NOTEBOOK and VISUAL.</summary>
+    [JsonPropertyName("jobMode")]
+    public string? JobMode { get; set; }
+
     /// <summary>Specifies whether job run queuing is enabled for the job runs for this job. A value of true means job run queuing is enabled for the job runs. If false or not populated, the job runs will not be considered for queueing.</summary>
     [JsonPropertyName("jobRunQueuingEnabled")]
     public bool? JobRunQueuingEnabled { get; set; }
 
-    /// <summary>–  Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
+    /// <summary>Specifies the day of the week and hour for the maintenance window for streaming jobs.</summary>
     [JsonPropertyName("maintenanceWindow")]
     public string? MaintenanceWindow { get; set; }
 
-    /// <summary>–  The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.</summary>
+    /// <summary>The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. Required when pythonshell is set, accept either 0.0625 or 1.0. Use number_of_workers and worker_type arguments instead with glue_version 2.0 and above.</summary>
     [JsonPropertyName("maxCapacity")]
     public double? MaxCapacity { get; set; }
 
-    /// <summary>–  The maximum number of times to retry this job if it fails.</summary>
+    /// <summary>The maximum number of times to retry this job if it fails.</summary>
     [JsonPropertyName("maxRetries")]
     public double? MaxRetries { get; set; }
 
-    /// <summary>overridable arguments for this job, specified as name-value pairs.</summary>
+    /// <summary>Non-overridable arguments for this job, specified as name-value pairs.</summary>
     [JsonPropertyName("nonOverridableArguments")]
     public IDictionary<string, string>? NonOverridableArguments { get; set; }
 
@@ -619,13 +908,21 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("numberOfWorkers")]
     public double? NumberOfWorkers { get; set; }
 
-    /// <summary>–  The ARN of the IAM role associated with this job.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>The ARN of the IAM role associated with this job.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
     /// <summary>The name of the Security Configuration to be associated with the job.</summary>
     [JsonPropertyName("securityConfiguration")]
     public string? SecurityConfiguration { get; set; }
+
+    /// <summary>The details for a source control configuration for a job, allowing synchronization of job artifacts to or from a remote repository. Defined below.</summary>
+    [JsonPropertyName("sourceControlDetails")]
+    public IList<V1beta1JobStatusAtProviderSourceControlDetails>? SourceControlDetails { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
@@ -635,7 +932,7 @@ public partial class V1beta1JobStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>–  The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.</summary>
+    /// <summary>The job timeout in minutes. The default is 2880 minutes (48 hours) for glueetl and pythonshell jobs, and null (unlimited) for gluestreaming jobs.</summary>
     [JsonPropertyName("timeout")]
     public double? Timeout { get; set; }
 

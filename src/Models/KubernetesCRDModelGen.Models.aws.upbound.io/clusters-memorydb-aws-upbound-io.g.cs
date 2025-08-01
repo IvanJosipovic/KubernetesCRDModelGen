@@ -248,7 +248,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -877,6 +877,10 @@ public partial class V1beta1ClusterStatusAtProvider
     /// <summary>The port number on which each of the nodes accepts connections. Defaults to 6379.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Set of VPC Security Group ID-s to associate with this cluster.</summary>
     [JsonPropertyName("securityGroupIds")]

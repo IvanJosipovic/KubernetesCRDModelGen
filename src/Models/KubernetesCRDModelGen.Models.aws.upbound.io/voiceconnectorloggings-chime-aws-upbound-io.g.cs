@@ -76,7 +76,7 @@ public partial class V1beta1VoiceConnectorLoggingSpecForProvider
     [JsonPropertyName("enableSipLogs")]
     public bool? EnableSipLogs { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -321,6 +321,10 @@ public partial class V1beta1VoiceConnectorLoggingStatusAtProvider
     /// <summary>The Amazon Chime Voice Connector ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Chime Voice Connector ID.</summary>
     [JsonPropertyName("voiceConnectorId")]

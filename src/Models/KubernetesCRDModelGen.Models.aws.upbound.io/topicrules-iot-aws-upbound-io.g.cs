@@ -330,7 +330,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionElasticsearch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionFirehose
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -381,7 +381,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionHttp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -398,7 +398,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorActionIotAnalytics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderErrorActionIotEvents
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -836,7 +836,7 @@ public partial class V1beta1TopicRuleSpecForProviderErrorAction
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderFirehose
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -887,7 +887,7 @@ public partial class V1beta1TopicRuleSpecForProviderHttp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -904,7 +904,7 @@ public partial class V1beta1TopicRuleSpecForProviderIotAnalytics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecForProviderIotEvents
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -1325,7 +1325,7 @@ public partial class V1beta1TopicRuleSpecForProvider
     [JsonPropertyName("lambda")]
     public IList<V1beta1TopicRuleSpecForProviderLambda>? Lambda { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1688,7 +1688,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionElasticsearch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionFirehose
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -1739,7 +1739,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionHttp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -1756,7 +1756,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotAnalytics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderErrorActionIotEvents
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -2194,7 +2194,7 @@ public partial class V1beta1TopicRuleSpecInitProviderErrorAction
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderFirehose
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -2245,7 +2245,7 @@ public partial class V1beta1TopicRuleSpecInitProviderHttp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -2262,7 +2262,7 @@ public partial class V1beta1TopicRuleSpecInitProviderIotAnalytics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleSpecInitProviderIotEvents
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3174,7 +3174,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionElasticsearch
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionFirehose
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3225,7 +3225,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionHttp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3242,7 +3242,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotAnalytics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderErrorActionIotEvents
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3552,7 +3552,7 @@ public partial class V1beta1TopicRuleStatusAtProviderErrorAction
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderFirehose
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3603,7 +3603,7 @@ public partial class V1beta1TopicRuleStatusAtProviderHttp
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3620,7 +3620,7 @@ public partial class V1beta1TopicRuleStatusAtProviderIotAnalytics
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicRuleStatusAtProviderIotEvents
 {
-    /// <summary>The payload that contains a JSON array of records will be sent to Kinesis Firehose via a batch call.</summary>
+    /// <summary>The payload that contains a JSON array of records will be sent to CloudWatch via a batch call.</summary>
     [JsonPropertyName("batchMode")]
     public bool? BatchMode { get; set; }
 
@@ -3920,6 +3920,10 @@ public partial class V1beta1TopicRuleStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("lambda")]
     public IList<V1beta1TopicRuleStatusAtProviderLambda>? Lambda { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("republish")]

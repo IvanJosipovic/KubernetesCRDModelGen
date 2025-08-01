@@ -216,7 +216,7 @@ public partial class V1beta1ScalingPlanSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -781,6 +781,10 @@ public partial class V1beta1ScalingPlanStatusAtProvider
     /// <summary>Name of the scaling plan. Names cannot contain vertical bars, colons, or forward slashes.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Scaling instructions. More details can be found in the AWS Auto Scaling API Reference.</summary>
     [JsonPropertyName("scalingInstruction")]

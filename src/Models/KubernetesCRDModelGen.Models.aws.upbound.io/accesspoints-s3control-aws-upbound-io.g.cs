@@ -182,7 +182,7 @@ public partial class V1beta1AccessPointSpecForProvider
     [JsonPropertyName("bucketSelector")]
     public V1beta1AccessPointSpecForProviderBucketSelector? BucketSelector { get; set; }
 
-    /// <summary>Name you want to assign to this access point.</summary>
+    /// <summary>Name you want to assign to this access point. See the AWS documentation for naming conditions.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -194,7 +194,7 @@ public partial class V1beta1AccessPointSpecForProvider
     [JsonPropertyName("publicAccessBlockConfiguration")]
     public IList<V1beta1AccessPointSpecForProviderPublicAccessBlockConfiguration>? PublicAccessBlockConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -377,7 +377,7 @@ public partial class V1beta1AccessPointSpecInitProvider
     [JsonPropertyName("bucketSelector")]
     public V1beta1AccessPointSpecInitProviderBucketSelector? BucketSelector { get; set; }
 
-    /// <summary>Name you want to assign to this access point.</summary>
+    /// <summary>Name you want to assign to this access point. See the AWS documentation for naming conditions.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -596,7 +596,7 @@ public partial class V1beta1AccessPointStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Name you want to assign to this access point.</summary>
+    /// <summary>Name you want to assign to this access point. See the AWS documentation for naming conditions.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -611,6 +611,10 @@ public partial class V1beta1AccessPointStatusAtProvider
     /// <summary>Configuration block to manage the PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket. You can enable the configuration options in any combination. Detailed below.</summary>
     [JsonPropertyName("publicAccessBlockConfiguration")]
     public IList<V1beta1AccessPointStatusAtProviderPublicAccessBlockConfiguration>? PublicAccessBlockConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block to restrict access to this access point to requests from the specified Virtual Private Cloud (VPC). Required for S3 on Outposts. Detailed below.</summary>
     [JsonPropertyName("vpcConfiguration")]

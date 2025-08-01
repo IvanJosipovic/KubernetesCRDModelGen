@@ -136,7 +136,7 @@ public partial class V1beta1VPCDHCPOptionsAssociationSpecForProvider
     [JsonPropertyName("dhcpOptionsIdSelector")]
     public V1beta1VPCDHCPOptionsAssociationSpecForProviderDhcpOptionsIdSelector? DhcpOptionsIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1VPCDHCPOptionsAssociationStatusAtProvider
     /// <summary>The ID of the DHCP Options Set Association.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the VPC to which we would like to associate a DHCP Options Set.</summary>
     [JsonPropertyName("vpcId")]

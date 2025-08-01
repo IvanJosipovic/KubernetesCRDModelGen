@@ -68,7 +68,7 @@ public partial class V1beta1RuleSpecForProviderResolverEndpointIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleSpecForProviderTargetIp
 {
-    /// <summary>One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</summary>
+    /// <summary>One IPv4 address that you want to forward DNS queries to.</summary>
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
@@ -97,7 +97,7 @@ public partial class V1beta1RuleSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -186,7 +186,7 @@ public partial class V1beta1RuleSpecInitProviderResolverEndpointIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleSpecInitProviderTargetIp
 {
-    /// <summary>One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</summary>
+    /// <summary>One IPv4 address that you want to forward DNS queries to.</summary>
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
@@ -376,7 +376,7 @@ public partial class V1beta1RuleSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleStatusAtProviderTargetIp
 {
-    /// <summary>One IP address that you want to forward DNS queries to. You can specify only IPv4 addresses.</summary>
+    /// <summary>One IPv4 address that you want to forward DNS queries to.</summary>
     [JsonPropertyName("ip")]
     public string? Ip { get; set; }
 
@@ -416,6 +416,10 @@ public partial class V1beta1RuleStatusAtProvider
     /// <summary>When a rule is shared with another AWS account, the account ID of the account that the rule is shared with.</summary>
     [JsonPropertyName("ownerId")]
     public string? OwnerId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ID of the outbound resolver endpoint that you want to use to route DNS queries to the IP addresses that you specify using target_ip. This argument should only be specified for FORWARD type rules.</summary>
     [JsonPropertyName("resolverEndpointId")]

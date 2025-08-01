@@ -110,12 +110,6 @@ spec:
                   clusterParameterGroupName:
                     description: The name of the parameter group to be associated with this cluster.
                     type: string
-                  clusterPublicKey:
-                    description: The public key for the cluster
-                    type: string
-                  clusterRevisionNumber:
-                    description: The specific revision number of the database in the cluster
-                    type: string
                   clusterSubnetGroupName:
                     description: The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
                     type: string
@@ -227,10 +221,10 @@ spec:
                     description: The Elastic IP (EIP) address for the cluster.
                     type: string
                   encrypted:
-                    description: If true , the data in the cluster is encrypted at rest.
-                    type: boolean
-                  endpoint:
-                    description: The connection endpoint
+                    description: >-
+                      If true , the data in the cluster is encrypted at rest.
+
+                      Default is true.
                     type: string
                   enhancedVpcRouting:
                     description: If true , enhanced VPC routing is enabled.
@@ -422,33 +416,6 @@ spec:
                             type: string
                         type: object
                     type: object
-                  logging:
-                    description: Logging, documented below.
-                    items:
-                      properties:
-                        bucketName:
-                          description: >-
-                            The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
-
-                            For more information on the permissions required for the bucket, please read the AWS documentation
-                          type: string
-                        enable:
-                          description: Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
-                          type: boolean
-                        logDestinationType:
-                          description: The log destination type. An enum with possible values of s3 and cloudwatch.
-                          type: string
-                        logExports:
-                          description: The collection of exported log types. Log types include the connection log, user log and user activity log. Required when log_destination_type is cloudwatch. Valid log types are connectionlog, userlog, and useractivitylog.
-                          items:
-                            type: string
-                          type: array
-                          x-kubernetes-list-type: set
-                        s3KeyPrefix:
-                          description: The prefix applied to the log file names.
-                          type: string
-                      type: object
-                    type: array
                   maintenanceTrackName:
                     description: The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of  a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks. Default value is current.
                     type: string
@@ -456,7 +423,7 @@ spec:
                     description: >-
                       Whether to use AWS SecretsManager to manage the cluster admin credentials.
 
-                      Conflicts with master_password.
+                      Conflicts with master_password and master_password_wo.
 
                       One of master_password or manage_master_password is required unless snapshot_identifier is provided.
                     type: boolean
@@ -470,9 +437,9 @@ spec:
                     description: >-
                       Password for the master DB user.
 
-                      Conflicts with manage_master_password.
+                      Conflicts with manage_master_password and master_password_wo.
 
-                      One of master_password or manage_master_password is required unless snapshot_identifier is provided.
+                      One of master_password, master_password_wo or manage_master_password is required unless snapshot_identifier is provided.
 
                       Note that this may show up in logs, and it will be stored in the state file.
 
@@ -492,6 +459,35 @@ spec:
                     - name
                     - namespace
                     type: object
+                  masterPasswordWoSecretRef:
+                    description: >-
+                      Password for the master DB user.
+
+                      Conflicts with manage_master_password and master_password.
+
+                      One of master_password_wo, master_password or manage_master_password is required unless snapshot_identifier is provided.
+
+                      Note that this may show up in logs.
+
+                      Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
+                  masterPasswordWoVersion:
+                    description: Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.
+                    type: number
                   masterUsername:
                     description: Username for the master DB user.
                     type: string
@@ -524,10 +520,13 @@ spec:
                       Format: ddd:hh24:mi-ddd:hh24:mi
                     type: string
                   publiclyAccessible:
-                    description: If true, the cluster can be accessed from a public network. Default is true.
+                    description: If true, the cluster can be accessed from a public network. Default is false.
                     type: boolean
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   skipFinalSnapshot:
                     description: Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
@@ -538,21 +537,6 @@ spec:
                   snapshotClusterIdentifier:
                     description: The name of the cluster the source snapshot was created from.
                     type: string
-                  snapshotCopy:
-                    description: Configuration of automatic copy of snapshots from one region to another. Documented below.
-                    items:
-                      properties:
-                        destinationRegion:
-                          description: The destination region that you want to copy snapshots to.
-                          type: string
-                        grantName:
-                          description: The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
-                          type: string
-                        retentionPeriod:
-                          description: The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to 7.
-                          type: number
-                      type: object
-                    type: array
                   snapshotIdentifier:
                     description: The name of the snapshot from which to create the new cluster.  Conflicts with snapshot_arn.
                     type: string
@@ -708,12 +692,6 @@ spec:
                   clusterParameterGroupName:
                     description: The name of the parameter group to be associated with this cluster.
                     type: string
-                  clusterPublicKey:
-                    description: The public key for the cluster
-                    type: string
-                  clusterRevisionNumber:
-                    description: The specific revision number of the database in the cluster
-                    type: string
                   clusterSubnetGroupName:
                     description: The name of a cluster subnet group to be associated with this cluster. If this parameter is not provided the resulting cluster will be deployed outside virtual private cloud (VPC).
                     type: string
@@ -825,10 +803,10 @@ spec:
                     description: The Elastic IP (EIP) address for the cluster.
                     type: string
                   encrypted:
-                    description: If true , the data in the cluster is encrypted at rest.
-                    type: boolean
-                  endpoint:
-                    description: The connection endpoint
+                    description: >-
+                      If true , the data in the cluster is encrypted at rest.
+
+                      Default is true.
                     type: string
                   enhancedVpcRouting:
                     description: If true , enhanced VPC routing is enabled.
@@ -1020,33 +998,6 @@ spec:
                             type: string
                         type: object
                     type: object
-                  logging:
-                    description: Logging, documented below.
-                    items:
-                      properties:
-                        bucketName:
-                          description: >-
-                            The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
-
-                            For more information on the permissions required for the bucket, please read the AWS documentation
-                          type: string
-                        enable:
-                          description: Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
-                          type: boolean
-                        logDestinationType:
-                          description: The log destination type. An enum with possible values of s3 and cloudwatch.
-                          type: string
-                        logExports:
-                          description: The collection of exported log types. Log types include the connection log, user log and user activity log. Required when log_destination_type is cloudwatch. Valid log types are connectionlog, userlog, and useractivitylog.
-                          items:
-                            type: string
-                          type: array
-                          x-kubernetes-list-type: set
-                        s3KeyPrefix:
-                          description: The prefix applied to the log file names.
-                          type: string
-                      type: object
-                    type: array
                   maintenanceTrackName:
                     description: The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of  a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks. Default value is current.
                     type: string
@@ -1054,7 +1005,7 @@ spec:
                     description: >-
                       Whether to use AWS SecretsManager to manage the cluster admin credentials.
 
-                      Conflicts with master_password.
+                      Conflicts with master_password and master_password_wo.
 
                       One of master_password or manage_master_password is required unless snapshot_identifier is provided.
                     type: boolean
@@ -1068,9 +1019,9 @@ spec:
                     description: >-
                       Password for the master DB user.
 
-                      Conflicts with manage_master_password.
+                      Conflicts with manage_master_password and master_password_wo.
 
-                      One of master_password or manage_master_password is required unless snapshot_identifier is provided.
+                      One of master_password, master_password_wo or manage_master_password is required unless snapshot_identifier is provided.
 
                       Note that this may show up in logs, and it will be stored in the state file.
 
@@ -1090,6 +1041,35 @@ spec:
                     - name
                     - namespace
                     type: object
+                  masterPasswordWoSecretRef:
+                    description: >-
+                      Password for the master DB user.
+
+                      Conflicts with manage_master_password and master_password.
+
+                      One of master_password_wo, master_password or manage_master_password is required unless snapshot_identifier is provided.
+
+                      Note that this may show up in logs.
+
+                      Password must contain at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one number.
+                    properties:
+                      key:
+                        description: The key to select.
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                      namespace:
+                        description: Namespace of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    - namespace
+                    type: object
+                  masterPasswordWoVersion:
+                    description: Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.
+                    type: number
                   masterUsername:
                     description: Username for the master DB user.
                     type: string
@@ -1122,7 +1102,7 @@ spec:
                       Format: ddd:hh24:mi-ddd:hh24:mi
                     type: string
                   publiclyAccessible:
-                    description: If true, the cluster can be accessed from a public network. Default is true.
+                    description: If true, the cluster can be accessed from a public network. Default is false.
                     type: boolean
                   skipFinalSnapshot:
                     description: Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
@@ -1133,21 +1113,6 @@ spec:
                   snapshotClusterIdentifier:
                     description: The name of the cluster the source snapshot was created from.
                     type: string
-                  snapshotCopy:
-                    description: Configuration of automatic copy of snapshots from one region to another. Documented below.
-                    items:
-                      properties:
-                        destinationRegion:
-                          description: The destination region that you want to copy snapshots to.
-                          type: string
-                        grantName:
-                          description: The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
-                          type: string
-                        retentionPeriod:
-                          description: The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to 7.
-                          type: number
-                      type: object
-                    type: array
                   snapshotIdentifier:
                     description: The name of the snapshot from which to create the new cluster.  Conflicts with snapshot_arn.
                     type: string
@@ -1550,8 +1515,11 @@ spec:
                     description: The Elastic IP (EIP) address for the cluster.
                     type: string
                   encrypted:
-                    description: If true , the data in the cluster is encrypted at rest.
-                    type: boolean
+                    description: >-
+                      If true , the data in the cluster is encrypted at rest.
+
+                      Default is true.
+                    type: string
                   endpoint:
                     description: The connection endpoint
                     type: string
@@ -1573,33 +1541,6 @@ spec:
                   kmsKeyId:
                     description: The ARN for the KMS encryption key. When specifying kms_key_id, encrypted needs to be set to true.
                     type: string
-                  logging:
-                    description: Logging, documented below.
-                    items:
-                      properties:
-                        bucketName:
-                          description: >-
-                            The name of an existing S3 bucket where the log files are to be stored. Must be in the same region as the cluster and the cluster must have read bucket and put object permissions.
-
-                            For more information on the permissions required for the bucket, please read the AWS documentation
-                          type: string
-                        enable:
-                          description: Enables logging information such as queries and connection attempts, for the specified Amazon Redshift cluster.
-                          type: boolean
-                        logDestinationType:
-                          description: The log destination type. An enum with possible values of s3 and cloudwatch.
-                          type: string
-                        logExports:
-                          description: The collection of exported log types. Log types include the connection log, user log and user activity log. Required when log_destination_type is cloudwatch. Valid log types are connectionlog, userlog, and useractivitylog.
-                          items:
-                            type: string
-                          type: array
-                          x-kubernetes-list-type: set
-                        s3KeyPrefix:
-                          description: The prefix applied to the log file names.
-                          type: string
-                      type: object
-                    type: array
                   maintenanceTrackName:
                     description: The name of the maintenance track for the restored cluster. When you take a snapshot, the snapshot inherits the MaintenanceTrack value from the cluster. The snapshot might be on a different track than the cluster that was the source for the snapshot. For example, suppose that you take a snapshot of  a cluster that is on the current track and then change the cluster to be on the trailing track. In this case, the snapshot and the source cluster are on different tracks. Default value is current.
                     type: string
@@ -1607,7 +1548,7 @@ spec:
                     description: >-
                       Whether to use AWS SecretsManager to manage the cluster admin credentials.
 
-                      Conflicts with master_password.
+                      Conflicts with master_password and master_password_wo.
 
                       One of master_password or manage_master_password is required unless snapshot_identifier is provided.
                     type: boolean
@@ -1620,6 +1561,9 @@ spec:
                   masterPasswordSecretKmsKeyId:
                     description: ID of the KMS key used to encrypt the cluster admin credentials secret.
                     type: string
+                  masterPasswordWoVersion:
+                    description: Used together with master_password_wo to trigger an update. Increment this value when an update to the master_password_wo is required.
+                    type: number
                   masterUsername:
                     description: Username for the master DB user.
                     type: string
@@ -1652,8 +1596,14 @@ spec:
                       Format: ddd:hh24:mi-ddd:hh24:mi
                     type: string
                   publiclyAccessible:
-                    description: If true, the cluster can be accessed from a public network. Default is true.
+                    description: If true, the cluster can be accessed from a public network. Default is false.
                     type: boolean
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   skipFinalSnapshot:
                     description: Determines whether a final snapshot of the cluster is created before Amazon Redshift deletes the cluster. If true , a final cluster snapshot is not created. If false , a final cluster snapshot is created before the cluster is deleted. Default is false.
                     type: boolean
@@ -1663,21 +1613,6 @@ spec:
                   snapshotClusterIdentifier:
                     description: The name of the cluster the source snapshot was created from.
                     type: string
-                  snapshotCopy:
-                    description: Configuration of automatic copy of snapshots from one region to another. Documented below.
-                    items:
-                      properties:
-                        destinationRegion:
-                          description: The destination region that you want to copy snapshots to.
-                          type: string
-                        grantName:
-                          description: The name of the snapshot copy grant to use when snapshots of an AWS KMS-encrypted cluster are copied to the destination region.
-                          type: string
-                        retentionPeriod:
-                          description: The number of days to retain automated snapshots in the destination region after they are copied from the source region. Defaults to 7.
-                          type: number
-                      type: object
-                    type: array
                   snapshotIdentifier:
                     description: The name of the snapshot from which to create the new cluster.  Conflicts with snapshot_arn.
                     type: string

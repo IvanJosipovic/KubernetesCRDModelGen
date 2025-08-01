@@ -53,10 +53,6 @@ public partial class V1beta1ByteMatchSetSpecForProvider
     /// <summary>The name or description of the Byte Match Set.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary></summary>
@@ -276,6 +272,10 @@ public partial class V1beta1ByteMatchSetStatusAtProviderByteMatchTuples
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ByteMatchSetStatusAtProvider
 {
+    /// <summary>Amazon Resource Name (ARN) of the byte match set.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>Specifies the bytes (typically a string that corresponds with ASCII characters) that you want to search for in web requests, the location in requests that you want to search, and other settings.</summary>
     [JsonPropertyName("byteMatchTuples")]
     public IList<V1beta1ByteMatchSetStatusAtProviderByteMatchTuples>? ByteMatchTuples { get; set; }

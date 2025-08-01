@@ -80,7 +80,7 @@ public partial class V1beta1VPCIPv4CidrBlockAssociationSpecForProvider
     [JsonPropertyName("ipv4NetmaskLength")]
     public double? Ipv4NetmaskLength { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -333,6 +333,10 @@ public partial class V1beta1VPCIPv4CidrBlockAssociationStatusAtProvider
     /// <summary>The netmask length of the IPv4 CIDR you want to allocate to this VPC. Requires specifying a ipv4_ipam_pool_id.</summary>
     [JsonPropertyName("ipv4NetmaskLength")]
     public double? Ipv4NetmaskLength { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the VPC to make the association with.</summary>
     [JsonPropertyName("vpcId")]

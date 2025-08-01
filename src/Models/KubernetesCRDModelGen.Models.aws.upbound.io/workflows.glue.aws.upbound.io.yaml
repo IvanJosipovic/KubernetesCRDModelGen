@@ -87,17 +87,20 @@ spec:
                   defaultRunProperties:
                     additionalProperties:
                       type: string
-                    description: –  A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
+                    description: A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
                     type: object
                     x-kubernetes-map-type: granular
                   description:
-                    description: –  Description of the workflow.
+                    description: Description of the workflow.
                     type: string
                   maxConcurrentRuns:
                     description: Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
                     type: number
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -133,11 +136,11 @@ spec:
                   defaultRunProperties:
                     additionalProperties:
                       type: string
-                    description: –  A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
+                    description: A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
                     type: object
                     x-kubernetes-map-type: granular
                   description:
-                    description: –  Description of the workflow.
+                    description: Description of the workflow.
                     type: string
                   maxConcurrentRuns:
                     description: Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
@@ -368,11 +371,11 @@ spec:
                   defaultRunProperties:
                     additionalProperties:
                       type: string
-                    description: –  A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
+                    description: A map of default run properties for this workflow. These properties are passed to all jobs associated to the workflow.
                     type: object
                     x-kubernetes-map-type: granular
                   description:
-                    description: –  Description of the workflow.
+                    description: Description of the workflow.
                     type: string
                   id:
                     description: Workflow name
@@ -380,6 +383,12 @@ spec:
                   maxConcurrentRuns:
                     description: Prevents exceeding the maximum number of concurrent runs of any of the component jobs. If you leave this parameter blank, there is no limit to the number of concurrent workflow runs.
                     type: number
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   tags:
                     additionalProperties:
                       type: string

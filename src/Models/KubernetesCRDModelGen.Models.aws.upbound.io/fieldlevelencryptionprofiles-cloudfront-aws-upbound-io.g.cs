@@ -122,10 +122,6 @@ public partial class V1beta1FieldLevelEncryptionProfileSpecForProvider
     /// <summary>The name of the Field Level Encryption Profile.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary></summary>
@@ -415,6 +411,10 @@ public partial class V1beta1FieldLevelEncryptionProfileStatusAtProviderEncryptio
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FieldLevelEncryptionProfileStatusAtProvider
 {
+    /// <summary>The Field Level Encryption Profile ARN.</summary>
+    [JsonPropertyName("arn")]
+    public string? Arn { get; set; }
+
     /// <summary>Internal value used by CloudFront to allow future updates to the Field Level Encryption Profile.</summary>
     [JsonPropertyName("callerReference")]
     public string? CallerReference { get; set; }

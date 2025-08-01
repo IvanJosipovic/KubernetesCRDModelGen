@@ -295,7 +295,7 @@ public partial class V1beta1BucketNotificationSpecForProvider
     [JsonPropertyName("queue")]
     public IList<V1beta1BucketNotificationSpecForProviderQueue>? Queue { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -826,6 +826,10 @@ public partial class V1beta1BucketNotificationStatusAtProvider
     /// <summary>Notification configuration to SQS Queue. See below.</summary>
     [JsonPropertyName("queue")]
     public IList<V1beta1BucketNotificationStatusAtProviderQueue>? Queue { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Notification configuration to SNS Topic. See below.</summary>
     [JsonPropertyName("topic")]

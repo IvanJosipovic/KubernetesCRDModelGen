@@ -32,10 +32,6 @@ public partial class V1beta1IPSetSpecForProvider
     /// <summary>The name or description of the IPSet.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary></summary>

@@ -98,6 +98,19 @@ public partial class V1beta1UserPoolSpecForProviderEmailConfiguration
     public string? SourceArn { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecForProviderEmailMfaConfiguration
+{
+    /// <summary>The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.</summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderLambdaConfigCreateAuthChallengeRefPolicy
@@ -708,7 +721,7 @@ public partial class V1beta1UserPoolSpecForProviderLambdaConfigPreTokenGeneratio
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 
-    /// <summary>The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.</summary>
+    /// <summary>The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.</summary>
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
@@ -1122,6 +1135,15 @@ public partial class V1beta1UserPoolSpecForProviderSchema
     public IList<V1beta1UserPoolSpecForProviderSchemaStringAttributeConstraints>? StringAttributeConstraints { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecForProviderSignInPolicy
+{
+    /// <summary>The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.</summary>
+    [JsonPropertyName("allowedFirstAuthFactors")]
+    public IList<string>? AllowedFirstAuthFactors { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderSmsConfigurationSnsCallerArnRefPolicy
@@ -1223,8 +1245,21 @@ public partial class V1beta1UserPoolSpecForProviderUserAttributeUpdateSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecForProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows
+{
+    /// <summary>Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.</summary>
+    [JsonPropertyName("customAuthMode")]
+    public string? CustomAuthMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderUserPoolAddOns
 {
+    /// <summary>A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.</summary>
+    [JsonPropertyName("advancedSecurityAdditionalFlows")]
+    public IList<V1beta1UserPoolSpecForProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows>? AdvancedSecurityAdditionalFlows { get; set; }
+
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
     [JsonPropertyName("advancedSecurityMode")]
     public string? AdvancedSecurityMode { get; set; }
@@ -1270,6 +1305,19 @@ public partial class V1beta1UserPoolSpecForProviderVerificationMessageTemplate
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecForProviderWebAuthnConfiguration
+{
+    /// <summary>The authentication domain that passkeys providers use as a relying party.</summary>
+    [JsonPropertyName("relyingPartyId")]
+    public string? RelyingPartyId { get; set; }
+
+    /// <summary>If your user pool should require a passkey. Must be one of required or preferred.</summary>
+    [JsonPropertyName("userVerification")]
+    public string? UserVerification { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProvider
 {
     /// <summary>Configuration block to define which verified available method a user can use to recover their forgotten password. Detailed below.</summary>
@@ -1300,6 +1348,10 @@ public partial class V1beta1UserPoolSpecForProvider
     [JsonPropertyName("emailConfiguration")]
     public IList<V1beta1UserPoolSpecForProviderEmailConfiguration>? EmailConfiguration { get; set; }
 
+    /// <summary>Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.</summary>
+    [JsonPropertyName("emailMfaConfiguration")]
+    public IList<V1beta1UserPoolSpecForProviderEmailMfaConfiguration>? EmailMfaConfiguration { get; set; }
+
     /// <summary>String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.</summary>
     [JsonPropertyName("emailVerificationMessage")]
     public string? EmailVerificationMessage { get; set; }
@@ -1324,13 +1376,17 @@ public partial class V1beta1UserPoolSpecForProvider
     [JsonPropertyName("passwordPolicy")]
     public IList<V1beta1UserPoolSpecForProviderPasswordPolicy>? PasswordPolicy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
     /// <summary>Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.</summary>
     [JsonPropertyName("schema")]
     public IList<V1beta1UserPoolSpecForProviderSchema>? Schema { get; set; }
+
+    /// <summary>Configuration block for information about the user pool sign in policy. Detailed below.</summary>
+    [JsonPropertyName("signInPolicy")]
+    public IList<V1beta1UserPoolSpecForProviderSignInPolicy>? SignInPolicy { get; set; }
 
     /// <summary>String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.</summary>
     [JsonPropertyName("smsAuthenticationMessage")]
@@ -1360,6 +1416,10 @@ public partial class V1beta1UserPoolSpecForProvider
     [JsonPropertyName("userPoolAddOns")]
     public IList<V1beta1UserPoolSpecForProviderUserPoolAddOns>? UserPoolAddOns { get; set; }
 
+    /// <summary>The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.</summary>
+    [JsonPropertyName("userPoolTier")]
+    public string? UserPoolTier { get; set; }
+
     /// <summary>Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.</summary>
     [JsonPropertyName("usernameAttributes")]
     public IList<string>? UsernameAttributes { get; set; }
@@ -1371,6 +1431,10 @@ public partial class V1beta1UserPoolSpecForProvider
     /// <summary>Configuration block for verification message templates. Detailed below.</summary>
     [JsonPropertyName("verificationMessageTemplate")]
     public IList<V1beta1UserPoolSpecForProviderVerificationMessageTemplate>? VerificationMessageTemplate { get; set; }
+
+    /// <summary>Configuration block for web authn configuration. Detailed below.</summary>
+    [JsonPropertyName("webAuthnConfiguration")]
+    public IList<V1beta1UserPoolSpecForProviderWebAuthnConfiguration>? WebAuthnConfiguration { get; set; }
 }
 
 /// <summary></summary>
@@ -1461,6 +1525,19 @@ public partial class V1beta1UserPoolSpecInitProviderEmailConfiguration
     /// <summary>ARN of the SES verified email identity to use. Required if email_sending_account is set to DEVELOPER.</summary>
     [JsonPropertyName("sourceArn")]
     public string? SourceArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecInitProviderEmailMfaConfiguration
+{
+    /// <summary>The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.</summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2073,7 +2150,7 @@ public partial class V1beta1UserPoolSpecInitProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 
-    /// <summary>The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.</summary>
+    /// <summary>The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.</summary>
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
@@ -2487,6 +2564,15 @@ public partial class V1beta1UserPoolSpecInitProviderSchema
     public IList<V1beta1UserPoolSpecInitProviderSchemaStringAttributeConstraints>? StringAttributeConstraints { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecInitProviderSignInPolicy
+{
+    /// <summary>The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.</summary>
+    [JsonPropertyName("allowedFirstAuthFactors")]
+    public IList<string>? AllowedFirstAuthFactors { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderSmsConfigurationSnsCallerArnRefPolicy
@@ -2588,8 +2674,21 @@ public partial class V1beta1UserPoolSpecInitProviderUserAttributeUpdateSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows
+{
+    /// <summary>Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.</summary>
+    [JsonPropertyName("customAuthMode")]
+    public string? CustomAuthMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProviderUserPoolAddOns
 {
+    /// <summary>A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.</summary>
+    [JsonPropertyName("advancedSecurityAdditionalFlows")]
+    public IList<V1beta1UserPoolSpecInitProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows>? AdvancedSecurityAdditionalFlows { get; set; }
+
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
     [JsonPropertyName("advancedSecurityMode")]
     public string? AdvancedSecurityMode { get; set; }
@@ -2633,6 +2732,19 @@ public partial class V1beta1UserPoolSpecInitProviderVerificationMessageTemplate
     public string? SmsMessage { get; set; }
 }
 
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolSpecInitProviderWebAuthnConfiguration
+{
+    /// <summary>The authentication domain that passkeys providers use as a relying party.</summary>
+    [JsonPropertyName("relyingPartyId")]
+    public string? RelyingPartyId { get; set; }
+
+    /// <summary>If your user pool should require a passkey. Must be one of required or preferred.</summary>
+    [JsonPropertyName("userVerification")]
+    public string? UserVerification { get; set; }
+}
+
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecInitProvider
@@ -2665,6 +2777,10 @@ public partial class V1beta1UserPoolSpecInitProvider
     [JsonPropertyName("emailConfiguration")]
     public IList<V1beta1UserPoolSpecInitProviderEmailConfiguration>? EmailConfiguration { get; set; }
 
+    /// <summary>Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.</summary>
+    [JsonPropertyName("emailMfaConfiguration")]
+    public IList<V1beta1UserPoolSpecInitProviderEmailMfaConfiguration>? EmailMfaConfiguration { get; set; }
+
     /// <summary>String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.</summary>
     [JsonPropertyName("emailVerificationMessage")]
     public string? EmailVerificationMessage { get; set; }
@@ -2692,6 +2808,10 @@ public partial class V1beta1UserPoolSpecInitProvider
     /// <summary>Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.</summary>
     [JsonPropertyName("schema")]
     public IList<V1beta1UserPoolSpecInitProviderSchema>? Schema { get; set; }
+
+    /// <summary>Configuration block for information about the user pool sign in policy. Detailed below.</summary>
+    [JsonPropertyName("signInPolicy")]
+    public IList<V1beta1UserPoolSpecInitProviderSignInPolicy>? SignInPolicy { get; set; }
 
     /// <summary>String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.</summary>
     [JsonPropertyName("smsAuthenticationMessage")]
@@ -2721,6 +2841,10 @@ public partial class V1beta1UserPoolSpecInitProvider
     [JsonPropertyName("userPoolAddOns")]
     public IList<V1beta1UserPoolSpecInitProviderUserPoolAddOns>? UserPoolAddOns { get; set; }
 
+    /// <summary>The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.</summary>
+    [JsonPropertyName("userPoolTier")]
+    public string? UserPoolTier { get; set; }
+
     /// <summary>Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.</summary>
     [JsonPropertyName("usernameAttributes")]
     public IList<string>? UsernameAttributes { get; set; }
@@ -2732,6 +2856,10 @@ public partial class V1beta1UserPoolSpecInitProvider
     /// <summary>Configuration block for verification message templates. Detailed below.</summary>
     [JsonPropertyName("verificationMessageTemplate")]
     public IList<V1beta1UserPoolSpecInitProviderVerificationMessageTemplate>? VerificationMessageTemplate { get; set; }
+
+    /// <summary>Configuration block for web authn configuration. Detailed below.</summary>
+    [JsonPropertyName("webAuthnConfiguration")]
+    public IList<V1beta1UserPoolSpecInitProviderWebAuthnConfiguration>? WebAuthnConfiguration { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -2958,6 +3086,19 @@ public partial class V1beta1UserPoolStatusAtProviderEmailConfiguration
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolStatusAtProviderEmailMfaConfiguration
+{
+    /// <summary>The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.</summary>
+    [JsonPropertyName("subject")]
+    public string? Subject { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderLambdaConfigCustomEmailSender
 {
     /// <summary>The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send email notifications to users.</summary>
@@ -2990,7 +3131,7 @@ public partial class V1beta1UserPoolStatusAtProviderLambdaConfigPreTokenGenerati
     [JsonPropertyName("lambdaArn")]
     public string? LambdaArn { get; set; }
 
-    /// <summary>The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.</summary>
+    /// <summary>The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.</summary>
     [JsonPropertyName("lambdaVersion")]
     public string? LambdaVersion { get; set; }
 }
@@ -3150,6 +3291,15 @@ public partial class V1beta1UserPoolStatusAtProviderSchema
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolStatusAtProviderSignInPolicy
+{
+    /// <summary>The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.</summary>
+    [JsonPropertyName("allowedFirstAuthFactors")]
+    public IList<string>? AllowedFirstAuthFactors { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderSmsConfiguration
 {
     /// <summary>External ID used in IAM role trust relationships. For more information about using external IDs, see How to Use an External ID When Granting Access to Your AWS Resources to a Third Party.</summary>
@@ -3185,8 +3335,21 @@ public partial class V1beta1UserPoolStatusAtProviderUserAttributeUpdateSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows
+{
+    /// <summary>Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.</summary>
+    [JsonPropertyName("customAuthMode")]
+    public string? CustomAuthMode { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolStatusAtProviderUserPoolAddOns
 {
+    /// <summary>A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.</summary>
+    [JsonPropertyName("advancedSecurityAdditionalFlows")]
+    public IList<V1beta1UserPoolStatusAtProviderUserPoolAddOnsAdvancedSecurityAdditionalFlows>? AdvancedSecurityAdditionalFlows { get; set; }
+
     /// <summary>Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.</summary>
     [JsonPropertyName("advancedSecurityMode")]
     public string? AdvancedSecurityMode { get; set; }
@@ -3228,6 +3391,19 @@ public partial class V1beta1UserPoolStatusAtProviderVerificationMessageTemplate
     /// <summary>SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.</summary>
     [JsonPropertyName("smsMessage")]
     public string? SmsMessage { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1UserPoolStatusAtProviderWebAuthnConfiguration
+{
+    /// <summary>The authentication domain that passkeys providers use as a relying party.</summary>
+    [JsonPropertyName("relyingPartyId")]
+    public string? RelyingPartyId { get; set; }
+
+    /// <summary>If your user pool should require a passkey. Must be one of required or preferred.</summary>
+    [JsonPropertyName("userVerification")]
+    public string? UserVerification { get; set; }
 }
 
 /// <summary></summary>
@@ -3278,6 +3454,10 @@ public partial class V1beta1UserPoolStatusAtProvider
     [JsonPropertyName("emailConfiguration")]
     public IList<V1beta1UserPoolStatusAtProviderEmailConfiguration>? EmailConfiguration { get; set; }
 
+    /// <summary>Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.</summary>
+    [JsonPropertyName("emailMfaConfiguration")]
+    public IList<V1beta1UserPoolStatusAtProviderEmailMfaConfiguration>? EmailMfaConfiguration { get; set; }
+
     /// <summary>String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.</summary>
     [JsonPropertyName("emailVerificationMessage")]
     public string? EmailVerificationMessage { get; set; }
@@ -3318,9 +3498,17 @@ public partial class V1beta1UserPoolStatusAtProvider
     [JsonPropertyName("passwordPolicy")]
     public IList<V1beta1UserPoolStatusAtProviderPasswordPolicy>? PasswordPolicy { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.</summary>
     [JsonPropertyName("schema")]
     public IList<V1beta1UserPoolStatusAtProviderSchema>? Schema { get; set; }
+
+    /// <summary>Configuration block for information about the user pool sign in policy. Detailed below.</summary>
+    [JsonPropertyName("signInPolicy")]
+    public IList<V1beta1UserPoolStatusAtProviderSignInPolicy>? SignInPolicy { get; set; }
 
     /// <summary>String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.</summary>
     [JsonPropertyName("smsAuthenticationMessage")]
@@ -3354,6 +3542,10 @@ public partial class V1beta1UserPoolStatusAtProvider
     [JsonPropertyName("userPoolAddOns")]
     public IList<V1beta1UserPoolStatusAtProviderUserPoolAddOns>? UserPoolAddOns { get; set; }
 
+    /// <summary>The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.</summary>
+    [JsonPropertyName("userPoolTier")]
+    public string? UserPoolTier { get; set; }
+
     /// <summary>Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.</summary>
     [JsonPropertyName("usernameAttributes")]
     public IList<string>? UsernameAttributes { get; set; }
@@ -3365,6 +3557,10 @@ public partial class V1beta1UserPoolStatusAtProvider
     /// <summary>Configuration block for verification message templates. Detailed below.</summary>
     [JsonPropertyName("verificationMessageTemplate")]
     public IList<V1beta1UserPoolStatusAtProviderVerificationMessageTemplate>? VerificationMessageTemplate { get; set; }
+
+    /// <summary>Configuration block for web authn configuration. Detailed below.</summary>
+    [JsonPropertyName("webAuthnConfiguration")]
+    public IList<V1beta1UserPoolStatusAtProviderWebAuthnConfiguration>? WebAuthnConfiguration { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

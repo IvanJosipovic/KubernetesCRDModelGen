@@ -80,7 +80,7 @@ public partial class V1beta1MlflowTrackingServerSpecForProvider
     [JsonPropertyName("mlflowVersion")]
     public string? MlflowVersion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -362,6 +362,10 @@ public partial class V1beta1MlflowTrackingServerStatusAtProvider
     [JsonPropertyName("mlflowVersion")]
     public string? MlflowVersion { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The Amazon Resource Name (ARN) for an IAM role in your account that the MLflow Tracking Server uses to access the artifact store in Amazon S3. The role should have AmazonS3FullAccess permissions. For more information on IAM permissions for tracking server creation, see Set up IAM permissions for MLflow.</summary>
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
@@ -433,7 +437,7 @@ public partial class V1beta1MlflowTrackingServerStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker MLFlow Tracking Server resource.</summary>
+/// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker AI MLFlow Tracking Server resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MlflowTrackingServer : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MlflowTrackingServerSpec>, IStatus<V1beta1MlflowTrackingServerStatus>
@@ -463,7 +467,7 @@ public partial class V1beta1MlflowTrackingServer : IKubernetesObject<V1ObjectMet
     public V1beta1MlflowTrackingServerStatus? Status { get; set; }
 }
 
-/// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker MLFlow Tracking Server resource.</summary>
+/// <summary>MlflowTrackingServer is the Schema for the MlflowTrackingServers API. Provides a SageMaker AI MLFlow Tracking Server resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1MlflowTrackingServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MlflowTrackingServer>

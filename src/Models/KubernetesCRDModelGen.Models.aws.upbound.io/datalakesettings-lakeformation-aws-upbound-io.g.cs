@@ -94,7 +94,7 @@ public partial class V1beta1DataLakeSettingsSpecForProviderCreateTableDefaultPer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeSettingsSpecForProvider
 {
-    /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles).</summary>
+    /// <summary>Set of ARNs of AWS Lake Formation principals (IAM users or roles).</summary>
     [JsonPropertyName("admins")]
     public IList<string>? Admins { get; set; }
 
@@ -118,7 +118,7 @@ public partial class V1beta1DataLakeSettingsSpecForProvider
     [JsonPropertyName("authorizedSessionTagValueList")]
     public IList<string>? AuthorizedSessionTagValueList { get; set; }
 
-    /// <summary>–  Identifier for the Data Catalog. By default, the account ID.</summary>
+    /// <summary>Identifier for the Data Catalog. By default, the account ID.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
@@ -138,15 +138,15 @@ public partial class V1beta1DataLakeSettingsSpecForProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
+    /// <summary>Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
     [JsonPropertyName("readOnlyAdmins")]
     public IList<string>? ReadOnlyAdmins { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>owning account IDs that the caller's account can use to share their user access details (user ARNs).</summary>
+    /// <summary>List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).</summary>
     [JsonPropertyName("trustedResourceOwners")]
     public IList<string>? TrustedResourceOwners { get; set; }
 }
@@ -237,7 +237,7 @@ public partial class V1beta1DataLakeSettingsSpecInitProviderCreateTableDefaultPe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeSettingsSpecInitProvider
 {
-    /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles).</summary>
+    /// <summary>Set of ARNs of AWS Lake Formation principals (IAM users or roles).</summary>
     [JsonPropertyName("admins")]
     public IList<string>? Admins { get; set; }
 
@@ -261,7 +261,7 @@ public partial class V1beta1DataLakeSettingsSpecInitProvider
     [JsonPropertyName("authorizedSessionTagValueList")]
     public IList<string>? AuthorizedSessionTagValueList { get; set; }
 
-    /// <summary>–  Identifier for the Data Catalog. By default, the account ID.</summary>
+    /// <summary>Identifier for the Data Catalog. By default, the account ID.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
@@ -281,11 +281,11 @@ public partial class V1beta1DataLakeSettingsSpecInitProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
+    /// <summary>Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
     [JsonPropertyName("readOnlyAdmins")]
     public IList<string>? ReadOnlyAdmins { get; set; }
 
-    /// <summary>owning account IDs that the caller's account can use to share their user access details (user ARNs).</summary>
+    /// <summary>List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).</summary>
     [JsonPropertyName("trustedResourceOwners")]
     public IList<string>? TrustedResourceOwners { get; set; }
 }
@@ -452,7 +452,7 @@ public partial class V1beta1DataLakeSettingsStatusAtProviderCreateTableDefaultPe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeSettingsStatusAtProvider
 {
-    /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles).</summary>
+    /// <summary>Set of ARNs of AWS Lake Formation principals (IAM users or roles).</summary>
     [JsonPropertyName("admins")]
     public IList<string>? Admins { get; set; }
 
@@ -468,7 +468,7 @@ public partial class V1beta1DataLakeSettingsStatusAtProvider
     [JsonPropertyName("authorizedSessionTagValueList")]
     public IList<string>? AuthorizedSessionTagValueList { get; set; }
 
-    /// <summary>–  Identifier for the Data Catalog. By default, the account ID.</summary>
+    /// <summary>Identifier for the Data Catalog. By default, the account ID.</summary>
     [JsonPropertyName("catalogId")]
     public string? CatalogId { get; set; }
 
@@ -492,11 +492,15 @@ public partial class V1beta1DataLakeSettingsStatusAtProvider
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>–  Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
+    /// <summary>Set of ARNs of AWS Lake Formation principals (IAM users or roles) with only view access to the resources.</summary>
     [JsonPropertyName("readOnlyAdmins")]
     public IList<string>? ReadOnlyAdmins { get; set; }
 
-    /// <summary>owning account IDs that the caller's account can use to share their user access details (user ARNs).</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>List of the resource-owning account IDs that the caller's account can use to share their user access details (user ARNs).</summary>
     [JsonPropertyName("trustedResourceOwners")]
     public IList<string>? TrustedResourceOwners { get; set; }
 }

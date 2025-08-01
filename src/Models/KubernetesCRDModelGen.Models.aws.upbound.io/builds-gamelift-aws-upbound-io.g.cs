@@ -233,7 +233,7 @@ public partial class V1beta1BuildSpecForProvider
     [JsonPropertyName("operatingSystem")]
     public string? OperatingSystem { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -660,6 +660,10 @@ public partial class V1beta1BuildStatusAtProvider
     /// <summary>Operating system that the game server binaries are built to run on. Valid values: WINDOWS_2012, AMAZON_LINUX, AMAZON_LINUX_2, WINDOWS_2016, AMAZON_LINUX_2023.</summary>
     [JsonPropertyName("operatingSystem")]
     public string? OperatingSystem { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Information indicating where your game build files are stored. See below.</summary>
     [JsonPropertyName("storageLocation")]

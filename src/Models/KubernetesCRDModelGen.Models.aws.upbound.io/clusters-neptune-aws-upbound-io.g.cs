@@ -292,11 +292,11 @@ public partial class V1beta1ClusterSpecForProviderReplicationSourceIdentifierSel
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProviderServerlessV2ScalingConfiguration
 {
-    /// <summary>: (default: 128) The maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.</summary>
+    /// <summary>: (default: 128) Maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.</summary>
     [JsonPropertyName("maxCapacity")]
     public double? MaxCapacity { get; set; }
 
-    /// <summary>: (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.</summary>
+    /// <summary>: (default: 2.5) Minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 }
@@ -417,19 +417,19 @@ public partial class V1beta1ClusterSpecForProviderVpcSecurityGroupIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecForProvider
 {
-    /// <summary>Specifies whether upgrades between different major versions are allowed. You must set it to true when providing an engine_version parameter that uses a different major version than the DB cluster's current version. Default is false.</summary>
+    /// <summary>Whether upgrades between different major versions are allowed. You must set it to true when providing an engine_version parameter that uses a different major version than the DB cluster's current version. Default is false.</summary>
     [JsonPropertyName("allowMajorVersionUpgrade")]
     public bool? AllowMajorVersionUpgrade { get; set; }
 
-    /// <summary>Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
+    /// <summary>Whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
-    /// <summary>A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.</summary>
+    /// <summary>List of EC2 Availability Zones that instances in the Neptune cluster can be created in.</summary>
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
 
-    /// <summary>The days to retain backups for. Default 1</summary>
+    /// <summary>Days to retain backups for. Default 1</summary>
     [JsonPropertyName("backupRetentionPeriod")]
     public double? BackupRetentionPeriod { get; set; }
 
@@ -437,31 +437,31 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
-    /// <summary>A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
+    /// <summary>Value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
-    /// <summary>A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.</summary>
+    /// <summary>List of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.</summary>
     [JsonPropertyName("enableCloudwatchLogsExports")]
     public IList<string>? EnableCloudwatchLogsExports { get; set; }
 
-    /// <summary>The name of the database engine to be used for this Neptune cluster. Defaults to neptune.</summary>
+    /// <summary>Name of the database engine to be used for this Neptune cluster. Defaults to neptune.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
-    /// <summary>The database engine version.</summary>
+    /// <summary>Database engine version.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</summary>
+    /// <summary>Name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</summary>
     [JsonPropertyName("finalSnapshotIdentifier")]
     public string? FinalSnapshotIdentifier { get; set; }
 
-    /// <summary>The global cluster identifier specified on aws_neptune_global_cluster.</summary>
+    /// <summary>Global cluster identifier specified on aws_neptune_global_cluster.</summary>
     [JsonPropertyName("globalClusterIdentifier")]
     public string? GlobalClusterIdentifier { get; set; }
 
-    /// <summary>Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</summary>
+    /// <summary>Whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</summary>
     [JsonPropertyName("iamDatabaseAuthenticationEnabled")]
     public bool? IamDatabaseAuthenticationEnabled { get; set; }
 
@@ -473,11 +473,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("iamRoleSelector")]
     public V1beta1ClusterSpecForProviderIamRoleSelector? IamRoleSelector { get; set; }
 
-    /// <summary>A List of ARNs for the IAM roles to associate to the Neptune Cluster.</summary>
+    /// <summary>List of ARNs for the IAM roles to associate to the Neptune Cluster.</summary>
     [JsonPropertyName("iamRoles")]
     public IList<string>? IamRoles { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_arn, storage_encrypted needs to be set to true.</summary>
+    /// <summary>ARN for the KMS encryption key. When specifying kms_key_arn, storage_encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -489,7 +489,7 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1ClusterSpecForProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>A cluster parameter group to associate with the cluster.</summary>
+    /// <summary>Cluster parameter group to associate with the cluster.</summary>
     [JsonPropertyName("neptuneClusterParameterGroupName")]
     public string? NeptuneClusterParameterGroupName { get; set; }
 
@@ -501,11 +501,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("neptuneClusterParameterGroupNameSelector")]
     public V1beta1ClusterSpecForProviderNeptuneClusterParameterGroupNameSelector? NeptuneClusterParameterGroupNameSelector { get; set; }
 
-    /// <summary>The name of the DB parameter group to apply to all instances of the DB cluster.</summary>
+    /// <summary>–  Name of DB parameter group to apply to all instances in the cluster. When upgrading, AWS does not return this value, so do not reference it in other arguments—either leave it unset, configure each instance directly, or ensure it matches the engine_version.</summary>
     [JsonPropertyName("neptuneInstanceParameterGroupName")]
     public string? NeptuneInstanceParameterGroupName { get; set; }
 
-    /// <summary>A Neptune subnet group to associate with this Neptune instance.</summary>
+    /// <summary>Neptune subnet group to associate with this Neptune instance.</summary>
     [JsonPropertyName("neptuneSubnetGroupName")]
     public string? NeptuneSubnetGroupName { get; set; }
 
@@ -517,19 +517,19 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("neptuneSubnetGroupNameSelector")]
     public V1beta1ClusterSpecForProviderNeptuneSubnetGroupNameSelector? NeptuneSubnetGroupNameSelector { get; set; }
 
-    /// <summary>The port on which the Neptune accepts connections. Default is 8182.</summary>
+    /// <summary>Port on which the Neptune accepts connections. Default is 8182.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
+    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
     [JsonPropertyName("preferredBackupWindow")]
     public string? PreferredBackupWindow { get; set; }
 
-    /// <summary>The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30</summary>
+    /// <summary>Weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30</summary>
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -549,11 +549,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("serverlessV2ScalingConfiguration")]
     public IList<V1beta1ClusterSpecForProviderServerlessV2ScalingConfiguration>? ServerlessV2ScalingConfiguration { get; set; }
 
-    /// <summary>Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.</summary>
+    /// <summary>Whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.</summary>
     [JsonPropertyName("skipFinalSnapshot")]
     public bool? SkipFinalSnapshot { get; set; }
 
-    /// <summary>Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.</summary>
+    /// <summary>Whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.</summary>
     [JsonPropertyName("snapshotIdentifier")]
     public string? SnapshotIdentifier { get; set; }
 
@@ -565,11 +565,11 @@ public partial class V1beta1ClusterSpecForProvider
     [JsonPropertyName("snapshotIdentifierSelector")]
     public V1beta1ClusterSpecForProviderSnapshotIdentifierSelector? SnapshotIdentifierSelector { get; set; }
 
-    /// <summary>Specifies whether the Neptune cluster is encrypted. The default is false if not specified.</summary>
+    /// <summary>Whether the Neptune cluster is encrypted. The default is false if not specified.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
 
-    /// <summary>Storage type associated with the cluster standard/iopt1. Default: standard</summary>
+    /// <summary>Storage type associated with the cluster standard/iopt1. Default: standard.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -874,11 +874,11 @@ public partial class V1beta1ClusterSpecInitProviderReplicationSourceIdentifierSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProviderServerlessV2ScalingConfiguration
 {
-    /// <summary>: (default: 128) The maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.</summary>
+    /// <summary>: (default: 128) Maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.</summary>
     [JsonPropertyName("maxCapacity")]
     public double? MaxCapacity { get; set; }
 
-    /// <summary>: (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.</summary>
+    /// <summary>: (default: 2.5) Minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 }
@@ -999,19 +999,19 @@ public partial class V1beta1ClusterSpecInitProviderVpcSecurityGroupIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterSpecInitProvider
 {
-    /// <summary>Specifies whether upgrades between different major versions are allowed. You must set it to true when providing an engine_version parameter that uses a different major version than the DB cluster's current version. Default is false.</summary>
+    /// <summary>Whether upgrades between different major versions are allowed. You must set it to true when providing an engine_version parameter that uses a different major version than the DB cluster's current version. Default is false.</summary>
     [JsonPropertyName("allowMajorVersionUpgrade")]
     public bool? AllowMajorVersionUpgrade { get; set; }
 
-    /// <summary>Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
+    /// <summary>Whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
-    /// <summary>A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.</summary>
+    /// <summary>List of EC2 Availability Zones that instances in the Neptune cluster can be created in.</summary>
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
 
-    /// <summary>The days to retain backups for. Default 1</summary>
+    /// <summary>Days to retain backups for. Default 1</summary>
     [JsonPropertyName("backupRetentionPeriod")]
     public double? BackupRetentionPeriod { get; set; }
 
@@ -1019,31 +1019,31 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
-    /// <summary>A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
+    /// <summary>Value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
-    /// <summary>A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.</summary>
+    /// <summary>List of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.</summary>
     [JsonPropertyName("enableCloudwatchLogsExports")]
     public IList<string>? EnableCloudwatchLogsExports { get; set; }
 
-    /// <summary>The name of the database engine to be used for this Neptune cluster. Defaults to neptune.</summary>
+    /// <summary>Name of the database engine to be used for this Neptune cluster. Defaults to neptune.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
-    /// <summary>The database engine version.</summary>
+    /// <summary>Database engine version.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</summary>
+    /// <summary>Name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</summary>
     [JsonPropertyName("finalSnapshotIdentifier")]
     public string? FinalSnapshotIdentifier { get; set; }
 
-    /// <summary>The global cluster identifier specified on aws_neptune_global_cluster.</summary>
+    /// <summary>Global cluster identifier specified on aws_neptune_global_cluster.</summary>
     [JsonPropertyName("globalClusterIdentifier")]
     public string? GlobalClusterIdentifier { get; set; }
 
-    /// <summary>Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</summary>
+    /// <summary>Whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</summary>
     [JsonPropertyName("iamDatabaseAuthenticationEnabled")]
     public bool? IamDatabaseAuthenticationEnabled { get; set; }
 
@@ -1055,11 +1055,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("iamRoleSelector")]
     public V1beta1ClusterSpecInitProviderIamRoleSelector? IamRoleSelector { get; set; }
 
-    /// <summary>A List of ARNs for the IAM roles to associate to the Neptune Cluster.</summary>
+    /// <summary>List of ARNs for the IAM roles to associate to the Neptune Cluster.</summary>
     [JsonPropertyName("iamRoles")]
     public IList<string>? IamRoles { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_arn, storage_encrypted needs to be set to true.</summary>
+    /// <summary>ARN for the KMS encryption key. When specifying kms_key_arn, storage_encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -1071,7 +1071,7 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("kmsKeyArnSelector")]
     public V1beta1ClusterSpecInitProviderKmsKeyArnSelector? KmsKeyArnSelector { get; set; }
 
-    /// <summary>A cluster parameter group to associate with the cluster.</summary>
+    /// <summary>Cluster parameter group to associate with the cluster.</summary>
     [JsonPropertyName("neptuneClusterParameterGroupName")]
     public string? NeptuneClusterParameterGroupName { get; set; }
 
@@ -1083,11 +1083,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("neptuneClusterParameterGroupNameSelector")]
     public V1beta1ClusterSpecInitProviderNeptuneClusterParameterGroupNameSelector? NeptuneClusterParameterGroupNameSelector { get; set; }
 
-    /// <summary>The name of the DB parameter group to apply to all instances of the DB cluster.</summary>
+    /// <summary>–  Name of DB parameter group to apply to all instances in the cluster. When upgrading, AWS does not return this value, so do not reference it in other arguments—either leave it unset, configure each instance directly, or ensure it matches the engine_version.</summary>
     [JsonPropertyName("neptuneInstanceParameterGroupName")]
     public string? NeptuneInstanceParameterGroupName { get; set; }
 
-    /// <summary>A Neptune subnet group to associate with this Neptune instance.</summary>
+    /// <summary>Neptune subnet group to associate with this Neptune instance.</summary>
     [JsonPropertyName("neptuneSubnetGroupName")]
     public string? NeptuneSubnetGroupName { get; set; }
 
@@ -1099,15 +1099,15 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("neptuneSubnetGroupNameSelector")]
     public V1beta1ClusterSpecInitProviderNeptuneSubnetGroupNameSelector? NeptuneSubnetGroupNameSelector { get; set; }
 
-    /// <summary>The port on which the Neptune accepts connections. Default is 8182.</summary>
+    /// <summary>Port on which the Neptune accepts connections. Default is 8182.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
+    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
     [JsonPropertyName("preferredBackupWindow")]
     public string? PreferredBackupWindow { get; set; }
 
-    /// <summary>The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30</summary>
+    /// <summary>Weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30</summary>
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
@@ -1127,11 +1127,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("serverlessV2ScalingConfiguration")]
     public IList<V1beta1ClusterSpecInitProviderServerlessV2ScalingConfiguration>? ServerlessV2ScalingConfiguration { get; set; }
 
-    /// <summary>Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.</summary>
+    /// <summary>Whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.</summary>
     [JsonPropertyName("skipFinalSnapshot")]
     public bool? SkipFinalSnapshot { get; set; }
 
-    /// <summary>Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.</summary>
+    /// <summary>Whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.</summary>
     [JsonPropertyName("snapshotIdentifier")]
     public string? SnapshotIdentifier { get; set; }
 
@@ -1143,11 +1143,11 @@ public partial class V1beta1ClusterSpecInitProvider
     [JsonPropertyName("snapshotIdentifierSelector")]
     public V1beta1ClusterSpecInitProviderSnapshotIdentifierSelector? SnapshotIdentifierSelector { get; set; }
 
-    /// <summary>Specifies whether the Neptune cluster is encrypted. The default is false if not specified.</summary>
+    /// <summary>Whether the Neptune cluster is encrypted. The default is false if not specified.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
 
-    /// <summary>Storage type associated with the cluster standard/iopt1. Default: standard</summary>
+    /// <summary>Storage type associated with the cluster standard/iopt1. Default: standard.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -1304,11 +1304,11 @@ public partial class V1beta1ClusterSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProviderServerlessV2ScalingConfiguration
 {
-    /// <summary>: (default: 128) The maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.</summary>
+    /// <summary>: (default: 128) Maximum Neptune Capacity Units (NCUs) for this cluster. Must be lower or equal than 128. See AWS Documentation for more details.</summary>
     [JsonPropertyName("maxCapacity")]
     public double? MaxCapacity { get; set; }
 
-    /// <summary>: (default: 2.5) The minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.</summary>
+    /// <summary>: (default: 2.5) Minimum Neptune Capacity Units (NCUs) for this cluster. Must be greater or equal than 1. See AWS Documentation for more details.</summary>
     [JsonPropertyName("minCapacity")]
     public double? MinCapacity { get; set; }
 }
@@ -1317,23 +1317,23 @@ public partial class V1beta1ClusterStatusAtProviderServerlessV2ScalingConfigurat
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterStatusAtProvider
 {
-    /// <summary>Specifies whether upgrades between different major versions are allowed. You must set it to true when providing an engine_version parameter that uses a different major version than the DB cluster's current version. Default is false.</summary>
+    /// <summary>Whether upgrades between different major versions are allowed. You must set it to true when providing an engine_version parameter that uses a different major version than the DB cluster's current version. Default is false.</summary>
     [JsonPropertyName("allowMajorVersionUpgrade")]
     public bool? AllowMajorVersionUpgrade { get; set; }
 
-    /// <summary>Specifies whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
+    /// <summary>Whether any cluster modifications are applied immediately, or during the next maintenance window. Default is false.</summary>
     [JsonPropertyName("applyImmediately")]
     public bool? ApplyImmediately { get; set; }
 
-    /// <summary>The Neptune Cluster Amazon Resource Name (ARN)</summary>
+    /// <summary>Neptune Cluster ARN</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>A list of EC2 Availability Zones that instances in the Neptune cluster can be created in.</summary>
+    /// <summary>List of EC2 Availability Zones that instances in the Neptune cluster can be created in.</summary>
     [JsonPropertyName("availabilityZones")]
     public IList<string>? AvailabilityZones { get; set; }
 
-    /// <summary>The days to retain backups for. Default 1</summary>
+    /// <summary>Days to retain backups for. Default 1</summary>
     [JsonPropertyName("backupRetentionPeriod")]
     public double? BackupRetentionPeriod { get; set; }
 
@@ -1341,7 +1341,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("clusterMembers")]
     public IList<string>? ClusterMembers { get; set; }
 
-    /// <summary>The Neptune Cluster Resource ID</summary>
+    /// <summary>Neptune Cluster Resource ID</summary>
     [JsonPropertyName("clusterResourceId")]
     public string? ClusterResourceId { get; set; }
 
@@ -1349,81 +1349,85 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("copyTagsToSnapshot")]
     public bool? CopyTagsToSnapshot { get; set; }
 
-    /// <summary>A value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
+    /// <summary>Value that indicates whether the DB cluster has deletion protection enabled.The database can't be deleted when deletion protection is enabled. By default, deletion protection is disabled.</summary>
     [JsonPropertyName("deletionProtection")]
     public bool? DeletionProtection { get; set; }
 
-    /// <summary>A list of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.</summary>
+    /// <summary>List of the log types this DB cluster is configured to export to Cloudwatch Logs. Currently only supports audit and slowquery.</summary>
     [JsonPropertyName("enableCloudwatchLogsExports")]
     public IList<string>? EnableCloudwatchLogsExports { get; set; }
 
-    /// <summary>The DNS address of the Neptune instance</summary>
+    /// <summary>DNS address of the Neptune instance</summary>
     [JsonPropertyName("endpoint")]
     public string? Endpoint { get; set; }
 
-    /// <summary>The name of the database engine to be used for this Neptune cluster. Defaults to neptune.</summary>
+    /// <summary>Name of the database engine to be used for this Neptune cluster. Defaults to neptune.</summary>
     [JsonPropertyName("engine")]
     public string? Engine { get; set; }
 
-    /// <summary>The database engine version.</summary>
+    /// <summary>Database engine version.</summary>
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>The name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</summary>
+    /// <summary>Name of your final Neptune snapshot when this Neptune cluster is deleted. If omitted, no final snapshot will be made.</summary>
     [JsonPropertyName("finalSnapshotIdentifier")]
     public string? FinalSnapshotIdentifier { get; set; }
 
-    /// <summary>The global cluster identifier specified on aws_neptune_global_cluster.</summary>
+    /// <summary>Global cluster identifier specified on aws_neptune_global_cluster.</summary>
     [JsonPropertyName("globalClusterIdentifier")]
     public string? GlobalClusterIdentifier { get; set; }
 
-    /// <summary>The Route53 Hosted Zone ID of the endpoint</summary>
+    /// <summary>Route53 Hosted Zone ID of the endpoint</summary>
     [JsonPropertyName("hostedZoneId")]
     public string? HostedZoneId { get; set; }
 
-    /// <summary>Specifies whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</summary>
+    /// <summary>Whether or not mappings of AWS Identity and Access Management (IAM) accounts to database accounts is enabled.</summary>
     [JsonPropertyName("iamDatabaseAuthenticationEnabled")]
     public bool? IamDatabaseAuthenticationEnabled { get; set; }
 
-    /// <summary>A List of ARNs for the IAM roles to associate to the Neptune Cluster.</summary>
+    /// <summary>List of ARNs for the IAM roles to associate to the Neptune Cluster.</summary>
     [JsonPropertyName("iamRoles")]
     public IList<string>? IamRoles { get; set; }
 
-    /// <summary>The Neptune Cluster Identifier</summary>
+    /// <summary>Neptune Cluster Identifier</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ARN for the KMS encryption key. When specifying kms_key_arn, storage_encrypted needs to be set to true.</summary>
+    /// <summary>ARN for the KMS encryption key. When specifying kms_key_arn, storage_encrypted needs to be set to true.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
-    /// <summary>A cluster parameter group to associate with the cluster.</summary>
+    /// <summary>Cluster parameter group to associate with the cluster.</summary>
     [JsonPropertyName("neptuneClusterParameterGroupName")]
     public string? NeptuneClusterParameterGroupName { get; set; }
 
-    /// <summary>The name of the DB parameter group to apply to all instances of the DB cluster.</summary>
+    /// <summary>–  Name of DB parameter group to apply to all instances in the cluster. When upgrading, AWS does not return this value, so do not reference it in other arguments—either leave it unset, configure each instance directly, or ensure it matches the engine_version.</summary>
     [JsonPropertyName("neptuneInstanceParameterGroupName")]
     public string? NeptuneInstanceParameterGroupName { get; set; }
 
-    /// <summary>A Neptune subnet group to associate with this Neptune instance.</summary>
+    /// <summary>Neptune subnet group to associate with this Neptune instance.</summary>
     [JsonPropertyName("neptuneSubnetGroupName")]
     public string? NeptuneSubnetGroupName { get; set; }
 
-    /// <summary>The port on which the Neptune accepts connections. Default is 8182.</summary>
+    /// <summary>Port on which the Neptune accepts connections. Default is 8182.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
 
-    /// <summary>The daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
+    /// <summary>Daily time range during which automated backups are created if automated backups are enabled using the BackupRetentionPeriod parameter. Time in UTC. Default: A 30-minute window selected at random from an 8-hour block of time per regionE.g., 04:00-09:00</summary>
     [JsonPropertyName("preferredBackupWindow")]
     public string? PreferredBackupWindow { get; set; }
 
-    /// <summary>The weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30</summary>
+    /// <summary>Weekly time range during which system maintenance can occur, in (UTC) e.g., wed:04:00-wed:04:30</summary>
     [JsonPropertyName("preferredMaintenanceWindow")]
     public string? PreferredMaintenanceWindow { get; set; }
 
-    /// <summary>A read-only endpoint for the Neptune cluster, automatically load-balanced across replicas</summary>
+    /// <summary>Read-only endpoint for the Neptune cluster, automatically load-balanced across replicas</summary>
     [JsonPropertyName("readerEndpoint")]
     public string? ReaderEndpoint { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of a source Neptune cluster or Neptune instance if this Neptune cluster is to be created as a Read Replica.</summary>
     [JsonPropertyName("replicationSourceIdentifier")]
@@ -1433,19 +1437,19 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("serverlessV2ScalingConfiguration")]
     public IList<V1beta1ClusterStatusAtProviderServerlessV2ScalingConfiguration>? ServerlessV2ScalingConfiguration { get; set; }
 
-    /// <summary>Determines whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.</summary>
+    /// <summary>Whether a final Neptune snapshot is created before the Neptune cluster is deleted. If true is specified, no Neptune snapshot is created. If false is specified, a Neptune snapshot is created before the Neptune cluster is deleted, using the value from final_snapshot_identifier. Default is false.</summary>
     [JsonPropertyName("skipFinalSnapshot")]
     public bool? SkipFinalSnapshot { get; set; }
 
-    /// <summary>Specifies whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.</summary>
+    /// <summary>Whether or not to create this cluster from a snapshot. You can use either the name or ARN when specifying a Neptune cluster snapshot, or the ARN when specifying a Neptune snapshot. Automated snapshots should not be used for this attribute, unless from a different cluster. Automated snapshots are deleted as part of cluster destruction when the resource is replaced.</summary>
     [JsonPropertyName("snapshotIdentifier")]
     public string? SnapshotIdentifier { get; set; }
 
-    /// <summary>Specifies whether the Neptune cluster is encrypted. The default is false if not specified.</summary>
+    /// <summary>Whether the Neptune cluster is encrypted. The default is false if not specified.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
 
-    /// <summary>Storage type associated with the cluster standard/iopt1. Default: standard</summary>
+    /// <summary>Storage type associated with the cluster standard/iopt1. Default: standard.</summary>
     [JsonPropertyName("storageType")]
     public string? StorageType { get; set; }
 
@@ -1453,7 +1457,7 @@ public partial class V1beta1ClusterStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 

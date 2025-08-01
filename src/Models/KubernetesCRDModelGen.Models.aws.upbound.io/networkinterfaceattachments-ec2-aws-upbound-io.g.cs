@@ -152,7 +152,7 @@ public partial class V1beta1NetworkInterfaceAttachmentSpecForProvider
     [JsonPropertyName("networkInterfaceIdSelector")]
     public V1beta1NetworkInterfaceAttachmentSpecForProviderNetworkInterfaceIdSelector? NetworkInterfaceIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -457,6 +457,10 @@ public partial class V1beta1NetworkInterfaceAttachmentStatusAtProvider
     /// <summary>ENI ID to attach.</summary>
     [JsonPropertyName("networkInterfaceId")]
     public string? NetworkInterfaceId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The status of the Network Interface Attachment.</summary>
     [JsonPropertyName("status")]

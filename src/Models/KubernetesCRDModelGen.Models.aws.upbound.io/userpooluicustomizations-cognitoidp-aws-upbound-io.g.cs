@@ -144,7 +144,7 @@ public partial class V1beta1UserPoolUICustomizationSpecForProvider
     [JsonPropertyName("imageFile")]
     public string? ImageFile { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -477,6 +477,10 @@ public partial class V1beta1UserPoolUICustomizationStatusAtProvider
     /// <summary>The last-modified date in RFC3339 format for the UI customization.</summary>
     [JsonPropertyName("lastModifiedDate")]
     public string? LastModifiedDate { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The user pool ID for the user pool.</summary>
     [JsonPropertyName("userPoolId")]

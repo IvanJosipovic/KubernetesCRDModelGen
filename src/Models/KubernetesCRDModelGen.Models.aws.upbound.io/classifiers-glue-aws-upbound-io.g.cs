@@ -28,7 +28,7 @@ public partial class V1beta1ClassifierSpecForProviderCsvClassifier
     [JsonPropertyName("customDatatypes")]
     public IList<string>? CustomDatatypes { get; set; }
 
-    /// <summary>The delimiter used in the Csv to separate columns.</summary>
+    /// <summary>The delimiter used in the CSV to separate columns.</summary>
     [JsonPropertyName("delimiter")]
     public string? Delimiter { get; set; }
 
@@ -44,7 +44,7 @@ public partial class V1beta1ClassifierSpecForProviderCsvClassifier
     [JsonPropertyName("quoteSymbol")]
     public string? QuoteSymbol { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The SerDe for processing CSV. Valid values are OpenCSVSerDe, LazySimpleSerDe, None.</summary>
     [JsonPropertyName("serde")]
     public string? Serde { get; set; }
 }
@@ -92,23 +92,23 @@ public partial class V1beta1ClassifierSpecForProviderXmlClassifier
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecForProvider
 {
-    /// <summary>A classifier for Csv content. Defined below.</summary>
+    /// <summary>A classifier for CSV content. Defined below.</summary>
     [JsonPropertyName("csvClassifier")]
     public IList<V1beta1ClassifierSpecForProviderCsvClassifier>? CsvClassifier { get; set; }
 
-    /// <summary>–  A classifier that uses grok patterns. Defined below.</summary>
+    /// <summary>A classifier that uses grok patterns. Defined below.</summary>
     [JsonPropertyName("grokClassifier")]
     public IList<V1beta1ClassifierSpecForProviderGrokClassifier>? GrokClassifier { get; set; }
 
-    /// <summary>–  A classifier for JSON content. Defined below.</summary>
+    /// <summary>A classifier for JSON content. Defined below.</summary>
     [JsonPropertyName("jsonClassifier")]
     public IList<V1beta1ClassifierSpecForProviderJsonClassifier>? JsonClassifier { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  A classifier for XML content. Defined below.</summary>
+    /// <summary>A classifier for XML content. Defined below.</summary>
     [JsonPropertyName("xmlClassifier")]
     public IList<V1beta1ClassifierSpecForProviderXmlClassifier>? XmlClassifier { get; set; }
 }
@@ -133,7 +133,7 @@ public partial class V1beta1ClassifierSpecInitProviderCsvClassifier
     [JsonPropertyName("customDatatypes")]
     public IList<string>? CustomDatatypes { get; set; }
 
-    /// <summary>The delimiter used in the Csv to separate columns.</summary>
+    /// <summary>The delimiter used in the CSV to separate columns.</summary>
     [JsonPropertyName("delimiter")]
     public string? Delimiter { get; set; }
 
@@ -149,7 +149,7 @@ public partial class V1beta1ClassifierSpecInitProviderCsvClassifier
     [JsonPropertyName("quoteSymbol")]
     public string? QuoteSymbol { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The SerDe for processing CSV. Valid values are OpenCSVSerDe, LazySimpleSerDe, None.</summary>
     [JsonPropertyName("serde")]
     public string? Serde { get; set; }
 }
@@ -197,19 +197,19 @@ public partial class V1beta1ClassifierSpecInitProviderXmlClassifier
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierSpecInitProvider
 {
-    /// <summary>A classifier for Csv content. Defined below.</summary>
+    /// <summary>A classifier for CSV content. Defined below.</summary>
     [JsonPropertyName("csvClassifier")]
     public IList<V1beta1ClassifierSpecInitProviderCsvClassifier>? CsvClassifier { get; set; }
 
-    /// <summary>–  A classifier that uses grok patterns. Defined below.</summary>
+    /// <summary>A classifier that uses grok patterns. Defined below.</summary>
     [JsonPropertyName("grokClassifier")]
     public IList<V1beta1ClassifierSpecInitProviderGrokClassifier>? GrokClassifier { get; set; }
 
-    /// <summary>–  A classifier for JSON content. Defined below.</summary>
+    /// <summary>A classifier for JSON content. Defined below.</summary>
     [JsonPropertyName("jsonClassifier")]
     public IList<V1beta1ClassifierSpecInitProviderJsonClassifier>? JsonClassifier { get; set; }
 
-    /// <summary>–  A classifier for XML content. Defined below.</summary>
+    /// <summary>A classifier for XML content. Defined below.</summary>
     [JsonPropertyName("xmlClassifier")]
     public IList<V1beta1ClassifierSpecInitProviderXmlClassifier>? XmlClassifier { get; set; }
 }
@@ -366,7 +366,7 @@ public partial class V1beta1ClassifierStatusAtProviderCsvClassifier
     [JsonPropertyName("customDatatypes")]
     public IList<string>? CustomDatatypes { get; set; }
 
-    /// <summary>The delimiter used in the Csv to separate columns.</summary>
+    /// <summary>The delimiter used in the CSV to separate columns.</summary>
     [JsonPropertyName("delimiter")]
     public string? Delimiter { get; set; }
 
@@ -382,7 +382,7 @@ public partial class V1beta1ClassifierStatusAtProviderCsvClassifier
     [JsonPropertyName("quoteSymbol")]
     public string? QuoteSymbol { get; set; }
 
-    /// <summary></summary>
+    /// <summary>The SerDe for processing CSV. Valid values are OpenCSVSerDe, LazySimpleSerDe, None.</summary>
     [JsonPropertyName("serde")]
     public string? Serde { get; set; }
 }
@@ -430,11 +430,11 @@ public partial class V1beta1ClassifierStatusAtProviderXmlClassifier
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassifierStatusAtProvider
 {
-    /// <summary>A classifier for Csv content. Defined below.</summary>
+    /// <summary>A classifier for CSV content. Defined below.</summary>
     [JsonPropertyName("csvClassifier")]
     public IList<V1beta1ClassifierStatusAtProviderCsvClassifier>? CsvClassifier { get; set; }
 
-    /// <summary>–  A classifier that uses grok patterns. Defined below.</summary>
+    /// <summary>A classifier that uses grok patterns. Defined below.</summary>
     [JsonPropertyName("grokClassifier")]
     public IList<V1beta1ClassifierStatusAtProviderGrokClassifier>? GrokClassifier { get; set; }
 
@@ -442,11 +442,15 @@ public partial class V1beta1ClassifierStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>–  A classifier for JSON content. Defined below.</summary>
+    /// <summary>A classifier for JSON content. Defined below.</summary>
     [JsonPropertyName("jsonClassifier")]
     public IList<V1beta1ClassifierStatusAtProviderJsonClassifier>? JsonClassifier { get; set; }
 
-    /// <summary>–  A classifier for XML content. Defined below.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>A classifier for XML content. Defined below.</summary>
     [JsonPropertyName("xmlClassifier")]
     public IList<V1beta1ClassifierStatusAtProviderXmlClassifier>? XmlClassifier { get; set; }
 }

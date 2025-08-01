@@ -358,11 +358,11 @@ public partial class V1beta1ScheduleSpecForProviderTargetRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParametersPipelineParameter
 {
-    /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Name of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -371,7 +371,7 @@ public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParame
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParameters
 {
-    /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker Model Building Pipeline. Detailed below.</summary>
+    /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker AI Model Building Pipeline. Detailed below.</summary>
     [JsonPropertyName("pipelineParameter")]
     public IList<V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
@@ -437,7 +437,7 @@ public partial class V1beta1ScheduleSpecForProviderTarget
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ScheduleSpecForProviderTargetRoleArnSelector? RoleArnSelector { get; set; }
 
-    /// <summary>Templated target type for the Amazon SageMaker StartPipelineExecution API operation. Detailed below.</summary>
+    /// <summary>Templated target type for the Amazon SageMaker AI StartPipelineExecution API operation. Detailed below.</summary>
     [JsonPropertyName("sagemakerPipelineParameters")]
     public IList<V1beta1ScheduleSpecForProviderTargetSagemakerPipelineParameters>? SagemakerPipelineParameters { get; set; }
 
@@ -482,7 +482,7 @@ public partial class V1beta1ScheduleSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -857,11 +857,11 @@ public partial class V1beta1ScheduleSpecInitProviderTargetRoleArnSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParametersPipelineParameter
 {
-    /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Name of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -870,7 +870,7 @@ public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParam
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParameters
 {
-    /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker Model Building Pipeline. Detailed below.</summary>
+    /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker AI Model Building Pipeline. Detailed below.</summary>
     [JsonPropertyName("pipelineParameter")]
     public IList<V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
@@ -936,7 +936,7 @@ public partial class V1beta1ScheduleSpecInitProviderTarget
     [JsonPropertyName("roleArnSelector")]
     public V1beta1ScheduleSpecInitProviderTargetRoleArnSelector? RoleArnSelector { get; set; }
 
-    /// <summary>Templated target type for the Amazon SageMaker StartPipelineExecution API operation. Detailed below.</summary>
+    /// <summary>Templated target type for the Amazon SageMaker AI StartPipelineExecution API operation. Detailed below.</summary>
     [JsonPropertyName("sagemakerPipelineParameters")]
     public IList<V1beta1ScheduleSpecInitProviderTargetSagemakerPipelineParameters>? SagemakerPipelineParameters { get; set; }
 
@@ -1316,11 +1316,11 @@ public partial class V1beta1ScheduleStatusAtProviderTargetRetryPolicy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParametersPipelineParameter
 {
-    /// <summary>Name of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Name of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Value of parameter to start execution of a SageMaker Model Building Pipeline.</summary>
+    /// <summary>Value of parameter to start execution of a SageMaker AI Model Building Pipeline.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -1329,7 +1329,7 @@ public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParam
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParameters
 {
-    /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker Model Building Pipeline. Detailed below.</summary>
+    /// <summary>Set of up to 200 parameter names and values to use when executing the SageMaker AI Model Building Pipeline. Detailed below.</summary>
     [JsonPropertyName("pipelineParameter")]
     public IList<V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParametersPipelineParameter>? PipelineParameter { get; set; }
 }
@@ -1379,7 +1379,7 @@ public partial class V1beta1ScheduleStatusAtProviderTarget
     [JsonPropertyName("roleArn")]
     public string? RoleArn { get; set; }
 
-    /// <summary>Templated target type for the Amazon SageMaker StartPipelineExecution API operation. Detailed below.</summary>
+    /// <summary>Templated target type for the Amazon SageMaker AI StartPipelineExecution API operation. Detailed below.</summary>
     [JsonPropertyName("sagemakerPipelineParameters")]
     public IList<V1beta1ScheduleStatusAtProviderTargetSagemakerPipelineParameters>? SagemakerPipelineParameters { get; set; }
 
@@ -1423,6 +1423,10 @@ public partial class V1beta1ScheduleStatusAtProvider
     /// <summary>Name of the schedule. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Defines when the schedule runs. Read more in Schedule types on EventBridge Scheduler.</summary>
     [JsonPropertyName("scheduleExpression")]

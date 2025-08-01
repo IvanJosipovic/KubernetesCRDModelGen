@@ -142,10 +142,6 @@ public partial class V1beta1EndpointGroupSpecForProvider
     [JsonPropertyName("portOverride")]
     public IList<V1beta1EndpointGroupSpecForProviderPortOverride>? PortOverride { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.</summary>
     [JsonPropertyName("thresholdCount")]
     public double? ThresholdCount { get; set; }

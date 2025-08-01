@@ -112,7 +112,7 @@ public partial class V1beta1WorkspaceSAMLConfigurationSpecForProvider
     [JsonPropertyName("orgAssertion")]
     public string? OrgAssertion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -437,6 +437,10 @@ public partial class V1beta1WorkspaceSAMLConfigurationStatusAtProvider
     /// <summary>The org assertion.</summary>
     [JsonPropertyName("orgAssertion")]
     public string? OrgAssertion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The role assertion.</summary>
     [JsonPropertyName("roleAssertion")]

@@ -178,11 +178,11 @@ spec:
                     items:
                       properties:
                         cloudWatchDestination:
-                          description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below
+                          description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.
                           items:
                             properties:
                               dimensionConfiguration:
-                                description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.
+                                description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.
                                 items:
                                   properties:
                                     defaultDimensionValue:
@@ -210,7 +210,7 @@ spec:
                             type: object
                           type: array
                         kinesisFirehoseDestination:
-                          description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
+                          description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.
                           items:
                             properties:
                               deliveryStreamArn:
@@ -398,8 +398,9 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         pinpointDestination:
-                          description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.
+                          description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.
                           items:
                             properties:
                               applicationArn:
@@ -493,7 +494,7 @@ spec:
                             type: object
                           type: array
                         snsDestination:
-                          description: An object that defines an Amazon SNS destination for email events. See sns_destination below.
+                          description: An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.
                           items:
                             properties:
                               topicArn:
@@ -590,10 +591,13 @@ spec:
                       type: object
                     type: array
                   eventDestinationName:
-                    description: An object that defines the event destination. See event_destination below.
+                    description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -714,11 +718,11 @@ spec:
                     items:
                       properties:
                         cloudWatchDestination:
-                          description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below
+                          description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.
                           items:
                             properties:
                               dimensionConfiguration:
-                                description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.
+                                description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.
                                 items:
                                   properties:
                                     defaultDimensionValue:
@@ -746,7 +750,7 @@ spec:
                             type: object
                           type: array
                         kinesisFirehoseDestination:
-                          description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
+                          description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.
                           items:
                             properties:
                               deliveryStreamArn:
@@ -934,8 +938,9 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         pinpointDestination:
-                          description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.
+                          description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.
                           items:
                             properties:
                               applicationArn:
@@ -1029,7 +1034,7 @@ spec:
                             type: object
                           type: array
                         snsDestination:
-                          description: An object that defines an Amazon SNS destination for email events. See sns_destination below.
+                          description: An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.
                           items:
                             properties:
                               topicArn:
@@ -1126,7 +1131,7 @@ spec:
                       type: object
                     type: array
                   eventDestinationName:
-                    description: An object that defines the event destination. See event_destination below.
+                    description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                 type: object
               managementPolicies:
@@ -1355,11 +1360,11 @@ spec:
                     items:
                       properties:
                         cloudWatchDestination:
-                          description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination below
+                          description: An object that defines an Amazon CloudWatch destination for email events. See cloud_watch_destination Block for details.
                           items:
                             properties:
                               dimensionConfiguration:
-                                description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration below.
+                                description: An array of objects that define the dimensions to use when you send email events to Amazon CloudWatch. See dimension_configuration Block for details.
                                 items:
                                   properties:
                                     defaultDimensionValue:
@@ -1387,7 +1392,7 @@ spec:
                             type: object
                           type: array
                         kinesisFirehoseDestination:
-                          description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination below.
+                          description: An object that defines an Amazon Kinesis Data Firehose destination for email events. See kinesis_firehose_destination Block for details.
                           items:
                             properties:
                               deliveryStreamArn:
@@ -1403,8 +1408,9 @@ spec:
                           items:
                             type: string
                           type: array
+                          x-kubernetes-list-type: set
                         pinpointDestination:
-                          description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination below.
+                          description: An object that defines an Amazon Pinpoint project destination for email events. See pinpoint_destination Block for details.
                           items:
                             properties:
                               applicationArn:
@@ -1412,7 +1418,7 @@ spec:
                             type: object
                           type: array
                         snsDestination:
-                          description: An object that defines an Amazon SNS destination for email events. See sns_destination below.
+                          description: An object that defines an Amazon SNS destination for email events. See sns_destination Block for details.
                           items:
                             properties:
                               topicArn:
@@ -1423,10 +1429,16 @@ spec:
                       type: object
                     type: array
                   eventDestinationName:
-                    description: An object that defines the event destination. See event_destination below.
+                    description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                   id:
                     description: A pipe-delimited string combining configuration_set_name and event_destination_name.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:
@@ -2060,7 +2072,10 @@ spec:
                     description: An object that defines the event destination. See event_destination Block for details.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 required:
                 - region
@@ -2872,6 +2887,12 @@ spec:
                     type: string
                   id:
                     description: A pipe-delimited string combining configuration_set_name and event_destination_name.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                 type: object
               conditions:

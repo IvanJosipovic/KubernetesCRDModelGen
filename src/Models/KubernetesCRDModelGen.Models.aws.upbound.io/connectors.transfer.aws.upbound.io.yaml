@@ -207,7 +207,10 @@ spec:
                     description: The IAM Role which is required for allowing the connector to turn on CloudWatch logging for Amazon S3 events.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   securityPolicyName:
                     description: Name of the security policy for the connector.
@@ -842,6 +845,12 @@ spec:
                     type: string
                   loggingRole:
                     description: The IAM Role which is required for allowing the connector to turn on CloudWatch logging for Amazon S3 events.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   securityPolicyName:
                     description: Name of the security policy for the connector.
@@ -1130,7 +1139,10 @@ spec:
                     description: The IAM Role which is required for allowing the connector to turn on CloudWatch logging for Amazon S3 events.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   securityPolicyName:
                     description: Name of the security policy for the connector.
@@ -1757,6 +1769,12 @@ spec:
                     type: string
                   loggingRole:
                     description: The IAM Role which is required for allowing the connector to turn on CloudWatch logging for Amazon S3 events.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   securityPolicyName:
                     description: Name of the security policy for the connector.

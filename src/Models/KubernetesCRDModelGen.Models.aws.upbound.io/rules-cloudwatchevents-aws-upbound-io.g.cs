@@ -152,7 +152,7 @@ public partial class V1beta1RuleSpecForProvider
     [JsonPropertyName("isEnabled")]
     public bool? IsEnabled { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -513,6 +513,10 @@ public partial class V1beta1RuleStatusAtProvider
     /// <summary>Whether the rule should be enabled. Defaults to true. Conflicts with state.</summary>
     [JsonPropertyName("isEnabled")]
     public bool? IsEnabled { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) associated with the role that is used for target invocation.</summary>
     [JsonPropertyName("roleArn")]

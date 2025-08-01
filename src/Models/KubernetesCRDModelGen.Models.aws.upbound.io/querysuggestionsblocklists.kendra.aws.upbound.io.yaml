@@ -180,7 +180,10 @@ spec:
                     description: Name for the block list.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: IAM (Identity and Access Management) role used to access the block list text file in S3.
@@ -923,6 +926,12 @@ spec:
                     type: string
                   querySuggestionsBlockListId:
                     description: Unique identifier of the block list.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: IAM (Identity and Access Management) role used to access the block list text file in S3.
@@ -1183,7 +1192,10 @@ spec:
                     description: Name for the block list.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: IAM (Identity and Access Management) role used to access the block list text file in S3.
@@ -1922,6 +1934,12 @@ spec:
                     type: string
                   querySuggestionsBlockListId:
                     description: Unique identifier of the block list.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   roleArn:
                     description: IAM (Identity and Access Management) role used to access the block list text file in S3.

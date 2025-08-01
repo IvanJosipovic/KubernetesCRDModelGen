@@ -91,7 +91,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   additionalSchemaElements:
-                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.'
+                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA, MANUAL_DISCOUNT_COMPATIBILITY.'
                     items:
                       type: string
                     type: array
@@ -105,9 +105,6 @@ spec:
                   refreshClosedReports:
                     description: Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.
                     type: boolean
-                  region:
-                    description: Region is the region you'd like your resource to be created in.
-                    type: string
                   reportVersioning:
                     description: 'Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT and OVERWRITE_REPORT.'
                     type: string
@@ -201,7 +198,7 @@ spec:
                         type: object
                     type: object
                   s3Prefix:
-                    description: Report path prefix. Limited to 256 characters.
+                    description: Report path prefix. Limited to 256 characters. May be empty ("") but the resource can then not be modified via the AWS Console.
                     type: string
                   s3Region:
                     description: Region of the existing S3 bucket to hold generated reports.
@@ -215,8 +212,6 @@ spec:
                   timeUnit:
                     description: 'The frequency on which report data are measured and displayed.  Valid values are: DAILY, HOURLY, MONTHLY.'
                     type: string
-                required:
-                - region
                 type: object
               initProvider:
                 description: >-
@@ -247,7 +242,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   additionalSchemaElements:
-                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.'
+                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA, MANUAL_DISCOUNT_COMPATIBILITY.'
                     items:
                       type: string
                     type: array
@@ -354,7 +349,7 @@ spec:
                         type: object
                     type: object
                   s3Prefix:
-                    description: Report path prefix. Limited to 256 characters.
+                    description: Report path prefix. Limited to 256 characters. May be empty ("") but the resource can then not be modified via the AWS Console.
                     type: string
                   s3Region:
                     description: Region of the existing S3 bucket to hold generated reports.
@@ -584,6 +579,8 @@ spec:
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.compression) || (has(self.initProvider) && has(self.initProvider.compression))"
             - message: spec.forProvider.format is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.format) || (has(self.initProvider) && has(self.initProvider.format))"
+            - message: spec.forProvider.s3Prefix is a required parameter
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.s3Prefix) || (has(self.initProvider) && has(self.initProvider.s3Prefix))"
             - message: spec.forProvider.s3Region is a required parameter
               rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.s3Region) || (has(self.initProvider) && has(self.initProvider.s3Region))"
             - message: spec.forProvider.timeUnit is a required parameter
@@ -600,7 +597,7 @@ spec:
                     type: array
                     x-kubernetes-list-type: set
                   additionalSchemaElements:
-                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.'
+                    description: 'A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA, MANUAL_DISCOUNT_COMPATIBILITY.'
                     items:
                       type: string
                     type: array
@@ -626,7 +623,7 @@ spec:
                     description: Name of the existing S3 bucket to hold generated reports.
                     type: string
                   s3Prefix:
-                    description: Report path prefix. Limited to 256 characters.
+                    description: Report path prefix. Limited to 256 characters. May be empty ("") but the resource can then not be modified via the AWS Console.
                     type: string
                   s3Region:
                     description: Region of the existing S3 bucket to hold generated reports.

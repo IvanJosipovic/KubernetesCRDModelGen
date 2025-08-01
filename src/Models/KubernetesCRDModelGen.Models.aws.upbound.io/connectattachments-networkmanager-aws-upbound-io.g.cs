@@ -124,7 +124,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderEdgeLocationSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderOptions
 {
-    /// <summary>The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.</summary>
+    /// <summary>Protocol used for the attachment connection. Valid values: GRE, NO_ENCAP.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
@@ -189,7 +189,7 @@ public partial class V1beta1ConnectAttachmentSpecForProviderTransportAttachmentI
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProvider
 {
-    /// <summary>The ID of a core network where you want to create the attachment.</summary>
+    /// <summary>ID of a core network where you want to create the attachment.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
@@ -201,7 +201,7 @@ public partial class V1beta1ConnectAttachmentSpecForProvider
     [JsonPropertyName("coreNetworkIdSelector")]
     public V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdSelector? CoreNetworkIdSelector { get; set; }
 
-    /// <summary>The Region where the edge is located.</summary>
+    /// <summary>Region where the edge is located.</summary>
     [JsonPropertyName("edgeLocation")]
     public string? EdgeLocation { get; set; }
 
@@ -217,15 +217,11 @@ public partial class V1beta1ConnectAttachmentSpecForProvider
     [JsonPropertyName("options")]
     public IList<V1beta1ConnectAttachmentSpecForProviderOptions>? Options { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The ID of the attachment between the two connections.</summary>
+    /// <summary>ID of the attachment between the two connections.</summary>
     [JsonPropertyName("transportAttachmentId")]
     public string? TransportAttachmentId { get; set; }
 
@@ -354,7 +350,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderEdgeLocationSelecto
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProviderOptions
 {
-    /// <summary>The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.</summary>
+    /// <summary>Protocol used for the attachment connection. Valid values: GRE, NO_ENCAP.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
@@ -419,7 +415,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProviderTransportAttachment
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecInitProvider
 {
-    /// <summary>The ID of a core network where you want to create the attachment.</summary>
+    /// <summary>ID of a core network where you want to create the attachment.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
@@ -431,7 +427,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProvider
     [JsonPropertyName("coreNetworkIdSelector")]
     public V1beta1ConnectAttachmentSpecInitProviderCoreNetworkIdSelector? CoreNetworkIdSelector { get; set; }
 
-    /// <summary>The Region where the edge is located.</summary>
+    /// <summary>Region where the edge is located.</summary>
     [JsonPropertyName("edgeLocation")]
     public string? EdgeLocation { get; set; }
 
@@ -451,7 +447,7 @@ public partial class V1beta1ConnectAttachmentSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The ID of the attachment between the two connections.</summary>
+    /// <summary>ID of the attachment between the two connections.</summary>
     [JsonPropertyName("transportAttachmentId")]
     public string? TransportAttachmentId { get; set; }
 
@@ -600,7 +596,7 @@ public partial class V1beta1ConnectAttachmentSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentStatusAtProviderOptions
 {
-    /// <summary>The protocol used for the attachment connection. Possible values are GRE and NO_ENCAP.</summary>
+    /// <summary>Protocol used for the attachment connection. Valid values: GRE, NO_ENCAP.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 }
@@ -609,35 +605,35 @@ public partial class V1beta1ConnectAttachmentStatusAtProviderOptions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentStatusAtProvider
 {
-    /// <summary>The ARN of the attachment.</summary>
+    /// <summary>ARN of the attachment.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The ID of the attachment.</summary>
+    /// <summary>ID of the attachment.</summary>
     [JsonPropertyName("attachmentId")]
     public string? AttachmentId { get; set; }
 
-    /// <summary>The policy rule number associated with the attachment.</summary>
+    /// <summary>Policy rule number associated with the attachment.</summary>
     [JsonPropertyName("attachmentPolicyRuleNumber")]
     public double? AttachmentPolicyRuleNumber { get; set; }
 
-    /// <summary>The type of attachment.</summary>
+    /// <summary>Type of attachment.</summary>
     [JsonPropertyName("attachmentType")]
     public string? AttachmentType { get; set; }
 
-    /// <summary>The ARN of a core network.</summary>
+    /// <summary>ARN of a core network.</summary>
     [JsonPropertyName("coreNetworkArn")]
     public string? CoreNetworkArn { get; set; }
 
-    /// <summary>The ID of a core network where you want to create the attachment.</summary>
+    /// <summary>ID of a core network where you want to create the attachment.</summary>
     [JsonPropertyName("coreNetworkId")]
     public string? CoreNetworkId { get; set; }
 
-    /// <summary>The Region where the edge is located.</summary>
+    /// <summary>Region where the edge is located.</summary>
     [JsonPropertyName("edgeLocation")]
     public string? EdgeLocation { get; set; }
 
-    /// <summary>The ID of the attachment.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
@@ -645,19 +641,19 @@ public partial class V1beta1ConnectAttachmentStatusAtProvider
     [JsonPropertyName("options")]
     public IList<V1beta1ConnectAttachmentStatusAtProviderOptions>? Options { get; set; }
 
-    /// <summary>The ID of the attachment account owner.</summary>
+    /// <summary>ID of the attachment account owner.</summary>
     [JsonPropertyName("ownerAccountId")]
     public string? OwnerAccountId { get; set; }
 
-    /// <summary>The attachment resource ARN.</summary>
+    /// <summary>Attachment resource ARN.</summary>
     [JsonPropertyName("resourceArn")]
     public string? ResourceArn { get; set; }
 
-    /// <summary>The name of the segment attachment.</summary>
+    /// <summary>Name of the segment attachment.</summary>
     [JsonPropertyName("segmentName")]
     public string? SegmentName { get; set; }
 
-    /// <summary>The state of the attachment.</summary>
+    /// <summary>State of the attachment.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
@@ -665,11 +661,11 @@ public partial class V1beta1ConnectAttachmentStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The ID of the attachment between the two connections.</summary>
+    /// <summary>ID of the attachment between the two connections.</summary>
     [JsonPropertyName("transportAttachmentId")]
     public string? TransportAttachmentId { get; set; }
 }
@@ -720,7 +716,7 @@ public partial class V1beta1ConnectAttachmentStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API.</summary>
+/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API. Manages an AWS Network Manager Connect Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ConnectAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ConnectAttachmentSpec>, IStatus<V1beta1ConnectAttachmentStatus>
@@ -750,7 +746,7 @@ public partial class V1beta1ConnectAttachment : IKubernetesObject<V1ObjectMeta>,
     public V1beta1ConnectAttachmentStatus? Status { get; set; }
 }
 
-/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API.</summary>
+/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API. Manages an AWS Network Manager Connect Attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ConnectAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectAttachment>

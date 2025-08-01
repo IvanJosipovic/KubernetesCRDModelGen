@@ -136,10 +136,6 @@ public partial class V1beta1QueryLogSpecForProvider
     [JsonPropertyName("cloudwatchLogGroupArnSelector")]
     public V1beta1QueryLogSpecForProviderCloudwatchLogGroupArnSelector? CloudwatchLogGroupArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Route53 hosted zone ID to enable query logs.</summary>
     [JsonPropertyName("zoneId")]
     public string? ZoneId { get; set; }

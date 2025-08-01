@@ -186,7 +186,10 @@ spec:
                     description: he URL that contains a Signature Version 4 signed request.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sharedAccounts:
                     description: List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.
@@ -788,6 +791,12 @@ spec:
                     type: number
                   presignedUrl:
                     description: he URL that contains a Signature Version 4 signed request.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   sharedAccounts:
                     description: List of AWS Account IDs to share the snapshot with. Use all to make the snapshot public.

@@ -341,7 +341,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: Specifies a schedule used to periodically transfer files from a source to a destination location.
@@ -447,6 +450,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskMode:
+                    description: 'One of the following task modes for your data transfer:'
+                    type: string
                   taskReportConfig:
                     description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
                     items:
@@ -880,6 +886,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskMode:
+                    description: 'One of the following task modes for your data transfer:'
+                    type: string
                   taskReportConfig:
                     description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
                     items:
@@ -1232,6 +1241,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   schedule:
                     description: Specifies a schedule used to periodically transfer files from a source to a destination location.
                     items:
@@ -1256,6 +1271,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskMode:
+                    description: 'One of the following task modes for your data transfer:'
+                    type: string
                   taskReportConfig:
                     description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
                     items:
@@ -1689,7 +1707,10 @@ spec:
                         type: string
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: Specifies a schedule used to periodically transfer files from a source to a destination location.
@@ -1793,6 +1814,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskMode:
+                    description: 'One of the following task modes for your data transfer:'
+                    type: string
                   taskReportConfig:
                     description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
                     properties:
@@ -2212,6 +2236,9 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskMode:
+                    description: 'One of the following task modes for your data transfer:'
+                    type: string
                   taskReportConfig:
                     description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
                     properties:
@@ -2552,6 +2579,12 @@ spec:
                         description: 'Whether a data integrity verification should be performed at the end of a task execution after all data and metadata have been transferred. Valid values: NONE, POINT_IN_TIME_CONSISTENT, ONLY_FILES_TRANSFERRED. Default: POINT_IN_TIME_CONSISTENT.'
                         type: string
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   schedule:
                     description: Specifies a schedule used to periodically transfer files from a source to a destination location.
                     properties:
@@ -2574,6 +2607,9 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
+                  taskMode:
+                    description: 'One of the following task modes for your data transfer:'
+                    type: string
                   taskReportConfig:
                     description: Configuration block containing the configuration of a DataSync Task Report. See task_report_config below.
                     properties:

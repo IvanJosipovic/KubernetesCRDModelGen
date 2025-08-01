@@ -68,7 +68,7 @@ public partial class V1beta1DomainEntrySpecForProviderDomainNameSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainEntrySpecForProvider
 {
-    /// <summary>The name of the Lightsail domain in which to create the entry</summary>
+    /// <summary>Name of the Lightsail domain in which to create the entry.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
@@ -80,19 +80,19 @@ public partial class V1beta1DomainEntrySpecForProvider
     [JsonPropertyName("domainNameSelector")]
     public V1beta1DomainEntrySpecForProviderDomainNameSelector? DomainNameSelector { get; set; }
 
-    /// <summary>If the entry should be an alias Defaults to false</summary>
+    /// <summary>Whether the entry should be an alias. Default: false.</summary>
     [JsonPropertyName("isAlias")]
     public bool? IsAlias { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Target of the domain entry</summary>
+    /// <summary>Target of the domain entry.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of record</summary>
+    /// <summary>Type of record. Valid values: A, AAAA, CNAME, MX, NS, SOA, SRV, TXT.</summary>
     [JsonPropertyName("type")]
     public string Type { get; set; }
 }
@@ -101,11 +101,11 @@ public partial class V1beta1DomainEntrySpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainEntrySpecInitProvider
 {
-    /// <summary>If the entry should be an alias Defaults to false</summary>
+    /// <summary>Whether the entry should be an alias. Default: false.</summary>
     [JsonPropertyName("isAlias")]
     public bool? IsAlias { get; set; }
 
-    /// <summary>Target of the domain entry</summary>
+    /// <summary>Target of the domain entry.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 }
@@ -246,23 +246,27 @@ public partial class V1beta1DomainEntrySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainEntryStatusAtProvider
 {
-    /// <summary>The name of the Lightsail domain in which to create the entry</summary>
+    /// <summary>Name of the Lightsail domain in which to create the entry.</summary>
     [JsonPropertyName("domainName")]
     public string? DomainName { get; set; }
 
-    /// <summary>A combination of attributes to create a unique id: name,domain_name,type,target</summary>
+    /// <summary>Combination of attributes to create a unique id: name,domain_name,type,target.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>If the entry should be an alias Defaults to false</summary>
+    /// <summary>Whether the entry should be an alias. Default: false.</summary>
     [JsonPropertyName("isAlias")]
     public bool? IsAlias { get; set; }
 
-    /// <summary>Target of the domain entry</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Target of the domain entry.</summary>
     [JsonPropertyName("target")]
     public string? Target { get; set; }
 
-    /// <summary>Type of record</summary>
+    /// <summary>Type of record. Valid values: A, AAAA, CNAME, MX, NS, SOA, SRV, TXT.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -313,7 +317,7 @@ public partial class V1beta1DomainEntryStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>DomainEntry is the Schema for the DomainEntrys API. Provides an Lightsail Domain Entry</summary>
+/// <summary>DomainEntry is the Schema for the DomainEntrys API. Manages a Lightsail domain entry (DNS record).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DomainEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainEntrySpec>, IStatus<V1beta1DomainEntryStatus>
@@ -343,7 +347,7 @@ public partial class V1beta1DomainEntry : IKubernetesObject<V1ObjectMeta>, ISpec
     public V1beta1DomainEntryStatus? Status { get; set; }
 }
 
-/// <summary>DomainEntry is the Schema for the DomainEntrys API. Provides an Lightsail Domain Entry</summary>
+/// <summary>DomainEntry is the Schema for the DomainEntrys API. Manages a Lightsail domain entry (DNS record).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DomainEntryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainEntry>

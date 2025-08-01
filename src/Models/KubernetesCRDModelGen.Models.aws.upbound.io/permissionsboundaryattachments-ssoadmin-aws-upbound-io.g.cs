@@ -178,7 +178,7 @@ public partial class V1beta1PermissionsBoundaryAttachmentSpecForProvider
     [JsonPropertyName("permissionsBoundary")]
     public IList<V1beta1PermissionsBoundaryAttachmentSpecForProviderPermissionsBoundary>? PermissionsBoundary { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -459,6 +459,10 @@ public partial class V1beta1PermissionsBoundaryAttachmentStatusAtProvider
     /// <summary>The permissions boundary policy. See below.</summary>
     [JsonPropertyName("permissionsBoundary")]
     public IList<V1beta1PermissionsBoundaryAttachmentStatusAtProviderPermissionsBoundary>? PermissionsBoundary { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

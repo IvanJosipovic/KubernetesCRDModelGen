@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.batch.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersEnv
 {
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value of the environment variable.</summary>
+    /// <summary>Value of the environment variable.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -63,11 +63,11 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersVolumeMounts
 {
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -80,39 +80,39 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainers
 {
-    /// <summary>An array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
+    /// <summary>Array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
     [JsonPropertyName("args")]
     public IList<string>? Args { get; set; }
 
-    /// <summary>The entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
+    /// <summary>Entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 
-    /// <summary>The environment variables to pass to a container. See EKS Environment below.</summary>
+    /// <summary>Environment variables to pass to a container. See EKS Environment below.</summary>
     [JsonPropertyName("env")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersEnv>? Env { get; set; }
 
-    /// <summary>The Docker image used to start the container.</summary>
+    /// <summary>Docker image used to start the container.</summary>
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
-    /// <summary>The image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
+    /// <summary>Image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
     [JsonPropertyName("imagePullPolicy")]
     public string? ImagePullPolicy { get; set; }
 
-    /// <summary>The name of the container. If the name isn't specified, the default name "Default" is used. Each container in a pod must have a unique name.</summary>
+    /// <summary>Name of the container. If the name isn't specified, the default name "Default" is used. Each container in a pod must have a unique name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
+    /// <summary>Type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
     [JsonPropertyName("resources")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersResources>? Resources { get; set; }
 
-    /// <summary>The security context for a job.</summary>
+    /// <summary>Security context for a job.</summary>
     [JsonPropertyName("securityContext")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersSecurityContext>? SecurityContext { get; set; }
 
-    /// <summary>The volume mounts for the container.</summary>
+    /// <summary>Volume mounts for the container.</summary>
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersVolumeMounts>? VolumeMounts { get; set; }
 }
@@ -239,7 +239,7 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesMetadata
 {
-    /// <summary></summary>
+    /// <summary>Key-value pairs used to identify, sort, and organize cube resources.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
@@ -248,11 +248,11 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesVolumesEmptyDir
 {
-    /// <summary>The medium to store the volume. The default value is an empty string, which uses the storage of the node.</summary>
+    /// <summary>Medium to store the volume. The default value is an empty string, which uses the storage of the node.</summary>
     [JsonPropertyName("medium")]
     public string? Medium { get; set; }
 
-    /// <summary>The maximum size of the volume. By default, there's no maximum size defined.</summary>
+    /// <summary>Maximum size of the volume. By default, there's no maximum size defined.</summary>
     [JsonPropertyName("sizeLimit")]
     public string? SizeLimit { get; set; }
 }
@@ -261,7 +261,7 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesVolumesHostPath
 {
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
@@ -270,11 +270,11 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesVolumesSecret
 {
-    /// <summary>Specifies whether the secret or the secret's keys must be defined.</summary>
+    /// <summary>Whether the secret or the secret's keys must be defined.</summary>
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 
-    /// <summary>The name of the secret. The name must be allowed as a DNS subdomain name.</summary>
+    /// <summary>Name of the secret. The name must be allowed as a DNS subdomain name.</summary>
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
@@ -287,11 +287,11 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
     [JsonPropertyName("emptyDir")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesVolumesEmptyDir>? EmptyDir { get; set; }
 
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("hostPath")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesVolumesHostPath>? HostPath { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -304,15 +304,15 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperties
 {
-    /// <summary>The properties of the container that's used on the Amazon EKS pod. See containers below.</summary>
+    /// <summary>Properties of the container that's used on the Amazon EKS pod. See containers below.</summary>
     [JsonPropertyName("containers")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainers>? Containers { get; set; }
 
-    /// <summary>The DNS policy for the pod. The default value is ClusterFirst. If the host_network argument is not specified, the default is ClusterFirstWithHostNet. ClusterFirst indicates that any DNS query that does not match the configured cluster domain suffix is forwarded to the upstream nameserver inherited from the node. For more information, see Pod's DNS policy in the Kubernetes documentation.</summary>
+    /// <summary>DNS policy for the pod. The default value is ClusterFirst. If the host_network argument is not specified, the default is ClusterFirstWithHostNet. ClusterFirst indicates that any DNS query that does not match the configured cluster domain suffix is forwarded to the upstream nameserver inherited from the node. For more information, see Pod's DNS policy in the Kubernetes documentation.</summary>
     [JsonPropertyName("dnsPolicy")]
     public string? DnsPolicy { get; set; }
 
-    /// <summary>Indicates if the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
+    /// <summary>Whether the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
     [JsonPropertyName("hostNetwork")]
     public bool? HostNetwork { get; set; }
 
@@ -328,7 +328,7 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
 
-    /// <summary>The name of the service account that's used to run the pod.</summary>
+    /// <summary>Name of the service account that's used to run the pod.</summary>
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 
@@ -336,7 +336,7 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
     [JsonPropertyName("shareProcessNamespace")]
     public bool? ShareProcessNamespace { get; set; }
 
-    /// <summary>Specifies the volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
+    /// <summary>Volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
     [JsonPropertyName("volumes")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesVolumes>? Volumes { get; set; }
 }
@@ -345,7 +345,7 @@ public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksProperties
 {
-    /// <summary>The properties for the Kubernetes pod resources of a job. See pod_properties below.</summary>
+    /// <summary>Properties for the Kubernetes pod resources of a job. See pod_properties below.</summary>
     [JsonPropertyName("podProperties")]
     public IList<V1beta1JobDefinitionSpecForProviderEksPropertiesPodProperties>? PodProperties { get; set; }
 }
@@ -354,19 +354,19 @@ public partial class V1beta1JobDefinitionSpecForProviderEksProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderRetryStrategyEvaluateOnExit
 {
-    /// <summary>Specifies the action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: retry, exit.</summary>
+    /// <summary>Action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: retry, exit.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>A glob pattern to match against the decimal representation of the exit code returned for a job.</summary>
+    /// <summary>Glob pattern to match against the decimal representation of the exit code returned for a job.</summary>
     [JsonPropertyName("onExitCode")]
     public string? OnExitCode { get; set; }
 
-    /// <summary>A glob pattern to match against the reason returned for a job.</summary>
+    /// <summary>Glob pattern to match against the reason returned for a job.</summary>
     [JsonPropertyName("onReason")]
     public string? OnReason { get; set; }
 
-    /// <summary>A glob pattern to match against the status reason returned for a job.</summary>
+    /// <summary>Glob pattern to match against the status reason returned for a job.</summary>
     [JsonPropertyName("onStatusReason")]
     public string? OnStatusReason { get; set; }
 }
@@ -375,11 +375,11 @@ public partial class V1beta1JobDefinitionSpecForProviderRetryStrategyEvaluateOnE
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderRetryStrategy
 {
-    /// <summary>The number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts.</summary>
+    /// <summary>Number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts.</summary>
     [JsonPropertyName("attempts")]
     public double? Attempts { get; set; }
 
-    /// <summary>The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the attempts parameter must also be specified. You may specify up to 5 configuration blocks.</summary>
+    /// <summary>Evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the attempts parameter must also be specified. You may specify up to 5 configuration blocks.</summary>
     [JsonPropertyName("evaluateOnExit")]
     public IList<V1beta1JobDefinitionSpecForProviderRetryStrategyEvaluateOnExit>? EvaluateOnExit { get; set; }
 }
@@ -388,7 +388,7 @@ public partial class V1beta1JobDefinitionSpecForProviderRetryStrategy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderTimeout
 {
-    /// <summary>The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</summary>
+    /// <summary>Time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</summary>
     [JsonPropertyName("attemptDurationSeconds")]
     public double? AttemptDurationSeconds { get; set; }
 }
@@ -397,7 +397,7 @@ public partial class V1beta1JobDefinitionSpecForProviderTimeout
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProvider
 {
-    /// <summary>A valid container properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
+    /// <summary>Valid container properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("containerProperties")]
     public string? ContainerProperties { get; set; }
 
@@ -409,39 +409,39 @@ public partial class V1beta1JobDefinitionSpecForProvider
     [JsonPropertyName("ecsProperties")]
     public string? EcsProperties { get; set; }
 
-    /// <summary>A valid eks properties. This parameter is only valid if the type parameter is container.</summary>
+    /// <summary>Valid eks properties. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("eksProperties")]
     public IList<V1beta1JobDefinitionSpecForProviderEksProperties>? EksProperties { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>A valid node properties provided as a single valid JSON document. This parameter is required if the type parameter is multinode.</summary>
+    /// <summary>Valid node properties provided as a single valid JSON document. This parameter is required if the type parameter is multinode.</summary>
     [JsonPropertyName("nodeProperties")]
     public string? NodeProperties { get; set; }
 
-    /// <summary>Specifies the parameter substitution placeholders to set in the job definition.</summary>
+    /// <summary>Parameter substitution placeholders to set in the job definition.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>The platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.</summary>
+    /// <summary>Platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.</summary>
     [JsonPropertyName("platformCapabilities")]
     public IList<string>? PlatformCapabilities { get; set; }
 
-    /// <summary>Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.</summary>
+    /// <summary>Whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.</summary>
     [JsonPropertyName("propagateTags")]
     public bool? PropagateTags { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Specifies the retry strategy to use for failed jobs that are submitted with this job definition. Maximum number of retry_strategy is 1.  Defined below.</summary>
+    /// <summary>Retry strategy to use for failed jobs that are submitted with this job definition. Maximum number of retry_strategy is 1.  Defined below.</summary>
     [JsonPropertyName("retryStrategy")]
     public IList<V1beta1JobDefinitionSpecForProviderRetryStrategy>? RetryStrategy { get; set; }
 
-    /// <summary>The scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. Allowed values 0 through 9999.</summary>
+    /// <summary>Scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. Allowed values 0 through 9999.</summary>
     [JsonPropertyName("schedulingPriority")]
     public double? SchedulingPriority { get; set; }
 
@@ -449,11 +449,11 @@ public partial class V1beta1JobDefinitionSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.</summary>
+    /// <summary>Timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.</summary>
     [JsonPropertyName("timeout")]
     public IList<V1beta1JobDefinitionSpecForProviderTimeout>? Timeout { get; set; }
 
-    /// <summary>The type of job definition. Must be container or multinode.</summary>
+    /// <summary>Type of job definition. Must be container or multinode.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -462,11 +462,11 @@ public partial class V1beta1JobDefinitionSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainersEnv
 {
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value of the environment variable.</summary>
+    /// <summary>Value of the environment variable.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -513,11 +513,11 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainersVolumeMounts
 {
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -530,39 +530,39 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainers
 {
-    /// <summary>An array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
+    /// <summary>Array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
     [JsonPropertyName("args")]
     public IList<string>? Args { get; set; }
 
-    /// <summary>The entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
+    /// <summary>Entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 
-    /// <summary>The environment variables to pass to a container. See EKS Environment below.</summary>
+    /// <summary>Environment variables to pass to a container. See EKS Environment below.</summary>
     [JsonPropertyName("env")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainersEnv>? Env { get; set; }
 
-    /// <summary>The Docker image used to start the container.</summary>
+    /// <summary>Docker image used to start the container.</summary>
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
-    /// <summary>The image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
+    /// <summary>Image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
     [JsonPropertyName("imagePullPolicy")]
     public string? ImagePullPolicy { get; set; }
 
-    /// <summary>The name of the container. If the name isn't specified, the default name "Default" is used. Each container in a pod must have a unique name.</summary>
+    /// <summary>Name of the container. If the name isn't specified, the default name "Default" is used. Each container in a pod must have a unique name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
+    /// <summary>Type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
     [JsonPropertyName("resources")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainersResources>? Resources { get; set; }
 
-    /// <summary>The security context for a job.</summary>
+    /// <summary>Security context for a job.</summary>
     [JsonPropertyName("securityContext")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainersSecurityContext>? SecurityContext { get; set; }
 
-    /// <summary>The volume mounts for the container.</summary>
+    /// <summary>Volume mounts for the container.</summary>
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainersVolumeMounts>? VolumeMounts { get; set; }
 }
@@ -689,7 +689,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesMetadata
 {
-    /// <summary></summary>
+    /// <summary>Key-value pairs used to identify, sort, and organize cube resources.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
@@ -698,11 +698,11 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesVolumesEmptyDir
 {
-    /// <summary>The medium to store the volume. The default value is an empty string, which uses the storage of the node.</summary>
+    /// <summary>Medium to store the volume. The default value is an empty string, which uses the storage of the node.</summary>
     [JsonPropertyName("medium")]
     public string? Medium { get; set; }
 
-    /// <summary>The maximum size of the volume. By default, there's no maximum size defined.</summary>
+    /// <summary>Maximum size of the volume. By default, there's no maximum size defined.</summary>
     [JsonPropertyName("sizeLimit")]
     public string? SizeLimit { get; set; }
 }
@@ -711,7 +711,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesVolumesHostPath
 {
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
@@ -720,11 +720,11 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesVolumesSecret
 {
-    /// <summary>Specifies whether the secret or the secret's keys must be defined.</summary>
+    /// <summary>Whether the secret or the secret's keys must be defined.</summary>
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 
-    /// <summary>The name of the secret. The name must be allowed as a DNS subdomain name.</summary>
+    /// <summary>Name of the secret. The name must be allowed as a DNS subdomain name.</summary>
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
@@ -737,11 +737,11 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
     [JsonPropertyName("emptyDir")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesVolumesEmptyDir>? EmptyDir { get; set; }
 
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("hostPath")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesVolumesHostPath>? HostPath { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -754,15 +754,15 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodProperties
 {
-    /// <summary>The properties of the container that's used on the Amazon EKS pod. See containers below.</summary>
+    /// <summary>Properties of the container that's used on the Amazon EKS pod. See containers below.</summary>
     [JsonPropertyName("containers")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesContainers>? Containers { get; set; }
 
-    /// <summary>The DNS policy for the pod. The default value is ClusterFirst. If the host_network argument is not specified, the default is ClusterFirstWithHostNet. ClusterFirst indicates that any DNS query that does not match the configured cluster domain suffix is forwarded to the upstream nameserver inherited from the node. For more information, see Pod's DNS policy in the Kubernetes documentation.</summary>
+    /// <summary>DNS policy for the pod. The default value is ClusterFirst. If the host_network argument is not specified, the default is ClusterFirstWithHostNet. ClusterFirst indicates that any DNS query that does not match the configured cluster domain suffix is forwarded to the upstream nameserver inherited from the node. For more information, see Pod's DNS policy in the Kubernetes documentation.</summary>
     [JsonPropertyName("dnsPolicy")]
     public string? DnsPolicy { get; set; }
 
-    /// <summary>Indicates if the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
+    /// <summary>Whether the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
     [JsonPropertyName("hostNetwork")]
     public bool? HostNetwork { get; set; }
 
@@ -778,7 +778,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
 
-    /// <summary>The name of the service account that's used to run the pod.</summary>
+    /// <summary>Name of the service account that's used to run the pod.</summary>
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 
@@ -786,7 +786,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
     [JsonPropertyName("shareProcessNamespace")]
     public bool? ShareProcessNamespace { get; set; }
 
-    /// <summary>Specifies the volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
+    /// <summary>Volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
     [JsonPropertyName("volumes")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropertiesVolumes>? Volumes { get; set; }
 }
@@ -795,7 +795,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderEksProperties
 {
-    /// <summary>The properties for the Kubernetes pod resources of a job. See pod_properties below.</summary>
+    /// <summary>Properties for the Kubernetes pod resources of a job. See pod_properties below.</summary>
     [JsonPropertyName("podProperties")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksPropertiesPodProperties>? PodProperties { get; set; }
 }
@@ -804,19 +804,19 @@ public partial class V1beta1JobDefinitionSpecInitProviderEksProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderRetryStrategyEvaluateOnExit
 {
-    /// <summary>Specifies the action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: retry, exit.</summary>
+    /// <summary>Action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: retry, exit.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>A glob pattern to match against the decimal representation of the exit code returned for a job.</summary>
+    /// <summary>Glob pattern to match against the decimal representation of the exit code returned for a job.</summary>
     [JsonPropertyName("onExitCode")]
     public string? OnExitCode { get; set; }
 
-    /// <summary>A glob pattern to match against the reason returned for a job.</summary>
+    /// <summary>Glob pattern to match against the reason returned for a job.</summary>
     [JsonPropertyName("onReason")]
     public string? OnReason { get; set; }
 
-    /// <summary>A glob pattern to match against the status reason returned for a job.</summary>
+    /// <summary>Glob pattern to match against the status reason returned for a job.</summary>
     [JsonPropertyName("onStatusReason")]
     public string? OnStatusReason { get; set; }
 }
@@ -825,11 +825,11 @@ public partial class V1beta1JobDefinitionSpecInitProviderRetryStrategyEvaluateOn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderRetryStrategy
 {
-    /// <summary>The number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts.</summary>
+    /// <summary>Number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts.</summary>
     [JsonPropertyName("attempts")]
     public double? Attempts { get; set; }
 
-    /// <summary>The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the attempts parameter must also be specified. You may specify up to 5 configuration blocks.</summary>
+    /// <summary>Evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the attempts parameter must also be specified. You may specify up to 5 configuration blocks.</summary>
     [JsonPropertyName("evaluateOnExit")]
     public IList<V1beta1JobDefinitionSpecInitProviderRetryStrategyEvaluateOnExit>? EvaluateOnExit { get; set; }
 }
@@ -838,7 +838,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderRetryStrategy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProviderTimeout
 {
-    /// <summary>The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</summary>
+    /// <summary>Time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</summary>
     [JsonPropertyName("attemptDurationSeconds")]
     public double? AttemptDurationSeconds { get; set; }
 }
@@ -847,7 +847,7 @@ public partial class V1beta1JobDefinitionSpecInitProviderTimeout
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecInitProvider
 {
-    /// <summary>A valid container properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
+    /// <summary>Valid container properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("containerProperties")]
     public string? ContainerProperties { get; set; }
 
@@ -859,35 +859,35 @@ public partial class V1beta1JobDefinitionSpecInitProvider
     [JsonPropertyName("ecsProperties")]
     public string? EcsProperties { get; set; }
 
-    /// <summary>A valid eks properties. This parameter is only valid if the type parameter is container.</summary>
+    /// <summary>Valid eks properties. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("eksProperties")]
     public IList<V1beta1JobDefinitionSpecInitProviderEksProperties>? EksProperties { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>A valid node properties provided as a single valid JSON document. This parameter is required if the type parameter is multinode.</summary>
+    /// <summary>Valid node properties provided as a single valid JSON document. This parameter is required if the type parameter is multinode.</summary>
     [JsonPropertyName("nodeProperties")]
     public string? NodeProperties { get; set; }
 
-    /// <summary>Specifies the parameter substitution placeholders to set in the job definition.</summary>
+    /// <summary>Parameter substitution placeholders to set in the job definition.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>The platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.</summary>
+    /// <summary>Platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.</summary>
     [JsonPropertyName("platformCapabilities")]
     public IList<string>? PlatformCapabilities { get; set; }
 
-    /// <summary>Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.</summary>
+    /// <summary>Whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.</summary>
     [JsonPropertyName("propagateTags")]
     public bool? PropagateTags { get; set; }
 
-    /// <summary>Specifies the retry strategy to use for failed jobs that are submitted with this job definition. Maximum number of retry_strategy is 1.  Defined below.</summary>
+    /// <summary>Retry strategy to use for failed jobs that are submitted with this job definition. Maximum number of retry_strategy is 1.  Defined below.</summary>
     [JsonPropertyName("retryStrategy")]
     public IList<V1beta1JobDefinitionSpecInitProviderRetryStrategy>? RetryStrategy { get; set; }
 
-    /// <summary>The scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. Allowed values 0 through 9999.</summary>
+    /// <summary>Scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. Allowed values 0 through 9999.</summary>
     [JsonPropertyName("schedulingPriority")]
     public double? SchedulingPriority { get; set; }
 
@@ -895,11 +895,11 @@ public partial class V1beta1JobDefinitionSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.</summary>
+    /// <summary>Timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.</summary>
     [JsonPropertyName("timeout")]
     public IList<V1beta1JobDefinitionSpecInitProviderTimeout>? Timeout { get; set; }
 
-    /// <summary>The type of job definition. Must be container or multinode.</summary>
+    /// <summary>Type of job definition. Must be container or multinode.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }
@@ -1040,11 +1040,11 @@ public partial class V1beta1JobDefinitionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainersEnv
 {
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The value of the environment variable.</summary>
+    /// <summary>Value of the environment variable.</summary>
     [JsonPropertyName("value")]
     public string? Value { get; set; }
 }
@@ -1091,11 +1091,11 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainersVolumeMounts
 {
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("mountPath")]
     public string? MountPath { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -1108,39 +1108,39 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainers
 {
-    /// <summary>An array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
+    /// <summary>Array of arguments to the entrypoint. If this isn't specified, the CMD of the container image is used. This corresponds to the args member in the Entrypoint portion of the Pod in Kubernetes. Environment variable references are expanded using the container's environment.</summary>
     [JsonPropertyName("args")]
     public IList<string>? Args { get; set; }
 
-    /// <summary>The entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
+    /// <summary>Entrypoint for the container. This isn't run within a shell. If this isn't specified, the ENTRYPOINT of the container image is used. Environment variable references are expanded using the container's environment.</summary>
     [JsonPropertyName("command")]
     public IList<string>? Command { get; set; }
 
-    /// <summary>The environment variables to pass to a container. See EKS Environment below.</summary>
+    /// <summary>Environment variables to pass to a container. See EKS Environment below.</summary>
     [JsonPropertyName("env")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainersEnv>? Env { get; set; }
 
-    /// <summary>The Docker image used to start the container.</summary>
+    /// <summary>Docker image used to start the container.</summary>
     [JsonPropertyName("image")]
     public string? Image { get; set; }
 
-    /// <summary>The image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
+    /// <summary>Image pull policy for the container. Supported values are Always, IfNotPresent, and Never.</summary>
     [JsonPropertyName("imagePullPolicy")]
     public string? ImagePullPolicy { get; set; }
 
-    /// <summary>The name of the container. If the name isn't specified, the default name "Default" is used. Each container in a pod must have a unique name.</summary>
+    /// <summary>Name of the container. If the name isn't specified, the default name "Default" is used. Each container in a pod must have a unique name.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>The type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
+    /// <summary>Type and amount of resources to assign to a container. The supported resources include memory, cpu, and nvidia.com/gpu.</summary>
     [JsonPropertyName("resources")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainersResources>? Resources { get; set; }
 
-    /// <summary>The security context for a job.</summary>
+    /// <summary>Security context for a job.</summary>
     [JsonPropertyName("securityContext")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainersSecurityContext>? SecurityContext { get; set; }
 
-    /// <summary>The volume mounts for the container.</summary>
+    /// <summary>Volume mounts for the container.</summary>
     [JsonPropertyName("volumeMounts")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainersVolumeMounts>? VolumeMounts { get; set; }
 }
@@ -1267,7 +1267,7 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesMetadata
 {
-    /// <summary></summary>
+    /// <summary>Key-value pairs used to identify, sort, and organize cube resources.</summary>
     [JsonPropertyName("labels")]
     public IDictionary<string, string>? Labels { get; set; }
 }
@@ -1276,11 +1276,11 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesVolumesEmptyDir
 {
-    /// <summary>The medium to store the volume. The default value is an empty string, which uses the storage of the node.</summary>
+    /// <summary>Medium to store the volume. The default value is an empty string, which uses the storage of the node.</summary>
     [JsonPropertyName("medium")]
     public string? Medium { get; set; }
 
-    /// <summary>The maximum size of the volume. By default, there's no maximum size defined.</summary>
+    /// <summary>Maximum size of the volume. By default, there's no maximum size defined.</summary>
     [JsonPropertyName("sizeLimit")]
     public string? SizeLimit { get; set; }
 }
@@ -1289,7 +1289,7 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesVolumesHostPath
 {
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("path")]
     public string? Path { get; set; }
 }
@@ -1298,11 +1298,11 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesVolumesSecret
 {
-    /// <summary>Specifies whether the secret or the secret's keys must be defined.</summary>
+    /// <summary>Whether the secret or the secret's keys must be defined.</summary>
     [JsonPropertyName("optional")]
     public bool? Optional { get; set; }
 
-    /// <summary>The name of the secret. The name must be allowed as a DNS subdomain name.</summary>
+    /// <summary>Name of the secret. The name must be allowed as a DNS subdomain name.</summary>
     [JsonPropertyName("secretName")]
     public string? SecretName { get; set; }
 }
@@ -1315,11 +1315,11 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
     [JsonPropertyName("emptyDir")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesVolumesEmptyDir>? EmptyDir { get; set; }
 
-    /// <summary>The path of the file or directory on the host to mount into containers on the pod.</summary>
+    /// <summary>Path of the file or directory on the host to mount into containers on the pod.</summary>
     [JsonPropertyName("hostPath")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesVolumesHostPath>? HostPath { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -1332,15 +1332,15 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodProperties
 {
-    /// <summary>The properties of the container that's used on the Amazon EKS pod. See containers below.</summary>
+    /// <summary>Properties of the container that's used on the Amazon EKS pod. See containers below.</summary>
     [JsonPropertyName("containers")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesContainers>? Containers { get; set; }
 
-    /// <summary>The DNS policy for the pod. The default value is ClusterFirst. If the host_network argument is not specified, the default is ClusterFirstWithHostNet. ClusterFirst indicates that any DNS query that does not match the configured cluster domain suffix is forwarded to the upstream nameserver inherited from the node. For more information, see Pod's DNS policy in the Kubernetes documentation.</summary>
+    /// <summary>DNS policy for the pod. The default value is ClusterFirst. If the host_network argument is not specified, the default is ClusterFirstWithHostNet. ClusterFirst indicates that any DNS query that does not match the configured cluster domain suffix is forwarded to the upstream nameserver inherited from the node. For more information, see Pod's DNS policy in the Kubernetes documentation.</summary>
     [JsonPropertyName("dnsPolicy")]
     public string? DnsPolicy { get; set; }
 
-    /// <summary>Indicates if the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
+    /// <summary>Whether the pod uses the hosts' network IP address. The default value is true. Setting this to false enables the Kubernetes pod networking model. Most AWS Batch workloads are egress-only and don't require the overhead of IP allocation for each pod for incoming connections.</summary>
     [JsonPropertyName("hostNetwork")]
     public bool? HostNetwork { get; set; }
 
@@ -1356,7 +1356,7 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
     [JsonPropertyName("metadata")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesMetadata>? Metadata { get; set; }
 
-    /// <summary>The name of the service account that's used to run the pod.</summary>
+    /// <summary>Name of the service account that's used to run the pod.</summary>
     [JsonPropertyName("serviceAccountName")]
     public string? ServiceAccountName { get; set; }
 
@@ -1364,7 +1364,7 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
     [JsonPropertyName("shareProcessNamespace")]
     public bool? ShareProcessNamespace { get; set; }
 
-    /// <summary>Specifies the volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
+    /// <summary>Volumes for a job definition that uses Amazon EKS resources. AWS Batch supports emptyDir, hostPath, and secret volume types.</summary>
     [JsonPropertyName("volumes")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropertiesVolumes>? Volumes { get; set; }
 }
@@ -1373,7 +1373,7 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksPropertiesPodPropert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderEksProperties
 {
-    /// <summary>The properties for the Kubernetes pod resources of a job. See pod_properties below.</summary>
+    /// <summary>Properties for the Kubernetes pod resources of a job. See pod_properties below.</summary>
     [JsonPropertyName("podProperties")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksPropertiesPodProperties>? PodProperties { get; set; }
 }
@@ -1382,19 +1382,19 @@ public partial class V1beta1JobDefinitionStatusAtProviderEksProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderRetryStrategyEvaluateOnExit
 {
-    /// <summary>Specifies the action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: retry, exit.</summary>
+    /// <summary>Action to take if all of the specified conditions are met. The values are not case sensitive. Valid values: retry, exit.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>A glob pattern to match against the decimal representation of the exit code returned for a job.</summary>
+    /// <summary>Glob pattern to match against the decimal representation of the exit code returned for a job.</summary>
     [JsonPropertyName("onExitCode")]
     public string? OnExitCode { get; set; }
 
-    /// <summary>A glob pattern to match against the reason returned for a job.</summary>
+    /// <summary>Glob pattern to match against the reason returned for a job.</summary>
     [JsonPropertyName("onReason")]
     public string? OnReason { get; set; }
 
-    /// <summary>A glob pattern to match against the status reason returned for a job.</summary>
+    /// <summary>Glob pattern to match against the status reason returned for a job.</summary>
     [JsonPropertyName("onStatusReason")]
     public string? OnStatusReason { get; set; }
 }
@@ -1403,11 +1403,11 @@ public partial class V1beta1JobDefinitionStatusAtProviderRetryStrategyEvaluateOn
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderRetryStrategy
 {
-    /// <summary>The number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts.</summary>
+    /// <summary>Number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts.</summary>
     [JsonPropertyName("attempts")]
     public double? Attempts { get; set; }
 
-    /// <summary>The evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the attempts parameter must also be specified. You may specify up to 5 configuration blocks.</summary>
+    /// <summary>Evaluate on exit conditions under which the job should be retried or failed. If this parameter is specified, then the attempts parameter must also be specified. You may specify up to 5 configuration blocks.</summary>
     [JsonPropertyName("evaluateOnExit")]
     public IList<V1beta1JobDefinitionStatusAtProviderRetryStrategyEvaluateOnExit>? EvaluateOnExit { get; set; }
 }
@@ -1416,7 +1416,7 @@ public partial class V1beta1JobDefinitionStatusAtProviderRetryStrategy
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProviderTimeout
 {
-    /// <summary>The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</summary>
+    /// <summary>Time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is 60 seconds.</summary>
     [JsonPropertyName("attemptDurationSeconds")]
     public double? AttemptDurationSeconds { get; set; }
 }
@@ -1425,15 +1425,15 @@ public partial class V1beta1JobDefinitionStatusAtProviderTimeout
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionStatusAtProvider
 {
-    /// <summary>The Amazon Resource Name of the job definition, includes revision (:#).</summary>
+    /// <summary>ARN of the job definition, includes revision (:#).</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The ARN without the revision number.</summary>
+    /// <summary>ARN without the revision number.</summary>
     [JsonPropertyName("arnPrefix")]
     public string? ArnPrefix { get; set; }
 
-    /// <summary>A valid container properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
+    /// <summary>Valid container properties provided as a single valid JSON document. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("containerProperties")]
     public string? ContainerProperties { get; set; }
 
@@ -1445,7 +1445,7 @@ public partial class V1beta1JobDefinitionStatusAtProvider
     [JsonPropertyName("ecsProperties")]
     public string? EcsProperties { get; set; }
 
-    /// <summary>A valid eks properties. This parameter is only valid if the type parameter is container.</summary>
+    /// <summary>Valid eks properties. This parameter is only valid if the type parameter is container.</summary>
     [JsonPropertyName("eksProperties")]
     public IList<V1beta1JobDefinitionStatusAtProviderEksProperties>? EksProperties { get; set; }
 
@@ -1453,35 +1453,39 @@ public partial class V1beta1JobDefinitionStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Specifies the name of the job definition.</summary>
+    /// <summary>Name of the job definition.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>A valid node properties provided as a single valid JSON document. This parameter is required if the type parameter is multinode.</summary>
+    /// <summary>Valid node properties provided as a single valid JSON document. This parameter is required if the type parameter is multinode.</summary>
     [JsonPropertyName("nodeProperties")]
     public string? NodeProperties { get; set; }
 
-    /// <summary>Specifies the parameter substitution placeholders to set in the job definition.</summary>
+    /// <summary>Parameter substitution placeholders to set in the job definition.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
 
-    /// <summary>The platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.</summary>
+    /// <summary>Platform capabilities required by the job definition. If no value is specified, it defaults to EC2. To run the job on Fargate resources, specify FARGATE.</summary>
     [JsonPropertyName("platformCapabilities")]
     public IList<string>? PlatformCapabilities { get; set; }
 
-    /// <summary>Specifies whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.</summary>
+    /// <summary>Whether to propagate the tags from the job definition to the corresponding Amazon ECS task. Default is false.</summary>
     [JsonPropertyName("propagateTags")]
     public bool? PropagateTags { get; set; }
 
-    /// <summary>Specifies the retry strategy to use for failed jobs that are submitted with this job definition. Maximum number of retry_strategy is 1.  Defined below.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Retry strategy to use for failed jobs that are submitted with this job definition. Maximum number of retry_strategy is 1.  Defined below.</summary>
     [JsonPropertyName("retryStrategy")]
     public IList<V1beta1JobDefinitionStatusAtProviderRetryStrategy>? RetryStrategy { get; set; }
 
-    /// <summary>The revision of the job definition.</summary>
+    /// <summary>Revision of the job definition.</summary>
     [JsonPropertyName("revision")]
     public double? Revision { get; set; }
 
-    /// <summary>The scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. Allowed values 0 through 9999.</summary>
+    /// <summary>Scheduling priority of the job definition. This only affects jobs in job queues with a fair share policy. Jobs with a higher scheduling priority are scheduled before jobs with a lower scheduling priority. Allowed values 0 through 9999.</summary>
     [JsonPropertyName("schedulingPriority")]
     public double? SchedulingPriority { get; set; }
 
@@ -1489,15 +1493,15 @@ public partial class V1beta1JobDefinitionStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>Specifies the timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.</summary>
+    /// <summary>Timeout for jobs so that if a job runs longer, AWS Batch terminates the job. Maximum number of timeout is 1. Defined below.</summary>
     [JsonPropertyName("timeout")]
     public IList<V1beta1JobDefinitionStatusAtProviderTimeout>? Timeout { get; set; }
 
-    /// <summary>The type of job definition. Must be container or multinode.</summary>
+    /// <summary>Type of job definition. Must be container or multinode.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 }

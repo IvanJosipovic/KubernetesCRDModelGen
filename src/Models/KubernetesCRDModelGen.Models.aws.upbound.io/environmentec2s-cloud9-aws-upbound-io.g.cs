@@ -96,7 +96,7 @@ public partial class V1beta1EnvironmentEC2SpecForProvider
     [JsonPropertyName("ownerArn")]
     public string? OwnerArn { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -393,6 +393,10 @@ public partial class V1beta1EnvironmentEC2StatusAtProvider
     /// <summary>The ARN of the environment owner. This can be ARN of any AWS IAM principal. Defaults to the environment's creator.</summary>
     [JsonPropertyName("ownerArn")]
     public string? OwnerArn { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ID of the subnet in Amazon VPC that AWS Cloud9 will use to communicate with the Amazon EC2 instance.</summary>
     [JsonPropertyName("subnetId")]

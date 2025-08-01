@@ -180,7 +180,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetwo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProvider
 {
-    /// <summary>The Amazon Resource Name (ARN) of the customer gateway.</summary>
+    /// <summary>ARN of the customer gateway.</summary>
     [JsonPropertyName("customerGatewayArn")]
     public string? CustomerGatewayArn { get; set; }
 
@@ -192,7 +192,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProvider
     [JsonPropertyName("customerGatewayArnSelector")]
     public V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnSelector? CustomerGatewayArnSelector { get; set; }
 
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -204,7 +204,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1CustomerGatewayAssociationSpecForProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -216,13 +216,9 @@ public partial class V1beta1CustomerGatewayAssociationSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1CustomerGatewayAssociationSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -285,7 +281,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSe
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecInitProvider
 {
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
@@ -297,7 +293,7 @@ public partial class V1beta1CustomerGatewayAssociationSpecInitProvider
     [JsonPropertyName("deviceIdSelector")]
     public V1beta1CustomerGatewayAssociationSpecInitProviderDeviceIdSelector? DeviceIdSelector { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
@@ -438,15 +434,15 @@ public partial class V1beta1CustomerGatewayAssociationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationStatusAtProvider
 {
-    /// <summary>The Amazon Resource Name (ARN) of the customer gateway.</summary>
+    /// <summary>ARN of the customer gateway.</summary>
     [JsonPropertyName("customerGatewayArn")]
     public string? CustomerGatewayArn { get; set; }
 
-    /// <summary>The ID of the device.</summary>
+    /// <summary>ID of the device.</summary>
     [JsonPropertyName("deviceId")]
     public string? DeviceId { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -454,7 +450,7 @@ public partial class V1beta1CustomerGatewayAssociationStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The ID of the link.</summary>
+    /// <summary>ID of the link.</summary>
     [JsonPropertyName("linkId")]
     public string? LinkId { get; set; }
 }
@@ -505,7 +501,7 @@ public partial class V1beta1CustomerGatewayAssociationStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Associates a customer gateway with a device and optionally, with a link.</summary>
+/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Manages a Network Manager Customer Gateway Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CustomerGatewayAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CustomerGatewayAssociationSpec>, IStatus<V1beta1CustomerGatewayAssociationStatus>
@@ -535,7 +531,7 @@ public partial class V1beta1CustomerGatewayAssociation : IKubernetesObject<V1Obj
     public V1beta1CustomerGatewayAssociationStatus? Status { get; set; }
 }
 
-/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Associates a customer gateway with a device and optionally, with a link.</summary>
+/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Manages a Network Manager Customer Gateway Association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1CustomerGatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomerGatewayAssociation>

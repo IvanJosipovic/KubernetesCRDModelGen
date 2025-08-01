@@ -148,7 +148,7 @@ public partial class V1beta1ConnectionAssociationSpecForProvider
     [JsonPropertyName("lagIdSelector")]
     public V1beta1ConnectionAssociationSpecForProviderLagIdSelector? LagIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -441,6 +441,10 @@ public partial class V1beta1ConnectionAssociationStatusAtProvider
     /// <summary>The ID of the LAG with which to associate the connection.</summary>
     [JsonPropertyName("lagId")]
     public string? LagId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

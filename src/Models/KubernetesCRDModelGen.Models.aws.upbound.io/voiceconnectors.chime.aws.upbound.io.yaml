@@ -88,7 +88,10 @@ spec:
                     description: 'The AWS Region in which the Amazon Chime Voice Connector is created. Default value: us-east-1'
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   requireEncryption:
                     description: When enabled, requires encryption for the Amazon Chime Voice Connector.
@@ -363,6 +366,12 @@ spec:
                     type: string
                   outboundHostName:
                     description: The outbound host name for the Amazon Chime Voice Connector.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   requireEncryption:
                     description: When enabled, requires encryption for the Amazon Chime Voice Connector.

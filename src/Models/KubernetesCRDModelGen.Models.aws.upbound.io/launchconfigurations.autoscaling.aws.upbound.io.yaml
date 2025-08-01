@@ -180,7 +180,10 @@ spec:
                     description: The tenancy of the instance. Valid values are default or dedicated, see AWS's Create Launch Configuration for more details.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootBlockDevice:
                     description: Customize details about the root block device of the instance. See Block Devices below for details.
@@ -699,6 +702,12 @@ spec:
                     type: array
                   placementTenancy:
                     description: The tenancy of the instance. Valid values are default or dedicated, see AWS's Create Launch Configuration for more details.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootBlockDevice:
                     description: Customize details about the root block device of the instance. See Block Devices below for details.
@@ -967,7 +976,10 @@ spec:
                     description: The tenancy of the instance. Valid values are default or dedicated, see AWS's Create Launch Configuration for more details.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootBlockDevice:
                     description: Customize details about the root block device of the instance. See Block Devices below for details.
@@ -1478,6 +1490,12 @@ spec:
                     type: object
                   placementTenancy:
                     description: The tenancy of the instance. Valid values are default or dedicated, see AWS's Create Launch Configuration for more details.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   rootBlockDevice:
                     description: Customize details about the root block device of the instance. See Block Devices below for details.

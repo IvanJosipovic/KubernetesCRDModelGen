@@ -152,7 +152,7 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagSpecForProvid
     [JsonPropertyName("principalTags")]
     public IDictionary<string, string>? PrincipalTags { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -461,6 +461,10 @@ public partial class V1beta1CognitoIdentityPoolProviderPrincipalTagStatusAtProvi
     /// <summary>String to string map of variables.</summary>
     [JsonPropertyName("principalTags")]
     public IDictionary<string, string>? PrincipalTags { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>:  use default (username and clientID) attribute mappings.</summary>
     [JsonPropertyName("useDefaults")]

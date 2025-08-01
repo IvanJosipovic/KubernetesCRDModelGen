@@ -16,7 +16,7 @@ public partial class V1beta1AccountSpecForProvider
     [JsonPropertyName("findingPublishingFrequency")]
     public string? FindingPublishingFrequency { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -185,6 +185,10 @@ public partial class V1beta1AccountStatusAtProvider
     /// <summary>The unique identifier (ID) of the macie account.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) of the service-linked role that allows Macie to monitor and analyze data in AWS resources for the account.</summary>
     [JsonPropertyName("serviceRole")]

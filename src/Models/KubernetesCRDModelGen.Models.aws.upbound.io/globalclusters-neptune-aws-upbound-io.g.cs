@@ -80,11 +80,11 @@ public partial class V1beta1GlobalClusterSpecForProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
+    /// <summary>ARN to use as the primary DB Cluster of the Global Cluster on creation.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]
     public string? SourceDbClusterIdentifier { get; set; }
 
@@ -96,7 +96,7 @@ public partial class V1beta1GlobalClusterSpecForProvider
     [JsonPropertyName("sourceDbClusterIdentifierSelector")]
     public V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierSelector? SourceDbClusterIdentifierSelector { get; set; }
 
-    /// <summary>Specifies whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
+    /// <summary>Whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
 }
@@ -173,7 +173,7 @@ public partial class V1beta1GlobalClusterSpecInitProvider
     [JsonPropertyName("engineVersion")]
     public string? EngineVersion { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
+    /// <summary>ARN to use as the primary DB Cluster of the Global Cluster on creation.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]
     public string? SourceDbClusterIdentifier { get; set; }
 
@@ -185,7 +185,7 @@ public partial class V1beta1GlobalClusterSpecInitProvider
     [JsonPropertyName("sourceDbClusterIdentifierSelector")]
     public V1beta1GlobalClusterSpecInitProviderSourceDbClusterIdentifierSelector? SourceDbClusterIdentifierSelector { get; set; }
 
-    /// <summary>Specifies whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
+    /// <summary>Whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
 }
@@ -326,7 +326,7 @@ public partial class V1beta1GlobalClusterSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
 {
-    /// <summary>Amazon Resource Name (ARN) of member DB Cluster.</summary>
+    /// <summary>ARN of member DB Cluster.</summary>
     [JsonPropertyName("dbClusterArn")]
     public string? DbClusterArn { get; set; }
 
@@ -339,7 +339,7 @@ public partial class V1beta1GlobalClusterStatusAtProviderGlobalClusterMembers
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterStatusAtProvider
 {
-    /// <summary>Global Cluster Amazon Resource Name (ARN)</summary>
+    /// <summary>Global Cluster ARN</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
@@ -367,7 +367,11 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Amazon Resource Name (ARN) to use as the primary DB Cluster of the Global Cluster on creation.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>ARN to use as the primary DB Cluster of the Global Cluster on creation.</summary>
     [JsonPropertyName("sourceDbClusterIdentifier")]
     public string? SourceDbClusterIdentifier { get; set; }
 
@@ -375,7 +379,7 @@ public partial class V1beta1GlobalClusterStatusAtProvider
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 
-    /// <summary>Specifies whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
+    /// <summary>Whether the DB cluster is encrypted. The default is false unless source_db_cluster_identifier is specified and encrypted.</summary>
     [JsonPropertyName("storageEncrypted")]
     public bool? StorageEncrypted { get; set; }
 }

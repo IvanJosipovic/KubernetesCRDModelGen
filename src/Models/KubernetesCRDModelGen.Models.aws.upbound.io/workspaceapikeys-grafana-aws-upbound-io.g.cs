@@ -76,7 +76,7 @@ public partial class V1beta1WorkspaceAPIKeySpecForProvider
     [JsonPropertyName("keyRole")]
     public string? KeyRole { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -329,6 +329,10 @@ public partial class V1beta1WorkspaceAPIKeyStatusAtProvider
     /// <summary>Specifies the permission level of the API key. Valid values are VIEWER, EDITOR, or ADMIN.</summary>
     [JsonPropertyName("keyRole")]
     public string? KeyRole { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Specifies the time in seconds until the API key expires. Keys can be valid for up to 30 days.</summary>
     [JsonPropertyName("secondsToLive")]

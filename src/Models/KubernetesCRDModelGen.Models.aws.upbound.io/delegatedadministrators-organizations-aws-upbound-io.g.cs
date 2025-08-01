@@ -80,10 +80,6 @@ public partial class V1beta1DelegatedAdministratorSpecForProvider
     [JsonPropertyName("accountIdSelector")]
     public V1beta1DelegatedAdministratorSpecForProviderAccountIdSelector? AccountIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>The service principal of the AWS service for which you want to make the member account a delegated administrator.</summary>
     [JsonPropertyName("servicePrincipal")]
     public string? ServicePrincipal { get; set; }

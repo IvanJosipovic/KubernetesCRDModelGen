@@ -88,7 +88,7 @@ spec:
                     description: The ID of an existing dedicated connection to migrate to the LAG.
                     type: string
                   connectionsBandwidth:
-                    description: 'The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.'
+                    description: 'The bandwidth of the individual dedicated connections bundled by the LAG. Valid values: 1Gbps, 10Gbps, 100Gbps, and 400Gbps. Case sensitive. Refer to the AWS Direct Connection supported bandwidths for Dedicated Connections.'
                     type: string
                   forceDestroy:
                     description: A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are not recoverable.
@@ -103,7 +103,10 @@ spec:
                     description: The name of the service provider associated with the LAG.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -140,7 +143,7 @@ spec:
                     description: The ID of an existing dedicated connection to migrate to the LAG.
                     type: string
                   connectionsBandwidth:
-                    description: 'The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.'
+                    description: 'The bandwidth of the individual dedicated connections bundled by the LAG. Valid values: 1Gbps, 10Gbps, 100Gbps, and 400Gbps. Case sensitive. Refer to the AWS Direct Connection supported bandwidths for Dedicated Connections.'
                     type: string
                   forceDestroy:
                     description: A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are not recoverable.
@@ -388,7 +391,7 @@ spec:
                     description: The ID of an existing dedicated connection to migrate to the LAG.
                     type: string
                   connectionsBandwidth:
-                    description: 'The bandwidth of the individual physical connections bundled by the LAG. Valid values: 50Mbps, 100Mbps, 200Mbps, 300Mbps, 400Mbps, 500Mbps, 1Gbps, 2Gbps, 5Gbps, 10Gbps and 100Gbps. Case sensitive.'
+                    description: 'The bandwidth of the individual dedicated connections bundled by the LAG. Valid values: 1Gbps, 10Gbps, 100Gbps, and 400Gbps. Case sensitive. Refer to the AWS Direct Connection supported bandwidths for Dedicated Connections.'
                     type: string
                   forceDestroy:
                     description: A boolean that indicates all connections associated with the LAG should be deleted so that the LAG can be destroyed without error. These objects are not recoverable.
@@ -413,6 +416,12 @@ spec:
                     type: string
                   providerName:
                     description: The name of the service provider associated with the LAG.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:

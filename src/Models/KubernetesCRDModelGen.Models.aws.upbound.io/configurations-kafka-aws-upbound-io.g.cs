@@ -24,7 +24,7 @@ public partial class V1beta1ConfigurationSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -213,6 +213,10 @@ public partial class V1beta1ConfigurationStatusAtProvider
     /// <summary>Name of the configuration.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Contents of the server.properties file. Supported properties are documented in the MSK Developer Guide.</summary>
     [JsonPropertyName("serverProperties")]

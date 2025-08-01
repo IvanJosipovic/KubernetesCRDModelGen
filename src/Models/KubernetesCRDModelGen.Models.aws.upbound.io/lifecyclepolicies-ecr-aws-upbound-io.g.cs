@@ -72,7 +72,7 @@ public partial class V1beta1LifecyclePolicySpecForProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1LifecyclePolicyStatusAtProvider
     /// <summary>The policy document. This is a JSON formatted string. See more details about Policy Parameters in the official AWS docs. Consider using the aws_ecr_lifecycle_policy_document data_source to generate/manage the JSON document used for the policy argument.</summary>
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The registry ID where the repository was created.</summary>
     [JsonPropertyName("registryId")]

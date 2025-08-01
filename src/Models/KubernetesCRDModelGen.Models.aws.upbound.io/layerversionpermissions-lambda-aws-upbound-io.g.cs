@@ -8,74 +8,330 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.upbound.io;
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a LayerVersion in lambda to populate layerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecForProviderLayerNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a LayerVersion in lambda to populate layerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderLayerNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecForProviderLayerNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a LayerVersion in lambda to populate versionNumber.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecForProviderVersionNumberRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a LayerVersion in lambda to populate versionNumber.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelectorPolicy? Policy { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecForProvider
 {
-    /// <summary>Action, which will be allowed. lambda:GetLayerVersion value is suggested by AWS documantation.</summary>
+    /// <summary>Action that will be allowed. lambda:GetLayerVersion is the standard value for layer access.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>The name or ARN of the Lambda Layer, which you want to grant access to.</summary>
+    /// <summary>Name or ARN of the Lambda Layer.</summary>
     [JsonPropertyName("layerName")]
     public string? LayerName { get; set; }
 
-    /// <summary>An identifier of AWS Organization, which should be able to use your Lambda Layer. principal should be equal to * if organization_id provided.</summary>
+    /// <summary>Reference to a LayerVersion in lambda to populate layerName.</summary>
+    [JsonPropertyName("layerNameRef")]
+    public V1beta1LayerVersionPermissionSpecForProviderLayerNameRef? LayerNameRef { get; set; }
+
+    /// <summary>Selector for a LayerVersion in lambda to populate layerName.</summary>
+    [JsonPropertyName("layerNameSelector")]
+    public V1beta1LayerVersionPermissionSpecForProviderLayerNameSelector? LayerNameSelector { get; set; }
+
+    /// <summary>AWS Organization ID that should be able to use your Lambda Layer. principal should be set to * when organization_id is provided.</summary>
     [JsonPropertyName("organizationId")]
     public string? OrganizationId { get; set; }
 
-    /// <summary>AWS account ID which should be able to use your Lambda Layer. * can be used here, if you want to share your Lambda Layer widely.</summary>
+    /// <summary>AWS account ID that should be able to use your Lambda Layer. Use * to share with all AWS accounts.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>Whether to retain the old version of a previously deployed Lambda Layer. Default is false. When this is not set to true, changing any of compatible_architectures, compatible_runtimes, description, filename, layer_name, license_info, s3_bucket, s3_key, s3_object_version, or source_code_hash forces deletion of the existing layer version and creation of a new layer version.</summary>
+    /// <summary>Whether to retain the permission when the resource is destroyed. Default is false.</summary>
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 
-    /// <summary>The name of Lambda Layer Permission, for example dev-account - human readable note about what is this permission for.</summary>
+    /// <summary>Unique identifier for the permission statement.</summary>
     [JsonPropertyName("statementId")]
     public string? StatementId { get; set; }
 
-    /// <summary>Version of Lambda Layer, which you want to grant access to. Note: permissions only apply to a single version of a layer.</summary>
+    /// <summary>Version of Lambda Layer to grant access to. Note: permissions only apply to a single version of a layer.</summary>
     [JsonPropertyName("versionNumber")]
     public double? VersionNumber { get; set; }
+
+    /// <summary>Reference to a LayerVersion in lambda to populate versionNumber.</summary>
+    [JsonPropertyName("versionNumberRef")]
+    public V1beta1LayerVersionPermissionSpecForProviderVersionNumberRef? VersionNumberRef { get; set; }
+
+    /// <summary>Selector for a LayerVersion in lambda to populate versionNumber.</summary>
+    [JsonPropertyName("versionNumberSelector")]
+    public V1beta1LayerVersionPermissionSpecForProviderVersionNumberSelector? VersionNumberSelector { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a LayerVersion in lambda to populate layerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecInitProviderLayerNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a LayerVersion in lambda to populate layerName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a LayerVersion in lambda to populate versionNumber.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a LayerVersion in lambda to populate versionNumber.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelectorPolicy? Policy { get; set; }
 }
 
 /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionSpecInitProvider
 {
-    /// <summary>Action, which will be allowed. lambda:GetLayerVersion value is suggested by AWS documantation.</summary>
+    /// <summary>Action that will be allowed. lambda:GetLayerVersion is the standard value for layer access.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>The name or ARN of the Lambda Layer, which you want to grant access to.</summary>
+    /// <summary>Name or ARN of the Lambda Layer.</summary>
     [JsonPropertyName("layerName")]
     public string? LayerName { get; set; }
 
-    /// <summary>An identifier of AWS Organization, which should be able to use your Lambda Layer. principal should be equal to * if organization_id provided.</summary>
+    /// <summary>Reference to a LayerVersion in lambda to populate layerName.</summary>
+    [JsonPropertyName("layerNameRef")]
+    public V1beta1LayerVersionPermissionSpecInitProviderLayerNameRef? LayerNameRef { get; set; }
+
+    /// <summary>Selector for a LayerVersion in lambda to populate layerName.</summary>
+    [JsonPropertyName("layerNameSelector")]
+    public V1beta1LayerVersionPermissionSpecInitProviderLayerNameSelector? LayerNameSelector { get; set; }
+
+    /// <summary>AWS Organization ID that should be able to use your Lambda Layer. principal should be set to * when organization_id is provided.</summary>
     [JsonPropertyName("organizationId")]
     public string? OrganizationId { get; set; }
 
-    /// <summary>AWS account ID which should be able to use your Lambda Layer. * can be used here, if you want to share your Lambda Layer widely.</summary>
+    /// <summary>AWS account ID that should be able to use your Lambda Layer. Use * to share with all AWS accounts.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>Whether to retain the old version of a previously deployed Lambda Layer. Default is false. When this is not set to true, changing any of compatible_architectures, compatible_runtimes, description, filename, layer_name, license_info, s3_bucket, s3_key, s3_object_version, or source_code_hash forces deletion of the existing layer version and creation of a new layer version.</summary>
+    /// <summary>Whether to retain the permission when the resource is destroyed. Default is false.</summary>
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 
-    /// <summary>The name of Lambda Layer Permission, for example dev-account - human readable note about what is this permission for.</summary>
+    /// <summary>Unique identifier for the permission statement.</summary>
     [JsonPropertyName("statementId")]
     public string? StatementId { get; set; }
 
-    /// <summary>Version of Lambda Layer, which you want to grant access to. Note: permissions only apply to a single version of a layer.</summary>
+    /// <summary>Version of Lambda Layer to grant access to. Note: permissions only apply to a single version of a layer.</summary>
     [JsonPropertyName("versionNumber")]
     public double? VersionNumber { get; set; }
+
+    /// <summary>Reference to a LayerVersion in lambda to populate versionNumber.</summary>
+    [JsonPropertyName("versionNumberRef")]
+    public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberRef? VersionNumberRef { get; set; }
+
+    /// <summary>Selector for a LayerVersion in lambda to populate versionNumber.</summary>
+    [JsonPropertyName("versionNumberSelector")]
+    public V1beta1LayerVersionPermissionSpecInitProviderVersionNumberSelector? VersionNumberSelector { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -214,19 +470,19 @@ public partial class V1beta1LayerVersionPermissionSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LayerVersionPermissionStatusAtProvider
 {
-    /// <summary>Action, which will be allowed. lambda:GetLayerVersion value is suggested by AWS documantation.</summary>
+    /// <summary>Action that will be allowed. lambda:GetLayerVersion is the standard value for layer access.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
-    /// <summary>The layer_name and version_number, separated by a comma (,).</summary>
+    /// <summary>Layer name and version number, separated by a comma (,).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The name or ARN of the Lambda Layer, which you want to grant access to.</summary>
+    /// <summary>Name or ARN of the Lambda Layer.</summary>
     [JsonPropertyName("layerName")]
     public string? LayerName { get; set; }
 
-    /// <summary>An identifier of AWS Organization, which should be able to use your Lambda Layer. principal should be equal to * if organization_id provided.</summary>
+    /// <summary>AWS Organization ID that should be able to use your Lambda Layer. principal should be set to * when organization_id is provided.</summary>
     [JsonPropertyName("organizationId")]
     public string? OrganizationId { get; set; }
 
@@ -234,23 +490,27 @@ public partial class V1beta1LayerVersionPermissionStatusAtProvider
     [JsonPropertyName("policy")]
     public string? Policy { get; set; }
 
-    /// <summary>AWS account ID which should be able to use your Lambda Layer. * can be used here, if you want to share your Lambda Layer widely.</summary>
+    /// <summary>AWS account ID that should be able to use your Lambda Layer. Use * to share with all AWS accounts.</summary>
     [JsonPropertyName("principal")]
     public string? Principal { get; set; }
 
-    /// <summary>A unique identifier for the current revision of the policy.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Unique identifier for the current revision of the policy.</summary>
     [JsonPropertyName("revisionId")]
     public string? RevisionId { get; set; }
 
-    /// <summary>Whether to retain the old version of a previously deployed Lambda Layer. Default is false. When this is not set to true, changing any of compatible_architectures, compatible_runtimes, description, filename, layer_name, license_info, s3_bucket, s3_key, s3_object_version, or source_code_hash forces deletion of the existing layer version and creation of a new layer version.</summary>
+    /// <summary>Whether to retain the permission when the resource is destroyed. Default is false.</summary>
     [JsonPropertyName("skipDestroy")]
     public bool? SkipDestroy { get; set; }
 
-    /// <summary>The name of Lambda Layer Permission, for example dev-account - human readable note about what is this permission for.</summary>
+    /// <summary>Unique identifier for the permission statement.</summary>
     [JsonPropertyName("statementId")]
     public string? StatementId { get; set; }
 
-    /// <summary>Version of Lambda Layer, which you want to grant access to. Note: permissions only apply to a single version of a layer.</summary>
+    /// <summary>Version of Lambda Layer to grant access to. Note: permissions only apply to a single version of a layer.</summary>
     [JsonPropertyName("versionNumber")]
     public double? VersionNumber { get; set; }
 }
@@ -301,7 +561,7 @@ public partial class V1beta1LayerVersionPermissionStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LayerVersionPermission is the Schema for the LayerVersionPermissions API. Provides a Lambda Layer Version Permission resource.</summary>
+/// <summary>LayerVersionPermission is the Schema for the LayerVersionPermissions API. Manages an AWS Lambda Layer Version Permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LayerVersionPermission : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LayerVersionPermissionSpec>, IStatus<V1beta1LayerVersionPermissionStatus>
@@ -331,7 +591,7 @@ public partial class V1beta1LayerVersionPermission : IKubernetesObject<V1ObjectM
     public V1beta1LayerVersionPermissionStatus? Status { get; set; }
 }
 
-/// <summary>LayerVersionPermission is the Schema for the LayerVersionPermissions API. Provides a Lambda Layer Version Permission resource.</summary>
+/// <summary>LayerVersionPermission is the Schema for the LayerVersionPermissions API. Manages an AWS Lambda Layer Version Permission.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LayerVersionPermissionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LayerVersionPermission>

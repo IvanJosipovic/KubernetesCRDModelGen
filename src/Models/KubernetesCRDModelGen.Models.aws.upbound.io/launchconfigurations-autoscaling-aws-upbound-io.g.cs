@@ -160,7 +160,7 @@ public partial class V1beta1LaunchConfigurationSpecForProvider
     [JsonPropertyName("placementTenancy")]
     public string? PlacementTenancy { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -649,6 +649,10 @@ public partial class V1beta1LaunchConfigurationStatusAtProvider
     /// <summary>The tenancy of the instance. Valid values are default or dedicated, see AWS's Create Launch Configuration for more details.</summary>
     [JsonPropertyName("placementTenancy")]
     public string? PlacementTenancy { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Customize details about the root block device of the instance. See Block Devices below for details.</summary>
     [JsonPropertyName("rootBlockDevice")]

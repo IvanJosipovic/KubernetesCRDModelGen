@@ -32,7 +32,7 @@ public partial class V1beta1SamplingRuleSpecForProvider
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -281,6 +281,10 @@ public partial class V1beta1SamplingRuleStatusAtProvider
     /// <summary>The priority of the sampling rule.</summary>
     [JsonPropertyName("priority")]
     public double? Priority { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A fixed number of matching requests to instrument per second, prior to applying the fixed rate. The reservoir is not used directly by services, but applies to all services using the rule collectively.</summary>
     [JsonPropertyName("reservoirSize")]

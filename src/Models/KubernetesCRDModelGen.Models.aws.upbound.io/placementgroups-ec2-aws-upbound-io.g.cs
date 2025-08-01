@@ -16,7 +16,7 @@ public partial class V1beta1PlacementGroupSpecForProvider
     [JsonPropertyName("partitionCount")]
     public double? PartitionCount { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -205,6 +205,10 @@ public partial class V1beta1PlacementGroupStatusAtProvider
     /// <summary>The ID of the placement group.</summary>
     [JsonPropertyName("placementGroupId")]
     public string? PlacementGroupId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Determines how placement groups spread instances. Can only be used when the strategy is set to spread. Can be host or rack. host can only be used for Outpost placement groups. Defaults to rack.</summary>
     [JsonPropertyName("spreadLevel")]

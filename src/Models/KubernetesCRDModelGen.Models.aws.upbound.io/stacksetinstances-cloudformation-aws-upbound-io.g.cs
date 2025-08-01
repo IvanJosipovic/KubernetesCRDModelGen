@@ -24,7 +24,7 @@ public partial class V1beta1StackSetInstanceSpecForProviderDeploymentTargets
     [JsonPropertyName("accountsUrl")]
     public string? AccountsUrl { get; set; }
 
-    /// <summary>The organization root ID or organizational unit (OU) IDs to which StackSets deploys.</summary>
+    /// <summary>Organization root ID or organizational unit (OU) IDs to which StackSets deploys.</summary>
     [JsonPropertyName("organizationalUnitIds")]
     public IList<string>? OrganizationalUnitIds { get; set; }
 }
@@ -37,27 +37,27 @@ public partial class V1beta1StackSetInstanceSpecForProviderOperationPreferences
     [JsonPropertyName("concurrencyMode")]
     public string? ConcurrencyMode { get; set; }
 
-    /// <summary>The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
+    /// <summary>Number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
     [JsonPropertyName("failureToleranceCount")]
     public double? FailureToleranceCount { get; set; }
 
-    /// <summary>The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
+    /// <summary>Percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
     [JsonPropertyName("failureTolerancePercentage")]
     public double? FailureTolerancePercentage { get; set; }
 
-    /// <summary>The maximum number of accounts in which to perform this operation at one time.</summary>
+    /// <summary>Maximum number of accounts in which to perform this operation at one time.</summary>
     [JsonPropertyName("maxConcurrentCount")]
     public double? MaxConcurrentCount { get; set; }
 
-    /// <summary>The maximum percentage of accounts in which to perform this operation at one time.</summary>
+    /// <summary>Maximum percentage of accounts in which to perform this operation at one time.</summary>
     [JsonPropertyName("maxConcurrentPercentage")]
     public double? MaxConcurrentPercentage { get; set; }
 
-    /// <summary>The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time. Valid values are SEQUENTIAL and PARALLEL.</summary>
+    /// <summary>Concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time. Valid values are SEQUENTIAL and PARALLEL.</summary>
     [JsonPropertyName("regionConcurrencyType")]
     public string? RegionConcurrencyType { get; set; }
 
-    /// <summary>The order of the Regions in where you want to perform the stack operation.</summary>
+    /// <summary>Order of the Regions in where you want to perform the stack operation.</summary>
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
@@ -130,7 +130,7 @@ public partial class V1beta1StackSetInstanceSpecForProvider
     [JsonPropertyName("callAs")]
     public string? CallAs { get; set; }
 
-    /// <summary>The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
+    /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
     [JsonPropertyName("deploymentTargets")]
     public IList<V1beta1StackSetInstanceSpecForProviderDeploymentTargets>? DeploymentTargets { get; set; }
 
@@ -142,13 +142,17 @@ public partial class V1beta1StackSetInstanceSpecForProvider
     [JsonPropertyName("parameterOverrides")]
     public IDictionary<string, string>? ParameterOverrides { get; set; }
 
-    /// <summary>Target AWS Region to create a Stack based on the StackSet. Defaults to current region. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Target AWS Region to create a Stack based on the StackSet. Defaults to current region. Use stack_set_instance_region instead. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
     /// <summary>You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to false.</summary>
     [JsonPropertyName("retainStack")]
     public bool? RetainStack { get; set; }
+
+    /// <summary>Target AWS Region to create a Stack based on the StackSet. Defaults to current region.</summary>
+    [JsonPropertyName("stackSetInstanceRegion")]
+    public string? StackSetInstanceRegion { get; set; }
 
     /// <summary>Name of the StackSet.</summary>
     [JsonPropertyName("stackSetName")]
@@ -179,7 +183,7 @@ public partial class V1beta1StackSetInstanceSpecInitProviderDeploymentTargets
     [JsonPropertyName("accountsUrl")]
     public string? AccountsUrl { get; set; }
 
-    /// <summary>The organization root ID or organizational unit (OU) IDs to which StackSets deploys.</summary>
+    /// <summary>Organization root ID or organizational unit (OU) IDs to which StackSets deploys.</summary>
     [JsonPropertyName("organizationalUnitIds")]
     public IList<string>? OrganizationalUnitIds { get; set; }
 }
@@ -192,27 +196,27 @@ public partial class V1beta1StackSetInstanceSpecInitProviderOperationPreferences
     [JsonPropertyName("concurrencyMode")]
     public string? ConcurrencyMode { get; set; }
 
-    /// <summary>The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
+    /// <summary>Number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
     [JsonPropertyName("failureToleranceCount")]
     public double? FailureToleranceCount { get; set; }
 
-    /// <summary>The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
+    /// <summary>Percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
     [JsonPropertyName("failureTolerancePercentage")]
     public double? FailureTolerancePercentage { get; set; }
 
-    /// <summary>The maximum number of accounts in which to perform this operation at one time.</summary>
+    /// <summary>Maximum number of accounts in which to perform this operation at one time.</summary>
     [JsonPropertyName("maxConcurrentCount")]
     public double? MaxConcurrentCount { get; set; }
 
-    /// <summary>The maximum percentage of accounts in which to perform this operation at one time.</summary>
+    /// <summary>Maximum percentage of accounts in which to perform this operation at one time.</summary>
     [JsonPropertyName("maxConcurrentPercentage")]
     public double? MaxConcurrentPercentage { get; set; }
 
-    /// <summary>The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time. Valid values are SEQUENTIAL and PARALLEL.</summary>
+    /// <summary>Concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time. Valid values are SEQUENTIAL and PARALLEL.</summary>
     [JsonPropertyName("regionConcurrencyType")]
     public string? RegionConcurrencyType { get; set; }
 
-    /// <summary>The order of the Regions in where you want to perform the stack operation.</summary>
+    /// <summary>Order of the Regions in where you want to perform the stack operation.</summary>
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
@@ -285,7 +289,7 @@ public partial class V1beta1StackSetInstanceSpecInitProvider
     [JsonPropertyName("callAs")]
     public string? CallAs { get; set; }
 
-    /// <summary>The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
+    /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
     [JsonPropertyName("deploymentTargets")]
     public IList<V1beta1StackSetInstanceSpecInitProviderDeploymentTargets>? DeploymentTargets { get; set; }
 
@@ -300,6 +304,10 @@ public partial class V1beta1StackSetInstanceSpecInitProvider
     /// <summary>You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to false.</summary>
     [JsonPropertyName("retainStack")]
     public bool? RetainStack { get; set; }
+
+    /// <summary>Target AWS Region to create a Stack based on the StackSet. Defaults to current region.</summary>
+    [JsonPropertyName("stackSetInstanceRegion")]
+    public string? StackSetInstanceRegion { get; set; }
 
     /// <summary>Name of the StackSet.</summary>
     [JsonPropertyName("stackSetName")]
@@ -462,7 +470,7 @@ public partial class V1beta1StackSetInstanceStatusAtProviderDeploymentTargets
     [JsonPropertyName("accountsUrl")]
     public string? AccountsUrl { get; set; }
 
-    /// <summary>The organization root ID or organizational unit (OU) IDs to which StackSets deploys.</summary>
+    /// <summary>Organization root ID or organizational unit (OU) IDs to which StackSets deploys.</summary>
     [JsonPropertyName("organizationalUnitIds")]
     public IList<string>? OrganizationalUnitIds { get; set; }
 }
@@ -475,27 +483,27 @@ public partial class V1beta1StackSetInstanceStatusAtProviderOperationPreferences
     [JsonPropertyName("concurrencyMode")]
     public string? ConcurrencyMode { get; set; }
 
-    /// <summary>The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
+    /// <summary>Number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
     [JsonPropertyName("failureToleranceCount")]
     public double? FailureToleranceCount { get; set; }
 
-    /// <summary>The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
+    /// <summary>Percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops the operation in that Region.</summary>
     [JsonPropertyName("failureTolerancePercentage")]
     public double? FailureTolerancePercentage { get; set; }
 
-    /// <summary>The maximum number of accounts in which to perform this operation at one time.</summary>
+    /// <summary>Maximum number of accounts in which to perform this operation at one time.</summary>
     [JsonPropertyName("maxConcurrentCount")]
     public double? MaxConcurrentCount { get; set; }
 
-    /// <summary>The maximum percentage of accounts in which to perform this operation at one time.</summary>
+    /// <summary>Maximum percentage of accounts in which to perform this operation at one time.</summary>
     [JsonPropertyName("maxConcurrentPercentage")]
     public double? MaxConcurrentPercentage { get; set; }
 
-    /// <summary>The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time. Valid values are SEQUENTIAL and PARALLEL.</summary>
+    /// <summary>Concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time. Valid values are SEQUENTIAL and PARALLEL.</summary>
     [JsonPropertyName("regionConcurrencyType")]
     public string? RegionConcurrencyType { get; set; }
 
-    /// <summary>The order of the Regions in where you want to perform the stack operation.</summary>
+    /// <summary>Order of the Regions in where you want to perform the stack operation.</summary>
     [JsonPropertyName("regionOrder")]
     public IList<string>? RegionOrder { get; set; }
 }
@@ -508,7 +516,7 @@ public partial class V1beta1StackSetInstanceStatusAtProviderStackInstanceSummari
     [JsonPropertyName("accountId")]
     public string? AccountId { get; set; }
 
-    /// <summary>The organization root ID or organizational unit (OU) ID in which the stack is deployed.</summary>
+    /// <summary>Organization root ID or organizational unit (OU) ID in which the stack is deployed.</summary>
     [JsonPropertyName("organizationalUnitId")]
     public string? OrganizationalUnitId { get; set; }
 
@@ -529,7 +537,7 @@ public partial class V1beta1StackSetInstanceStatusAtProvider
     [JsonPropertyName("callAs")]
     public string? CallAs { get; set; }
 
-    /// <summary>The AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
+    /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
     [JsonPropertyName("deploymentTargets")]
     public IList<V1beta1StackSetInstanceStatusAtProviderDeploymentTargets>? DeploymentTargets { get; set; }
 
@@ -541,13 +549,17 @@ public partial class V1beta1StackSetInstanceStatusAtProvider
     [JsonPropertyName("operationPreferences")]
     public IList<V1beta1StackSetInstanceStatusAtProviderOperationPreferences>? OperationPreferences { get; set; }
 
-    /// <summary>The organization root ID or organizational unit (OU) ID in which the stack is deployed.</summary>
+    /// <summary>Organization root ID or organizational unit (OU) ID in which the stack is deployed.</summary>
     [JsonPropertyName("organizationalUnitId")]
     public string? OrganizationalUnitId { get; set; }
 
     /// <summary>Key-value map of input parameters to override from the StackSet for this Instance.</summary>
     [JsonPropertyName("parameterOverrides")]
     public IDictionary<string, string>? ParameterOverrides { get; set; }
+
+    /// <summary>Target AWS Region to create a Stack based on the StackSet. Defaults to current region. Use stack_set_instance_region instead. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>You cannot reassociate a retained Stack or add an existing, saved Stack to a new StackSet. Defaults to false.</summary>
     [JsonPropertyName("retainStack")]
@@ -560,6 +572,10 @@ public partial class V1beta1StackSetInstanceStatusAtProvider
     /// <summary>List of stack instances created from an organizational unit deployment target. This will only be populated when deployment_targets is set. See stack_instance_summaries. List of stack instances created from an organizational unit deployment target. This will only be populated when `deployment_targets` is set.</summary>
     [JsonPropertyName("stackInstanceSummaries")]
     public IList<V1beta1StackSetInstanceStatusAtProviderStackInstanceSummaries>? StackInstanceSummaries { get; set; }
+
+    /// <summary>Target AWS Region to create a Stack based on the StackSet. Defaults to current region.</summary>
+    [JsonPropertyName("stackSetInstanceRegion")]
+    public string? StackSetInstanceRegion { get; set; }
 
     /// <summary>Name of the StackSet.</summary>
     [JsonPropertyName("stackSetName")]

@@ -85,7 +85,7 @@ spec:
               forProvider:
                 properties:
                   dataRedundancy:
-                    description: 'Data redundancy. Valid values: SingleAvailabilityZone.'
+                    description: 'Data redundancy. Valid values: SingleAvailabilityZone, SingleLocalZone. The default value depends on the value of the location.type attribute.'
                     type: string
                   forceDestroy:
                     description: Boolean that indicates all objects should be deleted from the bucket when the bucket is destroyed so that the bucket can be destroyed without error. These objects are not recoverable. This only deletes objects when the bucket is destroyed, not when setting this parameter to true. If setting this field in the same operation that would require replacing the bucket or destroying the bucket, this flag will not work.
@@ -103,8 +103,17 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'Bucket type. Valid values: Directory.'
                     type: string
@@ -134,7 +143,7 @@ spec:
                   autoscaler.
                 properties:
                   dataRedundancy:
-                    description: 'Data redundancy. Valid values: SingleAvailabilityZone.'
+                    description: 'Data redundancy. Valid values: SingleAvailabilityZone, SingleLocalZone. The default value depends on the value of the location.type attribute.'
                     type: string
                   forceDestroy:
                     description: Boolean that indicates all objects should be deleted from the bucket when the bucket is destroyed so that the bucket can be destroyed without error. These objects are not recoverable. This only deletes objects when the bucket is destroyed, not when setting this parameter to true. If setting this field in the same operation that would require replacing the bucket or destroying the bucket, this flag will not work.
@@ -151,6 +160,12 @@ spec:
                           type: string
                       type: object
                     type: array
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'Bucket type. Valid values: Directory.'
                     type: string
@@ -372,13 +387,13 @@ spec:
                     description: ARN of the bucket.
                     type: string
                   dataRedundancy:
-                    description: 'Data redundancy. Valid values: SingleAvailabilityZone.'
+                    description: 'Data redundancy. Valid values: SingleAvailabilityZone, SingleLocalZone. The default value depends on the value of the location.type attribute.'
                     type: string
                   forceDestroy:
                     description: Boolean that indicates all objects should be deleted from the bucket when the bucket is destroyed so that the bucket can be destroyed without error. These objects are not recoverable. This only deletes objects when the bucket is destroyed, not when setting this parameter to true. If setting this field in the same operation that would require replacing the bucket or destroying the bucket, this flag will not work.
                     type: boolean
                   id:
-                    description: Name of the bucket.
+                    description: (Deprecated, use bucket instead) Name of the bucket.
                     type: string
                   location:
                     description: Bucket location. See Location below for more details.
@@ -392,6 +407,24 @@ spec:
                           type: string
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
+                  tags:
+                    additionalProperties:
+                      type: string
+                    description: Key-value map of resource tags.
+                    type: object
+                    x-kubernetes-map-type: granular
+                  tagsAll:
+                    additionalProperties:
+                      type: string
+                    description: Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
+                    type: object
+                    x-kubernetes-map-type: granular
                   type:
                     description: 'Bucket type. Valid values: Directory.'
                     type: string

@@ -88,7 +88,7 @@ public partial class V1beta1PortfolioShareSpecForProvider
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -361,6 +361,10 @@ public partial class V1beta1PortfolioShareStatusAtProvider
     /// <summary>Identifier of the principal with whom you will share the portfolio. Valid values AWS account IDs and ARNs of AWS Organizations and organizational units.</summary>
     [JsonPropertyName("principalId")]
     public string? PrincipalId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Enables or disables Principal sharing when creating the portfolio share. If this flag is not provided, principal sharing is disabled.</summary>
     [JsonPropertyName("sharePrincipals")]

@@ -12,11 +12,11 @@ namespace KubernetesCRDModelGen.Models.networkmanager.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecForProviderAwsLocation
 {
-    /// <summary>The Amazon Resource Name (ARN) of the subnet that the device is located in.</summary>
+    /// <summary>ARN of the subnet that the device is located in.</summary>
     [JsonPropertyName("subnetArn")]
     public string? SubnetArn { get; set; }
 
-    /// <summary>The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.</summary>
+    /// <summary>Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.</summary>
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
@@ -81,15 +81,15 @@ public partial class V1beta1DeviceSpecForProviderGlobalNetworkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecForProviderLocation
 {
-    /// <summary>The physical address.</summary>
+    /// <summary>Physical address.</summary>
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 
-    /// <summary>The latitude.</summary>
+    /// <summary>Latitude.</summary>
     [JsonPropertyName("latitude")]
     public string? Latitude { get; set; }
 
-    /// <summary>The longitude.</summary>
+    /// <summary>Longitude.</summary>
     [JsonPropertyName("longitude")]
     public string? Longitude { get; set; }
 }
@@ -154,15 +154,15 @@ public partial class V1beta1DeviceSpecForProviderSiteIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecForProvider
 {
-    /// <summary>The AWS location of the device. Documented below.</summary>
+    /// <summary>AWS location of the device. Documented below.</summary>
     [JsonPropertyName("awsLocation")]
     public IList<V1beta1DeviceSpecForProviderAwsLocation>? AwsLocation { get; set; }
 
-    /// <summary>A description of the device.</summary>
+    /// <summary>Description of the device.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -174,23 +174,19 @@ public partial class V1beta1DeviceSpecForProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1DeviceSpecForProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The location of the device. Documented below.</summary>
+    /// <summary>Location of the device. Documented below.</summary>
     [JsonPropertyName("location")]
     public IList<V1beta1DeviceSpecForProviderLocation>? Location { get; set; }
 
-    /// <summary>The model of device.</summary>
+    /// <summary>Model of device.</summary>
     [JsonPropertyName("model")]
     public string? Model { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
-    /// <summary>The serial number of the device.</summary>
+    /// <summary>Serial number of the device.</summary>
     [JsonPropertyName("serialNumber")]
     public string? SerialNumber { get; set; }
 
-    /// <summary>The ID of the site.</summary>
+    /// <summary>ID of the site.</summary>
     [JsonPropertyName("siteId")]
     public string? SiteId { get; set; }
 
@@ -206,11 +202,11 @@ public partial class V1beta1DeviceSpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The type of device.</summary>
+    /// <summary>Type of device.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The vendor of the device.</summary>
+    /// <summary>Vendor of the device.</summary>
     [JsonPropertyName("vendor")]
     public string? Vendor { get; set; }
 }
@@ -219,11 +215,11 @@ public partial class V1beta1DeviceSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecInitProviderAwsLocation
 {
-    /// <summary>The Amazon Resource Name (ARN) of the subnet that the device is located in.</summary>
+    /// <summary>ARN of the subnet that the device is located in.</summary>
     [JsonPropertyName("subnetArn")]
     public string? SubnetArn { get; set; }
 
-    /// <summary>The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.</summary>
+    /// <summary>Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.</summary>
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
@@ -288,15 +284,15 @@ public partial class V1beta1DeviceSpecInitProviderGlobalNetworkIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecInitProviderLocation
 {
-    /// <summary>The physical address.</summary>
+    /// <summary>Physical address.</summary>
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 
-    /// <summary>The latitude.</summary>
+    /// <summary>Latitude.</summary>
     [JsonPropertyName("latitude")]
     public string? Latitude { get; set; }
 
-    /// <summary>The longitude.</summary>
+    /// <summary>Longitude.</summary>
     [JsonPropertyName("longitude")]
     public string? Longitude { get; set; }
 }
@@ -361,15 +357,15 @@ public partial class V1beta1DeviceSpecInitProviderSiteIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceSpecInitProvider
 {
-    /// <summary>The AWS location of the device. Documented below.</summary>
+    /// <summary>AWS location of the device. Documented below.</summary>
     [JsonPropertyName("awsLocation")]
     public IList<V1beta1DeviceSpecInitProviderAwsLocation>? AwsLocation { get; set; }
 
-    /// <summary>A description of the device.</summary>
+    /// <summary>Description of the device.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -381,19 +377,19 @@ public partial class V1beta1DeviceSpecInitProvider
     [JsonPropertyName("globalNetworkIdSelector")]
     public V1beta1DeviceSpecInitProviderGlobalNetworkIdSelector? GlobalNetworkIdSelector { get; set; }
 
-    /// <summary>The location of the device. Documented below.</summary>
+    /// <summary>Location of the device. Documented below.</summary>
     [JsonPropertyName("location")]
     public IList<V1beta1DeviceSpecInitProviderLocation>? Location { get; set; }
 
-    /// <summary>The model of device.</summary>
+    /// <summary>Model of device.</summary>
     [JsonPropertyName("model")]
     public string? Model { get; set; }
 
-    /// <summary>The serial number of the device.</summary>
+    /// <summary>Serial number of the device.</summary>
     [JsonPropertyName("serialNumber")]
     public string? SerialNumber { get; set; }
 
-    /// <summary>The ID of the site.</summary>
+    /// <summary>ID of the site.</summary>
     [JsonPropertyName("siteId")]
     public string? SiteId { get; set; }
 
@@ -409,11 +405,11 @@ public partial class V1beta1DeviceSpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>The type of device.</summary>
+    /// <summary>Type of device.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The vendor of the device.</summary>
+    /// <summary>Vendor of the device.</summary>
     [JsonPropertyName("vendor")]
     public string? Vendor { get; set; }
 }
@@ -554,11 +550,11 @@ public partial class V1beta1DeviceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceStatusAtProviderAwsLocation
 {
-    /// <summary>The Amazon Resource Name (ARN) of the subnet that the device is located in.</summary>
+    /// <summary>ARN of the subnet that the device is located in.</summary>
     [JsonPropertyName("subnetArn")]
     public string? SubnetArn { get; set; }
 
-    /// <summary>The Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.</summary>
+    /// <summary>Zone that the device is located in. Specify the ID of an Availability Zone, Local Zone, Wavelength Zone, or an Outpost.</summary>
     [JsonPropertyName("zone")]
     public string? Zone { get; set; }
 }
@@ -567,15 +563,15 @@ public partial class V1beta1DeviceStatusAtProviderAwsLocation
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceStatusAtProviderLocation
 {
-    /// <summary>The physical address.</summary>
+    /// <summary>Physical address.</summary>
     [JsonPropertyName("address")]
     public string? Address { get; set; }
 
-    /// <summary>The latitude.</summary>
+    /// <summary>Latitude.</summary>
     [JsonPropertyName("latitude")]
     public string? Latitude { get; set; }
 
-    /// <summary>The longitude.</summary>
+    /// <summary>Longitude.</summary>
     [JsonPropertyName("longitude")]
     public string? Longitude { get; set; }
 }
@@ -584,19 +580,19 @@ public partial class V1beta1DeviceStatusAtProviderLocation
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceStatusAtProvider
 {
-    /// <summary>The Amazon Resource Name (ARN) of the device.</summary>
+    /// <summary>ARN of the device.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The AWS location of the device. Documented below.</summary>
+    /// <summary>AWS location of the device. Documented below.</summary>
     [JsonPropertyName("awsLocation")]
     public IList<V1beta1DeviceStatusAtProviderAwsLocation>? AwsLocation { get; set; }
 
-    /// <summary>A description of the device.</summary>
+    /// <summary>Description of the device.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>The ID of the global network.</summary>
+    /// <summary>ID of the global network.</summary>
     [JsonPropertyName("globalNetworkId")]
     public string? GlobalNetworkId { get; set; }
 
@@ -604,19 +600,19 @@ public partial class V1beta1DeviceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The location of the device. Documented below.</summary>
+    /// <summary>Location of the device. Documented below.</summary>
     [JsonPropertyName("location")]
     public IList<V1beta1DeviceStatusAtProviderLocation>? Location { get; set; }
 
-    /// <summary>The model of device.</summary>
+    /// <summary>Model of device.</summary>
     [JsonPropertyName("model")]
     public string? Model { get; set; }
 
-    /// <summary>The serial number of the device.</summary>
+    /// <summary>Serial number of the device.</summary>
     [JsonPropertyName("serialNumber")]
     public string? SerialNumber { get; set; }
 
-    /// <summary>The ID of the site.</summary>
+    /// <summary>ID of the site.</summary>
     [JsonPropertyName("siteId")]
     public string? SiteId { get; set; }
 
@@ -624,15 +620,15 @@ public partial class V1beta1DeviceStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The type of device.</summary>
+    /// <summary>Type of device.</summary>
     [JsonPropertyName("type")]
     public string? Type { get; set; }
 
-    /// <summary>The vendor of the device.</summary>
+    /// <summary>Vendor of the device.</summary>
     [JsonPropertyName("vendor")]
     public string? Vendor { get; set; }
 }
@@ -683,7 +679,7 @@ public partial class V1beta1DeviceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Device is the Schema for the Devices API. Creates a device in a global network.</summary>
+/// <summary>Device is the Schema for the Devices API. Manages a Network Manager Device.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Device : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DeviceSpec>, IStatus<V1beta1DeviceStatus>
@@ -713,7 +709,7 @@ public partial class V1beta1Device : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     public V1beta1DeviceStatus? Status { get; set; }
 }
 
-/// <summary>Device is the Schema for the Devices API. Creates a device in a global network.</summary>
+/// <summary>Device is the Schema for the Devices API. Manages a Network Manager Device.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DeviceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Device>

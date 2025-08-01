@@ -80,7 +80,7 @@ public partial class V1beta1ClusterSnapshotSpecForProvider
     [JsonPropertyName("dbClusterIdentifierSelector")]
     public V1beta1ClusterSnapshotSpecForProviderDbClusterIdentifierSelector? DbClusterIdentifierSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -325,6 +325,10 @@ public partial class V1beta1ClusterSnapshotStatusAtProvider
     /// <summary>Port that the DocumentDB cluster was listening on at the time of the snapshot.</summary>
     [JsonPropertyName("port")]
     public double? Port { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("snapshotType")]

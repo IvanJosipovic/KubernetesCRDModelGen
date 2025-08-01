@@ -72,7 +72,7 @@ public partial class V1beta1ReportDefinitionSpecForProvider
     [JsonPropertyName("additionalArtifacts")]
     public IList<string>? AdditionalArtifacts { get; set; }
 
-    /// <summary>A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.</summary>
+    /// <summary>A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA, MANUAL_DISCOUNT_COMPATIBILITY.</summary>
     [JsonPropertyName("additionalSchemaElements")]
     public IList<string>? AdditionalSchemaElements { get; set; }
 
@@ -87,10 +87,6 @@ public partial class V1beta1ReportDefinitionSpecForProvider
     /// <summary>Set to true to update your reports after they have been finalized if AWS detects charges related to previous months.</summary>
     [JsonPropertyName("refreshClosedReports")]
     public bool? RefreshClosedReports { get; set; }
-
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
 
     /// <summary>Overwrite the previous version of each report or to deliver the report in addition to the previous versions. Valid values are: CREATE_NEW_REPORT and OVERWRITE_REPORT.</summary>
     [JsonPropertyName("reportVersioning")]
@@ -108,7 +104,7 @@ public partial class V1beta1ReportDefinitionSpecForProvider
     [JsonPropertyName("s3BucketSelector")]
     public V1beta1ReportDefinitionSpecForProviderS3BucketSelector? S3BucketSelector { get; set; }
 
-    /// <summary>Report path prefix. Limited to 256 characters.</summary>
+    /// <summary>Report path prefix. Limited to 256 characters. May be empty ("") but the resource can then not be modified via the AWS Console.</summary>
     [JsonPropertyName("s3Prefix")]
     public string? S3Prefix { get; set; }
 
@@ -189,7 +185,7 @@ public partial class V1beta1ReportDefinitionSpecInitProvider
     [JsonPropertyName("additionalArtifacts")]
     public IList<string>? AdditionalArtifacts { get; set; }
 
-    /// <summary>A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.</summary>
+    /// <summary>A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA, MANUAL_DISCOUNT_COMPATIBILITY.</summary>
     [JsonPropertyName("additionalSchemaElements")]
     public IList<string>? AdditionalSchemaElements { get; set; }
 
@@ -221,7 +217,7 @@ public partial class V1beta1ReportDefinitionSpecInitProvider
     [JsonPropertyName("s3BucketSelector")]
     public V1beta1ReportDefinitionSpecInitProviderS3BucketSelector? S3BucketSelector { get; set; }
 
-    /// <summary>Report path prefix. Limited to 256 characters.</summary>
+    /// <summary>Report path prefix. Limited to 256 characters. May be empty ("") but the resource can then not be modified via the AWS Console.</summary>
     [JsonPropertyName("s3Prefix")]
     public string? S3Prefix { get; set; }
 
@@ -378,7 +374,7 @@ public partial class V1beta1ReportDefinitionStatusAtProvider
     [JsonPropertyName("additionalArtifacts")]
     public IList<string>? AdditionalArtifacts { get; set; }
 
-    /// <summary>A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA.</summary>
+    /// <summary>A list of schema elements. Valid values are: RESOURCES, SPLIT_COST_ALLOCATION_DATA, MANUAL_DISCOUNT_COMPATIBILITY.</summary>
     [JsonPropertyName("additionalSchemaElements")]
     public IList<string>? AdditionalSchemaElements { get; set; }
 
@@ -410,7 +406,7 @@ public partial class V1beta1ReportDefinitionStatusAtProvider
     [JsonPropertyName("s3Bucket")]
     public string? S3Bucket { get; set; }
 
-    /// <summary>Report path prefix. Limited to 256 characters.</summary>
+    /// <summary>Report path prefix. Limited to 256 characters. May be empty ("") but the resource can then not be modified via the AWS Console.</summary>
     [JsonPropertyName("s3Prefix")]
     public string? S3Prefix { get; set; }
 

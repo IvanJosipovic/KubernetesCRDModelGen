@@ -237,7 +237,7 @@ public partial class V1beta1RouteSpecForProvider
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -708,6 +708,10 @@ public partial class V1beta1RouteStatusAtProvider
     /// <summary>Operation name for the route. Must be between 1 and 64 characters in length.</summary>
     [JsonPropertyName("operationName")]
     public string? OperationName { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Request models for the route. Supported only for WebSocket APIs.</summary>
     [JsonPropertyName("requestModels")]

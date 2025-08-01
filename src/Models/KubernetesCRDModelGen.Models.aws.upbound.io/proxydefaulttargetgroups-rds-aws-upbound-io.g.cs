@@ -28,7 +28,7 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderConnectionPool
     [JsonPropertyName("maxIdleConnectionsPercent")]
     public double? MaxIdleConnectionsPercent { get; set; }
 
-    /// <summary>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. Currently, the only allowed value is EXCLUDE_VARIABLE_SETS.</summary>
+    /// <summary>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. This setting is only supported for MySQL engine family databases. Currently, the only allowed value is EXCLUDE_VARIABLE_SETS.</summary>
     [JsonPropertyName("sessionPinningFilters")]
     public IList<string>? SessionPinningFilters { get; set; }
 }
@@ -109,7 +109,7 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecForProvider
     [JsonPropertyName("dbProxyNameSelector")]
     public V1beta1ProxyDefaultTargetGroupSpecForProviderDbProxyNameSelector? DbProxyNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -134,7 +134,7 @@ public partial class V1beta1ProxyDefaultTargetGroupSpecInitProviderConnectionPoo
     [JsonPropertyName("maxIdleConnectionsPercent")]
     public double? MaxIdleConnectionsPercent { get; set; }
 
-    /// <summary>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. Currently, the only allowed value is EXCLUDE_VARIABLE_SETS.</summary>
+    /// <summary>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. This setting is only supported for MySQL engine family databases. Currently, the only allowed value is EXCLUDE_VARIABLE_SETS.</summary>
     [JsonPropertyName("sessionPinningFilters")]
     public IList<string>? SessionPinningFilters { get; set; }
 }
@@ -368,7 +368,7 @@ public partial class V1beta1ProxyDefaultTargetGroupStatusAtProviderConnectionPoo
     [JsonPropertyName("maxIdleConnectionsPercent")]
     public double? MaxIdleConnectionsPercent { get; set; }
 
-    /// <summary>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. Currently, the only allowed value is EXCLUDE_VARIABLE_SETS.</summary>
+    /// <summary>Each item in the list represents a class of SQL operations that normally cause all later statements in a session using a proxy to be pinned to the same underlying database connection. Including an item in the list exempts that class of SQL operations from the pinning behavior. This setting is only supported for MySQL engine family databases. Currently, the only allowed value is EXCLUDE_VARIABLE_SETS.</summary>
     [JsonPropertyName("sessionPinningFilters")]
     public IList<string>? SessionPinningFilters { get; set; }
 }
@@ -396,6 +396,10 @@ public partial class V1beta1ProxyDefaultTargetGroupStatusAtProvider
     /// <summary>The name of the default target group.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

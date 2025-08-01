@@ -128,7 +128,7 @@ public partial class V1beta1KinesisStreamingDestinationSpecForProvider
     [JsonPropertyName("approximateCreationDateTimePrecision")]
     public string? ApproximateCreationDateTimePrecision { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -445,6 +445,10 @@ public partial class V1beta1KinesisStreamingDestinationStatusAtProvider
     /// <summary>The table_name and stream_arn separated by a comma (,).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARN for a Kinesis data stream. This must exist in the same account and region as the DynamoDB table.</summary>
     [JsonPropertyName("streamArn")]

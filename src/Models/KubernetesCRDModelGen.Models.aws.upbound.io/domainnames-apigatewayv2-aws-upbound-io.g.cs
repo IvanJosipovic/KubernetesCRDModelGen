@@ -84,6 +84,10 @@ public partial class V1beta1DomainNameSpecForProviderDomainNameConfiguration
     [JsonPropertyName("endpointType")]
     public string? EndpointType { get; set; }
 
+    /// <summary>The IP address types that can invoke the domain name. Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke your domain name, or use dualstack to allow both IPv4 and IPv6 addresses to invoke your domain name. Defaults to ipv4.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>ARN of the AWS-issued certificate used to validate custom domain ownership (when certificate_arn is issued via an ACM Private CA or mutual_tls_authentication is configured with an ACM-imported certificate.)</summary>
     [JsonPropertyName("ownershipVerificationCertificateArn")]
     public string? OwnershipVerificationCertificateArn { get; set; }
@@ -118,7 +122,7 @@ public partial class V1beta1DomainNameSpecForProvider
     [JsonPropertyName("mutualTlsAuthentication")]
     public IList<V1beta1DomainNameSpecForProviderMutualTlsAuthentication>? MutualTlsAuthentication { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -202,6 +206,10 @@ public partial class V1beta1DomainNameSpecInitProviderDomainNameConfiguration
     /// <summary>Endpoint type. Valid values: REGIONAL.</summary>
     [JsonPropertyName("endpointType")]
     public string? EndpointType { get; set; }
+
+    /// <summary>The IP address types that can invoke the domain name. Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke your domain name, or use dualstack to allow both IPv4 and IPv6 addresses to invoke your domain name. Defaults to ipv4.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
 
     /// <summary>ARN of the AWS-issued certificate used to validate custom domain ownership (when certificate_arn is issued via an ACM Private CA or mutual_tls_authentication is configured with an ACM-imported certificate.)</summary>
     [JsonPropertyName("ownershipVerificationCertificateArn")]
@@ -390,6 +398,10 @@ public partial class V1beta1DomainNameStatusAtProviderDomainNameConfiguration
     [JsonPropertyName("hostedZoneId")]
     public string? HostedZoneId { get; set; }
 
+    /// <summary>The IP address types that can invoke the domain name. Valid values: ipv4, dualstack. Use ipv4 to allow only IPv4 addresses to invoke your domain name, or use dualstack to allow both IPv4 and IPv6 addresses to invoke your domain name. Defaults to ipv4.</summary>
+    [JsonPropertyName("ipAddressType")]
+    public string? IpAddressType { get; set; }
+
     /// <summary>ARN of the AWS-issued certificate used to validate custom domain ownership (when certificate_arn is issued via an ACM Private CA or mutual_tls_authentication is configured with an ACM-imported certificate.)</summary>
     [JsonPropertyName("ownershipVerificationCertificateArn")]
     public string? OwnershipVerificationCertificateArn { get; set; }
@@ -439,6 +451,10 @@ public partial class V1beta1DomainNameStatusAtProvider
     /// <summary>Mutual TLS authentication configuration for the domain name.</summary>
     [JsonPropertyName("mutualTlsAuthentication")]
     public IList<V1beta1DomainNameStatusAtProviderMutualTlsAuthentication>? MutualTlsAuthentication { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Key-value map of resource tags.</summary>
     [JsonPropertyName("tags")]

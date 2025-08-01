@@ -105,7 +105,7 @@ public partial class V1beta1LBSSLNegotiationPolicySpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -384,6 +384,10 @@ public partial class V1beta1LBSSLNegotiationPolicyStatusAtProvider
     /// <summary>The name of the SSL negotiation policy.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Map of arbitrary keys and values that, when changed, will trigger a redeployment.</summary>
     [JsonPropertyName("triggers")]

@@ -80,7 +80,7 @@ public partial class V1beta1SchemaSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -357,6 +357,10 @@ public partial class V1beta1SchemaStatusAtProvider
     /// <summary>The name of the schema. Maximum of 385 characters consisting of lower case letters, upper case letters, ., -, _, @.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The name of the registry in which this schema belongs.</summary>
     [JsonPropertyName("registryName")]

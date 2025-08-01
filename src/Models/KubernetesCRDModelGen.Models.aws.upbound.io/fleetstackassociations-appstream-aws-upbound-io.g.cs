@@ -136,7 +136,7 @@ public partial class V1beta1FleetStackAssociationSpecForProvider
     [JsonPropertyName("fleetNameSelector")]
     public V1beta1FleetStackAssociationSpecForProviderFleetNameSelector? FleetNameSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -302,6 +302,10 @@ public partial class V1beta1FleetStackAssociationStatusAtProvider
     /// <summary>Unique ID of the appstream stack fleet association, composed of the fleet_name and stack_name separated by a slash (/).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Name of the stack.</summary>
     [JsonPropertyName("stackName")]

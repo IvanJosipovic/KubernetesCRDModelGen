@@ -12,19 +12,19 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBSpecForProvider
 {
-    /// <summary>The health check path of the load balancer. Default value "/".</summary>
+    /// <summary>Health check path of the load balancer. Default value /.</summary>
     [JsonPropertyName("healthCheckPath")]
     public string? HealthCheckPath { get; set; }
 
-    /// <summary>The instance port the load balancer will connect.</summary>
+    /// <summary>Instance port the load balancer will connect to.</summary>
     [JsonPropertyName("instancePort")]
     public double? InstancePort { get; set; }
 
-    /// <summary></summary>
+    /// <summary>IP address type of the load balancer. Valid values: dualstack, ipv4. Default value dualstack.</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -37,15 +37,15 @@ public partial class V1beta1LBSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBSpecInitProvider
 {
-    /// <summary>The health check path of the load balancer. Default value "/".</summary>
+    /// <summary>Health check path of the load balancer. Default value /.</summary>
     [JsonPropertyName("healthCheckPath")]
     public string? HealthCheckPath { get; set; }
 
-    /// <summary>The instance port the load balancer will connect.</summary>
+    /// <summary>Instance port the load balancer will connect to.</summary>
     [JsonPropertyName("instancePort")]
     public double? InstancePort { get; set; }
 
-    /// <summary></summary>
+    /// <summary>IP address type of the load balancer. Valid values: dualstack, ipv4. Default value dualstack.</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
@@ -190,43 +190,47 @@ public partial class V1beta1LBSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBStatusAtProvider
 {
-    /// <summary>The ARN of the Lightsail load balancer.</summary>
+    /// <summary>ARN of the Lightsail load balancer.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The timestamp when the load balancer was created.</summary>
+    /// <summary>Timestamp when the load balancer was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
-    /// <summary>The DNS name of the load balancer.</summary>
+    /// <summary>DNS name of the load balancer.</summary>
     [JsonPropertyName("dnsName")]
     public string? DnsName { get; set; }
 
-    /// <summary>The health check path of the load balancer. Default value "/".</summary>
+    /// <summary>Health check path of the load balancer. Default value /.</summary>
     [JsonPropertyName("healthCheckPath")]
     public string? HealthCheckPath { get; set; }
 
-    /// <summary>The name used for this load balancer (matches name).</summary>
+    /// <summary>Name used for this load balancer (matches name).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>The instance port the load balancer will connect.</summary>
+    /// <summary>Instance port the load balancer will connect to.</summary>
     [JsonPropertyName("instancePort")]
     public double? InstancePort { get; set; }
 
-    /// <summary></summary>
+    /// <summary>IP address type of the load balancer. Valid values: dualstack, ipv4. Default value dualstack.</summary>
     [JsonPropertyName("ipAddressType")]
     public string? IpAddressType { get; set; }
 
-    /// <summary>The protocol of the load balancer.</summary>
+    /// <summary>Protocol of the load balancer.</summary>
     [JsonPropertyName("protocol")]
     public string? Protocol { get; set; }
 
-    /// <summary>The public ports of the load balancer.</summary>
+    /// <summary>Public ports of the load balancer.</summary>
     [JsonPropertyName("publicPorts")]
     public IList<double>? PublicPorts { get; set; }
 
-    /// <summary>The support code for the database. Include this code in your email to support when you have questions about a database in Lightsail. This code enables our support team to look up your Lightsail information more easily.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Support code for the load balancer. Include this code in your email to support when you have questions about a load balancer in Lightsail. This code enables our support team to look up your Lightsail information more easily.</summary>
     [JsonPropertyName("supportCode")]
     public string? SupportCode { get; set; }
 
@@ -234,7 +238,7 @@ public partial class V1beta1LBStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 }
@@ -285,7 +289,7 @@ public partial class V1beta1LBStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>LB is the Schema for the LBs API. Provides a Lightsail Load Balancer</summary>
+/// <summary>LB is the Schema for the LBs API. Manages a Lightsail Load Balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LB : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LBSpec>, IStatus<V1beta1LBStatus>
@@ -315,7 +319,7 @@ public partial class V1beta1LB : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1L
     public V1beta1LBStatus? Status { get; set; }
 }
 
-/// <summary>LB is the Schema for the LBs API. Provides a Lightsail Load Balancer</summary>
+/// <summary>LB is the Schema for the LBs API. Manages a Lightsail Load Balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1LBList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LB>

@@ -100,7 +100,7 @@ public partial class V1beta1ScheduleSpecForProvider
     [JsonPropertyName("recurrence")]
     public string? Recurrence { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -313,6 +313,10 @@ public partial class V1beta1ScheduleStatusAtProvider
     /// <summary>The recurring schedule for this action specified using the Unix cron syntax format.</summary>
     [JsonPropertyName("recurrence")]
     public string? Recurrence { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The date and time for the recurring schedule to start, in UTC with the format "YYYY-MM-DDThh:mm:ssZ" (e.g. "2021-06-01T00:00:00Z").</summary>
     [JsonPropertyName("startTime")]

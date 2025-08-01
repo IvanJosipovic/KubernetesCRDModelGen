@@ -10,6 +10,96 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.workspaces.aws.upbound.io;
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderActiveDirectoryConfig
+{
+    /// <summary>Fully qualified domain name of the AWS Directory Service directory.</summary>
+    [JsonPropertyName("domainName")]
+    public string? DomainName { get; set; }
+
+    /// <summary>ARN of the Secrets Manager secret that contains the credentials for the service account. For more information, see Service Account Details.</summary>
+    [JsonPropertyName("serviceAccountSecretArn")]
+    public string? ServiceAccountSecretArn { get; set; }
+
+    /// <summary>Reference to a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+    [JsonPropertyName("serviceAccountSecretArnRef")]
+    public V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnRef? ServiceAccountSecretArnRef { get; set; }
+
+    /// <summary>Selector for a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+    [JsonPropertyName("serviceAccountSecretArnSelector")]
+    public V1beta1DirectorySpecForProviderActiveDirectoryConfigServiceAccountSecretArnSelector? ServiceAccountSecretArnSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecForProviderCertificateBasedAuthProperties
+{
+    /// <summary>The Amazon Resource Name (ARN) of the certificate manager private certificate authority (ACM-PCA) that is used for certificate-based authentication.</summary>
+    [JsonPropertyName("certificateAuthorityArn")]
+    public string? CertificateAuthorityArn { get; set; }
+
+    /// <summary>Status of certificate-based authentication. Default DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecForProviderDirectoryIdRefPolicy
 {
     /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
@@ -141,23 +231,23 @@ public partial class V1beta1DirectorySpecForProviderSamlProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecForProviderSelfServicePermissions
 {
-    /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
     [JsonPropertyName("changeComputeType")]
     public bool? ChangeComputeType { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default false.</summary>
     [JsonPropertyName("increaseVolumeSize")]
     public bool? IncreaseVolumeSize { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default false.</summary>
     [JsonPropertyName("rebuildWorkspace")]
     public bool? RebuildWorkspace { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can restart their workspace. Default true.</summary>
+    /// <summary>Whether WorkSpaces directory users can restart their workspace. Default true.</summary>
     [JsonPropertyName("restartWorkspace")]
     public bool? RestartWorkspace { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can switch the running mode of their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can switch the running mode of their workspace. Default false.</summary>
     [JsonPropertyName("switchRunningMode")]
     public bool? SwitchRunningMode { get; set; }
 }
@@ -222,35 +312,35 @@ public partial class V1beta1DirectorySpecForProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecForProviderWorkspaceAccessProperties
 {
-    /// <summary>–  Indicates whether users can use Android devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Android devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeAndroid")]
     public string? DeviceTypeAndroid { get; set; }
 
-    /// <summary>–  Indicates whether users can use Chromebooks to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Chromebooks to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeChromeos")]
     public string? DeviceTypeChromeos { get; set; }
 
-    /// <summary>–  Indicates whether users can use iOS devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use iOS devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeIos")]
     public string? DeviceTypeIos { get; set; }
 
-    /// <summary>–  Indicates whether users can use Linux clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Linux clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeLinux")]
     public string? DeviceTypeLinux { get; set; }
 
-    /// <summary>–  Indicates whether users can use macOS clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use macOS clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeOsx")]
     public string? DeviceTypeOsx { get; set; }
 
-    /// <summary>–  Indicates whether users can access their WorkSpaces through a web browser.</summary>
+    /// <summary>Indicates whether users can access their WorkSpaces through a web browser.</summary>
     [JsonPropertyName("deviceTypeWeb")]
     public string? DeviceTypeWeb { get; set; }
 
-    /// <summary>–  Indicates whether users can use Windows clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Windows clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeWindows")]
     public string? DeviceTypeWindows { get; set; }
 
-    /// <summary>–  Indicates whether users can use zero client devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use zero client devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeZeroclient")]
     public string? DeviceTypeZeroclient { get; set; }
 }
@@ -315,7 +405,7 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesC
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecForProviderWorkspaceCreationProperties
 {
-    /// <summary>–  The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
+    /// <summary>The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
     [JsonPropertyName("customSecurityGroupId")]
     public string? CustomSecurityGroupId { get; set; }
 
@@ -327,19 +417,19 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationProperties
     [JsonPropertyName("customSecurityGroupIdSelector")]
     public V1beta1DirectorySpecForProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelector? CustomSecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
+    /// <summary>The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
     [JsonPropertyName("defaultOu")]
     public string? DefaultOu { get; set; }
 
-    /// <summary>–  Indicates whether internet access is enabled for your WorkSpaces.</summary>
+    /// <summary>Indicates whether internet access is enabled for your WorkSpaces.</summary>
     [JsonPropertyName("enableInternetAccess")]
     public bool? EnableInternetAccess { get; set; }
 
-    /// <summary>–  Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see WorkSpace Maintenance..</summary>
+    /// <summary>Indicates whether maintenance mode is enabled for your WorkSpaces. Valid only if workspace_type is set to PERSONAL.</summary>
     [JsonPropertyName("enableMaintenanceMode")]
     public bool? EnableMaintenanceMode { get; set; }
 
-    /// <summary>–  Indicates whether users are local administrators of their WorkSpaces.</summary>
+    /// <summary>Indicates whether users are local administrators of their WorkSpaces. Valid only if workspace_type is set to PERSONAL.</summary>
     [JsonPropertyName("userEnabledAsLocalAdministrator")]
     public bool? UserEnabledAsLocalAdministrator { get; set; }
 }
@@ -348,6 +438,14 @@ public partial class V1beta1DirectorySpecForProviderWorkspaceCreationProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecForProvider
 {
+    /// <summary>Configuration for Active Directory integration when workspace_type is set to POOLS. Defined below.</summary>
+    [JsonPropertyName("activeDirectoryConfig")]
+    public IList<V1beta1DirectorySpecForProviderActiveDirectoryConfig>? ActiveDirectoryConfig { get; set; }
+
+    /// <summary>Configuration of certificate-based authentication (CBA) integration. Requires SAML authentication to be enabled. Defined below.</summary>
+    [JsonPropertyName("certificateBasedAuthProperties")]
+    public IList<V1beta1DirectorySpecForProviderCertificateBasedAuthProperties>? CertificateBasedAuthProperties { get; set; }
+
     /// <summary>The directory identifier for registration in WorkSpaces service.</summary>
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
@@ -372,15 +470,15 @@ public partial class V1beta1DirectorySpecForProvider
     [JsonPropertyName("ipGroupIdsSelector")]
     public V1beta1DirectorySpecForProviderIpGroupIdsSelector? IpGroupIdsSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>–  Configuration of SAML authentication integration. Defined below.</summary>
+    /// <summary>Configuration of SAML authentication integration. Defined below.</summary>
     [JsonPropertyName("samlProperties")]
     public IList<V1beta1DirectorySpecForProviderSamlProperties>? SamlProperties { get; set; }
 
-    /// <summary>service capabilities. Defined below.</summary>
+    /// <summary>Permissions to enable or disable self-service capabilities when workspace_type is set to PERSONAL.. Defined below.</summary>
     [JsonPropertyName("selfServicePermissions")]
     public IList<V1beta1DirectorySpecForProviderSelfServicePermissions>? SelfServicePermissions { get; set; }
 
@@ -400,13 +498,119 @@ public partial class V1beta1DirectorySpecForProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.</summary>
+    /// <summary>Specifies the user identity type for the WorkSpaces directory. Valid values are CUSTOMER_MANAGED, AWS_DIRECTORY_SERVICE, AWS_IAM_IDENTITY_CENTER.</summary>
+    [JsonPropertyName("userIdentityType")]
+    public string? UserIdentityType { get; set; }
+
+    /// <summary>Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.</summary>
     [JsonPropertyName("workspaceAccessProperties")]
     public IList<V1beta1DirectorySpecForProviderWorkspaceAccessProperties>? WorkspaceAccessProperties { get; set; }
 
-    /// <summary>–  Default properties that are used for creating WorkSpaces. Defined below.</summary>
+    /// <summary>Default properties that are used for creating WorkSpaces. Defined below.</summary>
     [JsonPropertyName("workspaceCreationProperties")]
     public IList<V1beta1DirectorySpecForProviderWorkspaceCreationProperties>? WorkspaceCreationProperties { get; set; }
+
+    /// <summary>The description of the WorkSpaces directory when workspace_type is set to POOLS.</summary>
+    [JsonPropertyName("workspaceDirectoryDescription")]
+    public string? WorkspaceDirectoryDescription { get; set; }
+
+    /// <summary>The name of the WorkSpaces directory when workspace_type is set to POOLS.</summary>
+    [JsonPropertyName("workspaceDirectoryName")]
+    public string? WorkspaceDirectoryName { get; set; }
+
+    /// <summary>Specifies the type of WorkSpaces directory. Valid values are PERSONAL and POOLS. Default is PERSONAL.</summary>
+    [JsonPropertyName("workspaceType")]
+    public string? WorkspaceType { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderActiveDirectoryConfig
+{
+    /// <summary>Fully qualified domain name of the AWS Directory Service directory.</summary>
+    [JsonPropertyName("domainName")]
+    public string? DomainName { get; set; }
+
+    /// <summary>ARN of the Secrets Manager secret that contains the credentials for the service account. For more information, see Service Account Details.</summary>
+    [JsonPropertyName("serviceAccountSecretArn")]
+    public string? ServiceAccountSecretArn { get; set; }
+
+    /// <summary>Reference to a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+    [JsonPropertyName("serviceAccountSecretArnRef")]
+    public V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnRef? ServiceAccountSecretArnRef { get; set; }
+
+    /// <summary>Selector for a Secret in secretsmanager to populate serviceAccountSecretArn.</summary>
+    [JsonPropertyName("serviceAccountSecretArnSelector")]
+    public V1beta1DirectorySpecInitProviderActiveDirectoryConfigServiceAccountSecretArnSelector? ServiceAccountSecretArnSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectorySpecInitProviderCertificateBasedAuthProperties
+{
+    /// <summary>The Amazon Resource Name (ARN) of the certificate manager private certificate authority (ACM-PCA) that is used for certificate-based authentication.</summary>
+    [JsonPropertyName("certificateAuthorityArn")]
+    public string? CertificateAuthorityArn { get; set; }
+
+    /// <summary>Status of certificate-based authentication. Default DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -542,23 +746,23 @@ public partial class V1beta1DirectorySpecInitProviderSamlProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecInitProviderSelfServicePermissions
 {
-    /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
     [JsonPropertyName("changeComputeType")]
     public bool? ChangeComputeType { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default false.</summary>
     [JsonPropertyName("increaseVolumeSize")]
     public bool? IncreaseVolumeSize { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default false.</summary>
     [JsonPropertyName("rebuildWorkspace")]
     public bool? RebuildWorkspace { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can restart their workspace. Default true.</summary>
+    /// <summary>Whether WorkSpaces directory users can restart their workspace. Default true.</summary>
     [JsonPropertyName("restartWorkspace")]
     public bool? RestartWorkspace { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can switch the running mode of their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can switch the running mode of their workspace. Default false.</summary>
     [JsonPropertyName("switchRunningMode")]
     public bool? SwitchRunningMode { get; set; }
 }
@@ -623,35 +827,35 @@ public partial class V1beta1DirectorySpecInitProviderSubnetIdSelector
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecInitProviderWorkspaceAccessProperties
 {
-    /// <summary>–  Indicates whether users can use Android devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Android devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeAndroid")]
     public string? DeviceTypeAndroid { get; set; }
 
-    /// <summary>–  Indicates whether users can use Chromebooks to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Chromebooks to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeChromeos")]
     public string? DeviceTypeChromeos { get; set; }
 
-    /// <summary>–  Indicates whether users can use iOS devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use iOS devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeIos")]
     public string? DeviceTypeIos { get; set; }
 
-    /// <summary>–  Indicates whether users can use Linux clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Linux clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeLinux")]
     public string? DeviceTypeLinux { get; set; }
 
-    /// <summary>–  Indicates whether users can use macOS clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use macOS clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeOsx")]
     public string? DeviceTypeOsx { get; set; }
 
-    /// <summary>–  Indicates whether users can access their WorkSpaces through a web browser.</summary>
+    /// <summary>Indicates whether users can access their WorkSpaces through a web browser.</summary>
     [JsonPropertyName("deviceTypeWeb")]
     public string? DeviceTypeWeb { get; set; }
 
-    /// <summary>–  Indicates whether users can use Windows clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Windows clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeWindows")]
     public string? DeviceTypeWindows { get; set; }
 
-    /// <summary>–  Indicates whether users can use zero client devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use zero client devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeZeroclient")]
     public string? DeviceTypeZeroclient { get; set; }
 }
@@ -716,7 +920,7 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
 {
-    /// <summary>–  The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
+    /// <summary>The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
     [JsonPropertyName("customSecurityGroupId")]
     public string? CustomSecurityGroupId { get; set; }
 
@@ -728,19 +932,19 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
     [JsonPropertyName("customSecurityGroupIdSelector")]
     public V1beta1DirectorySpecInitProviderWorkspaceCreationPropertiesCustomSecurityGroupIdSelector? CustomSecurityGroupIdSelector { get; set; }
 
-    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
+    /// <summary>The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
     [JsonPropertyName("defaultOu")]
     public string? DefaultOu { get; set; }
 
-    /// <summary>–  Indicates whether internet access is enabled for your WorkSpaces.</summary>
+    /// <summary>Indicates whether internet access is enabled for your WorkSpaces.</summary>
     [JsonPropertyName("enableInternetAccess")]
     public bool? EnableInternetAccess { get; set; }
 
-    /// <summary>–  Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see WorkSpace Maintenance..</summary>
+    /// <summary>Indicates whether maintenance mode is enabled for your WorkSpaces. Valid only if workspace_type is set to PERSONAL.</summary>
     [JsonPropertyName("enableMaintenanceMode")]
     public bool? EnableMaintenanceMode { get; set; }
 
-    /// <summary>–  Indicates whether users are local administrators of their WorkSpaces.</summary>
+    /// <summary>Indicates whether users are local administrators of their WorkSpaces. Valid only if workspace_type is set to PERSONAL.</summary>
     [JsonPropertyName("userEnabledAsLocalAdministrator")]
     public bool? UserEnabledAsLocalAdministrator { get; set; }
 }
@@ -749,6 +953,14 @@ public partial class V1beta1DirectorySpecInitProviderWorkspaceCreationProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectorySpecInitProvider
 {
+    /// <summary>Configuration for Active Directory integration when workspace_type is set to POOLS. Defined below.</summary>
+    [JsonPropertyName("activeDirectoryConfig")]
+    public IList<V1beta1DirectorySpecInitProviderActiveDirectoryConfig>? ActiveDirectoryConfig { get; set; }
+
+    /// <summary>Configuration of certificate-based authentication (CBA) integration. Requires SAML authentication to be enabled. Defined below.</summary>
+    [JsonPropertyName("certificateBasedAuthProperties")]
+    public IList<V1beta1DirectorySpecInitProviderCertificateBasedAuthProperties>? CertificateBasedAuthProperties { get; set; }
+
     /// <summary>The directory identifier for registration in WorkSpaces service.</summary>
     [JsonPropertyName("directoryId")]
     public string? DirectoryId { get; set; }
@@ -773,11 +985,11 @@ public partial class V1beta1DirectorySpecInitProvider
     [JsonPropertyName("ipGroupIdsSelector")]
     public V1beta1DirectorySpecInitProviderIpGroupIdsSelector? IpGroupIdsSelector { get; set; }
 
-    /// <summary>–  Configuration of SAML authentication integration. Defined below.</summary>
+    /// <summary>Configuration of SAML authentication integration. Defined below.</summary>
     [JsonPropertyName("samlProperties")]
     public IList<V1beta1DirectorySpecInitProviderSamlProperties>? SamlProperties { get; set; }
 
-    /// <summary>service capabilities. Defined below.</summary>
+    /// <summary>Permissions to enable or disable self-service capabilities when workspace_type is set to PERSONAL.. Defined below.</summary>
     [JsonPropertyName("selfServicePermissions")]
     public IList<V1beta1DirectorySpecInitProviderSelfServicePermissions>? SelfServicePermissions { get; set; }
 
@@ -797,13 +1009,29 @@ public partial class V1beta1DirectorySpecInitProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>–  Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.</summary>
+    /// <summary>Specifies the user identity type for the WorkSpaces directory. Valid values are CUSTOMER_MANAGED, AWS_DIRECTORY_SERVICE, AWS_IAM_IDENTITY_CENTER.</summary>
+    [JsonPropertyName("userIdentityType")]
+    public string? UserIdentityType { get; set; }
+
+    /// <summary>Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.</summary>
     [JsonPropertyName("workspaceAccessProperties")]
     public IList<V1beta1DirectorySpecInitProviderWorkspaceAccessProperties>? WorkspaceAccessProperties { get; set; }
 
-    /// <summary>–  Default properties that are used for creating WorkSpaces. Defined below.</summary>
+    /// <summary>Default properties that are used for creating WorkSpaces. Defined below.</summary>
     [JsonPropertyName("workspaceCreationProperties")]
     public IList<V1beta1DirectorySpecInitProviderWorkspaceCreationProperties>? WorkspaceCreationProperties { get; set; }
+
+    /// <summary>The description of the WorkSpaces directory when workspace_type is set to POOLS.</summary>
+    [JsonPropertyName("workspaceDirectoryDescription")]
+    public string? WorkspaceDirectoryDescription { get; set; }
+
+    /// <summary>The name of the WorkSpaces directory when workspace_type is set to POOLS.</summary>
+    [JsonPropertyName("workspaceDirectoryName")]
+    public string? WorkspaceDirectoryName { get; set; }
+
+    /// <summary>Specifies the type of WorkSpaces directory. Valid values are PERSONAL and POOLS. Default is PERSONAL.</summary>
+    [JsonPropertyName("workspaceType")]
+    public string? WorkspaceType { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -940,6 +1168,32 @@ public partial class V1beta1DirectorySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectoryStatusAtProviderActiveDirectoryConfig
+{
+    /// <summary>Fully qualified domain name of the AWS Directory Service directory.</summary>
+    [JsonPropertyName("domainName")]
+    public string? DomainName { get; set; }
+
+    /// <summary>ARN of the Secrets Manager secret that contains the credentials for the service account. For more information, see Service Account Details.</summary>
+    [JsonPropertyName("serviceAccountSecretArn")]
+    public string? ServiceAccountSecretArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1DirectoryStatusAtProviderCertificateBasedAuthProperties
+{
+    /// <summary>The Amazon Resource Name (ARN) of the certificate manager private certificate authority (ACM-PCA) that is used for certificate-based authentication.</summary>
+    [JsonPropertyName("certificateAuthorityArn")]
+    public string? CertificateAuthorityArn { get; set; }
+
+    /// <summary>Status of certificate-based authentication. Default DISABLED.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryStatusAtProviderSamlProperties
 {
     /// <summary>The relay state parameter name supported by the SAML 2.0 identity provider (IdP). Default RelayState.</summary>
@@ -959,23 +1213,23 @@ public partial class V1beta1DirectoryStatusAtProviderSamlProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryStatusAtProviderSelfServicePermissions
 {
-    /// <summary>–  Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default false.</summary>
     [JsonPropertyName("changeComputeType")]
     public bool? ChangeComputeType { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default false.</summary>
     [JsonPropertyName("increaseVolumeSize")]
     public bool? IncreaseVolumeSize { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default false.</summary>
     [JsonPropertyName("rebuildWorkspace")]
     public bool? RebuildWorkspace { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can restart their workspace. Default true.</summary>
+    /// <summary>Whether WorkSpaces directory users can restart their workspace. Default true.</summary>
     [JsonPropertyName("restartWorkspace")]
     public bool? RestartWorkspace { get; set; }
 
-    /// <summary>–  Whether WorkSpaces directory users can switch the running mode of their workspace. Default false.</summary>
+    /// <summary>Whether WorkSpaces directory users can switch the running mode of their workspace. Default false.</summary>
     [JsonPropertyName("switchRunningMode")]
     public bool? SwitchRunningMode { get; set; }
 }
@@ -984,35 +1238,35 @@ public partial class V1beta1DirectoryStatusAtProviderSelfServicePermissions
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryStatusAtProviderWorkspaceAccessProperties
 {
-    /// <summary>–  Indicates whether users can use Android devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Android devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeAndroid")]
     public string? DeviceTypeAndroid { get; set; }
 
-    /// <summary>–  Indicates whether users can use Chromebooks to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Chromebooks to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeChromeos")]
     public string? DeviceTypeChromeos { get; set; }
 
-    /// <summary>–  Indicates whether users can use iOS devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use iOS devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeIos")]
     public string? DeviceTypeIos { get; set; }
 
-    /// <summary>–  Indicates whether users can use Linux clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Linux clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeLinux")]
     public string? DeviceTypeLinux { get; set; }
 
-    /// <summary>–  Indicates whether users can use macOS clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use macOS clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeOsx")]
     public string? DeviceTypeOsx { get; set; }
 
-    /// <summary>–  Indicates whether users can access their WorkSpaces through a web browser.</summary>
+    /// <summary>Indicates whether users can access their WorkSpaces through a web browser.</summary>
     [JsonPropertyName("deviceTypeWeb")]
     public string? DeviceTypeWeb { get; set; }
 
-    /// <summary>–  Indicates whether users can use Windows clients to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use Windows clients to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeWindows")]
     public string? DeviceTypeWindows { get; set; }
 
-    /// <summary>–  Indicates whether users can use zero client devices to access their WorkSpaces.</summary>
+    /// <summary>Indicates whether users can use zero client devices to access their WorkSpaces.</summary>
     [JsonPropertyName("deviceTypeZeroclient")]
     public string? DeviceTypeZeroclient { get; set; }
 }
@@ -1021,23 +1275,23 @@ public partial class V1beta1DirectoryStatusAtProviderWorkspaceAccessProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryStatusAtProviderWorkspaceCreationProperties
 {
-    /// <summary>–  The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
+    /// <summary>The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.</summary>
     [JsonPropertyName("customSecurityGroupId")]
     public string? CustomSecurityGroupId { get; set; }
 
-    /// <summary>–  The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
+    /// <summary>The default organizational unit (OU) for your WorkSpace directories. Should conform "OU=&lt;value&gt;,DC=&lt;value&gt;,...,DC=&lt;value&gt;" pattern.</summary>
     [JsonPropertyName("defaultOu")]
     public string? DefaultOu { get; set; }
 
-    /// <summary>–  Indicates whether internet access is enabled for your WorkSpaces.</summary>
+    /// <summary>Indicates whether internet access is enabled for your WorkSpaces.</summary>
     [JsonPropertyName("enableInternetAccess")]
     public bool? EnableInternetAccess { get; set; }
 
-    /// <summary>–  Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see WorkSpace Maintenance..</summary>
+    /// <summary>Indicates whether maintenance mode is enabled for your WorkSpaces. Valid only if workspace_type is set to PERSONAL.</summary>
     [JsonPropertyName("enableMaintenanceMode")]
     public bool? EnableMaintenanceMode { get; set; }
 
-    /// <summary>–  Indicates whether users are local administrators of their WorkSpaces.</summary>
+    /// <summary>Indicates whether users are local administrators of their WorkSpaces. Valid only if workspace_type is set to PERSONAL.</summary>
     [JsonPropertyName("userEnabledAsLocalAdministrator")]
     public bool? UserEnabledAsLocalAdministrator { get; set; }
 }
@@ -1046,9 +1300,17 @@ public partial class V1beta1DirectoryStatusAtProviderWorkspaceCreationProperties
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryStatusAtProvider
 {
+    /// <summary>Configuration for Active Directory integration when workspace_type is set to POOLS. Defined below.</summary>
+    [JsonPropertyName("activeDirectoryConfig")]
+    public IList<V1beta1DirectoryStatusAtProviderActiveDirectoryConfig>? ActiveDirectoryConfig { get; set; }
+
     /// <summary>The directory alias.</summary>
     [JsonPropertyName("alias")]
     public string? Alias { get; set; }
+
+    /// <summary>Configuration of certificate-based authentication (CBA) integration. Requires SAML authentication to be enabled. Defined below.</summary>
+    [JsonPropertyName("certificateBasedAuthProperties")]
+    public IList<V1beta1DirectoryStatusAtProviderCertificateBasedAuthProperties>? CertificateBasedAuthProperties { get; set; }
 
     /// <summary>The user name for the service account.</summary>
     [JsonPropertyName("customerUserName")]
@@ -1082,15 +1344,19 @@ public partial class V1beta1DirectoryStatusAtProvider
     [JsonPropertyName("ipGroupIds")]
     public IList<string>? IpGroupIds { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>The registration code for the directory. This is the code that users enter in their Amazon WorkSpaces client application to connect to the directory.</summary>
     [JsonPropertyName("registrationCode")]
     public string? RegistrationCode { get; set; }
 
-    /// <summary>–  Configuration of SAML authentication integration. Defined below.</summary>
+    /// <summary>Configuration of SAML authentication integration. Defined below.</summary>
     [JsonPropertyName("samlProperties")]
     public IList<V1beta1DirectoryStatusAtProviderSamlProperties>? SamlProperties { get; set; }
 
-    /// <summary>service capabilities. Defined below.</summary>
+    /// <summary>Permissions to enable or disable self-service capabilities when workspace_type is set to PERSONAL.. Defined below.</summary>
     [JsonPropertyName("selfServicePermissions")]
     public IList<V1beta1DirectoryStatusAtProviderSelfServicePermissions>? SelfServicePermissions { get; set; }
 
@@ -1106,17 +1372,33 @@ public partial class V1beta1DirectoryStatusAtProvider
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>–  Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.</summary>
+    /// <summary>Specifies the user identity type for the WorkSpaces directory. Valid values are CUSTOMER_MANAGED, AWS_DIRECTORY_SERVICE, AWS_IAM_IDENTITY_CENTER.</summary>
+    [JsonPropertyName("userIdentityType")]
+    public string? UserIdentityType { get; set; }
+
+    /// <summary>Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.</summary>
     [JsonPropertyName("workspaceAccessProperties")]
     public IList<V1beta1DirectoryStatusAtProviderWorkspaceAccessProperties>? WorkspaceAccessProperties { get; set; }
 
-    /// <summary>–  Default properties that are used for creating WorkSpaces. Defined below.</summary>
+    /// <summary>Default properties that are used for creating WorkSpaces. Defined below.</summary>
     [JsonPropertyName("workspaceCreationProperties")]
     public IList<V1beta1DirectoryStatusAtProviderWorkspaceCreationProperties>? WorkspaceCreationProperties { get; set; }
+
+    /// <summary>The description of the WorkSpaces directory when workspace_type is set to POOLS.</summary>
+    [JsonPropertyName("workspaceDirectoryDescription")]
+    public string? WorkspaceDirectoryDescription { get; set; }
+
+    /// <summary>The name of the WorkSpaces directory when workspace_type is set to POOLS.</summary>
+    [JsonPropertyName("workspaceDirectoryName")]
+    public string? WorkspaceDirectoryName { get; set; }
 
     /// <summary>The identifier of the security group that is assigned to new WorkSpaces.</summary>
     [JsonPropertyName("workspaceSecurityGroupId")]
     public string? WorkspaceSecurityGroupId { get; set; }
+
+    /// <summary>Specifies the type of WorkSpaces directory. Valid values are PERSONAL and POOLS. Default is PERSONAL.</summary>
+    [JsonPropertyName("workspaceType")]
+    public string? WorkspaceType { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

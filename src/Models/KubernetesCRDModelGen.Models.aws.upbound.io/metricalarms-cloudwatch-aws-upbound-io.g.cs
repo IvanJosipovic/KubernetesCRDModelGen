@@ -80,7 +80,7 @@ public partial class V1beta1MetricAlarmSpecForProviderMetricQueryMetric
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 30, or any multiple of 60.</summary>
+    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -117,7 +117,7 @@ public partial class V1beta1MetricAlarmSpecForProviderMetricQuery
     [JsonPropertyName("metric")]
     public IList<V1beta1MetricAlarmSpecForProviderMetricQueryMetric>? Metric { get; set; }
 
-    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 30, or any multiple of 60.</summary>
+    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -258,11 +258,11 @@ public partial class V1beta1MetricAlarmSpecForProvider
     [JsonPropertyName("okActionsSelector")]
     public V1beta1MetricAlarmSpecForProviderOkActionsSelector? OkActionsSelector { get; set; }
 
-    /// <summary>The period in seconds over which the specified statistic is applied. Valid values are 10, 30, or any multiple of 60.</summary>
+    /// <summary>The period in seconds over which the specified statistic is applied. Valid values are 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -363,7 +363,7 @@ public partial class V1beta1MetricAlarmSpecInitProviderMetricQueryMetric
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 30, or any multiple of 60.</summary>
+    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -400,7 +400,7 @@ public partial class V1beta1MetricAlarmSpecInitProviderMetricQuery
     [JsonPropertyName("metric")]
     public IList<V1beta1MetricAlarmSpecInitProviderMetricQueryMetric>? Metric { get; set; }
 
-    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 30, or any multiple of 60.</summary>
+    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -541,7 +541,7 @@ public partial class V1beta1MetricAlarmSpecInitProvider
     [JsonPropertyName("okActionsSelector")]
     public V1beta1MetricAlarmSpecInitProviderOkActionsSelector? OkActionsSelector { get; set; }
 
-    /// <summary>The period in seconds over which the specified statistic is applied. Valid values are 10, 30, or any multiple of 60.</summary>
+    /// <summary>The period in seconds over which the specified statistic is applied. Valid values are 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -718,7 +718,7 @@ public partial class V1beta1MetricAlarmStatusAtProviderMetricQueryMetric
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 30, or any multiple of 60.</summary>
+    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -755,7 +755,7 @@ public partial class V1beta1MetricAlarmStatusAtProviderMetricQuery
     [JsonPropertyName("metric")]
     public IList<V1beta1MetricAlarmStatusAtProviderMetricQueryMetric>? Metric { get; set; }
 
-    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 30, or any multiple of 60.</summary>
+    /// <summary>Granularity in seconds of returned data points. For metrics with regular resolution, valid values are any multiple of 60. For high-resolution metrics, valid values are 1, 5, 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
 
@@ -832,9 +832,13 @@ public partial class V1beta1MetricAlarmStatusAtProvider
     [JsonPropertyName("okActions")]
     public IList<string>? OkActions { get; set; }
 
-    /// <summary>The period in seconds over which the specified statistic is applied. Valid values are 10, 30, or any multiple of 60.</summary>
+    /// <summary>The period in seconds over which the specified statistic is applied. Valid values are 10, 20, 30, or any multiple of 60.</summary>
     [JsonPropertyName("period")]
     public double? Period { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The statistic to apply to the alarm's associated metric. Either of the following is supported: SampleCount, Average, Sum, Minimum, Maximum</summary>
     [JsonPropertyName("statistic")]

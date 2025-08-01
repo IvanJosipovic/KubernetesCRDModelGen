@@ -93,7 +93,7 @@ public partial class V1beta1MaintenanceWindowTargetSpecForProvider
     [JsonPropertyName("ownerInformation")]
     public string? OwnerInformation { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -388,6 +388,10 @@ public partial class V1beta1MaintenanceWindowTargetStatusAtProvider
     /// <summary>User-provided value that will be included in any CloudWatch events raised while running tasks for these targets in this Maintenance Window.</summary>
     [JsonPropertyName("ownerInformation")]
     public string? OwnerInformation { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The type of target being registered with the Maintenance Window. Possible values are INSTANCE and RESOURCE_GROUP.</summary>
     [JsonPropertyName("resourceType")]

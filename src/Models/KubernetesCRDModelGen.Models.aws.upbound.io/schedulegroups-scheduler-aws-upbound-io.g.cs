@@ -16,7 +16,7 @@ public partial class V1beta1ScheduleGroupSpecForProvider
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -193,6 +193,10 @@ public partial class V1beta1ScheduleGroupStatusAtProvider
     /// <summary>Name of the schedule group. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>State of the schedule group. Can be ACTIVE or DELETING.</summary>
     [JsonPropertyName("state")]

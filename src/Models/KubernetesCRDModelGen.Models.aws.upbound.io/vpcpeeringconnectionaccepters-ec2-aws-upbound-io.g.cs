@@ -94,7 +94,7 @@ public partial class V1beta1VPCPeeringConnectionAccepterSpecForProvider
     [JsonPropertyName("autoAccept")]
     public bool? AutoAccept { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -407,6 +407,10 @@ public partial class V1beta1VPCPeeringConnectionAccepterStatusAtProvider
     /// <summary>The ID of the requester VPC.</summary>
     [JsonPropertyName("peerVpcId")]
     public string? PeerVpcId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A configuration block that describes [VPC Peering Connection] (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the requester VPC.</summary>
     [JsonPropertyName("requester")]

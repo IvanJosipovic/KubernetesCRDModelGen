@@ -174,6 +174,18 @@ spec:
                           type: string
                       type: object
                     type: array
+                  emailMfaConfiguration:
+                    description: Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.
+                    items:
+                      properties:
+                        message:
+                          description: The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.
+                          type: string
+                        subject:
+                          description: The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.
+                          type: string
+                      type: object
+                    type: array
                   emailVerificationMessage:
                     description: String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.
                     type: string
@@ -1103,7 +1115,7 @@ spec:
                                 description: The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
                                 type: string
                               lambdaVersion:
-                                description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.
+                                description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.
                                 type: string
                             type: object
                           type: array
@@ -1407,7 +1419,10 @@ spec:
                       type: object
                     type: array
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schema:
                     description: Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
@@ -1452,6 +1467,18 @@ spec:
                                 type: string
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  signInPolicy:
+                    description: Configuration block for information about the user pool sign in policy. Detailed below.
+                    items:
+                      properties:
+                        allowedFirstAuthFactors:
+                          description: The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.
+                          items:
+                            type: string
+                          type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   smsAuthenticationMessage:
@@ -1592,11 +1619,23 @@ spec:
                     description: Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
                     items:
                       properties:
+                        advancedSecurityAdditionalFlows:
+                          description: A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.
+                          items:
+                            properties:
+                              customAuthMode:
+                                description: Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.
+                                type: string
+                            type: object
+                          type: array
                         advancedSecurityMode:
                           description: Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.
                           type: string
                       type: object
                     type: array
+                  userPoolTier:
+                    description: 'The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.'
+                    type: string
                   usernameAttributes:
                     description: Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.
                     items:
@@ -1633,6 +1672,18 @@ spec:
                           type: string
                         smsMessage:
                           description: SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.
+                          type: string
+                      type: object
+                    type: array
+                  webAuthnConfiguration:
+                    description: Configuration block for web authn configuration. Detailed below.
+                    items:
+                      properties:
+                        relyingPartyId:
+                          description: The authentication domain that passkeys providers use as a relying party.
+                          type: string
+                        userVerification:
+                          description: If your user pool should require a passkey. Must be one of required or preferred.
                           type: string
                       type: object
                     type: array
@@ -1748,6 +1799,18 @@ spec:
                           type: string
                         sourceArn:
                           description: ARN of the SES verified email identity to use. Required if email_sending_account is set to DEVELOPER.
+                          type: string
+                      type: object
+                    type: array
+                  emailMfaConfiguration:
+                    description: Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.
+                    items:
+                      properties:
+                        message:
+                          description: The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.
+                          type: string
+                        subject:
+                          description: The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.
                           type: string
                       type: object
                     type: array
@@ -2680,7 +2743,7 @@ spec:
                                 description: The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
                                 type: string
                               lambdaVersion:
-                                description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.
+                                description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.
                                 type: string
                             type: object
                           type: array
@@ -3028,6 +3091,18 @@ spec:
                           type: array
                       type: object
                     type: array
+                  signInPolicy:
+                    description: Configuration block for information about the user pool sign in policy. Detailed below.
+                    items:
+                      properties:
+                        allowedFirstAuthFactors:
+                          description: The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.
+                          items:
+                            type: string
+                          type: array
+                          x-kubernetes-list-type: set
+                      type: object
+                    type: array
                   smsAuthenticationMessage:
                     description: String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.
                     type: string
@@ -3166,11 +3241,23 @@ spec:
                     description: Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
                     items:
                       properties:
+                        advancedSecurityAdditionalFlows:
+                          description: A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.
+                          items:
+                            properties:
+                              customAuthMode:
+                                description: Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.
+                                type: string
+                            type: object
+                          type: array
                         advancedSecurityMode:
                           description: Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.
                           type: string
                       type: object
                     type: array
+                  userPoolTier:
+                    description: 'The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.'
+                    type: string
                   usernameAttributes:
                     description: Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.
                     items:
@@ -3207,6 +3294,18 @@ spec:
                           type: string
                         smsMessage:
                           description: SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.
+                          type: string
+                      type: object
+                    type: array
+                  webAuthnConfiguration:
+                    description: Configuration block for web authn configuration. Detailed below.
+                    items:
+                      properties:
+                        relyingPartyId:
+                          description: The authentication domain that passkeys providers use as a relying party.
+                          type: string
+                        userVerification:
+                          description: If your user pool should require a passkey. Must be one of required or preferred.
                           type: string
                       type: object
                     type: array
@@ -3529,6 +3628,18 @@ spec:
                           type: string
                       type: object
                     type: array
+                  emailMfaConfiguration:
+                    description: Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.
+                    items:
+                      properties:
+                        message:
+                          description: The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.
+                          type: string
+                        subject:
+                          description: The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.
+                          type: string
+                      type: object
+                    type: array
                   emailVerificationMessage:
                     description: String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.
                     type: string
@@ -3607,7 +3718,7 @@ spec:
                                 description: The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
                                 type: string
                               lambdaVersion:
-                                description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.
+                                description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.
                                 type: string
                             type: object
                           type: array
@@ -3655,6 +3766,12 @@ spec:
                           type: number
                       type: object
                     type: array
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   schema:
                     description: Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
                     items:
@@ -3698,6 +3815,18 @@ spec:
                                 type: string
                             type: object
                           type: array
+                      type: object
+                    type: array
+                  signInPolicy:
+                    description: Configuration block for information about the user pool sign in policy. Detailed below.
+                    items:
+                      properties:
+                        allowedFirstAuthFactors:
+                          description: The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.
+                          items:
+                            type: string
+                          type: array
+                          x-kubernetes-list-type: set
                       type: object
                     type: array
                   smsAuthenticationMessage:
@@ -3758,11 +3887,23 @@ spec:
                     description: Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
                     items:
                       properties:
+                        advancedSecurityAdditionalFlows:
+                          description: A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.
+                          items:
+                            properties:
+                              customAuthMode:
+                                description: Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.
+                                type: string
+                            type: object
+                          type: array
                         advancedSecurityMode:
                           description: Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.
                           type: string
                       type: object
                     type: array
+                  userPoolTier:
+                    description: 'The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.'
+                    type: string
                   usernameAttributes:
                     description: Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.
                     items:
@@ -3799,6 +3940,18 @@ spec:
                           type: string
                         smsMessage:
                           description: SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.
+                          type: string
+                      type: object
+                    type: array
+                  webAuthnConfiguration:
+                    description: Configuration block for web authn configuration. Detailed below.
+                    items:
+                      properties:
+                        relyingPartyId:
+                          description: The authentication domain that passkeys providers use as a relying party.
+                          type: string
+                        userVerification:
+                          description: If your user pool should require a passkey. Must be one of required or preferred.
                           type: string
                       type: object
                     type: array
@@ -4016,6 +4169,16 @@ spec:
                         description: ARN of the SES verified email identity to use. Required if email_sending_account is set to DEVELOPER.
                         type: string
                     type: object
+                  emailMfaConfiguration:
+                    description: Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.
+                    properties:
+                      message:
+                        description: The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.
+                        type: string
+                      subject:
+                        description: The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.
+                        type: string
+                    type: object
                   emailVerificationMessage:
                     description: String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.
                     type: string
@@ -4939,7 +5102,7 @@ spec:
                             description: The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
                             type: string
                           lambdaVersion:
-                            description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.
+                            description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.
                             type: string
                         type: object
                       preTokenGenerationRef:
@@ -5239,7 +5402,10 @@ spec:
                         type: number
                     type: object
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schema:
                     description: Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
@@ -5282,6 +5448,16 @@ spec:
                           type: object
                       type: object
                     type: array
+                  signInPolicy:
+                    description: Configuration block for information about the user pool sign in policy. Detailed below.
+                    properties:
+                      allowedFirstAuthFactors:
+                        description: The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.
+                        items:
+                          type: string
+                        type: array
+                        x-kubernetes-list-type: set
+                    type: object
                   smsAuthenticationMessage:
                     description: String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.
                     type: string
@@ -5413,10 +5589,20 @@ spec:
                   userPoolAddOns:
                     description: Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
                     properties:
+                      advancedSecurityAdditionalFlows:
+                        description: A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.
+                        properties:
+                          customAuthMode:
+                            description: Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.
+                            type: string
+                        type: object
                       advancedSecurityMode:
                         description: Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.
                         type: string
                     type: object
+                  userPoolTier:
+                    description: 'The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.'
+                    type: string
                   usernameAttributes:
                     description: Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.
                     items:
@@ -5450,6 +5636,16 @@ spec:
                         type: string
                       smsMessage:
                         description: SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.
+                        type: string
+                    type: object
+                  webAuthnConfiguration:
+                    description: Configuration block for web authn configuration. Detailed below.
+                    properties:
+                      relyingPartyId:
+                        description: The authentication domain that passkeys providers use as a relying party.
+                        type: string
+                      userVerification:
+                        description: If your user pool should require a passkey. Must be one of required or preferred.
                         type: string
                     type: object
                 required:
@@ -5555,6 +5751,16 @@ spec:
                         type: string
                       sourceArn:
                         description: ARN of the SES verified email identity to use. Required if email_sending_account is set to DEVELOPER.
+                        type: string
+                    type: object
+                  emailMfaConfiguration:
+                    description: Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.
+                    properties:
+                      message:
+                        description: The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.
+                        type: string
+                      subject:
+                        description: The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.
                         type: string
                     type: object
                   emailVerificationMessage:
@@ -6480,7 +6686,7 @@ spec:
                             description: The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
                             type: string
                           lambdaVersion:
-                            description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.
+                            description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.
                             type: string
                         type: object
                       preTokenGenerationRef:
@@ -6820,6 +7026,16 @@ spec:
                           type: object
                       type: object
                     type: array
+                  signInPolicy:
+                    description: Configuration block for information about the user pool sign in policy. Detailed below.
+                    properties:
+                      allowedFirstAuthFactors:
+                        description: The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.
+                        items:
+                          type: string
+                        type: array
+                        x-kubernetes-list-type: set
+                    type: object
                   smsAuthenticationMessage:
                     description: String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.
                     type: string
@@ -6951,10 +7167,20 @@ spec:
                   userPoolAddOns:
                     description: Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
                     properties:
+                      advancedSecurityAdditionalFlows:
+                        description: A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.
+                        properties:
+                          customAuthMode:
+                            description: Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.
+                            type: string
+                        type: object
                       advancedSecurityMode:
                         description: Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.
                         type: string
                     type: object
+                  userPoolTier:
+                    description: 'The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.'
+                    type: string
                   usernameAttributes:
                     description: Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.
                     items:
@@ -6988,6 +7214,16 @@ spec:
                         type: string
                       smsMessage:
                         description: SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.
+                        type: string
+                    type: object
+                  webAuthnConfiguration:
+                    description: Configuration block for web authn configuration. Detailed below.
+                    properties:
+                      relyingPartyId:
+                        description: The authentication domain that passkeys providers use as a relying party.
+                        type: string
+                      userVerification:
+                        description: If your user pool should require a passkey. Must be one of required or preferred.
                         type: string
                     type: object
                 type: object
@@ -7299,6 +7535,16 @@ spec:
                         description: ARN of the SES verified email identity to use. Required if email_sending_account is set to DEVELOPER.
                         type: string
                     type: object
+                  emailMfaConfiguration:
+                    description: Configuration block for configuring email Multi-Factor Authentication (MFA); requires at least 2 account_recovery_setting entries; requires an email_configuration configuration block. Detailed below.
+                    properties:
+                      message:
+                        description: The template for the email messages that your user pool sends to users with codes for MFA and sign-in with email OTPs. The message must contain the {####} placeholder. In the message, Amazon Cognito replaces this placeholder with the code. If you don't provide this parameter, Amazon Cognito sends messages in the default format.
+                        type: string
+                      subject:
+                        description: The subject of the email messages that your user pool sends to users with codes for MFA and email OTP sign-in.
+                        type: string
+                    type: object
                   emailVerificationMessage:
                     description: String representing the email verification message. Conflicts with verification_message_template configuration block email_message argument.
                     type: string
@@ -7371,7 +7617,7 @@ spec:
                             description: The Lambda Amazon Resource Name of the Lambda function that Amazon Cognito triggers to send SMS notifications to users.
                             type: string
                           lambdaVersion:
-                            description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0.
+                            description: The Lambda version represents the signature of the "version" attribute in the "event" information Amazon Cognito passes to your pre Token Generation Lambda function. The supported values are V1_0, V2_0, V3_0.
                             type: string
                         type: object
                       userMigration:
@@ -7415,6 +7661,12 @@ spec:
                         description: In the password policy you have set, refers to the number of days a temporary password is valid. If the user does not sign-in during this time, their password will need to be reset by an administrator.
                         type: number
                     type: object
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   schema:
                     description: Configuration block for the schema attributes of a user pool. Detailed below. Schema attributes from the standard attribute set only need to be specified if they are different from the default configuration. Attributes can be added, but not modified or removed. Maximum of 50 attributes.
                     items:
@@ -7456,6 +7708,16 @@ spec:
                           type: object
                       type: object
                     type: array
+                  signInPolicy:
+                    description: Configuration block for information about the user pool sign in policy. Detailed below.
+                    properties:
+                      allowedFirstAuthFactors:
+                        description: The sign in methods your user pool supports as the first factor. This is a list of strings, allowed values are PASSWORD, EMAIL_OTP, SMS_OTP, and WEB_AUTHN.
+                        items:
+                          type: string
+                        type: array
+                        x-kubernetes-list-type: set
+                    type: object
                   smsAuthenticationMessage:
                     description: String representing the SMS authentication message. The Message must contain the {####} placeholder, which will be replaced with the code.
                     type: string
@@ -7507,10 +7769,20 @@ spec:
                   userPoolAddOns:
                     description: Configuration block for user pool add-ons to enable user pool advanced security mode features. Detailed below.
                     properties:
+                      advancedSecurityAdditionalFlows:
+                        description: A block to specify the threat protection configuration options for additional authentication types in your user pool, including custom authentication. Detailed below.
+                        properties:
+                          customAuthMode:
+                            description: Mode of threat protection operation in custom authentication. Valid values are AUDIT or ENFORCED. The default value is AUDIT.
+                            type: string
+                        type: object
                       advancedSecurityMode:
                         description: Mode for advanced security, must be one of OFF, AUDIT or ENFORCED.
                         type: string
                     type: object
+                  userPoolTier:
+                    description: 'The user pool feature plan, or tier. Valid values: LITE, ESSENTIALS, PLUS.'
+                    type: string
                   usernameAttributes:
                     description: Whether email addresses or phone numbers can be specified as usernames when a user signs up. Conflicts with alias_attributes.
                     items:
@@ -7544,6 +7816,16 @@ spec:
                         type: string
                       smsMessage:
                         description: SMS message template. Must contain the {####} placeholder. Conflicts with sms_verification_message argument.
+                        type: string
+                    type: object
+                  webAuthnConfiguration:
+                    description: Configuration block for web authn configuration. Detailed below.
+                    properties:
+                      relyingPartyId:
+                        description: The authentication domain that passkeys providers use as a relying party.
+                        type: string
+                      userVerification:
+                        description: If your user pool should require a passkey. Must be one of required or preferred.
                         type: string
                     type: object
                 type: object

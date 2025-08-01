@@ -186,7 +186,7 @@ public partial class V1beta1PoolRolesAttachmentSpecForProvider
     [JsonPropertyName("identityPoolIdSelector")]
     public V1beta1PoolRolesAttachmentSpecForProviderIdentityPoolIdSelector? IdentityPoolIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -571,6 +571,10 @@ public partial class V1beta1PoolRolesAttachmentStatusAtProvider
     /// <summary>An identity pool ID in the format REGION_GUID.</summary>
     [JsonPropertyName("identityPoolId")]
     public string? IdentityPoolId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A List of Role Mapping.</summary>
     [JsonPropertyName("roleMapping")]

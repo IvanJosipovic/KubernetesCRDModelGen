@@ -76,6 +76,195 @@ public partial class V1beta1ExperimentTemplateSpecForProviderExperimentOptions
     public string? EmptyTargetResolutionMode { get; set; }
 }
 
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Dashboard in cloudwatch to populate dashboardArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Dashboard in cloudwatch to populate dashboardArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard
+{
+    /// <summary>The ARN of the CloudWatch dashboard.</summary>
+    [JsonPropertyName("dashboardArn")]
+    public string? DashboardArn { get; set; }
+
+    /// <summary>Reference to a Dashboard in cloudwatch to populate dashboardArn.</summary>
+    [JsonPropertyName("dashboardArnRef")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRef? DashboardArnRef { get; set; }
+
+    /// <summary>Selector for a Dashboard in cloudwatch to populate dashboardArn.</summary>
+    [JsonPropertyName("dashboardArnSelector")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector? DashboardArnSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSources
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("cloudwatchDashboard")]
+    public IList<V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard>? CloudwatchDashboard { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3Configuration
+{
+    /// <summary>The name of the destination bucket.</summary>
+    [JsonPropertyName("bucketName")]
+    public string? BucketName { get; set; }
+
+    /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
+    [JsonPropertyName("bucketNameRef")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRef? BucketNameRef { get; set; }
+
+    /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
+    [JsonPropertyName("bucketNameSelector")]
+    public V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelector? BucketNameSelector { get; set; }
+
+    /// <summary>The bucket prefix.</summary>
+    [JsonPropertyName("prefix")]
+    public string? Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputs
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("s3Configuration")]
+    public IList<V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputsS3Configuration>? S3Configuration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecForProviderExperimentReportConfiguration
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("dataSources")]
+    public IList<V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationDataSources>? DataSources { get; set; }
+
+    /// <summary>The outputs for the experiment report. See below.</summary>
+    [JsonPropertyName("outputs")]
+    public IList<V1beta1ExperimentTemplateSpecForProviderExperimentReportConfigurationOutputs>? Outputs { get; set; }
+
+    /// <summary>The duration of the post-experiment period. Defaults to PT20M.</summary>
+    [JsonPropertyName("postExperimentDuration")]
+    public string? PostExperimentDuration { get; set; }
+
+    /// <summary>The duration of the pre-experiment period. Defaults to PT20M.</summary>
+    [JsonPropertyName("preExperimentDuration")]
+    public string? PreExperimentDuration { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateSpecForProviderLogConfigurationCloudwatchLogsConfiguration
@@ -259,11 +448,15 @@ public partial class V1beta1ExperimentTemplateSpecForProvider
     [JsonPropertyName("experimentOptions")]
     public IList<V1beta1ExperimentTemplateSpecForProviderExperimentOptions>? ExperimentOptions { get; set; }
 
+    /// <summary>The configuration for experiment reporting. See below.</summary>
+    [JsonPropertyName("experimentReportConfiguration")]
+    public IList<V1beta1ExperimentTemplateSpecForProviderExperimentReportConfiguration>? ExperimentReportConfiguration { get; set; }
+
     /// <summary>The configuration for experiment logging. See below.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ExperimentTemplateSpecForProviderLogConfiguration>? LogConfiguration { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -358,6 +551,195 @@ public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentOptions
     /// <summary>Specifies the empty target resolution mode for experiment options. Supports fail and skip.</summary>
     [JsonPropertyName("emptyTargetResolutionMode")]
     public string? EmptyTargetResolutionMode { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Dashboard in cloudwatch to populate dashboardArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Dashboard in cloudwatch to populate dashboardArn.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard
+{
+    /// <summary>The ARN of the CloudWatch dashboard.</summary>
+    [JsonPropertyName("dashboardArn")]
+    public string? DashboardArn { get; set; }
+
+    /// <summary>Reference to a Dashboard in cloudwatch to populate dashboardArn.</summary>
+    [JsonPropertyName("dashboardArnRef")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnRef? DashboardArnRef { get; set; }
+
+    /// <summary>Selector for a Dashboard in cloudwatch to populate dashboardArn.</summary>
+    [JsonPropertyName("dashboardArnSelector")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboardDashboardArnSelector? DashboardArnSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSources
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("cloudwatchDashboard")]
+    public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard>? CloudwatchDashboard { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3Configuration
+{
+    /// <summary>The name of the destination bucket.</summary>
+    [JsonPropertyName("bucketName")]
+    public string? BucketName { get; set; }
+
+    /// <summary>Reference to a Bucket in s3 to populate bucketName.</summary>
+    [JsonPropertyName("bucketNameRef")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameRef? BucketNameRef { get; set; }
+
+    /// <summary>Selector for a Bucket in s3 to populate bucketName.</summary>
+    [JsonPropertyName("bucketNameSelector")]
+    public V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3ConfigurationBucketNameSelector? BucketNameSelector { get; set; }
+
+    /// <summary>The bucket prefix.</summary>
+    [JsonPropertyName("prefix")]
+    public string? Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputs
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("s3Configuration")]
+    public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputsS3Configuration>? S3Configuration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfiguration
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("dataSources")]
+    public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationDataSources>? DataSources { get; set; }
+
+    /// <summary>The outputs for the experiment report. See below.</summary>
+    [JsonPropertyName("outputs")]
+    public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfigurationOutputs>? Outputs { get; set; }
+
+    /// <summary>The duration of the post-experiment period. Defaults to PT20M.</summary>
+    [JsonPropertyName("postExperimentDuration")]
+    public string? PostExperimentDuration { get; set; }
+
+    /// <summary>The duration of the pre-experiment period. Defaults to PT20M.</summary>
+    [JsonPropertyName("preExperimentDuration")]
+    public string? PreExperimentDuration { get; set; }
 }
 
 /// <summary></summary>
@@ -542,6 +924,10 @@ public partial class V1beta1ExperimentTemplateSpecInitProvider
     /// <summary>The experiment options for the experiment template. See experiment_options below for more details!</summary>
     [JsonPropertyName("experimentOptions")]
     public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentOptions>? ExperimentOptions { get; set; }
+
+    /// <summary>The configuration for experiment reporting. See below.</summary>
+    [JsonPropertyName("experimentReportConfiguration")]
+    public IList<V1beta1ExperimentTemplateSpecInitProviderExperimentReportConfiguration>? ExperimentReportConfiguration { get; set; }
 
     /// <summary>The configuration for experiment logging. See below.</summary>
     [JsonPropertyName("logConfiguration")]
@@ -774,6 +1160,67 @@ public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentOptions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard
+{
+    /// <summary>The ARN of the CloudWatch dashboard.</summary>
+    [JsonPropertyName("dashboardArn")]
+    public string? DashboardArn { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSources
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("cloudwatchDashboard")]
+    public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSourcesCloudwatchDashboard>? CloudwatchDashboard { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputsS3Configuration
+{
+    /// <summary>The name of the destination bucket.</summary>
+    [JsonPropertyName("bucketName")]
+    public string? BucketName { get; set; }
+
+    /// <summary>The bucket prefix.</summary>
+    [JsonPropertyName("prefix")]
+    public string? Prefix { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputs
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("s3Configuration")]
+    public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputsS3Configuration>? S3Configuration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfiguration
+{
+    /// <summary>The data sources for the experiment report. See below.</summary>
+    [JsonPropertyName("dataSources")]
+    public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationDataSources>? DataSources { get; set; }
+
+    /// <summary>The outputs for the experiment report. See below.</summary>
+    [JsonPropertyName("outputs")]
+    public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfigurationOutputs>? Outputs { get; set; }
+
+    /// <summary>The duration of the post-experiment period. Defaults to PT20M.</summary>
+    [JsonPropertyName("postExperimentDuration")]
+    public string? PostExperimentDuration { get; set; }
+
+    /// <summary>The duration of the pre-experiment period. Defaults to PT20M.</summary>
+    [JsonPropertyName("preExperimentDuration")]
+    public string? PreExperimentDuration { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExperimentTemplateStatusAtProviderLogConfigurationCloudwatchLogsConfiguration
 {
     /// <summary>The Amazon Resource Name (ARN) of the destination Amazon CloudWatch Logs log group.</summary>
@@ -899,6 +1346,10 @@ public partial class V1beta1ExperimentTemplateStatusAtProvider
     [JsonPropertyName("experimentOptions")]
     public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentOptions>? ExperimentOptions { get; set; }
 
+    /// <summary>The configuration for experiment reporting. See below.</summary>
+    [JsonPropertyName("experimentReportConfiguration")]
+    public IList<V1beta1ExperimentTemplateStatusAtProviderExperimentReportConfiguration>? ExperimentReportConfiguration { get; set; }
+
     /// <summary>Experiment Template ID.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
@@ -906,6 +1357,10 @@ public partial class V1beta1ExperimentTemplateStatusAtProvider
     /// <summary>The configuration for experiment logging. See below.</summary>
     [JsonPropertyName("logConfiguration")]
     public IList<V1beta1ExperimentTemplateStatusAtProviderLogConfiguration>? LogConfiguration { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of an IAM role that grants the AWS FIS service permission to perform service actions on your behalf.</summary>
     [JsonPropertyName("roleArn")]

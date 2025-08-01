@@ -135,7 +135,7 @@ public partial class V1beta1MultiRegionAccessPointSpecForProvider
     [JsonPropertyName("details")]
     public IList<V1beta1MultiRegionAccessPointSpecForProviderDetails>? Details { get; set; }
 
-    /// <summary>The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -352,7 +352,7 @@ public partial class V1beta1MultiRegionAccessPointStatusAtProviderDetailsRegion
     [JsonPropertyName("bucketAccountId")]
     public string? BucketAccountId { get; set; }
 
-    /// <summary>The Region configuration block to specify the bucket associated with the Multi-Region Access Point. See Region Configuration below for more details.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 }
@@ -401,6 +401,10 @@ public partial class V1beta1MultiRegionAccessPointStatusAtProvider
     /// <summary>The AWS account ID and access point name separated by a colon (:).</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The current status of the Multi-Region Access Point. One of: READY, INCONSISTENT_ACROSS_REGIONS, CREATING, PARTIALLY_CREATED, PARTIALLY_DELETED, DELETING.</summary>
     [JsonPropertyName("status")]

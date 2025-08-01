@@ -12,19 +12,19 @@ namespace KubernetesCRDModelGen.Models.quicksight.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserSpecForProvider
 {
-    /// <summary>The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</summary>
+    /// <summary>ID for the AWS account that the user is in. Use the ID for the AWS account that contains your Amazon QuickSight account.</summary>
     [JsonPropertyName("awsAccountId")]
     public string? AwsAccountId { get; set; }
 
-    /// <summary>The email address of the user that you want to register.</summary>
+    /// <summary>Email address of the user that you want to register.</summary>
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 
-    /// <summary>The ARN of the IAM user or role that you are registering with Amazon QuickSight.</summary>
+    /// <summary>ARN of the IAM user or role that you are registering with Amazon QuickSight. Required only for users with an identity type of IAM.</summary>
     [JsonPropertyName("iamArn")]
     public string? IamArn { get; set; }
 
-    /// <summary>Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  IAM or QUICKSIGHT. If IAM is specified, the iam_arn must also be specified.</summary>
+    /// <summary>Identity type that your Amazon QuickSight account uses to manage the identity of users. Valid values: IAM, QUICKSIGHT.</summary>
     [JsonPropertyName("identityType")]
     public string? IdentityType { get; set; }
 
@@ -32,19 +32,19 @@ public partial class V1beta1UserSpecForProvider
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.</summary>
+    /// <summary>Name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.</summary>
     [JsonPropertyName("sessionName")]
     public string? SessionName { get; set; }
 
-    /// <summary>The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with identity_type set to QUICKSIGHT.</summary>
+    /// <summary>Amazon QuickSight user name that you want to create for the user you are registering. Required only for users with an identity type of QUICKSIGHT.</summary>
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 
-    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.</summary>
+    /// <summary>Amazon QuickSight role for the user. Value values: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO, ADMIN_PRO.</summary>
     [JsonPropertyName("userRole")]
     public string? UserRole { get; set; }
 }
@@ -53,19 +53,19 @@ public partial class V1beta1UserSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserSpecInitProvider
 {
-    /// <summary>The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</summary>
+    /// <summary>ID for the AWS account that the user is in. Use the ID for the AWS account that contains your Amazon QuickSight account.</summary>
     [JsonPropertyName("awsAccountId")]
     public string? AwsAccountId { get; set; }
 
-    /// <summary>The email address of the user that you want to register.</summary>
+    /// <summary>Email address of the user that you want to register.</summary>
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 
-    /// <summary>The ARN of the IAM user or role that you are registering with Amazon QuickSight.</summary>
+    /// <summary>ARN of the IAM user or role that you are registering with Amazon QuickSight. Required only for users with an identity type of IAM.</summary>
     [JsonPropertyName("iamArn")]
     public string? IamArn { get; set; }
 
-    /// <summary>Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  IAM or QUICKSIGHT. If IAM is specified, the iam_arn must also be specified.</summary>
+    /// <summary>Identity type that your Amazon QuickSight account uses to manage the identity of users. Valid values: IAM, QUICKSIGHT.</summary>
     [JsonPropertyName("identityType")]
     public string? IdentityType { get; set; }
 
@@ -73,15 +73,15 @@ public partial class V1beta1UserSpecInitProvider
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>The name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.</summary>
+    /// <summary>Name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.</summary>
     [JsonPropertyName("sessionName")]
     public string? SessionName { get; set; }
 
-    /// <summary>The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with identity_type set to QUICKSIGHT.</summary>
+    /// <summary>Amazon QuickSight user name that you want to create for the user you are registering. Required only for users with an identity type of QUICKSIGHT.</summary>
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 
-    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.</summary>
+    /// <summary>Amazon QuickSight role for the user. Value values: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO, ADMIN_PRO.</summary>
     [JsonPropertyName("userRole")]
     public string? UserRole { get; set; }
 }
@@ -222,27 +222,27 @@ public partial class V1beta1UserSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserStatusAtProvider
 {
-    /// <summary>Amazon Resource Name (ARN) of the user</summary>
+    /// <summary>Amazon Resource Name (ARN) for the user.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The ID for the AWS account that the user is in. Currently, you use the ID for the AWS account that contains your Amazon QuickSight account.</summary>
+    /// <summary>ID for the AWS account that the user is in. Use the ID for the AWS account that contains your Amazon QuickSight account.</summary>
     [JsonPropertyName("awsAccountId")]
     public string? AwsAccountId { get; set; }
 
-    /// <summary>The email address of the user that you want to register.</summary>
+    /// <summary>Email address of the user that you want to register.</summary>
     [JsonPropertyName("email")]
     public string? Email { get; set; }
 
-    /// <summary>The ARN of the IAM user or role that you are registering with Amazon QuickSight.</summary>
+    /// <summary>ARN of the IAM user or role that you are registering with Amazon QuickSight. Required only for users with an identity type of IAM.</summary>
     [JsonPropertyName("iamArn")]
     public string? IamArn { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Unique identifier consisting of the account ID, the namespace, and the user name separated by /s.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>Amazon QuickSight supports several ways of managing the identity of users. This parameter accepts either  IAM or QUICKSIGHT. If IAM is specified, the iam_arn must also be specified.</summary>
+    /// <summary>Identity type that your Amazon QuickSight account uses to manage the identity of users. Valid values: IAM, QUICKSIGHT.</summary>
     [JsonPropertyName("identityType")]
     public string? IdentityType { get; set; }
 
@@ -250,15 +250,23 @@ public partial class V1beta1UserStatusAtProvider
     [JsonPropertyName("namespace")]
     public string? Namespace { get; set; }
 
-    /// <summary>The name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Name of the IAM session to use when assuming roles that can embed QuickSight dashboards. Only valid for registering users using an assumed IAM role. Additionally, if registering multiple users using the same IAM role, each user needs to have a unique session name.</summary>
     [JsonPropertyName("sessionName")]
     public string? SessionName { get; set; }
 
-    /// <summary>The Amazon QuickSight user name that you want to create for the user you are registering. Only valid for registering a user with identity_type set to QUICKSIGHT.</summary>
+    /// <summary>URL the user visits to complete registration and provide a password. Returned only for users with an identity type of QUICKSIGHT.</summary>
+    [JsonPropertyName("userInvitationUrl")]
+    public string? UserInvitationUrl { get; set; }
+
+    /// <summary>Amazon QuickSight user name that you want to create for the user you are registering. Required only for users with an identity type of QUICKSIGHT.</summary>
     [JsonPropertyName("userName")]
     public string? UserName { get; set; }
 
-    /// <summary>The Amazon QuickSight role of the user. The user role can be one of the following: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO or ADMIN_PRO.</summary>
+    /// <summary>Amazon QuickSight role for the user. Value values: READER, AUTHOR, ADMIN, READER_PRO, AUTHOR_PRO, ADMIN_PRO.</summary>
     [JsonPropertyName("userRole")]
     public string? UserRole { get; set; }
 }

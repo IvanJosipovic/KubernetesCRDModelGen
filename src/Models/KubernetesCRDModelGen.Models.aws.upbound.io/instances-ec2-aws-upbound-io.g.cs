@@ -224,7 +224,7 @@ public partial class V1beta1InstanceSpecForProviderInstanceMarketOptionsSpotOpti
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecForProviderInstanceMarketOptions
 {
-    /// <summary>Type of market for the instance. Valid value is spot. Defaults to spot. Required if spot_options is specified.</summary>
+    /// <summary>Type of market for the instance. Valid values are spot and capacity-block. Defaults to spot. Required if spot_options is specified.</summary>
     [JsonPropertyName("marketType")]
     public string? MarketType { get; set; }
 
@@ -275,7 +275,7 @@ public partial class V1beta1InstanceSpecForProviderMetadataOptions
     [JsonPropertyName("httpPutResponseHopLimit")]
     public double? HttpPutResponseHopLimit { get; set; }
 
-    /// <summary>Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Valid values include optional or required. Defaults to optional.</summary>
+    /// <summary>Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Valid values include optional or required.</summary>
     [JsonPropertyName("httpTokens")]
     public string? HttpTokens { get; set; }
 
@@ -623,17 +623,9 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("capacityReservationSpecification")]
     public IList<V1beta1InstanceSpecForProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
 
-    /// <summary>Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options CPU Cores and Threads Per CPU Core Per Instance Type - specifying this option for unsupported instance types will return an error from the EC2 API.</summary>
-    [JsonPropertyName("cpuCoreCount")]
-    public double? CpuCoreCount { get; set; }
-
     /// <summary>The CPU options for the instance. See CPU Options below for more details.</summary>
     [JsonPropertyName("cpuOptions")]
     public IList<V1beta1InstanceSpecForProviderCpuOptions>? CpuOptions { get; set; }
-
-    /// <summary>If set to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See Optimizing CPU Options for more information.</summary>
-    [JsonPropertyName("cpuThreadsPerCore")]
-    public double? CpuThreadsPerCore { get; set; }
 
     /// <summary>Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.</summary>
     [JsonPropertyName("creditSpecification")]
@@ -747,7 +739,7 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("privateIp")]
     public string? PrivateIp { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -783,15 +775,15 @@ public partial class V1beta1InstanceSpecForProvider
     [JsonPropertyName("tenancy")]
     public string? Tenancy { get; set; }
 
-    /// <summary>User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see user_data_base64 instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate.</summary>
+    /// <summary>User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see user_data_base64 instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate of the EC2 instance.</summary>
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 
-    /// <summary>Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate.</summary>
+    /// <summary>Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate of the EC2 instance.</summary>
     [JsonPropertyName("userDataBase64")]
     public string? UserDataBase64 { get; set; }
 
-    /// <summary>When used in combination with user_data or user_data_base64 will trigger a destroy and recreate when set to true. Defaults to false if not set.</summary>
+    /// <summary>When used in combination with user_data or user_data_base64 will trigger a destroy and recreate of the EC2 instance when set to true. Defaults to false if not set.</summary>
     [JsonPropertyName("userDataReplaceOnChange")]
     public bool? UserDataReplaceOnChange { get; set; }
 
@@ -1028,7 +1020,7 @@ public partial class V1beta1InstanceSpecInitProviderInstanceMarketOptionsSpotOpt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceSpecInitProviderInstanceMarketOptions
 {
-    /// <summary>Type of market for the instance. Valid value is spot. Defaults to spot. Required if spot_options is specified.</summary>
+    /// <summary>Type of market for the instance. Valid values are spot and capacity-block. Defaults to spot. Required if spot_options is specified.</summary>
     [JsonPropertyName("marketType")]
     public string? MarketType { get; set; }
 
@@ -1079,7 +1071,7 @@ public partial class V1beta1InstanceSpecInitProviderMetadataOptions
     [JsonPropertyName("httpPutResponseHopLimit")]
     public double? HttpPutResponseHopLimit { get; set; }
 
-    /// <summary>Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Valid values include optional or required. Defaults to optional.</summary>
+    /// <summary>Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Valid values include optional or required.</summary>
     [JsonPropertyName("httpTokens")]
     public string? HttpTokens { get; set; }
 
@@ -1427,17 +1419,9 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("capacityReservationSpecification")]
     public IList<V1beta1InstanceSpecInitProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
 
-    /// <summary>Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options CPU Cores and Threads Per CPU Core Per Instance Type - specifying this option for unsupported instance types will return an error from the EC2 API.</summary>
-    [JsonPropertyName("cpuCoreCount")]
-    public double? CpuCoreCount { get; set; }
-
     /// <summary>The CPU options for the instance. See CPU Options below for more details.</summary>
     [JsonPropertyName("cpuOptions")]
     public IList<V1beta1InstanceSpecInitProviderCpuOptions>? CpuOptions { get; set; }
-
-    /// <summary>If set to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See Optimizing CPU Options for more information.</summary>
-    [JsonPropertyName("cpuThreadsPerCore")]
-    public double? CpuThreadsPerCore { get; set; }
 
     /// <summary>Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.</summary>
     [JsonPropertyName("creditSpecification")]
@@ -1583,15 +1567,15 @@ public partial class V1beta1InstanceSpecInitProvider
     [JsonPropertyName("tenancy")]
     public string? Tenancy { get; set; }
 
-    /// <summary>User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see user_data_base64 instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate.</summary>
+    /// <summary>User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see user_data_base64 instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate of the EC2 instance.</summary>
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 
-    /// <summary>Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate.</summary>
+    /// <summary>Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate of the EC2 instance.</summary>
     [JsonPropertyName("userDataBase64")]
     public string? UserDataBase64 { get; set; }
 
-    /// <summary>When used in combination with user_data or user_data_base64 will trigger a destroy and recreate when set to true. Defaults to false if not set.</summary>
+    /// <summary>When used in combination with user_data or user_data_base64 will trigger a destroy and recreate of the EC2 instance when set to true. Defaults to false if not set.</summary>
     [JsonPropertyName("userDataReplaceOnChange")]
     public bool? UserDataReplaceOnChange { get; set; }
 
@@ -1900,7 +1884,7 @@ public partial class V1beta1InstanceStatusAtProviderInstanceMarketOptionsSpotOpt
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceStatusAtProviderInstanceMarketOptions
 {
-    /// <summary>Type of market for the instance. Valid value is spot. Defaults to spot. Required if spot_options is specified.</summary>
+    /// <summary>Type of market for the instance. Valid values are spot and capacity-block. Defaults to spot. Required if spot_options is specified.</summary>
     [JsonPropertyName("marketType")]
     public string? MarketType { get; set; }
 
@@ -1951,7 +1935,7 @@ public partial class V1beta1InstanceStatusAtProviderMetadataOptions
     [JsonPropertyName("httpPutResponseHopLimit")]
     public double? HttpPutResponseHopLimit { get; set; }
 
-    /// <summary>Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Valid values include optional or required. Defaults to optional.</summary>
+    /// <summary>Whether or not the metadata service requires session tokens, also referred to as Instance Metadata Service Version 2 (IMDSv2). Valid values include optional or required.</summary>
     [JsonPropertyName("httpTokens")]
     public string? HttpTokens { get; set; }
 
@@ -2071,17 +2055,9 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("capacityReservationSpecification")]
     public IList<V1beta1InstanceStatusAtProviderCapacityReservationSpecification>? CapacityReservationSpecification { get; set; }
 
-    /// <summary>Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options CPU Cores and Threads Per CPU Core Per Instance Type - specifying this option for unsupported instance types will return an error from the EC2 API.</summary>
-    [JsonPropertyName("cpuCoreCount")]
-    public double? CpuCoreCount { get; set; }
-
     /// <summary>The CPU options for the instance. See CPU Options below for more details.</summary>
     [JsonPropertyName("cpuOptions")]
     public IList<V1beta1InstanceStatusAtProviderCpuOptions>? CpuOptions { get; set; }
-
-    /// <summary>If set to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See Optimizing CPU Options for more information.</summary>
-    [JsonPropertyName("cpuThreadsPerCore")]
-    public double? CpuThreadsPerCore { get; set; }
 
     /// <summary>Configuration block for customizing the credit specification of the instance. See Credit Specification below for more details. Removing this configuration on existing instances will only stop managing it. It will not change the configuration back to the default for the instance type.</summary>
     [JsonPropertyName("creditSpecification")]
@@ -2231,6 +2207,10 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("publicIp")]
     public string? PublicIp { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>Configuration block to customize details about the root block device of the instance. See Block Devices below for details. When accessing this as an attribute reference, it is a list containing one object.</summary>
     [JsonPropertyName("rootBlockDevice")]
     public IList<V1beta1InstanceStatusAtProviderRootBlockDevice>? RootBlockDevice { get; set; }
@@ -2267,15 +2247,15 @@ public partial class V1beta1InstanceStatusAtProvider
     [JsonPropertyName("tenancy")]
     public string? Tenancy { get; set; }
 
-    /// <summary>User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see user_data_base64 instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate.</summary>
+    /// <summary>User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see user_data_base64 instead. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate of the EC2 instance.</summary>
     [JsonPropertyName("userData")]
     public string? UserData { get; set; }
 
-    /// <summary>Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate.</summary>
+    /// <summary>Can be used instead of user_data to pass base64-encoded binary data directly. Use this instead of user_data whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption. Updates to this field will trigger a stop/start of the EC2 instance by default. If the user_data_replace_on_change is set then updates to this field will trigger a destroy and recreate of the EC2 instance.</summary>
     [JsonPropertyName("userDataBase64")]
     public string? UserDataBase64 { get; set; }
 
-    /// <summary>When used in combination with user_data or user_data_base64 will trigger a destroy and recreate when set to true. Defaults to false if not set.</summary>
+    /// <summary>When used in combination with user_data or user_data_base64 will trigger a destroy and recreate of the EC2 instance when set to true. Defaults to false if not set.</summary>
     [JsonPropertyName("userDataReplaceOnChange")]
     public bool? UserDataReplaceOnChange { get; set; }
 

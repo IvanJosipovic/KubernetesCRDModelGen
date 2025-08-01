@@ -144,7 +144,10 @@ spec:
                     description: URL that users are redirected to after their streaming session ends.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageConnectors:
                     description: >-
@@ -201,7 +204,7 @@ spec:
                           description: >-
                             Action that is enabled or disabled.
 
-                            Valid values are CLIPBOARD_COPY_FROM_LOCAL_DEVICE,  CLIPBOARD_COPY_TO_LOCAL_DEVICE, FILE_UPLOAD, FILE_DOWNLOAD, PRINTING_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, or DOMAIN_SMART_CARD_SIGNIN.
+                            Valid values are AUTO_TIME_ZONE_REDIRECTION, CLIPBOARD_COPY_FROM_LOCAL_DEVICE, CLIPBOARD_COPY_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, DOMAIN_SMART_CARD_SIGNIN, FILE_UPLOAD, FILE_DOWNLOAD, or PRINTING_TO_LOCAL_DEVICE.
                           type: string
                         permission:
                           description: >-
@@ -350,7 +353,7 @@ spec:
                           description: >-
                             Action that is enabled or disabled.
 
-                            Valid values are CLIPBOARD_COPY_FROM_LOCAL_DEVICE,  CLIPBOARD_COPY_TO_LOCAL_DEVICE, FILE_UPLOAD, FILE_DOWNLOAD, PRINTING_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, or DOMAIN_SMART_CARD_SIGNIN.
+                            Valid values are AUTO_TIME_ZONE_REDIRECTION, CLIPBOARD_COPY_FROM_LOCAL_DEVICE, CLIPBOARD_COPY_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, DOMAIN_SMART_CARD_SIGNIN, FILE_UPLOAD, FILE_DOWNLOAD, or PRINTING_TO_LOCAL_DEVICE.
                           type: string
                         permission:
                           description: >-
@@ -645,6 +648,12 @@ spec:
                   redirectUrl:
                     description: URL that users are redirected to after their streaming session ends.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   storageConnectors:
                     description: >-
                       Configuration block for the storage connectors to enable.
@@ -705,7 +714,7 @@ spec:
                           description: >-
                             Action that is enabled or disabled.
 
-                            Valid values are CLIPBOARD_COPY_FROM_LOCAL_DEVICE,  CLIPBOARD_COPY_TO_LOCAL_DEVICE, FILE_UPLOAD, FILE_DOWNLOAD, PRINTING_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, or DOMAIN_SMART_CARD_SIGNIN.
+                            Valid values are AUTO_TIME_ZONE_REDIRECTION, CLIPBOARD_COPY_FROM_LOCAL_DEVICE, CLIPBOARD_COPY_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, DOMAIN_SMART_CARD_SIGNIN, FILE_UPLOAD, FILE_DOWNLOAD, or PRINTING_TO_LOCAL_DEVICE.
                           type: string
                         permission:
                           description: >-
@@ -907,7 +916,10 @@ spec:
                     description: URL that users are redirected to after their streaming session ends.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageConnectors:
                     description: >-
@@ -1399,6 +1411,12 @@ spec:
                     type: string
                   redirectUrl:
                     description: URL that users are redirected to after their streaming session ends.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   storageConnectors:
                     description: >-

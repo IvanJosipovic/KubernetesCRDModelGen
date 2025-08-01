@@ -25,11 +25,11 @@ public partial class V1beta1RegexPatternSetSpecForProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A friendly name of the regular expression pattern set.</summary>
+    /// <summary>A friendly name of the regular expression pattern set. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -63,7 +63,7 @@ public partial class V1beta1RegexPatternSetSpecInitProvider
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>A friendly name of the regular expression pattern set.</summary>
+    /// <summary>A friendly name of the regular expression pattern set. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
 
@@ -241,9 +241,13 @@ public partial class V1beta1RegexPatternSetStatusAtProvider
     [JsonPropertyName("lockToken")]
     public string? LockToken { get; set; }
 
-    /// <summary>A friendly name of the regular expression pattern set.</summary>
+    /// <summary>A friendly name of the regular expression pattern set. Conflicts with name_prefix.</summary>
     [JsonPropertyName("name")]
     public string? Name { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>One or more blocks of regular expression patterns that you want AWS WAF to search for, such as B[a@]dB[o0]t. See Regular Expression below for details. A maximum of 10 regular_expression blocks may be specified.</summary>
     [JsonPropertyName("regularExpression")]

@@ -84,7 +84,7 @@ public partial class V1beta1PatchGroupSpecForProvider
     [JsonPropertyName("patchGroup")]
     public string? PatchGroup { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -313,6 +313,10 @@ public partial class V1beta1PatchGroupStatusAtProvider
     /// <summary>The name of the patch group that should be registered with the patch baseline.</summary>
     [JsonPropertyName("patchGroup")]
     public string? PatchGroup { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

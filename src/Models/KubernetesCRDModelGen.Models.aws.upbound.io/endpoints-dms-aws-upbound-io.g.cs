@@ -111,6 +111,10 @@ public partial class V1beta1EndpointSpecForProviderKafkaSettings
     [JsonPropertyName("partitionIncludeSchemaTable")]
     public bool? PartitionIncludeSchemaTable { get; set; }
 
+    /// <summary>For SASL/SSL authentication, AWS DMS supports the scram-sha-512 mechanism by default. AWS DMS versions 3.5.0 and later also support the PLAIN mechanism. To use the PLAIN mechanism, set this parameter to plain.</summary>
+    [JsonPropertyName("saslMechanism")]
+    public string? SaslMechanism { get; set; }
+
     /// <summary>Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</summary>
     [JsonPropertyName("saslPasswordSecretRef")]
     public V1beta1EndpointSpecForProviderKafkaSettingsSaslPasswordSecretRef? SaslPasswordSecretRef { get; set; }
@@ -183,6 +187,10 @@ public partial class V1beta1EndpointSpecForProviderKinesisSettings
     /// <summary>ARN of the Kinesis data stream.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
+
+    /// <summary>Use up to 18 digit int instead of casting ints as doubles, available from AWS DMS version 3.5.4. Default is false.</summary>
+    [JsonPropertyName("useLargeIntegerValue")]
+    public bool? UseLargeIntegerValue { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -431,163 +439,6 @@ public partial class V1beta1EndpointSpecForProviderRedshiftSettings
     public string? ServiceAccessRoleArn { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointSpecForProviderS3Settings
-{
-    /// <summary>Whether to add column name information to the .csv output file. Default is false.</summary>
-    [JsonPropertyName("addColumnName")]
-    public bool? AddColumnName { get; set; }
-
-    /// <summary>S3 object prefix.</summary>
-    [JsonPropertyName("bucketFolder")]
-    public string? BucketFolder { get; set; }
-
-    /// <summary>S3 bucket name.</summary>
-    [JsonPropertyName("bucketName")]
-    public string? BucketName { get; set; }
-
-    /// <summary>Predefined (canned) access control list for objects created in an S3 bucket. Valid values include none, private, public-read, public-read-write, authenticated-read, aws-exec-read, bucket-owner-read, and bucket-owner-full-control. Default is none.</summary>
-    [JsonPropertyName("cannedAclForObjects")]
-    public string? CannedAclForObjects { get; set; }
-
-    /// <summary>Whether to write insert and update operations to .csv or .parquet output files. Default is false.</summary>
-    [JsonPropertyName("cdcInsertsAndUpdates")]
-    public bool? CdcInsertsAndUpdates { get; set; }
-
-    /// <summary>Whether to write insert operations to .csv or .parquet output files. Default is false.</summary>
-    [JsonPropertyName("cdcInsertsOnly")]
-    public bool? CdcInsertsOnly { get; set; }
-
-    /// <summary>Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is 60.</summary>
-    [JsonPropertyName("cdcMaxBatchInterval")]
-    public double? CdcMaxBatchInterval { get; set; }
-
-    /// <summary>Minimum file size condition as defined in kilobytes to output a file to Amazon S3. Default is 32000. NOTE: Previously, this setting was measured in megabytes but now represents kilobytes. Update configurations accordingly.</summary>
-    [JsonPropertyName("cdcMinFileSize")]
-    public double? CdcMinFileSize { get; set; }
-
-    /// <summary>Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it's optional. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.</summary>
-    [JsonPropertyName("cdcPath")]
-    public string? CdcPath { get; set; }
-
-    /// <summary>Set to compress target files. Default is NONE. Valid values are GZIP and NONE.</summary>
-    [JsonPropertyName("compressionType")]
-    public string? CompressionType { get; set; }
-
-    /// <summary>Delimiter used to separate columns in the source files. Default is ,.</summary>
-    [JsonPropertyName("csvDelimiter")]
-    public string? CsvDelimiter { get; set; }
-
-    /// <summary>String to use for all columns not included in the supplemental log.</summary>
-    [JsonPropertyName("csvNoSupValue")]
-    public string? CsvNoSupValue { get; set; }
-
-    /// <summary>String to as null when writing to the target.</summary>
-    [JsonPropertyName("csvNullValue")]
-    public string? CsvNullValue { get; set; }
-
-    /// <summary>Delimiter used to separate rows in the source files. Default is \n.</summary>
-    [JsonPropertyName("csvRowDelimiter")]
-    public string? CsvRowDelimiter { get; set; }
-
-    /// <summary>Output format for the files that AWS DMS uses to create S3 objects. Valid values are csv and parquet. Default is csv.</summary>
-    [JsonPropertyName("dataFormat")]
-    public string? DataFormat { get; set; }
-
-    /// <summary>Size of one data page in bytes. Default is 1048576 (1 MiB).</summary>
-    [JsonPropertyName("dataPageSize")]
-    public double? DataPageSize { get; set; }
-
-    /// <summary>Date separating delimiter to use during folder partitioning. Valid values are SLASH, UNDERSCORE, DASH, and NONE. Default is SLASH.</summary>
-    [JsonPropertyName("datePartitionDelimiter")]
-    public string? DatePartitionDelimiter { get; set; }
-
-    /// <summary>Partition S3 bucket folders based on transaction commit dates. Default is false.</summary>
-    [JsonPropertyName("datePartitionEnabled")]
-    public bool? DatePartitionEnabled { get; set; }
-
-    /// <summary>Date format to use during folder partitioning. Use this parameter when date_partition_enabled is set to true. Valid values are YYYYMMDD, YYYYMMDDHH, YYYYMM, MMYYYYDD, and DDMMYYYY. Default is YYYYMMDD.</summary>
-    [JsonPropertyName("datePartitionSequence")]
-    public string? DatePartitionSequence { get; set; }
-
-    /// <summary>Maximum size in bytes of an encoded dictionary page of a column. Default is 1048576 (1 MiB).</summary>
-    [JsonPropertyName("dictPageSizeLimit")]
-    public double? DictPageSizeLimit { get; set; }
-
-    /// <summary>Whether to enable statistics for Parquet pages and row groups. Default is true.</summary>
-    [JsonPropertyName("enableStatistics")]
-    public bool? EnableStatistics { get; set; }
-
-    /// <summary>Type of encoding to use. Value values are rle_dictionary, plain, and plain_dictionary. Default is rle_dictionary.</summary>
-    [JsonPropertyName("encodingType")]
-    public string? EncodingType { get; set; }
-
-    /// <summary>Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are SSE_S3 and SSE_KMS. Default is SSE_S3.</summary>
-    [JsonPropertyName("encryptionMode")]
-    public string? EncryptionMode { get; set; }
-
-    /// <summary>JSON document that describes how AWS DMS should interpret the data.</summary>
-    [JsonPropertyName("externalTableDefinition")]
-    public string? ExternalTableDefinition { get; set; }
-
-    /// <summary>Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.</summary>
-    [JsonPropertyName("glueCatalogGeneration")]
-    public bool? GlueCatalogGeneration { get; set; }
-
-    /// <summary>When this value is set to 1, DMS ignores the first row header in a .csv file. Default is 0.</summary>
-    [JsonPropertyName("ignoreHeaderRows")]
-    public double? IgnoreHeaderRows { get; set; }
-
-    /// <summary>Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is false.</summary>
-    [JsonPropertyName("includeOpForFullLoad")]
-    public bool? IncludeOpForFullLoad { get; set; }
-
-    /// <summary>Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from 1 to 1048576. Default is 1048576 (1 GB).</summary>
-    [JsonPropertyName("maxFileSize")]
-    public double? MaxFileSize { get; set; }
-
-    /// <summary>- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is false.</summary>
-    [JsonPropertyName("parquetTimestampInMillisecond")]
-    public bool? ParquetTimestampInMillisecond { get; set; }
-
-    /// <summary>Version of the .parquet file format. Default is parquet-1-0. Valid values are parquet-1-0 and parquet-2-0.</summary>
-    [JsonPropertyName("parquetVersion")]
-    public string? ParquetVersion { get; set; }
-
-    /// <summary>Whether DMS saves the transaction order for a CDC load on the S3 target specified by cdc_path. Default is false.</summary>
-    [JsonPropertyName("preserveTransactions")]
-    public bool? PreserveTransactions { get; set; }
-
-    /// <summary>For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is true.</summary>
-    [JsonPropertyName("rfc4180")]
-    public bool? Rfc4180 { get; set; }
-
-    /// <summary>Number of rows in a row group. Default is 10000.</summary>
-    [JsonPropertyName("rowGroupLength")]
-    public double? RowGroupLength { get; set; }
-
-    /// <summary>ARN or Id of KMS Key to use when encryption_mode is SSE_KMS.</summary>
-    [JsonPropertyName("serverSideEncryptionKmsKeyId")]
-    public string? ServerSideEncryptionKmsKeyId { get; set; }
-
-    /// <summary>ARN of the IAM Role with permissions to read from or write to the S3 Bucket.</summary>
-    [JsonPropertyName("serviceAccessRoleArn")]
-    public string? ServiceAccessRoleArn { get; set; }
-
-    /// <summary>Column to add with timestamp information to the endpoint data for an Amazon S3 target.</summary>
-    [JsonPropertyName("timestampColumnName")]
-    public string? TimestampColumnName { get; set; }
-
-    /// <summary>Whether to use csv_no_sup_value for columns not included in the supplemental log.</summary>
-    [JsonPropertyName("useCsvNoSupValue")]
-    public bool? UseCsvNoSupValue { get; set; }
-
-    /// <summary>When set to true, uses the task start time as the timestamp column value instead of the time data is written to target. For full load, when set to true, each row of the timestamp column contains the task start time. For CDC loads, each row of the timestamp column contains the transaction commit time. When set to false, the full load timestamp in the timestamp column increments with the time data arrives at the target. Default is false.</summary>
-    [JsonPropertyName("useTaskStartTimeForFullLoadTimestamp")]
-    public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderSecretsManagerAccessRoleArnRefPolicy
@@ -720,7 +571,7 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("endpointType")]
     public string? EndpointType { get; set; }
 
-    /// <summary>Type of engine for the endpoint. Valid values are aurora, aurora-postgresql, azuredb, azure-sql-managed-instance, babelfish, db2, db2-zos, docdb, dynamodb, elasticsearch, kafka, kinesis, mariadb, mongodb, mysql, opensearch, oracle, postgres, redshift, s3, sqlserver, sybase. Please note that some of engine names are available only for target endpoint type (e.g. redshift).</summary>
+    /// <summary>Type of engine for the endpoint. Valid values are aurora, aurora-postgresql, aurora-serverless, aurora-postgresql-serverless,azuredb, azure-sql-managed-instance, babelfish, db2, db2-zos, docdb, dynamodb, elasticsearch, kafka, kinesis, mariadb, mongodb, mysql, opensearch, oracle, postgres, redshift,redshift-serverless, s3, sqlserver, neptune ,sybase. Please note that some of engine names are available only for target endpoint type (e.g. redshift).</summary>
     [JsonPropertyName("engineName")]
     public string? EngineName { get; set; }
 
@@ -736,7 +587,7 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("kinesisSettings")]
     public IList<V1beta1EndpointSpecForProviderKinesisSettings>? KinesisSettings { get; set; }
 
-    /// <summary>ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for kms_key_arn, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region. To encrypt an S3 target with a KMS Key, use the parameter s3_settings.server_side_encryption_kms_key_id. When engine_name is redshift, kms_key_arn is the KMS Key for the Redshift target and the parameter redshift_settings.server_side_encryption_kms_key_id encrypts the S3 intermediate storage.</summary>
+    /// <summary>ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for kms_key_arn, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region. When engine_name is redshift, kms_key_arn is the KMS Key for the Redshift target and the parameter redshift_settings.server_side_encryption_kms_key_id encrypts the S3 intermediate storage.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -776,13 +627,9 @@ public partial class V1beta1EndpointSpecForProvider
     [JsonPropertyName("redshiftSettings")]
     public IList<V1beta1EndpointSpecForProviderRedshiftSettings>? RedshiftSettings { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
-
-    /// <summary>(Deprecated, use the aws_dms_s3_endpoint resource instead) Configuration block for S3 settings. See below. This argument is deprecated and will be removed in a future version; use aws_dms_s3_endpoint instead</summary>
-    [JsonPropertyName("s3Settings")]
-    public IList<V1beta1EndpointSpecForProviderS3Settings>? S3Settings { get; set; }
 
     /// <summary>ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in the Secrets Manager secret referred to by secrets_manager_arn. The role must allow the iam:PassRole action.</summary>
     [JsonPropertyName("secretsManagerAccessRoleArn")]
@@ -932,6 +779,10 @@ public partial class V1beta1EndpointSpecInitProviderKafkaSettings
     [JsonPropertyName("partitionIncludeSchemaTable")]
     public bool? PartitionIncludeSchemaTable { get; set; }
 
+    /// <summary>For SASL/SSL authentication, AWS DMS supports the scram-sha-512 mechanism by default. AWS DMS versions 3.5.0 and later also support the PLAIN mechanism. To use the PLAIN mechanism, set this parameter to plain.</summary>
+    [JsonPropertyName("saslMechanism")]
+    public string? SaslMechanism { get; set; }
+
     /// <summary>Secure password you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</summary>
     [JsonPropertyName("saslPasswordSecretRef")]
     public V1beta1EndpointSpecInitProviderKafkaSettingsSaslPasswordSecretRef? SaslPasswordSecretRef { get; set; }
@@ -1004,6 +855,10 @@ public partial class V1beta1EndpointSpecInitProviderKinesisSettings
     /// <summary>ARN of the Kinesis data stream.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
+
+    /// <summary>Use up to 18 digit int instead of casting ints as doubles, available from AWS DMS version 3.5.4. Default is false.</summary>
+    [JsonPropertyName("useLargeIntegerValue")]
+    public bool? UseLargeIntegerValue { get; set; }
 }
 
 /// <summary>Policies for referencing.</summary>
@@ -1252,163 +1107,6 @@ public partial class V1beta1EndpointSpecInitProviderRedshiftSettings
     public string? ServiceAccessRoleArn { get; set; }
 }
 
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointSpecInitProviderS3Settings
-{
-    /// <summary>Whether to add column name information to the .csv output file. Default is false.</summary>
-    [JsonPropertyName("addColumnName")]
-    public bool? AddColumnName { get; set; }
-
-    /// <summary>S3 object prefix.</summary>
-    [JsonPropertyName("bucketFolder")]
-    public string? BucketFolder { get; set; }
-
-    /// <summary>S3 bucket name.</summary>
-    [JsonPropertyName("bucketName")]
-    public string? BucketName { get; set; }
-
-    /// <summary>Predefined (canned) access control list for objects created in an S3 bucket. Valid values include none, private, public-read, public-read-write, authenticated-read, aws-exec-read, bucket-owner-read, and bucket-owner-full-control. Default is none.</summary>
-    [JsonPropertyName("cannedAclForObjects")]
-    public string? CannedAclForObjects { get; set; }
-
-    /// <summary>Whether to write insert and update operations to .csv or .parquet output files. Default is false.</summary>
-    [JsonPropertyName("cdcInsertsAndUpdates")]
-    public bool? CdcInsertsAndUpdates { get; set; }
-
-    /// <summary>Whether to write insert operations to .csv or .parquet output files. Default is false.</summary>
-    [JsonPropertyName("cdcInsertsOnly")]
-    public bool? CdcInsertsOnly { get; set; }
-
-    /// <summary>Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is 60.</summary>
-    [JsonPropertyName("cdcMaxBatchInterval")]
-    public double? CdcMaxBatchInterval { get; set; }
-
-    /// <summary>Minimum file size condition as defined in kilobytes to output a file to Amazon S3. Default is 32000. NOTE: Previously, this setting was measured in megabytes but now represents kilobytes. Update configurations accordingly.</summary>
-    [JsonPropertyName("cdcMinFileSize")]
-    public double? CdcMinFileSize { get; set; }
-
-    /// <summary>Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it's optional. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.</summary>
-    [JsonPropertyName("cdcPath")]
-    public string? CdcPath { get; set; }
-
-    /// <summary>Set to compress target files. Default is NONE. Valid values are GZIP and NONE.</summary>
-    [JsonPropertyName("compressionType")]
-    public string? CompressionType { get; set; }
-
-    /// <summary>Delimiter used to separate columns in the source files. Default is ,.</summary>
-    [JsonPropertyName("csvDelimiter")]
-    public string? CsvDelimiter { get; set; }
-
-    /// <summary>String to use for all columns not included in the supplemental log.</summary>
-    [JsonPropertyName("csvNoSupValue")]
-    public string? CsvNoSupValue { get; set; }
-
-    /// <summary>String to as null when writing to the target.</summary>
-    [JsonPropertyName("csvNullValue")]
-    public string? CsvNullValue { get; set; }
-
-    /// <summary>Delimiter used to separate rows in the source files. Default is \n.</summary>
-    [JsonPropertyName("csvRowDelimiter")]
-    public string? CsvRowDelimiter { get; set; }
-
-    /// <summary>Output format for the files that AWS DMS uses to create S3 objects. Valid values are csv and parquet. Default is csv.</summary>
-    [JsonPropertyName("dataFormat")]
-    public string? DataFormat { get; set; }
-
-    /// <summary>Size of one data page in bytes. Default is 1048576 (1 MiB).</summary>
-    [JsonPropertyName("dataPageSize")]
-    public double? DataPageSize { get; set; }
-
-    /// <summary>Date separating delimiter to use during folder partitioning. Valid values are SLASH, UNDERSCORE, DASH, and NONE. Default is SLASH.</summary>
-    [JsonPropertyName("datePartitionDelimiter")]
-    public string? DatePartitionDelimiter { get; set; }
-
-    /// <summary>Partition S3 bucket folders based on transaction commit dates. Default is false.</summary>
-    [JsonPropertyName("datePartitionEnabled")]
-    public bool? DatePartitionEnabled { get; set; }
-
-    /// <summary>Date format to use during folder partitioning. Use this parameter when date_partition_enabled is set to true. Valid values are YYYYMMDD, YYYYMMDDHH, YYYYMM, MMYYYYDD, and DDMMYYYY. Default is YYYYMMDD.</summary>
-    [JsonPropertyName("datePartitionSequence")]
-    public string? DatePartitionSequence { get; set; }
-
-    /// <summary>Maximum size in bytes of an encoded dictionary page of a column. Default is 1048576 (1 MiB).</summary>
-    [JsonPropertyName("dictPageSizeLimit")]
-    public double? DictPageSizeLimit { get; set; }
-
-    /// <summary>Whether to enable statistics for Parquet pages and row groups. Default is true.</summary>
-    [JsonPropertyName("enableStatistics")]
-    public bool? EnableStatistics { get; set; }
-
-    /// <summary>Type of encoding to use. Value values are rle_dictionary, plain, and plain_dictionary. Default is rle_dictionary.</summary>
-    [JsonPropertyName("encodingType")]
-    public string? EncodingType { get; set; }
-
-    /// <summary>Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are SSE_S3 and SSE_KMS. Default is SSE_S3.</summary>
-    [JsonPropertyName("encryptionMode")]
-    public string? EncryptionMode { get; set; }
-
-    /// <summary>JSON document that describes how AWS DMS should interpret the data.</summary>
-    [JsonPropertyName("externalTableDefinition")]
-    public string? ExternalTableDefinition { get; set; }
-
-    /// <summary>Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.</summary>
-    [JsonPropertyName("glueCatalogGeneration")]
-    public bool? GlueCatalogGeneration { get; set; }
-
-    /// <summary>When this value is set to 1, DMS ignores the first row header in a .csv file. Default is 0.</summary>
-    [JsonPropertyName("ignoreHeaderRows")]
-    public double? IgnoreHeaderRows { get; set; }
-
-    /// <summary>Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is false.</summary>
-    [JsonPropertyName("includeOpForFullLoad")]
-    public bool? IncludeOpForFullLoad { get; set; }
-
-    /// <summary>Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from 1 to 1048576. Default is 1048576 (1 GB).</summary>
-    [JsonPropertyName("maxFileSize")]
-    public double? MaxFileSize { get; set; }
-
-    /// <summary>- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is false.</summary>
-    [JsonPropertyName("parquetTimestampInMillisecond")]
-    public bool? ParquetTimestampInMillisecond { get; set; }
-
-    /// <summary>Version of the .parquet file format. Default is parquet-1-0. Valid values are parquet-1-0 and parquet-2-0.</summary>
-    [JsonPropertyName("parquetVersion")]
-    public string? ParquetVersion { get; set; }
-
-    /// <summary>Whether DMS saves the transaction order for a CDC load on the S3 target specified by cdc_path. Default is false.</summary>
-    [JsonPropertyName("preserveTransactions")]
-    public bool? PreserveTransactions { get; set; }
-
-    /// <summary>For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is true.</summary>
-    [JsonPropertyName("rfc4180")]
-    public bool? Rfc4180 { get; set; }
-
-    /// <summary>Number of rows in a row group. Default is 10000.</summary>
-    [JsonPropertyName("rowGroupLength")]
-    public double? RowGroupLength { get; set; }
-
-    /// <summary>ARN or Id of KMS Key to use when encryption_mode is SSE_KMS.</summary>
-    [JsonPropertyName("serverSideEncryptionKmsKeyId")]
-    public string? ServerSideEncryptionKmsKeyId { get; set; }
-
-    /// <summary>ARN of the IAM Role with permissions to read from or write to the S3 Bucket.</summary>
-    [JsonPropertyName("serviceAccessRoleArn")]
-    public string? ServiceAccessRoleArn { get; set; }
-
-    /// <summary>Column to add with timestamp information to the endpoint data for an Amazon S3 target.</summary>
-    [JsonPropertyName("timestampColumnName")]
-    public string? TimestampColumnName { get; set; }
-
-    /// <summary>Whether to use csv_no_sup_value for columns not included in the supplemental log.</summary>
-    [JsonPropertyName("useCsvNoSupValue")]
-    public bool? UseCsvNoSupValue { get; set; }
-
-    /// <summary>When set to true, uses the task start time as the timestamp column value instead of the time data is written to target. For full load, when set to true, each row of the timestamp column contains the task start time. For CDC loads, each row of the timestamp column contains the transaction commit time. When set to false, the full load timestamp in the timestamp column increments with the time data arrives at the target. Default is false.</summary>
-    [JsonPropertyName("useTaskStartTimeForFullLoadTimestamp")]
-    public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
-}
-
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecInitProviderSecretsManagerAccessRoleArnRefPolicy
@@ -1541,7 +1239,7 @@ public partial class V1beta1EndpointSpecInitProvider
     [JsonPropertyName("endpointType")]
     public string? EndpointType { get; set; }
 
-    /// <summary>Type of engine for the endpoint. Valid values are aurora, aurora-postgresql, azuredb, azure-sql-managed-instance, babelfish, db2, db2-zos, docdb, dynamodb, elasticsearch, kafka, kinesis, mariadb, mongodb, mysql, opensearch, oracle, postgres, redshift, s3, sqlserver, sybase. Please note that some of engine names are available only for target endpoint type (e.g. redshift).</summary>
+    /// <summary>Type of engine for the endpoint. Valid values are aurora, aurora-postgresql, aurora-serverless, aurora-postgresql-serverless,azuredb, azure-sql-managed-instance, babelfish, db2, db2-zos, docdb, dynamodb, elasticsearch, kafka, kinesis, mariadb, mongodb, mysql, opensearch, oracle, postgres, redshift,redshift-serverless, s3, sqlserver, neptune ,sybase. Please note that some of engine names are available only for target endpoint type (e.g. redshift).</summary>
     [JsonPropertyName("engineName")]
     public string? EngineName { get; set; }
 
@@ -1557,7 +1255,7 @@ public partial class V1beta1EndpointSpecInitProvider
     [JsonPropertyName("kinesisSettings")]
     public IList<V1beta1EndpointSpecInitProviderKinesisSettings>? KinesisSettings { get; set; }
 
-    /// <summary>ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for kms_key_arn, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region. To encrypt an S3 target with a KMS Key, use the parameter s3_settings.server_side_encryption_kms_key_id. When engine_name is redshift, kms_key_arn is the KMS Key for the Redshift target and the parameter redshift_settings.server_side_encryption_kms_key_id encrypts the S3 intermediate storage.</summary>
+    /// <summary>ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for kms_key_arn, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region. When engine_name is redshift, kms_key_arn is the KMS Key for the Redshift target and the parameter redshift_settings.server_side_encryption_kms_key_id encrypts the S3 intermediate storage.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -1596,10 +1294,6 @@ public partial class V1beta1EndpointSpecInitProvider
     /// <summary>Configuration block for Redshift settings. See below.</summary>
     [JsonPropertyName("redshiftSettings")]
     public IList<V1beta1EndpointSpecInitProviderRedshiftSettings>? RedshiftSettings { get; set; }
-
-    /// <summary>(Deprecated, use the aws_dms_s3_endpoint resource instead) Configuration block for S3 settings. See below. This argument is deprecated and will be removed in a future version; use aws_dms_s3_endpoint instead</summary>
-    [JsonPropertyName("s3Settings")]
-    public IList<V1beta1EndpointSpecInitProviderS3Settings>? S3Settings { get; set; }
 
     /// <summary>ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in the Secrets Manager secret referred to by secrets_manager_arn. The role must allow the iam:PassRole action.</summary>
     [JsonPropertyName("secretsManagerAccessRoleArn")]
@@ -1847,6 +1541,10 @@ public partial class V1beta1EndpointStatusAtProviderKafkaSettings
     [JsonPropertyName("partitionIncludeSchemaTable")]
     public bool? PartitionIncludeSchemaTable { get; set; }
 
+    /// <summary>For SASL/SSL authentication, AWS DMS supports the scram-sha-512 mechanism by default. AWS DMS versions 3.5.0 and later also support the PLAIN mechanism. To use the PLAIN mechanism, set this parameter to plain.</summary>
+    [JsonPropertyName("saslMechanism")]
+    public string? SaslMechanism { get; set; }
+
     /// <summary>Secure user name you created when you first set up your MSK cluster to validate a client identity and make an encrypted connection between server and client using SASL-SSL authentication.</summary>
     [JsonPropertyName("saslUsername")]
     public string? SaslUsername { get; set; }
@@ -1911,6 +1609,10 @@ public partial class V1beta1EndpointStatusAtProviderKinesisSettings
     /// <summary>ARN of the Kinesis data stream.</summary>
     [JsonPropertyName("streamArn")]
     public string? StreamArn { get; set; }
+
+    /// <summary>Use up to 18 digit int instead of casting ints as doubles, available from AWS DMS version 3.5.4. Default is false.</summary>
+    [JsonPropertyName("useLargeIntegerValue")]
+    public bool? UseLargeIntegerValue { get; set; }
 }
 
 /// <summary></summary>
@@ -2067,163 +1769,6 @@ public partial class V1beta1EndpointStatusAtProviderRedshiftSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1EndpointStatusAtProviderS3Settings
-{
-    /// <summary>Whether to add column name information to the .csv output file. Default is false.</summary>
-    [JsonPropertyName("addColumnName")]
-    public bool? AddColumnName { get; set; }
-
-    /// <summary>S3 object prefix.</summary>
-    [JsonPropertyName("bucketFolder")]
-    public string? BucketFolder { get; set; }
-
-    /// <summary>S3 bucket name.</summary>
-    [JsonPropertyName("bucketName")]
-    public string? BucketName { get; set; }
-
-    /// <summary>Predefined (canned) access control list for objects created in an S3 bucket. Valid values include none, private, public-read, public-read-write, authenticated-read, aws-exec-read, bucket-owner-read, and bucket-owner-full-control. Default is none.</summary>
-    [JsonPropertyName("cannedAclForObjects")]
-    public string? CannedAclForObjects { get; set; }
-
-    /// <summary>Whether to write insert and update operations to .csv or .parquet output files. Default is false.</summary>
-    [JsonPropertyName("cdcInsertsAndUpdates")]
-    public bool? CdcInsertsAndUpdates { get; set; }
-
-    /// <summary>Whether to write insert operations to .csv or .parquet output files. Default is false.</summary>
-    [JsonPropertyName("cdcInsertsOnly")]
-    public bool? CdcInsertsOnly { get; set; }
-
-    /// <summary>Maximum length of the interval, defined in seconds, after which to output a file to Amazon S3. Default is 60.</summary>
-    [JsonPropertyName("cdcMaxBatchInterval")]
-    public double? CdcMaxBatchInterval { get; set; }
-
-    /// <summary>Minimum file size condition as defined in kilobytes to output a file to Amazon S3. Default is 32000. NOTE: Previously, this setting was measured in megabytes but now represents kilobytes. Update configurations accordingly.</summary>
-    [JsonPropertyName("cdcMinFileSize")]
-    public double? CdcMinFileSize { get; set; }
-
-    /// <summary>Folder path of CDC files. For an S3 source, this setting is required if a task captures change data; otherwise, it's optional. If cdc_path is set, AWS DMS reads CDC files from this path and replicates the data changes to the target endpoint. Supported in AWS DMS versions 3.4.2 and later.</summary>
-    [JsonPropertyName("cdcPath")]
-    public string? CdcPath { get; set; }
-
-    /// <summary>Set to compress target files. Default is NONE. Valid values are GZIP and NONE.</summary>
-    [JsonPropertyName("compressionType")]
-    public string? CompressionType { get; set; }
-
-    /// <summary>Delimiter used to separate columns in the source files. Default is ,.</summary>
-    [JsonPropertyName("csvDelimiter")]
-    public string? CsvDelimiter { get; set; }
-
-    /// <summary>String to use for all columns not included in the supplemental log.</summary>
-    [JsonPropertyName("csvNoSupValue")]
-    public string? CsvNoSupValue { get; set; }
-
-    /// <summary>String to as null when writing to the target.</summary>
-    [JsonPropertyName("csvNullValue")]
-    public string? CsvNullValue { get; set; }
-
-    /// <summary>Delimiter used to separate rows in the source files. Default is \n.</summary>
-    [JsonPropertyName("csvRowDelimiter")]
-    public string? CsvRowDelimiter { get; set; }
-
-    /// <summary>Output format for the files that AWS DMS uses to create S3 objects. Valid values are csv and parquet. Default is csv.</summary>
-    [JsonPropertyName("dataFormat")]
-    public string? DataFormat { get; set; }
-
-    /// <summary>Size of one data page in bytes. Default is 1048576 (1 MiB).</summary>
-    [JsonPropertyName("dataPageSize")]
-    public double? DataPageSize { get; set; }
-
-    /// <summary>Date separating delimiter to use during folder partitioning. Valid values are SLASH, UNDERSCORE, DASH, and NONE. Default is SLASH.</summary>
-    [JsonPropertyName("datePartitionDelimiter")]
-    public string? DatePartitionDelimiter { get; set; }
-
-    /// <summary>Partition S3 bucket folders based on transaction commit dates. Default is false.</summary>
-    [JsonPropertyName("datePartitionEnabled")]
-    public bool? DatePartitionEnabled { get; set; }
-
-    /// <summary>Date format to use during folder partitioning. Use this parameter when date_partition_enabled is set to true. Valid values are YYYYMMDD, YYYYMMDDHH, YYYYMM, MMYYYYDD, and DDMMYYYY. Default is YYYYMMDD.</summary>
-    [JsonPropertyName("datePartitionSequence")]
-    public string? DatePartitionSequence { get; set; }
-
-    /// <summary>Maximum size in bytes of an encoded dictionary page of a column. Default is 1048576 (1 MiB).</summary>
-    [JsonPropertyName("dictPageSizeLimit")]
-    public double? DictPageSizeLimit { get; set; }
-
-    /// <summary>Whether to enable statistics for Parquet pages and row groups. Default is true.</summary>
-    [JsonPropertyName("enableStatistics")]
-    public bool? EnableStatistics { get; set; }
-
-    /// <summary>Type of encoding to use. Value values are rle_dictionary, plain, and plain_dictionary. Default is rle_dictionary.</summary>
-    [JsonPropertyName("encodingType")]
-    public string? EncodingType { get; set; }
-
-    /// <summary>Server-side encryption mode that you want to encrypt your .csv or .parquet object files copied to S3. Valid values are SSE_S3 and SSE_KMS. Default is SSE_S3.</summary>
-    [JsonPropertyName("encryptionMode")]
-    public string? EncryptionMode { get; set; }
-
-    /// <summary>JSON document that describes how AWS DMS should interpret the data.</summary>
-    [JsonPropertyName("externalTableDefinition")]
-    public string? ExternalTableDefinition { get; set; }
-
-    /// <summary>Whether to integrate AWS Glue Data Catalog with an Amazon S3 target. See Using AWS Glue Data Catalog with an Amazon S3 target for AWS DMS for more information. Default is false.</summary>
-    [JsonPropertyName("glueCatalogGeneration")]
-    public bool? GlueCatalogGeneration { get; set; }
-
-    /// <summary>When this value is set to 1, DMS ignores the first row header in a .csv file. Default is 0.</summary>
-    [JsonPropertyName("ignoreHeaderRows")]
-    public double? IgnoreHeaderRows { get; set; }
-
-    /// <summary>Whether to enable a full load to write INSERT operations to the .csv output files only to indicate how the rows were added to the source database. Default is false.</summary>
-    [JsonPropertyName("includeOpForFullLoad")]
-    public bool? IncludeOpForFullLoad { get; set; }
-
-    /// <summary>Maximum size (in KB) of any .csv file to be created while migrating to an S3 target during full load. Valid values are from 1 to 1048576. Default is 1048576 (1 GB).</summary>
-    [JsonPropertyName("maxFileSize")]
-    public double? MaxFileSize { get; set; }
-
-    /// <summary>- Specifies the precision of any TIMESTAMP column values written to an S3 object file in .parquet format. Default is false.</summary>
-    [JsonPropertyName("parquetTimestampInMillisecond")]
-    public bool? ParquetTimestampInMillisecond { get; set; }
-
-    /// <summary>Version of the .parquet file format. Default is parquet-1-0. Valid values are parquet-1-0 and parquet-2-0.</summary>
-    [JsonPropertyName("parquetVersion")]
-    public string? ParquetVersion { get; set; }
-
-    /// <summary>Whether DMS saves the transaction order for a CDC load on the S3 target specified by cdc_path. Default is false.</summary>
-    [JsonPropertyName("preserveTransactions")]
-    public bool? PreserveTransactions { get; set; }
-
-    /// <summary>For an S3 source, whether each leading double quotation mark has to be followed by an ending double quotation mark. Default is true.</summary>
-    [JsonPropertyName("rfc4180")]
-    public bool? Rfc4180 { get; set; }
-
-    /// <summary>Number of rows in a row group. Default is 10000.</summary>
-    [JsonPropertyName("rowGroupLength")]
-    public double? RowGroupLength { get; set; }
-
-    /// <summary>ARN or Id of KMS Key to use when encryption_mode is SSE_KMS.</summary>
-    [JsonPropertyName("serverSideEncryptionKmsKeyId")]
-    public string? ServerSideEncryptionKmsKeyId { get; set; }
-
-    /// <summary>ARN of the IAM Role with permissions to read from or write to the S3 Bucket.</summary>
-    [JsonPropertyName("serviceAccessRoleArn")]
-    public string? ServiceAccessRoleArn { get; set; }
-
-    /// <summary>Column to add with timestamp information to the endpoint data for an Amazon S3 target.</summary>
-    [JsonPropertyName("timestampColumnName")]
-    public string? TimestampColumnName { get; set; }
-
-    /// <summary>Whether to use csv_no_sup_value for columns not included in the supplemental log.</summary>
-    [JsonPropertyName("useCsvNoSupValue")]
-    public bool? UseCsvNoSupValue { get; set; }
-
-    /// <summary>When set to true, uses the task start time as the timestamp column value instead of the time data is written to target. For full load, when set to true, each row of the timestamp column contains the task start time. For CDC loads, each row of the timestamp column contains the transaction commit time. When set to false, the full load timestamp in the timestamp column increments with the time data arrives at the target. Default is false.</summary>
-    [JsonPropertyName("useTaskStartTimeForFullLoadTimestamp")]
-    public bool? UseTaskStartTimeForFullLoadTimestamp { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointStatusAtProvider
 {
     /// <summary>ARN for the certificate.</summary>
@@ -2246,7 +1791,7 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("endpointType")]
     public string? EndpointType { get; set; }
 
-    /// <summary>Type of engine for the endpoint. Valid values are aurora, aurora-postgresql, azuredb, azure-sql-managed-instance, babelfish, db2, db2-zos, docdb, dynamodb, elasticsearch, kafka, kinesis, mariadb, mongodb, mysql, opensearch, oracle, postgres, redshift, s3, sqlserver, sybase. Please note that some of engine names are available only for target endpoint type (e.g. redshift).</summary>
+    /// <summary>Type of engine for the endpoint. Valid values are aurora, aurora-postgresql, aurora-serverless, aurora-postgresql-serverless,azuredb, azure-sql-managed-instance, babelfish, db2, db2-zos, docdb, dynamodb, elasticsearch, kafka, kinesis, mariadb, mongodb, mysql, opensearch, oracle, postgres, redshift,redshift-serverless, s3, sqlserver, neptune ,sybase. Please note that some of engine names are available only for target endpoint type (e.g. redshift).</summary>
     [JsonPropertyName("engineName")]
     public string? EngineName { get; set; }
 
@@ -2266,7 +1811,7 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("kinesisSettings")]
     public IList<V1beta1EndpointStatusAtProviderKinesisSettings>? KinesisSettings { get; set; }
 
-    /// <summary>ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for kms_key_arn, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region. To encrypt an S3 target with a KMS Key, use the parameter s3_settings.server_side_encryption_kms_key_id. When engine_name is redshift, kms_key_arn is the KMS Key for the Redshift target and the parameter redshift_settings.server_side_encryption_kms_key_id encrypts the S3 intermediate storage.</summary>
+    /// <summary>ARN for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for kms_key_arn, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region. When engine_name is redshift, kms_key_arn is the KMS Key for the Redshift target and the parameter redshift_settings.server_side_encryption_kms_key_id encrypts the S3 intermediate storage.</summary>
     [JsonPropertyName("kmsKeyArn")]
     public string? KmsKeyArn { get; set; }
 
@@ -2294,9 +1839,9 @@ public partial class V1beta1EndpointStatusAtProvider
     [JsonPropertyName("redshiftSettings")]
     public IList<V1beta1EndpointStatusAtProviderRedshiftSettings>? RedshiftSettings { get; set; }
 
-    /// <summary>(Deprecated, use the aws_dms_s3_endpoint resource instead) Configuration block for S3 settings. See below. This argument is deprecated and will be removed in a future version; use aws_dms_s3_endpoint instead</summary>
-    [JsonPropertyName("s3Settings")]
-    public IList<V1beta1EndpointStatusAtProviderS3Settings>? S3Settings { get; set; }
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>ARN of the IAM role that specifies AWS DMS as the trusted entity and has the required permissions to access the value in the Secrets Manager secret referred to by secrets_manager_arn. The role must allow the iam:PassRole action.</summary>
     [JsonPropertyName("secretsManagerAccessRoleArn")]

@@ -68,7 +68,7 @@ public partial class V1beta1TransitGatewayVPCAttachmentAccepterSpecForProviderTr
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayVPCAttachmentAccepterSpecForProvider
 {
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -333,6 +333,10 @@ public partial class V1beta1TransitGatewayVPCAttachmentAccepterStatusAtProvider
     /// <summary>Whether IPv6 support is enabled. Valid values: disable, enable.</summary>
     [JsonPropertyName("ipv6Support")]
     public string? Ipv6Support { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether Security Group Referencing Support is enabled. Valid values: disable, enable.</summary>
     [JsonPropertyName("securityGroupReferencingSupport")]

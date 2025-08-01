@@ -92,7 +92,7 @@ public partial class V1beta1BucketPublicAccessBlockSpecForProvider
     [JsonPropertyName("ignorePublicAcls")]
     public bool? IgnorePublicAcls { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -345,6 +345,10 @@ public partial class V1beta1BucketPublicAccessBlockStatusAtProvider
     /// <summary>Whether Amazon S3 should ignore public ACLs for this bucket. Defaults to false. Enabling this setting does not affect the persistence of any existing ACLs and doesn't prevent new public ACLs from being set. When set to true causes Amazon S3 to:</summary>
     [JsonPropertyName("ignorePublicAcls")]
     public bool? IgnorePublicAcls { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Whether Amazon S3 should restrict public bucket policies for this bucket. Defaults to false. Enabling this setting does not affect the previously stored bucket policy, except that public and cross-account access within the public bucket policy, including non-public delegation to specific accounts, is blocked. When set to true:</summary>
     [JsonPropertyName("restrictPublicBuckets")]

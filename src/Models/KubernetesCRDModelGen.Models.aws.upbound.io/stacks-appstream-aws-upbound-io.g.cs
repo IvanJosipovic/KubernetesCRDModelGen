@@ -64,7 +64,7 @@ public partial class V1beta1StackSpecForProviderStreamingExperienceSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecForProviderUserSettings
 {
-    /// <summary>Action that is enabled or disabled. Valid values are CLIPBOARD_COPY_FROM_LOCAL_DEVICE,  CLIPBOARD_COPY_TO_LOCAL_DEVICE, FILE_UPLOAD, FILE_DOWNLOAD, PRINTING_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, or DOMAIN_SMART_CARD_SIGNIN.</summary>
+    /// <summary>Action that is enabled or disabled. Valid values are AUTO_TIME_ZONE_REDIRECTION, CLIPBOARD_COPY_FROM_LOCAL_DEVICE, CLIPBOARD_COPY_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, DOMAIN_SMART_CARD_SIGNIN, FILE_UPLOAD, FILE_DOWNLOAD, or PRINTING_TO_LOCAL_DEVICE.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -109,7 +109,7 @@ public partial class V1beta1StackSpecForProvider
     [JsonPropertyName("redirectUrl")]
     public string? RedirectUrl { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -186,7 +186,7 @@ public partial class V1beta1StackSpecInitProviderStreamingExperienceSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSpecInitProviderUserSettings
 {
-    /// <summary>Action that is enabled or disabled. Valid values are CLIPBOARD_COPY_FROM_LOCAL_DEVICE,  CLIPBOARD_COPY_TO_LOCAL_DEVICE, FILE_UPLOAD, FILE_DOWNLOAD, PRINTING_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, or DOMAIN_SMART_CARD_SIGNIN.</summary>
+    /// <summary>Action that is enabled or disabled. Valid values are AUTO_TIME_ZONE_REDIRECTION, CLIPBOARD_COPY_FROM_LOCAL_DEVICE, CLIPBOARD_COPY_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, DOMAIN_SMART_CARD_SIGNIN, FILE_UPLOAD, FILE_DOWNLOAD, or PRINTING_TO_LOCAL_DEVICE.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -436,7 +436,7 @@ public partial class V1beta1StackStatusAtProviderStreamingExperienceSettings
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackStatusAtProviderUserSettings
 {
-    /// <summary>Action that is enabled or disabled. Valid values are CLIPBOARD_COPY_FROM_LOCAL_DEVICE,  CLIPBOARD_COPY_TO_LOCAL_DEVICE, FILE_UPLOAD, FILE_DOWNLOAD, PRINTING_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, or DOMAIN_SMART_CARD_SIGNIN.</summary>
+    /// <summary>Action that is enabled or disabled. Valid values are AUTO_TIME_ZONE_REDIRECTION, CLIPBOARD_COPY_FROM_LOCAL_DEVICE, CLIPBOARD_COPY_TO_LOCAL_DEVICE, DOMAIN_PASSWORD_SIGNIN, DOMAIN_SMART_CARD_SIGNIN, FILE_UPLOAD, FILE_DOWNLOAD, or PRINTING_TO_LOCAL_DEVICE.</summary>
     [JsonPropertyName("action")]
     public string? Action { get; set; }
 
@@ -492,6 +492,10 @@ public partial class V1beta1StackStatusAtProvider
     /// <summary>URL that users are redirected to after their streaming session ends.</summary>
     [JsonPropertyName("redirectUrl")]
     public string? RedirectUrl { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Configuration block for the storage connectors to enable. See storage_connectors below.</summary>
     [JsonPropertyName("storageConnectors")]

@@ -32,10 +32,6 @@ public partial class V1beta1AlternateContactSpecForProvider
     [JsonPropertyName("phoneNumber")]
     public string? PhoneNumber { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
-    [JsonPropertyName("region")]
-    public string Region { get; set; }
-
     /// <summary>Title for the alternate contact.</summary>
     [JsonPropertyName("title")]
     public string? Title { get; set; }

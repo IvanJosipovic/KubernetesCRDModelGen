@@ -156,7 +156,7 @@ public partial class V1beta1MetricsDestinationSpecForProvider
     [JsonPropertyName("iamRoleArnSelector")]
     public V1beta1MetricsDestinationSpecForProviderIamRoleArnSelector? IamRoleArnSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -465,6 +465,10 @@ public partial class V1beta1MetricsDestinationStatusAtProvider
     /// <summary>The name of the CloudWatch RUM app monitor that will send the metrics.</summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

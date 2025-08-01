@@ -80,7 +80,7 @@ public partial class V1beta1SnapshotCopyGrantSpecForProvider
     [JsonPropertyName("kmsKeyIdSelector")]
     public V1beta1SnapshotCopyGrantSpecForProviderKmsKeyIdSelector? KmsKeyIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -321,6 +321,10 @@ public partial class V1beta1SnapshotCopyGrantStatusAtProvider
     /// <summary>The unique identifier for the customer master key (CMK) that the grant applies to. Specify the key ID or the Amazon Resource Name (ARN) of the CMK. To specify a CMK in a different AWS account, you must use the key ARN. If not specified, the default key is used.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A friendly name for identifying the grant.</summary>
     [JsonPropertyName("snapshotCopyGrantName")]

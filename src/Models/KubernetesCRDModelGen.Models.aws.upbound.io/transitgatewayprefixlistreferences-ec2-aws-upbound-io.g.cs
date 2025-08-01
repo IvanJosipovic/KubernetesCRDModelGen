@@ -196,7 +196,7 @@ public partial class V1beta1TransitGatewayPrefixListReferenceSpecForProvider
     [JsonPropertyName("prefixListIdSelector")]
     public V1beta1TransitGatewayPrefixListReferenceSpecForProviderPrefixListIdSelector? PrefixListIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -589,6 +589,10 @@ public partial class V1beta1TransitGatewayPrefixListReferenceStatusAtProvider
     /// <summary>EC2 Transit Gateway Route Table identifier and EC2 Prefix List identifier, separated by an underscore (_)</summary>
     [JsonPropertyName("prefixListOwnerId")]
     public string? PrefixListOwnerId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>Identifier of EC2 Transit Gateway Attachment.</summary>
     [JsonPropertyName("transitGatewayAttachmentId")]

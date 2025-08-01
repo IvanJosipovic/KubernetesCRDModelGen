@@ -287,7 +287,10 @@ spec:
                       This option is only available for VPC EIPs.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   tags:
                     additionalProperties:
@@ -295,12 +298,6 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                  vpc:
-                    description: >-
-                      Boolean if the EIP is in a VPC or not. Use domain instead.
-
-                      Defaults to true unless the region supports EC2-Classic.
-                    type: boolean
                 required:
                 - region
                 type: object
@@ -534,12 +531,6 @@ spec:
                     description: Key-value map of resource tags.
                     type: object
                     x-kubernetes-map-type: granular
-                  vpc:
-                    description: >-
-                      Boolean if the EIP is in a VPC or not. Use domain instead.
-
-                      Defaults to true unless the region supports EC2-Classic.
-                    type: boolean
                 type: object
               managementPolicies:
                 default:
@@ -816,6 +807,12 @@ spec:
 
                       This option is only available for VPC EIPs.
                     type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
+                    type: string
                   tags:
                     additionalProperties:
                       type: string
@@ -828,12 +825,6 @@ spec:
                     description: A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.
                     type: object
                     x-kubernetes-map-type: granular
-                  vpc:
-                    description: >-
-                      Boolean if the EIP is in a VPC or not. Use domain instead.
-
-                      Defaults to true unless the region supports EC2-Classic.
-                    type: boolean
                 type: object
               conditions:
                 description: Conditions of the resource.

@@ -154,7 +154,7 @@ public partial class V1beta1UserHierarchyStructureSpecForProvider
     [JsonPropertyName("instanceIdSelector")]
     public V1beta1UserHierarchyStructureSpecForProviderInstanceIdSelector? InstanceIdSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 }
@@ -563,6 +563,10 @@ public partial class V1beta1UserHierarchyStructureStatusAtProvider
     /// <summary>Specifies the identifier of the hosting Amazon Connect Instance.</summary>
     [JsonPropertyName("instanceId")]
     public string? InstanceId { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>

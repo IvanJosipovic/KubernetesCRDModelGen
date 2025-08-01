@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.ecr.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationConfigurationRuleDestination
 {
-    /// <summary>A Region to replicate to.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -60,7 +60,7 @@ public partial class V1beta1ReplicationConfigurationSpecForProviderReplicationCo
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationSpecForProvider
 {
-    /// <summary>A Region to replicate to. Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -258,7 +258,7 @@ public partial class V1beta1ReplicationConfigurationSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicationConfigurationStatusAtProviderReplicationConfigurationRuleDestination
 {
-    /// <summary>A Region to replicate to.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration.</summary>
     [JsonPropertyName("region")]
     public string? Region { get; set; }
 
@@ -309,6 +309,10 @@ public partial class V1beta1ReplicationConfigurationStatusAtProvider
     /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The account ID of the destination registry to replicate to.</summary>
     [JsonPropertyName("registryId")]

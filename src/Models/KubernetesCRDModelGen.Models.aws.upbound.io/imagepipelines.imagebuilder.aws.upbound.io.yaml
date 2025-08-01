@@ -317,7 +317,10 @@ spec:
                     description: Name of the image pipeline.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: Configuration block with schedule settings. Detailed below.
@@ -974,6 +977,12 @@ spec:
                     type: string
                   platform:
                     description: Platform of the image pipeline.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: Configuration block with schedule settings. Detailed below.
@@ -1393,7 +1402,10 @@ spec:
                     description: Name of the image pipeline.
                     type: string
                   region:
-                    description: Region is the region you'd like your resource to be created in.
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: Configuration block with schedule settings. Detailed below.
@@ -2034,6 +2046,12 @@ spec:
                     type: string
                   platform:
                     description: Platform of the image pipeline.
+                    type: string
+                  region:
+                    description: >-
+                      Region where this resource will be managed. Defaults to the Region set in the provider configuration.
+
+                      Region is the region you'd like your resource to be created in.
                     type: string
                   schedule:
                     description: Configuration block with schedule settings. Detailed below.

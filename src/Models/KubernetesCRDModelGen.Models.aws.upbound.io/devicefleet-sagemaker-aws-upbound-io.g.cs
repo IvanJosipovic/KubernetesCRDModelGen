@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceFleetSpecForProviderOutputConfig
 {
-    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.</summary>
+    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker AI uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker AI uses the default KMS key for Amazon S3 for your role's account.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -93,7 +93,7 @@ public partial class V1beta1DeviceFleetSpecForProvider
     [JsonPropertyName("outputConfig")]
     public IList<V1beta1DeviceFleetSpecForProviderOutputConfig>? OutputConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -118,7 +118,7 @@ public partial class V1beta1DeviceFleetSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceFleetSpecInitProviderOutputConfig
 {
-    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.</summary>
+    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker AI uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker AI uses the default KMS key for Amazon S3 for your role's account.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -352,7 +352,7 @@ public partial class V1beta1DeviceFleetSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeviceFleetStatusAtProviderOutputConfig
 {
-    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker uses the default KMS key for Amazon S3 for your role's account.</summary>
+    /// <summary>The AWS Key Management Service (AWS KMS) key that Amazon SageMaker AI uses to encrypt data on the storage volume after compilation job. If you don't provide a KMS key ID, Amazon SageMaker AI uses the default KMS key for Amazon S3 for your role's account.</summary>
     [JsonPropertyName("kmsKeyId")]
     public string? KmsKeyId { get; set; }
 
@@ -388,6 +388,10 @@ public partial class V1beta1DeviceFleetStatusAtProvider
     /// <summary>Specifies details about the repository. see Output Config details below.</summary>
     [JsonPropertyName("outputConfig")]
     public IList<V1beta1DeviceFleetStatusAtProviderOutputConfig>? OutputConfig { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The Amazon Resource Name (ARN) that has access to AWS Internet of Things (IoT).</summary>
     [JsonPropertyName("roleArn")]
@@ -448,7 +452,7 @@ public partial class V1beta1DeviceFleetStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>DeviceFleet is the Schema for the DeviceFleets API. Provides a SageMaker Device Fleet resource.</summary>
+/// <summary>DeviceFleet is the Schema for the DeviceFleets API. Provides a SageMaker AI Device Fleet resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DeviceFleet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DeviceFleetSpec>, IStatus<V1beta1DeviceFleetStatus>
@@ -478,7 +482,7 @@ public partial class V1beta1DeviceFleet : IKubernetesObject<V1ObjectMeta>, ISpec
     public V1beta1DeviceFleetStatus? Status { get; set; }
 }
 
-/// <summary>DeviceFleet is the Schema for the DeviceFleets API. Provides a SageMaker Device Fleet resource.</summary>
+/// <summary>DeviceFleet is the Schema for the DeviceFleets API. Provides a SageMaker AI Device Fleet resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1DeviceFleetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeviceFleet>

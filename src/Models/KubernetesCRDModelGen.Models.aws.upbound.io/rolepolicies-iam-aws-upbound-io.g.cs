@@ -230,7 +230,7 @@ public partial class V1beta1RolePolicySpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RolePolicyStatusAtProvider
 {
-    /// <summary>The role policy ID, in the form of role_name:role_policy_name.</summary>
+    /// <summary></summary>
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 

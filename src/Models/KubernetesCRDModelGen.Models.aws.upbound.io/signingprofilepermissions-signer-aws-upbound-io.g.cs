@@ -156,7 +156,7 @@ public partial class V1beta1SigningProfilePermissionSpecForProvider
     [JsonPropertyName("profileVersionSelector")]
     public V1beta1SigningProfilePermissionSpecForProviderProfileVersionSelector? ProfileVersionSelector { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -409,6 +409,10 @@ public partial class V1beta1SigningProfilePermissionStatusAtProvider
     /// <summary>The signing profile version that a permission applies to.</summary>
     [JsonPropertyName("profileVersion")]
     public string? ProfileVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>A unique statement identifier.</summary>
     [JsonPropertyName("statementId")]

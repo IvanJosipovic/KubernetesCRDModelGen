@@ -76,11 +76,11 @@ public partial class V1beta1SchemaSpecForProvider
     [JsonPropertyName("dataFormat")]
     public string? DataFormat { get; set; }
 
-    /// <summary>–  A description of the schema.</summary>
+    /// <summary>A description of the schema.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -100,7 +100,7 @@ public partial class V1beta1SchemaSpecForProvider
     [JsonPropertyName("schemaDefinition")]
     public string? SchemaDefinition { get; set; }
 
-    /// <summary>–  The Name of the schema.</summary>
+    /// <summary>The Name of the schema.</summary>
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; set; }
 
@@ -177,7 +177,7 @@ public partial class V1beta1SchemaSpecInitProvider
     [JsonPropertyName("dataFormat")]
     public string? DataFormat { get; set; }
 
-    /// <summary>–  A description of the schema.</summary>
+    /// <summary>A description of the schema.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -197,7 +197,7 @@ public partial class V1beta1SchemaSpecInitProvider
     [JsonPropertyName("schemaDefinition")]
     public string? SchemaDefinition { get; set; }
 
-    /// <summary>–  The Name of the schema.</summary>
+    /// <summary>The Name of the schema.</summary>
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; set; }
 
@@ -354,7 +354,7 @@ public partial class V1beta1SchemaStatusAtProvider
     [JsonPropertyName("dataFormat")]
     public string? DataFormat { get; set; }
 
-    /// <summary>–  A description of the schema.</summary>
+    /// <summary>A description of the schema.</summary>
     [JsonPropertyName("description")]
     public string? Description { get; set; }
 
@@ -369,6 +369,10 @@ public partial class V1beta1SchemaStatusAtProvider
     /// <summary>The next version of the schema associated with the returned schema definition.</summary>
     [JsonPropertyName("nextSchemaVersion")]
     public double? NextSchemaVersion { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>The ARN of the Glue Registry to create the schema in.</summary>
     [JsonPropertyName("registryArn")]
@@ -386,7 +390,7 @@ public partial class V1beta1SchemaStatusAtProvider
     [JsonPropertyName("schemaDefinition")]
     public string? SchemaDefinition { get; set; }
 
-    /// <summary>–  The Name of the schema.</summary>
+    /// <summary>The Name of the schema.</summary>
     [JsonPropertyName("schemaName")]
     public string? SchemaName { get; set; }
 

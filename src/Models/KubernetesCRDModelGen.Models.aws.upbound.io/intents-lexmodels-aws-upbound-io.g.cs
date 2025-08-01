@@ -329,7 +329,7 @@ public partial class V1beta1IntentSpecForProvider
     [JsonPropertyName("parentIntentSignature")]
     public string? ParentIntentSignature { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -1152,6 +1152,10 @@ public partial class V1beta1IntentStatusAtProvider
     /// <summary>A unique identifier for the built-in intent to base this intent on. To find the signature for an intent, see Standard Built-in Intents in the Alexa Skills Kit.</summary>
     [JsonPropertyName("parentIntentSignature")]
     public string? ParentIntentSignature { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
 
     /// <summary>When the user answers "no" to the question defined in confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither. Attributes are documented under statement.</summary>
     [JsonPropertyName("rejectionStatement")]

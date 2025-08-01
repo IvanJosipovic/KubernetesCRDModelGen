@@ -12,7 +12,7 @@ namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccessEcrImagePullerRole
 {
-    /// <summary>A Boolean value that indicates whether to activate the role. The default is false.</summary>
+    /// <summary>Whether to activate the role. Defaults to false.</summary>
     [JsonPropertyName("isActive")]
     public bool? IsActive { get; set; }
 }
@@ -21,7 +21,7 @@ public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess
 {
-    /// <summary>Describes a request to configure an Amazon Lightsail container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See ECR Image Puller Role below for more details.</summary>
+    /// <summary>Configuration to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
     [JsonPropertyName("ecrImagePullerRole")]
     public IList<V1beta1ContainerServiceSpecForProviderPrivateRegistryAccessEcrImagePullerRole>? EcrImagePullerRole { get; set; }
 }
@@ -30,11 +30,11 @@ public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNamesCertificate
 {
-    /// <summary>The name for the container service. Names must be of length 1 to 63, and be unique within each AWS Region in your Lightsail account.</summary>
+    /// <summary>Name of the certificate.</summary>
     [JsonPropertyName("certificateName")]
     public string? CertificateName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>List of domain names for the certificate.</summary>
     [JsonPropertyName("domainNames")]
     public IList<string>? DomainNames { get; set; }
 }
@@ -43,7 +43,7 @@ public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNamesCert
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNames
 {
-    /// <summary></summary>
+    /// <summary>Set of certificate configurations for the public domain names. Each element contains the following attributes:</summary>
     [JsonPropertyName("certificate")]
     public IList<V1beta1ContainerServiceSpecForProviderPublicDomainNamesCertificate>? Certificate { get; set; }
 }
@@ -52,27 +52,27 @@ public partial class V1beta1ContainerServiceSpecForProviderPublicDomainNames
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProvider
 {
-    /// <summary>A Boolean value indicating whether the container service is disabled. Defaults to false.</summary>
+    /// <summary>Whether to disable the container service. Defaults to false.</summary>
     [JsonPropertyName("isDisabled")]
     public bool? IsDisabled { get; set; }
 
-    /// <summary>The power specification for the container service. The power specifies the amount of memory, the number of vCPUs, and the monthly price of each node of the container service. Possible values: nano, micro, small, medium, large, xlarge.</summary>
+    /// <summary>Power specification for the container service. The power specifies the amount of memory, the number of vCPUs, and the monthly price of each node of the container service. Possible values: nano, micro, small, medium, large, xlarge.</summary>
     [JsonPropertyName("power")]
     public string? Power { get; set; }
 
-    /// <summary>An object to describe the configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See Private Registry Access below for more details.</summary>
+    /// <summary>Configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
     [JsonPropertyName("privateRegistryAccess")]
     public IList<V1beta1ContainerServiceSpecForProviderPrivateRegistryAccess>? PrivateRegistryAccess { get; set; }
 
-    /// <summary>The public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. Defined below.</summary>
+    /// <summary>Public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. See below.</summary>
     [JsonPropertyName("publicDomainNames")]
     public IList<V1beta1ContainerServiceSpecForProviderPublicDomainNames>? PublicDomainNames { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
-    /// <summary>The scale specification for the container service. The scale specifies the allocated compute nodes of the container service.</summary>
+    /// <summary>Scale specification for the container service. The scale specifies the allocated compute nodes of the container service.</summary>
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 
@@ -85,7 +85,7 @@ public partial class V1beta1ContainerServiceSpecForProvider
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccessEcrImagePullerRole
 {
-    /// <summary>A Boolean value that indicates whether to activate the role. The default is false.</summary>
+    /// <summary>Whether to activate the role. Defaults to false.</summary>
     [JsonPropertyName("isActive")]
     public bool? IsActive { get; set; }
 }
@@ -94,7 +94,7 @@ public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAcces
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccess
 {
-    /// <summary>Describes a request to configure an Amazon Lightsail container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See ECR Image Puller Role below for more details.</summary>
+    /// <summary>Configuration to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
     [JsonPropertyName("ecrImagePullerRole")]
     public IList<V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccessEcrImagePullerRole>? EcrImagePullerRole { get; set; }
 }
@@ -103,11 +103,11 @@ public partial class V1beta1ContainerServiceSpecInitProviderPrivateRegistryAcces
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNamesCertificate
 {
-    /// <summary>The name for the container service. Names must be of length 1 to 63, and be unique within each AWS Region in your Lightsail account.</summary>
+    /// <summary>Name of the certificate.</summary>
     [JsonPropertyName("certificateName")]
     public string? CertificateName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>List of domain names for the certificate.</summary>
     [JsonPropertyName("domainNames")]
     public IList<string>? DomainNames { get; set; }
 }
@@ -116,7 +116,7 @@ public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNamesCer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNames
 {
-    /// <summary></summary>
+    /// <summary>Set of certificate configurations for the public domain names. Each element contains the following attributes:</summary>
     [JsonPropertyName("certificate")]
     public IList<V1beta1ContainerServiceSpecInitProviderPublicDomainNamesCertificate>? Certificate { get; set; }
 }
@@ -125,23 +125,23 @@ public partial class V1beta1ContainerServiceSpecInitProviderPublicDomainNames
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecInitProvider
 {
-    /// <summary>A Boolean value indicating whether the container service is disabled. Defaults to false.</summary>
+    /// <summary>Whether to disable the container service. Defaults to false.</summary>
     [JsonPropertyName("isDisabled")]
     public bool? IsDisabled { get; set; }
 
-    /// <summary>The power specification for the container service. The power specifies the amount of memory, the number of vCPUs, and the monthly price of each node of the container service. Possible values: nano, micro, small, medium, large, xlarge.</summary>
+    /// <summary>Power specification for the container service. The power specifies the amount of memory, the number of vCPUs, and the monthly price of each node of the container service. Possible values: nano, micro, small, medium, large, xlarge.</summary>
     [JsonPropertyName("power")]
     public string? Power { get; set; }
 
-    /// <summary>An object to describe the configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See Private Registry Access below for more details.</summary>
+    /// <summary>Configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
     [JsonPropertyName("privateRegistryAccess")]
     public IList<V1beta1ContainerServiceSpecInitProviderPrivateRegistryAccess>? PrivateRegistryAccess { get; set; }
 
-    /// <summary>The public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. Defined below.</summary>
+    /// <summary>Public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. See below.</summary>
     [JsonPropertyName("publicDomainNames")]
     public IList<V1beta1ContainerServiceSpecInitProviderPublicDomainNames>? PublicDomainNames { get; set; }
 
-    /// <summary>The scale specification for the container service. The scale specifies the allocated compute nodes of the container service.</summary>
+    /// <summary>Scale specification for the container service. The scale specifies the allocated compute nodes of the container service.</summary>
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 
@@ -286,11 +286,11 @@ public partial class V1beta1ContainerServiceSpec
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccessEcrImagePullerRole
 {
-    /// <summary>A Boolean value that indicates whether to activate the role. The default is false.</summary>
+    /// <summary>Whether to activate the role. Defaults to false.</summary>
     [JsonPropertyName("isActive")]
     public bool? IsActive { get; set; }
 
-    /// <summary>The principal ARN of the container service. The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail container service. This allows you to give your service permission to access resources in your standard AWS account.</summary>
+    /// <summary>Principal ARN of the container service. The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail container service. This allows you to give your service permission to access resources in your standard AWS account.</summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
 }
@@ -299,7 +299,7 @@ public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAcces
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccess
 {
-    /// <summary>Describes a request to configure an Amazon Lightsail container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See ECR Image Puller Role below for more details.</summary>
+    /// <summary>Configuration to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
     [JsonPropertyName("ecrImagePullerRole")]
     public IList<V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccessEcrImagePullerRole>? EcrImagePullerRole { get; set; }
 }
@@ -308,11 +308,11 @@ public partial class V1beta1ContainerServiceStatusAtProviderPrivateRegistryAcces
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNamesCertificate
 {
-    /// <summary>The name for the container service. Names must be of length 1 to 63, and be unique within each AWS Region in your Lightsail account.</summary>
+    /// <summary>Name of the certificate.</summary>
     [JsonPropertyName("certificateName")]
     public string? CertificateName { get; set; }
 
-    /// <summary></summary>
+    /// <summary>List of domain names for the certificate.</summary>
     [JsonPropertyName("domainNames")]
     public IList<string>? DomainNames { get; set; }
 }
@@ -321,7 +321,7 @@ public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNamesCer
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNames
 {
-    /// <summary></summary>
+    /// <summary>Set of certificate configurations for the public domain names. Each element contains the following attributes:</summary>
     [JsonPropertyName("certificate")]
     public IList<V1beta1ContainerServiceStatusAtProviderPublicDomainNamesCertificate>? Certificate { get; set; }
 }
@@ -330,15 +330,15 @@ public partial class V1beta1ContainerServiceStatusAtProviderPublicDomainNames
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceStatusAtProvider
 {
-    /// <summary>The Amazon Resource Name (ARN) of the container service.</summary>
+    /// <summary>ARN of the container service.</summary>
     [JsonPropertyName("arn")]
     public string? Arn { get; set; }
 
-    /// <summary>The Availability Zone. Follows the format us-east-2a (case-sensitive).</summary>
+    /// <summary>Availability Zone. Follows the format us-east-2a (case-sensitive).</summary>
     [JsonPropertyName("availabilityZone")]
     public string? AvailabilityZone { get; set; }
 
-    /// <summary></summary>
+    /// <summary>Date and time when the container service was created.</summary>
     [JsonPropertyName("createdAt")]
     public string? CreatedAt { get; set; }
 
@@ -346,43 +346,47 @@ public partial class V1beta1ContainerServiceStatusAtProvider
     [JsonPropertyName("id")]
     public string? Id { get; set; }
 
-    /// <summary>A Boolean value indicating whether the container service is disabled. Defaults to false.</summary>
+    /// <summary>Whether to disable the container service. Defaults to false.</summary>
     [JsonPropertyName("isDisabled")]
     public bool? IsDisabled { get; set; }
 
-    /// <summary>The power specification for the container service. The power specifies the amount of memory, the number of vCPUs, and the monthly price of each node of the container service. Possible values: nano, micro, small, medium, large, xlarge.</summary>
+    /// <summary>Power specification for the container service. The power specifies the amount of memory, the number of vCPUs, and the monthly price of each node of the container service. Possible values: nano, micro, small, medium, large, xlarge.</summary>
     [JsonPropertyName("power")]
     public string? Power { get; set; }
 
-    /// <summary>The ID of the power of the container service.</summary>
+    /// <summary>Power ID of the container service.</summary>
     [JsonPropertyName("powerId")]
     public string? PowerId { get; set; }
 
-    /// <summary>The principal ARN of the container service. The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail container service. This allows you to give your service permission to access resources in your standard AWS account.</summary>
+    /// <summary>Principal ARN of the container service. The principal ARN can be used to create a trust relationship between your standard AWS account and your Lightsail container service. This allows you to give your service permission to access resources in your standard AWS account.</summary>
     [JsonPropertyName("principalArn")]
     public string? PrincipalArn { get; set; }
 
-    /// <summary>The private domain name of the container service. The private domain name is accessible only by other resources within the default virtual private cloud (VPC) of your Lightsail account.</summary>
+    /// <summary>Private domain name of the container service. The private domain name is accessible only by other resources within the default virtual private cloud (VPC) of your Lightsail account.</summary>
     [JsonPropertyName("privateDomainName")]
     public string? PrivateDomainName { get; set; }
 
-    /// <summary>An object to describe the configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See Private Registry Access below for more details.</summary>
+    /// <summary>Configuration for the container service to access private container image repositories, such as Amazon Elastic Container Registry (Amazon ECR) private repositories. See below.</summary>
     [JsonPropertyName("privateRegistryAccess")]
     public IList<V1beta1ContainerServiceStatusAtProviderPrivateRegistryAccess>? PrivateRegistryAccess { get; set; }
 
-    /// <summary>The public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. Defined below.</summary>
+    /// <summary>Public domain names to use with the container service, such as example.com and www.example.com. You can specify up to four public domain names for a container service. The domain names that you specify are used when you create a deployment with a container configured as the public endpoint of your container service. If you don't specify public domain names, then you can use the default domain of the container service. See below.</summary>
     [JsonPropertyName("publicDomainNames")]
     public IList<V1beta1ContainerServiceStatusAtProviderPublicDomainNames>? PublicDomainNames { get; set; }
 
-    /// <summary>The Lightsail resource type of the container service (i.e., ContainerService).</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Lightsail resource type of the container service (i.e., ContainerService).</summary>
     [JsonPropertyName("resourceType")]
     public string? ResourceType { get; set; }
 
-    /// <summary>The scale specification for the container service. The scale specifies the allocated compute nodes of the container service.</summary>
+    /// <summary>Scale specification for the container service. The scale specifies the allocated compute nodes of the container service.</summary>
     [JsonPropertyName("scale")]
     public double? Scale { get; set; }
 
-    /// <summary>The current state of the container service.</summary>
+    /// <summary>Current state of the container service.</summary>
     [JsonPropertyName("state")]
     public string? State { get; set; }
 
@@ -390,11 +394,11 @@ public partial class V1beta1ContainerServiceStatusAtProvider
     [JsonPropertyName("tags")]
     public IDictionary<string, string>? Tags { get; set; }
 
-    /// <summary>A map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
+    /// <summary>Map of tags assigned to the resource, including those inherited from the provider default_tags configuration block.</summary>
     [JsonPropertyName("tagsAll")]
     public IDictionary<string, string>? TagsAll { get; set; }
 
-    /// <summary>The publicly accessible URL of the container service. If no public endpoint is specified in the currentDeployment, this URL returns a 404 response.</summary>
+    /// <summary>Publicly accessible URL of the container service. If no public endpoint is specified in the currentDeployment, this URL returns a 404 response.</summary>
     [JsonPropertyName("url")]
     public string? Url { get; set; }
 }
@@ -445,7 +449,7 @@ public partial class V1beta1ContainerServiceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>ContainerService is the Schema for the ContainerServices API. Provides a resource to manage Lightsail container service</summary>
+/// <summary>ContainerService is the Schema for the ContainerServices API. Manages a Lightsail container service for running containerized applications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ContainerService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ContainerServiceSpec>, IStatus<V1beta1ContainerServiceStatus>
@@ -475,7 +479,7 @@ public partial class V1beta1ContainerService : IKubernetesObject<V1ObjectMeta>, 
     public V1beta1ContainerServiceStatus? Status { get; set; }
 }
 
-/// <summary>ContainerService is the Schema for the ContainerServices API. Provides a resource to manage Lightsail container service</summary>
+/// <summary>ContainerService is the Schema for the ContainerServices API. Manages a Lightsail container service for running containerized applications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1ContainerServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerService>

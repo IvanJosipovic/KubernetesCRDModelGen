@@ -249,7 +249,7 @@ public partial class V1beta1WorkforceSpecForProvider
     [JsonPropertyName("oidcConfig")]
     public IList<V1beta1WorkforceSpecForProviderOidcConfig>? OidcConfig { get; set; }
 
-    /// <summary>Region is the region you'd like your resource to be created in.</summary>
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
     [JsonPropertyName("region")]
     public string Region { get; set; }
 
@@ -748,6 +748,10 @@ public partial class V1beta1WorkforceStatusAtProvider
     [JsonPropertyName("oidcConfig")]
     public IList<V1beta1WorkforceStatusAtProviderOidcConfig>? OidcConfig { get; set; }
 
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
     /// <summary>A list of IP address ranges Used to create an allow list of IP addresses for a private workforce. By default, a workforce isn't restricted to specific IP addresses. see Source Ip Config details below.</summary>
     [JsonPropertyName("sourceIpConfig")]
     public IList<V1beta1WorkforceStatusAtProviderSourceIpConfig>? SourceIpConfig { get; set; }
@@ -807,7 +811,7 @@ public partial class V1beta1WorkforceStatus
     public long? ObservedGeneration { get; set; }
 }
 
-/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker Workforce resource.</summary>
+/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1Workforce : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkforceSpec>, IStatus<V1beta1WorkforceStatus>
@@ -837,7 +841,7 @@ public partial class V1beta1Workforce : IKubernetesObject<V1ObjectMeta>, ISpec<V
     public V1beta1WorkforceStatus? Status { get; set; }
 }
 
-/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker Workforce resource.</summary>
+/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1WorkforceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workforce>
