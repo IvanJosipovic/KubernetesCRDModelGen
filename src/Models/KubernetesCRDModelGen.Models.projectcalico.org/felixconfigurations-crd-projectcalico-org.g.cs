@@ -134,7 +134,7 @@ public partial class V1FelixConfigurationSpec
     [JsonPropertyName("awsSrcDstCheck")]
     public string? AwsSrcDstCheck { get; set; }
 
-    /// <summary>BPFAttachType controls how are the BPF programs at the network interfaces attached. By default `tcx` is used where available to enable easier coexistence with 3rd party programs. `tc` can force the legacy method of attaching via a qdisc. `tcx` falls back to `tc` if `tcx` is not available. [Default: tcx]</summary>
+    /// <summary>BPFAttachType controls how are the BPF programs at the network interfaces attached. By default `TCX` is used where available to enable easier coexistence with 3rd party programs. `TC` can force the legacy method of attaching via a qdisc. `TCX` falls back to `TC` if `TCX` is not available. [Default: TCX]</summary>
     [JsonPropertyName("bpfAttachType")]
     public string? BpfAttachType { get; set; }
 
