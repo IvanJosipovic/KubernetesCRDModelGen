@@ -150,6 +150,7 @@ spec:
                     rule: "self.type == 'Hostname' ? self.value.matches(r\"\"\"^(\\*\\.)?[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$\"\"\"): true"
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
                 x-kubernetes-validations:
                 - message: IPAddress values must be unique
                   rule: "self.all(a1, a1.type == 'IPAddress' ? self.exists_one(a2, a2.type == a1.type && a2.value == a1.value) : true )"
@@ -665,6 +666,7 @@ spec:
                             type: object
                           maxItems: 8
                           type: array
+                          x-kubernetes-list-type: atomic
                         namespaces:
                           default:
                             from: Same
@@ -1000,6 +1002,7 @@ spec:
                             type: object
                           maxItems: 64
                           type: array
+                          x-kubernetes-list-type: atomic
                         mode:
                           default: Terminate
                           description: >-
@@ -1157,6 +1160,7 @@ spec:
                     rule: "self.type == 'Hostname' ? self.value.matches(r\"\"\"^(\\*\\.)?[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$\"\"\"): true"
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
               conditions:
                 default:
                 - lastTransitionTime: 1970-01-01T00:00:00Z
@@ -1408,6 +1412,7 @@ spec:
                         type: object
                       maxItems: 8
                       type: array
+                      x-kubernetes-list-type: atomic
                   required:
                   - attachedRoutes
                   - conditions
@@ -1557,6 +1562,7 @@ spec:
                     rule: "self.type == 'Hostname' ? self.value.matches(r\"\"\"^(\\*\\.)?[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$\"\"\"): true"
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
                 x-kubernetes-validations:
                 - message: IPAddress values must be unique
                   rule: "self.all(a1, a1.type == 'IPAddress' ? self.exists_one(a2, a2.type == a1.type && a2.value == a1.value) : true )"
@@ -2072,6 +2078,7 @@ spec:
                             type: object
                           maxItems: 8
                           type: array
+                          x-kubernetes-list-type: atomic
                         namespaces:
                           default:
                             from: Same
@@ -2407,6 +2414,7 @@ spec:
                             type: object
                           maxItems: 64
                           type: array
+                          x-kubernetes-list-type: atomic
                         mode:
                           default: Terminate
                           description: >-
@@ -2564,6 +2572,7 @@ spec:
                     rule: "self.type == 'Hostname' ? self.value.matches(r\"\"\"^(\\*\\.)?[a-z0-9]([-a-z0-9]*[a-z0-9])?(\\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$\"\"\"): true"
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
               conditions:
                 default:
                 - lastTransitionTime: 1970-01-01T00:00:00Z
@@ -2815,6 +2824,7 @@ spec:
                         type: object
                       maxItems: 8
                       type: array
+                      x-kubernetes-list-type: atomic
                   required:
                   - attachedRoutes
                   - conditions

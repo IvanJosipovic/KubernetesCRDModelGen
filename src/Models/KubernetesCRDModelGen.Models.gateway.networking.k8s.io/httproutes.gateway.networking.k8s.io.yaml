@@ -177,6 +177,7 @@ spec:
                   type: string
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
               parentRefs:
                 description: >-
                   ParentRefs references the resources (usually Gateways) that a Route wants
@@ -448,6 +449,7 @@ spec:
                   type: object
                 maxItems: 32
                 type: array
+                x-kubernetes-list-type: atomic
                 x-kubernetes-validations:
                 - message: sectionName must be specified when parentRefs includes 2 or more references to the same parent
                   rule: "self.all(p1, self.all(p2, p1.group == p2.group && p1.kind == p2.kind && p1.name == p2.name && (((!has(p1.__namespace__) || p1.__namespace__ == '') && (!has(p2.__namespace__) || p2.__namespace__ == '')) || (has(p1.__namespace__) && has(p2.__namespace__) && p1.__namespace__ == p2.__namespace__ )) ? ((!has(p1.sectionName) || p1.sectionName == '') == (!has(p2.sectionName) || p2.sectionName == '')) : true))"
@@ -1479,6 +1481,7 @@ spec:
                                 rule: "!(!has(self.extensionRef) && self.type == 'ExtensionRef')"
                             maxItems: 16
                             type: array
+                            x-kubernetes-list-type: atomic
                             x-kubernetes-validations:
                             - message: May specify either httpRouteFilterRequestRedirect or httpRouteFilterRequestRewrite, but not both
                               rule: "!(self.exists(f, f.type == 'RequestRedirect') && self.exists(f, f.type == 'URLRewrite'))"
@@ -1608,6 +1611,7 @@ spec:
                           rule: "(size(self.group) == 0 && self.kind == 'Service') ? has(self.port) : true"
                       maxItems: 16
                       type: array
+                      x-kubernetes-list-type: atomic
                     filters:
                       description: >-
                         Filters define the filters that are applied to requests that match
@@ -2598,6 +2602,7 @@ spec:
                           rule: "!(!has(self.extensionRef) && self.type == 'ExtensionRef')"
                       maxItems: 16
                       type: array
+                      x-kubernetes-list-type: atomic
                       x-kubernetes-validations:
                       - message: May specify either httpRouteFilterRequestRedirect or httpRouteFilterRequestRewrite, but not both
                         rule: "!(self.exists(f, f.type == 'RequestRedirect') && self.exists(f, f.type == 'URLRewrite'))"
@@ -2977,6 +2982,7 @@ spec:
                         type: object
                       maxItems: 64
                       type: array
+                      x-kubernetes-list-type: atomic
                     name:
                       description: >-
                         Name is the name of the route rule. This name MUST be unique within a Route if it is set.
@@ -3091,6 +3097,7 @@ spec:
                     rule: "(has(self.backendRefs) && self.backendRefs.exists_one(b, (has(b.filters) && b.filters.exists_one(f, has(f.urlRewrite) && has(f.urlRewrite.path) && f.urlRewrite.path.type == 'ReplacePrefixMatch' && has(f.urlRewrite.path.replacePrefixMatch))) )) ? ((size(self.matches) != 1 || !has(self.matches[0].path) || self.matches[0].path.type != 'PathPrefix') ? false : true) : true"
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
                 x-kubernetes-validations:
                 - message: While 16 rules and 64 matches per rule are allowed, the total number of matches across all rules in a route must be less than 128
                   rule: '(self.size() > 0 ? self[0].matches.size() : 0) + (self.size() > 1 ? self[1].matches.size() : 0) + (self.size() > 2 ? self[2].matches.size() : 0) + (self.size() > 3 ? self[3].matches.size() : 0) + (self.size() > 4 ? self[4].matches.size() : 0) + (self.size() > 5 ? self[5].matches.size() : 0) + (self.size() > 6 ? self[6].matches.size() : 0) + (self.size() > 7 ? self[7].matches.size() : 0) + (self.size() > 8 ? self[8].matches.size() : 0) + (self.size() > 9 ? self[9].matches.size() : 0) + (self.size() > 10 ? self[10].matches.size() : 0) + (self.size() > 11 ? self[11].matches.size() : 0) + (self.size() > 12 ? self[12].matches.size() : 0) + (self.size() > 13 ? self[13].matches.size() : 0) + (self.size() > 14 ? self[14].matches.size() : 0) + (self.size() > 15 ? self[15].matches.size() : 0) <= 128'
@@ -3442,6 +3449,7 @@ spec:
                   type: object
                 maxItems: 32
                 type: array
+                x-kubernetes-list-type: atomic
             required:
             - parents
             type: object
@@ -3611,6 +3619,7 @@ spec:
                   type: string
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
               parentRefs:
                 description: >-
                   ParentRefs references the resources (usually Gateways) that a Route wants
@@ -3882,6 +3891,7 @@ spec:
                   type: object
                 maxItems: 32
                 type: array
+                x-kubernetes-list-type: atomic
                 x-kubernetes-validations:
                 - message: sectionName must be specified when parentRefs includes 2 or more references to the same parent
                   rule: "self.all(p1, self.all(p2, p1.group == p2.group && p1.kind == p2.kind && p1.name == p2.name && (((!has(p1.__namespace__) || p1.__namespace__ == '') && (!has(p2.__namespace__) || p2.__namespace__ == '')) || (has(p1.__namespace__) && has(p2.__namespace__) && p1.__namespace__ == p2.__namespace__ )) ? ((!has(p1.sectionName) || p1.sectionName == '') == (!has(p2.sectionName) || p2.sectionName == '')) : true))"
@@ -4913,6 +4923,7 @@ spec:
                                 rule: "!(!has(self.extensionRef) && self.type == 'ExtensionRef')"
                             maxItems: 16
                             type: array
+                            x-kubernetes-list-type: atomic
                             x-kubernetes-validations:
                             - message: May specify either httpRouteFilterRequestRedirect or httpRouteFilterRequestRewrite, but not both
                               rule: "!(self.exists(f, f.type == 'RequestRedirect') && self.exists(f, f.type == 'URLRewrite'))"
@@ -5042,6 +5053,7 @@ spec:
                           rule: "(size(self.group) == 0 && self.kind == 'Service') ? has(self.port) : true"
                       maxItems: 16
                       type: array
+                      x-kubernetes-list-type: atomic
                     filters:
                       description: >-
                         Filters define the filters that are applied to requests that match
@@ -6032,6 +6044,7 @@ spec:
                           rule: "!(!has(self.extensionRef) && self.type == 'ExtensionRef')"
                       maxItems: 16
                       type: array
+                      x-kubernetes-list-type: atomic
                       x-kubernetes-validations:
                       - message: May specify either httpRouteFilterRequestRedirect or httpRouteFilterRequestRewrite, but not both
                         rule: "!(self.exists(f, f.type == 'RequestRedirect') && self.exists(f, f.type == 'URLRewrite'))"
@@ -6411,6 +6424,7 @@ spec:
                         type: object
                       maxItems: 64
                       type: array
+                      x-kubernetes-list-type: atomic
                     name:
                       description: >-
                         Name is the name of the route rule. This name MUST be unique within a Route if it is set.
@@ -6525,6 +6539,7 @@ spec:
                     rule: "(has(self.backendRefs) && self.backendRefs.exists_one(b, (has(b.filters) && b.filters.exists_one(f, has(f.urlRewrite) && has(f.urlRewrite.path) && f.urlRewrite.path.type == 'ReplacePrefixMatch' && has(f.urlRewrite.path.replacePrefixMatch))) )) ? ((size(self.matches) != 1 || !has(self.matches[0].path) || self.matches[0].path.type != 'PathPrefix') ? false : true) : true"
                 maxItems: 16
                 type: array
+                x-kubernetes-list-type: atomic
                 x-kubernetes-validations:
                 - message: While 16 rules and 64 matches per rule are allowed, the total number of matches across all rules in a route must be less than 128
                   rule: '(self.size() > 0 ? self[0].matches.size() : 0) + (self.size() > 1 ? self[1].matches.size() : 0) + (self.size() > 2 ? self[2].matches.size() : 0) + (self.size() > 3 ? self[3].matches.size() : 0) + (self.size() > 4 ? self[4].matches.size() : 0) + (self.size() > 5 ? self[5].matches.size() : 0) + (self.size() > 6 ? self[6].matches.size() : 0) + (self.size() > 7 ? self[7].matches.size() : 0) + (self.size() > 8 ? self[8].matches.size() : 0) + (self.size() > 9 ? self[9].matches.size() : 0) + (self.size() > 10 ? self[10].matches.size() : 0) + (self.size() > 11 ? self[11].matches.size() : 0) + (self.size() > 12 ? self[12].matches.size() : 0) + (self.size() > 13 ? self[13].matches.size() : 0) + (self.size() > 14 ? self[14].matches.size() : 0) + (self.size() > 15 ? self[15].matches.size() : 0) <= 128'
@@ -6876,6 +6891,7 @@ spec:
                   type: object
                 maxItems: 32
                 type: array
+                x-kubernetes-list-type: atomic
             required:
             - parents
             type: object
