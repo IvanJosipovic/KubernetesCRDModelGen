@@ -148,6 +148,10 @@ public partial class V1BGPConfigurationSpec
     public IList<V1BGPConfigurationSpecServiceExternalIPs>? ServiceExternalIPs { get; set; }
 
     /// <summary></summary>
+    [JsonPropertyName("serviceLoadBalancerAggregation")]
+    public string? ServiceLoadBalancerAggregation { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("serviceLoadBalancerIPs")]
     public IList<V1BGPConfigurationSpecServiceLoadBalancerIPs>? ServiceLoadBalancerIPs { get; set; }
 }
