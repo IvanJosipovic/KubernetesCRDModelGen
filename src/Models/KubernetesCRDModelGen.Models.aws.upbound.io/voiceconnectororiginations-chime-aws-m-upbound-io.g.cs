@@ -1,0 +1,440 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.chime.aws.m.upbound.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecForProviderRoute
+{
+    /// <summary>The FQDN or IP address to contact for origination traffic.</summary>
+    [JsonPropertyName("host")]
+    public string? Host { get; set; }
+
+    /// <summary>The designated origination route port. Defaults to 5060.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.</summary>
+    [JsonPropertyName("priority")]
+    public double? Priority { get; set; }
+
+    /// <summary>The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.</summary>
+    [JsonPropertyName("weight")]
+    public double? Weight { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the referenced object</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace for the selector</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecForProvider
+{
+    /// <summary>When origination settings are disabled, inbound calls are not enabled for your Amazon Chime Voice Connector.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string Region { get; set; }
+
+    /// <summary>Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.</summary>
+    [JsonPropertyName("route")]
+    public IList<V1beta1VoiceConnectorOriginationSpecForProviderRoute>? Route { get; set; }
+
+    /// <summary>The Amazon Chime Voice Connector ID.</summary>
+    [JsonPropertyName("voiceConnectorId")]
+    public string? VoiceConnectorId { get; set; }
+
+    /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
+    [JsonPropertyName("voiceConnectorIdRef")]
+    public V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdRef? VoiceConnectorIdRef { get; set; }
+
+    /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
+    [JsonPropertyName("voiceConnectorIdSelector")]
+    public V1beta1VoiceConnectorOriginationSpecForProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecInitProviderRoute
+{
+    /// <summary>The FQDN or IP address to contact for origination traffic.</summary>
+    [JsonPropertyName("host")]
+    public string? Host { get; set; }
+
+    /// <summary>The designated origination route port. Defaults to 5060.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.</summary>
+    [JsonPropertyName("priority")]
+    public double? Priority { get; set; }
+
+    /// <summary>The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.</summary>
+    [JsonPropertyName("weight")]
+    public double? Weight { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the referenced object</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace for the selector</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecInitProvider
+{
+    /// <summary>When origination settings are disabled, inbound calls are not enabled for your Amazon Chime Voice Connector.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.</summary>
+    [JsonPropertyName("route")]
+    public IList<V1beta1VoiceConnectorOriginationSpecInitProviderRoute>? Route { get; set; }
+
+    /// <summary>The Amazon Chime Voice Connector ID.</summary>
+    [JsonPropertyName("voiceConnectorId")]
+    public string? VoiceConnectorId { get; set; }
+
+    /// <summary>Reference to a VoiceConnector in chime to populate voiceConnectorId.</summary>
+    [JsonPropertyName("voiceConnectorIdRef")]
+    public V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdRef? VoiceConnectorIdRef { get; set; }
+
+    /// <summary>Selector for a VoiceConnector in chime to populate voiceConnectorId.</summary>
+    [JsonPropertyName("voiceConnectorIdSelector")]
+    public V1beta1VoiceConnectorOriginationSpecInitProviderVoiceConnectorIdSelector? VoiceConnectorIdSelector { get; set; }
+}
+
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecProviderConfigRef
+{
+    /// <summary>Kind of the referenced object.</summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>VoiceConnectorOriginationSpec defines the desired state of VoiceConnectorOrigination</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationSpec
+{
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1VoiceConnectorOriginationSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1VoiceConnectorOriginationSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<string>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1VoiceConnectorOriginationSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1VoiceConnectorOriginationSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationStatusAtProviderRoute
+{
+    /// <summary>The FQDN or IP address to contact for origination traffic.</summary>
+    [JsonPropertyName("host")]
+    public string? Host { get; set; }
+
+    /// <summary>The designated origination route port. Defaults to 5060.</summary>
+    [JsonPropertyName("port")]
+    public double? Port { get; set; }
+
+    /// <summary>The priority associated with the host, with 1 being the highest priority. Higher priority hosts are attempted first.</summary>
+    [JsonPropertyName("priority")]
+    public double? Priority { get; set; }
+
+    /// <summary>The protocol to use for the origination route. Encryption-enabled Amazon Chime Voice Connectors use TCP protocol by default.</summary>
+    [JsonPropertyName("protocol")]
+    public string? Protocol { get; set; }
+
+    /// <summary>The weight associated with the host. If hosts are equal in priority, calls are redistributed among them based on their relative weight.</summary>
+    [JsonPropertyName("weight")]
+    public double? Weight { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationStatusAtProvider
+{
+    /// <summary>When origination settings are disabled, inbound calls are not enabled for your Amazon Chime Voice Connector.</summary>
+    [JsonPropertyName("disabled")]
+    public bool? Disabled { get; set; }
+
+    /// <summary>The Amazon Chime Voice Connector ID.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>Region where this resource will be managed. Defaults to the Region set in the provider configuration. Region is the region you'd like your resource to be created in.</summary>
+    [JsonPropertyName("region")]
+    public string? Region { get; set; }
+
+    /// <summary>Set of call distribution properties defined for your SIP hosts. See route below for more details. Minimum of 1. Maximum of 20.</summary>
+    [JsonPropertyName("route")]
+    public IList<V1beta1VoiceConnectorOriginationStatusAtProviderRoute>? Route { get; set; }
+
+    /// <summary>The Amazon Chime Voice Connector ID.</summary>
+    [JsonPropertyName("voiceConnectorId")]
+    public string? VoiceConnectorId { get; set; }
+}
+
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>VoiceConnectorOriginationStatus defines the observed state of VoiceConnectorOrigination.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1VoiceConnectorOriginationStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1VoiceConnectorOriginationStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1VoiceConnectorOriginationStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+/// <summary>VoiceConnectorOrigination is the Schema for the VoiceConnectorOriginations API. Enable origination settings to control inbound calling to your SIP infrastructure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorOrigination : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VoiceConnectorOriginationSpec>, IStatus<V1beta1VoiceConnectorOriginationStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorOrigination";
+    public const string KubeGroup = "chime.aws.m.upbound.io";
+    public const string KubePluralName = "voiceconnectororiginations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>VoiceConnectorOriginationSpec defines the desired state of VoiceConnectorOrigination</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1VoiceConnectorOriginationSpec Spec { get; set; }
+
+    /// <summary>VoiceConnectorOriginationStatus defines the observed state of VoiceConnectorOrigination.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1VoiceConnectorOriginationStatus? Status { get; set; }
+}
+
+/// <summary>VoiceConnectorOrigination is the Schema for the VoiceConnectorOriginations API. Enable origination settings to control inbound calling to your SIP infrastructure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorOriginationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorOrigination>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorOriginationList";
+    public const string KubeGroup = "chime.aws.m.upbound.io";
+    public const string KubePluralName = "voiceconnectororiginations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnectorOrigination> Items { get; set; }
+}
