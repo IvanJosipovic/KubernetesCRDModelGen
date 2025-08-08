@@ -7,10 +7,10 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
-namespace KubernetesCRDModelGen.Models.azuread.upbound.io;
+namespace KubernetesCRDModelGen.Models.azuread.m.upbound.io;
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecKubernetesAuthEnv
+public partial class V1beta1ProviderConfigSpecCredentialsEnv
 {
     /// <summary>Name is the name of an environment variable.</summary>
     [JsonPropertyName("name")]
@@ -19,7 +19,7 @@ public partial class V1alpha1StoreConfigSpecKubernetesAuthEnv
 
 /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecKubernetesAuthFs
+public partial class V1beta1ProviderConfigSpecCredentialsFs
 {
     /// <summary>Path is a filesystem path.</summary>
     [JsonPropertyName("path")]
@@ -28,7 +28,7 @@ public partial class V1alpha1StoreConfigSpecKubernetesAuthFs
 
 /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecKubernetesAuthSecretRef
+public partial class V1beta1ProviderConfigSpecCredentialsSecretRef
 {
     /// <summary>The key to select.</summary>
     [JsonPropertyName("key")]
@@ -43,90 +43,59 @@ public partial class V1alpha1StoreConfigSpecKubernetesAuthSecretRef
     public string Namespace { get; set; }
 }
 
-/// <summary>Credentials used to connect to the Kubernetes API.</summary>
+/// <summary>Credentials required to authenticate to this provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecKubernetesAuth
+public partial class V1beta1ProviderConfigSpecCredentials
 {
     /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
     [JsonPropertyName("env")]
-    public V1alpha1StoreConfigSpecKubernetesAuthEnv? Env { get; set; }
+    public V1beta1ProviderConfigSpecCredentialsEnv? Env { get; set; }
 
     /// <summary>Fs is a reference to a filesystem location that contains credentials that must be used to connect to the provider.</summary>
     [JsonPropertyName("fs")]
-    public V1alpha1StoreConfigSpecKubernetesAuthFs? Fs { get; set; }
+    public V1beta1ProviderConfigSpecCredentialsFs? Fs { get; set; }
 
     /// <summary>A SecretRef is a reference to a secret key that contains the credentials that must be used to connect to the provider.</summary>
     [JsonPropertyName("secretRef")]
-    public V1alpha1StoreConfigSpecKubernetesAuthSecretRef? SecretRef { get; set; }
+    public V1beta1ProviderConfigSpecCredentialsSecretRef? SecretRef { get; set; }
 
-    /// <summary>Source of the credentials.</summary>
+    /// <summary>Source of the provider credentials.</summary>
     [JsonPropertyName("source")]
     public string Source { get; set; }
 }
 
-/// <summary>Kubernetes configures a Kubernetes secret store. If the "type" is "Kubernetes" but no config provided, in cluster config will be used.</summary>
+/// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecKubernetes
+public partial class V1beta1ProviderConfigSpec
 {
-    /// <summary>Credentials used to connect to the Kubernetes API.</summary>
-    [JsonPropertyName("auth")]
-    public V1alpha1StoreConfigSpecKubernetesAuth Auth { get; set; }
-}
+    /// <summary>ClientID is the user-assigned managed identity's ID when Credentials.Source is `InjectedIdentity`. If unset and Credentials.Source is `InjectedIdentity`, then a system-assigned managed identity is used. Required if Credentials.Source is OIDCTokenFile.</summary>
+    [JsonPropertyName("clientID")]
+    public string? ClientID { get; set; }
 
-/// <summary>ConfigRef contains store config reference info.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecPluginConfigRef
-{
-    /// <summary>APIVersion of the referenced config.</summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
+    /// <summary>Credentials required to authenticate to this provider.</summary>
+    [JsonPropertyName("credentials")]
+    public V1beta1ProviderConfigSpecCredentials Credentials { get; set; }
 
-    /// <summary>Kind of the referenced config.</summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
+    /// <summary>The Cloud Environment which should be used. Possible values are "public", "usgovernment", "german", and "china". Defaults to "public".</summary>
+    [JsonPropertyName("environment")]
+    public string? Environment { get; set; }
 
-    /// <summary>Name of the referenced config.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
+    /// <summary>MSIEndpoint is the optional path to a custom endpoint for Managed Service Identity.</summary>
+    [JsonPropertyName("msiEndpoint")]
+    public string? MsiEndpoint { get; set; }
 
-/// <summary>Plugin configures External secret store as a plugin.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpecPlugin
-{
-    /// <summary>ConfigRef contains store config reference info.</summary>
-    [JsonPropertyName("configRef")]
-    public V1alpha1StoreConfigSpecPluginConfigRef? ConfigRef { get; set; }
+    /// <summary>OIDCTokenFilePath is the optional path to a token file that allows to access a managed identity.</summary>
+    [JsonPropertyName("oidcTokenFilePath")]
+    public string? OidcTokenFilePath { get; set; }
 
-    /// <summary>Endpoint is the endpoint of the gRPC server.</summary>
-    [JsonPropertyName("endpoint")]
-    public string? Endpoint { get; set; }
-}
-
-/// <summary>A StoreConfigSpec defines the desired state of a ProviderConfig.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigSpec
-{
-    /// <summary>DefaultScope used for scoping secrets for "cluster-scoped" resources. If store type is "Kubernetes", this would mean the default namespace to store connection secrets for cluster scoped resources. In case of "Vault", this would be used as the default parent path. Typically, should be set as Crossplane installation namespace.</summary>
-    [JsonPropertyName("defaultScope")]
-    public string DefaultScope { get; set; }
-
-    /// <summary>Kubernetes configures a Kubernetes secret store. If the "type" is "Kubernetes" but no config provided, in cluster config will be used.</summary>
-    [JsonPropertyName("kubernetes")]
-    public V1alpha1StoreConfigSpecKubernetes? Kubernetes { get; set; }
-
-    /// <summary>Plugin configures External secret store as a plugin.</summary>
-    [JsonPropertyName("plugin")]
-    public V1alpha1StoreConfigSpecPlugin? Plugin { get; set; }
-
-    /// <summary>Type configures which secret store to be used. Only the configuration block for this store will be used and others will be ignored if provided. Default is Kubernetes.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
+    /// <summary>TenantID is the Azure AD tenant ID to be used. If unset, tenant ID from Credentials will be used. Required if Credentials.Source is InjectedIdentity, OIDCTokenFile.</summary>
+    [JsonPropertyName("tenantID")]
+    public string? TenantID { get; set; }
 }
 
 /// <summary>A Condition that may apply to a resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigStatusConditions
+public partial class V1beta1ProviderConfigStatusConditions
 {
     /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -153,24 +122,28 @@ public partial class V1alpha1StoreConfigStatusConditions
     public string Type { get; set; }
 }
 
-/// <summary>A StoreConfigStatus represents the status of a StoreConfig.</summary>
+/// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1alpha1StoreConfigStatus
+public partial class V1beta1ProviderConfigStatus
 {
     /// <summary>Conditions of the resource.</summary>
     [JsonPropertyName("conditions")]
-    public IList<V1alpha1StoreConfigStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ProviderConfigStatusConditions>? Conditions { get; set; }
+
+    /// <summary>Users of this provider configuration.</summary>
+    [JsonPropertyName("users")]
+    public long? Users { get; set; }
 }
 
-/// <summary>A StoreConfig configures how GCP controller should store connection details.</summary>
+/// <summary>A ProviderConfig configures the AzureAD provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1StoreConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1StoreConfigSpec>, IStatus<V1alpha1StoreConfigStatus>
+public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProviderConfigSpec>, IStatus<V1beta1ProviderConfigStatus>
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "StoreConfig";
-    public const string KubeGroup = "azuread.upbound.io";
-    public const string KubePluralName = "storeconfigs";
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProviderConfig";
+    public const string KubeGroup = "azuread.m.upbound.io";
+    public const string KubePluralName = "providerconfigs";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -183,24 +156,24 @@ public partial class V1alpha1StoreConfig : IKubernetesObject<V1ObjectMeta>, ISpe
     [JsonPropertyName("metadata")]
     public V1ObjectMeta Metadata { get; set; }
 
-    /// <summary>A StoreConfigSpec defines the desired state of a ProviderConfig.</summary>
+    /// <summary>A ProviderConfigSpec defines the desired state of a ProviderConfig.</summary>
     [JsonPropertyName("spec")]
-    public V1alpha1StoreConfigSpec Spec { get; set; }
+    public V1beta1ProviderConfigSpec Spec { get; set; }
 
-    /// <summary>A StoreConfigStatus represents the status of a StoreConfig.</summary>
+    /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
     [JsonPropertyName("status")]
-    public V1alpha1StoreConfigStatus? Status { get; set; }
+    public V1beta1ProviderConfigStatus? Status { get; set; }
 }
 
-/// <summary>A StoreConfig configures how GCP controller should store connection details.</summary>
+/// <summary>A ProviderConfig configures the AzureAD provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1StoreConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1StoreConfig>
+public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProviderConfig>
 {
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "StoreConfigList";
-    public const string KubeGroup = "azuread.upbound.io";
-    public const string KubePluralName = "storeconfigs";
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProviderConfigList";
+    public const string KubeGroup = "azuread.m.upbound.io";
+    public const string KubePluralName = "providerconfigs";
     /// <summary></summary>
     [JsonPropertyName("apiVersion")]
     public string ApiVersion { get; set; }
@@ -215,5 +188,5 @@ public partial class V1alpha1StoreConfigList : IKubernetesObject<V1ListMeta>, II
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1alpha1StoreConfig> Items { get; set; }
+    public IList<V1beta1ProviderConfig> Items { get; set; }
 }
