@@ -394,67 +394,7 @@ public partial class V1beta1ServiceConnectionPolicySpecProviderConfigRef
     public V1beta1ServiceConnectionPolicySpecProviderConfigRefPolicy? Policy { get; set; }
 }
 
-/// <summary>Policies for referencing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsToConfigRefPolicy
-{
-    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
-    [JsonPropertyName("resolution")]
-    public string? Resolution { get; set; }
-
-    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
-    [JsonPropertyName("resolve")]
-    public string? Resolve { get; set; }
-}
-
-/// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsToConfigRef
-{
-    /// <summary>Name of the referenced object.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-
-    /// <summary>Policies for referencing.</summary>
-    [JsonPropertyName("policy")]
-    public V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsToConfigRefPolicy? Policy { get; set; }
-}
-
-/// <summary>Metadata is the metadata for connection secret.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsToMetadata
-{
-    /// <summary>Annotations are the annotations to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.annotations". - It is up to Secret Store implementation for others store types.</summary>
-    [JsonPropertyName("annotations")]
-    public IDictionary<string, string>? Annotations { get; set; }
-
-    /// <summary>Labels are the labels/tags to be added to connection secret. - For Kubernetes secrets, this will be used as "metadata.labels". - It is up to Secret Store implementation for others store types.</summary>
-    [JsonPropertyName("labels")]
-    public IDictionary<string, string>? Labels { get; set; }
-
-    /// <summary>Type is the SecretType for the connection secret. - Only valid for Kubernetes Secret Stores.</summary>
-    [JsonPropertyName("type")]
-    public string? Type { get; set; }
-}
-
-/// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsTo
-{
-    /// <summary>SecretStoreConfigRef specifies which secret store config should be used for this ConnectionSecret.</summary>
-    [JsonPropertyName("configRef")]
-    public V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsToConfigRef? ConfigRef { get; set; }
-
-    /// <summary>Metadata is the metadata for connection secret.</summary>
-    [JsonPropertyName("metadata")]
-    public V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsToMetadata? Metadata { get; set; }
-
-    /// <summary>Name is the name of the connection secret.</summary>
-    [JsonPropertyName("name")]
-    public string Name { get; set; }
-}
-
-/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecWriteConnectionSecretToRef
 {
@@ -491,11 +431,7 @@ public partial class V1beta1ServiceConnectionPolicySpec
     [JsonPropertyName("providerConfigRef")]
     public V1beta1ServiceConnectionPolicySpecProviderConfigRef? ProviderConfigRef { get; set; }
 
-    /// <summary>PublishConnectionDetailsTo specifies the connection secret config which contains a name, metadata and a reference to secret store config to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
-    [JsonPropertyName("publishConnectionDetailsTo")]
-    public V1beta1ServiceConnectionPolicySpecPublishConnectionDetailsTo? PublishConnectionDetailsTo { get; set; }
-
-    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource. This field is planned to be replaced in a future release in favor of PublishConnectionDetailsTo. Currently, both could be set independently and connection details would be published to both without affecting each other.</summary>
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
     [JsonPropertyName("writeConnectionSecretToRef")]
     public V1beta1ServiceConnectionPolicySpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
 }

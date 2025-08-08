@@ -1,0 +1,467 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.kms.gcp.m.upbound.io;
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecForProviderCryptoKeyRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CryptoKey in kms to populate cryptoKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecForProviderCryptoKeyRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the referenced object</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1CryptoKeyVersionSpecForProviderCryptoKeyRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecForProviderCryptoKeySelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CryptoKey in kms to populate cryptoKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecForProviderCryptoKeySelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace for the selector</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1CryptoKeyVersionSpecForProviderCryptoKeySelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecForProviderExternalProtectionLevelOptions
+{
+    /// <summary>The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.</summary>
+    [JsonPropertyName("ekmConnectionKeyPath")]
+    public string? EkmConnectionKeyPath { get; set; }
+
+    /// <summary>The URI for an external resource that this CryptoKeyVersion represents.</summary>
+    [JsonPropertyName("externalKeyUri")]
+    public string? ExternalKeyUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecForProvider
+{
+    /// <summary>The name of the cryptoKey associated with the CryptoKeyVersions. Format: 'projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}'</summary>
+    [JsonPropertyName("cryptoKey")]
+    public string? CryptoKey { get; set; }
+
+    /// <summary>Reference to a CryptoKey in kms to populate cryptoKey.</summary>
+    [JsonPropertyName("cryptoKeyRef")]
+    public V1beta1CryptoKeyVersionSpecForProviderCryptoKeyRef? CryptoKeyRef { get; set; }
+
+    /// <summary>Selector for a CryptoKey in kms to populate cryptoKey.</summary>
+    [JsonPropertyName("cryptoKeySelector")]
+    public V1beta1CryptoKeyVersionSpecForProviderCryptoKeySelector? CryptoKeySelector { get; set; }
+
+    /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+    [JsonPropertyName("externalProtectionLevelOptions")]
+    public V1beta1CryptoKeyVersionSpecForProviderExternalProtectionLevelOptions? ExternalProtectionLevelOptions { get; set; }
+
+    /// <summary>The current state of the CryptoKeyVersion. Note: you can only specify this field to manually ENABLE or DISABLE the CryptoKeyVersion, otherwise the value of this field is always retrieved automatically. Possible values are: PENDING_GENERATION, ENABLED, DISABLED, DESTROYED, DESTROY_SCHEDULED, PENDING_IMPORT, IMPORT_FAILED.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecInitProviderCryptoKeyRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a CryptoKey in kms to populate cryptoKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecInitProviderCryptoKeyRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the referenced object</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1CryptoKeyVersionSpecInitProviderCryptoKeyRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecInitProviderCryptoKeySelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a CryptoKey in kms to populate cryptoKey.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecInitProviderCryptoKeySelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace for the selector</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1CryptoKeyVersionSpecInitProviderCryptoKeySelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecInitProviderExternalProtectionLevelOptions
+{
+    /// <summary>The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.</summary>
+    [JsonPropertyName("ekmConnectionKeyPath")]
+    public string? EkmConnectionKeyPath { get; set; }
+
+    /// <summary>The URI for an external resource that this CryptoKeyVersion represents.</summary>
+    [JsonPropertyName("externalKeyUri")]
+    public string? ExternalKeyUri { get; set; }
+}
+
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecInitProvider
+{
+    /// <summary>The name of the cryptoKey associated with the CryptoKeyVersions. Format: 'projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}'</summary>
+    [JsonPropertyName("cryptoKey")]
+    public string? CryptoKey { get; set; }
+
+    /// <summary>Reference to a CryptoKey in kms to populate cryptoKey.</summary>
+    [JsonPropertyName("cryptoKeyRef")]
+    public V1beta1CryptoKeyVersionSpecInitProviderCryptoKeyRef? CryptoKeyRef { get; set; }
+
+    /// <summary>Selector for a CryptoKey in kms to populate cryptoKey.</summary>
+    [JsonPropertyName("cryptoKeySelector")]
+    public V1beta1CryptoKeyVersionSpecInitProviderCryptoKeySelector? CryptoKeySelector { get; set; }
+
+    /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+    [JsonPropertyName("externalProtectionLevelOptions")]
+    public V1beta1CryptoKeyVersionSpecInitProviderExternalProtectionLevelOptions? ExternalProtectionLevelOptions { get; set; }
+
+    /// <summary>The current state of the CryptoKeyVersion. Note: you can only specify this field to manually ENABLE or DISABLE the CryptoKeyVersion, otherwise the value of this field is always retrieved automatically. Possible values are: PENDING_GENERATION, ENABLED, DISABLED, DESTROYED, DESTROY_SCHEDULED, PENDING_IMPORT, IMPORT_FAILED.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+}
+
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecProviderConfigRef
+{
+    /// <summary>Kind of the referenced object.</summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>CryptoKeyVersionSpec defines the desired state of CryptoKeyVersion</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionSpec
+{
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1CryptoKeyVersionSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1CryptoKeyVersionSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<string>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1CryptoKeyVersionSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1CryptoKeyVersionSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary>The certificate chains needed to validate the attestation Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatusAtProviderAttestationCertChains
+{
+    /// <summary>Cavium certificate chain corresponding to the attestation.</summary>
+    [JsonPropertyName("caviumCerts")]
+    public IList<string>? CaviumCerts { get; set; }
+
+    /// <summary>Google card certificate chain corresponding to the attestation.</summary>
+    [JsonPropertyName("googleCardCerts")]
+    public IList<string>? GoogleCardCerts { get; set; }
+
+    /// <summary>Google partition certificate chain corresponding to the attestation.</summary>
+    [JsonPropertyName("googlePartitionCerts")]
+    public IList<string>? GooglePartitionCerts { get; set; }
+}
+
+/// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatusAtProviderAttestationExternalProtectionLevelOptions
+{
+    /// <summary>The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.</summary>
+    [JsonPropertyName("ekmConnectionKeyPath")]
+    public string? EkmConnectionKeyPath { get; set; }
+
+    /// <summary>The URI for an external resource that this CryptoKeyVersion represents.</summary>
+    [JsonPropertyName("externalKeyUri")]
+    public string? ExternalKeyUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatusAtProviderAttestation
+{
+    /// <summary>The certificate chains needed to validate the attestation Structure is documented below.</summary>
+    [JsonPropertyName("certChains")]
+    public V1beta1CryptoKeyVersionStatusAtProviderAttestationCertChains? CertChains { get; set; }
+
+    /// <summary>(Output) The attestation data provided by the HSM when the key operation was performed.</summary>
+    [JsonPropertyName("content")]
+    public string? Content { get; set; }
+
+    /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+    [JsonPropertyName("externalProtectionLevelOptions")]
+    public V1beta1CryptoKeyVersionStatusAtProviderAttestationExternalProtectionLevelOptions? ExternalProtectionLevelOptions { get; set; }
+
+    /// <summary>(Output) The format of the attestation data.</summary>
+    [JsonPropertyName("format")]
+    public string? Format { get; set; }
+}
+
+/// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatusAtProviderExternalProtectionLevelOptions
+{
+    /// <summary>The path to the external key material on the EKM when using EkmConnection e.g., "v0/my/key". Set this field instead of externalKeyUri when using an EkmConnection.</summary>
+    [JsonPropertyName("ekmConnectionKeyPath")]
+    public string? EkmConnectionKeyPath { get; set; }
+
+    /// <summary>The URI for an external resource that this CryptoKeyVersion represents.</summary>
+    [JsonPropertyName("externalKeyUri")]
+    public string? ExternalKeyUri { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatusAtProvider
+{
+    /// <summary>The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.</summary>
+    [JsonPropertyName("algorithm")]
+    public string? Algorithm { get; set; }
+
+    /// <summary>Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google. Only provided for key versions with protectionLevel HSM. Structure is documented below.</summary>
+    [JsonPropertyName("attestation")]
+    public IList<V1beta1CryptoKeyVersionStatusAtProviderAttestation>? Attestation { get; set; }
+
+    /// <summary>The name of the cryptoKey associated with the CryptoKeyVersions. Format: 'projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}'</summary>
+    [JsonPropertyName("cryptoKey")]
+    public string? CryptoKey { get; set; }
+
+    /// <summary>ExternalProtectionLevelOptions stores a group of additional fields for configuring a CryptoKeyVersion that are specific to the EXTERNAL protection level and EXTERNAL_VPC protection levels. Structure is documented below.</summary>
+    [JsonPropertyName("externalProtectionLevelOptions")]
+    public V1beta1CryptoKeyVersionStatusAtProviderExternalProtectionLevelOptions? ExternalProtectionLevelOptions { get; set; }
+
+    /// <summary>The time this CryptoKeyVersion key material was generated</summary>
+    [JsonPropertyName("generateTime")]
+    public string? GenerateTime { get; set; }
+
+    /// <summary>an identifier for the resource with format {{name}}</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The resource name for this CryptoKeyVersion.</summary>
+    [JsonPropertyName("name")]
+    public string? Name { get; set; }
+
+    /// <summary>The ProtectionLevel describing how crypto operations are performed with this CryptoKeyVersion.</summary>
+    [JsonPropertyName("protectionLevel")]
+    public string? ProtectionLevel { get; set; }
+
+    /// <summary>The current state of the CryptoKeyVersion. Note: you can only specify this field to manually ENABLE or DISABLE the CryptoKeyVersion, otherwise the value of this field is always retrieved automatically. Possible values are: PENDING_GENERATION, ENABLED, DISABLED, DESTROYED, DESTROY_SCHEDULED, PENDING_IMPORT, IMPORT_FAILED.</summary>
+    [JsonPropertyName("state")]
+    public string? State { get; set; }
+}
+
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>CryptoKeyVersionStatus defines the observed state of CryptoKeyVersion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1CryptoKeyVersionStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1CryptoKeyVersionStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1CryptoKeyVersionStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+/// <summary>CryptoKeyVersion is the Schema for the CryptoKeyVersions API. A</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CryptoKeyVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CryptoKeyVersionSpec>, IStatus<V1beta1CryptoKeyVersionStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CryptoKeyVersion";
+    public const string KubeGroup = "kms.gcp.m.upbound.io";
+    public const string KubePluralName = "cryptokeyversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>CryptoKeyVersionSpec defines the desired state of CryptoKeyVersion</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1CryptoKeyVersionSpec Spec { get; set; }
+
+    /// <summary>CryptoKeyVersionStatus defines the observed state of CryptoKeyVersion.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1CryptoKeyVersionStatus? Status { get; set; }
+}
+
+/// <summary>CryptoKeyVersion is the Schema for the CryptoKeyVersions API. A</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CryptoKeyVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CryptoKeyVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CryptoKeyVersionList";
+    public const string KubeGroup = "kms.gcp.m.upbound.io";
+    public const string KubePluralName = "cryptokeyversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CryptoKeyVersion> Items { get; set; }
+}
