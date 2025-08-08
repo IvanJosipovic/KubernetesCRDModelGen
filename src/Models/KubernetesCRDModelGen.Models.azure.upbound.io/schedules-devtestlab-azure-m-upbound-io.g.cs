@@ -1,0 +1,589 @@
+using k8s;
+using k8s.Models;
+using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
+
+namespace KubernetesCRDModelGen.Models.devtestlab.azure.m.upbound.io;
+/// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderDailyRecurrence
+{
+    /// <summary>The time each day when the schedule takes effect.</summary>
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+}
+
+/// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderHourlyRecurrence
+{
+    /// <summary>Minutes of the hour the schedule will run.</summary>
+    [JsonPropertyName("minute")]
+    public double? Minute { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderLabNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderLabNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the referenced object</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ScheduleSpecForProviderLabNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderLabNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderLabNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace for the selector</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ScheduleSpecForProviderLabNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderNotificationSettings
+{
+    /// <summary>The status of the notification. Possible values are Enabled and Disabled. Defaults to Disabled</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>Time in minutes before event at which notification will be sent.</summary>
+    [JsonPropertyName("timeInMinutes")]
+    public double? TimeInMinutes { get; set; }
+
+    /// <summary>The webhook URL to which the notification will be sent.</summary>
+    [JsonPropertyName("webhookUrl")]
+    public string? WebhookUrl { get; set; }
+}
+
+/// <summary>Policies for referencing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderResourceGroupNameRefPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderResourceGroupNameRef
+{
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+
+    /// <summary>Namespace of the referenced object</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for referencing.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ScheduleSpecForProviderResourceGroupNameRefPolicy? Policy { get; set; }
+}
+
+/// <summary>Policies for selection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderResourceGroupNameSelectorPolicy
+{
+    /// <summary>Resolution specifies whether resolution of this reference is required. The default is 'Required', which means the reconcile will fail if the reference cannot be resolved. 'Optional' means this reference will be a no-op if it cannot be resolved.</summary>
+    [JsonPropertyName("resolution")]
+    public string? Resolution { get; set; }
+
+    /// <summary>Resolve specifies when this reference should be resolved. The default is 'IfNotPresent', which will attempt to resolve the reference only when the corresponding field is not present. Use 'Always' to resolve the reference on every reconcile.</summary>
+    [JsonPropertyName("resolve")]
+    public string? Resolve { get; set; }
+}
+
+/// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderResourceGroupNameSelector
+{
+    /// <summary>MatchControllerRef ensures an object with the same controller reference as the selecting object is selected.</summary>
+    [JsonPropertyName("matchControllerRef")]
+    public bool? MatchControllerRef { get; set; }
+
+    /// <summary>MatchLabels ensures an object with matching labels is selected.</summary>
+    [JsonPropertyName("matchLabels")]
+    public IDictionary<string, string>? MatchLabels { get; set; }
+
+    /// <summary>Namespace for the selector</summary>
+    [JsonPropertyName("namespace")]
+    public string? Namespace { get; set; }
+
+    /// <summary>Policies for selection.</summary>
+    [JsonPropertyName("policy")]
+    public V1beta1ScheduleSpecForProviderResourceGroupNameSelectorPolicy? Policy { get; set; }
+}
+
+/// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProviderWeeklyRecurrence
+{
+    /// <summary>The time when the schedule takes effect.</summary>
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+
+    /// <summary>A list of days that this schedule takes effect . Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
+    [JsonPropertyName("weekDays")]
+    public IList<string>? WeekDays { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecForProvider
+{
+    /// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
+    [JsonPropertyName("dailyRecurrence")]
+    public V1beta1ScheduleSpecForProviderDailyRecurrence? DailyRecurrence { get; set; }
+
+    /// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
+    [JsonPropertyName("hourlyRecurrence")]
+    public V1beta1ScheduleSpecForProviderHourlyRecurrence? HourlyRecurrence { get; set; }
+
+    /// <summary>The name of the dev test lab. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("labName")]
+    public string? LabName { get; set; }
+
+    /// <summary>Reference to a Lab in devtestlab to populate labName.</summary>
+    [JsonPropertyName("labNameRef")]
+    public V1beta1ScheduleSpecForProviderLabNameRef? LabNameRef { get; set; }
+
+    /// <summary>Selector for a Lab in devtestlab to populate labName.</summary>
+    [JsonPropertyName("labNameSelector")]
+    public V1beta1ScheduleSpecForProviderLabNameSelector? LabNameSelector { get; set; }
+
+    /// <summary>The location where the schedule is created. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
+    [JsonPropertyName("notificationSettings")]
+    public V1beta1ScheduleSpecForProviderNotificationSettings? NotificationSettings { get; set; }
+
+    /// <summary>The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("resourceGroupName")]
+    public string? ResourceGroupName { get; set; }
+
+    /// <summary>Reference to a ResourceGroup in azure to populate resourceGroupName.</summary>
+    [JsonPropertyName("resourceGroupNameRef")]
+    public V1beta1ScheduleSpecForProviderResourceGroupNameRef? ResourceGroupNameRef { get; set; }
+
+    /// <summary>Selector for a ResourceGroup in azure to populate resourceGroupName.</summary>
+    [JsonPropertyName("resourceGroupNameSelector")]
+    public V1beta1ScheduleSpecForProviderResourceGroupNameSelector? ResourceGroupNameSelector { get; set; }
+
+    /// <summary>The status of this schedule. Possible values are Enabled and Disabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The task type of the schedule. Possible values include LabVmsShutdownTask and LabVmAutoStart.</summary>
+    [JsonPropertyName("taskType")]
+    public string? TaskType { get; set; }
+
+    /// <summary>The time zone ID (e.g. Pacific Standard time).</summary>
+    [JsonPropertyName("timeZoneId")]
+    public string? TimeZoneId { get; set; }
+
+    /// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
+    [JsonPropertyName("weeklyRecurrence")]
+    public V1beta1ScheduleSpecForProviderWeeklyRecurrence? WeeklyRecurrence { get; set; }
+}
+
+/// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecInitProviderDailyRecurrence
+{
+    /// <summary>The time each day when the schedule takes effect.</summary>
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+}
+
+/// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecInitProviderHourlyRecurrence
+{
+    /// <summary>Minutes of the hour the schedule will run.</summary>
+    [JsonPropertyName("minute")]
+    public double? Minute { get; set; }
+}
+
+/// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecInitProviderNotificationSettings
+{
+    /// <summary>The status of the notification. Possible values are Enabled and Disabled. Defaults to Disabled</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>Time in minutes before event at which notification will be sent.</summary>
+    [JsonPropertyName("timeInMinutes")]
+    public double? TimeInMinutes { get; set; }
+
+    /// <summary>The webhook URL to which the notification will be sent.</summary>
+    [JsonPropertyName("webhookUrl")]
+    public string? WebhookUrl { get; set; }
+}
+
+/// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecInitProviderWeeklyRecurrence
+{
+    /// <summary>The time when the schedule takes effect.</summary>
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+
+    /// <summary>A list of days that this schedule takes effect . Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
+    [JsonPropertyName("weekDays")]
+    public IList<string>? WeekDays { get; set; }
+}
+
+/// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecInitProvider
+{
+    /// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
+    [JsonPropertyName("dailyRecurrence")]
+    public V1beta1ScheduleSpecInitProviderDailyRecurrence? DailyRecurrence { get; set; }
+
+    /// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
+    [JsonPropertyName("hourlyRecurrence")]
+    public V1beta1ScheduleSpecInitProviderHourlyRecurrence? HourlyRecurrence { get; set; }
+
+    /// <summary>The location where the schedule is created. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
+    [JsonPropertyName("notificationSettings")]
+    public V1beta1ScheduleSpecInitProviderNotificationSettings? NotificationSettings { get; set; }
+
+    /// <summary>The status of this schedule. Possible values are Enabled and Disabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The task type of the schedule. Possible values include LabVmsShutdownTask and LabVmAutoStart.</summary>
+    [JsonPropertyName("taskType")]
+    public string? TaskType { get; set; }
+
+    /// <summary>The time zone ID (e.g. Pacific Standard time).</summary>
+    [JsonPropertyName("timeZoneId")]
+    public string? TimeZoneId { get; set; }
+
+    /// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
+    [JsonPropertyName("weeklyRecurrence")]
+    public V1beta1ScheduleSpecInitProviderWeeklyRecurrence? WeeklyRecurrence { get; set; }
+}
+
+/// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecProviderConfigRef
+{
+    /// <summary>Kind of the referenced object.</summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary>Name of the referenced object.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpecWriteConnectionSecretToRef
+{
+    /// <summary>Name of the secret.</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
+/// <summary>ScheduleSpec defines the desired state of Schedule</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleSpec
+{
+    /// <summary></summary>
+    [JsonPropertyName("forProvider")]
+    public V1beta1ScheduleSpecForProvider ForProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It will be honored unless the Management Policies feature flag is disabled. InitProvider holds the same fields as ForProvider, with the exception of Identifier and other resource reference fields. The fields that are in InitProvider are merged into ForProvider when the resource is created. The same fields are also added to the terraform ignore_changes hook, to avoid updating them after creation. This is useful for fields that are required on creation, but we do not desire to update them after creation, for example because of an external controller is managing them, like an autoscaler.</summary>
+    [JsonPropertyName("initProvider")]
+    public V1beta1ScheduleSpecInitProvider? InitProvider { get; set; }
+
+    /// <summary>THIS IS A BETA FIELD. It is on by default but can be opted out through a Crossplane feature flag. ManagementPolicies specify the array of actions Crossplane is allowed to take on the managed and external resources. See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223 and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md</summary>
+    [JsonPropertyName("managementPolicies")]
+    public IList<string>? ManagementPolicies { get; set; }
+
+    /// <summary>ProviderConfigReference specifies how the provider that will be used to create, observe, update, and delete this managed resource should be configured.</summary>
+    [JsonPropertyName("providerConfigRef")]
+    public V1beta1ScheduleSpecProviderConfigRef? ProviderConfigRef { get; set; }
+
+    /// <summary>WriteConnectionSecretToReference specifies the namespace and name of a Secret to which any connection details for this managed resource should be written. Connection details frequently include the endpoint, username, and password required to connect to the managed resource.</summary>
+    [JsonPropertyName("writeConnectionSecretToRef")]
+    public V1beta1ScheduleSpecWriteConnectionSecretToRef? WriteConnectionSecretToRef { get; set; }
+}
+
+/// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatusAtProviderDailyRecurrence
+{
+    /// <summary>The time each day when the schedule takes effect.</summary>
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+}
+
+/// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatusAtProviderHourlyRecurrence
+{
+    /// <summary>Minutes of the hour the schedule will run.</summary>
+    [JsonPropertyName("minute")]
+    public double? Minute { get; set; }
+}
+
+/// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatusAtProviderNotificationSettings
+{
+    /// <summary>The status of the notification. Possible values are Enabled and Disabled. Defaults to Disabled</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>Time in minutes before event at which notification will be sent.</summary>
+    [JsonPropertyName("timeInMinutes")]
+    public double? TimeInMinutes { get; set; }
+
+    /// <summary>The webhook URL to which the notification will be sent.</summary>
+    [JsonPropertyName("webhookUrl")]
+    public string? WebhookUrl { get; set; }
+}
+
+/// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatusAtProviderWeeklyRecurrence
+{
+    /// <summary>The time when the schedule takes effect.</summary>
+    [JsonPropertyName("time")]
+    public string? Time { get; set; }
+
+    /// <summary>A list of days that this schedule takes effect . Possible values include Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday.</summary>
+    [JsonPropertyName("weekDays")]
+    public IList<string>? WeekDays { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatusAtProvider
+{
+    /// <summary>The properties of a daily schedule. If the schedule occurs once each day of the week, specify the daily recurrence. A daily_recurrence block as defined below.</summary>
+    [JsonPropertyName("dailyRecurrence")]
+    public V1beta1ScheduleStatusAtProviderDailyRecurrence? DailyRecurrence { get; set; }
+
+    /// <summary>The properties of an hourly schedule. If the schedule occurs multiple times a day, specify the hourly recurrence. A hourly_recurrence block as defined below.</summary>
+    [JsonPropertyName("hourlyRecurrence")]
+    public V1beta1ScheduleStatusAtProviderHourlyRecurrence? HourlyRecurrence { get; set; }
+
+    /// <summary>The ID of the DevTest Schedule.</summary>
+    [JsonPropertyName("id")]
+    public string? Id { get; set; }
+
+    /// <summary>The name of the dev test lab. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("labName")]
+    public string? LabName { get; set; }
+
+    /// <summary>The location where the schedule is created. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("location")]
+    public string? Location { get; set; }
+
+    /// <summary>The notification setting of a schedule. A notification_settings block as defined below.</summary>
+    [JsonPropertyName("notificationSettings")]
+    public V1beta1ScheduleStatusAtProviderNotificationSettings? NotificationSettings { get; set; }
+
+    /// <summary>The name of the resource group in which to create the dev test lab schedule. Changing this forces a new resource to be created.</summary>
+    [JsonPropertyName("resourceGroupName")]
+    public string? ResourceGroupName { get; set; }
+
+    /// <summary>The status of this schedule. Possible values are Enabled and Disabled. Defaults to Disabled.</summary>
+    [JsonPropertyName("status")]
+    public string? Status { get; set; }
+
+    /// <summary>A mapping of tags to assign to the resource.</summary>
+    [JsonPropertyName("tags")]
+    public IDictionary<string, string>? Tags { get; set; }
+
+    /// <summary>The task type of the schedule. Possible values include LabVmsShutdownTask and LabVmAutoStart.</summary>
+    [JsonPropertyName("taskType")]
+    public string? TaskType { get; set; }
+
+    /// <summary>The time zone ID (e.g. Pacific Standard time).</summary>
+    [JsonPropertyName("timeZoneId")]
+    public string? TimeZoneId { get; set; }
+
+    /// <summary>The properties of a weekly schedule. If the schedule occurs only some days of the week, specify the weekly recurrence. A weekly_recurrence block as defined below.</summary>
+    [JsonPropertyName("weeklyRecurrence")]
+    public V1beta1ScheduleStatusAtProviderWeeklyRecurrence? WeeklyRecurrence { get; set; }
+}
+
+/// <summary>A Condition that may apply to a resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatusConditions
+{
+    /// <summary>LastTransitionTime is the last time this condition transitioned from one status to another.</summary>
+    [JsonPropertyName("lastTransitionTime")]
+    public string LastTransitionTime { get; set; }
+
+    /// <summary>A Message containing details about this condition's last transition from one status to another, if any.</summary>
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    /// <summary>ObservedGeneration represents the .metadata.generation that the condition was set based upon. For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date with respect to the current state of the instance.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+
+    /// <summary>A Reason for this condition's last transition from one status to another.</summary>
+    [JsonPropertyName("reason")]
+    public string Reason { get; set; }
+
+    /// <summary>Status of this condition; is it currently True, False, or Unknown?</summary>
+    [JsonPropertyName("status")]
+    public string Status { get; set; }
+
+    /// <summary>Type of this condition. At most one of each condition type may apply to a resource at any point in time.</summary>
+    [JsonPropertyName("type")]
+    public string Type { get; set; }
+}
+
+/// <summary>ScheduleStatus defines the observed state of Schedule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1beta1ScheduleStatus
+{
+    /// <summary></summary>
+    [JsonPropertyName("atProvider")]
+    public V1beta1ScheduleStatusAtProvider? AtProvider { get; set; }
+
+    /// <summary>Conditions of the resource.</summary>
+    [JsonPropertyName("conditions")]
+    public IList<V1beta1ScheduleStatusConditions>? Conditions { get; set; }
+
+    /// <summary>ObservedGeneration is the latest metadata.generation which resulted in either a ready state, or stalled due to error it can not recover from without human intervention.</summary>
+    [JsonPropertyName("observedGeneration")]
+    public long? ObservedGeneration { get; set; }
+}
+
+/// <summary>Schedule is the Schema for the Schedules API. Manages automated startup and shutdown schedules for Azure Dev Test Lab.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Schedule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ScheduleSpec>, IStatus<V1beta1ScheduleStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Schedule";
+    public const string KubeGroup = "devtestlab.azure.m.upbound.io";
+    public const string KubePluralName = "schedules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
+    /// <summary>ScheduleSpec defines the desired state of Schedule</summary>
+    [JsonPropertyName("spec")]
+    public V1beta1ScheduleSpec Spec { get; set; }
+
+    /// <summary>ScheduleStatus defines the observed state of Schedule.</summary>
+    [JsonPropertyName("status")]
+    public V1beta1ScheduleStatus? Status { get; set; }
+}
+
+/// <summary>Schedule is the Schema for the Schedules API. Manages automated startup and shutdown schedules for Azure Dev Test Lab.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Schedule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ScheduleList";
+    public const string KubeGroup = "devtestlab.azure.m.upbound.io";
+    public const string KubePluralName = "schedules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Schedule> Items { get; set; }
+}
