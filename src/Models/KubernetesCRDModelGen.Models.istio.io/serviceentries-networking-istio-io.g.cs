@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceEntrySpecEndpoints
+public partial class V1ServiceEntrySpecEndpoints
 {
     /// <summary>Address associated with the network endpoint without the port.</summary>
     [JsonPropertyName("address")]
@@ -43,7 +43,7 @@ public partial class V1beta1ServiceEntrySpecEndpoints
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceEntrySpecPorts
+public partial class V1ServiceEntrySpecPorts
 {
     /// <summary>Label assigned to the port.</summary>
     [JsonPropertyName("name")]
@@ -64,7 +64,7 @@ public partial class V1beta1ServiceEntrySpecPorts
 
 /// <summary>Applicable only for MESH_INTERNAL services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceEntrySpecWorkloadSelector
+public partial class V1ServiceEntrySpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which the configuration should be applied.</summary>
     [JsonPropertyName("labels")]
@@ -73,7 +73,7 @@ public partial class V1beta1ServiceEntrySpecWorkloadSelector
 
 /// <summary>Configuration affecting service registry. See more details at: https://istio.io/docs/reference/config/networking/service-entry.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1ServiceEntrySpec
+public partial class V1ServiceEntrySpec
 {
     /// <summary>The virtual IP addresses associated with the service.</summary>
     [JsonPropertyName("addresses")]
@@ -81,7 +81,7 @@ public partial class V1beta1ServiceEntrySpec
 
     /// <summary>One or more endpoints associated with the service.</summary>
     [JsonPropertyName("endpoints")]
-    public IList<V1beta1ServiceEntrySpecEndpoints>? Endpoints { get; set; }
+    public IList<V1ServiceEntrySpecEndpoints>? Endpoints { get; set; }
 
     /// <summary>A list of namespaces to which this service is exported.</summary>
     [JsonPropertyName("exportTo")]
@@ -97,7 +97,7 @@ public partial class V1beta1ServiceEntrySpec
 
     /// <summary>The ports associated with the external service.</summary>
     [JsonPropertyName("ports")]
-    public IList<V1beta1ServiceEntrySpecPorts>? Ports { get; set; }
+    public IList<V1ServiceEntrySpecPorts>? Ports { get; set; }
 
     /// <summary>Service resolution mode for the hosts.  Valid Options: NONE, STATIC, DNS, DNS_ROUND_ROBIN</summary>
     [JsonPropertyName("resolution")]
@@ -109,15 +109,15 @@ public partial class V1beta1ServiceEntrySpec
 
     /// <summary>Applicable only for MESH_INTERNAL services.</summary>
     [JsonPropertyName("workloadSelector")]
-    public V1beta1ServiceEntrySpecWorkloadSelector? WorkloadSelector { get; set; }
+    public V1ServiceEntrySpecWorkloadSelector? WorkloadSelector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceEntrySpec>, IStatus<JsonNode>
+public partial class V1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1ServiceEntrySpec>, IStatus<JsonNode>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "ServiceEntry";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "serviceentries";
@@ -135,7 +135,7 @@ public partial class V1beta1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpe
 
     /// <summary>Configuration affecting service registry. See more details at: https://istio.io/docs/reference/config/networking/service-entry.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1ServiceEntrySpec Spec { get; set; }
+    public V1ServiceEntrySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
@@ -145,9 +145,9 @@ public partial class V1beta1ServiceEntry : IKubernetesObject<V1ObjectMeta>, ISpe
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceEntryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceEntry>
+public partial class V1ServiceEntryList : IKubernetesObject<V1ListMeta>, IItems<V1ServiceEntry>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "ServiceEntryList";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "serviceentries";
@@ -165,5 +165,5 @@ public partial class V1beta1ServiceEntryList : IKubernetesObject<V1ListMeta>, II
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1ServiceEntry> Items { get; set; }
+    public IList<V1ServiceEntry> Items { get; set; }
 }

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary>Metadata that will be used for all corresponding `WorkloadEntries`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecMetadata
+public partial class V1WorkloadGroupSpecMetadata
 {
     /// <summary></summary>
     [JsonPropertyName("annotations")]
@@ -23,7 +23,7 @@ public partial class V1beta1WorkloadGroupSpecMetadata
 
 /// <summary>Health is determined by how the command that is executed exited.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecProbeExec
+public partial class V1WorkloadGroupSpecProbeExec
 {
     /// <summary>Command to run.</summary>
     [JsonPropertyName("command")]
@@ -32,7 +32,7 @@ public partial class V1beta1WorkloadGroupSpecProbeExec
 
 /// <summary>GRPC call is made and response/error is used to determine health.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecProbeGrpc
+public partial class V1WorkloadGroupSpecProbeGrpc
 {
     /// <summary>Port on which the endpoint lives.</summary>
     [JsonPropertyName("port")]
@@ -45,7 +45,7 @@ public partial class V1beta1WorkloadGroupSpecProbeGrpc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecProbeHttpGetHttpHeaders
+public partial class V1WorkloadGroupSpecProbeHttpGetHttpHeaders
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -58,7 +58,7 @@ public partial class V1beta1WorkloadGroupSpecProbeHttpGetHttpHeaders
 
 /// <summary>`httpGet` is performed to a given endpoint and the status/able to connect determines health.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecProbeHttpGet
+public partial class V1WorkloadGroupSpecProbeHttpGet
 {
     /// <summary>Host name to connect to, defaults to the pod IP.</summary>
     [JsonPropertyName("host")]
@@ -66,7 +66,7 @@ public partial class V1beta1WorkloadGroupSpecProbeHttpGet
 
     /// <summary>Headers the proxy will pass on to make the request.</summary>
     [JsonPropertyName("httpHeaders")]
-    public IList<V1beta1WorkloadGroupSpecProbeHttpGetHttpHeaders>? HttpHeaders { get; set; }
+    public IList<V1WorkloadGroupSpecProbeHttpGetHttpHeaders>? HttpHeaders { get; set; }
 
     /// <summary>Path to access on the HTTP server.</summary>
     [JsonPropertyName("path")]
@@ -83,7 +83,7 @@ public partial class V1beta1WorkloadGroupSpecProbeHttpGet
 
 /// <summary>Health is determined by if the proxy is able to connect.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecProbeTcpSocket
+public partial class V1WorkloadGroupSpecProbeTcpSocket
 {
     /// <summary></summary>
     [JsonPropertyName("host")]
@@ -96,11 +96,11 @@ public partial class V1beta1WorkloadGroupSpecProbeTcpSocket
 
 /// <summary>`ReadinessProbe` describes the configuration the user must provide for healthchecking on their workload.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecProbe
+public partial class V1WorkloadGroupSpecProbe
 {
     /// <summary>Health is determined by how the command that is executed exited.</summary>
     [JsonPropertyName("exec")]
-    public V1beta1WorkloadGroupSpecProbeExec? Exec { get; set; }
+    public V1WorkloadGroupSpecProbeExec? Exec { get; set; }
 
     /// <summary>Minimum consecutive failures for the probe to be considered failed after having succeeded.</summary>
     [JsonPropertyName("failureThreshold")]
@@ -108,11 +108,11 @@ public partial class V1beta1WorkloadGroupSpecProbe
 
     /// <summary>GRPC call is made and response/error is used to determine health.</summary>
     [JsonPropertyName("grpc")]
-    public V1beta1WorkloadGroupSpecProbeGrpc? Grpc { get; set; }
+    public V1WorkloadGroupSpecProbeGrpc? Grpc { get; set; }
 
     /// <summary>`httpGet` is performed to a given endpoint and the status/able to connect determines health.</summary>
     [JsonPropertyName("httpGet")]
-    public V1beta1WorkloadGroupSpecProbeHttpGet? HttpGet { get; set; }
+    public V1WorkloadGroupSpecProbeHttpGet? HttpGet { get; set; }
 
     /// <summary>Number of seconds after the container has started before readiness probes are initiated.</summary>
     [JsonPropertyName("initialDelaySeconds")]
@@ -128,7 +128,7 @@ public partial class V1beta1WorkloadGroupSpecProbe
 
     /// <summary>Health is determined by if the proxy is able to connect.</summary>
     [JsonPropertyName("tcpSocket")]
-    public V1beta1WorkloadGroupSpecProbeTcpSocket? TcpSocket { get; set; }
+    public V1WorkloadGroupSpecProbeTcpSocket? TcpSocket { get; set; }
 
     /// <summary>Number of seconds after which the probe times out.</summary>
     [JsonPropertyName("timeoutSeconds")]
@@ -137,7 +137,7 @@ public partial class V1beta1WorkloadGroupSpecProbe
 
 /// <summary>Template to be used for the generation of `WorkloadEntry` resources that belong to this `WorkloadGroup`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpecTemplate
+public partial class V1WorkloadGroupSpecTemplate
 {
     /// <summary>Address associated with the network endpoint without the port.</summary>
     [JsonPropertyName("address")]
@@ -170,27 +170,27 @@ public partial class V1beta1WorkloadGroupSpecTemplate
 
 /// <summary>Describes a collection of workload instances. See more details at: https://istio.io/docs/reference/config/networking/workload-group.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadGroupSpec
+public partial class V1WorkloadGroupSpec
 {
     /// <summary>Metadata that will be used for all corresponding `WorkloadEntries`.</summary>
     [JsonPropertyName("metadata")]
-    public V1beta1WorkloadGroupSpecMetadata? Metadata { get; set; }
+    public V1WorkloadGroupSpecMetadata? Metadata { get; set; }
 
     /// <summary>`ReadinessProbe` describes the configuration the user must provide for healthchecking on their workload.</summary>
     [JsonPropertyName("probe")]
-    public V1beta1WorkloadGroupSpecProbe? Probe { get; set; }
+    public V1WorkloadGroupSpecProbe? Probe { get; set; }
 
     /// <summary>Template to be used for the generation of `WorkloadEntry` resources that belong to this `WorkloadGroup`.</summary>
     [JsonPropertyName("template")]
-    public V1beta1WorkloadGroupSpecTemplate Template { get; set; }
+    public V1WorkloadGroupSpecTemplate Template { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkloadGroupSpec>, IStatus<JsonNode>
+public partial class V1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1WorkloadGroupSpec>, IStatus<JsonNode>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "WorkloadGroup";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "workloadgroups";
@@ -208,7 +208,7 @@ public partial class V1beta1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISp
 
     /// <summary>Describes a collection of workload instances. See more details at: https://istio.io/docs/reference/config/networking/workload-group.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1WorkloadGroupSpec Spec { get; set; }
+    public V1WorkloadGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
@@ -218,9 +218,9 @@ public partial class V1beta1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISp
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkloadGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkloadGroup>
+public partial class V1WorkloadGroupList : IKubernetesObject<V1ListMeta>, IItems<V1WorkloadGroup>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "WorkloadGroupList";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "workloadgroups";
@@ -238,5 +238,5 @@ public partial class V1beta1WorkloadGroupList : IKubernetesObject<V1ListMeta>, I
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1WorkloadGroup> Items { get; set; }
+    public IList<V1WorkloadGroup> Items { get; set; }
 }

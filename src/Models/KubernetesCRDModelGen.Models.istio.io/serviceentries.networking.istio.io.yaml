@@ -7,8 +7,8 @@ metadata:
     app.kubernetes.io/instance: release-name
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: istio
-    app.kubernetes.io/version: 1.26.3
-    helm.sh/chart: base-1.26.3
+    app.kubernetes.io/version: 1.27.0
+    helm.sh/chart: base-1.27.0
   name: serviceentries.networking.istio.io
 spec:
   group: networking.istio.io
@@ -296,7 +296,7 @@ spec:
         - spec
         type: object
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}
   - additionalPrinterColumns:
@@ -846,6 +846,6 @@ spec:
         - spec
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}

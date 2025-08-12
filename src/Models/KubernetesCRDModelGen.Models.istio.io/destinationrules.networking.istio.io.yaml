@@ -7,8 +7,8 @@ metadata:
     app.kubernetes.io/instance: release-name
     app.kubernetes.io/managed-by: Helm
     app.kubernetes.io/part-of: istio
-    app.kubernetes.io/version: 1.26.3
-    helm.sh/chart: base-1.26.3
+    app.kubernetes.io/version: 1.27.0
+    helm.sh/chart: base-1.27.0
   name: destinationrules.networking.istio.io
 spec:
   group: networking.istio.io
@@ -29,7 +29,7 @@ spec:
       jsonPath: .spec.host
       name: Host
       type: string
-    - description: 'CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata'
+    - description: CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. For more information, see [Kubernetes API Conventions](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#metadata)
       jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
@@ -761,6 +761,22 @@ spec:
                               - V2
                               type: string
                           type: object
+                        retryBudget:
+                          description: Specifies a limit on concurrent retries in relation to the number of active requests.
+                          properties:
+                            minRetryConcurrency:
+                              description: Specifies the minimum retry concurrency allowed for the retry budget.
+                              maximum: 4294967295
+                              minimum: 0
+                              type: integer
+                            percent:
+                              description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
+                              format: double
+                              maximum: 100
+                              minimum: 0
+                              nullable: true
+                              type: number
+                          type: object
                         tls:
                           description: TLS related settings for connections to the upstream service.
                           properties:
@@ -1528,6 +1544,22 @@ spec:
                         - V2
                         type: string
                     type: object
+                  retryBudget:
+                    description: Specifies a limit on concurrent retries in relation to the number of active requests.
+                    properties:
+                      minRetryConcurrency:
+                        description: Specifies the minimum retry concurrency allowed for the retry budget.
+                        maximum: 4294967295
+                        minimum: 0
+                        type: integer
+                      percent:
+                        description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
+                        format: double
+                        maximum: 100
+                        minimum: 0
+                        nullable: true
+                        type: number
+                    type: object
                   tls:
                     description: TLS related settings for connections to the upstream service.
                     properties:
@@ -1685,7 +1717,7 @@ spec:
             x-kubernetes-preserve-unknown-fields: true
         type: object
     served: true
-    storage: false
+    storage: true
     subresources:
       status: {}
   - additionalPrinterColumns:
@@ -1693,7 +1725,7 @@ spec:
       jsonPath: .spec.host
       name: Host
       type: string
-    - description: 'CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata'
+    - description: CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. For more information, see [Kubernetes API Conventions](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#metadata)
       jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
@@ -2425,6 +2457,22 @@ spec:
                               - V2
                               type: string
                           type: object
+                        retryBudget:
+                          description: Specifies a limit on concurrent retries in relation to the number of active requests.
+                          properties:
+                            minRetryConcurrency:
+                              description: Specifies the minimum retry concurrency allowed for the retry budget.
+                              maximum: 4294967295
+                              minimum: 0
+                              type: integer
+                            percent:
+                              description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
+                              format: double
+                              maximum: 100
+                              minimum: 0
+                              nullable: true
+                              type: number
+                          type: object
                         tls:
                           description: TLS related settings for connections to the upstream service.
                           properties:
@@ -3192,6 +3240,22 @@ spec:
                         - V2
                         type: string
                     type: object
+                  retryBudget:
+                    description: Specifies a limit on concurrent retries in relation to the number of active requests.
+                    properties:
+                      minRetryConcurrency:
+                        description: Specifies the minimum retry concurrency allowed for the retry budget.
+                        maximum: 4294967295
+                        minimum: 0
+                        type: integer
+                      percent:
+                        description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
+                        format: double
+                        maximum: 100
+                        minimum: 0
+                        nullable: true
+                        type: number
+                    type: object
                   tls:
                     description: TLS related settings for connections to the upstream service.
                     properties:
@@ -3357,7 +3421,7 @@ spec:
       jsonPath: .spec.host
       name: Host
       type: string
-    - description: 'CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata'
+    - description: CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. For more information, see [Kubernetes API Conventions](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#metadata)
       jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
@@ -4089,6 +4153,22 @@ spec:
                               - V2
                               type: string
                           type: object
+                        retryBudget:
+                          description: Specifies a limit on concurrent retries in relation to the number of active requests.
+                          properties:
+                            minRetryConcurrency:
+                              description: Specifies the minimum retry concurrency allowed for the retry budget.
+                              maximum: 4294967295
+                              minimum: 0
+                              type: integer
+                            percent:
+                              description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
+                              format: double
+                              maximum: 100
+                              minimum: 0
+                              nullable: true
+                              type: number
+                          type: object
                         tls:
                           description: TLS related settings for connections to the upstream service.
                           properties:
@@ -4856,6 +4936,22 @@ spec:
                         - V2
                         type: string
                     type: object
+                  retryBudget:
+                    description: Specifies a limit on concurrent retries in relation to the number of active requests.
+                    properties:
+                      minRetryConcurrency:
+                        description: Specifies the minimum retry concurrency allowed for the retry budget.
+                        maximum: 4294967295
+                        minimum: 0
+                        type: integer
+                      percent:
+                        description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
+                        format: double
+                        maximum: 100
+                        minimum: 0
+                        nullable: true
+                        type: number
+                    type: object
                   tls:
                     description: TLS related settings for connections to the upstream service.
                     properties:
@@ -5013,6 +5109,6 @@ spec:
             x-kubernetes-preserve-unknown-fields: true
         type: object
     served: true
-    storage: true
+    storage: false
     subresources:
       status: {}

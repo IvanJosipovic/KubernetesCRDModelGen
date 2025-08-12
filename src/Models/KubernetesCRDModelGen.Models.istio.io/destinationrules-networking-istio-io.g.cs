@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
@@ -47,7 +47,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
 
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcpTcpKeepalive
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
     [JsonPropertyName("interval")]
@@ -64,7 +64,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
 
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcp
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
     [JsonPropertyName("connectTimeout")]
@@ -84,25 +84,25 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoo
 
     /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
     [JsonPropertyName("tcpKeepalive")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPool
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
     [JsonPropertyName("http")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp? Http { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp? Http { get; set; }
 
     /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
     [JsonPropertyName("tcp")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcp? Tcp { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolTcp? Tcp { get; set; }
 }
 
 /// <summary>Hash based on HTTP cookie.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashHttpCookie
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
@@ -119,7 +119,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
 
 /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashMaglev
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
     [JsonPropertyName("tableSize")]
@@ -128,7 +128,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
 
 /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashRingHash
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -137,11 +137,11 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHash
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
     [JsonPropertyName("httpCookie")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
 
     /// <summary>Hash based on a specific HTTP header.</summary>
     [JsonPropertyName("httpHeaderName")]
@@ -153,7 +153,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
 
     /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("maglev")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashMaglev? Maglev { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashMaglev? Maglev { get; set; }
 
     /// <summary>Deprecated.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -161,7 +161,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
 
     /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("ringHash")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashRingHash? RingHash { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHashRingHash? RingHash { get; set; }
 
     /// <summary>Hash based on the source IP address.</summary>
     [JsonPropertyName("useSourceIp")]
@@ -170,7 +170,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerC
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingDistribute
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
     [JsonPropertyName("from")]
@@ -183,7 +183,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingFailover
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
     [JsonPropertyName("from")]
@@ -196,11 +196,11 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSetting
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("distribute")]
-    public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
+    public IList<V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
     /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
@@ -208,7 +208,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
 
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("failover")]
-    public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
+    public IList<V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
 
     /// <summary>failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.</summary>
     [JsonPropertyName("failoverPriority")]
@@ -217,7 +217,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerL
 
 /// <summary>Represents the warmup configuration of Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerWarmup
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerWarmup
 {
     /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
     [JsonPropertyName("aggression")]
@@ -234,15 +234,15 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerW
 
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
 {
     /// <summary></summary>
     [JsonPropertyName("consistentHash")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHash? ConsistentHash { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerConsistentHash? ConsistentHash { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("localityLbSetting")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
@@ -250,7 +250,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
 
     /// <summary>Represents the warmup configuration of Service.</summary>
     [JsonPropertyName("warmup")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerWarmup? Warmup { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancerWarmup? Warmup { get; set; }
 
     /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -259,7 +259,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetection
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
     [JsonPropertyName("baseEjectionTime")]
@@ -300,7 +300,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetect
 
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttp
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
@@ -337,7 +337,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
     [JsonPropertyName("interval")]
@@ -354,7 +354,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcp
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
     [JsonPropertyName("connectTimeout")]
@@ -374,25 +374,25 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
     [JsonPropertyName("tcpKeepalive")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPool
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
     [JsonPropertyName("http")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttp? Http { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolHttp? Http { get; set; }
 
     /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
     [JsonPropertyName("tcp")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcp? Tcp { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPoolTcp? Tcp { get; set; }
 }
 
 /// <summary>Hash based on HTTP cookie.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
@@ -409,7 +409,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
     [JsonPropertyName("tableSize")]
@@ -418,7 +418,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -427,11 +427,11 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
     [JsonPropertyName("httpCookie")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
 
     /// <summary>Hash based on a specific HTTP header.</summary>
     [JsonPropertyName("httpHeaderName")]
@@ -443,7 +443,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("maglev")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev? Maglev { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev? Maglev { get; set; }
 
     /// <summary>Deprecated.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -451,7 +451,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("ringHash")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash? RingHash { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash? RingHash { get; set; }
 
     /// <summary>Hash based on the source IP address.</summary>
     [JsonPropertyName("useSourceIp")]
@@ -460,7 +460,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
     [JsonPropertyName("from")]
@@ -473,7 +473,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
     [JsonPropertyName("from")]
@@ -486,11 +486,11 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("distribute")]
-    public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
+    public IList<V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
     /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
@@ -498,7 +498,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("failover")]
-    public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
+    public IList<V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
 
     /// <summary>failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.</summary>
     [JsonPropertyName("failoverPriority")]
@@ -507,7 +507,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>Represents the warmup configuration of Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerWarmup
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerWarmup
 {
     /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
     [JsonPropertyName("aggression")]
@@ -524,15 +524,15 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer
 {
     /// <summary></summary>
     [JsonPropertyName("consistentHash")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash? ConsistentHash { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash? ConsistentHash { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("localityLbSetting")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
@@ -540,7 +540,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
     /// <summary>Represents the warmup configuration of Service.</summary>
     [JsonPropertyName("warmup")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerWarmup? Warmup { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancerWarmup? Warmup { get; set; }
 
     /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -549,7 +549,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsOutlierDetection
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
     [JsonPropertyName("baseEjectionTime")]
@@ -590,7 +590,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>Specifies the number of a port on the destination service on which this policy is being applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsPort
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -599,7 +599,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary>TLS related settings for connections to the upstream service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
     [JsonPropertyName("caCertificates")]
@@ -640,41 +640,54 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSett
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettings
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettings
 {
     /// <summary></summary>
     [JsonPropertyName("connectionPool")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPool? ConnectionPool { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsConnectionPool? ConnectionPool { get; set; }
 
     /// <summary>Settings controlling the load balancer algorithms.</summary>
     [JsonPropertyName("loadBalancer")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer? LoadBalancer { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsLoadBalancer? LoadBalancer { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("outlierDetection")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsOutlierDetection? OutlierDetection { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsOutlierDetection? OutlierDetection { get; set; }
 
     /// <summary>Specifies the number of a port on the destination service on which this policy is being applied.</summary>
     [JsonPropertyName("port")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsPort? Port { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsPort? Port { get; set; }
 
     /// <summary>TLS related settings for connections to the upstream service.</summary>
     [JsonPropertyName("tls")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
 }
 
 /// <summary>The upstream PROXY protocol settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol
 {
     /// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
 
+/// <summary>Specifies a limit on concurrent retries in relation to the number of active requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyRetryBudget
+{
+    /// <summary>Specifies the minimum retry concurrency allowed for the retry budget.</summary>
+    [JsonPropertyName("minRetryConcurrency")]
+    public int? MinRetryConcurrency { get; set; }
+
+    /// <summary>Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.</summary>
+    [JsonPropertyName("percent")]
+    public double? Percent { get; set; }
+}
+
 /// <summary>TLS related settings for connections to the upstream service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTls
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
     [JsonPropertyName("caCertificates")]
@@ -715,7 +728,7 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTls
 
 /// <summary>Configuration of tunneling TCP over other transport or application layers for the host configured in the DestinationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTunnel
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicyTunnel
 {
     /// <summary>Specifies which protocol to use for tunneling the downstream connection.</summary>
     [JsonPropertyName("protocol")]
@@ -732,40 +745,44 @@ public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicyTunnel
 
 /// <summary>Traffic policies that apply to this subset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsetsTrafficPolicy
+public partial class V1DestinationRuleSpecSubsetsTrafficPolicy
 {
     /// <summary></summary>
     [JsonPropertyName("connectionPool")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyConnectionPool? ConnectionPool { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPool? ConnectionPool { get; set; }
 
     /// <summary>Settings controlling the load balancer algorithms.</summary>
     [JsonPropertyName("loadBalancer")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer? LoadBalancer { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyLoadBalancer? LoadBalancer { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("outlierDetection")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetection? OutlierDetection { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyOutlierDetection? OutlierDetection { get; set; }
 
     /// <summary>Traffic policies specific to individual ports.</summary>
     [JsonPropertyName("portLevelSettings")]
-    public IList<V1beta1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettings>? PortLevelSettings { get; set; }
+    public IList<V1DestinationRuleSpecSubsetsTrafficPolicyPortLevelSettings>? PortLevelSettings { get; set; }
 
     /// <summary>The upstream PROXY protocol settings.</summary>
     [JsonPropertyName("proxyProtocol")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol? ProxyProtocol { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyProxyProtocol? ProxyProtocol { get; set; }
+
+    /// <summary>Specifies a limit on concurrent retries in relation to the number of active requests.</summary>
+    [JsonPropertyName("retryBudget")]
+    public V1DestinationRuleSpecSubsetsTrafficPolicyRetryBudget? RetryBudget { get; set; }
 
     /// <summary>TLS related settings for connections to the upstream service.</summary>
     [JsonPropertyName("tls")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyTls? Tls { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyTls? Tls { get; set; }
 
     /// <summary>Configuration of tunneling TCP over other transport or application layers for the host configured in the DestinationRule.</summary>
     [JsonPropertyName("tunnel")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicyTunnel? Tunnel { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicyTunnel? Tunnel { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecSubsets
+public partial class V1DestinationRuleSpecSubsets
 {
     /// <summary>Labels apply a filter over the endpoints of a service in the service registry.</summary>
     [JsonPropertyName("labels")]
@@ -777,12 +794,12 @@ public partial class V1beta1DestinationRuleSpecSubsets
 
     /// <summary>Traffic policies that apply to this subset.</summary>
     [JsonPropertyName("trafficPolicy")]
-    public V1beta1DestinationRuleSpecSubsetsTrafficPolicy? TrafficPolicy { get; set; }
+    public V1DestinationRuleSpecSubsetsTrafficPolicy? TrafficPolicy { get; set; }
 }
 
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttp
+public partial class V1DestinationRuleSpecTrafficPolicyConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
@@ -819,7 +836,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttp
 
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcpKeepalive
+public partial class V1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
     [JsonPropertyName("interval")]
@@ -836,7 +853,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcp
 
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcp
+public partial class V1DestinationRuleSpecTrafficPolicyConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
     [JsonPropertyName("connectTimeout")]
@@ -856,25 +873,25 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcp
 
     /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
     [JsonPropertyName("tcpKeepalive")]
-    public V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyConnectionPool
+public partial class V1DestinationRuleSpecTrafficPolicyConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
     [JsonPropertyName("http")]
-    public V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolHttp? Http { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyConnectionPoolHttp? Http { get; set; }
 
     /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
     [JsonPropertyName("tcp")]
-    public V1beta1DestinationRuleSpecTrafficPolicyConnectionPoolTcp? Tcp { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyConnectionPoolTcp? Tcp { get; set; }
 }
 
 /// <summary>Hash based on HTTP cookie.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashHttpCookie
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
@@ -891,7 +908,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
 
 /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashMaglev
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
     [JsonPropertyName("tableSize")]
@@ -900,7 +917,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
 
 /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashRingHash
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -909,11 +926,11 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHash
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
     [JsonPropertyName("httpCookie")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
 
     /// <summary>Hash based on a specific HTTP header.</summary>
     [JsonPropertyName("httpHeaderName")]
@@ -925,7 +942,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
 
     /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("maglev")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashMaglev? Maglev { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashMaglev? Maglev { get; set; }
 
     /// <summary>Deprecated.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -933,7 +950,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
 
     /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("ringHash")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashRingHash? RingHash { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHashRingHash? RingHash { get; set; }
 
     /// <summary>Hash based on the source IP address.</summary>
     [JsonPropertyName("useSourceIp")]
@@ -942,7 +959,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsiste
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingDistribute
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
     [JsonPropertyName("from")]
@@ -955,7 +972,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingFailover
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
     [JsonPropertyName("from")]
@@ -968,11 +985,11 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSetting
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("distribute")]
-    public IList<V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
+    public IList<V1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
     /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
@@ -980,7 +997,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
 
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("failover")]
-    public IList<V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
+    public IList<V1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
 
     /// <summary>failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.</summary>
     [JsonPropertyName("failoverPriority")]
@@ -989,7 +1006,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocality
 
 /// <summary>Represents the warmup configuration of Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup
 {
     /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
     [JsonPropertyName("aggression")]
@@ -1006,15 +1023,15 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup
 
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
+public partial class V1DestinationRuleSpecTrafficPolicyLoadBalancer
 {
     /// <summary></summary>
     [JsonPropertyName("consistentHash")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHash? ConsistentHash { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancerConsistentHash? ConsistentHash { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("localityLbSetting")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
@@ -1022,7 +1039,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
 
     /// <summary>Represents the warmup configuration of Service.</summary>
     [JsonPropertyName("warmup")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup? Warmup { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancerWarmup? Warmup { get; set; }
 
     /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -1031,7 +1048,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection
+public partial class V1DestinationRuleSpecTrafficPolicyOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
     [JsonPropertyName("baseEjectionTime")]
@@ -1072,7 +1089,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection
 
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttp
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttp
 {
     /// <summary>Specify if http1.1 connection should be upgraded to http2 for the associated destination.  Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE</summary>
     [JsonPropertyName("h2UpgradePolicy")]
@@ -1109,7 +1126,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
 
 /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive
 {
     /// <summary>The time duration between keep-alive probes.</summary>
     [JsonPropertyName("interval")]
@@ -1126,7 +1143,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
 
 /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcp
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcp
 {
     /// <summary>TCP connection timeout.</summary>
     [JsonPropertyName("connectTimeout")]
@@ -1146,25 +1163,25 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsCon
 
     /// <summary>If set then set SO_KEEPALIVE on the socket to enable TCP Keepalives.</summary>
     [JsonPropertyName("tcpKeepalive")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcpTcpKeepalive? TcpKeepalive { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPool
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPool
 {
     /// <summary>HTTP connection pool settings.</summary>
     [JsonPropertyName("http")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttp? Http { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolHttp? Http { get; set; }
 
     /// <summary>Settings common to both HTTP and TCP upstream connections.</summary>
     [JsonPropertyName("tcp")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcp? Tcp { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPoolTcp? Tcp { get; set; }
 }
 
 /// <summary>Hash based on HTTP cookie.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie
 {
     /// <summary>Name of the cookie.</summary>
     [JsonPropertyName("name")]
@@ -1181,7 +1198,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev
 {
     /// <summary>The table size for Maglev hashing.</summary>
     [JsonPropertyName("tableSize")]
@@ -1190,7 +1207,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash
 {
     /// <summary>The minimum number of virtual nodes to use for the hash ring.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -1199,11 +1216,11 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash
 {
     /// <summary>Hash based on HTTP cookie.</summary>
     [JsonPropertyName("httpCookie")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashHttpCookie? HttpCookie { get; set; }
 
     /// <summary>Hash based on a specific HTTP header.</summary>
     [JsonPropertyName("httpHeaderName")]
@@ -1215,7 +1232,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
     /// <summary>The Maglev load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("maglev")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev? Maglev { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashMaglev? Maglev { get; set; }
 
     /// <summary>Deprecated.</summary>
     [JsonPropertyName("minimumRingSize")]
@@ -1223,7 +1240,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
     /// <summary>The ring/modulo hash load balancer implements consistent hashing to backend hosts.</summary>
     [JsonPropertyName("ringHash")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash? RingHash { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHashRingHash? RingHash { get; set; }
 
     /// <summary>Hash based on the source IP address.</summary>
     [JsonPropertyName("useSourceIp")]
@@ -1232,7 +1249,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute
 {
     /// <summary>Originating locality, '/' separated, e.g.</summary>
     [JsonPropertyName("from")]
@@ -1245,7 +1262,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover
 {
     /// <summary>Originating region.</summary>
     [JsonPropertyName("from")]
@@ -1258,11 +1275,11 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting
 {
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("distribute")]
-    public IList<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
+    public IList<V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingDistribute>? Distribute { get; set; }
 
     /// <summary>Enable locality load balancing.</summary>
     [JsonPropertyName("enabled")]
@@ -1270,7 +1287,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
     /// <summary>Optional: only one of distribute, failover or failoverPriority can be set.</summary>
     [JsonPropertyName("failover")]
-    public IList<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
+    public IList<V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSettingFailover>? Failover { get; set; }
 
     /// <summary>failoverPriority is an ordered list of labels used to sort endpoints to do priority based load balancing.</summary>
     [JsonPropertyName("failoverPriority")]
@@ -1279,7 +1296,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary>Represents the warmup configuration of Service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerWarmup
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerWarmup
 {
     /// <summary>This parameter controls the speed of traffic increase over the warmup duration.</summary>
     [JsonPropertyName("aggression")]
@@ -1296,15 +1313,15 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary>Settings controlling the load balancer algorithms.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer
 {
     /// <summary></summary>
     [JsonPropertyName("consistentHash")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash? ConsistentHash { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerConsistentHash? ConsistentHash { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("localityLbSetting")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerLocalityLbSetting? LocalityLbSetting { get; set; }
 
     /// <summary>  Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST</summary>
     [JsonPropertyName("simple")]
@@ -1312,7 +1329,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
     /// <summary>Represents the warmup configuration of Service.</summary>
     [JsonPropertyName("warmup")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerWarmup? Warmup { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancerWarmup? Warmup { get; set; }
 
     /// <summary>Deprecated: use `warmup` instead.</summary>
     [JsonPropertyName("warmupDurationSecs")]
@@ -1321,7 +1338,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsOutlierDetection
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsOutlierDetection
 {
     /// <summary>Minimum ejection duration.</summary>
     [JsonPropertyName("baseEjectionTime")]
@@ -1362,7 +1379,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsOut
 
 /// <summary>Specifies the number of a port on the destination service on which this policy is being applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsPort
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -1371,7 +1388,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsPor
 
 /// <summary>TLS related settings for connections to the upstream service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
     [JsonPropertyName("caCertificates")]
@@ -1412,41 +1429,54 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettings
+public partial class V1DestinationRuleSpecTrafficPolicyPortLevelSettings
 {
     /// <summary></summary>
     [JsonPropertyName("connectionPool")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPool? ConnectionPool { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsConnectionPool? ConnectionPool { get; set; }
 
     /// <summary>Settings controlling the load balancer algorithms.</summary>
     [JsonPropertyName("loadBalancer")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer? LoadBalancer { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsLoadBalancer? LoadBalancer { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("outlierDetection")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsOutlierDetection? OutlierDetection { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsOutlierDetection? OutlierDetection { get; set; }
 
     /// <summary>Specifies the number of a port on the destination service on which this policy is being applied.</summary>
     [JsonPropertyName("port")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsPort? Port { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsPort? Port { get; set; }
 
     /// <summary>TLS related settings for connections to the upstream service.</summary>
     [JsonPropertyName("tls")]
-    public V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyPortLevelSettingsTls? Tls { get; set; }
 }
 
 /// <summary>The upstream PROXY protocol settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyProxyProtocol
+public partial class V1DestinationRuleSpecTrafficPolicyProxyProtocol
 {
     /// <summary>The PROXY protocol version to use.  Valid Options: V1, V2</summary>
     [JsonPropertyName("version")]
     public string? Version { get; set; }
 }
 
+/// <summary>Specifies a limit on concurrent retries in relation to the number of active requests.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1DestinationRuleSpecTrafficPolicyRetryBudget
+{
+    /// <summary>Specifies the minimum retry concurrency allowed for the retry budget.</summary>
+    [JsonPropertyName("minRetryConcurrency")]
+    public int? MinRetryConcurrency { get; set; }
+
+    /// <summary>Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.</summary>
+    [JsonPropertyName("percent")]
+    public double? Percent { get; set; }
+}
+
 /// <summary>TLS related settings for connections to the upstream service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyTls
+public partial class V1DestinationRuleSpecTrafficPolicyTls
 {
     /// <summary>OPTIONAL: The path to the file containing certificate authority certificates to use in verifying a presented server certificate.</summary>
     [JsonPropertyName("caCertificates")]
@@ -1487,7 +1517,7 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyTls
 
 /// <summary>Configuration of tunneling TCP over other transport or application layers for the host configured in the DestinationRule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicyTunnel
+public partial class V1DestinationRuleSpecTrafficPolicyTunnel
 {
     /// <summary>Specifies which protocol to use for tunneling the downstream connection.</summary>
     [JsonPropertyName("protocol")]
@@ -1504,40 +1534,44 @@ public partial class V1beta1DestinationRuleSpecTrafficPolicyTunnel
 
 /// <summary>Traffic policies to apply (load balancing policy, connection pool sizes, outlier detection).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecTrafficPolicy
+public partial class V1DestinationRuleSpecTrafficPolicy
 {
     /// <summary></summary>
     [JsonPropertyName("connectionPool")]
-    public V1beta1DestinationRuleSpecTrafficPolicyConnectionPool? ConnectionPool { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyConnectionPool? ConnectionPool { get; set; }
 
     /// <summary>Settings controlling the load balancer algorithms.</summary>
     [JsonPropertyName("loadBalancer")]
-    public V1beta1DestinationRuleSpecTrafficPolicyLoadBalancer? LoadBalancer { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyLoadBalancer? LoadBalancer { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("outlierDetection")]
-    public V1beta1DestinationRuleSpecTrafficPolicyOutlierDetection? OutlierDetection { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyOutlierDetection? OutlierDetection { get; set; }
 
     /// <summary>Traffic policies specific to individual ports.</summary>
     [JsonPropertyName("portLevelSettings")]
-    public IList<V1beta1DestinationRuleSpecTrafficPolicyPortLevelSettings>? PortLevelSettings { get; set; }
+    public IList<V1DestinationRuleSpecTrafficPolicyPortLevelSettings>? PortLevelSettings { get; set; }
 
     /// <summary>The upstream PROXY protocol settings.</summary>
     [JsonPropertyName("proxyProtocol")]
-    public V1beta1DestinationRuleSpecTrafficPolicyProxyProtocol? ProxyProtocol { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyProxyProtocol? ProxyProtocol { get; set; }
+
+    /// <summary>Specifies a limit on concurrent retries in relation to the number of active requests.</summary>
+    [JsonPropertyName("retryBudget")]
+    public V1DestinationRuleSpecTrafficPolicyRetryBudget? RetryBudget { get; set; }
 
     /// <summary>TLS related settings for connections to the upstream service.</summary>
     [JsonPropertyName("tls")]
-    public V1beta1DestinationRuleSpecTrafficPolicyTls? Tls { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyTls? Tls { get; set; }
 
     /// <summary>Configuration of tunneling TCP over other transport or application layers for the host configured in the DestinationRule.</summary>
     [JsonPropertyName("tunnel")]
-    public V1beta1DestinationRuleSpecTrafficPolicyTunnel? Tunnel { get; set; }
+    public V1DestinationRuleSpecTrafficPolicyTunnel? Tunnel { get; set; }
 }
 
 /// <summary>Criteria used to select the specific set of pods/VMs on which this `DestinationRule` configuration should be applied.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpecWorkloadSelector
+public partial class V1DestinationRuleSpecWorkloadSelector
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which a policy should be applied.</summary>
     [JsonPropertyName("matchLabels")]
@@ -1546,7 +1580,7 @@ public partial class V1beta1DestinationRuleSpecWorkloadSelector
 
 /// <summary>Configuration affecting load balancing, outlier detection, etc. See more details at: https://istio.io/docs/reference/config/networking/destination-rule.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1DestinationRuleSpec
+public partial class V1DestinationRuleSpec
 {
     /// <summary>A list of namespaces to which this destination rule is exported.</summary>
     [JsonPropertyName("exportTo")]
@@ -1558,23 +1592,23 @@ public partial class V1beta1DestinationRuleSpec
 
     /// <summary>One or more named sets that represent individual versions of a service.</summary>
     [JsonPropertyName("subsets")]
-    public IList<V1beta1DestinationRuleSpecSubsets>? Subsets { get; set; }
+    public IList<V1DestinationRuleSpecSubsets>? Subsets { get; set; }
 
     /// <summary>Traffic policies to apply (load balancing policy, connection pool sizes, outlier detection).</summary>
     [JsonPropertyName("trafficPolicy")]
-    public V1beta1DestinationRuleSpecTrafficPolicy? TrafficPolicy { get; set; }
+    public V1DestinationRuleSpecTrafficPolicy? TrafficPolicy { get; set; }
 
     /// <summary>Criteria used to select the specific set of pods/VMs on which this `DestinationRule` configuration should be applied.</summary>
     [JsonPropertyName("workloadSelector")]
-    public V1beta1DestinationRuleSpecWorkloadSelector? WorkloadSelector { get; set; }
+    public V1DestinationRuleSpecWorkloadSelector? WorkloadSelector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DestinationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DestinationRuleSpec>, IStatus<JsonNode>
+public partial class V1DestinationRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1DestinationRuleSpec>, IStatus<JsonNode>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "DestinationRule";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "destinationrules";
@@ -1592,7 +1626,7 @@ public partial class V1beta1DestinationRule : IKubernetesObject<V1ObjectMeta>, I
 
     /// <summary>Configuration affecting load balancing, outlier detection, etc. See more details at: https://istio.io/docs/reference/config/networking/destination-rule.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1DestinationRuleSpec? Spec { get; set; }
+    public V1DestinationRuleSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
@@ -1602,9 +1636,9 @@ public partial class V1beta1DestinationRule : IKubernetesObject<V1ObjectMeta>, I
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DestinationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DestinationRule>
+public partial class V1DestinationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1DestinationRule>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "DestinationRuleList";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "destinationrules";
@@ -1622,5 +1656,5 @@ public partial class V1beta1DestinationRuleList : IKubernetesObject<V1ListMeta>,
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1DestinationRule> Items { get; set; }
+    public IList<V1DestinationRule> Items { get; set; }
 }

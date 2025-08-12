@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary>The Port on which the proxy should listen for incoming connections.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GatewaySpecServersPort
+public partial class V1GatewaySpecServersPort
 {
     /// <summary>Label assigned to the port.</summary>
     [JsonPropertyName("name")]
@@ -31,9 +31,9 @@ public partial class V1beta1GatewaySpecServersPort
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GatewaySpecServersTlsTlsCertificates
+public partial class V1GatewaySpecServersTlsTlsCertificates
 {
-    /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
+    /// <summary></summary>
     [JsonPropertyName("caCertificates")]
     public string? CaCertificates { get; set; }
 
@@ -48,7 +48,7 @@ public partial class V1beta1GatewaySpecServersTlsTlsCertificates
 
 /// <summary>Set of TLS related options that govern the server's behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GatewaySpecServersTls
+public partial class V1GatewaySpecServersTls
 {
     /// <summary>REQUIRED if mode is `MUTUAL` or `OPTIONAL_MUTUAL`.</summary>
     [JsonPropertyName("caCertificates")]
@@ -98,9 +98,9 @@ public partial class V1beta1GatewaySpecServersTls
     [JsonPropertyName("subjectAltNames")]
     public IList<string>? SubjectAltNames { get; set; }
 
-    /// <summary>Only one of `server_certificate`, `private_key`, `ca_certificates` or `credential_name` or `credential_names` or `tls_certificates` should be specified.</summary>
+    /// <summary>Only one of `server_certificate`, `private_key` or `credential_name` or `credential_names` or `tls_certificates` should be specified.</summary>
     [JsonPropertyName("tlsCertificates")]
-    public IList<V1beta1GatewaySpecServersTlsTlsCertificates>? TlsCertificates { get; set; }
+    public IList<V1GatewaySpecServersTlsTlsCertificates>? TlsCertificates { get; set; }
 
     /// <summary>An optional list of hex-encoded SHA-256 hashes of the authorized client certificates.</summary>
     [JsonPropertyName("verifyCertificateHash")]
@@ -113,7 +113,7 @@ public partial class V1beta1GatewaySpecServersTls
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GatewaySpecServers
+public partial class V1GatewaySpecServers
 {
     /// <summary>The ip or the Unix domain socket to which the listener should be bound to.</summary>
     [JsonPropertyName("bind")]
@@ -133,16 +133,16 @@ public partial class V1beta1GatewaySpecServers
 
     /// <summary>The Port on which the proxy should listen for incoming connections.</summary>
     [JsonPropertyName("port")]
-    public V1beta1GatewaySpecServersPort Port { get; set; }
+    public V1GatewaySpecServersPort Port { get; set; }
 
     /// <summary>Set of TLS related options that govern the server's behavior.</summary>
     [JsonPropertyName("tls")]
-    public V1beta1GatewaySpecServersTls? Tls { get; set; }
+    public V1GatewaySpecServersTls? Tls { get; set; }
 }
 
 /// <summary>Configuration affecting edge load balancer. See more details at: https://istio.io/docs/reference/config/networking/gateway.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1GatewaySpec
+public partial class V1GatewaySpec
 {
     /// <summary>One or more labels that indicate a specific set of pods/VMs on which this gateway configuration should be applied.</summary>
     [JsonPropertyName("selector")]
@@ -150,15 +150,15 @@ public partial class V1beta1GatewaySpec
 
     /// <summary>A list of server specifications.</summary>
     [JsonPropertyName("servers")]
-    public IList<V1beta1GatewaySpecServers>? Servers { get; set; }
+    public IList<V1GatewaySpecServers>? Servers { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1GatewaySpec>, IStatus<JsonNode>
+public partial class V1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1GatewaySpec>, IStatus<JsonNode>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "Gateway";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "gateways";
@@ -176,7 +176,7 @@ public partial class V1beta1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
 
     /// <summary>Configuration affecting edge load balancer. See more details at: https://istio.io/docs/reference/config/networking/gateway.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1GatewaySpec? Spec { get; set; }
+    public V1GatewaySpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
@@ -186,9 +186,9 @@ public partial class V1beta1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Gateway>
+public partial class V1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1Gateway>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "GatewayList";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "gateways";
@@ -206,5 +206,5 @@ public partial class V1beta1GatewayList : IKubernetesObject<V1ListMeta>, IItems<
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1Gateway> Items { get; set; }
+    public IList<V1Gateway> Items { get; set; }
 }

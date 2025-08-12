@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary>Configuration affecting VMs onboarded into the mesh. See more details at: https://istio.io/docs/reference/config/networking/workload-entry.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1WorkloadEntrySpec
+public partial class V1WorkloadEntrySpec
 {
     /// <summary>Address associated with the network endpoint without the port.</summary>
     [JsonPropertyName("address")]
@@ -44,9 +44,9 @@ public partial class V1beta1WorkloadEntrySpec
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkloadEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1WorkloadEntrySpec>, IStatus<JsonNode>
+public partial class V1WorkloadEntry : IKubernetesObject<V1ObjectMeta>, ISpec<V1WorkloadEntrySpec>, IStatus<JsonNode>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "WorkloadEntry";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "workloadentries";
@@ -64,7 +64,7 @@ public partial class V1beta1WorkloadEntry : IKubernetesObject<V1ObjectMeta>, ISp
 
     /// <summary>Configuration affecting VMs onboarded into the mesh. See more details at: https://istio.io/docs/reference/config/networking/workload-entry.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1WorkloadEntrySpec Spec { get; set; }
+    public V1WorkloadEntrySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
@@ -74,9 +74,9 @@ public partial class V1beta1WorkloadEntry : IKubernetesObject<V1ObjectMeta>, ISp
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkloadEntryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkloadEntry>
+public partial class V1WorkloadEntryList : IKubernetesObject<V1ListMeta>, IItems<V1WorkloadEntry>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "WorkloadEntryList";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "workloadentries";
@@ -94,5 +94,5 @@ public partial class V1beta1WorkloadEntryList : IKubernetesObject<V1ListMeta>, I
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1WorkloadEntry> Items { get; set; }
+    public IList<V1WorkloadEntry> Items { get; set; }
 }

@@ -60,7 +60,7 @@ public partial class V1beta1RequestAuthenticationSpecJwtRules
 
     /// <summary>Identifies the issuer that issued the JWT.</summary>
     [JsonPropertyName("issuer")]
-    public string Issuer { get; set; }
+    public string? Issuer { get; set; }
 
     /// <summary>JSON Web Key Set of public keys to validate signature of the JWT.</summary>
     [JsonPropertyName("jwks")]
