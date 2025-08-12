@@ -111,7 +111,7 @@ public partial class V1alpha1WasmPluginSpecVmConfig
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpec
 {
-    /// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN</summary>
+    /// <summary>Specifies the failure behavior for the plugin due to fatal errors.  Valid Options: FAIL_CLOSE, FAIL_OPEN, FAIL_RELOAD</summary>
     [JsonPropertyName("failStrategy")]
     public string? FailStrategy { get; set; }
 

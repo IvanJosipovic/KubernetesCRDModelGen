@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpCorsPolicyAllowOrigins
+public partial class V1VirtualServiceSpecHttpCorsPolicyAllowOrigins
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -27,7 +27,7 @@ public partial class V1beta1VirtualServiceSpecHttpCorsPolicyAllowOrigins
 
 /// <summary>Cross-Origin Resource Sharing policy (CORS).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpCorsPolicy
+public partial class V1VirtualServiceSpecHttpCorsPolicy
 {
     /// <summary>Indicates whether the caller is allowed to send the actual request (not the preflight) using credentials.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -47,7 +47,7 @@ public partial class V1beta1VirtualServiceSpecHttpCorsPolicy
 
     /// <summary>String patterns that match allowed origins.</summary>
     [JsonPropertyName("allowOrigins")]
-    public IList<V1beta1VirtualServiceSpecHttpCorsPolicyAllowOrigins>? AllowOrigins { get; set; }
+    public IList<V1VirtualServiceSpecHttpCorsPolicyAllowOrigins>? AllowOrigins { get; set; }
 
     /// <summary>A list of HTTP headers that the browsers are allowed to access.</summary>
     [JsonPropertyName("exposeHeaders")]
@@ -64,7 +64,7 @@ public partial class V1beta1VirtualServiceSpecHttpCorsPolicy
 
 /// <summary>Delegate is used to specify the particular VirtualService which can be used to define delegate HTTPRoute.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpDelegate
+public partial class V1VirtualServiceSpecHttpDelegate
 {
     /// <summary>Name specifies the name of the delegate VirtualService.</summary>
     [JsonPropertyName("name")]
@@ -77,7 +77,7 @@ public partial class V1beta1VirtualServiceSpecHttpDelegate
 
 /// <summary>Specifies the content of the response body.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpDirectResponseBody
+public partial class V1VirtualServiceSpecHttpDirectResponseBody
 {
     /// <summary>response body as base64 encoded bytes.</summary>
     [JsonPropertyName("bytes")]
@@ -90,11 +90,11 @@ public partial class V1beta1VirtualServiceSpecHttpDirectResponseBody
 
 /// <summary>A HTTP rule can either return a direct_response, redirect or forward (default) traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpDirectResponse
+public partial class V1VirtualServiceSpecHttpDirectResponse
 {
     /// <summary>Specifies the content of the response body.</summary>
     [JsonPropertyName("body")]
-    public V1beta1VirtualServiceSpecHttpDirectResponseBody? Body { get; set; }
+    public V1VirtualServiceSpecHttpDirectResponseBody? Body { get; set; }
 
     /// <summary>Specifies the HTTP response status to be returned.</summary>
     [JsonPropertyName("status")]
@@ -103,7 +103,7 @@ public partial class V1beta1VirtualServiceSpecHttpDirectResponse
 
 /// <summary>Percentage of requests to be aborted with the error code provided.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpFaultAbortPercentage
+public partial class V1VirtualServiceSpecHttpFaultAbortPercentage
 {
     /// <summary></summary>
     [JsonPropertyName("value")]
@@ -112,7 +112,7 @@ public partial class V1beta1VirtualServiceSpecHttpFaultAbortPercentage
 
 /// <summary>Abort Http request attempts and return error codes back to downstream service, giving the impression that the upstream service is faulty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpFaultAbort
+public partial class V1VirtualServiceSpecHttpFaultAbort
 {
     /// <summary>GRPC status code to use to abort the request.</summary>
     [JsonPropertyName("grpcStatus")]
@@ -128,12 +128,12 @@ public partial class V1beta1VirtualServiceSpecHttpFaultAbort
 
     /// <summary>Percentage of requests to be aborted with the error code provided.</summary>
     [JsonPropertyName("percentage")]
-    public V1beta1VirtualServiceSpecHttpFaultAbortPercentage? Percentage { get; set; }
+    public V1VirtualServiceSpecHttpFaultAbortPercentage? Percentage { get; set; }
 }
 
 /// <summary>Percentage of requests on which the delay will be injected.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpFaultDelayPercentage
+public partial class V1VirtualServiceSpecHttpFaultDelayPercentage
 {
     /// <summary></summary>
     [JsonPropertyName("value")]
@@ -142,7 +142,7 @@ public partial class V1beta1VirtualServiceSpecHttpFaultDelayPercentage
 
 /// <summary>Delay requests before forwarding, emulating various failures such as network issues, overloaded upstream service, etc.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpFaultDelay
+public partial class V1VirtualServiceSpecHttpFaultDelay
 {
     /// <summary></summary>
     [JsonPropertyName("exponentialDelay")]
@@ -158,25 +158,25 @@ public partial class V1beta1VirtualServiceSpecHttpFaultDelay
 
     /// <summary>Percentage of requests on which the delay will be injected.</summary>
     [JsonPropertyName("percentage")]
-    public V1beta1VirtualServiceSpecHttpFaultDelayPercentage? Percentage { get; set; }
+    public V1VirtualServiceSpecHttpFaultDelayPercentage? Percentage { get; set; }
 }
 
 /// <summary>Fault injection policy to apply on HTTP traffic at the client side.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpFault
+public partial class V1VirtualServiceSpecHttpFault
 {
     /// <summary>Abort Http request attempts and return error codes back to downstream service, giving the impression that the upstream service is faulty.</summary>
     [JsonPropertyName("abort")]
-    public V1beta1VirtualServiceSpecHttpFaultAbort? Abort { get; set; }
+    public V1VirtualServiceSpecHttpFaultAbort? Abort { get; set; }
 
     /// <summary>Delay requests before forwarding, emulating various failures such as network issues, overloaded upstream service, etc.</summary>
     [JsonPropertyName("delay")]
-    public V1beta1VirtualServiceSpecHttpFaultDelay? Delay { get; set; }
+    public V1VirtualServiceSpecHttpFaultDelay? Delay { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpHeadersRequest
+public partial class V1VirtualServiceSpecHttpHeadersRequest
 {
     /// <summary></summary>
     [JsonPropertyName("add")]
@@ -193,7 +193,7 @@ public partial class V1beta1VirtualServiceSpecHttpHeadersRequest
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpHeadersResponse
+public partial class V1VirtualServiceSpecHttpHeadersResponse
 {
     /// <summary></summary>
     [JsonPropertyName("add")]
@@ -210,20 +210,20 @@ public partial class V1beta1VirtualServiceSpecHttpHeadersResponse
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpHeaders
+public partial class V1VirtualServiceSpecHttpHeaders
 {
     /// <summary></summary>
     [JsonPropertyName("request")]
-    public V1beta1VirtualServiceSpecHttpHeadersRequest? Request { get; set; }
+    public V1VirtualServiceSpecHttpHeadersRequest? Request { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("response")]
-    public V1beta1VirtualServiceSpecHttpHeadersResponse? Response { get; set; }
+    public V1VirtualServiceSpecHttpHeadersResponse? Response { get; set; }
 }
 
 /// <summary>HTTP Authority values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchAuthority
+public partial class V1VirtualServiceSpecHttpMatchAuthority
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -240,7 +240,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatchAuthority
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchHeaders
+public partial class V1VirtualServiceSpecHttpMatchHeaders
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -257,7 +257,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatchHeaders
 
 /// <summary>HTTP Method values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchMethod
+public partial class V1VirtualServiceSpecHttpMatchMethod
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -274,7 +274,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatchMethod
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchQueryParams
+public partial class V1VirtualServiceSpecHttpMatchQueryParams
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -291,7 +291,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatchQueryParams
 
 /// <summary>URI Scheme values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchScheme
+public partial class V1VirtualServiceSpecHttpMatchScheme
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -308,7 +308,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatchScheme
 
 /// <summary>URI to match values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchUri
+public partial class V1VirtualServiceSpecHttpMatchUri
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -325,7 +325,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatchUri
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatchWithoutHeaders
+public partial class V1VirtualServiceSpecHttpMatchWithoutHeaders
 {
     /// <summary></summary>
     [JsonPropertyName("exact")]
@@ -342,11 +342,11 @@ public partial class V1beta1VirtualServiceSpecHttpMatchWithoutHeaders
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMatch
+public partial class V1VirtualServiceSpecHttpMatch
 {
     /// <summary>HTTP Authority values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
     [JsonPropertyName("authority")]
-    public V1beta1VirtualServiceSpecHttpMatchAuthority? Authority { get; set; }
+    public V1VirtualServiceSpecHttpMatchAuthority? Authority { get; set; }
 
     /// <summary>Names of gateways where the rule should be applied.</summary>
     [JsonPropertyName("gateways")]
@@ -354,7 +354,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatch
 
     /// <summary>The header keys must be lowercase and use hyphen as the separator, e.g.</summary>
     [JsonPropertyName("headers")]
-    public IDictionary<string, V1beta1VirtualServiceSpecHttpMatchHeaders>? Headers { get; set; }
+    public IDictionary<string, V1VirtualServiceSpecHttpMatchHeaders>? Headers { get; set; }
 
     /// <summary>Flag to specify whether the URI matching should be case-insensitive.</summary>
     [JsonPropertyName("ignoreUriCase")]
@@ -362,7 +362,7 @@ public partial class V1beta1VirtualServiceSpecHttpMatch
 
     /// <summary>HTTP Method values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
     [JsonPropertyName("method")]
-    public V1beta1VirtualServiceSpecHttpMatchMethod? Method { get; set; }
+    public V1VirtualServiceSpecHttpMatchMethod? Method { get; set; }
 
     /// <summary>The name assigned to a match.</summary>
     [JsonPropertyName("name")]
@@ -374,11 +374,11 @@ public partial class V1beta1VirtualServiceSpecHttpMatch
 
     /// <summary>Query parameters for matching.</summary>
     [JsonPropertyName("queryParams")]
-    public IDictionary<string, V1beta1VirtualServiceSpecHttpMatchQueryParams>? QueryParams { get; set; }
+    public IDictionary<string, V1VirtualServiceSpecHttpMatchQueryParams>? QueryParams { get; set; }
 
     /// <summary>URI Scheme values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
     [JsonPropertyName("scheme")]
-    public V1beta1VirtualServiceSpecHttpMatchScheme? Scheme { get; set; }
+    public V1VirtualServiceSpecHttpMatchScheme? Scheme { get; set; }
 
     /// <summary>One or more labels that constrain the applicability of a rule to source (client) workloads with the given labels.</summary>
     [JsonPropertyName("sourceLabels")]
@@ -394,16 +394,16 @@ public partial class V1beta1VirtualServiceSpecHttpMatch
 
     /// <summary>URI to match values are case-sensitive and formatted as follows: - `exact: "value"` for exact string match - `prefix: "value"` for prefix-based match - `regex: "value"` for [RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
     [JsonPropertyName("uri")]
-    public V1beta1VirtualServiceSpecHttpMatchUri? Uri { get; set; }
+    public V1VirtualServiceSpecHttpMatchUri? Uri { get; set; }
 
     /// <summary>withoutHeader has the same syntax with the header, but has opposite meaning.</summary>
     [JsonPropertyName("withoutHeaders")]
-    public IDictionary<string, V1beta1VirtualServiceSpecHttpMatchWithoutHeaders>? WithoutHeaders { get; set; }
+    public IDictionary<string, V1VirtualServiceSpecHttpMatchWithoutHeaders>? WithoutHeaders { get; set; }
 }
 
 /// <summary>Specifies the port on the host that is being addressed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirrorPort
+public partial class V1VirtualServiceSpecHttpMirrorPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -412,7 +412,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirrorPort
 
 /// <summary>Mirror HTTP traffic to a another destination in addition to forwarding the requests to the intended destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirror
+public partial class V1VirtualServiceSpecHttpMirror
 {
     /// <summary>The name of a service from the service registry.</summary>
     [JsonPropertyName("host")]
@@ -420,7 +420,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirror
 
     /// <summary>Specifies the port on the host that is being addressed.</summary>
     [JsonPropertyName("port")]
-    public V1beta1VirtualServiceSpecHttpMirrorPort? Port { get; set; }
+    public V1VirtualServiceSpecHttpMirrorPort? Port { get; set; }
 
     /// <summary>The name of a subset within the service.</summary>
     [JsonPropertyName("subset")]
@@ -429,7 +429,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirror
 
 /// <summary>Percentage of the traffic to be mirrored by the `mirror` field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirrorPercentage
+public partial class V1VirtualServiceSpecHttpMirrorPercentage
 {
     /// <summary></summary>
     [JsonPropertyName("value")]
@@ -438,7 +438,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirrorPercentage
 
 /// <summary>Specifies the port on the host that is being addressed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirrorsDestinationPort
+public partial class V1VirtualServiceSpecHttpMirrorsDestinationPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -447,7 +447,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirrorsDestinationPort
 
 /// <summary>Destination specifies the target of the mirror operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirrorsDestination
+public partial class V1VirtualServiceSpecHttpMirrorsDestination
 {
     /// <summary>The name of a service from the service registry.</summary>
     [JsonPropertyName("host")]
@@ -455,7 +455,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirrorsDestination
 
     /// <summary>Specifies the port on the host that is being addressed.</summary>
     [JsonPropertyName("port")]
-    public V1beta1VirtualServiceSpecHttpMirrorsDestinationPort? Port { get; set; }
+    public V1VirtualServiceSpecHttpMirrorsDestinationPort? Port { get; set; }
 
     /// <summary>The name of a subset within the service.</summary>
     [JsonPropertyName("subset")]
@@ -464,7 +464,7 @@ public partial class V1beta1VirtualServiceSpecHttpMirrorsDestination
 
 /// <summary>Percentage of the traffic to be mirrored by the `destination` field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirrorsPercentage
+public partial class V1VirtualServiceSpecHttpMirrorsPercentage
 {
     /// <summary></summary>
     [JsonPropertyName("value")]
@@ -473,20 +473,20 @@ public partial class V1beta1VirtualServiceSpecHttpMirrorsPercentage
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpMirrors
+public partial class V1VirtualServiceSpecHttpMirrors
 {
     /// <summary>Destination specifies the target of the mirror operation.</summary>
     [JsonPropertyName("destination")]
-    public V1beta1VirtualServiceSpecHttpMirrorsDestination Destination { get; set; }
+    public V1VirtualServiceSpecHttpMirrorsDestination Destination { get; set; }
 
     /// <summary>Percentage of the traffic to be mirrored by the `destination` field.</summary>
     [JsonPropertyName("percentage")]
-    public V1beta1VirtualServiceSpecHttpMirrorsPercentage? Percentage { get; set; }
+    public V1VirtualServiceSpecHttpMirrorsPercentage? Percentage { get; set; }
 }
 
 /// <summary>A HTTP rule can either return a direct_response, redirect or forward (default) traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRedirect
+public partial class V1VirtualServiceSpecHttpRedirect
 {
     /// <summary>On a redirect, overwrite the Authority/Host portion of the URL with this value.</summary>
     [JsonPropertyName("authority")]
@@ -515,7 +515,7 @@ public partial class V1beta1VirtualServiceSpecHttpRedirect
 
 /// <summary>Retry policy for HTTP requests.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRetries
+public partial class V1VirtualServiceSpecHttpRetries
 {
     /// <summary>Number of retries to be allowed for a given request.</summary>
     [JsonPropertyName("attempts")]
@@ -544,7 +544,7 @@ public partial class V1beta1VirtualServiceSpecHttpRetries
 
 /// <summary>rewrite the path portion of the URI with the specified regex.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRewriteUriRegexRewrite
+public partial class V1VirtualServiceSpecHttpRewriteUriRegexRewrite
 {
     /// <summary>[RE2 style regex-based match](https://github.com/google/re2/wiki/Syntax).</summary>
     [JsonPropertyName("match")]
@@ -557,7 +557,7 @@ public partial class V1beta1VirtualServiceSpecHttpRewriteUriRegexRewrite
 
 /// <summary>Rewrite HTTP URIs and Authority headers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRewrite
+public partial class V1VirtualServiceSpecHttpRewrite
 {
     /// <summary>rewrite the Authority/Host header with this value.</summary>
     [JsonPropertyName("authority")]
@@ -569,12 +569,12 @@ public partial class V1beta1VirtualServiceSpecHttpRewrite
 
     /// <summary>rewrite the path portion of the URI with the specified regex.</summary>
     [JsonPropertyName("uriRegexRewrite")]
-    public V1beta1VirtualServiceSpecHttpRewriteUriRegexRewrite? UriRegexRewrite { get; set; }
+    public V1VirtualServiceSpecHttpRewriteUriRegexRewrite? UriRegexRewrite { get; set; }
 }
 
 /// <summary>Specifies the port on the host that is being addressed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRouteDestinationPort
+public partial class V1VirtualServiceSpecHttpRouteDestinationPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -583,7 +583,7 @@ public partial class V1beta1VirtualServiceSpecHttpRouteDestinationPort
 
 /// <summary>Destination uniquely identifies the instances of a service to which the request/connection should be forwarded to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRouteDestination
+public partial class V1VirtualServiceSpecHttpRouteDestination
 {
     /// <summary>The name of a service from the service registry.</summary>
     [JsonPropertyName("host")]
@@ -591,7 +591,7 @@ public partial class V1beta1VirtualServiceSpecHttpRouteDestination
 
     /// <summary>Specifies the port on the host that is being addressed.</summary>
     [JsonPropertyName("port")]
-    public V1beta1VirtualServiceSpecHttpRouteDestinationPort? Port { get; set; }
+    public V1VirtualServiceSpecHttpRouteDestinationPort? Port { get; set; }
 
     /// <summary>The name of a subset within the service.</summary>
     [JsonPropertyName("subset")]
@@ -600,7 +600,7 @@ public partial class V1beta1VirtualServiceSpecHttpRouteDestination
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRouteHeadersRequest
+public partial class V1VirtualServiceSpecHttpRouteHeadersRequest
 {
     /// <summary></summary>
     [JsonPropertyName("add")]
@@ -617,7 +617,7 @@ public partial class V1beta1VirtualServiceSpecHttpRouteHeadersRequest
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRouteHeadersResponse
+public partial class V1VirtualServiceSpecHttpRouteHeadersResponse
 {
     /// <summary></summary>
     [JsonPropertyName("add")]
@@ -634,28 +634,28 @@ public partial class V1beta1VirtualServiceSpecHttpRouteHeadersResponse
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRouteHeaders
+public partial class V1VirtualServiceSpecHttpRouteHeaders
 {
     /// <summary></summary>
     [JsonPropertyName("request")]
-    public V1beta1VirtualServiceSpecHttpRouteHeadersRequest? Request { get; set; }
+    public V1VirtualServiceSpecHttpRouteHeadersRequest? Request { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("response")]
-    public V1beta1VirtualServiceSpecHttpRouteHeadersResponse? Response { get; set; }
+    public V1VirtualServiceSpecHttpRouteHeadersResponse? Response { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttpRoute
+public partial class V1VirtualServiceSpecHttpRoute
 {
     /// <summary>Destination uniquely identifies the instances of a service to which the request/connection should be forwarded to.</summary>
     [JsonPropertyName("destination")]
-    public V1beta1VirtualServiceSpecHttpRouteDestination Destination { get; set; }
+    public V1VirtualServiceSpecHttpRouteDestination Destination { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("headers")]
-    public V1beta1VirtualServiceSpecHttpRouteHeaders? Headers { get; set; }
+    public V1VirtualServiceSpecHttpRouteHeaders? Headers { get; set; }
 
     /// <summary>Weight specifies the relative proportion of traffic to be forwarded to the destination.</summary>
     [JsonPropertyName("weight")]
@@ -664,35 +664,35 @@ public partial class V1beta1VirtualServiceSpecHttpRoute
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecHttp
+public partial class V1VirtualServiceSpecHttp
 {
     /// <summary>Cross-Origin Resource Sharing policy (CORS).</summary>
     [JsonPropertyName("corsPolicy")]
-    public V1beta1VirtualServiceSpecHttpCorsPolicy? CorsPolicy { get; set; }
+    public V1VirtualServiceSpecHttpCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>Delegate is used to specify the particular VirtualService which can be used to define delegate HTTPRoute.</summary>
     [JsonPropertyName("delegate")]
-    public V1beta1VirtualServiceSpecHttpDelegate? Delegate { get; set; }
+    public V1VirtualServiceSpecHttpDelegate? Delegate { get; set; }
 
     /// <summary>A HTTP rule can either return a direct_response, redirect or forward (default) traffic.</summary>
     [JsonPropertyName("directResponse")]
-    public V1beta1VirtualServiceSpecHttpDirectResponse? DirectResponse { get; set; }
+    public V1VirtualServiceSpecHttpDirectResponse? DirectResponse { get; set; }
 
     /// <summary>Fault injection policy to apply on HTTP traffic at the client side.</summary>
     [JsonPropertyName("fault")]
-    public V1beta1VirtualServiceSpecHttpFault? Fault { get; set; }
+    public V1VirtualServiceSpecHttpFault? Fault { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("headers")]
-    public V1beta1VirtualServiceSpecHttpHeaders? Headers { get; set; }
+    public V1VirtualServiceSpecHttpHeaders? Headers { get; set; }
 
     /// <summary>Match conditions to be satisfied for the rule to be activated.</summary>
     [JsonPropertyName("match")]
-    public IList<V1beta1VirtualServiceSpecHttpMatch>? Match { get; set; }
+    public IList<V1VirtualServiceSpecHttpMatch>? Match { get; set; }
 
     /// <summary>Mirror HTTP traffic to a another destination in addition to forwarding the requests to the intended destination.</summary>
     [JsonPropertyName("mirror")]
-    public V1beta1VirtualServiceSpecHttpMirror? Mirror { get; set; }
+    public V1VirtualServiceSpecHttpMirror? Mirror { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("mirror_percent")]
@@ -704,11 +704,11 @@ public partial class V1beta1VirtualServiceSpecHttp
 
     /// <summary>Percentage of the traffic to be mirrored by the `mirror` field.</summary>
     [JsonPropertyName("mirrorPercentage")]
-    public V1beta1VirtualServiceSpecHttpMirrorPercentage? MirrorPercentage { get; set; }
+    public V1VirtualServiceSpecHttpMirrorPercentage? MirrorPercentage { get; set; }
 
     /// <summary>Specifies the destinations to mirror HTTP traffic in addition to the original destination.</summary>
     [JsonPropertyName("mirrors")]
-    public IList<V1beta1VirtualServiceSpecHttpMirrors>? Mirrors { get; set; }
+    public IList<V1VirtualServiceSpecHttpMirrors>? Mirrors { get; set; }
 
     /// <summary>The name assigned to the route for debugging purposes.</summary>
     [JsonPropertyName("name")]
@@ -716,19 +716,19 @@ public partial class V1beta1VirtualServiceSpecHttp
 
     /// <summary>A HTTP rule can either return a direct_response, redirect or forward (default) traffic.</summary>
     [JsonPropertyName("redirect")]
-    public V1beta1VirtualServiceSpecHttpRedirect? Redirect { get; set; }
+    public V1VirtualServiceSpecHttpRedirect? Redirect { get; set; }
 
     /// <summary>Retry policy for HTTP requests.</summary>
     [JsonPropertyName("retries")]
-    public V1beta1VirtualServiceSpecHttpRetries? Retries { get; set; }
+    public V1VirtualServiceSpecHttpRetries? Retries { get; set; }
 
     /// <summary>Rewrite HTTP URIs and Authority headers.</summary>
     [JsonPropertyName("rewrite")]
-    public V1beta1VirtualServiceSpecHttpRewrite? Rewrite { get; set; }
+    public V1VirtualServiceSpecHttpRewrite? Rewrite { get; set; }
 
     /// <summary>A HTTP rule can either return a direct_response, redirect or forward (default) traffic.</summary>
     [JsonPropertyName("route")]
-    public IList<V1beta1VirtualServiceSpecHttpRoute>? Route { get; set; }
+    public IList<V1VirtualServiceSpecHttpRoute>? Route { get; set; }
 
     /// <summary>Timeout for HTTP requests, default is disabled.</summary>
     [JsonPropertyName("timeout")]
@@ -737,7 +737,7 @@ public partial class V1beta1VirtualServiceSpecHttp
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTcpMatch
+public partial class V1VirtualServiceSpecTcpMatch
 {
     /// <summary>IPv4 or IPv6 ip addresses of destination with optional subnet.</summary>
     [JsonPropertyName("destinationSubnets")]
@@ -766,7 +766,7 @@ public partial class V1beta1VirtualServiceSpecTcpMatch
 
 /// <summary>Specifies the port on the host that is being addressed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTcpRouteDestinationPort
+public partial class V1VirtualServiceSpecTcpRouteDestinationPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -775,7 +775,7 @@ public partial class V1beta1VirtualServiceSpecTcpRouteDestinationPort
 
 /// <summary>Destination uniquely identifies the instances of a service to which the request/connection should be forwarded to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTcpRouteDestination
+public partial class V1VirtualServiceSpecTcpRouteDestination
 {
     /// <summary>The name of a service from the service registry.</summary>
     [JsonPropertyName("host")]
@@ -783,7 +783,7 @@ public partial class V1beta1VirtualServiceSpecTcpRouteDestination
 
     /// <summary>Specifies the port on the host that is being addressed.</summary>
     [JsonPropertyName("port")]
-    public V1beta1VirtualServiceSpecTcpRouteDestinationPort? Port { get; set; }
+    public V1VirtualServiceSpecTcpRouteDestinationPort? Port { get; set; }
 
     /// <summary>The name of a subset within the service.</summary>
     [JsonPropertyName("subset")]
@@ -792,11 +792,11 @@ public partial class V1beta1VirtualServiceSpecTcpRouteDestination
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTcpRoute
+public partial class V1VirtualServiceSpecTcpRoute
 {
     /// <summary>Destination uniquely identifies the instances of a service to which the request/connection should be forwarded to.</summary>
     [JsonPropertyName("destination")]
-    public V1beta1VirtualServiceSpecTcpRouteDestination Destination { get; set; }
+    public V1VirtualServiceSpecTcpRouteDestination Destination { get; set; }
 
     /// <summary>Weight specifies the relative proportion of traffic to be forwarded to the destination.</summary>
     [JsonPropertyName("weight")]
@@ -805,20 +805,20 @@ public partial class V1beta1VirtualServiceSpecTcpRoute
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTcp
+public partial class V1VirtualServiceSpecTcp
 {
     /// <summary>Match conditions to be satisfied for the rule to be activated.</summary>
     [JsonPropertyName("match")]
-    public IList<V1beta1VirtualServiceSpecTcpMatch>? Match { get; set; }
+    public IList<V1VirtualServiceSpecTcpMatch>? Match { get; set; }
 
     /// <summary>The destination to which the connection should be forwarded to.</summary>
     [JsonPropertyName("route")]
-    public IList<V1beta1VirtualServiceSpecTcpRoute>? Route { get; set; }
+    public IList<V1VirtualServiceSpecTcpRoute>? Route { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTlsMatch
+public partial class V1VirtualServiceSpecTlsMatch
 {
     /// <summary>IPv4 or IPv6 ip addresses of destination with optional subnet.</summary>
     [JsonPropertyName("destinationSubnets")]
@@ -847,7 +847,7 @@ public partial class V1beta1VirtualServiceSpecTlsMatch
 
 /// <summary>Specifies the port on the host that is being addressed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTlsRouteDestinationPort
+public partial class V1VirtualServiceSpecTlsRouteDestinationPort
 {
     /// <summary></summary>
     [JsonPropertyName("number")]
@@ -856,7 +856,7 @@ public partial class V1beta1VirtualServiceSpecTlsRouteDestinationPort
 
 /// <summary>Destination uniquely identifies the instances of a service to which the request/connection should be forwarded to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTlsRouteDestination
+public partial class V1VirtualServiceSpecTlsRouteDestination
 {
     /// <summary>The name of a service from the service registry.</summary>
     [JsonPropertyName("host")]
@@ -864,7 +864,7 @@ public partial class V1beta1VirtualServiceSpecTlsRouteDestination
 
     /// <summary>Specifies the port on the host that is being addressed.</summary>
     [JsonPropertyName("port")]
-    public V1beta1VirtualServiceSpecTlsRouteDestinationPort? Port { get; set; }
+    public V1VirtualServiceSpecTlsRouteDestinationPort? Port { get; set; }
 
     /// <summary>The name of a subset within the service.</summary>
     [JsonPropertyName("subset")]
@@ -873,11 +873,11 @@ public partial class V1beta1VirtualServiceSpecTlsRouteDestination
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTlsRoute
+public partial class V1VirtualServiceSpecTlsRoute
 {
     /// <summary>Destination uniquely identifies the instances of a service to which the request/connection should be forwarded to.</summary>
     [JsonPropertyName("destination")]
-    public V1beta1VirtualServiceSpecTlsRouteDestination Destination { get; set; }
+    public V1VirtualServiceSpecTlsRouteDestination Destination { get; set; }
 
     /// <summary>Weight specifies the relative proportion of traffic to be forwarded to the destination.</summary>
     [JsonPropertyName("weight")]
@@ -886,20 +886,20 @@ public partial class V1beta1VirtualServiceSpecTlsRoute
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpecTls
+public partial class V1VirtualServiceSpecTls
 {
     /// <summary>Match conditions to be satisfied for the rule to be activated.</summary>
     [JsonPropertyName("match")]
-    public IList<V1beta1VirtualServiceSpecTlsMatch> Match { get; set; }
+    public IList<V1VirtualServiceSpecTlsMatch> Match { get; set; }
 
     /// <summary>The destination to which the connection should be forwarded to.</summary>
     [JsonPropertyName("route")]
-    public IList<V1beta1VirtualServiceSpecTlsRoute>? Route { get; set; }
+    public IList<V1VirtualServiceSpecTlsRoute>? Route { get; set; }
 }
 
 /// <summary>Configuration affecting label/content routing, sni routing, etc. See more details at: https://istio.io/docs/reference/config/networking/virtual-service.html</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class V1beta1VirtualServiceSpec
+public partial class V1VirtualServiceSpec
 {
     /// <summary>A list of namespaces to which this virtual service is exported.</summary>
     [JsonPropertyName("exportTo")]
@@ -915,23 +915,23 @@ public partial class V1beta1VirtualServiceSpec
 
     /// <summary>An ordered list of route rules for HTTP traffic.</summary>
     [JsonPropertyName("http")]
-    public IList<V1beta1VirtualServiceSpecHttp>? Http { get; set; }
+    public IList<V1VirtualServiceSpecHttp>? Http { get; set; }
 
     /// <summary>An ordered list of route rules for opaque TCP traffic.</summary>
     [JsonPropertyName("tcp")]
-    public IList<V1beta1VirtualServiceSpecTcp>? Tcp { get; set; }
+    public IList<V1VirtualServiceSpecTcp>? Tcp { get; set; }
 
     /// <summary>An ordered list of route rule for non-terminated TLS &amp; HTTPS traffic.</summary>
     [JsonPropertyName("tls")]
-    public IList<V1beta1VirtualServiceSpecTls>? Tls { get; set; }
+    public IList<V1VirtualServiceSpecTls>? Tls { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1VirtualServiceSpec>, IStatus<JsonNode>
+public partial class V1VirtualService : IKubernetesObject<V1ObjectMeta>, ISpec<V1VirtualServiceSpec>, IStatus<JsonNode>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "VirtualService";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "virtualservices";
@@ -949,7 +949,7 @@ public partial class V1beta1VirtualService : IKubernetesObject<V1ObjectMeta>, IS
 
     /// <summary>Configuration affecting label/content routing, sni routing, etc. See more details at: https://istio.io/docs/reference/config/networking/virtual-service.html</summary>
     [JsonPropertyName("spec")]
-    public V1beta1VirtualServiceSpec? Spec { get; set; }
+    public V1VirtualServiceSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
@@ -959,9 +959,9 @@ public partial class V1beta1VirtualService : IKubernetesObject<V1ObjectMeta>, IS
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualService>
+public partial class V1VirtualServiceList : IKubernetesObject<V1ListMeta>, IItems<V1VirtualService>
 {
-    public const string KubeApiVersion = "v1beta1";
+    public const string KubeApiVersion = "v1";
     public const string KubeKind = "VirtualServiceList";
     public const string KubeGroup = "networking.istio.io";
     public const string KubePluralName = "virtualservices";
@@ -979,5 +979,5 @@ public partial class V1beta1VirtualServiceList : IKubernetesObject<V1ListMeta>, 
 
     /// <summary></summary>
     [JsonPropertyName("items")]
-    public IList<V1beta1VirtualService> Items { get; set; }
+    public IList<V1VirtualService> Items { get; set; }
 }
