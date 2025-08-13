@@ -2692,6 +2692,44 @@ public partial class V1ClusterSpecPlugins
     public IDictionary<string, string>? Parameters { get; set; }
 }
 
+/// <summary>The image containing the extension, required</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecPostgresqlExtensionsImage
+{
+    /// <summary>Policy for pulling OCI objects. Possible values are: Always: the kubelet always attempts to pull the reference. Container creation will fail If the pull fails. Never: the kubelet never pulls the reference and only uses a local image or artifact. Container creation will fail if the reference isn't present. IfNotPresent: the kubelet pulls if the reference isn't already present on disk. Container creation will fail if the reference isn't present and the pull fails. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise.</summary>
+    [JsonPropertyName("pullPolicy")]
+    public string? PullPolicy { get; set; }
+
+    /// <summary>Required: Image or artifact reference to be used. Behaves in the same way as pod.spec.containers[*].image. Pull secrets will be assembled in the same way as for the container image by looking up node credentials, SA image pull secrets, and pod spec image pull secrets. More info: https://kubernetes.io/docs/concepts/containers/images This field is optional to allow higher level config management to default or override container images in workload controllers like Deployments and StatefulSets.</summary>
+    [JsonPropertyName("reference")]
+    public string? Reference { get; set; }
+}
+
+/// <summary>ExtensionConfiguration is the configuration used to add PostgreSQL extensions to the Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecPostgresqlExtensions
+{
+    /// <summary>The list of directories inside the image which should be added to dynamic_library_path. If not defined, defaults to "/lib".</summary>
+    [JsonPropertyName("dynamic_library_path")]
+    public IList<string>? DynamicLibraryPath { get; set; }
+
+    /// <summary>The list of directories inside the image which should be added to extension_control_path. If not defined, defaults to "/share".</summary>
+    [JsonPropertyName("extension_control_path")]
+    public IList<string>? ExtensionControlPath { get; set; }
+
+    /// <summary>The image containing the extension, required</summary>
+    [JsonPropertyName("image")]
+    public V1ClusterSpecPostgresqlExtensionsImage Image { get; set; }
+
+    /// <summary>The list of directories inside the image which should be added to ld_library_path.</summary>
+    [JsonPropertyName("ld_library_path")]
+    public IList<string>? LdLibraryPath { get; set; }
+
+    /// <summary>The name of the extension, required</summary>
+    [JsonPropertyName("name")]
+    public string Name { get; set; }
+}
+
 /// <summary>Bind as authentication configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecPostgresqlLdapBindAsAuth
@@ -2826,6 +2864,10 @@ public partial class V1ClusterSpecPostgresql
     [JsonPropertyName("enableAlterSystem")]
     public bool? EnableAlterSystem { get; set; }
 
+    /// <summary>The configuration of the extensions to be added</summary>
+    [JsonPropertyName("extensions")]
+    public IList<V1ClusterSpecPostgresqlExtensions>? Extensions { get; set; }
+
     /// <summary>Options to specify LDAP configuration</summary>
     [JsonPropertyName("ldap")]
     public V1ClusterSpecPostgresqlLdap? Ldap { get; set; }
@@ -2859,6 +2901,23 @@ public partial class V1ClusterSpecPostgresql
     public V1ClusterSpecPostgresqlSynchronous? Synchronous { get; set; }
 }
 
+/// <summary>Configure the feature that extends the liveness probe for a primary instance. In addition to the basic checks, this verifies whether the primary is isolated from the Kubernetes API server and from its replicas, ensuring that it can be safely shut down if network partition or API unavailability is detected. Enabled by default.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public partial class V1ClusterSpecProbesLivenessIsolationCheck
+{
+    /// <summary>Timeout in milliseconds for connections during the primary isolation check</summary>
+    [JsonPropertyName("connectionTimeout")]
+    public int? ConnectionTimeout { get; set; }
+
+    /// <summary>Whether primary isolation checking is enabled for the liveness probe</summary>
+    [JsonPropertyName("enabled")]
+    public bool? Enabled { get; set; }
+
+    /// <summary>Timeout in milliseconds for requests during the primary isolation check</summary>
+    [JsonPropertyName("requestTimeout")]
+    public int? RequestTimeout { get; set; }
+}
+
 /// <summary>The liveness probe configuration</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ClusterSpecProbesLiveness
@@ -2870,6 +2929,10 @@ public partial class V1ClusterSpecProbesLiveness
     /// <summary>Number of seconds after the container has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes</summary>
     [JsonPropertyName("initialDelaySeconds")]
     public int? InitialDelaySeconds { get; set; }
+
+    /// <summary>Configure the feature that extends the liveness probe for a primary instance. In addition to the basic checks, this verifies whether the primary is isolated from the Kubernetes API server and from its replicas, ensuring that it can be safely shut down if network partition or API unavailability is detected. Enabled by default.</summary>
+    [JsonPropertyName("isolationCheck")]
+    public V1ClusterSpecProbesLivenessIsolationCheck? IsolationCheck { get; set; }
 
     /// <summary>How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1.</summary>
     [JsonPropertyName("periodSeconds")]
@@ -3257,6 +3320,10 @@ public partial class V1ClusterSpecReplicationSlotsHighAvailability
     /// <summary>Prefix for replication slots managed by the operator for HA. It may only contain lower case letters, numbers, and the underscore character. This can only be set at creation time. By default set to `_cnpg_`.</summary>
     [JsonPropertyName("slotPrefix")]
     public string? SlotPrefix { get; set; }
+
+    /// <summary>When enabled, the operator automatically manages synchronization of logical decoding (replication) slots across high-availability clusters.  Requires one of the following conditions: - PostgreSQL version 17 or later - PostgreSQL version &lt; 17 with pg_failover_slots extension enabled</summary>
+    [JsonPropertyName("synchronizeLogicalDecoding")]
+    public bool? SynchronizeLogicalDecoding { get; set; }
 }
 
 /// <summary>Configures the synchronization of the user defined physical replication slots</summary>
