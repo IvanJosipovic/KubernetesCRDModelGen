@@ -2330,6 +2330,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsGitDirectories
 public partial class V1alpha1ApplicationSetSpecGeneratorsGitFiles
 {
     /// <summary></summary>
+    [JsonPropertyName("exclude")]
+    public bool? Exclude { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
@@ -6904,6 +6908,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitDire
 public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsGitFiles
 {
     /// <summary></summary>
+    [JsonPropertyName("exclude")]
+    public bool? Exclude { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
@@ -10542,6 +10550,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMatrixGeneratorsPullReq
     /// <summary></summary>
     [JsonPropertyName("insecure")]
     public bool? Insecure { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labels")]
+    public IList<string>? Labels { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("owner")]
@@ -16824,6 +16836,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitDirec
 public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsGitFiles
 {
     /// <summary></summary>
+    [JsonPropertyName("exclude")]
+    public bool? Exclude { get; set; }
+
+    /// <summary></summary>
     [JsonPropertyName("path")]
     public string Path { get; set; }
 }
@@ -20462,6 +20478,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsMergeGeneratorsPullRequ
     /// <summary></summary>
     [JsonPropertyName("insecure")]
     public bool? Insecure { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labels")]
+    public IList<string>? Labels { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("owner")]
@@ -25812,6 +25832,10 @@ public partial class V1alpha1ApplicationSetSpecGeneratorsPullRequestGitea
     /// <summary></summary>
     [JsonPropertyName("insecure")]
     public bool? Insecure { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("labels")]
+    public IList<string>? Labels { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("owner")]

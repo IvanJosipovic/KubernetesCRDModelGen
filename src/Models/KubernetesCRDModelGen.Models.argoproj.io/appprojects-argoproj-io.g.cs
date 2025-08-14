@@ -191,6 +191,10 @@ public partial class V1alpha1AppProjectSpecSyncWindows
     [JsonPropertyName("clusters")]
     public IList<string>? Clusters { get; set; }
 
+    /// <summary>Description of the sync that will be applied to the schedule, can be used to add any information such as a ticket number for example</summary>
+    [JsonPropertyName("description")]
+    public string? Description { get; set; }
+
     /// <summary>Duration is the amount of time the sync window will be open</summary>
     [JsonPropertyName("duration")]
     public string? Duration { get; set; }
