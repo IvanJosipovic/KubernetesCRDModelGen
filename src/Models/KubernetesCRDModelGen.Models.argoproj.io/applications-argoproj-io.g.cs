@@ -2084,11 +2084,11 @@ public partial class V1alpha1ApplicationStatusHealth
     [JsonPropertyName("lastTransitionTime")]
     public string? LastTransitionTime { get; set; }
 
-    /// <summary>Message is a human-readable informational message describing the health status</summary>
+    /// <summary>Message is a human-readable informational message describing the health status  Deprecated: this field is not used and will be removed in a future release.</summary>
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 
-    /// <summary>Status holds the status code of the application or resource</summary>
+    /// <summary>Status holds the status code of the application</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
@@ -3978,6 +3978,10 @@ public partial class V1alpha1ApplicationStatusOperationStateSyncResultResources
     [JsonPropertyName("hookType")]
     public string? HookType { get; set; }
 
+    /// <summary>Images contains the images related to the ResourceResult</summary>
+    [JsonPropertyName("images")]
+    public IList<string>? Images { get; set; }
+
     /// <summary>Kind specifies the API kind of the resource</summary>
     [JsonPropertyName("kind")]
     public string Kind { get; set; }
@@ -4887,7 +4891,7 @@ public partial class V1alpha1ApplicationStatusOperationState
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ApplicationStatusResourcesHealth
 {
-    /// <summary>LastTransitionTime is the time the HealthStatus was set or updated</summary>
+    /// <summary>LastTransitionTime is the time the HealthStatus was set or updated  Deprecated: this field is not used and will be removed in a future release.</summary>
     [JsonPropertyName("lastTransitionTime")]
     public string? LastTransitionTime { get; set; }
 
@@ -4895,7 +4899,7 @@ public partial class V1alpha1ApplicationStatusResourcesHealth
     [JsonPropertyName("message")]
     public string? Message { get; set; }
 
-    /// <summary>Status holds the status code of the application or resource</summary>
+    /// <summary>Status holds the status code of the resource</summary>
     [JsonPropertyName("status")]
     public string? Status { get; set; }
 }
