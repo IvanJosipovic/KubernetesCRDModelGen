@@ -42,6 +42,7 @@ We publish the following premade packages
 | azure.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.upbound.io/) |
 | cnrm.cloud.google.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.cnrm.cloud.google.com/) |
 | crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.crossplane.io/) |
+| databricks.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.databricks.crossplane.io/) |
 | fluxcd.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.fluxcd.io/) |
 | gateway.networking.k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.gateway.networking.k8s.io/) |
 | gcp.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.gcp.upbound.io/) |
