@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.monitoring.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class MonitoringMonitoredProjectMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class MonitoringMonitoredProjectSpec
+public partial class V1beta1MonitoringMonitoredProjectSpec
 {
     /// <summary>Immutable. Required. The resource name of the existing Metrics Scope that will monitor this project. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}</summary>
     [JsonPropertyName("metricsScope")]
@@ -29,7 +23,7 @@ public partial class MonitoringMonitoredProjectSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class MonitoringMonitoredProjectStatusConditions
+public partial class V1beta1MonitoringMonitoredProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -54,11 +48,11 @@ public partial class MonitoringMonitoredProjectStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class MonitoringMonitoredProjectStatus
+public partial class V1beta1MonitoringMonitoredProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<MonitoringMonitoredProjectStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1MonitoringMonitoredProjectStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time when this `MonitoredProject` was created.</summary>
     [JsonPropertyName("createTime")]
@@ -71,25 +65,56 @@ public partial class MonitoringMonitoredProjectStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class MonitoringMonitoredProject
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitoringMonitoredProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1MonitoringMonitoredProjectSpec>, IStatus<V1beta1MonitoringMonitoredProjectStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitoringMonitoredProject";
+    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
+    public const string KubePluralName = "monitoringmonitoredprojects";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public MonitoringMonitoredProjectMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public MonitoringMonitoredProjectSpec Spec { get; set; }
+    public V1beta1MonitoringMonitoredProjectSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public MonitoringMonitoredProjectStatus? Status { get; set; }
+    public V1beta1MonitoringMonitoredProjectStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitoringMonitoredProjectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitoringMonitoredProject>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitoringMonitoredProjectList";
+    public const string KubeGroup = "monitoring.cnrm.cloud.google.com";
+    public const string KubePluralName = "monitoringmonitoredprojects";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MonitoringMonitoredProject> Items { get; set; }
 }

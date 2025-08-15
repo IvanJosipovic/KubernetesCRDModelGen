@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastore.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndexMetadata
-{
-}
-
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndexSpecProjectRef
+public partial class V1alpha1DatastoreIndexSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class DatastoreIndexSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndexSpecProperties
+public partial class V1alpha1DatastoreIndexSpecProperties
 {
     /// <summary>Immutable. The direction the index should optimize for sorting. Possible values: ["ASCENDING", "DESCENDING"].</summary>
     [JsonPropertyName("direction")]
@@ -46,7 +40,7 @@ public partial class DatastoreIndexSpecProperties
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndexSpec
+public partial class V1alpha1DatastoreIndexSpec
 {
     /// <summary>Immutable. Policy for including ancestors in the index. Default value: "NONE" Possible values: ["NONE", "ALL_ANCESTORS"].</summary>
     [JsonPropertyName("ancestor")]
@@ -58,11 +52,11 @@ public partial class DatastoreIndexSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public DatastoreIndexSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1DatastoreIndexSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. An ordered list of properties to index on.</summary>
     [JsonPropertyName("properties")]
-    public IList<DatastoreIndexSpecProperties>? Properties { get; set; }
+    public IList<V1alpha1DatastoreIndexSpecProperties>? Properties { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated indexId of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -71,7 +65,7 @@ public partial class DatastoreIndexSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndexStatusConditions
+public partial class V1alpha1DatastoreIndexStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +90,11 @@ public partial class DatastoreIndexStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndexStatus
+public partial class V1alpha1DatastoreIndexStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DatastoreIndexStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1DatastoreIndexStatusConditions>? Conditions { get; set; }
 
     /// <summary>The index id.</summary>
     [JsonPropertyName("indexId")]
@@ -113,25 +107,56 @@ public partial class DatastoreIndexStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DatastoreIndex
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DatastoreIndex : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DatastoreIndexSpec>, IStatus<V1alpha1DatastoreIndexStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DatastoreIndex";
+    public const string KubeGroup = "datastore.cnrm.cloud.google.com";
+    public const string KubePluralName = "datastoreindexes";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DatastoreIndexMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DatastoreIndexSpec Spec { get; set; }
+    public V1alpha1DatastoreIndexSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DatastoreIndexStatus? Status { get; set; }
+    public V1alpha1DatastoreIndexStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DatastoreIndexList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DatastoreIndex>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DatastoreIndexList";
+    public const string KubeGroup = "datastore.cnrm.cloud.google.com";
+    public const string KubePluralName = "datastoreindexes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DatastoreIndex> Items { get; set; }
 }

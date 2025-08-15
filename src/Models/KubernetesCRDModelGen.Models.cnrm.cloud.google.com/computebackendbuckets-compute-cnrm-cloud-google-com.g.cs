@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketMetadata
-{
-}
-
 /// <summary>Reference to the bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSpecBucketRef
+public partial class V1beta1ComputeBackendBucketSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeBackendBucketSpecBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeaders
+public partial class V1beta1ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeaders
 {
     /// <summary>The header field name to match on when bypassing cache. Values are case-insensitive.</summary>
     [JsonPropertyName("headerName")]
@@ -42,7 +36,7 @@ public partial class ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeader
 
 /// <summary>The CacheKeyPolicy for this CdnPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
+public partial class V1beta1ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
 {
     /// <summary>Allows HTTP request headers (by name) to be used in the cache key.</summary>
     [JsonPropertyName("includeHttpHeaders")]
@@ -55,7 +49,7 @@ public partial class ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy
+public partial class V1beta1ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy
 {
     /// <summary>The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.</summary>
     [JsonPropertyName("code")]
@@ -68,15 +62,15 @@ public partial class ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy
 
 /// <summary>Cloud CDN configuration for this Backend Bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSpecCdnPolicy
+public partial class V1beta1ComputeBackendBucketSpecCdnPolicy
 {
     /// <summary>Bypass the cache when the specified request headers are matched - e.g. Pragma or Authorization headers. Up to 5 headers can be specified. The cache is bypassed for all cdnPolicy.cacheMode settings.</summary>
     [JsonPropertyName("bypassCacheOnRequestHeaders")]
-    public IList<ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeaders>? BypassCacheOnRequestHeaders { get; set; }
+    public IList<V1beta1ComputeBackendBucketSpecCdnPolicyBypassCacheOnRequestHeaders>? BypassCacheOnRequestHeaders { get; set; }
 
     /// <summary>The CacheKeyPolicy for this CdnPolicy.</summary>
     [JsonPropertyName("cacheKeyPolicy")]
-    public ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy? CacheKeyPolicy { get; set; }
+    public V1beta1ComputeBackendBucketSpecCdnPolicyCacheKeyPolicy? CacheKeyPolicy { get; set; }
 
     /// <summary>Specifies the cache setting for all responses from this backend. The possible values are: USE_ORIGIN_HEADERS, FORCE_CACHE_ALL and CACHE_ALL_STATIC Possible values: ["USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "CACHE_ALL_STATIC"].</summary>
     [JsonPropertyName("cacheMode")]
@@ -100,7 +94,7 @@ public partial class ComputeBackendBucketSpecCdnPolicy
 
     /// <summary>Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy. Omitting the policy and leaving negativeCaching enabled will use Cloud CDN's default cache TTLs.</summary>
     [JsonPropertyName("negativeCachingPolicy")]
-    public IList<ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy>? NegativeCachingPolicy { get; set; }
+    public IList<V1beta1ComputeBackendBucketSpecCdnPolicyNegativeCachingPolicy>? NegativeCachingPolicy { get; set; }
 
     /// <summary>If true then Cloud CDN will combine multiple concurrent cache fill requests into a small number of requests to the origin.</summary>
     [JsonPropertyName("requestCoalescing")]
@@ -117,15 +111,15 @@ public partial class ComputeBackendBucketSpecCdnPolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSpec
+public partial class V1beta1ComputeBackendBucketSpec
 {
     /// <summary>Reference to the bucket.</summary>
     [JsonPropertyName("bucketRef")]
-    public ComputeBackendBucketSpecBucketRef BucketRef { get; set; }
+    public V1beta1ComputeBackendBucketSpecBucketRef BucketRef { get; set; }
 
     /// <summary>Cloud CDN configuration for this Backend Bucket.</summary>
     [JsonPropertyName("cdnPolicy")]
-    public ComputeBackendBucketSpecCdnPolicy? CdnPolicy { get; set; }
+    public V1beta1ComputeBackendBucketSpecCdnPolicy? CdnPolicy { get; set; }
 
     /// <summary>Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header. Possible values: ["AUTOMATIC", "DISABLED"].</summary>
     [JsonPropertyName("compressionMode")]
@@ -154,7 +148,7 @@ public partial class ComputeBackendBucketSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketStatusConditions
+public partial class V1beta1ComputeBackendBucketStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -179,11 +173,11 @@ public partial class ComputeBackendBucketStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketStatus
+public partial class V1beta1ComputeBackendBucketStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeBackendBucketStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeBackendBucketStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -200,25 +194,56 @@ public partial class ComputeBackendBucketStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucket
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeBackendBucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeBackendBucketSpec>, IStatus<V1beta1ComputeBackendBucketStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeBackendBucket";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computebackendbuckets";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeBackendBucketMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeBackendBucketSpec Spec { get; set; }
+    public V1beta1ComputeBackendBucketSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeBackendBucketStatus? Status { get; set; }
+    public V1beta1ComputeBackendBucketStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeBackendBucketList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeBackendBucket>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeBackendBucketList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computebackendbuckets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeBackendBucket> Items { get; set; }
 }

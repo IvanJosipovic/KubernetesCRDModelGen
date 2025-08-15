@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewayMetadata
-{
-}
-
 /// <summary>The network this VPN gateway is accepting traffic for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewaySpecNetworkRef
+public partial class V1beta1ComputeVPNGatewaySpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeVPNGatewaySpecNetworkRef
 
 /// <summary>Immutable. When this value is present, the VPN Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for this VPN Gateway interface will go through the specified interconnect attachment resource. Not currently available publicly.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewaySpecVpnInterfacesInterconnectAttachmentRef
+public partial class V1beta1ComputeVPNGatewaySpecVpnInterfacesInterconnectAttachmentRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInterconnectAttachment` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class ComputeVPNGatewaySpecVpnInterfacesInterconnectAttachmentRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewaySpecVpnInterfaces
+public partial class V1beta1ComputeVPNGatewaySpecVpnInterfaces
 {
     /// <summary>Immutable. The numeric ID of this VPN gateway interface.</summary>
     [JsonPropertyName("id")]
@@ -58,7 +52,7 @@ public partial class ComputeVPNGatewaySpecVpnInterfaces
 
     /// <summary>Immutable. When this value is present, the VPN Gateway will be used for IPsec-encrypted Cloud Interconnect; all Egress or Ingress traffic for this VPN Gateway interface will go through the specified interconnect attachment resource. Not currently available publicly.</summary>
     [JsonPropertyName("interconnectAttachmentRef")]
-    public ComputeVPNGatewaySpecVpnInterfacesInterconnectAttachmentRef? InterconnectAttachmentRef { get; set; }
+    public V1beta1ComputeVPNGatewaySpecVpnInterfacesInterconnectAttachmentRef? InterconnectAttachmentRef { get; set; }
 
     /// <summary>The external IP address for this VPN gateway interface.</summary>
     [JsonPropertyName("ipAddress")]
@@ -67,7 +61,7 @@ public partial class ComputeVPNGatewaySpecVpnInterfaces
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewaySpec
+public partial class V1beta1ComputeVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -75,7 +69,7 @@ public partial class ComputeVPNGatewaySpec
 
     /// <summary>The network this VPN gateway is accepting traffic for.</summary>
     [JsonPropertyName("networkRef")]
-    public ComputeVPNGatewaySpecNetworkRef NetworkRef { get; set; }
+    public V1beta1ComputeVPNGatewaySpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>Immutable. The region this gateway should sit in.</summary>
     [JsonPropertyName("region")]
@@ -91,12 +85,12 @@ public partial class ComputeVPNGatewaySpec
 
     /// <summary>Immutable. A list of interfaces on this VPN gateway.</summary>
     [JsonPropertyName("vpnInterfaces")]
-    public IList<ComputeVPNGatewaySpecVpnInterfaces>? VpnInterfaces { get; set; }
+    public IList<V1beta1ComputeVPNGatewaySpecVpnInterfaces>? VpnInterfaces { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewayStatusConditions
+public partial class V1beta1ComputeVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -121,11 +115,11 @@ public partial class ComputeVPNGatewayStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGatewayStatus
+public partial class V1beta1ComputeVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeVPNGatewayStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeVPNGatewayStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -138,25 +132,56 @@ public partial class ComputeVPNGatewayStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeVPNGateway
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeVPNGatewaySpec>, IStatus<V1beta1ComputeVPNGatewayStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeVPNGateway";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computevpngateways";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeVPNGatewayMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeVPNGatewaySpec Spec { get; set; }
+    public V1beta1ComputeVPNGatewaySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeVPNGatewayStatus? Status { get; set; }
+    public V1beta1ComputeVPNGatewayStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeVPNGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeVPNGateway>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeVPNGatewayList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computevpngateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeVPNGateway> Items { get; set; }
 }

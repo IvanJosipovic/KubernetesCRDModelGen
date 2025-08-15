@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMServiceAccountKeyMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMServiceAccountKeySpecServiceAccountRef
+public partial class V1beta1IAMServiceAccountKeySpecServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class IAMServiceAccountKeySpecServiceAccountRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMServiceAccountKeySpec
+public partial class V1beta1IAMServiceAccountKeySpec
 {
     /// <summary>Immutable. The algorithm used to generate the key, used only on create. KEY_ALG_RSA_2048 is the default algorithm. Valid values are: "KEY_ALG_RSA_1024", "KEY_ALG_RSA_2048".</summary>
     [JsonPropertyName("keyAlgorithm")]
@@ -53,12 +47,12 @@ public partial class IAMServiceAccountKeySpec
 
     /// <summary></summary>
     [JsonPropertyName("serviceAccountRef")]
-    public IAMServiceAccountKeySpecServiceAccountRef ServiceAccountRef { get; set; }
+    public V1beta1IAMServiceAccountKeySpecServiceAccountRef ServiceAccountRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMServiceAccountKeyStatusConditions
+public partial class V1beta1IAMServiceAccountKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -83,11 +77,11 @@ public partial class IAMServiceAccountKeyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMServiceAccountKeyStatus
+public partial class V1beta1IAMServiceAccountKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IAMServiceAccountKeyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1IAMServiceAccountKeyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Immutable. The name used for this key pair.</summary>
     [JsonPropertyName("name")]
@@ -116,25 +110,56 @@ public partial class IAMServiceAccountKeyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMServiceAccountKey
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMServiceAccountKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMServiceAccountKeySpec>, IStatus<V1beta1IAMServiceAccountKeyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMServiceAccountKey";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iamserviceaccountkeys";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IAMServiceAccountKeyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public IAMServiceAccountKeySpec Spec { get; set; }
+    public V1beta1IAMServiceAccountKeySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IAMServiceAccountKeyStatus? Status { get; set; }
+    public V1beta1IAMServiceAccountKeyStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMServiceAccountKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMServiceAccountKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMServiceAccountKeyList";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iamserviceaccountkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IAMServiceAccountKey> Items { get; set; }
 }

@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicyMetadata
-{
-}
-
 /// <summary>The name of the Bigtable instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicySpecInstanceRef
+public partial class V1beta1BigtableGCPolicySpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class BigtableGCPolicySpecInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicySpecMaxAge
+public partial class V1beta1BigtableGCPolicySpecMaxAge
 {
     /// <summary>DEPRECATED. Deprecated in favor of duration. Immutable. Number of days before applying GC policy.</summary>
     [JsonPropertyName("days")]
@@ -46,7 +40,7 @@ public partial class BigtableGCPolicySpecMaxAge
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicySpecMaxVersion
+public partial class V1beta1BigtableGCPolicySpecMaxVersion
 {
     /// <summary>Immutable. Number of version before applying the GC policy.</summary>
     [JsonPropertyName("number")]
@@ -55,7 +49,7 @@ public partial class BigtableGCPolicySpecMaxVersion
 
 /// <summary>The name of the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicySpecTableRef
+public partial class V1beta1BigtableGCPolicySpecTableRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableTable` resource.</summary>
     [JsonPropertyName("external")]
@@ -72,7 +66,7 @@ public partial class BigtableGCPolicySpecTableRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicySpec
+public partial class V1beta1BigtableGCPolicySpec
 {
     /// <summary>Immutable. The name of the column family.</summary>
     [JsonPropertyName("columnFamily")]
@@ -88,15 +82,15 @@ public partial class BigtableGCPolicySpec
 
     /// <summary>The name of the Bigtable instance.</summary>
     [JsonPropertyName("instanceRef")]
-    public BigtableGCPolicySpecInstanceRef InstanceRef { get; set; }
+    public V1beta1BigtableGCPolicySpecInstanceRef InstanceRef { get; set; }
 
     /// <summary>Immutable. NOTE: 'gc_rules' is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all cells older than the given age.</summary>
     [JsonPropertyName("maxAge")]
-    public IList<BigtableGCPolicySpecMaxAge>? MaxAge { get; set; }
+    public IList<V1beta1BigtableGCPolicySpecMaxAge>? MaxAge { get; set; }
 
     /// <summary>Immutable. NOTE: 'gc_rules' is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. GC policy that applies to all versions of a cell except for the most recent.</summary>
     [JsonPropertyName("maxVersion")]
-    public IList<BigtableGCPolicySpecMaxVersion>? MaxVersion { get; set; }
+    public IList<V1beta1BigtableGCPolicySpecMaxVersion>? MaxVersion { get; set; }
 
     /// <summary>Immutable. NOTE: 'gc_rules' is more flexible, and should be preferred over this field for new resources. This field may be deprecated in the future. If multiple policies are set, you should choose between UNION OR INTERSECTION.</summary>
     [JsonPropertyName("mode")]
@@ -104,12 +98,12 @@ public partial class BigtableGCPolicySpec
 
     /// <summary>The name of the table.</summary>
     [JsonPropertyName("tableRef")]
-    public BigtableGCPolicySpecTableRef TableRef { get; set; }
+    public V1beta1BigtableGCPolicySpecTableRef TableRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicyStatusConditions
+public partial class V1beta1BigtableGCPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -134,11 +128,11 @@ public partial class BigtableGCPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicyStatus
+public partial class V1beta1BigtableGCPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BigtableGCPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1BigtableGCPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -147,25 +141,56 @@ public partial class BigtableGCPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableGCPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigtableGCPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableGCPolicySpec>, IStatus<V1beta1BigtableGCPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigtableGCPolicy";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtablegcpolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigtableGCPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BigtableGCPolicySpec Spec { get; set; }
+    public V1beta1BigtableGCPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BigtableGCPolicyStatus? Status { get; set; }
+    public V1beta1BigtableGCPolicyStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigtableGCPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigtableGCPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigtableGCPolicyList";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtablegcpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigtableGCPolicy> Items { get; set; }
 }

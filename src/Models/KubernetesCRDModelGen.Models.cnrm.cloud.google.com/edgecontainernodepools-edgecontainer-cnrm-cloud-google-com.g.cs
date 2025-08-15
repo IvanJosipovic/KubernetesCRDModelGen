@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolSpecClusterRef
+public partial class V1beta1EdgeContainerNodePoolSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeContainerCluster` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class EdgeContainerNodePoolSpecClusterRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef
+public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef
 
 /// <summary>Local disk encryption options. This field is only used when enabling CMEK support.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolSpecLocalDiskEncryption
+public partial class V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption
 {
     /// <summary>The Cloud KMS CryptoKeyVersion currently in use for protecting node local disks. Only applicable if kmsKey is set.</summary>
     [JsonPropertyName("kmsKeyActiveVersion")]
@@ -58,7 +52,7 @@ public partial class EdgeContainerNodePoolSpecLocalDiskEncryption
 
     /// <summary></summary>
     [JsonPropertyName("kmsKeyRef")]
-    public EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef? KmsKeyRef { get; set; }
+    public V1beta1EdgeContainerNodePoolSpecLocalDiskEncryptionKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>Availability of the Cloud KMS CryptoKey. If not KEY_AVAILABLE, then nodes may go offline as they cannot access their local data. This can be caused by a lack of permissions to use the key, or if the key is disabled or deleted.</summary>
     [JsonPropertyName("kmsKeyState")]
@@ -67,7 +61,7 @@ public partial class EdgeContainerNodePoolSpecLocalDiskEncryption
 
 /// <summary>Configuration for each node in the NodePool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolSpecNodeConfig
+public partial class V1beta1EdgeContainerNodePoolSpecNodeConfig
 {
     /// <summary>"The Kubernetes node labels".</summary>
     [JsonPropertyName("labels")]
@@ -76,7 +70,7 @@ public partial class EdgeContainerNodePoolSpecNodeConfig
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolSpecProjectRef
+public partial class V1beta1EdgeContainerNodePoolSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -93,15 +87,15 @@ public partial class EdgeContainerNodePoolSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolSpec
+public partial class V1beta1EdgeContainerNodePoolSpec
 {
     /// <summary></summary>
     [JsonPropertyName("clusterRef")]
-    public EdgeContainerNodePoolSpecClusterRef ClusterRef { get; set; }
+    public V1beta1EdgeContainerNodePoolSpecClusterRef ClusterRef { get; set; }
 
     /// <summary>Local disk encryption options. This field is only used when enabling CMEK support.</summary>
     [JsonPropertyName("localDiskEncryption")]
-    public EdgeContainerNodePoolSpecLocalDiskEncryption? LocalDiskEncryption { get; set; }
+    public V1beta1EdgeContainerNodePoolSpecLocalDiskEncryption? LocalDiskEncryption { get; set; }
 
     /// <summary>Immutable. The location of the resource.</summary>
     [JsonPropertyName("location")]
@@ -113,7 +107,7 @@ public partial class EdgeContainerNodePoolSpec
 
     /// <summary>Configuration for each node in the NodePool.</summary>
     [JsonPropertyName("nodeConfig")]
-    public EdgeContainerNodePoolSpecNodeConfig? NodeConfig { get; set; }
+    public V1beta1EdgeContainerNodePoolSpecNodeConfig? NodeConfig { get; set; }
 
     /// <summary>The number of nodes in the pool.</summary>
     [JsonPropertyName("nodeCount")]
@@ -125,7 +119,7 @@ public partial class EdgeContainerNodePoolSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public EdgeContainerNodePoolSpecProjectRef ProjectRef { get; set; }
+    public V1beta1EdgeContainerNodePoolSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -134,7 +128,7 @@ public partial class EdgeContainerNodePoolSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolStatusConditions
+public partial class V1beta1EdgeContainerNodePoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -159,11 +153,11 @@ public partial class EdgeContainerNodePoolStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePoolStatus
+public partial class V1beta1EdgeContainerNodePoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<EdgeContainerNodePoolStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1EdgeContainerNodePoolStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the node pool was created.</summary>
     [JsonPropertyName("createTime")]
@@ -184,25 +178,56 @@ public partial class EdgeContainerNodePoolStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerNodePool
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EdgeContainerNodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeContainerNodePoolSpec>, IStatus<V1beta1EdgeContainerNodePoolStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EdgeContainerNodePool";
+    public const string KubeGroup = "edgecontainer.cnrm.cloud.google.com";
+    public const string KubePluralName = "edgecontainernodepools";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public EdgeContainerNodePoolMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public EdgeContainerNodePoolSpec Spec { get; set; }
+    public V1beta1EdgeContainerNodePoolSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public EdgeContainerNodePoolStatus? Status { get; set; }
+    public V1beta1EdgeContainerNodePoolStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EdgeContainerNodePoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EdgeContainerNodePool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EdgeContainerNodePoolList";
+    public const string KubeGroup = "edgecontainer.cnrm.cloud.google.com";
+    public const string KubePluralName = "edgecontainernodepools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EdgeContainerNodePool> Items { get; set; }
 }

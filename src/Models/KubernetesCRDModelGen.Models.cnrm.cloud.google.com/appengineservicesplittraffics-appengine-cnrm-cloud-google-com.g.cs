@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineServiceSplitTrafficMetadata
-{
-}
-
 /// <summary>Mapping that defines fractional HTTP traffic diversion to different versions within the service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineServiceSplitTrafficSpecSplit
+public partial class V1alpha1AppEngineServiceSplitTrafficSpecSplit
 {
     /// <summary>Mapping from version IDs within the service to fractional (0.000, 1] allocations of traffic for that version. Each version can be specified only once, but some versions in the service may not have any traffic allocation. Services that have traffic allocated cannot be deleted until either the service is deleted or their traffic allocation is removed. Allocations must sum to 1. Up to two decimal place precision is supported for IP-based splits and up to three decimal places is supported for cookie-based splits.</summary>
     [JsonPropertyName("allocations")]
@@ -29,7 +23,7 @@ public partial class AppEngineServiceSplitTrafficSpecSplit
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineServiceSplitTrafficSpec
+public partial class V1alpha1AppEngineServiceSplitTrafficSpec
 {
     /// <summary>If set to true traffic will be migrated to this version.</summary>
     [JsonPropertyName("migrateTraffic")]
@@ -45,12 +39,12 @@ public partial class AppEngineServiceSplitTrafficSpec
 
     /// <summary>Mapping that defines fractional HTTP traffic diversion to different versions within the service.</summary>
     [JsonPropertyName("split")]
-    public AppEngineServiceSplitTrafficSpecSplit Split { get; set; }
+    public V1alpha1AppEngineServiceSplitTrafficSpecSplit Split { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineServiceSplitTrafficStatusConditions
+public partial class V1alpha1AppEngineServiceSplitTrafficStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -75,11 +69,11 @@ public partial class AppEngineServiceSplitTrafficStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineServiceSplitTrafficStatus
+public partial class V1alpha1AppEngineServiceSplitTrafficStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AppEngineServiceSplitTrafficStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AppEngineServiceSplitTrafficStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -88,25 +82,56 @@ public partial class AppEngineServiceSplitTrafficStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineServiceSplitTraffic
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineServiceSplitTraffic : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineServiceSplitTrafficSpec>, IStatus<V1alpha1AppEngineServiceSplitTrafficStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineServiceSplitTraffic";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appengineservicesplittraffics";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AppEngineServiceSplitTrafficMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AppEngineServiceSplitTrafficSpec Spec { get; set; }
+    public V1alpha1AppEngineServiceSplitTrafficSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AppEngineServiceSplitTrafficStatus? Status { get; set; }
+    public V1alpha1AppEngineServiceSplitTrafficStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineServiceSplitTrafficList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AppEngineServiceSplitTraffic>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineServiceSplitTrafficList";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appengineservicesplittraffics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AppEngineServiceSplitTraffic> Items { get; set; }
 }

@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef
+public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef
 {
     /// <summary>The project id or number for the project to set the limit for.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpecConsumerAcceptLists
+public partial class V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists
 {
     /// <summary>The value of the limit to set.</summary>
     [JsonPropertyName("connectionLimit")]
@@ -41,12 +35,12 @@ public partial class ComputeServiceAttachmentSpecConsumerAcceptLists
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef ProjectRef { get; set; }
+    public V1beta1ComputeServiceAttachmentSpecConsumerAcceptListsProjectRef ProjectRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpecConsumerRejectLists
+public partial class V1beta1ComputeServiceAttachmentSpecConsumerRejectLists
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -63,7 +57,7 @@ public partial class ComputeServiceAttachmentSpecConsumerRejectLists
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpecNatSubnets
+public partial class V1beta1ComputeServiceAttachmentSpecNatSubnets
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -80,7 +74,7 @@ public partial class ComputeServiceAttachmentSpecNatSubnets
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpecProjectRef
+public partial class V1beta1ComputeServiceAttachmentSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -97,7 +91,7 @@ public partial class ComputeServiceAttachmentSpecProjectRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpecTargetServiceRef
+public partial class V1beta1ComputeServiceAttachmentSpecTargetServiceRef
 {
     /// <summary>The URL of a service serving the endpoint identified by this service attachment.  Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -114,7 +108,7 @@ public partial class ComputeServiceAttachmentSpecTargetServiceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentSpec
+public partial class V1beta1ComputeServiceAttachmentSpec
 {
     /// <summary>The connection preference of service attachment. The value can be set to `ACCEPT_AUTOMATIC`. An `ACCEPT_AUTOMATIC` service attachment is one that always accepts the connection from consumer forwarding rules. Possible values: CONNECTION_PREFERENCE_UNSPECIFIED, ACCEPT_AUTOMATIC, ACCEPT_MANUAL</summary>
     [JsonPropertyName("connectionPreference")]
@@ -122,11 +116,11 @@ public partial class ComputeServiceAttachmentSpec
 
     /// <summary>Projects that are allowed to connect to this service attachment.</summary>
     [JsonPropertyName("consumerAcceptLists")]
-    public IList<ComputeServiceAttachmentSpecConsumerAcceptLists>? ConsumerAcceptLists { get; set; }
+    public IList<V1beta1ComputeServiceAttachmentSpecConsumerAcceptLists>? ConsumerAcceptLists { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("consumerRejectLists")]
-    public IList<ComputeServiceAttachmentSpecConsumerRejectLists>? ConsumerRejectLists { get; set; }
+    public IList<V1beta1ComputeServiceAttachmentSpecConsumerRejectLists>? ConsumerRejectLists { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -142,11 +136,11 @@ public partial class ComputeServiceAttachmentSpec
 
     /// <summary></summary>
     [JsonPropertyName("natSubnets")]
-    public IList<ComputeServiceAttachmentSpecNatSubnets> NatSubnets { get; set; }
+    public IList<V1beta1ComputeServiceAttachmentSpecNatSubnets> NatSubnets { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeServiceAttachmentSpecProjectRef ProjectRef { get; set; }
+    public V1beta1ComputeServiceAttachmentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -154,12 +148,12 @@ public partial class ComputeServiceAttachmentSpec
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("targetServiceRef")]
-    public ComputeServiceAttachmentSpecTargetServiceRef TargetServiceRef { get; set; }
+    public V1beta1ComputeServiceAttachmentSpecTargetServiceRef TargetServiceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentStatusConditions
+public partial class V1beta1ComputeServiceAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -184,7 +178,7 @@ public partial class ComputeServiceAttachmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentStatusConnectedEndpoints
+public partial class V1beta1ComputeServiceAttachmentStatusConnectedEndpoints
 {
     /// <summary>The url of a connected endpoint.</summary>
     [JsonPropertyName("endpoint")]
@@ -201,7 +195,7 @@ public partial class ComputeServiceAttachmentStatusConnectedEndpoints
 
 /// <summary>An 128-bit global unique ID of the PSC service attachment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentStatusPscServiceAttachmentId
+public partial class V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId
 {
     /// <summary></summary>
     [JsonPropertyName("high")]
@@ -214,15 +208,15 @@ public partial class ComputeServiceAttachmentStatusPscServiceAttachmentId
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachmentStatus
+public partial class V1beta1ComputeServiceAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeServiceAttachmentStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeServiceAttachmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>An array of connections for all the consumers connected to this service attachment.</summary>
     [JsonPropertyName("connectedEndpoints")]
-    public IList<ComputeServiceAttachmentStatusConnectedEndpoints>? ConnectedEndpoints { get; set; }
+    public IList<V1beta1ComputeServiceAttachmentStatusConnectedEndpoints>? ConnectedEndpoints { get; set; }
 
     /// <summary>Fingerprint of this resource. This field is used internally during updates of this resource.</summary>
     [JsonPropertyName("fingerprint")]
@@ -238,7 +232,7 @@ public partial class ComputeServiceAttachmentStatus
 
     /// <summary>An 128-bit global unique ID of the PSC service attachment.</summary>
     [JsonPropertyName("pscServiceAttachmentId")]
-    public ComputeServiceAttachmentStatusPscServiceAttachmentId? PscServiceAttachmentId { get; set; }
+    public V1beta1ComputeServiceAttachmentStatusPscServiceAttachmentId? PscServiceAttachmentId { get; set; }
 
     /// <summary>URL of the region where the service attachment resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.</summary>
     [JsonPropertyName("region")]
@@ -251,25 +245,56 @@ public partial class ComputeServiceAttachmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeServiceAttachment
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeServiceAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeServiceAttachmentSpec>, IStatus<V1beta1ComputeServiceAttachmentStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeServiceAttachment";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeserviceattachments";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeServiceAttachmentMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeServiceAttachmentSpec Spec { get; set; }
+    public V1beta1ComputeServiceAttachmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeServiceAttachmentStatus? Status { get; set; }
+    public V1beta1ComputeServiceAttachmentStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeServiceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeServiceAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeServiceAttachmentList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeserviceattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeServiceAttachment> Items { get; set; }
 }

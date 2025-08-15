@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
 /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecCeOverrides
+public partial class V1alpha1IntegrationSourceSpecCeOverrides
 {
     /// <summary>Extensions specify what attribute are added or overridden on the outbound event. Each `Extensions` key-value pair are set on the event as an attribute extension independently.</summary>
     [JsonPropertyName("extensions")]
@@ -19,7 +19,7 @@ public partial class IntegrationSourceSpecCeOverrides
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecSinkRef
+public partial class V1alpha1IntegrationSourceSpecSinkRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -40,11 +40,11 @@ public partial class IntegrationSourceSpecSinkRef
 
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecSink
+public partial class V1alpha1IntegrationSourceSpecSink
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public IntegrationSourceSpecSinkRef? Ref { get; set; }
+    public V1alpha1IntegrationSourceSpecSinkRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -61,7 +61,7 @@ public partial class IntegrationSourceSpecSink
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecTimer
+public partial class V1alpha1IntegrationSourceSpecTimer
 {
     /// <summary>The interval (in milliseconds) to wait between producing the next message.</summary>
     [JsonPropertyName("period")]
@@ -82,7 +82,7 @@ public partial class IntegrationSourceSpecTimer
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAwsS3
+public partial class V1alpha1IntegrationSourceSpecAwsS3
 {
     /// <summary>The S3 Bucket name or Amazon Resource Name (ARN).</summary>
     [JsonPropertyName("arn")]
@@ -147,7 +147,7 @@ public partial class IntegrationSourceSpecAwsS3
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAwsSqs
+public partial class V1alpha1IntegrationSourceSpecAwsSqs
 {
     /// <summary>The SQS Queue Name or ARN</summary>
     [JsonPropertyName("arn")]
@@ -208,7 +208,7 @@ public partial class IntegrationSourceSpecAwsSqs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAwsDdbStreams
+public partial class V1alpha1IntegrationSourceSpecAwsDdbStreams
 {
     /// <summary>The name of the DynamoDB table.</summary>
     [JsonPropertyName("table")]
@@ -237,7 +237,7 @@ public partial class IntegrationSourceSpecAwsDdbStreams
 
 /// <summary>Secret reference. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAwsAuthSecretRef
+public partial class V1alpha1IntegrationSourceSpecAwsAuthSecretRef
 {
     /// <summary>Secret name</summary>
     [JsonPropertyName("name")]
@@ -246,62 +246,62 @@ public partial class IntegrationSourceSpecAwsAuthSecretRef
 
 /// <summary>Auth secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAwsAuthSecret
+public partial class V1alpha1IntegrationSourceSpecAwsAuthSecret
 {
     /// <summary>Secret reference. </summary>
     [JsonPropertyName("ref")]
-    public IntegrationSourceSpecAwsAuthSecretRef? Ref { get; set; }
+    public V1alpha1IntegrationSourceSpecAwsAuthSecretRef? Ref { get; set; }
 }
 
 /// <summary>Auth configurations</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAwsAuth
+public partial class V1alpha1IntegrationSourceSpecAwsAuth
 {
     /// <summary>Auth secret</summary>
     [JsonPropertyName("secret")]
-    public IntegrationSourceSpecAwsAuthSecret? Secret { get; set; }
+    public V1alpha1IntegrationSourceSpecAwsAuthSecret? Secret { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpecAws
+public partial class V1alpha1IntegrationSourceSpecAws
 {
     /// <summary></summary>
     [JsonPropertyName("s3")]
-    public IntegrationSourceSpecAwsS3? S3 { get; set; }
+    public V1alpha1IntegrationSourceSpecAwsS3? S3 { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sqs")]
-    public IntegrationSourceSpecAwsSqs? Sqs { get; set; }
+    public V1alpha1IntegrationSourceSpecAwsSqs? Sqs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("ddbStreams")]
-    public IntegrationSourceSpecAwsDdbStreams? DdbStreams { get; set; }
+    public V1alpha1IntegrationSourceSpecAwsDdbStreams? DdbStreams { get; set; }
 
     /// <summary>Auth configurations</summary>
     [JsonPropertyName("auth")]
-    public IntegrationSourceSpecAwsAuth? Auth { get; set; }
+    public V1alpha1IntegrationSourceSpecAwsAuth? Auth { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceSpec
+public partial class V1alpha1IntegrationSourceSpec
 {
     /// <summary>CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.</summary>
     [JsonPropertyName("ceOverrides")]
-    public IntegrationSourceSpecCeOverrides? CeOverrides { get; set; }
+    public V1alpha1IntegrationSourceSpecCeOverrides? CeOverrides { get; set; }
 
     /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.</summary>
     [JsonPropertyName("sink")]
-    public IntegrationSourceSpecSink? Sink { get; set; }
+    public V1alpha1IntegrationSourceSpecSink? Sink { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("timer")]
-    public IntegrationSourceSpecTimer? Timer { get; set; }
+    public V1alpha1IntegrationSourceSpecTimer? Timer { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("aws")]
-    public IntegrationSourceSpecAws? Aws { get; set; }
+    public V1alpha1IntegrationSourceSpecAws? Aws { get; set; }
 
     /// <summary>A template in the shape of `Deployment.spec.template` to be used for this ContainerSource. More info: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/</summary>
     [JsonPropertyName("template")]
@@ -310,7 +310,7 @@ public partial class IntegrationSourceSpec
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceStatusAuth
+public partial class V1alpha1IntegrationSourceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -323,7 +323,7 @@ public partial class IntegrationSourceStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceStatusCeAttributes
+public partial class V1alpha1IntegrationSourceStatusCeAttributes
 {
     /// <summary>Source is the CloudEvents source attribute.</summary>
     [JsonPropertyName("source")]
@@ -336,7 +336,7 @@ public partial class IntegrationSourceStatusCeAttributes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceStatusConditions
+public partial class V1alpha1IntegrationSourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -365,7 +365,7 @@ public partial class IntegrationSourceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSourceStatus
+public partial class V1alpha1IntegrationSourceStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -373,15 +373,15 @@ public partial class IntegrationSourceStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public IntegrationSourceStatusAuth? Auth { get; set; }
+    public V1alpha1IntegrationSourceStatusAuth? Auth { get; set; }
 
     /// <summary>CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.</summary>
     [JsonPropertyName("ceAttributes")]
-    public IList<IntegrationSourceStatusCeAttributes>? CeAttributes { get; set; }
+    public IList<V1alpha1IntegrationSourceStatusCeAttributes>? CeAttributes { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IntegrationSourceStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1IntegrationSourceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -402,13 +402,56 @@ public partial class IntegrationSourceStatus
 
 /// <summary>IntegrationSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSource
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IntegrationSource : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IntegrationSourceSpec>, IStatus<V1alpha1IntegrationSourceStatus>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IntegrationSource";
+    public const string KubeGroup = "sources.knative.dev";
+    public const string KubePluralName = "integrationsources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public IntegrationSourceSpec? Spec { get; set; }
+    public V1alpha1IntegrationSourceSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IntegrationSourceStatus? Status { get; set; }
+    public V1alpha1IntegrationSourceStatus? Status { get; set; }
+}
+
+/// <summary>IntegrationSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IntegrationSourceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IntegrationSource>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IntegrationSourceList";
+    public const string KubeGroup = "sources.knative.dev";
+    public const string KubePluralName = "integrationsources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1IntegrationSource> Items { get; set; }
 }

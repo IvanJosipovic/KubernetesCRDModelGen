@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookMetadata
-{
-}
-
 /// <summary>Configuration for a generic web service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookSpecGenericWebService
+public partial class V1alpha1DialogflowCXWebhookSpecGenericWebService
 {
     /// <summary>Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.</summary>
     [JsonPropertyName("allowedCaCerts")]
@@ -33,7 +27,7 @@ public partial class DialogflowCXWebhookSpecGenericWebService
 
 /// <summary>The name of Service Directory service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookSpecServiceDirectoryGenericWebService
+public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebService
 {
     /// <summary>Specifies a list of allowed custom CA certificates (in DER format) for HTTPS verification.</summary>
     [JsonPropertyName("allowedCaCerts")]
@@ -50,11 +44,11 @@ public partial class DialogflowCXWebhookSpecServiceDirectoryGenericWebService
 
 /// <summary>Configuration for a Service Directory service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookSpecServiceDirectory
+public partial class V1alpha1DialogflowCXWebhookSpecServiceDirectory
 {
     /// <summary>The name of Service Directory service.</summary>
     [JsonPropertyName("genericWebService")]
-    public DialogflowCXWebhookSpecServiceDirectoryGenericWebService GenericWebService { get; set; }
+    public V1alpha1DialogflowCXWebhookSpecServiceDirectoryGenericWebService GenericWebService { get; set; }
 
     /// <summary>The name of Service Directory service.</summary>
     [JsonPropertyName("service")]
@@ -63,7 +57,7 @@ public partial class DialogflowCXWebhookSpecServiceDirectory
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookSpec
+public partial class V1alpha1DialogflowCXWebhookSpec
 {
     /// <summary>Indicates whether the webhook is disabled.</summary>
     [JsonPropertyName("disabled")]
@@ -83,7 +77,7 @@ public partial class DialogflowCXWebhookSpec
 
     /// <summary>Configuration for a generic web service.</summary>
     [JsonPropertyName("genericWebService")]
-    public DialogflowCXWebhookSpecGenericWebService? GenericWebService { get; set; }
+    public V1alpha1DialogflowCXWebhookSpecGenericWebService? GenericWebService { get; set; }
 
     /// <summary>Immutable. The agent to create a webhook for. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;.</summary>
     [JsonPropertyName("parent")]
@@ -99,7 +93,7 @@ public partial class DialogflowCXWebhookSpec
 
     /// <summary>Configuration for a Service Directory service.</summary>
     [JsonPropertyName("serviceDirectory")]
-    public DialogflowCXWebhookSpecServiceDirectory? ServiceDirectory { get; set; }
+    public V1alpha1DialogflowCXWebhookSpecServiceDirectory? ServiceDirectory { get; set; }
 
     /// <summary>Webhook execution timeout.</summary>
     [JsonPropertyName("timeout")]
@@ -108,7 +102,7 @@ public partial class DialogflowCXWebhookSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookStatusConditions
+public partial class V1alpha1DialogflowCXWebhookStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -133,11 +127,11 @@ public partial class DialogflowCXWebhookStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhookStatus
+public partial class V1alpha1DialogflowCXWebhookStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DialogflowCXWebhookStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1DialogflowCXWebhookStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique identifier of the webhook. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/webhooks/&lt;Webhook ID&gt;.</summary>
     [JsonPropertyName("name")]
@@ -154,25 +148,56 @@ public partial class DialogflowCXWebhookStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXWebhook
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DialogflowCXWebhook : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXWebhookSpec>, IStatus<V1alpha1DialogflowCXWebhookStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DialogflowCXWebhook";
+    public const string KubeGroup = "dialogflowcx.cnrm.cloud.google.com";
+    public const string KubePluralName = "dialogflowcxwebhooks";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DialogflowCXWebhookMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DialogflowCXWebhookSpec Spec { get; set; }
+    public V1alpha1DialogflowCXWebhookSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DialogflowCXWebhookStatus? Status { get; set; }
+    public V1alpha1DialogflowCXWebhookStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DialogflowCXWebhookList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DialogflowCXWebhook>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DialogflowCXWebhookList";
+    public const string KubeGroup = "dialogflowcx.cnrm.cloud.google.com";
+    public const string KubePluralName = "dialogflowcxwebhooks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DialogflowCXWebhook> Items { get; set; }
 }

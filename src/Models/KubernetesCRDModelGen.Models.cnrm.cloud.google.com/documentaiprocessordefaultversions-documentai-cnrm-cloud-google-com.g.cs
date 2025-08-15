@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.documentai.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorDefaultVersionMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorDefaultVersionSpec
+public partial class V1alpha1DocumentAIProcessorDefaultVersionSpec
 {
     /// <summary>Immutable. Optional. The processor of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -29,7 +23,7 @@ public partial class DocumentAIProcessorDefaultVersionSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorDefaultVersionStatusConditions
+public partial class V1alpha1DocumentAIProcessorDefaultVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -54,11 +48,11 @@ public partial class DocumentAIProcessorDefaultVersionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorDefaultVersionStatus
+public partial class V1alpha1DocumentAIProcessorDefaultVersionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DocumentAIProcessorDefaultVersionStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1DocumentAIProcessorDefaultVersionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -67,25 +61,56 @@ public partial class DocumentAIProcessorDefaultVersionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DocumentAIProcessorDefaultVersion
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DocumentAIProcessorDefaultVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DocumentAIProcessorDefaultVersionSpec>, IStatus<V1alpha1DocumentAIProcessorDefaultVersionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DocumentAIProcessorDefaultVersion";
+    public const string KubeGroup = "documentai.cnrm.cloud.google.com";
+    public const string KubePluralName = "documentaiprocessordefaultversions";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DocumentAIProcessorDefaultVersionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DocumentAIProcessorDefaultVersionSpec Spec { get; set; }
+    public V1alpha1DocumentAIProcessorDefaultVersionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DocumentAIProcessorDefaultVersionStatus? Status { get; set; }
+    public V1alpha1DocumentAIProcessorDefaultVersionStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DocumentAIProcessorDefaultVersionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DocumentAIProcessorDefaultVersion>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DocumentAIProcessorDefaultVersionList";
+    public const string KubeGroup = "documentai.cnrm.cloud.google.com";
+    public const string KubePluralName = "documentaiprocessordefaultversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DocumentAIProcessorDefaultVersion> Items { get; set; }
 }

@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyMetadata
-{
-}
-
 /// <summary>Immutable. The Folder that this resource belongs to. Only one of [folderRef, organizationRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicySpecFolderRef
+public partial class V1beta1ComputeFirewallPolicySpecFolderRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeFirewallPolicySpecFolderRef
 
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [folderRef, organizationRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicySpecOrganizationRef
+public partial class V1beta1ComputeFirewallPolicySpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class ComputeFirewallPolicySpecOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicySpec
+public partial class V1beta1ComputeFirewallPolicySpec
 {
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -58,11 +52,11 @@ public partial class ComputeFirewallPolicySpec
 
     /// <summary>Immutable. The Folder that this resource belongs to. Only one of [folderRef, organizationRef] may be specified.</summary>
     [JsonPropertyName("folderRef")]
-    public ComputeFirewallPolicySpecFolderRef? FolderRef { get; set; }
+    public V1beta1ComputeFirewallPolicySpecFolderRef? FolderRef { get; set; }
 
     /// <summary>Immutable. The Organization that this resource belongs to. Only one of [folderRef, organizationRef] may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public ComputeFirewallPolicySpecOrganizationRef? OrganizationRef { get; set; }
+    public V1beta1ComputeFirewallPolicySpecOrganizationRef? OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -75,7 +69,7 @@ public partial class ComputeFirewallPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyStatusConditions
+public partial class V1beta1ComputeFirewallPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -100,11 +94,11 @@ public partial class ComputeFirewallPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyStatus
+public partial class V1beta1ComputeFirewallPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeFirewallPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeFirewallPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -137,25 +131,56 @@ public partial class ComputeFirewallPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeFirewallPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallPolicySpec>, IStatus<V1beta1ComputeFirewallPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeFirewallPolicy";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computefirewallpolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeFirewallPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeFirewallPolicySpec Spec { get; set; }
+    public V1beta1ComputeFirewallPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeFirewallPolicyStatus? Status { get; set; }
+    public V1beta1ComputeFirewallPolicyStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeFirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeFirewallPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeFirewallPolicyList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computefirewallpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeFirewallPolicy> Items { get; set; }
 }

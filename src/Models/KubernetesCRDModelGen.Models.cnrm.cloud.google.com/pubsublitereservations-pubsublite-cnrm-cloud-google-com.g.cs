@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsublite.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PubSubLiteReservationMetadata
-{
-}
-
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PubSubLiteReservationSpecProjectRef
+public partial class V1beta1PubSubLiteReservationSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,11 +27,11 @@ public partial class PubSubLiteReservationSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PubSubLiteReservationSpec
+public partial class V1beta1PubSubLiteReservationSpec
 {
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public PubSubLiteReservationSpecProjectRef ProjectRef { get; set; }
+    public V1beta1PubSubLiteReservationSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>The region of the pubsub lite reservation.</summary>
     [JsonPropertyName("region")]
@@ -54,7 +48,7 @@ public partial class PubSubLiteReservationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PubSubLiteReservationStatusConditions
+public partial class V1beta1PubSubLiteReservationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -79,11 +73,11 @@ public partial class PubSubLiteReservationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PubSubLiteReservationStatus
+public partial class V1beta1PubSubLiteReservationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<PubSubLiteReservationStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1PubSubLiteReservationStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -92,25 +86,56 @@ public partial class PubSubLiteReservationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PubSubLiteReservation
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PubSubLiteReservation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PubSubLiteReservationSpec>, IStatus<V1beta1PubSubLiteReservationStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PubSubLiteReservation";
+    public const string KubeGroup = "pubsublite.cnrm.cloud.google.com";
+    public const string KubePluralName = "pubsublitereservations";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public PubSubLiteReservationMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public PubSubLiteReservationSpec Spec { get; set; }
+    public V1beta1PubSubLiteReservationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public PubSubLiteReservationStatus? Status { get; set; }
+    public V1beta1PubSubLiteReservationStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PubSubLiteReservationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PubSubLiteReservation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PubSubLiteReservationList";
+    public const string KubeGroup = "pubsublite.cnrm.cloud.google.com";
+    public const string KubePluralName = "pubsublitereservations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PubSubLiteReservation> Items { get; set; }
 }

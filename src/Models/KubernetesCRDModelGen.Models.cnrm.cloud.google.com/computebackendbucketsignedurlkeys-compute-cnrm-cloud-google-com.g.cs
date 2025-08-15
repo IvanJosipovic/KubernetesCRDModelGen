@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeyMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeySpecBackendBucketRef
+public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecBackendBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeBackendBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeBackendBucketSignedURLKeySpecBackendBucketRef
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecretKeyRef
+public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -46,16 +40,16 @@ public partial class ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecret
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeySpecKeyValueValueFrom
+public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. 128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeySpecKeyValue
+public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValue
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -63,12 +57,12 @@ public partial class ComputeBackendBucketSignedURLKeySpecKeyValue
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public ComputeBackendBucketSignedURLKeySpecKeyValueValueFrom? ValueFrom { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValueValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeySpecProjectRef
+public partial class V1alpha1ComputeBackendBucketSignedURLKeySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -85,19 +79,19 @@ public partial class ComputeBackendBucketSignedURLKeySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeySpec
+public partial class V1alpha1ComputeBackendBucketSignedURLKeySpec
 {
     /// <summary></summary>
     [JsonPropertyName("backendBucketRef")]
-    public ComputeBackendBucketSignedURLKeySpecBackendBucketRef BackendBucketRef { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeySpecBackendBucketRef BackendBucketRef { get; set; }
 
     /// <summary>Immutable. 128-bit key value used for signing the URL. The key value must be a valid RFC 4648 Section 5 base64url encoded string.</summary>
     [JsonPropertyName("keyValue")]
-    public ComputeBackendBucketSignedURLKeySpecKeyValue KeyValue { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeySpecKeyValue KeyValue { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeBackendBucketSignedURLKeySpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -106,7 +100,7 @@ public partial class ComputeBackendBucketSignedURLKeySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeyStatusConditions
+public partial class V1alpha1ComputeBackendBucketSignedURLKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -131,11 +125,11 @@ public partial class ComputeBackendBucketSignedURLKeyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKeyStatus
+public partial class V1alpha1ComputeBackendBucketSignedURLKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeBackendBucketSignedURLKeyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeBackendBucketSignedURLKeyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -144,25 +138,56 @@ public partial class ComputeBackendBucketSignedURLKeyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeBackendBucketSignedURLKey
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeBackendBucketSignedURLKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeBackendBucketSignedURLKeySpec>, IStatus<V1alpha1ComputeBackendBucketSignedURLKeyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeBackendBucketSignedURLKey";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computebackendbucketsignedurlkeys";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeBackendBucketSignedURLKeyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeBackendBucketSignedURLKeySpec Spec { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeBackendBucketSignedURLKeyStatus? Status { get; set; }
+    public V1alpha1ComputeBackendBucketSignedURLKeyStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeBackendBucketSignedURLKeyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeBackendBucketSignedURLKey>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeBackendBucketSignedURLKeyList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computebackendbucketsignedurlkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeBackendBucketSignedURLKey> Items { get; set; }
 }

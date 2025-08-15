@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.messaging.knative.dev;
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionSpecReplyRef
+public partial class V1SubscriptionSpecReplyRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -31,11 +31,11 @@ public partial class SubscriptionSpecReplyRef
 
 /// <summary>Reply specifies (optionally) how to handle events returned from the Subscriber target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionSpecReply
+public partial class V1SubscriptionSpecReply
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public SubscriptionSpecReplyRef? Ref { get; set; }
+    public V1SubscriptionSpecReplyRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -52,7 +52,7 @@ public partial class SubscriptionSpecReply
 
 /// <summary>Subscriber is reference to (optional) function for processing events. Events from the Channel will be delivered here and replies are sent to a Destination as specified by the Reply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionSpecSubscriber
+public partial class V1SubscriptionSpecSubscriber
 {
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
@@ -73,7 +73,7 @@ public partial class SubscriptionSpecSubscriber
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionSpec
+public partial class V1SubscriptionSpec
 {
     /// <summary>Reference to a channel that will be used to create the subscription. You can specify only the following fields of the KReference: kind, apiVersion, name and namespace. The resource pointed by this KReference must meet the contract to the ChannelableSpec duck type. If the resource does not meet this contract it will be reflected in the Subscription's status.  This field is immutable. We have no good answer on what happens to the events that are currently in the channel being consumed from and what the semantics there should be. For now, you can always delete the Subscription and recreate it to point to a different channel, giving the user more control over what semantics should be used (drain the channel first, possibly have events dropped, etc.)</summary>
     [JsonPropertyName("channel")]
@@ -85,16 +85,16 @@ public partial class SubscriptionSpec
 
     /// <summary>Reply specifies (optionally) how to handle events returned from the Subscriber target.</summary>
     [JsonPropertyName("reply")]
-    public SubscriptionSpecReply? Reply { get; set; }
+    public V1SubscriptionSpecReply? Reply { get; set; }
 
     /// <summary>Subscriber is reference to (optional) function for processing events. Events from the Channel will be delivered here and replies are sent to a Destination as specified by the Reply.</summary>
     [JsonPropertyName("subscriber")]
-    public SubscriptionSpecSubscriber? Subscriber { get; set; }
+    public V1SubscriptionSpecSubscriber? Subscriber { get; set; }
 }
 
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionStatusAuth
+public partial class V1SubscriptionStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -107,7 +107,7 @@ public partial class SubscriptionStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionStatusConditions
+public partial class V1SubscriptionStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -136,7 +136,7 @@ public partial class SubscriptionStatusConditions
 
 /// <summary>PhysicalSubscription is the fully resolved values that this Subscription represents.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionStatusPhysicalSubscription
+public partial class V1SubscriptionStatusPhysicalSubscription
 {
     /// <summary>ReplyURI is the fully resolved URI for the spec.delivery.deadLetterSink.</summary>
     [JsonPropertyName("deadLetterSinkUri")]
@@ -177,7 +177,7 @@ public partial class SubscriptionStatusPhysicalSubscription
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SubscriptionStatus
+public partial class V1SubscriptionStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -185,11 +185,11 @@ public partial class SubscriptionStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public SubscriptionStatusAuth? Auth { get; set; }
+    public V1SubscriptionStatusAuth? Auth { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<SubscriptionStatusConditions>? Conditions { get; set; }
+    public IList<V1SubscriptionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -197,18 +197,61 @@ public partial class SubscriptionStatus
 
     /// <summary>PhysicalSubscription is the fully resolved values that this Subscription represents.</summary>
     [JsonPropertyName("physicalSubscription")]
-    public SubscriptionStatusPhysicalSubscription? PhysicalSubscription { get; set; }
+    public V1SubscriptionStatusPhysicalSubscription? PhysicalSubscription { get; set; }
 }
 
 /// <summary>Subscription routes events received on a Channel to a DNS name and corresponds to the subscriptions.channels.knative.dev CRD.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class Subscription
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1Subscription : IKubernetesObject<V1ObjectMeta>, ISpec<V1SubscriptionSpec>, IStatus<V1SubscriptionStatus>
 {
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "Subscription";
+    public const string KubeGroup = "messaging.knative.dev";
+    public const string KubePluralName = "subscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public SubscriptionSpec? Spec { get; set; }
+    public V1SubscriptionSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public SubscriptionStatus? Status { get; set; }
+    public V1SubscriptionStatus? Status { get; set; }
+}
+
+/// <summary>Subscription routes events received on a Channel to a DNS name and corresponds to the subscriptions.channels.knative.dev CRD.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1SubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1Subscription>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "SubscriptionList";
+    public const string KubeGroup = "messaging.knative.dev";
+    public const string KubePluralName = "subscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Subscription> Items { get; set; }
 }

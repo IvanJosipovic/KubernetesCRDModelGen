@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateMetadata
-{
-}
-
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef
+public partial class V1beta1ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -29,16 +23,16 @@ public partial class ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpecCertificateValueFrom
+public partial class V1beta1ComputeSSLCertificateSpecCertificateValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1ComputeSSLCertificateSpecCertificateValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpecCertificate
+public partial class V1beta1ComputeSSLCertificateSpecCertificate
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -46,12 +40,12 @@ public partial class ComputeSSLCertificateSpecCertificate
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public ComputeSSLCertificateSpecCertificateValueFrom? ValueFrom { get; set; }
+    public V1beta1ComputeSSLCertificateSpecCertificateValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef
+public partial class V1beta1ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -64,16 +58,16 @@ public partial class ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpecPrivateKeyValueFrom
+public partial class V1beta1ComputeSSLCertificateSpecPrivateKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1ComputeSSLCertificateSpecPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. The write-only private key in PEM format.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpecPrivateKey
+public partial class V1beta1ComputeSSLCertificateSpecPrivateKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -81,16 +75,16 @@ public partial class ComputeSSLCertificateSpecPrivateKey
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public ComputeSSLCertificateSpecPrivateKeyValueFrom? ValueFrom { get; set; }
+    public V1beta1ComputeSSLCertificateSpecPrivateKeyValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateSpec
+public partial class V1beta1ComputeSSLCertificateSpec
 {
     /// <summary>Immutable. The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.</summary>
     [JsonPropertyName("certificate")]
-    public ComputeSSLCertificateSpecCertificate Certificate { get; set; }
+    public V1beta1ComputeSSLCertificateSpecCertificate Certificate { get; set; }
 
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -102,7 +96,7 @@ public partial class ComputeSSLCertificateSpec
 
     /// <summary>Immutable. The write-only private key in PEM format.</summary>
     [JsonPropertyName("privateKey")]
-    public ComputeSSLCertificateSpecPrivateKey PrivateKey { get; set; }
+    public V1beta1ComputeSSLCertificateSpecPrivateKey PrivateKey { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -111,7 +105,7 @@ public partial class ComputeSSLCertificateSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateStatusConditions
+public partial class V1beta1ComputeSSLCertificateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -136,7 +130,7 @@ public partial class ComputeSSLCertificateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificateStatus
+public partial class V1beta1ComputeSSLCertificateStatus
 {
     /// <summary>The unique identifier for the resource.</summary>
     [JsonPropertyName("certificateId")]
@@ -144,7 +138,7 @@ public partial class ComputeSSLCertificateStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeSSLCertificateStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeSSLCertificateStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -165,25 +159,56 @@ public partial class ComputeSSLCertificateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSSLCertificate
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeSSLCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSSLCertificateSpec>, IStatus<V1beta1ComputeSSLCertificateStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeSSLCertificate";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computesslcertificates";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeSSLCertificateMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeSSLCertificateSpec Spec { get; set; }
+    public V1beta1ComputeSSLCertificateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeSSLCertificateStatus? Status { get; set; }
+    public V1beta1ComputeSSLCertificateStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeSSLCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeSSLCertificate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeSSLCertificateList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computesslcertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeSSLCertificate> Items { get; set; }
 }

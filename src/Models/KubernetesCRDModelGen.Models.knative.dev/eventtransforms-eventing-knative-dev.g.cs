@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformSpecJsonata
+public partial class V1alpha1EventTransformSpecJsonata
 {
     /// <summary>Expression is the JSONata expression (https://jsonata.org/).</summary>
     [JsonPropertyName("expression")]
@@ -19,7 +19,7 @@ public partial class EventTransformSpecJsonata
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformSpecReplyJsonata
+public partial class V1alpha1EventTransformSpecReplyJsonata
 {
     /// <summary>Expression is the JSONata expression (https://jsonata.org/).</summary>
     [JsonPropertyName("expression")]
@@ -28,11 +28,11 @@ public partial class EventTransformSpecReplyJsonata
 
 /// <summary>Reply is the configuration on how to handle responses from Sink. It can only be set if Sink is set. Only one "type" can be used. The used type must match the top-level transformation, if you need to mix transformation types, use compositions and chain transformations together to achieve your desired outcome. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformSpecReply
+public partial class V1alpha1EventTransformSpecReply
 {
     /// <summary></summary>
     [JsonPropertyName("jsonata")]
-    public EventTransformSpecReplyJsonata? Jsonata { get; set; }
+    public V1alpha1EventTransformSpecReplyJsonata? Jsonata { get; set; }
 
     /// <summary>Discard discards responses from Sink and return empty response body. When set to false, it returns the exact sink response body. When set to true, Discard is mutually exclusive with EventTransformations in the reply section, it can either be discarded or transformed. Default: false. </summary>
     [JsonPropertyName("discard")]
@@ -41,7 +41,7 @@ public partial class EventTransformSpecReply
 
 /// <summary>Ref points to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformSpecSinkRef
+public partial class V1alpha1EventTransformSpecSinkRef
 {
     /// <summary>Address points to a specific Address Name.</summary>
     [JsonPropertyName("address")]
@@ -70,7 +70,7 @@ public partial class EventTransformSpecSinkRef
 
 /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.  If not present, the transformation will send back the transformed event as response, this is useful to leverage the built-in Broker reply feature to re-publish a transformed event back to the broker. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformSpecSink
+public partial class V1alpha1EventTransformSpecSink
 {
     /// <summary>CACerts are Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468. If set, these CAs are appended to the set of CAs provided by the Addressable target, if any.</summary>
     [JsonPropertyName("CACerts")]
@@ -82,7 +82,7 @@ public partial class EventTransformSpecSink
 
     /// <summary>Ref points to an Addressable.</summary>
     [JsonPropertyName("ref")]
-    public EventTransformSpecSinkRef? Ref { get; set; }
+    public V1alpha1EventTransformSpecSinkRef? Ref { get; set; }
 
     /// <summary>URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.</summary>
     [JsonPropertyName("uri")]
@@ -91,24 +91,24 @@ public partial class EventTransformSpecSink
 
 /// <summary>Spec defines the desired state of the EventTransform.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformSpec
+public partial class V1alpha1EventTransformSpec
 {
     /// <summary></summary>
     [JsonPropertyName("jsonata")]
-    public EventTransformSpecJsonata? Jsonata { get; set; }
+    public V1alpha1EventTransformSpecJsonata? Jsonata { get; set; }
 
     /// <summary>Reply is the configuration on how to handle responses from Sink. It can only be set if Sink is set. Only one "type" can be used. The used type must match the top-level transformation, if you need to mix transformation types, use compositions and chain transformations together to achieve your desired outcome. </summary>
     [JsonPropertyName("reply")]
-    public EventTransformSpecReply? Reply { get; set; }
+    public V1alpha1EventTransformSpecReply? Reply { get; set; }
 
     /// <summary>Sink is a reference to an object that will resolve to a uri to use as the sink.  If not present, the transformation will send back the transformed event as response, this is useful to leverage the built-in Broker reply feature to re-publish a transformed event back to the broker. </summary>
     [JsonPropertyName("sink")]
-    public EventTransformSpecSink? Sink { get; set; }
+    public V1alpha1EventTransformSpecSink? Sink { get; set; }
 }
 
 /// <summary>Address is a single Addressable address. If Addresses is present, Address will be ignored by clients.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusAddress
+public partial class V1alpha1EventTransformStatusAddress
 {
     /// <summary>CACerts is the Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.</summary>
     [JsonPropertyName("CACerts")]
@@ -129,7 +129,7 @@ public partial class EventTransformStatusAddress
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusAddresses
+public partial class V1alpha1EventTransformStatusAddresses
 {
     /// <summary>CACerts is the Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.</summary>
     [JsonPropertyName("CACerts")]
@@ -150,7 +150,7 @@ public partial class EventTransformStatusAddresses
 
 /// <summary>Auth defines the attributes that provide the generated service account name in the resource status.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusAuth
+public partial class V1alpha1EventTransformStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -163,7 +163,7 @@ public partial class EventTransformStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusConditions
+public partial class V1alpha1EventTransformStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -192,7 +192,7 @@ public partial class EventTransformStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusJsonataDeploymentConditions
+public partial class V1alpha1EventTransformStatusJsonataDeploymentConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -221,7 +221,7 @@ public partial class EventTransformStatusJsonataDeploymentConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusJsonataDeployment
+public partial class V1alpha1EventTransformStatusJsonataDeployment
 {
     /// <summary>Total number of available pods (ready for at least minReadySeconds) targeted by this deployment.</summary>
     [JsonPropertyName("availableReplicas")]
@@ -233,7 +233,7 @@ public partial class EventTransformStatusJsonataDeployment
 
     /// <summary>Represents the latest available observations of a deployment's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<EventTransformStatusJsonataDeploymentConditions>? Conditions { get; set; }
+    public IList<V1alpha1EventTransformStatusJsonataDeploymentConditions>? Conditions { get; set; }
 
     /// <summary>The generation observed by the deployment controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -258,24 +258,24 @@ public partial class EventTransformStatusJsonataDeployment
 
 /// <summary>JsonataTransformationStatus is the status associated with JsonataEventTransformationSpec.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatusJsonata
+public partial class V1alpha1EventTransformStatusJsonata
 {
     /// <summary></summary>
     [JsonPropertyName("deployment")]
-    public EventTransformStatusJsonataDeployment? Deployment { get; set; }
+    public V1alpha1EventTransformStatusJsonataDeployment? Deployment { get; set; }
 }
 
 /// <summary>Status represents the current state of the EventTransform. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransformStatus
+public partial class V1alpha1EventTransformStatus
 {
     /// <summary>Address is a single Addressable address. If Addresses is present, Address will be ignored by clients.</summary>
     [JsonPropertyName("address")]
-    public EventTransformStatusAddress? Address { get; set; }
+    public V1alpha1EventTransformStatusAddress? Address { get; set; }
 
     /// <summary>Addresses is a list of addresses for different protocols (HTTP and HTTPS) If Addresses is present, Address must be ignored by clients.</summary>
     [JsonPropertyName("addresses")]
-    public IList<EventTransformStatusAddresses>? Addresses { get; set; }
+    public IList<V1alpha1EventTransformStatusAddresses>? Addresses { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -283,15 +283,15 @@ public partial class EventTransformStatus
 
     /// <summary>Auth defines the attributes that provide the generated service account name in the resource status.</summary>
     [JsonPropertyName("auth")]
-    public EventTransformStatusAuth? Auth { get; set; }
+    public V1alpha1EventTransformStatusAuth? Auth { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<EventTransformStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1EventTransformStatusConditions>? Conditions { get; set; }
 
     /// <summary>JsonataTransformationStatus is the status associated with JsonataEventTransformationSpec.</summary>
     [JsonPropertyName("jsonata")]
-    public EventTransformStatusJsonata? Jsonata { get; set; }
+    public V1alpha1EventTransformStatusJsonata? Jsonata { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -312,13 +312,56 @@ public partial class EventTransformStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventTransform
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1EventTransform : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1EventTransformSpec>, IStatus<V1alpha1EventTransformStatus>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "EventTransform";
+    public const string KubeGroup = "eventing.knative.dev";
+    public const string KubePluralName = "eventtransforms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary>Spec defines the desired state of the EventTransform.</summary>
     [JsonPropertyName("spec")]
-    public EventTransformSpec? Spec { get; set; }
+    public V1alpha1EventTransformSpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the EventTransform. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public EventTransformStatus? Status { get; set; }
+    public V1alpha1EventTransformStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1EventTransformList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1EventTransform>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "EventTransformList";
+    public const string KubeGroup = "eventing.knative.dev";
+    public const string KubePluralName = "eventtransforms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1EventTransform> Items { get; set; }
 }

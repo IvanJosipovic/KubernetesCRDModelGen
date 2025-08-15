@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfigMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfigSpecNetworkRef
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeNetworkPeeringRoutesConfigSpecNetworkRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfigSpecProjectRef
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class ComputeNetworkPeeringRoutesConfigSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfigSpec
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfigSpec
 {
     /// <summary>Whether to export the custom routes to the peer network.</summary>
     [JsonPropertyName("exportCustomRoutes")]
@@ -62,11 +56,11 @@ public partial class ComputeNetworkPeeringRoutesConfigSpec
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public ComputeNetworkPeeringRoutesConfigSpecNetworkRef NetworkRef { get; set; }
+    public V1alpha1ComputeNetworkPeeringRoutesConfigSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeNetworkPeeringRoutesConfigSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeNetworkPeeringRoutesConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The peering of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -75,7 +69,7 @@ public partial class ComputeNetworkPeeringRoutesConfigSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfigStatusConditions
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -100,11 +94,11 @@ public partial class ComputeNetworkPeeringRoutesConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfigStatus
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeNetworkPeeringRoutesConfigStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeNetworkPeeringRoutesConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -113,25 +107,56 @@ public partial class ComputeNetworkPeeringRoutesConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkPeeringRoutesConfig
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkPeeringRoutesConfigSpec>, IStatus<V1alpha1ComputeNetworkPeeringRoutesConfigStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeNetworkPeeringRoutesConfig";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenetworkpeeringroutesconfigs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeNetworkPeeringRoutesConfigMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeNetworkPeeringRoutesConfigSpec Spec { get; set; }
+    public V1alpha1ComputeNetworkPeeringRoutesConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeNetworkPeeringRoutesConfigStatus? Status { get; set; }
+    public V1alpha1ComputeNetworkPeeringRoutesConfigStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeNetworkPeeringRoutesConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeNetworkPeeringRoutesConfig>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeNetworkPeeringRoutesConfigList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenetworkpeeringroutesconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeNetworkPeeringRoutesConfig> Items { get; set; }
 }

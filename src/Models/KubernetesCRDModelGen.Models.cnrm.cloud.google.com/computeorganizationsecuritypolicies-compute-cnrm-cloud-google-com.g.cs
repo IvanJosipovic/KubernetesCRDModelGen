@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicySpec
+public partial class V1alpha1ComputeOrganizationSecurityPolicySpec
 {
     /// <summary>A textual description for the organization security policy.</summary>
     [JsonPropertyName("description")]
@@ -41,7 +35,7 @@ public partial class ComputeOrganizationSecurityPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyStatusConditions
+public partial class V1alpha1ComputeOrganizationSecurityPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -66,11 +60,11 @@ public partial class ComputeOrganizationSecurityPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyStatus
+public partial class V1alpha1ComputeOrganizationSecurityPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeOrganizationSecurityPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeOrganizationSecurityPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Fingerprint of this resource. This field is used internally during updates of this resource.</summary>
     [JsonPropertyName("fingerprint")]
@@ -87,25 +81,56 @@ public partial class ComputeOrganizationSecurityPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeOrganizationSecurityPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicySpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeOrganizationSecurityPolicy";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeorganizationsecuritypolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeOrganizationSecurityPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeOrganizationSecurityPolicySpec Spec { get; set; }
+    public V1alpha1ComputeOrganizationSecurityPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeOrganizationSecurityPolicyStatus? Status { get; set; }
+    public V1alpha1ComputeOrganizationSecurityPolicyStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeOrganizationSecurityPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeOrganizationSecurityPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeOrganizationSecurityPolicyList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeorganizationsecuritypolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeOrganizationSecurityPolicy> Items { get; set; }
 }

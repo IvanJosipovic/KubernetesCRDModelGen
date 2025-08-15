@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketAccessControlMetadata
-{
-}
-
 /// <summary>Reference to the bucket.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketAccessControlSpecBucketRef
+public partial class V1beta1StorageBucketAccessControlSpecBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,11 +27,11 @@ public partial class StorageBucketAccessControlSpecBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketAccessControlSpec
+public partial class V1beta1StorageBucketAccessControlSpec
 {
     /// <summary>Reference to the bucket.</summary>
     [JsonPropertyName("bucketRef")]
-    public StorageBucketAccessControlSpecBucketRef BucketRef { get; set; }
+    public V1beta1StorageBucketAccessControlSpecBucketRef BucketRef { get; set; }
 
     /// <summary>Immutable. The entity holding the permission, in one of the following forms:   user-userId   user-email   group-groupId   group-email   domain-domain   project-team-projectId   allUsers   allAuthenticatedUsers Examples:   The user liz@example.com would be user-liz@example.com.   The group example@googlegroups.com would be   group-example@googlegroups.com.   To refer to all members of the Google Apps for Business domain   example.com, the entity would be domain-example.com.</summary>
     [JsonPropertyName("entity")]
@@ -50,7 +44,7 @@ public partial class StorageBucketAccessControlSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketAccessControlStatusConditions
+public partial class V1beta1StorageBucketAccessControlStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -75,11 +69,11 @@ public partial class StorageBucketAccessControlStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketAccessControlStatus
+public partial class V1beta1StorageBucketAccessControlStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<StorageBucketAccessControlStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1StorageBucketAccessControlStatusConditions>? Conditions { get; set; }
 
     /// <summary>The domain associated with the entity.</summary>
     [JsonPropertyName("domain")]
@@ -96,25 +90,56 @@ public partial class StorageBucketAccessControlStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketAccessControl
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageBucketAccessControl : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageBucketAccessControlSpec>, IStatus<V1beta1StorageBucketAccessControlStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageBucketAccessControl";
+    public const string KubeGroup = "storage.cnrm.cloud.google.com";
+    public const string KubePluralName = "storagebucketaccesscontrols";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public StorageBucketAccessControlMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public StorageBucketAccessControlSpec Spec { get; set; }
+    public V1beta1StorageBucketAccessControlSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public StorageBucketAccessControlStatus? Status { get; set; }
+    public V1beta1StorageBucketAccessControlStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageBucketAccessControlList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StorageBucketAccessControl>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageBucketAccessControlList";
+    public const string KubeGroup = "storage.cnrm.cloud.google.com";
+    public const string KubePluralName = "storagebucketaccesscontrols";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StorageBucketAccessControl> Items { get; set; }
 }

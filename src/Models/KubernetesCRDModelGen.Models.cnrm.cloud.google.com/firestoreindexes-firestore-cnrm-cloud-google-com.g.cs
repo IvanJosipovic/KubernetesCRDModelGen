@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.firestore.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirestoreIndexMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirestoreIndexSpecFields
+public partial class V1beta1FirestoreIndexSpecFields
 {
     /// <summary>Immutable. Indicates that this field supports operations on arrayValues. Only one of 'order' and 'arrayConfig' can be specified. Possible values: ["CONTAINS"].</summary>
     [JsonPropertyName("arrayConfig")]
@@ -33,7 +27,7 @@ public partial class FirestoreIndexSpecFields
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirestoreIndexSpec
+public partial class V1beta1FirestoreIndexSpec
 {
     /// <summary>Immutable. The collection being indexed.</summary>
     [JsonPropertyName("collection")]
@@ -45,7 +39,7 @@ public partial class FirestoreIndexSpec
 
     /// <summary>Immutable. The fields supported by this index. The last field entry is always for the field path '__name__'. If, on creation, '__name__' was not specified as the last field, it will be added automatically with the same direction as that of the last field defined. If the final field in a composite index is not directional, the '__name__' will be ordered '"ASCENDING"' (unless explicitly specified otherwise).</summary>
     [JsonPropertyName("fields")]
-    public IList<FirestoreIndexSpecFields> Fields { get; set; }
+    public IList<V1beta1FirestoreIndexSpecFields> Fields { get; set; }
 
     /// <summary>Immutable. The scope at which a query is run. Default value: "COLLECTION" Possible values: ["COLLECTION", "COLLECTION_GROUP"].</summary>
     [JsonPropertyName("queryScope")]
@@ -54,7 +48,7 @@ public partial class FirestoreIndexSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirestoreIndexStatusConditions
+public partial class V1beta1FirestoreIndexStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -79,11 +73,11 @@ public partial class FirestoreIndexStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirestoreIndexStatus
+public partial class V1beta1FirestoreIndexStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<FirestoreIndexStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1FirestoreIndexStatusConditions>? Conditions { get; set; }
 
     /// <summary>A server defined name for this index. Format: 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'.</summary>
     [JsonPropertyName("name")]
@@ -96,25 +90,56 @@ public partial class FirestoreIndexStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirestoreIndex
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FirestoreIndex : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FirestoreIndexSpec>, IStatus<V1beta1FirestoreIndexStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FirestoreIndex";
+    public const string KubeGroup = "firestore.cnrm.cloud.google.com";
+    public const string KubePluralName = "firestoreindexes";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public FirestoreIndexMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public FirestoreIndexSpec Spec { get; set; }
+    public V1beta1FirestoreIndexSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public FirestoreIndexStatus? Status { get; set; }
+    public V1beta1FirestoreIndexStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FirestoreIndexList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FirestoreIndex>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FirestoreIndexList";
+    public const string KubeGroup = "firestore.cnrm.cloud.google.com";
+    public const string KubePluralName = "firestoreindexes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FirestoreIndex> Items { get; set; }
 }

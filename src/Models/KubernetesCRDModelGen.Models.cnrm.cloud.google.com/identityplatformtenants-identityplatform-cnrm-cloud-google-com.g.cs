@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformTenantMetadata
-{
-}
-
 /// <summary>The tenant-level configuration of MFA options.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformTenantSpecMfaConfig
+public partial class V1beta1IdentityPlatformTenantSpecMfaConfig
 {
     /// <summary>A list of usable second factors for this project.</summary>
     [JsonPropertyName("enabledProviders")]
@@ -29,7 +23,7 @@ public partial class IdentityPlatformTenantSpecMfaConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformTenantSpec
+public partial class V1beta1IdentityPlatformTenantSpec
 {
     /// <summary>Whether to allow email/password user authentication.</summary>
     [JsonPropertyName("allowPasswordSignup")]
@@ -53,7 +47,7 @@ public partial class IdentityPlatformTenantSpec
 
     /// <summary>The tenant-level configuration of MFA options.</summary>
     [JsonPropertyName("mfaConfig")]
-    public IdentityPlatformTenantSpecMfaConfig? MfaConfig { get; set; }
+    public V1beta1IdentityPlatformTenantSpecMfaConfig? MfaConfig { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -66,7 +60,7 @@ public partial class IdentityPlatformTenantSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformTenantStatusConditions
+public partial class V1beta1IdentityPlatformTenantStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -91,11 +85,11 @@ public partial class IdentityPlatformTenantStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformTenantStatus
+public partial class V1beta1IdentityPlatformTenantStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IdentityPlatformTenantStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1IdentityPlatformTenantStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -104,25 +98,56 @@ public partial class IdentityPlatformTenantStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformTenant
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityPlatformTenant : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformTenantSpec>, IStatus<V1beta1IdentityPlatformTenantStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityPlatformTenant";
+    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "identityplatformtenants";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IdentityPlatformTenantMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public IdentityPlatformTenantSpec? Spec { get; set; }
+    public V1beta1IdentityPlatformTenantSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IdentityPlatformTenantStatus? Status { get; set; }
+    public V1beta1IdentityPlatformTenantStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityPlatformTenantList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityPlatformTenant>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityPlatformTenantList";
+    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "identityplatformtenants";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IdentityPlatformTenant> Items { get; set; }
 }

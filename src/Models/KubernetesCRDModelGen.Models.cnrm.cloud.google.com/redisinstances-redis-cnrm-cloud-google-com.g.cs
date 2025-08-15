@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceMetadata
-{
-}
-
 /// <summary>The network to which the instance is connected. If left unspecified, the default network will be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecAuthorizedNetworkRef
+public partial class V1beta1RedisInstanceSpecAuthorizedNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class RedisInstanceSpecAuthorizedNetworkRef
 
 /// <summary>Immutable. Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis instance. If this is provided, CMEK is enabled.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecCustomerManagedKeyRef
+public partial class V1beta1RedisInstanceSpecCustomerManagedKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class RedisInstanceSpecCustomerManagedKeyRef
 
 /// <summary>Required. Start time of the window in UTC time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
+public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23. An API may choose to allow the value "24:00:00" for scenarios like business closing time.</summary>
     [JsonPropertyName("hours")]
@@ -71,7 +65,7 @@ public partial class RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowSt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
+public partial class V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
 {
     /// <summary>Required. The day of week that maintenance updates occur.  - DAY_OF_WEEK_UNSPECIFIED: The day of the week is unspecified. - MONDAY: Monday - TUESDAY: Tuesday - WEDNESDAY: Wednesday - THURSDAY: Thursday - FRIDAY: Friday - SATURDAY: Saturday - SUNDAY: Sunday Possible values: ["DAY_OF_WEEK_UNSPECIFIED", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
     [JsonPropertyName("day")]
@@ -83,12 +77,12 @@ public partial class RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow
 
     /// <summary>Required. Start time of the window in UTC time.</summary>
     [JsonPropertyName("startTime")]
-    public RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
+    public V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindowStartTime StartTime { get; set; }
 }
 
 /// <summary>Maintenance policy for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecMaintenancePolicy
+public partial class V1beta1RedisInstanceSpecMaintenancePolicy
 {
     /// <summary>Output only. The time when the policy was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -104,12 +98,12 @@ public partial class RedisInstanceSpecMaintenancePolicy
 
     /// <summary>Optional. Maintenance window that is applied to resources covered by this policy. Minimum 1. For the current version, the maximum number of weekly_window is expected to be one.</summary>
     [JsonPropertyName("weeklyMaintenanceWindow")]
-    public IList<RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
+    public IList<V1beta1RedisInstanceSpecMaintenancePolicyWeeklyMaintenanceWindow>? WeeklyMaintenanceWindow { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecMaintenanceSchedule
+public partial class V1beta1RedisInstanceSpecMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("endTime")]
@@ -126,7 +120,7 @@ public partial class RedisInstanceSpecMaintenanceSchedule
 
 /// <summary>Persistence configuration for an instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpecPersistenceConfig
+public partial class V1beta1RedisInstanceSpecPersistenceConfig
 {
     /// <summary>Optional. Controls whether Persistence features are enabled. If not provided, the existing value will be used.  - DISABLED: 	Persistence is disabled for the instance, and any existing snapshots are deleted. - RDB: RDB based Persistence is enabled. Possible values: ["DISABLED", "RDB"].</summary>
     [JsonPropertyName("persistenceMode")]
@@ -147,7 +141,7 @@ public partial class RedisInstanceSpecPersistenceConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceSpec
+public partial class V1beta1RedisInstanceSpec
 {
     /// <summary>Immutable. Only applicable to STANDARD_HA tier which protects the instance against zonal failures by provisioning it across two zones. If provided, it must be a different zone from the one provided in [locationId].</summary>
     [JsonPropertyName("alternativeLocationId")]
@@ -163,7 +157,7 @@ public partial class RedisInstanceSpec
 
     /// <summary>The network to which the instance is connected. If left unspecified, the default network will be used.</summary>
     [JsonPropertyName("authorizedNetworkRef")]
-    public RedisInstanceSpecAuthorizedNetworkRef? AuthorizedNetworkRef { get; set; }
+    public V1beta1RedisInstanceSpecAuthorizedNetworkRef? AuthorizedNetworkRef { get; set; }
 
     /// <summary>Immutable. The connection mode of the Redis instance. Default value: "DIRECT_PEERING" Possible values: ["DIRECT_PEERING", "PRIVATE_SERVICE_ACCESS"].</summary>
     [JsonPropertyName("connectMode")]
@@ -171,7 +165,7 @@ public partial class RedisInstanceSpec
 
     /// <summary>Immutable. Optional. The KMS key reference that you want to use to encrypt the data at rest for this Redis instance. If this is provided, CMEK is enabled.</summary>
     [JsonPropertyName("customerManagedKeyRef")]
-    public RedisInstanceSpecCustomerManagedKeyRef? CustomerManagedKeyRef { get; set; }
+    public V1beta1RedisInstanceSpecCustomerManagedKeyRef? CustomerManagedKeyRef { get; set; }
 
     /// <summary>An arbitrary and optional user-provided name for the instance.</summary>
     [JsonPropertyName("displayName")]
@@ -183,11 +177,11 @@ public partial class RedisInstanceSpec
 
     /// <summary>Maintenance policy for an instance.</summary>
     [JsonPropertyName("maintenancePolicy")]
-    public RedisInstanceSpecMaintenancePolicy? MaintenancePolicy { get; set; }
+    public V1beta1RedisInstanceSpecMaintenancePolicy? MaintenancePolicy { get; set; }
 
     /// <summary>Upcoming maintenance schedule.</summary>
     [JsonPropertyName("maintenanceSchedule")]
-    public IList<RedisInstanceSpecMaintenanceSchedule>? MaintenanceSchedule { get; set; }
+    public IList<V1beta1RedisInstanceSpecMaintenanceSchedule>? MaintenanceSchedule { get; set; }
 
     /// <summary>Redis memory size in GiB.</summary>
     [JsonPropertyName("memorySizeGb")]
@@ -195,7 +189,7 @@ public partial class RedisInstanceSpec
 
     /// <summary>Persistence configuration for an instance.</summary>
     [JsonPropertyName("persistenceConfig")]
-    public RedisInstanceSpecPersistenceConfig? PersistenceConfig { get; set; }
+    public V1beta1RedisInstanceSpecPersistenceConfig? PersistenceConfig { get; set; }
 
     /// <summary>Optional. Read replica mode. Can only be specified when trying to create the instance. If not set, Memorystore Redis backend will default to READ_REPLICAS_DISABLED. - READ_REPLICAS_DISABLED: If disabled, read endpoint will not be provided and the instance cannot scale up or down the number of replicas. - READ_REPLICAS_ENABLED: If enabled, read endpoint will be provided and the instance can scale up and down the number of replicas. Possible values: ["READ_REPLICAS_DISABLED", "READ_REPLICAS_ENABLED"].</summary>
     [JsonPropertyName("readReplicasMode")]
@@ -240,7 +234,7 @@ public partial class RedisInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceStatusConditions
+public partial class V1beta1RedisInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -265,7 +259,7 @@ public partial class RedisInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceStatusMaintenanceSchedule
+public partial class V1beta1RedisInstanceStatusMaintenanceSchedule
 {
     /// <summary>Output only. The end time of any upcoming scheduled maintenance for this instance. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("endTime")]
@@ -282,7 +276,7 @@ public partial class RedisInstanceStatusMaintenanceSchedule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceStatusNodes
+public partial class V1beta1RedisInstanceStatusNodes
 {
     /// <summary>Node identifying string. e.g. 'node-0', 'node-1'.</summary>
     [JsonPropertyName("id")]
@@ -295,7 +289,7 @@ public partial class RedisInstanceStatusNodes
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceStatusObservedState
+public partial class V1beta1RedisInstanceStatusObservedState
 {
     /// <summary>Output only. AUTH String set on the instance. This field will only be populated if auth_enabled is true.</summary>
     [JsonPropertyName("authString")]
@@ -304,7 +298,7 @@ public partial class RedisInstanceStatusObservedState
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceStatusServerCaCerts
+public partial class V1beta1RedisInstanceStatusServerCaCerts
 {
     /// <summary>The certificate data in PEM format.</summary>
     [JsonPropertyName("cert")]
@@ -329,11 +323,11 @@ public partial class RedisInstanceStatusServerCaCerts
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstanceStatus
+public partial class V1beta1RedisInstanceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<RedisInstanceStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1RedisInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.</summary>
     [JsonPropertyName("createTime")]
@@ -349,11 +343,11 @@ public partial class RedisInstanceStatus
 
     /// <summary>Upcoming maintenance schedule.</summary>
     [JsonPropertyName("maintenanceSchedule")]
-    public IList<RedisInstanceStatusMaintenanceSchedule>? MaintenanceSchedule { get; set; }
+    public IList<V1beta1RedisInstanceStatusMaintenanceSchedule>? MaintenanceSchedule { get; set; }
 
     /// <summary>Output only. Info per node.</summary>
     [JsonPropertyName("nodes")]
-    public IList<RedisInstanceStatusNodes>? Nodes { get; set; }
+    public IList<V1beta1RedisInstanceStatusNodes>? Nodes { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -361,7 +355,7 @@ public partial class RedisInstanceStatus
 
     /// <summary>The observed state of the underlying GCP resource.</summary>
     [JsonPropertyName("observedState")]
-    public RedisInstanceStatusObservedState? ObservedState { get; set; }
+    public V1beta1RedisInstanceStatusObservedState? ObservedState { get; set; }
 
     /// <summary>Output only. Cloud IAM identity used by import / export operations to transfer data to/from Cloud Storage. Format is "serviceAccount:". The value may change over time for a given instance so should be checked before each import/export operation.</summary>
     [JsonPropertyName("persistenceIamIdentity")]
@@ -381,30 +375,61 @@ public partial class RedisInstanceStatus
 
     /// <summary>List of server CA certificates for the instance.</summary>
     [JsonPropertyName("serverCaCerts")]
-    public IList<RedisInstanceStatusServerCaCerts>? ServerCaCerts { get; set; }
+    public IList<V1beta1RedisInstanceStatusServerCaCerts>? ServerCaCerts { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RedisInstance
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1RedisInstanceSpec>, IStatus<V1beta1RedisInstanceStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisInstance";
+    public const string KubeGroup = "redis.cnrm.cloud.google.com";
+    public const string KubePluralName = "redisinstances";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public RedisInstanceMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public RedisInstanceSpec Spec { get; set; }
+    public V1beta1RedisInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public RedisInstanceStatus? Status { get; set; }
+    public V1beta1RedisInstanceStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisInstanceList";
+    public const string KubeGroup = "redis.cnrm.cloud.google.com";
+    public const string KubePluralName = "redisinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisInstance> Items { get; set; }
 }

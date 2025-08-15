@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudasset.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedMetadata
-{
-}
-
 /// <summary>A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of condition are optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedSpecCondition
+public partial class V1alpha1CloudAssetOrganizationFeedSpecCondition
 {
     /// <summary>Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
     [JsonPropertyName("description")]
@@ -37,7 +31,7 @@ public partial class CloudAssetOrganizationFeedSpecCondition
 
 /// <summary>Destination on Cloud Pubsub.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedSpecFeedOutputConfigPubsubDestination
+public partial class V1alpha1CloudAssetOrganizationFeedSpecFeedOutputConfigPubsubDestination
 {
     /// <summary>Destination on Cloud Pubsub topic.</summary>
     [JsonPropertyName("topic")]
@@ -46,16 +40,16 @@ public partial class CloudAssetOrganizationFeedSpecFeedOutputConfigPubsubDestina
 
 /// <summary>Output configuration for asset feed destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedSpecFeedOutputConfig
+public partial class V1alpha1CloudAssetOrganizationFeedSpecFeedOutputConfig
 {
     /// <summary>Destination on Cloud Pubsub.</summary>
     [JsonPropertyName("pubsubDestination")]
-    public CloudAssetOrganizationFeedSpecFeedOutputConfigPubsubDestination PubsubDestination { get; set; }
+    public V1alpha1CloudAssetOrganizationFeedSpecFeedOutputConfigPubsubDestination PubsubDestination { get; set; }
 }
 
 /// <summary>The organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedSpecOrganizationRef
+public partial class V1alpha1CloudAssetOrganizationFeedSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
     [JsonPropertyName("external")]
@@ -72,7 +66,7 @@ public partial class CloudAssetOrganizationFeedSpecOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedSpec
+public partial class V1alpha1CloudAssetOrganizationFeedSpec
 {
     /// <summary>A list of the full names of the assets to receive updates. You must specify either or both of assetNames and assetTypes. Only asset updates matching specified assetNames and assetTypes are exported to the feed. For example: //compute.googleapis.com/projects/my_project_123/zones/zone1/instances/instance1. See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.</summary>
     [JsonPropertyName("assetNames")]
@@ -88,7 +82,7 @@ public partial class CloudAssetOrganizationFeedSpec
 
     /// <summary>A condition which determines whether an asset update should be published. If specified, an asset will be returned only when the expression evaluates to true. When set, expression field must be a valid CEL expression on a TemporalAsset with name temporal_asset. Example: a Feed with expression "temporal_asset.deleted == true" will only publish Asset deletions. Other fields of condition are optional.</summary>
     [JsonPropertyName("condition")]
-    public CloudAssetOrganizationFeedSpecCondition? Condition { get; set; }
+    public V1alpha1CloudAssetOrganizationFeedSpecCondition? Condition { get; set; }
 
     /// <summary>Asset content type. If not specified, no content but the asset name and type will be returned. Possible values: ["CONTENT_TYPE_UNSPECIFIED", "RESOURCE", "IAM_POLICY", "ORG_POLICY", "OS_INVENTORY", "ACCESS_POLICY"].</summary>
     [JsonPropertyName("contentType")]
@@ -100,11 +94,11 @@ public partial class CloudAssetOrganizationFeedSpec
 
     /// <summary>Output configuration for asset feed destination.</summary>
     [JsonPropertyName("feedOutputConfig")]
-    public CloudAssetOrganizationFeedSpecFeedOutputConfig FeedOutputConfig { get; set; }
+    public V1alpha1CloudAssetOrganizationFeedSpecFeedOutputConfig FeedOutputConfig { get; set; }
 
     /// <summary>The organization that this resource belongs to.</summary>
     [JsonPropertyName("organizationRef")]
-    public CloudAssetOrganizationFeedSpecOrganizationRef OrganizationRef { get; set; }
+    public V1alpha1CloudAssetOrganizationFeedSpecOrganizationRef OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -113,7 +107,7 @@ public partial class CloudAssetOrganizationFeedSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedStatusConditions
+public partial class V1alpha1CloudAssetOrganizationFeedStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -138,11 +132,11 @@ public partial class CloudAssetOrganizationFeedStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeedStatus
+public partial class V1alpha1CloudAssetOrganizationFeedStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<CloudAssetOrganizationFeedStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1CloudAssetOrganizationFeedStatusConditions>? Conditions { get; set; }
 
     /// <summary>The format will be organizations/{organization_number}/feeds/{client-assigned_feed_identifier}.</summary>
     [JsonPropertyName("name")]
@@ -155,25 +149,56 @@ public partial class CloudAssetOrganizationFeedStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudAssetOrganizationFeed
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CloudAssetOrganizationFeed : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudAssetOrganizationFeedSpec>, IStatus<V1alpha1CloudAssetOrganizationFeedStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CloudAssetOrganizationFeed";
+    public const string KubeGroup = "cloudasset.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudassetorganizationfeeds";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public CloudAssetOrganizationFeedMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public CloudAssetOrganizationFeedSpec Spec { get; set; }
+    public V1alpha1CloudAssetOrganizationFeedSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public CloudAssetOrganizationFeedStatus? Status { get; set; }
+    public V1alpha1CloudAssetOrganizationFeedStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CloudAssetOrganizationFeedList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1CloudAssetOrganizationFeed>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CloudAssetOrganizationFeedList";
+    public const string KubeGroup = "cloudasset.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudassetorganizationfeeds";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1CloudAssetOrganizationFeed> Items { get; set; }
 }

@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupMetadata
-{
-}
-
 /// <summary>The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupSpecClusterNameRef
+public partial class V1alpha1AlloyDBBackupSpecClusterNameRef
 {
     /// <summary>Allowed value: The `name` field of an `AlloyDBCluster` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class AlloyDBBackupSpecClusterNameRef
 
 /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupSpecEncryptionConfig
+public partial class V1alpha1AlloyDBBackupSpecEncryptionConfig
 {
     /// <summary>Immutable. The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME].</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -42,7 +36,7 @@ public partial class AlloyDBBackupSpecEncryptionConfig
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupSpecProjectRef
+public partial class V1alpha1AlloyDBBackupSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -59,11 +53,11 @@ public partial class AlloyDBBackupSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupSpec
+public partial class V1alpha1AlloyDBBackupSpec
 {
     /// <summary>The full resource name of the backup source cluster (e.g., projects/{project}/locations/{location}/clusters/{clusterId}).</summary>
     [JsonPropertyName("clusterNameRef")]
-    public AlloyDBBackupSpecClusterNameRef ClusterNameRef { get; set; }
+    public V1alpha1AlloyDBBackupSpecClusterNameRef ClusterNameRef { get; set; }
 
     /// <summary>Immutable. User-provided description of the backup.</summary>
     [JsonPropertyName("description")]
@@ -71,7 +65,7 @@ public partial class AlloyDBBackupSpec
 
     /// <summary>EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).</summary>
     [JsonPropertyName("encryptionConfig")]
-    public AlloyDBBackupSpecEncryptionConfig? EncryptionConfig { get; set; }
+    public V1alpha1AlloyDBBackupSpecEncryptionConfig? EncryptionConfig { get; set; }
 
     /// <summary>Immutable. The location where the alloydb backup should reside.</summary>
     [JsonPropertyName("location")]
@@ -79,7 +73,7 @@ public partial class AlloyDBBackupSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public AlloyDBBackupSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1AlloyDBBackupSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The backupId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -88,7 +82,7 @@ public partial class AlloyDBBackupSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupStatusConditions
+public partial class V1alpha1AlloyDBBackupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -113,7 +107,7 @@ public partial class AlloyDBBackupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupStatusEncryptionInfo
+public partial class V1alpha1AlloyDBBackupStatusEncryptionInfo
 {
     /// <summary>Output only. Type of encryption.</summary>
     [JsonPropertyName("encryptionType")]
@@ -126,11 +120,11 @@ public partial class AlloyDBBackupStatusEncryptionInfo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackupStatus
+public partial class V1alpha1AlloyDBBackupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AlloyDBBackupStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AlloyDBBackupStatusConditions>? Conditions { get; set; }
 
     /// <summary>Time the Backup was created in UTC.</summary>
     [JsonPropertyName("createTime")]
@@ -138,7 +132,7 @@ public partial class AlloyDBBackupStatus
 
     /// <summary>EncryptionInfo describes the encryption information of a cluster or a backup.</summary>
     [JsonPropertyName("encryptionInfo")]
-    public IList<AlloyDBBackupStatusEncryptionInfo>? EncryptionInfo { get; set; }
+    public IList<V1alpha1AlloyDBBackupStatusEncryptionInfo>? EncryptionInfo { get; set; }
 
     /// <summary>A hash of the resource.</summary>
     [JsonPropertyName("etag")]
@@ -171,25 +165,56 @@ public partial class AlloyDBBackupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBBackup
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AlloyDBBackup : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AlloyDBBackupSpec>, IStatus<V1alpha1AlloyDBBackupStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AlloyDBBackup";
+    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
+    public const string KubePluralName = "alloydbbackups";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AlloyDBBackupMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AlloyDBBackupSpec Spec { get; set; }
+    public V1alpha1AlloyDBBackupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AlloyDBBackupStatus? Status { get; set; }
+    public V1alpha1AlloyDBBackupStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AlloyDBBackupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AlloyDBBackup>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AlloyDBBackupList";
+    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
+    public const string KubePluralName = "alloydbbackups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AlloyDBBackup> Items { get; set; }
 }

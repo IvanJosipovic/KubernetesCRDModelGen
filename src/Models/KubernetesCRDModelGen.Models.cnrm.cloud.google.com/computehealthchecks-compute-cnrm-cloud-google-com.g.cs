@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckMetadata
-{
-}
-
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecGrpcHealthCheck
+public partial class V1beta1ComputeHealthCheckSpecGrpcHealthCheck
 {
     /// <summary>The gRPC service name for the health check. The value of grpcServiceName has the following meanings by convention:   - Empty serviceName means the overall status of all services at the backend.   - Non-empty serviceName means the health of that gRPC service, as defined by the owner of the service. The grpcServiceName can only be ASCII.</summary>
     [JsonPropertyName("grpcServiceName")]
@@ -37,7 +31,7 @@ public partial class ComputeHealthCheckSpecGrpcHealthCheck
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecHttp2HealthCheck
+public partial class V1beta1ComputeHealthCheckSpecHttp2HealthCheck
 {
     /// <summary>The value of the host header in the HTTP2 health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
     [JsonPropertyName("host")]
@@ -70,7 +64,7 @@ public partial class ComputeHealthCheckSpecHttp2HealthCheck
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecHttpHealthCheck
+public partial class V1beta1ComputeHealthCheckSpecHttpHealthCheck
 {
     /// <summary>The value of the host header in the HTTP health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
     [JsonPropertyName("host")]
@@ -103,7 +97,7 @@ public partial class ComputeHealthCheckSpecHttpHealthCheck
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecHttpsHealthCheck
+public partial class V1beta1ComputeHealthCheckSpecHttpsHealthCheck
 {
     /// <summary>The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.</summary>
     [JsonPropertyName("host")]
@@ -136,7 +130,7 @@ public partial class ComputeHealthCheckSpecHttpsHealthCheck
 
 /// <summary>Configure logging on this health check.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecLogConfig
+public partial class V1beta1ComputeHealthCheckSpecLogConfig
 {
     /// <summary>Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.</summary>
     [JsonPropertyName("enable")]
@@ -145,7 +139,7 @@ public partial class ComputeHealthCheckSpecLogConfig
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecSslHealthCheck
+public partial class V1beta1ComputeHealthCheckSpecSslHealthCheck
 {
     /// <summary>The TCP port number for the SSL health check request. The default value is 443.</summary>
     [JsonPropertyName("port")]
@@ -174,7 +168,7 @@ public partial class ComputeHealthCheckSpecSslHealthCheck
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpecTcpHealthCheck
+public partial class V1beta1ComputeHealthCheckSpecTcpHealthCheck
 {
     /// <summary>The TCP port number for the TCP health check request. The default value is 443.</summary>
     [JsonPropertyName("port")]
@@ -203,7 +197,7 @@ public partial class ComputeHealthCheckSpecTcpHealthCheck
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckSpec
+public partial class V1beta1ComputeHealthCheckSpec
 {
     /// <summary>How often (in seconds) to send a health check. The default value is 5 seconds.</summary>
     [JsonPropertyName("checkIntervalSec")]
@@ -215,7 +209,7 @@ public partial class ComputeHealthCheckSpec
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("grpcHealthCheck")]
-    public ComputeHealthCheckSpecGrpcHealthCheck? GrpcHealthCheck { get; set; }
+    public V1beta1ComputeHealthCheckSpecGrpcHealthCheck? GrpcHealthCheck { get; set; }
 
     /// <summary>A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.</summary>
     [JsonPropertyName("healthyThreshold")]
@@ -223,15 +217,15 @@ public partial class ComputeHealthCheckSpec
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("http2HealthCheck")]
-    public ComputeHealthCheckSpecHttp2HealthCheck? Http2HealthCheck { get; set; }
+    public V1beta1ComputeHealthCheckSpecHttp2HealthCheck? Http2HealthCheck { get; set; }
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("httpHealthCheck")]
-    public ComputeHealthCheckSpecHttpHealthCheck? HttpHealthCheck { get; set; }
+    public V1beta1ComputeHealthCheckSpecHttpHealthCheck? HttpHealthCheck { get; set; }
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("httpsHealthCheck")]
-    public ComputeHealthCheckSpecHttpsHealthCheck? HttpsHealthCheck { get; set; }
+    public V1beta1ComputeHealthCheckSpecHttpsHealthCheck? HttpsHealthCheck { get; set; }
 
     /// <summary>Location represents the geographical location of the ComputeHealthCheck. Specify a region name or "global" for global resources. Reference: GCP definition of regions/zones (https://cloud.google.com/compute/docs/regions-zones/)</summary>
     [JsonPropertyName("location")]
@@ -239,7 +233,7 @@ public partial class ComputeHealthCheckSpec
 
     /// <summary>Configure logging on this health check.</summary>
     [JsonPropertyName("logConfig")]
-    public ComputeHealthCheckSpecLogConfig? LogConfig { get; set; }
+    public V1beta1ComputeHealthCheckSpecLogConfig? LogConfig { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -247,11 +241,11 @@ public partial class ComputeHealthCheckSpec
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("sslHealthCheck")]
-    public ComputeHealthCheckSpecSslHealthCheck? SslHealthCheck { get; set; }
+    public V1beta1ComputeHealthCheckSpecSslHealthCheck? SslHealthCheck { get; set; }
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("tcpHealthCheck")]
-    public ComputeHealthCheckSpecTcpHealthCheck? TcpHealthCheck { get; set; }
+    public V1beta1ComputeHealthCheckSpecTcpHealthCheck? TcpHealthCheck { get; set; }
 
     /// <summary>How long (in seconds) to wait before claiming failure. The default value is 5 seconds.  It is invalid for timeoutSec to have greater value than checkIntervalSec.</summary>
     [JsonPropertyName("timeoutSec")]
@@ -264,7 +258,7 @@ public partial class ComputeHealthCheckSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckStatusConditions
+public partial class V1beta1ComputeHealthCheckStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -289,11 +283,11 @@ public partial class ComputeHealthCheckStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheckStatus
+public partial class V1beta1ComputeHealthCheckStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeHealthCheckStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeHealthCheckStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -314,25 +308,56 @@ public partial class ComputeHealthCheckStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeHealthCheck
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeHealthCheck : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeHealthCheckSpec>, IStatus<V1beta1ComputeHealthCheckStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeHealthCheck";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computehealthchecks";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeHealthCheckMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeHealthCheckSpec Spec { get; set; }
+    public V1beta1ComputeHealthCheckSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeHealthCheckStatus? Status { get; set; }
+    public V1beta1ComputeHealthCheckStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeHealthCheckList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeHealthCheck>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeHealthCheckList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computehealthchecks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeHealthCheck> Items { get; set; }
 }

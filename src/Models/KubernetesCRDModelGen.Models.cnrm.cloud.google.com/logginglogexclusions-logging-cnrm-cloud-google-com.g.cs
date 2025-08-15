@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionMetadata
-{
-}
-
 /// <summary>Immutable. The BillingAccount that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionSpecBillingAccountRef
+public partial class V1beta1LoggingLogExclusionSpecBillingAccountRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Billing Account (format: `billingAccounts/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class LoggingLogExclusionSpecBillingAccountRef
 
 /// <summary>Immutable. The Folder that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionSpecFolderRef
+public partial class V1beta1LoggingLogExclusionSpecFolderRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class LoggingLogExclusionSpecFolderRef
 
 /// <summary>Immutable. The Organization that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionSpecOrganizationRef
+public partial class V1beta1LoggingLogExclusionSpecOrganizationRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -67,7 +61,7 @@ public partial class LoggingLogExclusionSpecOrganizationRef
 
 /// <summary>Immutable. The Project that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionSpecProjectRef
+public partial class V1beta1LoggingLogExclusionSpecProjectRef
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -84,11 +78,11 @@ public partial class LoggingLogExclusionSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionSpec
+public partial class V1beta1LoggingLogExclusionSpec
 {
     /// <summary>Immutable. The BillingAccount that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
     [JsonPropertyName("billingAccountRef")]
-    public LoggingLogExclusionSpecBillingAccountRef? BillingAccountRef { get; set; }
+    public V1beta1LoggingLogExclusionSpecBillingAccountRef? BillingAccountRef { get; set; }
 
     /// <summary>Optional. A description of this exclusion.</summary>
     [JsonPropertyName("description")]
@@ -104,15 +98,15 @@ public partial class LoggingLogExclusionSpec
 
     /// <summary>Immutable. The Folder that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
     [JsonPropertyName("folderRef")]
-    public LoggingLogExclusionSpecFolderRef? FolderRef { get; set; }
+    public V1beta1LoggingLogExclusionSpecFolderRef? FolderRef { get; set; }
 
     /// <summary>Immutable. The Organization that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public LoggingLogExclusionSpecOrganizationRef? OrganizationRef { get; set; }
+    public V1beta1LoggingLogExclusionSpecOrganizationRef? OrganizationRef { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to. Only one of [projectRef, folderRef, organizationRef, billingAccountRef] may be specified.</summary>
     [JsonPropertyName("projectRef")]
-    public LoggingLogExclusionSpecProjectRef? ProjectRef { get; set; }
+    public V1beta1LoggingLogExclusionSpecProjectRef? ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -121,7 +115,7 @@ public partial class LoggingLogExclusionSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionStatusConditions
+public partial class V1beta1LoggingLogExclusionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -146,11 +140,11 @@ public partial class LoggingLogExclusionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusionStatus
+public partial class V1beta1LoggingLogExclusionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<LoggingLogExclusionStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1LoggingLogExclusionStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The creation timestamp of the exclusion. This field may not be present for older exclusions.</summary>
     [JsonPropertyName("createTime")]
@@ -167,25 +161,56 @@ public partial class LoggingLogExclusionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class LoggingLogExclusion
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoggingLogExclusion : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1LoggingLogExclusionSpec>, IStatus<V1beta1LoggingLogExclusionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoggingLogExclusion";
+    public const string KubeGroup = "logging.cnrm.cloud.google.com";
+    public const string KubePluralName = "logginglogexclusions";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public LoggingLogExclusionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public LoggingLogExclusionSpec Spec { get; set; }
+    public V1beta1LoggingLogExclusionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public LoggingLogExclusionStatus? Status { get; set; }
+    public V1beta1LoggingLogExclusionStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoggingLogExclusionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoggingLogExclusion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoggingLogExclusionList";
+    public const string KubeGroup = "logging.cnrm.cloud.google.com";
+    public const string KubePluralName = "logginglogexclusions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LoggingLogExclusion> Items { get; set; }
 }
