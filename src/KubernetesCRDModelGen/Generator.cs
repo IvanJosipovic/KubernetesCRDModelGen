@@ -1,11 +1,3 @@
-using System.CodeDom.Compiler;
-using System.Diagnostics.CodeAnalysis;
-using System.Reflection;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Nodes;
-using System.Xml;
-using System.Xml.Linq;
 using Humanizer;
 using k8s;
 using k8s.Models;
@@ -14,9 +6,16 @@ using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
-using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Models;
-using Microsoft.OpenApi.Readers;
+using Microsoft.OpenApi.Reader;
+using System.CodeDom.Compiler;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
+using System.Text;
+using System.Text.Json;
+using System.Text.Json.Nodes;
+using System.Xml;
+using System.Xml.Linq;
+using YamlDotNet.Core.Tokens;
 
 namespace KubernetesCRDModelGen;
 
@@ -61,9 +60,13 @@ public class Generator : IGenerator
 
         var schema = version.Schema.OpenAPIV3Schema;
 
-        var doc = new OpenApiStringReader().ReadFragment<OpenApiSchema>(KubernetesJson.Serialize(version.Schema.OpenAPIV3Schema), OpenApiSpecVersion.OpenApi3_0, out var diag);
+        var reader = new OpenApiJsonReader();
 
-        if (diag?.Errors.Count > 0)
+        var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
+
+        var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+
+        if (diag != null && diag.Errors.Count > 0)
         {
             logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
         }
@@ -95,7 +98,7 @@ public class Generator : IGenerator
         ]);
     }
 
-    private BaseTypeDeclarationSyntax[] GenerateClass(OpenApiSchema schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null, string? listKind = null)
+    private BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string name, string? version = null, string? kind = null, string? group = null, string? plural = null, string? listKind = null)
     {
         bool isRoot = version != null && kind != null && group != null && plural != null && listKind != null;
 
@@ -253,9 +256,9 @@ public class Generator : IGenerator
             @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
         }
 
-        if (schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var preserve) && preserve is OpenApiBoolean preserveBool && preserveBool.Value)
-        {
-            // Create property
+        if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var preserve) && preserve is JsonNodeExtension preserve1 && preserve1.Node.GetValueKind() == JsonValueKind.True)
+        {            // Create property
+
             var property = SyntaxFactory.PropertyDeclaration(
                     SyntaxFactory.NullableType(
                         SyntaxFactory.ParseTypeName("IDictionary<string, JsonElement>")
@@ -290,44 +293,45 @@ public class Generator : IGenerator
 
             @class = @class.AddMembers(property);
         }
-
-        foreach (var property in schema.Properties)
+        if (schema.Properties != null)
         {
-            if (isRoot)
+            foreach (var property in schema.Properties)
             {
-                // Root Model, skip these fields as we are adding them above
-                if (property.Key == "apiVersion" || property.Key == "kind" || property.Key == "metadata")
+                if (isRoot)
                 {
-                    continue;
+                    // Root Model, skip these fields as we are adding them above
+                    if (property.Key == "apiVersion" || property.Key == "kind" || property.Key == "metadata")
+                    {
+                        continue;
+                    }
                 }
+
+                var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
+
+                // Add ISpec base class
+                if (isRoot && property.Key == "spec")
+                {
+                    @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"ISpec<{type}>")));
+                }
+
+                // Add IStatus base class
+                if (isRoot && property.Key == "status")
+                {
+                    @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
+                }
+
+                var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required?.Contains(property.Key) == true);
+
+                //Check if class already contains a property with the same name
+                var count = 1;
+                while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
+                {
+                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required?.Contains(property.Key) == true);
+                }
+
+                @class = @class.AddMembers(newProperty);
             }
-
-            var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
-
-            // Add ISpec base class
-            if (isRoot && property.Key == "spec")
-            {
-                @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"ISpec<{type}>")));
-            }
-
-            // Add IStatus base class
-            if (isRoot && property.Key == "status")
-            {
-                @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
-            }
-
-            var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required.Contains(property.Key));
-
-            //Check if class already contains a property with the same name
-            var count = 1;
-            while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
-            {
-                newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required.Contains(property.Key));
-            }
-
-            @class = @class.AddMembers(newProperty);
         }
-
         types.Add(@class);
 
         if (isRoot)
@@ -339,20 +343,20 @@ public class Generator : IGenerator
         return [.. types];
     }
 
-    private string GetOrGenerateType(OpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
+    private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
     {
-        if (schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var value2) && value2 is OpenApiBoolean boolean2 && boolean2.Value)
+        if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var value2) && value2 is JsonNodeExtension value3 && value3.Node.GetValueKind() == JsonValueKind.True)
         {
             return nameof(JsonNode);
         }
-        else if (schema.Extensions.TryGetValue(KubeIntOrString, out var value) && value is OpenApiBoolean boolean && boolean.Value)
+        else if (schema.Extensions != null && schema.Extensions.TryGetValue(KubeIntOrString, out var value) && value is JsonNodeExtension value1 && value1.Node.GetValueKind() == JsonValueKind.True)
         {
             return nameof(IntstrIntOrString);
         }
 
         switch (schema.Type)
         {
-            case "object":
+            case JsonSchemaType.Object:
                 if (schema.AdditionalProperties != null)
                 {
                     return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
@@ -371,7 +375,7 @@ public class Generator : IGenerator
 
                     return nestedClasses[nestedClasses.Length - 1].Identifier.Text;
                 }
-            case "string":
+            case JsonSchemaType.String:
 
                 if (EnumSupport && schema.Enum.Any())
                 {
@@ -379,16 +383,16 @@ public class Generator : IGenerator
                 }
 
                 return "string";
-            case "number":
+            case JsonSchemaType.Number:
                 return "double";
-            case "boolean":
+            case JsonSchemaType.Boolean:
                 return "bool";
-            case "integer":
+            case JsonSchemaType.Integer:
                 if (schema.Format == "int64")
                     return "long";
                 else
                     return "int";
-            case "array":
+            case JsonSchemaType.Array:
 
                 if (EnumSupport && schema.Enum.Any())
                 {
@@ -401,7 +405,7 @@ public class Generator : IGenerator
         throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
     }
 
-    private static string GenerateEnum(OpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
+    private static string GenerateEnum(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
         var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
@@ -426,9 +430,10 @@ public class Generator : IGenerator
         {
             var option = schema.Enum[i];
 
-            if (option is OpenApiString openApiString)
+            if (option.GetValueKind() == JsonValueKind.String)
             {
-                var identifier = CleanIdentifier(openApiString.Value);
+                var value = option.GetValue<string>();
+                var identifier = CleanIdentifier(value);
 
                 if (string.IsNullOrEmpty(identifier))
                 {
@@ -439,14 +444,14 @@ public class Generator : IGenerator
                 var c = 1;
                 while (enumDeclaration.Members.Any(x => x.Identifier.Text == identifier))
                 {
-                    identifier = CleanIdentifier(openApiString.Value) + c++;
+                    identifier = CleanIdentifier(value) + c++;
                 }
 
                 enumDeclaration = enumDeclaration.AddMembers(
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(openApiString.Value!.Replace("\n", " ").Replace("\r", " "))}</summary>"),
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(value.Replace("\n", " ").Replace("\r", " "))}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
@@ -460,7 +465,7 @@ public class Generator : IGenerator
                                                             SyntaxFactory.AttributeArgument(
                                                                 SyntaxFactory.NameEquals("Value"),
                                                                 null,
-                                                                SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(openApiString.Value))
+                                                                SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(value))
                                                             )
                                                         )
                                                     )
@@ -470,7 +475,7 @@ public class Generator : IGenerator
                                                     SyntaxFactory.AttributeArgumentList(
                                                         SyntaxFactory.SingletonSeparatedList(
                                                             SyntaxFactory.AttributeArgument(
-                                                                SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(openApiString.Value))
+                                                                SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(value))
                                                             )
                                                         )
                                                     )
