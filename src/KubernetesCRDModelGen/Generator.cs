@@ -124,12 +124,17 @@ public class Generator : IGenerator
                                 SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
                                 SyntaxFactory.CarriageReturnLineFeed));
 
-        var @classList = SyntaxFactory.ClassDeclaration(CleanIdentifier(version + " " + $"{name}List"))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
-                        .AddAttributeLists(SyntaxFactory.AttributeList()
-                            .AddAttributes(
-                            [
-                                SyntaxFactory.Attribute(
+        if (isRoot)
+        {
+            // Base Classes
+            @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ObjectMeta>")));
+
+            var @classList = SyntaxFactory.ClassDeclaration(CleanIdentifier(version + listKind))
+                .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
+                .AddAttributeLists(SyntaxFactory.AttributeList()
+                    .AddAttributes(
+                    [
+                        SyntaxFactory.Attribute(
                                     SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
                                     .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
                                     {
@@ -137,18 +142,17 @@ public class Generator : IGenerator
                                         SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
                                     }))),
                                 SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
-                            ])
-                        )
-                        .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed));
+                    ])
+                )
+                .WithLeadingTrivia(
+                    SyntaxFactory.TriviaList(
+                        SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
+                        SyntaxFactory.CarriageReturnLineFeed));
 
-        if (isRoot)
-        {
-            // Base Classes
-            @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ObjectMeta>")));
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
+
+            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{CleanIdentifier(version + " " + name)}>")));
+            types.Add(@classList);
 
             // Create an attribute syntax for the KubernetesEntity attribute
             var kubernetesEntityAttribute = SyntaxFactory.Attribute(
@@ -333,12 +337,6 @@ public class Generator : IGenerator
             }
         }
         types.Add(@class);
-
-        if (isRoot)
-        {
-            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{CleanIdentifier(version + " " + name)}>")));
-            types.Add(@classList);
-        }
 
         return [.. types];
     }
