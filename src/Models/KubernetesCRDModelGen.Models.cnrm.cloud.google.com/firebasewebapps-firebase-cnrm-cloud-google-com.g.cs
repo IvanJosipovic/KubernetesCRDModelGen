@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseWebAppMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseWebAppSpec
+public partial class V1alpha1FirebaseWebAppSpec
 {
     /// <summary>The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with the WebApp. If apiKeyId is not set during creation, then Firebase automatically associates an apiKeyId with the WebApp. This auto-associated key may be an existing valid key or, if no valid key exists, a new one will be provisioned.</summary>
     [JsonPropertyName("apiKeyId")]
@@ -41,7 +35,7 @@ public partial class FirebaseWebAppSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseWebAppStatusConditions
+public partial class V1alpha1FirebaseWebAppStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -66,7 +60,7 @@ public partial class FirebaseWebAppStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseWebAppStatus
+public partial class V1alpha1FirebaseWebAppStatus
 {
     /// <summary>The globally unique, Firebase-assigned identifier of the App. This identifier should be treated as an opaque token, as the data format is not specified.</summary>
     [JsonPropertyName("appId")]
@@ -78,7 +72,7 @@ public partial class FirebaseWebAppStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<FirebaseWebAppStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1FirebaseWebAppStatusConditions>? Conditions { get; set; }
 
     /// <summary>The fully qualified resource name of the App, for example: projects/projectId/webApps/appId.</summary>
     [JsonPropertyName("name")]
@@ -91,25 +85,56 @@ public partial class FirebaseWebAppStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseWebApp
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FirebaseWebApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseWebAppSpec>, IStatus<V1alpha1FirebaseWebAppStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FirebaseWebApp";
+    public const string KubeGroup = "firebase.cnrm.cloud.google.com";
+    public const string KubePluralName = "firebasewebapps";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public FirebaseWebAppMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public FirebaseWebAppSpec Spec { get; set; }
+    public V1alpha1FirebaseWebAppSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public FirebaseWebAppStatus? Status { get; set; }
+    public V1alpha1FirebaseWebAppStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FirebaseWebAppList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1FirebaseWebApp>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FirebaseWebAppList";
+    public const string KubeGroup = "firebase.cnrm.cloud.google.com";
+    public const string KubePluralName = "firebasewebapps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1FirebaseWebApp> Items { get; set; }
 }

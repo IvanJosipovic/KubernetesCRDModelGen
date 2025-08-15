@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeExternalVPNGatewayMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeExternalVPNGatewaySpecInterface
+public partial class V1beta1ComputeExternalVPNGatewaySpecInterface
 {
     /// <summary>Immutable. The numeric ID for this interface. Allowed values are based on the redundancy type of this external VPN gateway * '0 - SINGLE_IP_INTERNALLY_REDUNDANT' * '0, 1 - TWO_IPS_REDUNDANCY' * '0, 1, 2, 3 - FOUR_IPS_REDUNDANCY'.</summary>
     [JsonPropertyName("id")]
@@ -29,7 +23,7 @@ public partial class ComputeExternalVPNGatewaySpecInterface
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeExternalVPNGatewaySpec
+public partial class V1beta1ComputeExternalVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -37,7 +31,7 @@ public partial class ComputeExternalVPNGatewaySpec
 
     /// <summary>Immutable. A list of interfaces on this external VPN gateway.</summary>
     [JsonPropertyName("interface")]
-    public IList<ComputeExternalVPNGatewaySpecInterface>? Interface { get; set; }
+    public IList<V1beta1ComputeExternalVPNGatewaySpecInterface>? Interface { get; set; }
 
     /// <summary>Immutable. Indicates the redundancy type of this external VPN gateway Possible values: ["FOUR_IPS_REDUNDANCY", "SINGLE_IP_INTERNALLY_REDUNDANT", "TWO_IPS_REDUNDANCY"].</summary>
     [JsonPropertyName("redundancyType")]
@@ -50,7 +44,7 @@ public partial class ComputeExternalVPNGatewaySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeExternalVPNGatewayStatusConditions
+public partial class V1beta1ComputeExternalVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -75,11 +69,11 @@ public partial class ComputeExternalVPNGatewayStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeExternalVPNGatewayStatus
+public partial class V1beta1ComputeExternalVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeExternalVPNGatewayStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeExternalVPNGatewayStatusConditions>? Conditions { get; set; }
 
     /// <summary>The fingerprint used for optimistic locking of this resource.  Used internally during updates.</summary>
     [JsonPropertyName("labelFingerprint")]
@@ -96,25 +90,56 @@ public partial class ComputeExternalVPNGatewayStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeExternalVPNGateway
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeExternalVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeExternalVPNGatewaySpec>, IStatus<V1beta1ComputeExternalVPNGatewayStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeExternalVPNGateway";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeexternalvpngateways";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeExternalVPNGatewayMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeExternalVPNGatewaySpec? Spec { get; set; }
+    public V1beta1ComputeExternalVPNGatewaySpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeExternalVPNGatewayStatus? Status { get; set; }
+    public V1beta1ComputeExternalVPNGatewayStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeExternalVPNGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeExternalVPNGateway>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeExternalVPNGatewayList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeexternalvpngateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeExternalVPNGateway> Items { get; set; }
 }

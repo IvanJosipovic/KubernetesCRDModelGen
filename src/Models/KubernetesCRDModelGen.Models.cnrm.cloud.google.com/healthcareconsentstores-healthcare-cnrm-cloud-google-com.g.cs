@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareConsentStoreMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareConsentStoreSpec
+public partial class V1alpha1HealthcareConsentStoreSpec
 {
     /// <summary>Immutable. Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.</summary>
     [JsonPropertyName("dataset")]
@@ -37,7 +31,7 @@ public partial class HealthcareConsentStoreSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareConsentStoreStatusConditions
+public partial class V1alpha1HealthcareConsentStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -62,11 +56,11 @@ public partial class HealthcareConsentStoreStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareConsentStoreStatus
+public partial class V1alpha1HealthcareConsentStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<HealthcareConsentStoreStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1HealthcareConsentStoreStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -75,25 +69,56 @@ public partial class HealthcareConsentStoreStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareConsentStore
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1HealthcareConsentStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1HealthcareConsentStoreSpec>, IStatus<V1alpha1HealthcareConsentStoreStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "HealthcareConsentStore";
+    public const string KubeGroup = "healthcare.cnrm.cloud.google.com";
+    public const string KubePluralName = "healthcareconsentstores";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public HealthcareConsentStoreMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public HealthcareConsentStoreSpec Spec { get; set; }
+    public V1alpha1HealthcareConsentStoreSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public HealthcareConsentStoreStatus? Status { get; set; }
+    public V1alpha1HealthcareConsentStoreStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1HealthcareConsentStoreList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1HealthcareConsentStore>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "HealthcareConsentStoreList";
+    public const string KubeGroup = "healthcare.cnrm.cloud.google.com";
+    public const string KubePluralName = "healthcareconsentstores";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1HealthcareConsentStore> Items { get; set; }
 }

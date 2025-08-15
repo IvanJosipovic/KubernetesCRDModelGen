@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionSSLPolicyMetadata
-{
-}
-
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionSSLPolicySpecProjectRef
+public partial class V1alpha1ComputeRegionSSLPolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeRegionSSLPolicySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionSSLPolicySpec
+public partial class V1alpha1ComputeRegionSSLPolicySpec
 {
     /// <summary>A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.  See the [official documentation](https://cloud.google.com/compute/docs/load-balancing/ssl-policies#profilefeaturesupport) for which ciphers are available to use. **Note**: this argument *must* be present when using the 'CUSTOM' profile. This argument *must not* be present when using any other profile.</summary>
     [JsonPropertyName("customFeatures")]
@@ -53,7 +47,7 @@ public partial class ComputeRegionSSLPolicySpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeRegionSSLPolicySpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeRegionSSLPolicySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region where the regional SSL policy resides.</summary>
     [JsonPropertyName("region")]
@@ -66,7 +60,7 @@ public partial class ComputeRegionSSLPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionSSLPolicyStatusConditions
+public partial class V1alpha1ComputeRegionSSLPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -91,11 +85,11 @@ public partial class ComputeRegionSSLPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionSSLPolicyStatus
+public partial class V1alpha1ComputeRegionSSLPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeRegionSSLPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeRegionSSLPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -120,25 +114,56 @@ public partial class ComputeRegionSSLPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionSSLPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeRegionSSLPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeRegionSSLPolicySpec>, IStatus<V1alpha1ComputeRegionSSLPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeRegionSSLPolicy";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeregionsslpolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeRegionSSLPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeRegionSSLPolicySpec Spec { get; set; }
+    public V1alpha1ComputeRegionSSLPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeRegionSSLPolicyStatus? Status { get; set; }
+    public V1alpha1ComputeRegionSSLPolicyStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeRegionSSLPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeRegionSSLPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeRegionSSLPolicyList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeregionsslpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeRegionSSLPolicy> Items { get; set; }
 }

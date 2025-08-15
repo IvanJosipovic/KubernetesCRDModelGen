@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicenetworking.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnectionMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnectionSpecNetworkRef
+public partial class V1beta1ServiceNetworkingConnectionSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ServiceNetworkingConnectionSpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnectionSpecReservedPeeringRanges
+public partial class V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges
 {
     /// <summary>Allowed value: The `name` field of a `ComputeAddress` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,15 +44,15 @@ public partial class ServiceNetworkingConnectionSpecReservedPeeringRanges
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnectionSpec
+public partial class V1beta1ServiceNetworkingConnectionSpec
 {
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public ServiceNetworkingConnectionSpecNetworkRef NetworkRef { get; set; }
+    public V1beta1ServiceNetworkingConnectionSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("reservedPeeringRanges")]
-    public IList<ServiceNetworkingConnectionSpecReservedPeeringRanges> ReservedPeeringRanges { get; set; }
+    public IList<V1beta1ServiceNetworkingConnectionSpecReservedPeeringRanges> ReservedPeeringRanges { get; set; }
 
     /// <summary>Immutable. Provider peering service that is managing peering connectivity for a service provider organization. For Google services that support this functionality it is 'servicenetworking.googleapis.com'.</summary>
     [JsonPropertyName("service")]
@@ -67,7 +61,7 @@ public partial class ServiceNetworkingConnectionSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnectionStatusConditions
+public partial class V1beta1ServiceNetworkingConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -92,11 +86,11 @@ public partial class ServiceNetworkingConnectionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnectionStatus
+public partial class V1beta1ServiceNetworkingConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ServiceNetworkingConnectionStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ServiceNetworkingConnectionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -109,25 +103,56 @@ public partial class ServiceNetworkingConnectionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceNetworkingConnection
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceNetworkingConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceNetworkingConnectionSpec>, IStatus<V1beta1ServiceNetworkingConnectionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceNetworkingConnection";
+    public const string KubeGroup = "servicenetworking.cnrm.cloud.google.com";
+    public const string KubePluralName = "servicenetworkingconnections";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ServiceNetworkingConnectionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ServiceNetworkingConnectionSpec Spec { get; set; }
+    public V1beta1ServiceNetworkingConnectionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ServiceNetworkingConnectionStatus? Status { get; set; }
+    public V1beta1ServiceNetworkingConnectionStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceNetworkingConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceNetworkingConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceNetworkingConnectionList";
+    public const string KubeGroup = "servicenetworking.cnrm.cloud.google.com";
+    public const string KubePluralName = "servicenetworkingconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceNetworkingConnection> Items { get; set; }
 }

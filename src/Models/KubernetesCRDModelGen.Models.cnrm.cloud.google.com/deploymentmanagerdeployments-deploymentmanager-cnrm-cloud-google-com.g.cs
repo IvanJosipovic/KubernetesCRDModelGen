@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploymentmanager.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentMetadata
-{
-}
-
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentSpecProjectRef
+public partial class V1alpha1DeploymentManagerDeploymentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class DeploymentManagerDeploymentSpecProjectRef
 
 /// <summary>The root configuration file to use for this deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentSpecTargetConfig
+public partial class V1alpha1DeploymentManagerDeploymentSpecTargetConfig
 {
     /// <summary>The full YAML contents of your configuration file.</summary>
     [JsonPropertyName("content")]
@@ -42,7 +36,7 @@ public partial class DeploymentManagerDeploymentSpecTargetConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentSpecTargetImports
+public partial class V1alpha1DeploymentManagerDeploymentSpecTargetImports
 {
     /// <summary>The full contents of the template that you want to import.</summary>
     [JsonPropertyName("content")]
@@ -55,20 +49,20 @@ public partial class DeploymentManagerDeploymentSpecTargetImports
 
 /// <summary>Parameters that define your deployment, including the deployment configuration and relevant templates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentSpecTarget
+public partial class V1alpha1DeploymentManagerDeploymentSpecTarget
 {
     /// <summary>The root configuration file to use for this deployment.</summary>
     [JsonPropertyName("config")]
-    public DeploymentManagerDeploymentSpecTargetConfig Config { get; set; }
+    public V1alpha1DeploymentManagerDeploymentSpecTargetConfig Config { get; set; }
 
     /// <summary>Specifies import files for this configuration. This can be used to import templates or other files. For example, you might import a text file in order to use the file in a template.</summary>
     [JsonPropertyName("imports")]
-    public IList<DeploymentManagerDeploymentSpecTargetImports>? Imports { get; set; }
+    public IList<V1alpha1DeploymentManagerDeploymentSpecTargetImports>? Imports { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentSpec
+public partial class V1alpha1DeploymentManagerDeploymentSpec
 {
     /// <summary>Immutable. Set the policy to use for creating new resources. Only used on create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or 'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist, the deployment will fail. Note that updating this field does not actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"].</summary>
     [JsonPropertyName("createPolicy")]
@@ -88,7 +82,7 @@ public partial class DeploymentManagerDeploymentSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public DeploymentManagerDeploymentSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1DeploymentManagerDeploymentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -96,12 +90,12 @@ public partial class DeploymentManagerDeploymentSpec
 
     /// <summary>Parameters that define your deployment, including the deployment configuration and relevant templates.</summary>
     [JsonPropertyName("target")]
-    public DeploymentManagerDeploymentSpecTarget Target { get; set; }
+    public V1alpha1DeploymentManagerDeploymentSpecTarget Target { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentStatusConditions
+public partial class V1alpha1DeploymentManagerDeploymentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -126,11 +120,11 @@ public partial class DeploymentManagerDeploymentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeploymentStatus
+public partial class V1alpha1DeploymentManagerDeploymentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DeploymentManagerDeploymentStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1DeploymentManagerDeploymentStatusConditions>? Conditions { get; set; }
 
     /// <summary>Unique identifier for deployment. Output only.</summary>
     [JsonPropertyName("deploymentId")]
@@ -151,25 +145,56 @@ public partial class DeploymentManagerDeploymentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DeploymentManagerDeployment
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DeploymentManagerDeployment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DeploymentManagerDeploymentSpec>, IStatus<V1alpha1DeploymentManagerDeploymentStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DeploymentManagerDeployment";
+    public const string KubeGroup = "deploymentmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "deploymentmanagerdeployments";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DeploymentManagerDeploymentMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DeploymentManagerDeploymentSpec Spec { get; set; }
+    public V1alpha1DeploymentManagerDeploymentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DeploymentManagerDeploymentStatus? Status { get; set; }
+    public V1alpha1DeploymentManagerDeploymentStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DeploymentManagerDeploymentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DeploymentManagerDeployment>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DeploymentManagerDeploymentList";
+    public const string KubeGroup = "deploymentmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "deploymentmanagerdeployments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DeploymentManagerDeployment> Items { get; set; }
 }

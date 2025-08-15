@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.tags.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagValueMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagValueSpecParentRef
+public partial class V1beta1TagsTagValueSpecParentRef
 {
     /// <summary>Allowed value: string of the format `tagKeys/{{value}}`, where {{value}} is the `name` field of a `TagsTagKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class TagsTagValueSpecParentRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagValueSpec
+public partial class V1beta1TagsTagValueSpec
 {
     /// <summary>User-assigned description of the TagValue. Must not exceed 256 characters.</summary>
     [JsonPropertyName("description")]
@@ -41,7 +35,7 @@ public partial class TagsTagValueSpec
 
     /// <summary></summary>
     [JsonPropertyName("parentRef")]
-    public TagsTagValueSpecParentRef ParentRef { get; set; }
+    public V1beta1TagsTagValueSpecParentRef ParentRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -54,7 +48,7 @@ public partial class TagsTagValueSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagValueStatusConditions
+public partial class V1beta1TagsTagValueStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -79,11 +73,11 @@ public partial class TagsTagValueStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagValueStatus
+public partial class V1beta1TagsTagValueStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<TagsTagValueStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1TagsTagValueStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Creation time.  A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
     [JsonPropertyName("createTime")]
@@ -108,25 +102,56 @@ public partial class TagsTagValueStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagValue
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagsTagValue : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagsTagValueSpec>, IStatus<V1beta1TagsTagValueStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagsTagValue";
+    public const string KubeGroup = "tags.cnrm.cloud.google.com";
+    public const string KubePluralName = "tagstagvalues";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public TagsTagValueMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public TagsTagValueSpec Spec { get; set; }
+    public V1beta1TagsTagValueSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public TagsTagValueStatus? Status { get; set; }
+    public V1beta1TagsTagValueStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagsTagValueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagsTagValue>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagsTagValueList";
+    public const string KubeGroup = "tags.cnrm.cloud.google.com";
+    public const string KubePluralName = "tagstagvalues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TagsTagValue> Items { get; set; }
 }

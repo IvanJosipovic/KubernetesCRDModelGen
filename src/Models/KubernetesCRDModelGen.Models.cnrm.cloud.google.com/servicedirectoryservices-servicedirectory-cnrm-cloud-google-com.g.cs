@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryServiceMetadata
-{
-}
-
 /// <summary>The ServiceDirectoryNamespace that this service belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryServiceSpecNamespaceRef
+public partial class V1beta1ServiceDirectoryServiceSpecNamespaceRef
 {
     /// <summary>Allowed value: The `name` field of a `ServiceDirectoryNamespace` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,11 +27,11 @@ public partial class ServiceDirectoryServiceSpecNamespaceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryServiceSpec
+public partial class V1beta1ServiceDirectoryServiceSpec
 {
     /// <summary>The ServiceDirectoryNamespace that this service belongs to.</summary>
     [JsonPropertyName("namespaceRef")]
-    public ServiceDirectoryServiceSpecNamespaceRef NamespaceRef { get; set; }
+    public V1beta1ServiceDirectoryServiceSpecNamespaceRef NamespaceRef { get; set; }
 
     /// <summary>Immutable. Optional. The serviceId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -46,7 +40,7 @@ public partial class ServiceDirectoryServiceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryServiceStatusConditions
+public partial class V1beta1ServiceDirectoryServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -71,11 +65,11 @@ public partial class ServiceDirectoryServiceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryServiceStatus
+public partial class V1beta1ServiceDirectoryServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ServiceDirectoryServiceStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ServiceDirectoryServiceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name for the service in the format 'projects/*/locations/*/namespaces/*/services/*'.</summary>
     [JsonPropertyName("name")]
@@ -88,25 +82,56 @@ public partial class ServiceDirectoryServiceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryService
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceDirectoryService : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryServiceSpec>, IStatus<V1beta1ServiceDirectoryServiceStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceDirectoryService";
+    public const string KubeGroup = "servicedirectory.cnrm.cloud.google.com";
+    public const string KubePluralName = "servicedirectoryservices";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ServiceDirectoryServiceMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ServiceDirectoryServiceSpec Spec { get; set; }
+    public V1beta1ServiceDirectoryServiceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ServiceDirectoryServiceStatus? Status { get; set; }
+    public V1beta1ServiceDirectoryServiceStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceDirectoryServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceDirectoryService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceDirectoryServiceList";
+    public const string KubeGroup = "servicedirectory.cnrm.cloud.google.com";
+    public const string KubePluralName = "servicedirectoryservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceDirectoryService> Items { get; set; }
 }

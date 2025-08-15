@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteMetadata
-{
-}
-
 /// <summary>The network that this route applies to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteSpecNetworkRef
+public partial class V1beta1ComputeRouteSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class ComputeRouteSpecNetworkRef
 
 /// <summary>A forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.  Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteSpecNextHopILBRef
+public partial class V1beta1ComputeRouteSpecNextHopILBRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class ComputeRouteSpecNextHopILBRef
 
 /// <summary>Instance that should handle matching packets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteSpecNextHopInstanceRef
+public partial class V1beta1ComputeRouteSpecNextHopInstanceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -67,7 +61,7 @@ public partial class ComputeRouteSpecNextHopInstanceRef
 
 /// <summary>The ComputeVPNTunnel that should handle matching packets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteSpecNextHopVPNTunnelRef
+public partial class V1beta1ComputeRouteSpecNextHopVPNTunnelRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeVPNTunnel` resource.</summary>
     [JsonPropertyName("external")]
@@ -84,7 +78,7 @@ public partial class ComputeRouteSpecNextHopVPNTunnelRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteSpec
+public partial class V1beta1ComputeRouteSpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -96,7 +90,7 @@ public partial class ComputeRouteSpec
 
     /// <summary>The network that this route applies to.</summary>
     [JsonPropertyName("networkRef")]
-    public ComputeRouteSpecNetworkRef NetworkRef { get; set; }
+    public V1beta1ComputeRouteSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>Immutable. URL to a gateway that should handle matching packets. Currently, you can only specify the internet gateway, using a full or partial valid URL: * 'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway' * 'projects/project/global/gateways/default-internet-gateway' * 'global/gateways/default-internet-gateway' * The string 'default-internet-gateway'.</summary>
     [JsonPropertyName("nextHopGateway")]
@@ -104,11 +98,11 @@ public partial class ComputeRouteSpec
 
     /// <summary>A forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets.  Note that this can only be used when the destinationRange is a public (non-RFC 1918) IP CIDR range.</summary>
     [JsonPropertyName("nextHopILBRef")]
-    public ComputeRouteSpecNextHopILBRef? NextHopILBRef { get; set; }
+    public V1beta1ComputeRouteSpecNextHopILBRef? NextHopILBRef { get; set; }
 
     /// <summary>Instance that should handle matching packets.</summary>
     [JsonPropertyName("nextHopInstanceRef")]
-    public ComputeRouteSpecNextHopInstanceRef? NextHopInstanceRef { get; set; }
+    public V1beta1ComputeRouteSpecNextHopInstanceRef? NextHopInstanceRef { get; set; }
 
     /// <summary>Immutable. Network IP address of an instance that should handle matching packets.</summary>
     [JsonPropertyName("nextHopIp")]
@@ -116,7 +110,7 @@ public partial class ComputeRouteSpec
 
     /// <summary>The ComputeVPNTunnel that should handle matching packets</summary>
     [JsonPropertyName("nextHopVPNTunnelRef")]
-    public ComputeRouteSpecNextHopVPNTunnelRef? NextHopVPNTunnelRef { get; set; }
+    public V1beta1ComputeRouteSpecNextHopVPNTunnelRef? NextHopVPNTunnelRef { get; set; }
 
     /// <summary>Immutable. The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length.  In the case of two routes with equal prefix length, the one with the lowest-numbered priority value wins.  Default value is 1000. Valid range is 0 through 65535.</summary>
     [JsonPropertyName("priority")]
@@ -133,7 +127,7 @@ public partial class ComputeRouteSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteStatusConditions
+public partial class V1beta1ComputeRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -158,11 +152,11 @@ public partial class ComputeRouteStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRouteStatus
+public partial class V1beta1ComputeRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeRouteStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeRouteStatusConditions>? Conditions { get; set; }
 
     /// <summary>URL to a Network that should handle matching packets.</summary>
     [JsonPropertyName("nextHopNetwork")]
@@ -179,25 +173,56 @@ public partial class ComputeRouteStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRoute
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeRouteSpec>, IStatus<V1beta1ComputeRouteStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeRoute";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeroutes";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeRouteMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeRouteSpec Spec { get; set; }
+    public V1beta1ComputeRouteSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeRouteStatus? Status { get; set; }
+    public V1beta1ComputeRouteStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeRouteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeRoute>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeRouteList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeroutes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeRoute> Items { get; set; }
 }

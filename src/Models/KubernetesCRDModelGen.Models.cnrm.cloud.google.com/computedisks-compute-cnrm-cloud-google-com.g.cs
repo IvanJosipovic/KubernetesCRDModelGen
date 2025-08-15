@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskMetadata
-{
-}
-
 /// <summary>Immutable. Primary disk for asynchronous disk replication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecAsyncPrimaryDiskDiskRef
+public partial class V1beta1ComputeDiskSpecAsyncPrimaryDiskDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,16 +27,16 @@ public partial class ComputeDiskSpecAsyncPrimaryDiskDiskRef
 
 /// <summary>Immutable. A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecAsyncPrimaryDisk
+public partial class V1beta1ComputeDiskSpecAsyncPrimaryDisk
 {
     /// <summary>Immutable. Primary disk for asynchronous disk replication.</summary>
     [JsonPropertyName("diskRef")]
-    public ComputeDiskSpecAsyncPrimaryDiskDiskRef DiskRef { get; set; }
+    public V1beta1ComputeDiskSpecAsyncPrimaryDiskDiskRef DiskRef { get; set; }
 }
 
 /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyKmsKeyRef
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -59,7 +53,7 @@ public partial class ComputeDiskSpecDiskEncryptionKeyKmsKeyRef
 
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccountRef
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -76,7 +70,7 @@ public partial class ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccountRef
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -89,16 +83,16 @@ public partial class ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyRawKey
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRawKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -106,12 +100,12 @@ public partial class ComputeDiskSpecDiskEncryptionKeyRawKey
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom? ValueFrom { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyRawKeyValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSecretKeyRef
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -124,16 +118,16 @@ public partial class ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSec
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFrom
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -141,28 +135,28 @@ public partial class ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFrom? ValueFrom { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKeyValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Immutable. Encrypts the disk using a customer-supplied encryption key.  After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual machine).  Customer-supplied encryption keys do not protect access to metadata of the disk.  If you do not provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecDiskEncryptionKey
+public partial class V1beta1ComputeDiskSpecDiskEncryptionKey
 {
     /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public ComputeDiskSpecDiskEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccountRef")]
-    public ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 
     /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
     [JsonPropertyName("rawKey")]
-    public ComputeDiskSpecDiskEncryptionKeyRawKey? RawKey { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyRawKey? RawKey { get; set; }
 
     /// <summary>Immutable. Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit customer-supplied encryption key to either encrypt or decrypt this resource. You can provide either the rawKey or the rsaEncryptedKey.</summary>
     [JsonPropertyName("rsaEncryptedKey")]
-    public ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey? RsaEncryptedKey { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKeyRsaEncryptedKey? RsaEncryptedKey { get; set; }
 
     /// <summary>The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied encryption key that protects this resource.</summary>
     [JsonPropertyName("sha256")]
@@ -171,7 +165,7 @@ public partial class ComputeDiskSpecDiskEncryptionKey
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecGuestOsFeatures
+public partial class V1beta1ComputeDiskSpecGuestOsFeatures
 {
     /// <summary>Immutable. The type of supported feature. Read [Enabling guest operating system features](https://cloud.google.com/compute/docs/images/create-delete-deprecate-private-images#guest-os-features) to see a list of available options. Possible values: ["MULTI_IP_SUBNET", "SECURE_BOOT", "SEV_CAPABLE", "UEFI_COMPATIBLE", "VIRTIO_SCSI_MULTIQUEUE", "WINDOWS", "GVNIC", "SEV_LIVE_MIGRATABLE", "SEV_SNP_CAPABLE", "SUSPEND_RESUME_COMPATIBLE", "TDX_CAPABLE"].</summary>
     [JsonPropertyName("type")]
@@ -180,7 +174,7 @@ public partial class ComputeDiskSpecGuestOsFeatures
 
 /// <summary>The image from which to initialize this disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecImageRef
+public partial class V1beta1ComputeDiskSpecImageRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeImage` resource.</summary>
     [JsonPropertyName("external")]
@@ -197,7 +191,7 @@ public partial class ComputeDiskSpecImageRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecProjectRef
+public partial class V1beta1ComputeDiskSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -214,7 +208,7 @@ public partial class ComputeDiskSpecProjectRef
 
 /// <summary>Resource policies applied to this disk for automatic snapshot creations. This field only applies for zonal compute disk resources.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecResourcePolicies
+public partial class V1beta1ComputeDiskSpecResourcePolicies
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeResourcePolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -231,7 +225,7 @@ public partial class ComputeDiskSpecResourcePolicies
 
 /// <summary>The source snapshot used to create this disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSnapshotRef
+public partial class V1beta1ComputeDiskSpecSnapshotRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSnapshot` resource.</summary>
     [JsonPropertyName("external")]
@@ -248,7 +242,7 @@ public partial class ComputeDiskSpecSnapshotRef
 
 /// <summary>The source disk used to create this disk.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceDiskRef
+public partial class V1beta1ComputeDiskSpecSourceDiskRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeDisk` resource.</summary>
     [JsonPropertyName("external")]
@@ -265,7 +259,7 @@ public partial class ComputeDiskSpecSourceDiskRef
 
 /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef
+public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -282,7 +276,7 @@ public partial class ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef
 
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceImageEncryptionKeyKmsKeyServiceAccountRef
+public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -299,15 +293,15 @@ public partial class ComputeDiskSpecSourceImageEncryptionKeyKmsKeyServiceAccount
 
 /// <summary>Immutable. The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceImageEncryptionKey
+public partial class V1beta1ComputeDiskSpecSourceImageEncryptionKey
 {
     /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
+    public V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccountRef")]
-    public ComputeDiskSpecSourceImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
+    public V1beta1ComputeDiskSpecSourceImageEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 
     /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
     [JsonPropertyName("rawKey")]
@@ -320,7 +314,7 @@ public partial class ComputeDiskSpecSourceImageEncryptionKey
 
 /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef
+public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -337,7 +331,7 @@ public partial class ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef
 
 /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef
+public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -354,15 +348,15 @@ public partial class ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServiceAcco
 
 /// <summary>Immutable. The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpecSourceSnapshotEncryptionKey
+public partial class V1beta1ComputeDiskSpecSourceSnapshotEncryptionKey
 {
     /// <summary>The encryption key used to encrypt the disk. Your project's Compute Engine System service account ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com') must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this feature. See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
+    public V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>The service account used for the encryption request for the given KMS key. If absent, the Compute Engine Service Agent service account is used.</summary>
     [JsonPropertyName("kmsKeyServiceAccountRef")]
-    public ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
+    public V1beta1ComputeDiskSpecSourceSnapshotEncryptionKeyKmsKeyServiceAccountRef? KmsKeyServiceAccountRef { get; set; }
 
     /// <summary>Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in RFC 4648 base64 to either encrypt or decrypt this resource.</summary>
     [JsonPropertyName("rawKey")]
@@ -375,11 +369,11 @@ public partial class ComputeDiskSpecSourceSnapshotEncryptionKey
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskSpec
+public partial class V1beta1ComputeDiskSpec
 {
     /// <summary>Immutable. A nested object resource.</summary>
     [JsonPropertyName("asyncPrimaryDisk")]
-    public ComputeDiskSpecAsyncPrimaryDisk? AsyncPrimaryDisk { get; set; }
+    public V1beta1ComputeDiskSpecAsyncPrimaryDisk? AsyncPrimaryDisk { get; set; }
 
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -387,7 +381,7 @@ public partial class ComputeDiskSpec
 
     /// <summary>Immutable. Encrypts the disk using a customer-supplied encryption key.  After you encrypt a disk with a customer-supplied key, you must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk to a virtual machine).  Customer-supplied encryption keys do not protect access to metadata of the disk.  If you do not provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later.</summary>
     [JsonPropertyName("diskEncryptionKey")]
-    public ComputeDiskSpecDiskEncryptionKey? DiskEncryptionKey { get; set; }
+    public V1beta1ComputeDiskSpecDiskEncryptionKey? DiskEncryptionKey { get; set; }
 
     /// <summary>Immutable. Whether this disk is using confidential compute mode. Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.</summary>
     [JsonPropertyName("enableConfidentialCompute")]
@@ -395,11 +389,11 @@ public partial class ComputeDiskSpec
 
     /// <summary>Immutable. A list of features to enable on the guest operating system. Applicable only for bootable disks.</summary>
     [JsonPropertyName("guestOsFeatures")]
-    public IList<ComputeDiskSpecGuestOsFeatures>? GuestOsFeatures { get; set; }
+    public IList<V1beta1ComputeDiskSpecGuestOsFeatures>? GuestOsFeatures { get; set; }
 
     /// <summary>The image from which to initialize this disk.</summary>
     [JsonPropertyName("imageRef")]
-    public ComputeDiskSpecImageRef? ImageRef { get; set; }
+    public V1beta1ComputeDiskSpecImageRef? ImageRef { get; set; }
 
     /// <summary>DEPRECATED. `interface` is deprecated. This field is no longer used and can be safely removed from your configurations; disk interfaces are automatically determined on attachment. Immutable. Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI.</summary>
     [JsonPropertyName("interface")]
@@ -423,7 +417,7 @@ public partial class ComputeDiskSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeDiskSpecProjectRef? ProjectRef { get; set; }
+    public V1beta1ComputeDiskSpecProjectRef? ProjectRef { get; set; }
 
     /// <summary>Indicates how many IOPS must be provisioned for the disk. Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk allows for an update of IOPS every 4 hours. To update your hyperdisk more frequently, you'll need to manually delete and recreate it.</summary>
     [JsonPropertyName("provisionedIops")]
@@ -443,7 +437,7 @@ public partial class ComputeDiskSpec
 
     /// <summary></summary>
     [JsonPropertyName("resourcePolicies")]
-    public IList<ComputeDiskSpecResourcePolicies>? ResourcePolicies { get; set; }
+    public IList<V1beta1ComputeDiskSpecResourcePolicies>? ResourcePolicies { get; set; }
 
     /// <summary>Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the 'image' or 'snapshot' parameter, or specify it alone to create an empty persistent disk.  If you specify this field along with 'image' or 'snapshot', the value must not be less than the size of the image or the size of the snapshot.  Upsizing the disk is mutable, but downsizing the disk requires re-creating the resource.</summary>
     [JsonPropertyName("size")]
@@ -451,19 +445,19 @@ public partial class ComputeDiskSpec
 
     /// <summary>The source snapshot used to create this disk.</summary>
     [JsonPropertyName("snapshotRef")]
-    public ComputeDiskSpecSnapshotRef? SnapshotRef { get; set; }
+    public V1beta1ComputeDiskSpecSnapshotRef? SnapshotRef { get; set; }
 
     /// <summary>The source disk used to create this disk.</summary>
     [JsonPropertyName("sourceDiskRef")]
-    public ComputeDiskSpecSourceDiskRef? SourceDiskRef { get; set; }
+    public V1beta1ComputeDiskSpecSourceDiskRef? SourceDiskRef { get; set; }
 
     /// <summary>Immutable. The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.</summary>
     [JsonPropertyName("sourceImageEncryptionKey")]
-    public ComputeDiskSpecSourceImageEncryptionKey? SourceImageEncryptionKey { get; set; }
+    public V1beta1ComputeDiskSpecSourceImageEncryptionKey? SourceImageEncryptionKey { get; set; }
 
     /// <summary>Immutable. The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.</summary>
     [JsonPropertyName("sourceSnapshotEncryptionKey")]
-    public ComputeDiskSpecSourceSnapshotEncryptionKey? SourceSnapshotEncryptionKey { get; set; }
+    public V1beta1ComputeDiskSpecSourceSnapshotEncryptionKey? SourceSnapshotEncryptionKey { get; set; }
 
     /// <summary>Immutable. URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.</summary>
     [JsonPropertyName("type")]
@@ -472,7 +466,7 @@ public partial class ComputeDiskSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskStatusConditions
+public partial class V1beta1ComputeDiskStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -497,11 +491,11 @@ public partial class ComputeDiskStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskStatus
+public partial class V1beta1ComputeDiskStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeDiskStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeDiskStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -546,25 +540,56 @@ public partial class ComputeDiskStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDisk
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeDisk : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeDiskSpec>, IStatus<V1beta1ComputeDiskStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeDisk";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computedisks";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeDiskMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeDiskSpec Spec { get; set; }
+    public V1beta1ComputeDiskSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeDiskStatus? Status { get; set; }
+    public V1beta1ComputeDiskStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeDiskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeDisk>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeDiskList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computedisks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeDisk> Items { get; set; }
 }

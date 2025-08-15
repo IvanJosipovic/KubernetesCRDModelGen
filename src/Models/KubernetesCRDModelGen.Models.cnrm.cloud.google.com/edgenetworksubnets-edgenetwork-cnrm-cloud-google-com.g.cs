@@ -10,13 +10,7 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.edgenetwork.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnetMetadata
-{
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnetSpecNetworkRef
+public partial class V1beta1EdgeNetworkSubnetSpecNetworkRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeNetworkNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class EdgeNetworkSubnetSpecNetworkRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnetSpecProjectRef
+public partial class V1beta1EdgeNetworkSubnetSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class EdgeNetworkSubnetSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnetSpec
+public partial class V1beta1EdgeNetworkSubnetSpec
 {
     /// <summary>Immutable. A free-text description of the resource. Max length 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -70,11 +64,11 @@ public partial class EdgeNetworkSubnetSpec
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public EdgeNetworkSubnetSpecNetworkRef NetworkRef { get; set; }
+    public V1beta1EdgeNetworkSubnetSpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public EdgeNetworkSubnetSpecProjectRef ProjectRef { get; set; }
+    public V1beta1EdgeNetworkSubnetSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The subnetId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -91,7 +85,7 @@ public partial class EdgeNetworkSubnetSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnetStatusConditions
+public partial class V1beta1EdgeNetworkSubnetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -116,11 +110,11 @@ public partial class EdgeNetworkSubnetStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnetStatus
+public partial class V1beta1EdgeNetworkSubnetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<EdgeNetworkSubnetStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1EdgeNetworkSubnetStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the subnet was created. A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: '2014-10-02T15:01:23Z' and '2014-10-02T15:01:23.045123456Z'.</summary>
     [JsonPropertyName("createTime")]
@@ -145,25 +139,56 @@ public partial class EdgeNetworkSubnetStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeNetworkSubnet
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EdgeNetworkSubnet : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeNetworkSubnetSpec>, IStatus<V1beta1EdgeNetworkSubnetStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EdgeNetworkSubnet";
+    public const string KubeGroup = "edgenetwork.cnrm.cloud.google.com";
+    public const string KubePluralName = "edgenetworksubnets";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public EdgeNetworkSubnetMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public EdgeNetworkSubnetSpec Spec { get; set; }
+    public V1beta1EdgeNetworkSubnetSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public EdgeNetworkSubnetStatus? Status { get; set; }
+    public V1beta1EdgeNetworkSubnetStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EdgeNetworkSubnetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EdgeNetworkSubnet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EdgeNetworkSubnetList";
+    public const string KubeGroup = "edgenetwork.cnrm.cloud.google.com";
+    public const string KubePluralName = "edgenetworksubnets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EdgeNetworkSubnet> Items { get; set; }
 }

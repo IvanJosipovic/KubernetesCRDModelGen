@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGatewayMetadata
-{
-}
-
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGatewaySpecProjectRef
+public partial class V1beta1NetworkServicesGatewaySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -33,7 +27,7 @@ public partial class NetworkServicesGatewaySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGatewaySpecServerTlsPolicyRef
+public partial class V1beta1NetworkServicesGatewaySpecServerTlsPolicyRef
 {
     /// <summary>Optional. A fully-qualified ServerTLSPolicy URL reference. Specifies how TLS traffic is terminated. If empty, TLS termination is disabled.  Allowed value: The Google Cloud resource name of a `NetworkSecurityServerTLSPolicy` resource (format: `projects/{{project}}/locations/{{location}}/serverTlsPolicies/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -50,7 +44,7 @@ public partial class NetworkServicesGatewaySpecServerTlsPolicyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGatewaySpec
+public partial class V1beta1NetworkServicesGatewaySpec
 {
     /// <summary>One or more addresses with ports in format of ":" that the Gateway must receive traffic on. The proxy binds to the ports specified. IP address can be anything that is allowed by the underlying infrastructure (auto-allocation, static IP, BYOIP).</summary>
     [JsonPropertyName("addresses")]
@@ -70,7 +64,7 @@ public partial class NetworkServicesGatewaySpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public NetworkServicesGatewaySpecProjectRef ProjectRef { get; set; }
+    public V1beta1NetworkServicesGatewaySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -82,7 +76,7 @@ public partial class NetworkServicesGatewaySpec
 
     /// <summary></summary>
     [JsonPropertyName("serverTlsPolicyRef")]
-    public NetworkServicesGatewaySpecServerTlsPolicyRef? ServerTlsPolicyRef { get; set; }
+    public V1beta1NetworkServicesGatewaySpecServerTlsPolicyRef? ServerTlsPolicyRef { get; set; }
 
     /// <summary>Immutable. Immutable. The type of the customer managed gateway. Possible values: TYPE_UNSPECIFIED, OPEN_MESH, SECURE_WEB_GATEWAY</summary>
     [JsonPropertyName("type")]
@@ -91,7 +85,7 @@ public partial class NetworkServicesGatewaySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGatewayStatusConditions
+public partial class V1beta1NetworkServicesGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -116,11 +110,11 @@ public partial class NetworkServicesGatewayStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGatewayStatus
+public partial class V1beta1NetworkServicesGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<NetworkServicesGatewayStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1NetworkServicesGatewayStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
@@ -141,25 +135,56 @@ public partial class NetworkServicesGatewayStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesGateway
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkServicesGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesGatewaySpec>, IStatus<V1beta1NetworkServicesGatewayStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkServicesGateway";
+    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkservicesgateways";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public NetworkServicesGatewayMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public NetworkServicesGatewaySpec Spec { get; set; }
+    public V1beta1NetworkServicesGatewaySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public NetworkServicesGatewayStatus? Status { get; set; }
+    public V1beta1NetworkServicesGatewayStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkServicesGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkServicesGateway>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkServicesGatewayList";
+    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkservicesgateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkServicesGateway> Items { get; set; }
 }

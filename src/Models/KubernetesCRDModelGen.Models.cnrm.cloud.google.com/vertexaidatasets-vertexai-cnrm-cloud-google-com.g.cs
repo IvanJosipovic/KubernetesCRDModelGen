@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetMetadata
-{
-}
-
 /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef
+public partial class V1alpha1VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,16 +27,16 @@ public partial class VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef
 
 /// <summary>Immutable. Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetSpecEncryptionSpec
+public partial class V1alpha1VertexAIDatasetSpecEncryptionSpec
 {
     /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. Has the form: projects/my-project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key. The key needs to be in the same region as where the compute resource is created.</summary>
     [JsonPropertyName("kmsKeyNameRef")]
-    public VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef? KmsKeyNameRef { get; set; }
+    public V1alpha1VertexAIDatasetSpecEncryptionSpecKmsKeyNameRef? KmsKeyNameRef { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetSpecProjectRef
+public partial class V1alpha1VertexAIDatasetSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -59,7 +53,7 @@ public partial class VertexAIDatasetSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetSpec
+public partial class V1alpha1VertexAIDatasetSpec
 {
     /// <summary>The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.</summary>
     [JsonPropertyName("displayName")]
@@ -67,7 +61,7 @@ public partial class VertexAIDatasetSpec
 
     /// <summary>Immutable. Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.</summary>
     [JsonPropertyName("encryptionSpec")]
-    public VertexAIDatasetSpecEncryptionSpec? EncryptionSpec { get; set; }
+    public V1alpha1VertexAIDatasetSpecEncryptionSpec? EncryptionSpec { get; set; }
 
     /// <summary>Immutable. Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.</summary>
     [JsonPropertyName("metadataSchemaUri")]
@@ -75,7 +69,7 @@ public partial class VertexAIDatasetSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public VertexAIDatasetSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1VertexAIDatasetSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the dataset. eg us-central1.</summary>
     [JsonPropertyName("region")]
@@ -88,7 +82,7 @@ public partial class VertexAIDatasetSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetStatusConditions
+public partial class V1alpha1VertexAIDatasetStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -113,7 +107,7 @@ public partial class VertexAIDatasetStatusConditions
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetStatusObservedState
+public partial class V1alpha1VertexAIDatasetStatusObservedState
 {
     /// <summary>The timestamp of when the dataset was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -126,11 +120,11 @@ public partial class VertexAIDatasetStatusObservedState
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDatasetStatus
+public partial class V1alpha1VertexAIDatasetStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<VertexAIDatasetStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1VertexAIDatasetStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -138,30 +132,61 @@ public partial class VertexAIDatasetStatus
 
     /// <summary>The observed state of the underlying GCP resource.</summary>
     [JsonPropertyName("observedState")]
-    public VertexAIDatasetStatusObservedState? ObservedState { get; set; }
+    public V1alpha1VertexAIDatasetStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIDataset
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIDataset : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIDatasetSpec>, IStatus<V1alpha1VertexAIDatasetStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIDataset";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaidatasets";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public VertexAIDatasetMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public VertexAIDatasetSpec Spec { get; set; }
+    public V1alpha1VertexAIDatasetSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public VertexAIDatasetStatus? Status { get; set; }
+    public V1alpha1VertexAIDatasetStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIDatasetList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VertexAIDataset>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIDatasetList";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaidatasets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VertexAIDataset> Items { get; set; }
 }

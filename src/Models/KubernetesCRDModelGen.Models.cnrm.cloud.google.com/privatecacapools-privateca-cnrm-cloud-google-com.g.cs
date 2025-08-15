@@ -8,15 +8,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolMetadata
-{
-}
-
 /// <summary>Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyAllowedIssuanceModes
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedIssuanceModes
 {
     /// <summary>Optional. When true, allows callers to create Certificates by specifying a CertificateConfig.</summary>
     [JsonPropertyName("allowConfigBasedIssuance")]
@@ -29,7 +23,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyAllowedIssuanceModes
 
 /// <summary>Represents an allowed Elliptic Curve key type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesEllipticCurve
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesEllipticCurve
 {
     /// <summary>Optional. A signature algorithm that must be used. If this is omitted, any EC-based signature algorithm will be allowed. Possible values: EC_SIGNATURE_ALGORITHM_UNSPECIFIED, ECDSA_P256, ECDSA_P384, EDDSA_25519</summary>
     [JsonPropertyName("signatureAlgorithm")]
@@ -38,7 +32,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesEllipticCur
 
 /// <summary>Represents an allowed RSA key type.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesRsa
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesRsa
 {
     /// <summary>Optional. The maximum allowed RSA modulus size, in bits. If this is not set, or if set to zero, the service will not enforce an explicit upper bound on RSA modulus sizes.</summary>
     [JsonPropertyName("maxModulusSize")]
@@ -51,20 +45,20 @@ public partial class PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesRsa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypes
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypes
 {
     /// <summary>Represents an allowed Elliptic Curve key type.</summary>
     [JsonPropertyName("ellipticCurve")]
-    public PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesEllipticCurve? EllipticCurve { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesEllipticCurve? EllipticCurve { get; set; }
 
     /// <summary>Represents an allowed RSA key type.</summary>
     [JsonPropertyName("rsa")]
-    public PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesRsa? Rsa { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypesRsa? Rsa { get; set; }
 }
 
 /// <summary>Required. The OID for this X.509 extension.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensionsObjectId
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensionsObjectId
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -73,7 +67,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalEx
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensions
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensions
 {
     /// <summary>Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).</summary>
     [JsonPropertyName("critical")]
@@ -81,7 +75,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalEx
 
     /// <summary>Required. The OID for this X.509 extension.</summary>
     [JsonPropertyName("objectId")]
-    public PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensionsObjectId ObjectId { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensionsObjectId ObjectId { get; set; }
 
     /// <summary>Required. The value of this X.509 extension.</summary>
     [JsonPropertyName("value")]
@@ -90,7 +84,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalEx
 
 /// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesCaOptions
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesCaOptions
 {
     /// <summary>Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is missing, the extension will be omitted from the CA certificate.</summary>
     [JsonPropertyName("isCa")]
@@ -107,7 +101,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesCaOptions
 
 /// <summary>Describes high-level ways in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage
 {
     /// <summary>The key may be used to sign certificates.</summary>
     [JsonPropertyName("certSign")]
@@ -148,7 +142,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageBase
 
 /// <summary>Detailed scenarios in which a key may be used.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage
 {
     /// <summary>Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.</summary>
     [JsonPropertyName("clientAuth")]
@@ -177,7 +171,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageExte
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -186,24 +180,24 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageUnkn
 
 /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsage
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsage
 {
     /// <summary>Describes high-level ways in which a key may be used.</summary>
     [JsonPropertyName("baseKeyUsage")]
-    public PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage? BaseKeyUsage { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage? BaseKeyUsage { get; set; }
 
     /// <summary>Detailed scenarios in which a key may be used.</summary>
     [JsonPropertyName("extendedKeyUsage")]
-    public PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage? ExtendedKeyUsage { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage? ExtendedKeyUsage { get; set; }
 
     /// <summary>Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.</summary>
     [JsonPropertyName("unknownExtendedKeyUsages")]
-    public IList<PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
+    public IList<V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsageUnknownExtendedKeyUsages>? UnknownExtendedKeyUsages { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesPolicyIds
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesPolicyIds
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -212,11 +206,11 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValuesPolicyIds
 
 /// <summary>Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValues
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValues
 {
     /// <summary>Optional. Describes custom X.509 extensions.</summary>
     [JsonPropertyName("additionalExtensions")]
-    public IList<PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensions>? AdditionalExtensions { get; set; }
+    public IList<V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesAdditionalExtensions>? AdditionalExtensions { get; set; }
 
     /// <summary>Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.</summary>
     [JsonPropertyName("aiaOcspServers")]
@@ -224,20 +218,20 @@ public partial class PrivateCACAPoolSpecIssuancePolicyBaselineValues
 
     /// <summary>Optional. Describes options in this X509Parameters that are relevant in a CA certificate.</summary>
     [JsonPropertyName("caOptions")]
-    public PrivateCACAPoolSpecIssuancePolicyBaselineValuesCaOptions? CaOptions { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesCaOptions? CaOptions { get; set; }
 
     /// <summary>Optional. Indicates the intended use for keys that correspond to a certificate.</summary>
     [JsonPropertyName("keyUsage")]
-    public PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsage? KeyUsage { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesKeyUsage? KeyUsage { get; set; }
 
     /// <summary>Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.</summary>
     [JsonPropertyName("policyIds")]
-    public IList<PrivateCACAPoolSpecIssuancePolicyBaselineValuesPolicyIds>? PolicyIds { get; set; }
+    public IList<V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValuesPolicyIds>? PolicyIds { get; set; }
 }
 
 /// <summary>Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyIdentityConstraintsCelExpression
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyIdentityConstraintsCelExpression
 {
     /// <summary>Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.</summary>
     [JsonPropertyName("description")]
@@ -258,7 +252,7 @@ public partial class PrivateCACAPoolSpecIssuancePolicyIdentityConstraintsCelExpr
 
 /// <summary>Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyIdentityConstraints
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyIdentityConstraints
 {
     /// <summary>Required. If this is true, the SubjectAltNames extension may be copied from a certificate request into the signed certificate. Otherwise, the requested SubjectAltNames will be discarded.</summary>
     [JsonPropertyName("allowSubjectAltNamesPassthrough")]
@@ -270,12 +264,12 @@ public partial class PrivateCACAPoolSpecIssuancePolicyIdentityConstraints
 
     /// <summary>Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel</summary>
     [JsonPropertyName("celExpression")]
-    public PrivateCACAPoolSpecIssuancePolicyIdentityConstraintsCelExpression? CelExpression { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyIdentityConstraintsCelExpression? CelExpression { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyPassthroughExtensionsAdditionalExtensions
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyPassthroughExtensionsAdditionalExtensions
 {
     /// <summary>Required. The parts of an OID path. The most significant parts of the path come first.</summary>
     [JsonPropertyName("objectIdPath")]
@@ -284,11 +278,11 @@ public partial class PrivateCACAPoolSpecIssuancePolicyPassthroughExtensionsAddit
 
 /// <summary>Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool's baseline_values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicyPassthroughExtensions
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicyPassthroughExtensions
 {
     /// <summary>Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.</summary>
     [JsonPropertyName("additionalExtensions")]
-    public IList<PrivateCACAPoolSpecIssuancePolicyPassthroughExtensionsAdditionalExtensions>? AdditionalExtensions { get; set; }
+    public IList<V1beta1PrivateCACAPoolSpecIssuancePolicyPassthroughExtensionsAdditionalExtensions>? AdditionalExtensions { get; set; }
 
     /// <summary>Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.</summary>
     [JsonPropertyName("knownExtensions")]
@@ -297,23 +291,23 @@ public partial class PrivateCACAPoolSpecIssuancePolicyPassthroughExtensions
 
 /// <summary>Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecIssuancePolicy
+public partial class V1beta1PrivateCACAPoolSpecIssuancePolicy
 {
     /// <summary>Optional. If specified, then only methods allowed in the IssuanceModes may be used to issue Certificates.</summary>
     [JsonPropertyName("allowedIssuanceModes")]
-    public PrivateCACAPoolSpecIssuancePolicyAllowedIssuanceModes? AllowedIssuanceModes { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedIssuanceModes? AllowedIssuanceModes { get; set; }
 
     /// <summary>Optional. If any AllowedKeyType is specified, then the certificate request's public key must match one of the key types listed here. Otherwise, any key may be used.</summary>
     [JsonPropertyName("allowedKeyTypes")]
-    public IList<PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypes>? AllowedKeyTypes { get; set; }
+    public IList<V1beta1PrivateCACAPoolSpecIssuancePolicyAllowedKeyTypes>? AllowedKeyTypes { get; set; }
 
     /// <summary>Optional. A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate request uses a CertificateTemplate that defines conflicting predefined_values for the same properties, the certificate issuance request will fail.</summary>
     [JsonPropertyName("baselineValues")]
-    public PrivateCACAPoolSpecIssuancePolicyBaselineValues? BaselineValues { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyBaselineValues? BaselineValues { get; set; }
 
     /// <summary>Optional. Describes constraints on identities that may appear in Certificates issued through this CaPool. If this is omitted, then this CaPool will not add restrictions on a certificate's identity.</summary>
     [JsonPropertyName("identityConstraints")]
-    public PrivateCACAPoolSpecIssuancePolicyIdentityConstraints? IdentityConstraints { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyIdentityConstraints? IdentityConstraints { get; set; }
 
     /// <summary>Optional. The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.</summary>
     [JsonPropertyName("maximumLifetime")]
@@ -321,12 +315,12 @@ public partial class PrivateCACAPoolSpecIssuancePolicy
 
     /// <summary>Optional. Describes the set of X.509 extensions that may appear in a Certificate issued through this CaPool. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If a certificate request uses a CertificateTemplate with predefined_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this CaPool will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CaPool's baseline_values.</summary>
     [JsonPropertyName("passthroughExtensions")]
-    public PrivateCACAPoolSpecIssuancePolicyPassthroughExtensions? PassthroughExtensions { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicyPassthroughExtensions? PassthroughExtensions { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecProjectRef
+public partial class V1beta1PrivateCACAPoolSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -343,7 +337,7 @@ public partial class PrivateCACAPoolSpecProjectRef
 
 /// <summary>Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpecPublishingOptions
+public partial class V1beta1PrivateCACAPoolSpecPublishingOptions
 {
     /// <summary>Optional. When true, publishes each CertificateAuthority's CA certificate and includes its URL in the "Authority Information Access" X.509 extension in all issued Certificates. If this is false, the CA certificate will not be published and the corresponding X.509 extension will not be written in issued certificates.</summary>
     [JsonPropertyName("publishCaCert")]
@@ -356,11 +350,11 @@ public partial class PrivateCACAPoolSpecPublishingOptions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolSpec
+public partial class V1beta1PrivateCACAPoolSpec
 {
     /// <summary>Optional. The IssuancePolicy to control how Certificates will be issued from this CaPool.</summary>
     [JsonPropertyName("issuancePolicy")]
-    public PrivateCACAPoolSpecIssuancePolicy? IssuancePolicy { get; set; }
+    public V1beta1PrivateCACAPoolSpecIssuancePolicy? IssuancePolicy { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -368,11 +362,11 @@ public partial class PrivateCACAPoolSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public PrivateCACAPoolSpecProjectRef ProjectRef { get; set; }
+    public V1beta1PrivateCACAPoolSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Optional. The PublishingOptions to follow when issuing Certificates from any CertificateAuthority in this CaPool.</summary>
     [JsonPropertyName("publishingOptions")]
-    public PrivateCACAPoolSpecPublishingOptions? PublishingOptions { get; set; }
+    public V1beta1PrivateCACAPoolSpecPublishingOptions? PublishingOptions { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -385,7 +379,7 @@ public partial class PrivateCACAPoolSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolStatusConditions
+public partial class V1beta1PrivateCACAPoolStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -410,11 +404,11 @@ public partial class PrivateCACAPoolStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPoolStatus
+public partial class V1beta1PrivateCACAPoolStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<PrivateCACAPoolStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1PrivateCACAPoolStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -423,25 +417,56 @@ public partial class PrivateCACAPoolStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class PrivateCACAPool
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateCACAPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1PrivateCACAPoolSpec>, IStatus<V1beta1PrivateCACAPoolStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateCACAPool";
+    public const string KubeGroup = "privateca.cnrm.cloud.google.com";
+    public const string KubePluralName = "privatecacapools";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public PrivateCACAPoolMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public PrivateCACAPoolSpec Spec { get; set; }
+    public V1beta1PrivateCACAPoolSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public PrivateCACAPoolStatus? Status { get; set; }
+    public V1beta1PrivateCACAPoolStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateCACAPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateCACAPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateCACAPoolList";
+    public const string KubeGroup = "privateca.cnrm.cloud.google.com";
+    public const string KubePluralName = "privatecacapools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivateCACAPool> Items { get; set; }
 }

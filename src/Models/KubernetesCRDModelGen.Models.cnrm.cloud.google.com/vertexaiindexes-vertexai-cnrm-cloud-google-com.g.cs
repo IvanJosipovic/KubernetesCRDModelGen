@@ -8,21 +8,15 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexMetadata
-{
-}
-
 /// <summary>Configuration options for using brute force search, which simply implements the standard linear search in the database for each query.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpecMetadataConfigAlgorithmConfigBruteForceConfig
+public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigBruteForceConfig
 {
 }
 
 /// <summary>Configuration options for using the tree-AH algorithm (Shallow tree + Asymmetric Hashing). Please refer to this paper for more details: https://arxiv.org/abs/1908.10396.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig
+public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig
 {
     /// <summary>Number of embeddings on each leaf node. The default value is 1000 if not set.</summary>
     [JsonPropertyName("leafNodeEmbeddingCount")]
@@ -35,24 +29,24 @@ public partial class VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig
 
 /// <summary>The configuration with regard to the algorithms used for efficient search.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpecMetadataConfigAlgorithmConfig
+public partial class V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfig
 {
     /// <summary>Configuration options for using brute force search, which simply implements the standard linear search in the database for each query.</summary>
     [JsonPropertyName("bruteForceConfig")]
-    public VertexAIIndexSpecMetadataConfigAlgorithmConfigBruteForceConfig? BruteForceConfig { get; set; }
+    public V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigBruteForceConfig? BruteForceConfig { get; set; }
 
     /// <summary>Configuration options for using the tree-AH algorithm (Shallow tree + Asymmetric Hashing). Please refer to this paper for more details: https://arxiv.org/abs/1908.10396.</summary>
     [JsonPropertyName("treeAhConfig")]
-    public VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig? TreeAhConfig { get; set; }
+    public V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfigTreeAhConfig? TreeAhConfig { get; set; }
 }
 
 /// <summary>Immutable. The configuration of the Matching Engine Index.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpecMetadataConfig
+public partial class V1alpha1VertexAIIndexSpecMetadataConfig
 {
     /// <summary>The configuration with regard to the algorithms used for efficient search.</summary>
     [JsonPropertyName("algorithmConfig")]
-    public VertexAIIndexSpecMetadataConfigAlgorithmConfig? AlgorithmConfig { get; set; }
+    public V1alpha1VertexAIIndexSpecMetadataConfigAlgorithmConfig? AlgorithmConfig { get; set; }
 
     /// <summary>The default number of neighbors to find via approximate search before exact reordering is performed. Exact reordering is a procedure where results returned by an approximate search algorithm are reordered via a more expensive distance computation. Required if tree-AH algorithm is used.</summary>
     [JsonPropertyName("approximateNeighborsCount")]
@@ -77,11 +71,11 @@ public partial class VertexAIIndexSpecMetadataConfig
 
 /// <summary>An additional information about the Index.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpecMetadata
+public partial class V1alpha1VertexAIIndexSpecMetadata
 {
     /// <summary>Immutable. The configuration of the Matching Engine Index.</summary>
     [JsonPropertyName("config")]
-    public VertexAIIndexSpecMetadataConfig? Config { get; set; }
+    public V1alpha1VertexAIIndexSpecMetadataConfig? Config { get; set; }
 
     /// <summary>Allows creating or replacing the contents of the Matching Engine Index. When being updated, the existing content of the Index will be replaced by the data from the latest contentsDeltaUri. The string must be a valid Cloud Storage directory path. If this field is set when calling IndexService.UpdateIndex, then no other Index field can be also updated as part of the same call. The expected structure and format of the files this URI points to is described at https://cloud.google.com/vertex-ai/docs/matching-engine/using-matching-engine#input-data-format.</summary>
     [JsonPropertyName("contentsDeltaUri")]
@@ -90,7 +84,7 @@ public partial class VertexAIIndexSpecMetadata
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpecProjectRef
+public partial class V1alpha1VertexAIIndexSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -107,7 +101,7 @@ public partial class VertexAIIndexSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexSpec
+public partial class V1alpha1VertexAIIndexSpec
 {
     /// <summary>The description of the Index.</summary>
     [JsonPropertyName("description")]
@@ -123,11 +117,11 @@ public partial class VertexAIIndexSpec
 
     /// <summary>An additional information about the Index.</summary>
     [JsonPropertyName("metadata")]
-    public VertexAIIndexSpecMetadata? Metadata { get; set; }
+    public V1alpha1VertexAIIndexSpecMetadata? Metadata { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public VertexAIIndexSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1VertexAIIndexSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the index. eg us-central1.</summary>
     [JsonPropertyName("region")]
@@ -140,7 +134,7 @@ public partial class VertexAIIndexSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexStatusConditions
+public partial class V1alpha1VertexAIIndexStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -165,7 +159,7 @@ public partial class VertexAIIndexStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexStatusObservedStateIndexStats
+public partial class V1alpha1VertexAIIndexStatusObservedStateIndexStats
 {
     /// <summary>The number of shards in the Index.</summary>
     [JsonPropertyName("shardsCount")]
@@ -178,7 +172,7 @@ public partial class VertexAIIndexStatusObservedStateIndexStats
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexStatusObservedState
+public partial class V1alpha1VertexAIIndexStatusObservedState
 {
     /// <summary>The timestamp of when the Index was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -186,7 +180,7 @@ public partial class VertexAIIndexStatusObservedState
 
     /// <summary>Stats of the index resource.</summary>
     [JsonPropertyName("indexStats")]
-    public IList<VertexAIIndexStatusObservedStateIndexStats>? IndexStats { get; set; }
+    public IList<V1alpha1VertexAIIndexStatusObservedStateIndexStats>? IndexStats { get; set; }
 
     /// <summary>Points to a YAML file stored on Google Cloud Storage describing additional information about the Index, that is specific to it. Unset if the Index does not have any additional information.</summary>
     [JsonPropertyName("metadataSchemaUri")]
@@ -199,11 +193,11 @@ public partial class VertexAIIndexStatusObservedState
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexStatus
+public partial class V1alpha1VertexAIIndexStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<VertexAIIndexStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1VertexAIIndexStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -211,30 +205,61 @@ public partial class VertexAIIndexStatus
 
     /// <summary>The observed state of the underlying GCP resource.</summary>
     [JsonPropertyName("observedState")]
-    public VertexAIIndexStatusObservedState? ObservedState { get; set; }
+    public V1alpha1VertexAIIndexStatusObservedState? ObservedState { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndex
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIIndex : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIIndexSpec>, IStatus<V1alpha1VertexAIIndexStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIIndex";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaiindexes";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public VertexAIIndexMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public VertexAIIndexSpec Spec { get; set; }
+    public V1alpha1VertexAIIndexSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public VertexAIIndexStatus? Status { get; set; }
+    public V1alpha1VertexAIIndexStatus? Status { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIIndexList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VertexAIIndex>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIIndexList";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaiindexes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VertexAIIndex> Items { get; set; }
 }
