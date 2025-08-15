@@ -73,7 +73,7 @@ public class Generator : IGenerator
 
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + crd.Spec.Group, true))).NormalizeWhitespace();
 
-        namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind));
+        namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind ?? crd.Spec.Names.Kind + "List"));
 
         var nullableDirective = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
 
@@ -356,7 +356,9 @@ public class Generator : IGenerator
 
         switch (schema.Type)
         {
+            case JsonSchemaType.Null | JsonSchemaType.Object:
             case JsonSchemaType.Object:
+
                 if (schema.AdditionalProperties != null)
                 {
                     return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
@@ -375,6 +377,7 @@ public class Generator : IGenerator
 
                     return nestedClasses[nestedClasses.Length - 1].Identifier.Text;
                 }
+            case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
 
                 if (EnumSupport && schema.Enum.Any())
@@ -383,15 +386,19 @@ public class Generator : IGenerator
                 }
 
                 return "string";
+            case JsonSchemaType.Null | JsonSchemaType.Number:
             case JsonSchemaType.Number:
                 return "double";
+            case JsonSchemaType.Null | JsonSchemaType.Boolean:
             case JsonSchemaType.Boolean:
                 return "bool";
+            case JsonSchemaType.Null | JsonSchemaType.Integer:
             case JsonSchemaType.Integer:
                 if (schema.Format == "int64")
                     return "long";
                 else
                     return "int";
+            case JsonSchemaType.Null | JsonSchemaType.Array:
             case JsonSchemaType.Array:
 
                 if (EnumSupport && schema.Enum.Any())
