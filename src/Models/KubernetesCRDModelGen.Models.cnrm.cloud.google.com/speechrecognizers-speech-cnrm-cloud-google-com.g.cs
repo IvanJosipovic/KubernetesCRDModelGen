@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.speech.cnrm.cloud.google.com;
+/// <summary>SpeechRecognizer is the Schema for the SpeechRecognizer API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpeechRecognizerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpeechRecognizer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpeechRecognizerList";
+    public const string KubeGroup = "speech.cnrm.cloud.google.com";
+    public const string KubePluralName = "speechrecognizers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpeechRecognizer> Items { get; set; }
+}
+
 /// <summary>Default configuration to use for requests with this Recognizer. This can be overwritten by inline configuration in the [RecognizeRequest.config][google.cloud.speech.v2.RecognizeRequest.config] field.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechRecognizerSpecDefaultRecognitionConfig
@@ -323,30 +349,4 @@ public partial class V1beta1SpeechRecognizer : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>SpeechRecognizerStatus defines the config connector machine state of SpeechRecognizer</summary>
     [JsonPropertyName("status")]
     public V1beta1SpeechRecognizerStatus? Status { get; set; }
-}
-
-/// <summary>SpeechRecognizer is the Schema for the SpeechRecognizer API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SpeechRecognizerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpeechRecognizer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SpeechRecognizerList";
-    public const string KubeGroup = "speech.cnrm.cloud.google.com";
-    public const string KubePluralName = "speechrecognizers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SpeechRecognizer> Items { get; set; }
 }

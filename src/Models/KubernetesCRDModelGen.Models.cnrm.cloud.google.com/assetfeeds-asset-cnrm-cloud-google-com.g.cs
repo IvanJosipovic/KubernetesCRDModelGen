@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.asset.cnrm.cloud.google.com;
+/// <summary>AssetFeed is the Schema for the AssetFeed API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AssetFeedList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AssetFeed>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AssetFeedList";
+    public const string KubeGroup = "asset.cnrm.cloud.google.com";
+    public const string KubePluralName = "assetfeeds";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AssetFeed> Items { get; set; }
+}
+
 /// <summary>A condition which determines whether an asset update should be published.  If specified, an asset will be returned only when the expression evaluates  to true.  When set, `expression` field in the `Expr` must be a valid [CEL expression]  (https://github.com/google/cel-spec) on a TemporalAsset with name  `temporal_asset`. Example: a Feed with expression ("temporal_asset.deleted  == true") will only publish Asset deletions. Other fields of `Expr` are  optional.   See our [user  guide](https://cloud.google.com/asset-inventory/docs/monitoring-asset-changes-with-condition)  for detailed instructions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetFeedSpecCondition
@@ -226,30 +252,4 @@ public partial class V1alpha1AssetFeed : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>AssetFeedStatus defines the config connector machine state of AssetFeed</summary>
     [JsonPropertyName("status")]
     public V1alpha1AssetFeedStatus? Status { get; set; }
-}
-
-/// <summary>AssetFeed is the Schema for the AssetFeed API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1AssetFeedList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AssetFeed>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "AssetFeedList";
-    public const string KubeGroup = "asset.cnrm.cloud.google.com";
-    public const string KubePluralName = "assetfeeds";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1AssetFeed> Items { get; set; }
 }

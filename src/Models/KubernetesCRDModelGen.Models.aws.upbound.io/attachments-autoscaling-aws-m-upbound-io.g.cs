@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.m.upbound.io;
+/// <summary>Attachment is the Schema for the Attachments API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Attachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AttachmentList";
+    public const string KubeGroup = "autoscaling.aws.m.upbound.io";
+    public const string KubePluralName = "attachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Attachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentSpecForProviderAutoscalingGroupNameRefPolicy
@@ -624,30 +650,4 @@ public partial class V1beta1Attachment : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>AttachmentStatus defines the observed state of Attachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1AttachmentStatus? Status { get; set; }
-}
-
-/// <summary>Attachment is the Schema for the Attachments API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Attachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AttachmentList";
-    public const string KubeGroup = "autoscaling.aws.m.upbound.io";
-    public const string KubePluralName = "attachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Attachment> Items { get; set; }
 }

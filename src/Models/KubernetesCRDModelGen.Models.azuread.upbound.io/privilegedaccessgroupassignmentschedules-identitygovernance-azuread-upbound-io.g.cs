@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identitygovernance.azuread.upbound.io;
+/// <summary>PrivilegedAccessGroupAssignmentSchedule is the Schema for the PrivilegedAccessGroupAssignmentSchedules API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivilegedAccessGroupAssignmentSchedule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivilegedAccessGroupAssignmentScheduleList";
+    public const string KubeGroup = "identitygovernance.azuread.upbound.io";
+    public const string KubePluralName = "privilegedaccessgroupassignmentschedules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivilegedAccessGroupAssignmentSchedule> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleSpecForProviderGroupIdRefPolicy
@@ -549,30 +575,4 @@ public partial class V1beta1PrivilegedAccessGroupAssignmentSchedule : IKubernete
     /// <summary>PrivilegedAccessGroupAssignmentScheduleStatus defines the observed state of PrivilegedAccessGroupAssignmentSchedule.</summary>
     [JsonPropertyName("status")]
     public V1beta1PrivilegedAccessGroupAssignmentScheduleStatus? Status { get; set; }
-}
-
-/// <summary>PrivilegedAccessGroupAssignmentSchedule is the Schema for the PrivilegedAccessGroupAssignmentSchedules API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrivilegedAccessGroupAssignmentScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivilegedAccessGroupAssignmentSchedule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrivilegedAccessGroupAssignmentScheduleList";
-    public const string KubeGroup = "identitygovernance.azuread.upbound.io";
-    public const string KubePluralName = "privilegedaccessgroupassignmentschedules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PrivilegedAccessGroupAssignmentSchedule> Items { get; set; }
 }

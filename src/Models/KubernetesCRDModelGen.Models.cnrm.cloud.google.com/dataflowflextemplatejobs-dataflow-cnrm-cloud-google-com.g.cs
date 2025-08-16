@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataflow.cnrm.cloud.google.com;
+/// <summary>DataflowFlexTemplateJob is the Schema for the DataflowFlexTemplateJob API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataflowFlexTemplateJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataflowFlexTemplateJob>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataflowFlexTemplateJobList";
+    public const string KubeGroup = "dataflow.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataflowflextemplatejobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataflowFlexTemplateJob> Items { get; set; }
+}
+
 /// <summary>The Cloud KMS key for the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataflowFlexTemplateJobSpecKmsKeyNameRef
@@ -235,30 +261,4 @@ public partial class V1beta1DataflowFlexTemplateJob : IKubernetesObject<V1Object
     /// <summary>DataflowFlexTemplateJobStatus defines the config connector machine state of DataflowFlexTemplateJob</summary>
     [JsonPropertyName("status")]
     public V1beta1DataflowFlexTemplateJobStatus? Status { get; set; }
-}
-
-/// <summary>DataflowFlexTemplateJob is the Schema for the DataflowFlexTemplateJob API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataflowFlexTemplateJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataflowFlexTemplateJob>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataflowFlexTemplateJobList";
-    public const string KubeGroup = "dataflow.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataflowflextemplatejobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataflowFlexTemplateJob> Items { get; set; }
 }

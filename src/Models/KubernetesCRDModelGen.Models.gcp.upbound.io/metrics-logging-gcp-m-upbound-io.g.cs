@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.m.upbound.io;
+/// <summary>Metric is the Schema for the Metrics API. Logs-based metric can also be used to extract values from logs and create a a distribution of the values.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MetricList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Metric>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MetricList";
+    public const string KubeGroup = "logging.gcp.m.upbound.io";
+    public const string KubePluralName = "metrics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Metric> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MetricSpecForProviderBucketNameRefPolicy
@@ -706,30 +732,4 @@ public partial class V1beta1Metric : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>MetricStatus defines the observed state of Metric.</summary>
     [JsonPropertyName("status")]
     public V1beta1MetricStatus? Status { get; set; }
-}
-
-/// <summary>Metric is the Schema for the Metrics API. Logs-based metric can also be used to extract values from logs and create a a distribution of the values.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MetricList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Metric>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MetricList";
-    public const string KubeGroup = "logging.gcp.m.upbound.io";
-    public const string KubePluralName = "metrics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Metric> Items { get; set; }
 }

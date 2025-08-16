@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+/// <summary>FrontdoorEndpoint is the Schema for the FrontdoorEndpoints API. Manages a Front Door (standard/premium) Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FrontdoorEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FrontdoorEndpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FrontdoorEndpointList";
+    public const string KubeGroup = "cdn.azure.upbound.io";
+    public const string KubePluralName = "frontdoorendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FrontdoorEndpoint> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorEndpointSpecForProviderCdnFrontdoorProfileIdRefPolicy
@@ -269,30 +295,4 @@ public partial class V1beta1FrontdoorEndpoint : IKubernetesObject<V1ObjectMeta>,
     /// <summary>FrontdoorEndpointStatus defines the observed state of FrontdoorEndpoint.</summary>
     [JsonPropertyName("status")]
     public V1beta1FrontdoorEndpointStatus? Status { get; set; }
-}
-
-/// <summary>FrontdoorEndpoint is the Schema for the FrontdoorEndpoints API. Manages a Front Door (standard/premium) Endpoint.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FrontdoorEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FrontdoorEndpoint>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FrontdoorEndpointList";
-    public const string KubeGroup = "cdn.azure.upbound.io";
-    public const string KubePluralName = "frontdoorendpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FrontdoorEndpoint> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.upbound.io;
+/// <summary>ResponsePolicyRule is the Schema for the ResponsePolicyRules API. A Response Policy Rule is a selector that applies its behavior to queries that match the selector.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResponsePolicyRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResponsePolicyRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResponsePolicyRuleList";
+    public const string KubeGroup = "dns.gcp.upbound.io";
+    public const string KubePluralName = "responsepolicyrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResponsePolicyRule> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponsePolicyRuleSpecForProviderLocalDataLocalDatas
@@ -367,30 +393,4 @@ public partial class V1beta1ResponsePolicyRule : IKubernetesObject<V1ObjectMeta>
     /// <summary>ResponsePolicyRuleStatus defines the observed state of ResponsePolicyRule.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResponsePolicyRuleStatus? Status { get; set; }
-}
-
-/// <summary>ResponsePolicyRule is the Schema for the ResponsePolicyRules API. A Response Policy Rule is a selector that applies its behavior to queries that match the selector.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResponsePolicyRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResponsePolicyRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResponsePolicyRuleList";
-    public const string KubeGroup = "dns.gcp.upbound.io";
-    public const string KubePluralName = "responsepolicyrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ResponsePolicyRule> Items { get; set; }
 }

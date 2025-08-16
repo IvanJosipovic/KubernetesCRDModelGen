@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+/// <summary>BigQueryTable is the Schema for the BigQueryTable API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigQueryTableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryTable>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigQueryTableList";
+    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigquerytables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigQueryTable> Items { get; set; }
+}
+
 /// <summary>DatasetRef defines the resource reference to BigQueryDataset, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryTableSpecDatasetRef
@@ -565,30 +591,4 @@ public partial class V1beta1BigQueryTable : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>BigQueryTableStatus defines the config connector machine state of BigQueryTable</summary>
     [JsonPropertyName("status")]
     public V1beta1BigQueryTableStatus? Status { get; set; }
-}
-
-/// <summary>BigQueryTable is the Schema for the BigQueryTable API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigQueryTableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryTable>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigQueryTableList";
-    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigquerytables";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BigQueryTable> Items { get; set; }
 }

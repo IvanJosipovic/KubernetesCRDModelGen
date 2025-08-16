@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cloudscheduler.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CloudSchedulerJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CloudSchedulerJob>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CloudSchedulerJobList";
+    public const string KubeGroup = "cloudscheduler.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudschedulerjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CloudSchedulerJob> Items { get; set; }
 }
 
 /// <summary>App Engine Routing setting for the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting
+public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>App instance. By default, the job is sent to an instance which is available when the job is attempted. Requests can only be sent to a specific instance if [manual scaling is used in App Engine Standard](https://cloud.google.com/appengine/docs/python/an-overview-of-app-engine?hl=en_US#scaling_types_and_instance_classes). App Engine Flex does not support instances. For more information, see [App Engine Standard request routing](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed) and [App Engine Flex request routing](https://cloud.google.com/appengine/docs/flexible/python/how-requests-are-routed).</summary>
     [JsonPropertyName("instance")]
@@ -33,11 +53,11 @@ public partial class CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting
 
 /// <summary>App Engine HTTP target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecAppEngineHttpTarget
+public partial class V1beta1CloudSchedulerJobSpecAppEngineHttpTarget
 {
     /// <summary>App Engine Routing setting for the job.</summary>
     [JsonPropertyName("appEngineRouting")]
-    public CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting? AppEngineRouting { get; set; }
+    public V1beta1CloudSchedulerJobSpecAppEngineHttpTargetAppEngineRouting? AppEngineRouting { get; set; }
 
     /// <summary>Body. HTTP request body. A request body is allowed only if the HTTP method is POST or PUT. It will result in invalid argument error to set a body on a job with an incompatible HttpMethod.</summary>
     [JsonPropertyName("body")]
@@ -58,7 +78,7 @@ public partial class CloudSchedulerJobSpecAppEngineHttpTarget
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef
+public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef
 {
     /// <summary>[Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OAuth token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -75,7 +95,7 @@ public partial class CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef
 
 /// <summary>If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecHttpTargetOauthToken
+public partial class V1beta1CloudSchedulerJobSpecHttpTargetOauthToken
 {
     /// <summary>OAuth scope to be used for generating OAuth access token. If not specified, "https://www.googleapis.com/auth/cloud-platform" will be used.</summary>
     [JsonPropertyName("scope")]
@@ -83,12 +103,12 @@ public partial class CloudSchedulerJobSpecHttpTargetOauthToken
 
     /// <summary></summary>
     [JsonPropertyName("serviceAccountRef")]
-    public CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef? ServiceAccountRef { get; set; }
+    public V1beta1CloudSchedulerJobSpecHttpTargetOauthTokenServiceAccountRef? ServiceAccountRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef
+public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef
 {
     /// <summary>[Service account email](https://cloud.google.com/iam/docs/service-accounts) to be used for generating OIDC token. The service account must be within the same project as the job. The caller must have iam.serviceAccounts.actAs permission for the service account.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -105,7 +125,7 @@ public partial class CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef
 
 /// <summary>If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecHttpTargetOidcToken
+public partial class V1beta1CloudSchedulerJobSpecHttpTargetOidcToken
 {
     /// <summary>Audience to be used when generating OIDC token. If not specified, the URI specified in target will be used.</summary>
     [JsonPropertyName("audience")]
@@ -113,12 +133,12 @@ public partial class CloudSchedulerJobSpecHttpTargetOidcToken
 
     /// <summary></summary>
     [JsonPropertyName("serviceAccountRef")]
-    public CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef? ServiceAccountRef { get; set; }
+    public V1beta1CloudSchedulerJobSpecHttpTargetOidcTokenServiceAccountRef? ServiceAccountRef { get; set; }
 }
 
 /// <summary>HTTP target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecHttpTarget
+public partial class V1beta1CloudSchedulerJobSpecHttpTarget
 {
     /// <summary>HTTP request body. A request body is allowed only if the HTTP method is POST, PUT, or PATCH. It is an error to set body on a job with an incompatible HttpMethod.</summary>
     [JsonPropertyName("body")]
@@ -134,11 +154,11 @@ public partial class CloudSchedulerJobSpecHttpTarget
 
     /// <summary>If specified, an [OAuth token](https://developers.google.com/identity/protocols/OAuth2) will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization should generally only be used when calling Google APIs hosted on *.googleapis.com.</summary>
     [JsonPropertyName("oauthToken")]
-    public CloudSchedulerJobSpecHttpTargetOauthToken? OauthToken { get; set; }
+    public V1beta1CloudSchedulerJobSpecHttpTargetOauthToken? OauthToken { get; set; }
 
     /// <summary>If specified, an [OIDC](https://developers.google.com/identity/protocols/OpenIDConnect) token will be generated and attached as an `Authorization` header in the HTTP request. This type of authorization can be used for many scenarios, including calling Cloud Run, or endpoints where you intend to validate the token yourself.</summary>
     [JsonPropertyName("oidcToken")]
-    public CloudSchedulerJobSpecHttpTargetOidcToken? OidcToken { get; set; }
+    public V1beta1CloudSchedulerJobSpecHttpTargetOidcToken? OidcToken { get; set; }
 
     /// <summary>Required. The full URI path that the request will be sent to. This string must begin with either "http://" or "https://". Some examples of valid values for uri are: `http://acme.com` and `https://acme.com/sales:8080`. Cloud Scheduler will encode some characters for safety and compatibility. The maximum allowed URL length is 2083 characters after encoding.</summary>
     [JsonPropertyName("uri")]
@@ -147,7 +167,7 @@ public partial class CloudSchedulerJobSpecHttpTarget
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecPubsubTargetTopicRef
+public partial class V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef
 {
     /// <summary>Required. The name of the Cloud Pub/Sub topic to which messages will be published when a job is delivered. The topic name must be in the same format as required by Pub/Sub's [PublishRequest.name](https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#publishrequest), for example `projects/PROJECT_ID/topics/TOPIC_ID`. The topic must be in the same project as the Cloud Scheduler job.  Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -164,7 +184,7 @@ public partial class CloudSchedulerJobSpecPubsubTargetTopicRef
 
 /// <summary>Pub/Sub target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecPubsubTarget
+public partial class V1beta1CloudSchedulerJobSpecPubsubTarget
 {
     /// <summary>Attributes for PubsubMessage. Pubsub message must contain either non-empty data, or at least one attribute.</summary>
     [JsonPropertyName("attributes")]
@@ -176,12 +196,12 @@ public partial class CloudSchedulerJobSpecPubsubTarget
 
     /// <summary></summary>
     [JsonPropertyName("topicRef")]
-    public CloudSchedulerJobSpecPubsubTargetTopicRef TopicRef { get; set; }
+    public V1beta1CloudSchedulerJobSpecPubsubTargetTopicRef TopicRef { get; set; }
 }
 
 /// <summary>Settings that determine the retry behavior.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpecRetryConfig
+public partial class V1beta1CloudSchedulerJobSpecRetryConfig
 {
     /// <summary>The maximum amount of time to wait before retrying a job after it fails. The default value of this field is 1 hour.</summary>
     [JsonPropertyName("maxBackoffDuration")]
@@ -206,11 +226,11 @@ public partial class CloudSchedulerJobSpecRetryConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobSpec
+public partial class V1beta1CloudSchedulerJobSpec
 {
     /// <summary>App Engine HTTP target.</summary>
     [JsonPropertyName("appEngineHttpTarget")]
-    public CloudSchedulerJobSpecAppEngineHttpTarget? AppEngineHttpTarget { get; set; }
+    public V1beta1CloudSchedulerJobSpecAppEngineHttpTarget? AppEngineHttpTarget { get; set; }
 
     /// <summary>The deadline for job attempts. If the request handler does not respond by this deadline then the request is cancelled and the attempt is marked as a `DEADLINE_EXCEEDED` failure. The failed attempt can be viewed in execution logs. Cloud Scheduler will retry the job according to the RetryConfig. The allowed duration for this deadline is: * For HTTP targets, between 15 seconds and 30 minutes. * For App Engine HTTP targets, between 15 seconds and 24 hours.</summary>
     [JsonPropertyName("attemptDeadline")]
@@ -222,7 +242,7 @@ public partial class CloudSchedulerJobSpec
 
     /// <summary>HTTP target.</summary>
     [JsonPropertyName("httpTarget")]
-    public CloudSchedulerJobSpecHttpTarget? HttpTarget { get; set; }
+    public V1beta1CloudSchedulerJobSpecHttpTarget? HttpTarget { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -230,7 +250,7 @@ public partial class CloudSchedulerJobSpec
 
     /// <summary>Pub/Sub target.</summary>
     [JsonPropertyName("pubsubTarget")]
-    public CloudSchedulerJobSpecPubsubTarget? PubsubTarget { get; set; }
+    public V1beta1CloudSchedulerJobSpecPubsubTarget? PubsubTarget { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -238,7 +258,7 @@ public partial class CloudSchedulerJobSpec
 
     /// <summary>Settings that determine the retry behavior.</summary>
     [JsonPropertyName("retryConfig")]
-    public CloudSchedulerJobSpecRetryConfig? RetryConfig { get; set; }
+    public V1beta1CloudSchedulerJobSpecRetryConfig? RetryConfig { get; set; }
 
     /// <summary>Required, except when used with UpdateJob. Describes the schedule on which the job will be executed. The schedule can be either of the following types: * [Crontab](http://en.wikipedia.org/wiki/Cron#Overview) * English-like [schedule](https://cloud.google.com/scheduler/docs/configuring/cron-job-schedules) As a general rule, execution `n + 1` of a job will not begin until execution `n` has finished. Cloud Scheduler will never allow two simultaneously outstanding executions. For example, this implies that if the `n+1`th execution is scheduled to run at 16:00 but the `n`th execution takes until 16:15, the `n+1`th execution will not start until `16:15`. A scheduled start time will be delayed if the previous execution has not ended when its scheduled time occurs. If retry_count &gt; 0 and a job attempt fails, the job will be tried a total of retry_count times, with exponential backoff, until the next scheduled start time.</summary>
     [JsonPropertyName("schedule")]
@@ -251,7 +271,7 @@ public partial class CloudSchedulerJobSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting
+public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting
 {
     /// <summary>Output only. The host that the job is sent to. For more information about how App Engine requests are routed, see [here](https://cloud.google.com/appengine/docs/standard/python/how-requests-are-routed). The host is constructed as: * `host = [application_domain_name]` `| [service] + '.' + [application_domain_name]` `| [version] + '.' + [application_domain_name]` `| [version_dot_service]+ '.' + [application_domain_name]` `| [instance] + '.' + [application_domain_name]` `| [instance_dot_service] + '.' + [application_domain_name]` `| [instance_dot_version] + '.' + [application_domain_name]` `| [instance_dot_version_dot_service] + '.' + [application_domain_name]` * `application_domain_name` = The domain name of the app, for example .appspot.com, which is associated with the job's project ID. * `service =` service * `version =` version * `version_dot_service =` version `+ '.' +` service * `instance =` instance * `instance_dot_service =` instance `+ '.' +` service * `instance_dot_version =` instance `+ '.' +` version * `instance_dot_version_dot_service =` instance `+ '.' +` version `+ '.' +` service If service is empty, then the job will be sent to the service which is the default service when the job is attempted. If version is empty, then the job will be sent to the version which is the default version when the job is attempted. If instance is empty, then the job will be sent to an instance which is available when the job is attempted. If service, version, or instance is invalid, then the job will be sent to the default version of the default service when the job is attempted.</summary>
     [JsonPropertyName("host")]
@@ -260,16 +280,16 @@ public partial class CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobStatusAppEngineHttpTarget
+public partial class V1beta1CloudSchedulerJobStatusAppEngineHttpTarget
 {
     /// <summary></summary>
     [JsonPropertyName("appEngineRouting")]
-    public CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting? AppEngineRouting { get; set; }
+    public V1beta1CloudSchedulerJobStatusAppEngineHttpTargetAppEngineRouting? AppEngineRouting { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobStatusConditions
+public partial class V1beta1CloudSchedulerJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -294,7 +314,7 @@ public partial class CloudSchedulerJobStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobStatusStatusDetails
+public partial class V1beta1CloudSchedulerJobStatusStatusDetails
 {
     /// <summary>A URL/resource name that uniquely identifies the type of the serialized protocol buffer message. This string must contain at least one "/" character. The last segment of the URL's path must represent the fully qualified name of the type (as in `path/google.protobuf.Duration`). The name should be in a canonical form (e.g., leading "." is not accepted). In practice, teams usually precompile into the binary all types that they expect it to use in the context of Any. However, for URLs which use the scheme `http`, `https`, or no scheme, one can optionally set up a type server that maps type URLs to message definitions as follows: * If no scheme is provided, `https` is assumed. * An HTTP GET on the URL must yield a google.protobuf.Type value in binary format, or produce an error. * Applications are allowed to cache lookup results based on the URL, or have them precompiled into a binary to avoid any lookup. Therefore, binary compatibility needs to be preserved on changes to types. (Use versioned type names to manage breaking changes.) Note: this functionality is not currently available in the official protobuf release, and it is not used for type URLs beginning with type.googleapis.com. Schemes other than `http`, `https` (or the empty scheme) might be used with implementation specific semantics.</summary>
     [JsonPropertyName("typeUrl")]
@@ -307,7 +327,7 @@ public partial class CloudSchedulerJobStatusStatusDetails
 
 /// <summary>Output only. The response from the target for the last attempted execution.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobStatusStatus
+public partial class V1beta1CloudSchedulerJobStatusStatus
 {
     /// <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
     [JsonPropertyName("code")]
@@ -315,7 +335,7 @@ public partial class CloudSchedulerJobStatusStatus
 
     /// <summary>A list of messages that carry the error details. There is a common set of message types for APIs to use.</summary>
     [JsonPropertyName("details")]
-    public IList<CloudSchedulerJobStatusStatusDetails>? Details { get; set; }
+    public IList<V1beta1CloudSchedulerJobStatusStatusDetails>? Details { get; set; }
 
     /// <summary>A developer-facing error message, which should be in English. Any user-facing error message should be localized and sent in the google.rpc.Status.details field, or localized by the client.</summary>
     [JsonPropertyName("message")]
@@ -324,15 +344,15 @@ public partial class CloudSchedulerJobStatusStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJobStatus
+public partial class V1beta1CloudSchedulerJobStatus
 {
     /// <summary></summary>
     [JsonPropertyName("appEngineHttpTarget")]
-    public CloudSchedulerJobStatusAppEngineHttpTarget? AppEngineHttpTarget { get; set; }
+    public V1beta1CloudSchedulerJobStatusAppEngineHttpTarget? AppEngineHttpTarget { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<CloudSchedulerJobStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1CloudSchedulerJobStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time the last job attempt started.</summary>
     [JsonPropertyName("lastAttemptTime")]
@@ -352,7 +372,7 @@ public partial class CloudSchedulerJobStatus
 
     /// <summary>Output only. The response from the target for the last attempted execution.</summary>
     [JsonPropertyName("status")]
-    public CloudSchedulerJobStatusStatus? Status { get; set; }
+    public V1beta1CloudSchedulerJobStatusStatus? Status { get; set; }
 
     /// <summary>Output only. The creation time of the job.</summary>
     [JsonPropertyName("userUpdateTime")]
@@ -361,25 +381,30 @@ public partial class CloudSchedulerJobStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudSchedulerJob
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CloudSchedulerJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1CloudSchedulerJobSpec>, IStatus<V1beta1CloudSchedulerJobStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CloudSchedulerJob";
+    public const string KubeGroup = "cloudscheduler.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudschedulerjobs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public CloudSchedulerJobMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public CloudSchedulerJobSpec Spec { get; set; }
+    public V1beta1CloudSchedulerJobSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public CloudSchedulerJobStatus? Status { get; set; }
+    public V1beta1CloudSchedulerJobStatus? Status { get; set; }
 }

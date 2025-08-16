@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.chime.aws.m.upbound.io;
+/// <summary>VoiceConnectorLogging is the Schema for the VoiceConnectorLoggings API. Adds a logging configuration for the specified Amazon Chime Voice Connector. The logging configuration specifies whether SIP message logs are enabled for sending to Amazon CloudWatch Logs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorLoggingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorLogging>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorLoggingList";
+    public const string KubeGroup = "chime.aws.m.upbound.io";
+    public const string KubePluralName = "voiceconnectorloggings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnectorLogging> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorLoggingSpecForProviderVoiceConnectorIdRefPolicy
@@ -336,30 +362,4 @@ public partial class V1beta1VoiceConnectorLogging : IKubernetesObject<V1ObjectMe
     /// <summary>VoiceConnectorLoggingStatus defines the observed state of VoiceConnectorLogging.</summary>
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorLoggingStatus? Status { get; set; }
-}
-
-/// <summary>VoiceConnectorLogging is the Schema for the VoiceConnectorLoggings API. Adds a logging configuration for the specified Amazon Chime Voice Connector. The logging configuration specifies whether SIP message logs are enabled for sending to Amazon CloudWatch Logs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VoiceConnectorLoggingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorLogging>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VoiceConnectorLoggingList";
-    public const string KubeGroup = "chime.aws.m.upbound.io";
-    public const string KubePluralName = "voiceconnectorloggings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VoiceConnectorLogging> Items { get; set; }
 }

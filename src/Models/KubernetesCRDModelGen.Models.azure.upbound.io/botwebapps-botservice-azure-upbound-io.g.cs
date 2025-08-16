@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.botservice.azure.upbound.io;
+/// <summary>BotWebApp is the Schema for the BotWebApps API. Manages a Web App Bot.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BotWebAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotWebApp>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BotWebAppList";
+    public const string KubeGroup = "botservice.azure.upbound.io";
+    public const string KubePluralName = "botwebapps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BotWebApp> Items { get; set; }
+}
+
 /// <summary>The Application Insights API Key to associate with the Web App Bot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotWebAppSpecForProviderDeveloperAppInsightsApiKeySecretRef
@@ -433,30 +459,4 @@ public partial class V1beta1BotWebApp : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>BotWebAppStatus defines the observed state of BotWebApp.</summary>
     [JsonPropertyName("status")]
     public V1beta1BotWebAppStatus? Status { get; set; }
-}
-
-/// <summary>BotWebApp is the Schema for the BotWebApps API. Manages a Web App Bot.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BotWebAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotWebApp>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BotWebAppList";
-    public const string KubeGroup = "botservice.azure.upbound.io";
-    public const string KubePluralName = "botwebapps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BotWebApp> Items { get; set; }
 }

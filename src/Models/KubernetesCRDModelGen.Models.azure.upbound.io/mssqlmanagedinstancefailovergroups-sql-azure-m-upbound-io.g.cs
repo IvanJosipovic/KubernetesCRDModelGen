@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.m.upbound.io;
+/// <summary>MSSQLManagedInstanceFailoverGroup is the Schema for the MSSQLManagedInstanceFailoverGroups API. Manages an Azure SQL Managed Instance Failover Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLManagedInstanceFailoverGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLManagedInstanceFailoverGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLManagedInstanceFailoverGroupList";
+    public const string KubeGroup = "sql.azure.m.upbound.io";
+    public const string KubePluralName = "mssqlmanagedinstancefailovergroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLManagedInstanceFailoverGroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceFailoverGroupSpecForProviderManagedInstanceIdRefPolicy
@@ -564,30 +590,4 @@ public partial class V1beta1MSSQLManagedInstanceFailoverGroup : IKubernetesObjec
     /// <summary>MSSQLManagedInstanceFailoverGroupStatus defines the observed state of MSSQLManagedInstanceFailoverGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLManagedInstanceFailoverGroupStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLManagedInstanceFailoverGroup is the Schema for the MSSQLManagedInstanceFailoverGroups API. Manages an Azure SQL Managed Instance Failover Group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLManagedInstanceFailoverGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLManagedInstanceFailoverGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLManagedInstanceFailoverGroupList";
-    public const string KubeGroup = "sql.azure.m.upbound.io";
-    public const string KubePluralName = "mssqlmanagedinstancefailovergroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLManagedInstanceFailoverGroup> Items { get; set; }
 }

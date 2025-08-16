@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudtasks.gcp.upbound.io;
+/// <summary>Queue is the Schema for the Queues API. A named resource to which messages are sent by publishers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1QueueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Queue>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "QueueList";
+    public const string KubeGroup = "cloudtasks.gcp.upbound.io";
+    public const string KubePluralName = "queues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Queue> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueSpecForProviderAppEngineRoutingOverride
@@ -1193,30 +1219,4 @@ public partial class V1beta1Queue : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     /// <summary>QueueStatus defines the observed state of Queue.</summary>
     [JsonPropertyName("status")]
     public V1beta1QueueStatus? Status { get; set; }
-}
-
-/// <summary>Queue is the Schema for the Queues API. A named resource to which messages are sent by publishers.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1QueueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Queue>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "QueueList";
-    public const string KubeGroup = "cloudtasks.gcp.upbound.io";
-    public const string KubePluralName = "queues";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Queue> Items { get; set; }
 }

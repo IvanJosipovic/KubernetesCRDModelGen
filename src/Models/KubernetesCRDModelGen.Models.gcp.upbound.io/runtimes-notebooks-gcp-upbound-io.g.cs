@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.gcp.upbound.io;
+/// <summary>Runtime is the Schema for the Runtimes API. A Cloud AI Platform Notebook runtime.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RuntimeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Runtime>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RuntimeList";
+    public const string KubeGroup = "notebooks.gcp.upbound.io";
+    public const string KubePluralName = "runtimes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Runtime> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuntimeSpecForProviderAccessConfig
@@ -1035,30 +1061,4 @@ public partial class V1beta1Runtime : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>RuntimeStatus defines the observed state of Runtime.</summary>
     [JsonPropertyName("status")]
     public V1beta1RuntimeStatus? Status { get; set; }
-}
-
-/// <summary>Runtime is the Schema for the Runtimes API. A Cloud AI Platform Notebook runtime.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RuntimeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Runtime>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RuntimeList";
-    public const string KubeGroup = "notebooks.gcp.upbound.io";
-    public const string KubePluralName = "runtimes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Runtime> Items { get; set; }
 }

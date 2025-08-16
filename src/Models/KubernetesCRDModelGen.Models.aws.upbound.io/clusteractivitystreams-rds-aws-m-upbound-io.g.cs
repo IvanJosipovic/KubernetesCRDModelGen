@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.m.upbound.io;
+/// <summary>ClusterActivityStream is the Schema for the ClusterActivityStreams API. Manages RDS Aurora Cluster Database Activity Streams</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ClusterActivityStreamList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterActivityStream>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ClusterActivityStreamList";
+    public const string KubeGroup = "rds.aws.m.upbound.io";
+    public const string KubePluralName = "clusteractivitystreams";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ClusterActivityStream> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterActivityStreamSpecForProviderKmsKeyIdRefPolicy
@@ -496,30 +522,4 @@ public partial class V1beta1ClusterActivityStream : IKubernetesObject<V1ObjectMe
     /// <summary>ClusterActivityStreamStatus defines the observed state of ClusterActivityStream.</summary>
     [JsonPropertyName("status")]
     public V1beta1ClusterActivityStreamStatus? Status { get; set; }
-}
-
-/// <summary>ClusterActivityStream is the Schema for the ClusterActivityStreams API. Manages RDS Aurora Cluster Database Activity Streams</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ClusterActivityStreamList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterActivityStream>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ClusterActivityStreamList";
-    public const string KubeGroup = "rds.aws.m.upbound.io";
-    public const string KubePluralName = "clusteractivitystreams";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ClusterActivityStream> Items { get; set; }
 }

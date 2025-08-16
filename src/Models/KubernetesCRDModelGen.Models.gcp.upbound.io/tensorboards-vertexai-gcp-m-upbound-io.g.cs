@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.gcp.m.upbound.io;
+/// <summary>Tensorboard is the Schema for the Tensorboards API. Tensorboard is a physical database that stores users' training metrics.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TensorboardList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Tensorboard>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TensorboardList";
+    public const string KubeGroup = "vertexai.gcp.m.upbound.io";
+    public const string KubePluralName = "tensorboards";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Tensorboard> Items { get; set; }
+}
+
 /// <summary>Customer-managed encryption key spec for a Tensorboard. If set, this Tensorboard and all sub-resources of this Tensorboard will be secured by this key. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TensorboardSpecForProviderEncryptionSpec
@@ -259,30 +285,4 @@ public partial class V1beta1Tensorboard : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>TensorboardStatus defines the observed state of Tensorboard.</summary>
     [JsonPropertyName("status")]
     public V1beta1TensorboardStatus? Status { get; set; }
-}
-
-/// <summary>Tensorboard is the Schema for the Tensorboards API. Tensorboard is a physical database that stores users' training metrics.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TensorboardList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Tensorboard>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TensorboardList";
-    public const string KubeGroup = "vertexai.gcp.m.upbound.io";
-    public const string KubePluralName = "tensorboards";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Tensorboard> Items { get; set; }
 }

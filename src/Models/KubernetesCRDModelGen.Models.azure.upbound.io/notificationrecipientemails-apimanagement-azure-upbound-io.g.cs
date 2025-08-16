@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+/// <summary>NotificationRecipientEmail is the Schema for the NotificationRecipientEmails API. Manages a API Management Notification Recipient Email.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NotificationRecipientEmailList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotificationRecipientEmail>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NotificationRecipientEmailList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "notificationrecipientemails";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NotificationRecipientEmail> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationRecipientEmailSpecForProviderApiManagementIdRefPolicy
@@ -258,30 +284,4 @@ public partial class V1beta1NotificationRecipientEmail : IKubernetesObject<V1Obj
     /// <summary>NotificationRecipientEmailStatus defines the observed state of NotificationRecipientEmail.</summary>
     [JsonPropertyName("status")]
     public V1beta1NotificationRecipientEmailStatus? Status { get; set; }
-}
-
-/// <summary>NotificationRecipientEmail is the Schema for the NotificationRecipientEmails API. Manages a API Management Notification Recipient Email.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NotificationRecipientEmailList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotificationRecipientEmail>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NotificationRecipientEmailList";
-    public const string KubeGroup = "apimanagement.azure.upbound.io";
-    public const string KubePluralName = "notificationrecipientemails";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NotificationRecipientEmail> Items { get; set; }
 }

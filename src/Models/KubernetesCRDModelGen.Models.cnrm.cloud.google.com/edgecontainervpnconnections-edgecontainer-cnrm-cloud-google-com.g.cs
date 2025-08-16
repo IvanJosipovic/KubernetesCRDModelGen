@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.edgecontainer.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EdgeContainerVpnConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EdgeContainerVpnConnection>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EdgeContainerVpnConnectionList";
+    public const string KubeGroup = "edgecontainer.cnrm.cloud.google.com";
+    public const string KubePluralName = "edgecontainervpnconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EdgeContainerVpnConnection> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionSpecClusterRef
+public partial class V1beta1EdgeContainerVpnConnectionSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `EdgeContainerCluster` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class EdgeContainerVpnConnectionSpecClusterRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionSpecProjectRef
+public partial class V1beta1EdgeContainerVpnConnectionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +70,7 @@ public partial class EdgeContainerVpnConnectionSpecProjectRef
 
 /// <summary>Project detail of the VPC network. Required if VPC is in a different project than the cluster project.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionSpecVpcProject
+public partial class V1beta1EdgeContainerVpnConnectionSpecVpcProject
 {
     /// <summary>Immutable. The project of the VPC to connect to. If not specified, it is the same as the cluster project.</summary>
     [JsonPropertyName("projectId")]
@@ -59,11 +79,11 @@ public partial class EdgeContainerVpnConnectionSpecVpcProject
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionSpec
+public partial class V1beta1EdgeContainerVpnConnectionSpec
 {
     /// <summary></summary>
     [JsonPropertyName("clusterRef")]
-    public EdgeContainerVpnConnectionSpecClusterRef ClusterRef { get; set; }
+    public V1beta1EdgeContainerVpnConnectionSpecClusterRef ClusterRef { get; set; }
 
     /// <summary>Immutable. Whether this VPN connection has HA enabled on cluster side. If enabled, when creating VPN connection we will attempt to use 2 ANG floating IPs.</summary>
     [JsonPropertyName("enableHighAvailability")]
@@ -79,7 +99,7 @@ public partial class EdgeContainerVpnConnectionSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public EdgeContainerVpnConnectionSpecProjectRef ProjectRef { get; set; }
+    public V1beta1EdgeContainerVpnConnectionSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -95,12 +115,12 @@ public partial class EdgeContainerVpnConnectionSpec
 
     /// <summary>Project detail of the VPC network. Required if VPC is in a different project than the cluster project.</summary>
     [JsonPropertyName("vpcProject")]
-    public EdgeContainerVpnConnectionSpecVpcProject? VpcProject { get; set; }
+    public V1beta1EdgeContainerVpnConnectionSpecVpcProject? VpcProject { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionStatusConditions
+public partial class V1beta1EdgeContainerVpnConnectionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -125,7 +145,7 @@ public partial class EdgeContainerVpnConnectionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionStatusDetailsCloudRouter
+public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudRouter
 {
     /// <summary>The associated Cloud Router name.</summary>
     [JsonPropertyName("name")]
@@ -134,7 +154,7 @@ public partial class EdgeContainerVpnConnectionStatusDetailsCloudRouter
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionStatusDetailsCloudVpns
+public partial class V1beta1EdgeContainerVpnConnectionStatusDetailsCloudVpns
 {
     /// <summary>The created Cloud VPN gateway name.</summary>
     [JsonPropertyName("gateway")]
@@ -143,15 +163,15 @@ public partial class EdgeContainerVpnConnectionStatusDetailsCloudVpns
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionStatusDetails
+public partial class V1beta1EdgeContainerVpnConnectionStatusDetails
 {
     /// <summary>The Cloud Router info.</summary>
     [JsonPropertyName("cloudRouter")]
-    public IList<EdgeContainerVpnConnectionStatusDetailsCloudRouter>? CloudRouter { get; set; }
+    public IList<V1beta1EdgeContainerVpnConnectionStatusDetailsCloudRouter>? CloudRouter { get; set; }
 
     /// <summary>Each connection has multiple Cloud VPN gateways.</summary>
     [JsonPropertyName("cloudVpns")]
-    public IList<EdgeContainerVpnConnectionStatusDetailsCloudVpns>? CloudVpns { get; set; }
+    public IList<V1beta1EdgeContainerVpnConnectionStatusDetailsCloudVpns>? CloudVpns { get; set; }
 
     /// <summary>The error message. This is only populated when state=ERROR.</summary>
     [JsonPropertyName("error")]
@@ -164,11 +184,11 @@ public partial class EdgeContainerVpnConnectionStatusDetails
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnectionStatus
+public partial class V1beta1EdgeContainerVpnConnectionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<EdgeContainerVpnConnectionStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1EdgeContainerVpnConnectionStatusConditions>? Conditions { get; set; }
 
     /// <summary>The time when the VPN connection was created.</summary>
     [JsonPropertyName("createTime")]
@@ -176,7 +196,7 @@ public partial class EdgeContainerVpnConnectionStatus
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("details")]
-    public IList<EdgeContainerVpnConnectionStatusDetails>? Details { get; set; }
+    public IList<V1beta1EdgeContainerVpnConnectionStatusDetails>? Details { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -189,25 +209,30 @@ public partial class EdgeContainerVpnConnectionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EdgeContainerVpnConnection
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EdgeContainerVpnConnection : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1EdgeContainerVpnConnectionSpec>, IStatus<V1beta1EdgeContainerVpnConnectionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EdgeContainerVpnConnection";
+    public const string KubeGroup = "edgecontainer.cnrm.cloud.google.com";
+    public const string KubePluralName = "edgecontainervpnconnections";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public EdgeContainerVpnConnectionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public EdgeContainerVpnConnectionSpec Spec { get; set; }
+    public V1beta1EdgeContainerVpnConnectionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public EdgeContainerVpnConnectionStatus? Status { get; set; }
+    public V1beta1EdgeContainerVpnConnectionStatus? Status { get; set; }
 }

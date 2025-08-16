@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.notebooks.cnrm.cloud.google.com;
+/// <summary>NotebookInstance is the Schema for the NotebookInstance API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NotebookInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotebookInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NotebookInstanceList";
+    public const string KubeGroup = "notebooks.cnrm.cloud.google.com";
+    public const string KubePluralName = "notebookinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NotebookInstance> Items { get; set; }
+}
+
 /// <summary>The hardware accelerator used on this instance. If you use accelerators, make sure that your configuration has [enough vCPUs and memory to support the `machine_type` you have selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceSpecAcceleratorConfig
@@ -517,30 +543,4 @@ public partial class V1beta1NotebookInstance : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>NotebookInstanceStatus defines the config connector machine state of NotebookInstance</summary>
     [JsonPropertyName("status")]
     public V1beta1NotebookInstanceStatus? Status { get; set; }
-}
-
-/// <summary>NotebookInstance is the Schema for the NotebookInstance API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NotebookInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotebookInstance>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NotebookInstanceList";
-    public const string KubeGroup = "notebooks.cnrm.cloud.google.com";
-    public const string KubePluralName = "notebookinstances";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NotebookInstance> Items { get; set; }
 }

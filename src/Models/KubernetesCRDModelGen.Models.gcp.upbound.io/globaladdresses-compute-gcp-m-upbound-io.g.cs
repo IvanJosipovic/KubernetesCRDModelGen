@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+/// <summary>GlobalAddress is the Schema for the GlobalAddresss API. Represents a Global Address resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GlobalAddressList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalAddress>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GlobalAddressList";
+    public const string KubeGroup = "compute.gcp.m.upbound.io";
+    public const string KubePluralName = "globaladdresses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GlobalAddress> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalAddressSpecForProviderNetworkRefPolicy
@@ -420,30 +446,4 @@ public partial class V1beta1GlobalAddress : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>GlobalAddressStatus defines the observed state of GlobalAddress.</summary>
     [JsonPropertyName("status")]
     public V1beta1GlobalAddressStatus? Status { get; set; }
-}
-
-/// <summary>GlobalAddress is the Schema for the GlobalAddresss API. Represents a Global Address resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GlobalAddressList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalAddress>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GlobalAddressList";
-    public const string KubeGroup = "compute.gcp.m.upbound.io";
-    public const string KubePluralName = "globaladdresses";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GlobalAddress> Items { get; set; }
 }

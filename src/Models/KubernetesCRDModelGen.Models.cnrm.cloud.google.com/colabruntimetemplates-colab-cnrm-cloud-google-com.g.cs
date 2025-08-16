@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.colab.cnrm.cloud.google.com;
+/// <summary>ColabRuntimeTemplate is the Schema for the ColabRuntimeTemplate API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ColabRuntimeTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ColabRuntimeTemplate>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ColabRuntimeTemplateList";
+    public const string KubeGroup = "colab.cnrm.cloud.google.com";
+    public const string KubePluralName = "colabruntimetemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ColabRuntimeTemplate> Items { get; set; }
+}
+
 /// <summary>Optional. The specification of [persistent disk][https://cloud.google.com/compute/docs/disks/persistent-disks] attached to the runtime as data disk storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeTemplateSpecDataPersistentDiskSpec
@@ -382,30 +408,4 @@ public partial class V1alpha1ColabRuntimeTemplate : IKubernetesObject<V1ObjectMe
     /// <summary>ColabRuntimeTemplateStatus defines the config connector machine state of ColabRuntimeTemplate</summary>
     [JsonPropertyName("status")]
     public V1alpha1ColabRuntimeTemplateStatus? Status { get; set; }
-}
-
-/// <summary>ColabRuntimeTemplate is the Schema for the ColabRuntimeTemplate API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ColabRuntimeTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ColabRuntimeTemplate>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ColabRuntimeTemplateList";
-    public const string KubeGroup = "colab.cnrm.cloud.google.com";
-    public const string KubePluralName = "colabruntimetemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ColabRuntimeTemplate> Items { get; set; }
 }

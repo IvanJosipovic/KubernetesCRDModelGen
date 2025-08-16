@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquerybiglake.cnrm.cloud.google.com;
+/// <summary>BigLakeDatabase is the Schema for the BigLakeDatabase API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigLakeDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigLakeDatabase>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigLakeDatabaseList";
+    public const string KubeGroup = "bigquerybiglake.cnrm.cloud.google.com";
+    public const string KubePluralName = "biglakedatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BigLakeDatabase> Items { get; set; }
+}
+
 /// <summary>Options of a Hive database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigLakeDatabaseSpecHiveOptions
@@ -162,30 +188,4 @@ public partial class V1alpha1BigLakeDatabase : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>BigLakeDatabaseStatus defines the config connector machine state of BigLakeDatabase</summary>
     [JsonPropertyName("status")]
     public V1alpha1BigLakeDatabaseStatus? Status { get; set; }
-}
-
-/// <summary>BigLakeDatabase is the Schema for the BigLakeDatabase API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BigLakeDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigLakeDatabase>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BigLakeDatabaseList";
-    public const string KubeGroup = "bigquerybiglake.cnrm.cloud.google.com";
-    public const string KubePluralName = "biglakedatabases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1BigLakeDatabase> Items { get; set; }
 }

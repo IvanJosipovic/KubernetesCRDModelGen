@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aiplatform.cnrm.cloud.google.com;
+/// <summary>AIPlatformModel is the Schema for the AIPlatformModel API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AIPlatformModelList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AIPlatformModel>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AIPlatformModelList";
+    public const string KubeGroup = "aiplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "aiplatformmodels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AIPlatformModel> Items { get; set; }
+}
+
 /// <summary>Information about the base model of Genie models.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AIPlatformModelSpecBaseModelSourceGenieSource
@@ -1012,30 +1038,4 @@ public partial class V1alpha1AIPlatformModel : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>AIPlatformModelStatus defines the config connector machine state of AIPlatformModel</summary>
     [JsonPropertyName("status")]
     public V1alpha1AIPlatformModelStatus? Status { get; set; }
-}
-
-/// <summary>AIPlatformModel is the Schema for the AIPlatformModel API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1AIPlatformModelList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AIPlatformModel>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "AIPlatformModelList";
-    public const string KubeGroup = "aiplatform.cnrm.cloud.google.com";
-    public const string KubePluralName = "aiplatformmodels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1AIPlatformModel> Items { get; set; }
 }

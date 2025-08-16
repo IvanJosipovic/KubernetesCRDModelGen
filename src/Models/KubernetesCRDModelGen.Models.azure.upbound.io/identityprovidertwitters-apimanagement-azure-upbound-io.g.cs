@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+/// <summary>IdentityProviderTwitter is the Schema for the IdentityProviderTwitters API. Manages an API Management Twitter Identity Provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityProviderTwitterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityProviderTwitter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityProviderTwitterList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "identityprovidertwitters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IdentityProviderTwitter> Items { get; set; }
+}
+
 /// <summary>App Consumer API key for Twitter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderTwitterSpecForProviderApiKeySecretRef
@@ -533,30 +559,4 @@ public partial class V1beta1IdentityProviderTwitter : IKubernetesObject<V1Object
     /// <summary>IdentityProviderTwitterStatus defines the observed state of IdentityProviderTwitter.</summary>
     [JsonPropertyName("status")]
     public V1beta1IdentityProviderTwitterStatus? Status { get; set; }
-}
-
-/// <summary>IdentityProviderTwitter is the Schema for the IdentityProviderTwitters API. Manages an API Management Twitter Identity Provider.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IdentityProviderTwitterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityProviderTwitter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IdentityProviderTwitterList";
-    public const string KubeGroup = "apimanagement.azure.upbound.io";
-    public const string KubePluralName = "identityprovidertwitters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IdentityProviderTwitter> Items { get; set; }
 }

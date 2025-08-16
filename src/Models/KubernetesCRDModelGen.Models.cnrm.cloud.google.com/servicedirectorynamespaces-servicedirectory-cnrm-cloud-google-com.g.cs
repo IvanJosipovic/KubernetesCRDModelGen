@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.servicedirectory.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryNamespaceMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceDirectoryNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceDirectoryNamespace>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceDirectoryNamespaceList";
+    public const string KubeGroup = "servicedirectory.cnrm.cloud.google.com";
+    public const string KubePluralName = "servicedirectorynamespaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceDirectoryNamespace> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryNamespaceSpecProjectRef
+public partial class V1beta1ServiceDirectoryNamespaceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ServiceDirectoryNamespaceSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryNamespaceSpec
+public partial class V1beta1ServiceDirectoryNamespaceSpec
 {
     /// <summary>Immutable. The location for the Namespace. A full list of valid locations can be found by running 'gcloud beta service-directory locations list'.</summary>
     [JsonPropertyName("location")]
@@ -41,7 +61,7 @@ public partial class ServiceDirectoryNamespaceSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ServiceDirectoryNamespaceSpecProjectRef ProjectRef { get; set; }
+    public V1beta1ServiceDirectoryNamespaceSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The namespaceId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -50,7 +70,7 @@ public partial class ServiceDirectoryNamespaceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryNamespaceStatusConditions
+public partial class V1beta1ServiceDirectoryNamespaceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -75,11 +95,11 @@ public partial class ServiceDirectoryNamespaceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryNamespaceStatus
+public partial class V1beta1ServiceDirectoryNamespaceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ServiceDirectoryNamespaceStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ServiceDirectoryNamespaceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name for the namespace in the format 'projects/*/locations/*/namespaces/*'.</summary>
     [JsonPropertyName("name")]
@@ -92,25 +112,30 @@ public partial class ServiceDirectoryNamespaceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceDirectoryNamespace
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceDirectoryNamespace : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ServiceDirectoryNamespaceSpec>, IStatus<V1beta1ServiceDirectoryNamespaceStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceDirectoryNamespace";
+    public const string KubeGroup = "servicedirectory.cnrm.cloud.google.com";
+    public const string KubePluralName = "servicedirectorynamespaces";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ServiceDirectoryNamespaceMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ServiceDirectoryNamespaceSpec Spec { get; set; }
+    public V1beta1ServiceDirectoryNamespaceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ServiceDirectoryNamespaceStatus? Status { get; set; }
+    public V1beta1ServiceDirectoryNamespaceStatus? Status { get; set; }
 }

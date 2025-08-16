@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+/// <summary>OutputBlob is the Schema for the OutputBlobs API. Manages a Stream Analytics Output to Blob Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OutputBlobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputBlob>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OutputBlobList";
+    public const string KubeGroup = "streamanalytics.azure.upbound.io";
+    public const string KubePluralName = "outputblobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OutputBlob> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputBlobSpecForProviderResourceGroupNameRefPolicy
@@ -841,30 +867,4 @@ public partial class V1beta1OutputBlob : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>OutputBlobStatus defines the observed state of OutputBlob.</summary>
     [JsonPropertyName("status")]
     public V1beta1OutputBlobStatus? Status { get; set; }
-}
-
-/// <summary>OutputBlob is the Schema for the OutputBlobs API. Manages a Stream Analytics Output to Blob Storage.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1OutputBlobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputBlob>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "OutputBlobList";
-    public const string KubeGroup = "streamanalytics.azure.upbound.io";
-    public const string KubePluralName = "outputblobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1OutputBlob> Items { get; set; }
 }

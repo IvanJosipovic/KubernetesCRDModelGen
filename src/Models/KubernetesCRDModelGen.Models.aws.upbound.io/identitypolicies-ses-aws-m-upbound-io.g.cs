@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+/// <summary>IdentityPolicy is the Schema for the IdentityPolicys API. Manages a SES Identity Policy</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityPolicyList";
+    public const string KubeGroup = "ses.aws.m.upbound.io";
+    public const string KubePluralName = "identitypolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IdentityPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityPolicySpecForProviderIdentityRefPolicy
@@ -336,30 +362,4 @@ public partial class V1beta1IdentityPolicy : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>IdentityPolicyStatus defines the observed state of IdentityPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1IdentityPolicyStatus? Status { get; set; }
-}
-
-/// <summary>IdentityPolicy is the Schema for the IdentityPolicys API. Manages a SES Identity Policy</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IdentityPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IdentityPolicyList";
-    public const string KubeGroup = "ses.aws.m.upbound.io";
-    public const string KubePluralName = "identitypolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IdentityPolicy> Items { get; set; }
 }

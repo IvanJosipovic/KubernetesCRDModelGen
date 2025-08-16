@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.upbound.io;
+/// <summary>DefaultPatchBaseline is the Schema for the DefaultPatchBaselines API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DefaultPatchBaselineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DefaultPatchBaseline>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DefaultPatchBaselineList";
+    public const string KubeGroup = "ssm.aws.upbound.io";
+    public const string KubePluralName = "defaultpatchbaselines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DefaultPatchBaseline> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultPatchBaselineSpecForProviderBaselineIdRefPolicy
@@ -457,30 +483,4 @@ public partial class V1beta1DefaultPatchBaseline : IKubernetesObject<V1ObjectMet
     /// <summary>DefaultPatchBaselineStatus defines the observed state of DefaultPatchBaseline.</summary>
     [JsonPropertyName("status")]
     public V1beta1DefaultPatchBaselineStatus? Status { get; set; }
-}
-
-/// <summary>DefaultPatchBaseline is the Schema for the DefaultPatchBaselines API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DefaultPatchBaselineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DefaultPatchBaseline>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DefaultPatchBaselineList";
-    public const string KubeGroup = "ssm.aws.upbound.io";
-    public const string KubePluralName = "defaultpatchbaselines";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DefaultPatchBaseline> Items { get; set; }
 }

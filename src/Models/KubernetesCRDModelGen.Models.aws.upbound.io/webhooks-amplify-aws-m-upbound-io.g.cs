@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.amplify.aws.m.upbound.io;
+/// <summary>Webhook is the Schema for the Webhooks API. Provides an Amplify Webhook resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WebhookList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Webhook>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WebhookList";
+    public const string KubeGroup = "amplify.aws.m.upbound.io";
+    public const string KubePluralName = "webhooks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Webhook> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebhookSpecForProviderAppIdRefPolicy
@@ -488,30 +514,4 @@ public partial class V1beta1Webhook : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>WebhookStatus defines the observed state of Webhook.</summary>
     [JsonPropertyName("status")]
     public V1beta1WebhookStatus? Status { get; set; }
-}
-
-/// <summary>Webhook is the Schema for the Webhooks API. Provides an Amplify Webhook resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WebhookList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Webhook>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WebhookList";
-    public const string KubeGroup = "amplify.aws.m.upbound.io";
-    public const string KubePluralName = "webhooks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Webhook> Items { get; set; }
 }

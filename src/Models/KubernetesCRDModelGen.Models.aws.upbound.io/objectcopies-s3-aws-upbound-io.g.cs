@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.upbound.io;
+/// <summary>ObjectCopy is the Schema for the ObjectCopys API. Provides a resource for copying an S3 object.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ObjectCopyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ObjectCopy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ObjectCopyList";
+    public const string KubeGroup = "s3.aws.upbound.io";
+    public const string KubePluralName = "objectcopies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ObjectCopy> Items { get; set; }
+}
+
 /// <summary>Specifies the customer-provided encryption key for Amazon S3 to use in encrypting data. This value is used to store the object and then it is discarded; Amazon S3 does not store the encryption key. The key must be appropriate for use with the algorithm specified in the x-amz-server-side-encryption-customer-algorithm header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectCopySpecForProviderCustomerKeySecretRef
@@ -958,30 +984,4 @@ public partial class V1beta1ObjectCopy : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>ObjectCopyStatus defines the observed state of ObjectCopy.</summary>
     [JsonPropertyName("status")]
     public V1beta1ObjectCopyStatus? Status { get; set; }
-}
-
-/// <summary>ObjectCopy is the Schema for the ObjectCopys API. Provides a resource for copying an S3 object.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ObjectCopyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ObjectCopy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ObjectCopyList";
-    public const string KubeGroup = "s3.aws.upbound.io";
-    public const string KubePluralName = "objectcopies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ObjectCopy> Items { get; set; }
 }

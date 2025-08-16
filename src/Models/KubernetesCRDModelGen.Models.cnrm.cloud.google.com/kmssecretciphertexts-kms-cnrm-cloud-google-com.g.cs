@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1KMSSecretCiphertextList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1KMSSecretCiphertext>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "KMSSecretCiphertextList";
+    public const string KubeGroup = "kms.cnrm.cloud.google.com";
+    public const string KubePluralName = "kmssecretciphertexts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1KMSSecretCiphertext> Items { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef
+public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -29,16 +49,16 @@ public partial class KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom
+public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. The additional authenticated data used for integrity checks during encryption and decryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpecAdditionalAuthenticatedData
+public partial class V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedData
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -46,12 +66,12 @@ public partial class KMSSecretCiphertextSpecAdditionalAuthenticatedData
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom? ValueFrom { get; set; }
+    public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedDataValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef
+public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -64,16 +84,16 @@ public partial class KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpecPlaintextValueFrom
+public partial class V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1alpha1KMSSecretCiphertextSpecPlaintextValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. The plaintext to be encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpecPlaintext
+public partial class V1alpha1KMSSecretCiphertextSpecPlaintext
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -81,16 +101,16 @@ public partial class KMSSecretCiphertextSpecPlaintext
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public KMSSecretCiphertextSpecPlaintextValueFrom? ValueFrom { get; set; }
+    public V1alpha1KMSSecretCiphertextSpecPlaintextValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextSpec
+public partial class V1alpha1KMSSecretCiphertextSpec
 {
     /// <summary>Immutable. The additional authenticated data used for integrity checks during encryption and decryption.</summary>
     [JsonPropertyName("additionalAuthenticatedData")]
-    public KMSSecretCiphertextSpecAdditionalAuthenticatedData? AdditionalAuthenticatedData { get; set; }
+    public V1alpha1KMSSecretCiphertextSpecAdditionalAuthenticatedData? AdditionalAuthenticatedData { get; set; }
 
     /// <summary>Immutable. The full name of the CryptoKey that will be used to encrypt the provided plaintext. Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}''.</summary>
     [JsonPropertyName("cryptoKey")]
@@ -98,7 +118,7 @@ public partial class KMSSecretCiphertextSpec
 
     /// <summary>Immutable. The plaintext to be encrypted.</summary>
     [JsonPropertyName("plaintext")]
-    public KMSSecretCiphertextSpecPlaintext Plaintext { get; set; }
+    public V1alpha1KMSSecretCiphertextSpecPlaintext Plaintext { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated ciphertext of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -107,7 +127,7 @@ public partial class KMSSecretCiphertextSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextStatusConditions
+public partial class V1alpha1KMSSecretCiphertextStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -132,7 +152,7 @@ public partial class KMSSecretCiphertextStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertextStatus
+public partial class V1alpha1KMSSecretCiphertextStatus
 {
     /// <summary>Contains the result of encrypting the provided plaintext, encoded in base64.</summary>
     [JsonPropertyName("ciphertext")]
@@ -140,7 +160,7 @@ public partial class KMSSecretCiphertextStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<KMSSecretCiphertextStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1KMSSecretCiphertextStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -149,25 +169,30 @@ public partial class KMSSecretCiphertextStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class KMSSecretCiphertext
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1KMSSecretCiphertext : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1KMSSecretCiphertextSpec>, IStatus<V1alpha1KMSSecretCiphertextStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "KMSSecretCiphertext";
+    public const string KubeGroup = "kms.cnrm.cloud.google.com";
+    public const string KubePluralName = "kmssecretciphertexts";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public KMSSecretCiphertextMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public KMSSecretCiphertextSpec Spec { get; set; }
+    public V1alpha1KMSSecretCiphertextSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public KMSSecretCiphertextStatus? Status { get; set; }
+    public V1alpha1KMSSecretCiphertextStatus? Status { get; set; }
 }

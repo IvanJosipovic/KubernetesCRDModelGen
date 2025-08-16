@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+/// <summary>A Provider installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of managed resources.  Read the Crossplane documentation for [more information about Providers](https://docs.crossplane.io/latest/concepts/providers).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1ProviderList : IKubernetesObject<V1ListMeta>, IItems<V1Provider>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "ProviderList";
+    public const string KubeGroup = "pkg.crossplane.io";
+    public const string KubePluralName = "providers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Provider> Items { get; set; }
+}
+
 /// <summary>LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ProviderSpecPackagePullSecrets
@@ -170,30 +196,4 @@ public partial class V1Provider : IKubernetesObject<V1ObjectMeta>, ISpec<V1Provi
     /// <summary>ProviderStatus represents the observed state of a Provider.</summary>
     [JsonPropertyName("status")]
     public V1ProviderStatus? Status { get; set; }
-}
-
-/// <summary>A Provider installs an OCI compatible Crossplane package, extending Crossplane with support for new kinds of managed resources.  Read the Crossplane documentation for [more information about Providers](https://docs.crossplane.io/latest/concepts/providers).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1ProviderList : IKubernetesObject<V1ListMeta>, IItems<V1Provider>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "ProviderList";
-    public const string KubeGroup = "pkg.crossplane.io";
-    public const string KubePluralName = "providers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1Provider> Items { get; set; }
 }

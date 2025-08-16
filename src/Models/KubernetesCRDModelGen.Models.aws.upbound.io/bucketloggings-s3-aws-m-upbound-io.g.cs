@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.m.upbound.io;
+/// <summary>BucketLogging is the Schema for the BucketLoggings API. Provides an S3 bucket (server access) logging resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BucketLoggingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BucketLogging>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BucketLoggingList";
+    public const string KubeGroup = "s3.aws.m.upbound.io";
+    public const string KubePluralName = "bucketloggings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BucketLogging> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketLoggingSpecForProviderBucketRefPolicy
@@ -706,30 +732,4 @@ public partial class V1beta1BucketLogging : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>BucketLoggingStatus defines the observed state of BucketLogging.</summary>
     [JsonPropertyName("status")]
     public V1beta1BucketLoggingStatus? Status { get; set; }
-}
-
-/// <summary>BucketLogging is the Schema for the BucketLoggings API. Provides an S3 bucket (server access) logging resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BucketLoggingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BucketLogging>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BucketLoggingList";
-    public const string KubeGroup = "s3.aws.m.upbound.io";
-    public const string KubePluralName = "bucketloggings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BucketLogging> Items { get; set; }
 }

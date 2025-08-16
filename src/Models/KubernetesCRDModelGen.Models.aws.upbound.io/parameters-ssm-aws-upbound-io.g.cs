@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.upbound.io;
+/// <summary>Parameter is the Schema for the Parameters API. Provides a SSM Parameter resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ParameterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Parameter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ParameterList";
+    public const string KubeGroup = "ssm.aws.upbound.io";
+    public const string KubePluralName = "parameters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Parameter> Items { get; set; }
+}
+
 /// <summary>Value of the parameter.15 and later, this may require additional configuration handling for certain scenarios.15 Upgrade Guide.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ParameterSpecForProviderValueSecretRef
@@ -405,30 +431,4 @@ public partial class V1beta1Parameter : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>ParameterStatus defines the observed state of Parameter.</summary>
     [JsonPropertyName("status")]
     public V1beta1ParameterStatus? Status { get; set; }
-}
-
-/// <summary>Parameter is the Schema for the Parameters API. Provides a SSM Parameter resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ParameterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Parameter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ParameterList";
-    public const string KubeGroup = "ssm.aws.upbound.io";
-    public const string KubePluralName = "parameters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Parameter> Items { get; set; }
 }

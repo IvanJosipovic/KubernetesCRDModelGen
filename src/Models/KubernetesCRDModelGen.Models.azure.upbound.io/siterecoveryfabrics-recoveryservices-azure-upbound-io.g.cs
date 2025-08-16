@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.upbound.io;
+/// <summary>SiteRecoveryFabric is the Schema for the SiteRecoveryFabrics API. Manages a Site Recovery Replication Fabric on Azure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SiteRecoveryFabricList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SiteRecoveryFabric>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SiteRecoveryFabricList";
+    public const string KubeGroup = "recoveryservices.azure.upbound.io";
+    public const string KubePluralName = "siterecoveryfabrics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SiteRecoveryFabric> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SiteRecoveryFabricSpecForProviderRecoveryVaultNameRefPolicy
@@ -325,30 +351,4 @@ public partial class V1beta1SiteRecoveryFabric : IKubernetesObject<V1ObjectMeta>
     /// <summary>SiteRecoveryFabricStatus defines the observed state of SiteRecoveryFabric.</summary>
     [JsonPropertyName("status")]
     public V1beta1SiteRecoveryFabricStatus? Status { get; set; }
-}
-
-/// <summary>SiteRecoveryFabric is the Schema for the SiteRecoveryFabrics API. Manages a Site Recovery Replication Fabric on Azure.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SiteRecoveryFabricList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SiteRecoveryFabric>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SiteRecoveryFabricList";
-    public const string KubeGroup = "recoveryservices.azure.upbound.io";
-    public const string KubePluralName = "siterecoveryfabrics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SiteRecoveryFabric> Items { get; set; }
 }

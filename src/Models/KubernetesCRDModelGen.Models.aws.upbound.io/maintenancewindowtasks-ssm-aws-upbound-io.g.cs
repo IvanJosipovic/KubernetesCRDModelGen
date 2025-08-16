@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.upbound.io;
+/// <summary>MaintenanceWindowTask is the Schema for the MaintenanceWindowTasks API. Provides an SSM Maintenance Window Task resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MaintenanceWindowTaskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MaintenanceWindowTask>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MaintenanceWindowTaskList";
+    public const string KubeGroup = "ssm.aws.upbound.io";
+    public const string KubePluralName = "maintenancewindowtasks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MaintenanceWindowTask> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowTaskSpecForProviderServiceRoleArnRefPolicy
@@ -1959,30 +1985,4 @@ public partial class V1beta1MaintenanceWindowTask : IKubernetesObject<V1ObjectMe
     /// <summary>MaintenanceWindowTaskStatus defines the observed state of MaintenanceWindowTask.</summary>
     [JsonPropertyName("status")]
     public V1beta1MaintenanceWindowTaskStatus? Status { get; set; }
-}
-
-/// <summary>MaintenanceWindowTask is the Schema for the MaintenanceWindowTasks API. Provides an SSM Maintenance Window Task resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MaintenanceWindowTaskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MaintenanceWindowTask>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MaintenanceWindowTaskList";
-    public const string KubeGroup = "ssm.aws.upbound.io";
-    public const string KubePluralName = "maintenancewindowtasks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MaintenanceWindowTask> Items { get; set; }
 }

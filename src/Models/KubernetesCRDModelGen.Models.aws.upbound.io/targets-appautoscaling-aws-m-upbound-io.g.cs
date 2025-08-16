@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appautoscaling.aws.m.upbound.io;
+/// <summary>Target is the Schema for the Targets API. Provides an Application AutoScaling ScalableTarget resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Target>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TargetList";
+    public const string KubeGroup = "appautoscaling.aws.m.upbound.io";
+    public const string KubePluralName = "targets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Target> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetSpecForProviderRoleArnRefPolicy
@@ -455,30 +481,4 @@ public partial class V1beta1Target : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>TargetStatus defines the observed state of Target.</summary>
     [JsonPropertyName("status")]
     public V1beta1TargetStatus? Status { get; set; }
-}
-
-/// <summary>Target is the Schema for the Targets API. Provides an Application AutoScaling ScalableTarget resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Target>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TargetList";
-    public const string KubeGroup = "appautoscaling.aws.m.upbound.io";
-    public const string KubePluralName = "targets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Target> Items { get; set; }
 }

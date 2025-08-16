@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>ManagerManagementGroupConnection is the Schema for the ManagerManagementGroupConnections API. Manages a Network Manager Management Group Connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagerManagementGroupConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagerManagementGroupConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagerManagementGroupConnectionList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "managermanagementgroupconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ManagerManagementGroupConnection> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerManagementGroupConnectionSpecForProviderManagementGroupIdRefPolicy
@@ -400,30 +426,4 @@ public partial class V1beta1ManagerManagementGroupConnection : IKubernetesObject
     /// <summary>ManagerManagementGroupConnectionStatus defines the observed state of ManagerManagementGroupConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1ManagerManagementGroupConnectionStatus? Status { get; set; }
-}
-
-/// <summary>ManagerManagementGroupConnection is the Schema for the ManagerManagementGroupConnections API. Manages a Network Manager Management Group Connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ManagerManagementGroupConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagerManagementGroupConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ManagerManagementGroupConnectionList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "managermanagementgroupconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ManagerManagementGroupConnection> Items { get; set; }
 }

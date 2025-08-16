@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.m.upbound.io;
+/// <summary>APISchema is the Schema for the APISchemas API. Manages an API Schema within an API Management Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1APISchemaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1APISchema>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "APISchemaList";
+    public const string KubeGroup = "apimanagement.azure.m.upbound.io";
+    public const string KubePluralName = "apischemas";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1APISchema> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1APISchemaSpecForProviderApiManagementNameRefPolicy
@@ -436,30 +462,4 @@ public partial class V1beta1APISchema : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>APISchemaStatus defines the observed state of APISchema.</summary>
     [JsonPropertyName("status")]
     public V1beta1APISchemaStatus? Status { get; set; }
-}
-
-/// <summary>APISchema is the Schema for the APISchemas API. Manages an API Schema within an API Management Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1APISchemaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1APISchema>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "APISchemaList";
-    public const string KubeGroup = "apimanagement.azure.m.upbound.io";
-    public const string KubePluralName = "apischemas";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1APISchema> Items { get; set; }
 }

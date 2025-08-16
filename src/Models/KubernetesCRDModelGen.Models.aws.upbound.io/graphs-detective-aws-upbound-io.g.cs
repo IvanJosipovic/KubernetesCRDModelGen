@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.detective.aws.upbound.io;
+/// <summary>Graph is the Schema for the Graphs API. Provides a resource to manage an Amazon Detective graph.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GraphList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Graph>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GraphList";
+    public const string KubeGroup = "detective.aws.upbound.io";
+    public const string KubePluralName = "graphs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Graph> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GraphSpecForProvider
@@ -201,30 +227,4 @@ public partial class V1beta1Graph : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     /// <summary>GraphStatus defines the observed state of Graph.</summary>
     [JsonPropertyName("status")]
     public V1beta1GraphStatus? Status { get; set; }
-}
-
-/// <summary>Graph is the Schema for the Graphs API. Provides a resource to manage an Amazon Detective graph.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GraphList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Graph>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GraphList";
-    public const string KubeGroup = "detective.aws.upbound.io";
-    public const string KubePluralName = "graphs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Graph> Items { get; set; }
 }

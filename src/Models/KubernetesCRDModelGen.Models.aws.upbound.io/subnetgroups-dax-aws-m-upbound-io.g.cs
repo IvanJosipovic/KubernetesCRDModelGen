@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dax.aws.m.upbound.io;
+/// <summary>SubnetGroup is the Schema for the SubnetGroups API. Provides an DAX Subnet Group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SubnetGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubnetGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SubnetGroupList";
+    public const string KubeGroup = "dax.aws.m.upbound.io";
+    public const string KubePluralName = "subnetgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SubnetGroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetGroupSpecForProviderSubnetIdRefsPolicy
@@ -328,30 +354,4 @@ public partial class V1beta1SubnetGroup : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>SubnetGroupStatus defines the observed state of SubnetGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1SubnetGroupStatus? Status { get; set; }
-}
-
-/// <summary>SubnetGroup is the Schema for the SubnetGroups API. Provides an DAX Subnet Group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SubnetGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubnetGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SubnetGroupList";
-    public const string KubeGroup = "dax.aws.m.upbound.io";
-    public const string KubePluralName = "subnetgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SubnetGroup> Items { get; set; }
 }

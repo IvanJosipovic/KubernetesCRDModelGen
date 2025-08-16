@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssoadmin.aws.m.upbound.io;
+/// <summary>PermissionSetInlinePolicy is the Schema for the PermissionSetInlinePolicys API. Manages an IAM inline policy for a Single Sign-On (SSO) Permission Set</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PermissionSetInlinePolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PermissionSetInlinePolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PermissionSetInlinePolicyList";
+    public const string KubeGroup = "ssoadmin.aws.m.upbound.io";
+    public const string KubePluralName = "permissionsetinlinepolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PermissionSetInlinePolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionSetInlinePolicySpecForProviderPermissionSetArnRefPolicy
@@ -256,30 +282,4 @@ public partial class V1beta1PermissionSetInlinePolicy : IKubernetesObject<V1Obje
     /// <summary>PermissionSetInlinePolicyStatus defines the observed state of PermissionSetInlinePolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1PermissionSetInlinePolicyStatus? Status { get; set; }
-}
-
-/// <summary>PermissionSetInlinePolicy is the Schema for the PermissionSetInlinePolicys API. Manages an IAM inline policy for a Single Sign-On (SSO) Permission Set</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PermissionSetInlinePolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PermissionSetInlinePolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PermissionSetInlinePolicyList";
-    public const string KubeGroup = "ssoadmin.aws.m.upbound.io";
-    public const string KubePluralName = "permissionsetinlinepolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PermissionSetInlinePolicy> Items { get; set; }
 }

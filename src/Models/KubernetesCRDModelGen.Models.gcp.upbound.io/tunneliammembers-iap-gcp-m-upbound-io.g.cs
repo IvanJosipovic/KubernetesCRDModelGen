@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.gcp.m.upbound.io;
+/// <summary>TunnelIAMMember is the Schema for the TunnelIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TunnelIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TunnelIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TunnelIAMMemberList";
+    public const string KubeGroup = "iap.gcp.m.upbound.io";
+    public const string KubePluralName = "tunneliammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TunnelIAMMember> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TunnelIAMMemberSpecForProviderCondition
@@ -243,30 +269,4 @@ public partial class V1beta1TunnelIAMMember : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>TunnelIAMMemberStatus defines the observed state of TunnelIAMMember.</summary>
     [JsonPropertyName("status")]
     public V1beta1TunnelIAMMemberStatus? Status { get; set; }
-}
-
-/// <summary>TunnelIAMMember is the Schema for the TunnelIAMMembers API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TunnelIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TunnelIAMMember>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TunnelIAMMemberList";
-    public const string KubeGroup = "iap.gcp.m.upbound.io";
-    public const string KubePluralName = "tunneliammembers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TunnelIAMMember> Items { get; set; }
 }

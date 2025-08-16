@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.certificatemanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CertificateManagerCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1CertificateManagerCertificate>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CertificateManagerCertificateList";
+    public const string KubeGroup = "certificatemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "certificatemanagercertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1CertificateManagerCertificate> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecManagedAuthorizationAttemptInfo
+public partial class V1alpha1CertificateManagerCertificateSpecManagedAuthorizationAttemptInfo
 {
     /// <summary>Human readable explanation for reaching the state. Provided to help address the configuration issues. Not guaranteed to be stable. For programmatic access use 'failure_reason' field.</summary>
     [JsonPropertyName("details")]
@@ -37,7 +57,7 @@ public partial class CertificateManagerCertificateSpecManagedAuthorizationAttemp
 
 /// <summary>Authorizations that will be used for performing domain authorization. Either issuanceConfig or dnsAuthorizations should be specified, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecManagedDnsAuthorizationsRefs
+public partial class V1alpha1CertificateManagerCertificateSpecManagedDnsAuthorizationsRefs
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/global/dnsAuthorizations/{{value}}`, where {{value}} is the `name` field of a `CertificateManagerDNSAuthorization` resource.</summary>
     [JsonPropertyName("external")]
@@ -54,7 +74,7 @@ public partial class CertificateManagerCertificateSpecManagedDnsAuthorizationsRe
 
 /// <summary>Only the `external` field is supported to configure the reference.  Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI certificates in the format projects/*/locations/*/certificateIssuanceConfigs/*. If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa. Either issuanceConfig or dnsAuthorizations should be specified, but not both.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecManagedIssuanceConfigRef
+public partial class V1alpha1CertificateManagerCertificateSpecManagedIssuanceConfigRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/locations/{{location}}/certificateIssuanceConfigs/{{name}}`, where {{value}} is the `name` field of a `CertificateManagerCertificateIssuanceConfig` resource.</summary>
     [JsonPropertyName("external")]
@@ -71,7 +91,7 @@ public partial class CertificateManagerCertificateSpecManagedIssuanceConfigRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecManagedProvisioningIssue
+public partial class V1alpha1CertificateManagerCertificateSpecManagedProvisioningIssue
 {
     /// <summary>Human readable explanation about the issue. Provided to help address the configuration issues. Not guaranteed to be stable. For programmatic access use 'reason' field.</summary>
     [JsonPropertyName("details")]
@@ -84,15 +104,15 @@ public partial class CertificateManagerCertificateSpecManagedProvisioningIssue
 
 /// <summary>Immutable. Configuration and state of a Managed Certificate. Certificate Manager provisions and renews Managed Certificates automatically, for as long as it's authorized to do so.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecManaged
+public partial class V1alpha1CertificateManagerCertificateSpecManaged
 {
     /// <summary>Detailed state of the latest authorization attempt for each domain specified for this Managed Certificate.</summary>
     [JsonPropertyName("authorizationAttemptInfo")]
-    public IList<CertificateManagerCertificateSpecManagedAuthorizationAttemptInfo>? AuthorizationAttemptInfo { get; set; }
+    public IList<V1alpha1CertificateManagerCertificateSpecManagedAuthorizationAttemptInfo>? AuthorizationAttemptInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("dnsAuthorizationsRefs")]
-    public IList<CertificateManagerCertificateSpecManagedDnsAuthorizationsRefs>? DnsAuthorizationsRefs { get; set; }
+    public IList<V1alpha1CertificateManagerCertificateSpecManagedDnsAuthorizationsRefs>? DnsAuthorizationsRefs { get; set; }
 
     /// <summary>Immutable. The domains for which a managed SSL certificate will be generated. Wildcard domains are only supported with DNS challenge resolution.</summary>
     [JsonPropertyName("domains")]
@@ -100,11 +120,11 @@ public partial class CertificateManagerCertificateSpecManaged
 
     /// <summary>Only the `external` field is supported to configure the reference.  Immutable. The resource name for a CertificateIssuanceConfig used to configure private PKI certificates in the format projects/*/locations/*/certificateIssuanceConfigs/*. If this field is not set, the certificates will instead be publicly signed as documented at https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs#caa. Either issuanceConfig or dnsAuthorizations should be specified, but not both.</summary>
     [JsonPropertyName("issuanceConfigRef")]
-    public CertificateManagerCertificateSpecManagedIssuanceConfigRef? IssuanceConfigRef { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecManagedIssuanceConfigRef? IssuanceConfigRef { get; set; }
 
     /// <summary>Information about issues with provisioning this Managed Certificate.</summary>
     [JsonPropertyName("provisioningIssue")]
-    public IList<CertificateManagerCertificateSpecManagedProvisioningIssue>? ProvisioningIssue { get; set; }
+    public IList<V1alpha1CertificateManagerCertificateSpecManagedProvisioningIssue>? ProvisioningIssue { get; set; }
 
     /// <summary>A state of this Managed Certificate.</summary>
     [JsonPropertyName("state")]
@@ -113,7 +133,7 @@ public partial class CertificateManagerCertificateSpecManaged
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecProjectRef
+public partial class V1alpha1CertificateManagerCertificateSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -130,7 +150,7 @@ public partial class CertificateManagerCertificateSpecProjectRef
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedCertificatePemValueFromSecretKeyRef
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedCertificatePemValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -143,16 +163,16 @@ public partial class CertificateManagerCertificateSpecSelfManagedCertificatePemV
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedCertificatePemValueFrom
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedCertificatePemValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public CertificateManagerCertificateSpecSelfManagedCertificatePemValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedCertificatePemValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>DEPRECATED. `certificate_pem` is deprecated. Use `pem_certificate` instead. Immutable. The certificate chain in PEM-encoded form.  Leaf certificate comes first, followed by intermediate ones if any.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedCertificatePem
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedCertificatePem
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -160,12 +180,12 @@ public partial class CertificateManagerCertificateSpecSelfManagedCertificatePem
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public CertificateManagerCertificateSpecSelfManagedCertificatePemValueFrom? ValueFrom { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedCertificatePemValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFromSecretKeyRef
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -178,16 +198,16 @@ public partial class CertificateManagerCertificateSpecSelfManagedPemPrivateKeyVa
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFrom
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Immutable. The private key of the leaf certificate in PEM-encoded form.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedPemPrivateKey
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedPemPrivateKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -195,12 +215,12 @@ public partial class CertificateManagerCertificateSpecSelfManagedPemPrivateKey
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFrom? ValueFrom { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedPemPrivateKeyValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFromSecretKeyRef
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -213,16 +233,16 @@ public partial class CertificateManagerCertificateSpecSelfManagedPrivateKeyPemVa
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFrom
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>DEPRECATED. `private_key_pem` is deprecated. Use `pem_private_key` instead. Immutable. The private key of the leaf certificate in PEM-encoded form.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManagedPrivateKeyPem
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManagedPrivateKeyPem
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -230,16 +250,16 @@ public partial class CertificateManagerCertificateSpecSelfManagedPrivateKeyPem
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFrom? ValueFrom { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedPrivateKeyPemValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Immutable. Certificate data for a SelfManaged Certificate. SelfManaged Certificates are uploaded by the user. Updating such certificates before they expire remains the user's responsibility.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpecSelfManaged
+public partial class V1alpha1CertificateManagerCertificateSpecSelfManaged
 {
     /// <summary>DEPRECATED. `certificate_pem` is deprecated. Use `pem_certificate` instead. Immutable. The certificate chain in PEM-encoded form.  Leaf certificate comes first, followed by intermediate ones if any.</summary>
     [JsonPropertyName("certificatePem")]
-    public CertificateManagerCertificateSpecSelfManagedCertificatePem? CertificatePem { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedCertificatePem? CertificatePem { get; set; }
 
     /// <summary>Immutable. The certificate chain in PEM-encoded form.  Leaf certificate comes first, followed by intermediate ones if any.</summary>
     [JsonPropertyName("pemCertificate")]
@@ -247,16 +267,16 @@ public partial class CertificateManagerCertificateSpecSelfManaged
 
     /// <summary>Immutable. The private key of the leaf certificate in PEM-encoded form.</summary>
     [JsonPropertyName("pemPrivateKey")]
-    public CertificateManagerCertificateSpecSelfManagedPemPrivateKey? PemPrivateKey { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedPemPrivateKey? PemPrivateKey { get; set; }
 
     /// <summary>DEPRECATED. `private_key_pem` is deprecated. Use `pem_private_key` instead. Immutable. The private key of the leaf certificate in PEM-encoded form.</summary>
     [JsonPropertyName("privateKeyPem")]
-    public CertificateManagerCertificateSpecSelfManagedPrivateKeyPem? PrivateKeyPem { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManagedPrivateKeyPem? PrivateKeyPem { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateSpec
+public partial class V1alpha1CertificateManagerCertificateSpec
 {
     /// <summary>A human-readable description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -268,11 +288,11 @@ public partial class CertificateManagerCertificateSpec
 
     /// <summary>Immutable. Configuration and state of a Managed Certificate. Certificate Manager provisions and renews Managed Certificates automatically, for as long as it's authorized to do so.</summary>
     [JsonPropertyName("managed")]
-    public CertificateManagerCertificateSpecManaged? Managed { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecManaged? Managed { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public CertificateManagerCertificateSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -284,12 +304,12 @@ public partial class CertificateManagerCertificateSpec
 
     /// <summary>Immutable. Certificate data for a SelfManaged Certificate. SelfManaged Certificates are uploaded by the user. Updating such certificates before they expire remains the user's responsibility.</summary>
     [JsonPropertyName("selfManaged")]
-    public CertificateManagerCertificateSpecSelfManaged? SelfManaged { get; set; }
+    public V1alpha1CertificateManagerCertificateSpecSelfManaged? SelfManaged { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateStatusConditions
+public partial class V1alpha1CertificateManagerCertificateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -314,11 +334,11 @@ public partial class CertificateManagerCertificateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificateStatus
+public partial class V1alpha1CertificateManagerCertificateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<CertificateManagerCertificateStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1CertificateManagerCertificateStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -327,25 +347,30 @@ public partial class CertificateManagerCertificateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CertificateManagerCertificate
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CertificateManagerCertificate : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CertificateManagerCertificateSpec>, IStatus<V1alpha1CertificateManagerCertificateStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CertificateManagerCertificate";
+    public const string KubeGroup = "certificatemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "certificatemanagercertificates";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public CertificateManagerCertificateMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public CertificateManagerCertificateSpec Spec { get; set; }
+    public V1alpha1CertificateManagerCertificateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public CertificateManagerCertificateStatus? Status { get; set; }
+    public V1alpha1CertificateManagerCertificateStatus? Status { get; set; }
 }

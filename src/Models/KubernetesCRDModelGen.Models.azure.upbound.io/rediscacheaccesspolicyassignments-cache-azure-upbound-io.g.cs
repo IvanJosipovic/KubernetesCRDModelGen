@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.upbound.io;
+/// <summary>RedisCacheAccessPolicyAssignment is the Schema for the RedisCacheAccessPolicyAssignments API. Manages a Redis Cache Access Policy Assignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisCacheAccessPolicyAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCacheAccessPolicyAssignment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisCacheAccessPolicyAssignmentList";
+    public const string KubeGroup = "cache.azure.upbound.io";
+    public const string KubePluralName = "rediscacheaccesspolicyassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisCacheAccessPolicyAssignment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheAccessPolicyAssignmentSpecForProviderRedisCacheIdRefPolicy
@@ -277,30 +303,4 @@ public partial class V1beta1RedisCacheAccessPolicyAssignment : IKubernetesObject
     /// <summary>RedisCacheAccessPolicyAssignmentStatus defines the observed state of RedisCacheAccessPolicyAssignment.</summary>
     [JsonPropertyName("status")]
     public V1beta1RedisCacheAccessPolicyAssignmentStatus? Status { get; set; }
-}
-
-/// <summary>RedisCacheAccessPolicyAssignment is the Schema for the RedisCacheAccessPolicyAssignments API. Manages a Redis Cache Access Policy Assignment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RedisCacheAccessPolicyAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCacheAccessPolicyAssignment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RedisCacheAccessPolicyAssignmentList";
-    public const string KubeGroup = "cache.azure.upbound.io";
-    public const string KubePluralName = "rediscacheaccesspolicyassignments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RedisCacheAccessPolicyAssignment> Items { get; set; }
 }

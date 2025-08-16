@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.m.upbound.io;
+/// <summary>SpringCloudCustomizedAccelerator is the Schema for the SpringCloudCustomizedAccelerators API. Manages a Spring Cloud Customized Accelerator.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpringCloudCustomizedAcceleratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudCustomizedAccelerator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpringCloudCustomizedAcceleratorList";
+    public const string KubeGroup = "appplatform.azure.m.upbound.io";
+    public const string KubePluralName = "springcloudcustomizedaccelerators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpringCloudCustomizedAccelerator> Items { get; set; }
+}
+
 /// <summary>Specifies the password of git repository basic auth.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudCustomizedAcceleratorSpecForProviderGitRepositoryBasicAuthPasswordSecretRef
@@ -579,30 +605,4 @@ public partial class V1beta1SpringCloudCustomizedAccelerator : IKubernetesObject
     /// <summary>SpringCloudCustomizedAcceleratorStatus defines the observed state of SpringCloudCustomizedAccelerator.</summary>
     [JsonPropertyName("status")]
     public V1beta1SpringCloudCustomizedAcceleratorStatus? Status { get; set; }
-}
-
-/// <summary>SpringCloudCustomizedAccelerator is the Schema for the SpringCloudCustomizedAccelerators API. Manages a Spring Cloud Customized Accelerator.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SpringCloudCustomizedAcceleratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudCustomizedAccelerator>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SpringCloudCustomizedAcceleratorList";
-    public const string KubeGroup = "appplatform.azure.m.upbound.io";
-    public const string KubePluralName = "springcloudcustomizedaccelerators";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SpringCloudCustomizedAccelerator> Items { get; set; }
 }

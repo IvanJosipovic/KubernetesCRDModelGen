@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.gcp.m.upbound.io;
+/// <summary>PolicyTag is the Schema for the PolicyTags API. Denotes one policy tag in a taxonomy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PolicyTagList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicyTag>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PolicyTagList";
+    public const string KubeGroup = "datacatalog.gcp.m.upbound.io";
+    public const string KubePluralName = "policytags";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PolicyTag> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicyTagSpecForProviderParentPolicyTagRefPolicy
@@ -492,30 +518,4 @@ public partial class V1beta1PolicyTag : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>PolicyTagStatus defines the observed state of PolicyTag.</summary>
     [JsonPropertyName("status")]
     public V1beta1PolicyTagStatus? Status { get; set; }
-}
-
-/// <summary>PolicyTag is the Schema for the PolicyTags API. Denotes one policy tag in a taxonomy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PolicyTagList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicyTag>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PolicyTagList";
-    public const string KubeGroup = "datacatalog.gcp.m.upbound.io";
-    public const string KubePluralName = "policytags";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PolicyTag> Items { get; set; }
 }

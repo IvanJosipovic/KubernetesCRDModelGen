@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfig.aws.upbound.io;
+/// <summary>ConfigurationProfile is the Schema for the ConfigurationProfiles API. Provides an AppConfig Configuration Profile resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConfigurationProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConfigurationProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConfigurationProfileList";
+    public const string KubeGroup = "appconfig.aws.upbound.io";
+    public const string KubePluralName = "configurationprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConfigurationProfile> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigurationProfileSpecForProviderApplicationIdRefPolicy
@@ -622,30 +648,4 @@ public partial class V1beta1ConfigurationProfile : IKubernetesObject<V1ObjectMet
     /// <summary>ConfigurationProfileStatus defines the observed state of ConfigurationProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConfigurationProfileStatus? Status { get; set; }
-}
-
-/// <summary>ConfigurationProfile is the Schema for the ConfigurationProfiles API. Provides an AppConfig Configuration Profile resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConfigurationProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConfigurationProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConfigurationProfileList";
-    public const string KubeGroup = "appconfig.aws.upbound.io";
-    public const string KubePluralName = "configurationprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ConfigurationProfile> Items { get; set; }
 }

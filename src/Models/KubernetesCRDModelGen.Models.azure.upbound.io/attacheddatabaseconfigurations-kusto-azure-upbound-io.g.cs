@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.upbound.io;
+/// <summary>AttachedDatabaseConfiguration is the Schema for the AttachedDatabaseConfigurations API. Manages Kusto / Data Explorer Attached Database Configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AttachedDatabaseConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AttachedDatabaseConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AttachedDatabaseConfigurationList";
+    public const string KubeGroup = "kusto.azure.upbound.io";
+    public const string KubePluralName = "attacheddatabaseconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AttachedDatabaseConfiguration> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachedDatabaseConfigurationSpecForProviderClusterNameRefPolicy
@@ -880,30 +906,4 @@ public partial class V1beta1AttachedDatabaseConfiguration : IKubernetesObject<V1
     /// <summary>AttachedDatabaseConfigurationStatus defines the observed state of AttachedDatabaseConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1AttachedDatabaseConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>AttachedDatabaseConfiguration is the Schema for the AttachedDatabaseConfigurations API. Manages Kusto / Data Explorer Attached Database Configuration</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AttachedDatabaseConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AttachedDatabaseConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AttachedDatabaseConfigurationList";
-    public const string KubeGroup = "kusto.azure.upbound.io";
-    public const string KubePluralName = "attacheddatabaseconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AttachedDatabaseConfiguration> Items { get; set; }
 }

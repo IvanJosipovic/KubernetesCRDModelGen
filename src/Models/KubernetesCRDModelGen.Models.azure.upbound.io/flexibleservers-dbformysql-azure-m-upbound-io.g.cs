@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbformysql.azure.m.upbound.io;
+/// <summary>FlexibleServer is the Schema for the FlexibleServers API. Manages a MySQL Flexible Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FlexibleServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FlexibleServer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FlexibleServerList";
+    public const string KubeGroup = "dbformysql.azure.m.upbound.io";
+    public const string KubePluralName = "flexibleservers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FlexibleServer> Items { get; set; }
+}
+
 /// <summary>The Password associated with the administrator_login for the MySQL Flexible Server.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlexibleServerSpecForProviderAdministratorPasswordSecretRef
@@ -1093,30 +1119,4 @@ public partial class V1beta1FlexibleServer : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>FlexibleServerStatus defines the observed state of FlexibleServer.</summary>
     [JsonPropertyName("status")]
     public V1beta1FlexibleServerStatus? Status { get; set; }
-}
-
-/// <summary>FlexibleServer is the Schema for the FlexibleServers API. Manages a MySQL Flexible Server.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FlexibleServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FlexibleServer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FlexibleServerList";
-    public const string KubeGroup = "dbformysql.azure.m.upbound.io";
-    public const string KubePluralName = "flexibleservers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FlexibleServer> Items { get; set; }
 }

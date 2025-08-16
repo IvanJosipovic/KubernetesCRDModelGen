@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gamelift.aws.upbound.io;
+/// <summary>Script is the Schema for the Scripts API. Provides a GameLift Script resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ScriptList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Script>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ScriptList";
+    public const string KubeGroup = "gamelift.aws.upbound.io";
+    public const string KubePluralName = "scripts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Script> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScriptSpecForProviderStorageLocationBucketRefPolicy
@@ -692,30 +718,4 @@ public partial class V1beta1Script : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>ScriptStatus defines the observed state of Script.</summary>
     [JsonPropertyName("status")]
     public V1beta1ScriptStatus? Status { get; set; }
-}
-
-/// <summary>Script is the Schema for the Scripts API. Provides a GameLift Script resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ScriptList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Script>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ScriptList";
-    public const string KubeGroup = "gamelift.aws.upbound.io";
-    public const string KubePluralName = "scripts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Script> Items { get; set; }
 }

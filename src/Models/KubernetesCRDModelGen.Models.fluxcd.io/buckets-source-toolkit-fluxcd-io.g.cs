@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+/// <summary>Bucket is the Schema for the buckets API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1BucketList : IKubernetesObject<V1ListMeta>, IItems<V1Bucket>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "BucketList";
+    public const string KubeGroup = "source.toolkit.fluxcd.io";
+    public const string KubePluralName = "buckets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Bucket> Items { get; set; }
+}
+
 /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the bucket. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.  This field is only supported for the `generic` provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BucketSpecCertSecretRef
@@ -254,30 +280,4 @@ public partial class V1Bucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1BucketS
     /// <summary>BucketStatus records the observed state of a Bucket.</summary>
     [JsonPropertyName("status")]
     public V1BucketStatus? Status { get; set; }
-}
-
-/// <summary>Bucket is the Schema for the buckets API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1BucketList : IKubernetesObject<V1ListMeta>, IItems<V1Bucket>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "BucketList";
-    public const string KubeGroup = "source.toolkit.fluxcd.io";
-    public const string KubePluralName = "buckets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1Bucket> Items { get; set; }
 }

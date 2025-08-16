@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.inspector.aws.m.upbound.io;
+/// <summary>ResourceGroup is the Schema for the ResourceGroups API. Provides an Amazon Inspector Classic Resource Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceGroupList";
+    public const string KubeGroup = "inspector.aws.m.upbound.io";
+    public const string KubePluralName = "resourcegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupSpecForProvider
@@ -172,30 +198,4 @@ public partial class V1beta1ResourceGroup : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>ResourceGroupStatus defines the observed state of ResourceGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResourceGroupStatus? Status { get; set; }
-}
-
-/// <summary>ResourceGroup is the Schema for the ResourceGroups API. Provides an Amazon Inspector Classic Resource Group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResourceGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResourceGroupList";
-    public const string KubeGroup = "inspector.aws.m.upbound.io";
-    public const string KubePluralName = "resourcegroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ResourceGroup> Items { get; set; }
 }

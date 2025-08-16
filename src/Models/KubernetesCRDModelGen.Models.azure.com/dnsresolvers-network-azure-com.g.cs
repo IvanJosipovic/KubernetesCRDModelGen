@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20220701.DnsResolver Generator information: - Generated from: /dnsresolver/resource-manager/Microsoft.Network/stable/2022-07-01/dnsresolver.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220701storageDnsResolverList : IKubernetesObject<V1ListMeta>, IItems<V1api20220701storageDnsResolver>
+{
+    public const string KubeApiVersion = "v1api20220701storage";
+    public const string KubeKind = "DnsResolverList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "dnsresolvers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220701storageDnsResolver> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220701storageDnsResolverSpecOperatorSpecConfigMapExpressions
@@ -307,30 +333,4 @@ public partial class V1api20220701storageDnsResolver : IKubernetesObject<V1Objec
     /// <summary>Storage version of v1api20220701.DnsResolver_STATUS Describes a DNS resolver.</summary>
     [JsonPropertyName("status")]
     public V1api20220701storageDnsResolverStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20220701.DnsResolver Generator information: - Generated from: /dnsresolver/resource-manager/Microsoft.Network/stable/2022-07-01/dnsresolver.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsResolvers/{dnsResolverName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220701storageDnsResolverList : IKubernetesObject<V1ListMeta>, IItems<V1api20220701storageDnsResolver>
-{
-    public const string KubeApiVersion = "v1api20220701storage";
-    public const string KubeKind = "DnsResolverList";
-    public const string KubeGroup = "network.azure.com";
-    public const string KubePluralName = "dnsresolvers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20220701storageDnsResolver> Items { get; set; }
 }

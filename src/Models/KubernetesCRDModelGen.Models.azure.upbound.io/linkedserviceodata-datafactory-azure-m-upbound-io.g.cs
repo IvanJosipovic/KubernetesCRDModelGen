@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+/// <summary>LinkedServiceOData is the Schema for the LinkedServiceODatas API. Manages a Linked Service (connection) between a Database and Azure Data Factory through OData protocol.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkedServiceODataList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceOData>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkedServiceODataList";
+    public const string KubeGroup = "datafactory.azure.m.upbound.io";
+    public const string KubePluralName = "linkedserviceodata";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinkedServiceOData> Items { get; set; }
+}
+
 /// <summary>The password associated with the username, which can be used to authenticate to the OData endpoint.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceODataSpecForProviderBasicAuthenticationPasswordSecretRef
@@ -373,30 +399,4 @@ public partial class V1beta1LinkedServiceOData : IKubernetesObject<V1ObjectMeta>
     /// <summary>LinkedServiceODataStatus defines the observed state of LinkedServiceOData.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceODataStatus? Status { get; set; }
-}
-
-/// <summary>LinkedServiceOData is the Schema for the LinkedServiceODatas API. Manages a Linked Service (connection) between a Database and Azure Data Factory through OData protocol.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinkedServiceODataList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceOData>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinkedServiceODataList";
-    public const string KubeGroup = "datafactory.azure.m.upbound.io";
-    public const string KubePluralName = "linkedserviceodata";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LinkedServiceOData> Items { get; set; }
 }

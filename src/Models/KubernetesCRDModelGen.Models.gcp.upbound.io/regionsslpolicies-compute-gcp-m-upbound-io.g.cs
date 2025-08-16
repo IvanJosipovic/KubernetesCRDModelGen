@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+/// <summary>RegionSSLPolicy is the Schema for the RegionSSLPolicys API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegionSSLPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionSSLPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegionSSLPolicyList";
+    public const string KubeGroup = "compute.gcp.m.upbound.io";
+    public const string KubePluralName = "regionsslpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegionSSLPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSSLPolicySpecForProvider
@@ -232,30 +258,4 @@ public partial class V1beta1RegionSSLPolicy : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>RegionSSLPolicyStatus defines the observed state of RegionSSLPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegionSSLPolicyStatus? Status { get; set; }
-}
-
-/// <summary>RegionSSLPolicy is the Schema for the RegionSSLPolicys API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegionSSLPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionSSLPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegionSSLPolicyList";
-    public const string KubeGroup = "compute.gcp.m.upbound.io";
-    public const string KubePluralName = "regionsslpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegionSSLPolicy> Items { get; set; }
 }

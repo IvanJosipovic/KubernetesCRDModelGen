@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>WebApplicationFirewallPolicy is the Schema for the WebApplicationFirewallPolicys API. Manages a Azure Web Application Firewall Policy instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WebApplicationFirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WebApplicationFirewallPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WebApplicationFirewallPolicyList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "webapplicationfirewallpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WebApplicationFirewallPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebApplicationFirewallPolicySpecForProviderCustomRulesMatchConditionsMatchVariables
@@ -1103,30 +1129,4 @@ public partial class V1beta1WebApplicationFirewallPolicy : IKubernetesObject<V1O
     /// <summary>WebApplicationFirewallPolicyStatus defines the observed state of WebApplicationFirewallPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1WebApplicationFirewallPolicyStatus? Status { get; set; }
-}
-
-/// <summary>WebApplicationFirewallPolicy is the Schema for the WebApplicationFirewallPolicys API. Manages a Azure Web Application Firewall Policy instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WebApplicationFirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WebApplicationFirewallPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WebApplicationFirewallPolicyList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "webapplicationfirewallpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WebApplicationFirewallPolicy> Items { get; set; }
 }

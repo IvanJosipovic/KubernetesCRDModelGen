@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.m.upbound.io;
+/// <summary>BotAssociation is the Schema for the BotAssociations API. Associates an Amazon Connect instance to an Amazon Lex (V1) bot</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BotAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BotAssociationList";
+    public const string KubeGroup = "connect.aws.m.upbound.io";
+    public const string KubePluralName = "botassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BotAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotAssociationSpecForProviderInstanceIdRefPolicy
@@ -431,30 +457,4 @@ public partial class V1beta1BotAssociation : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>BotAssociationStatus defines the observed state of BotAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1BotAssociationStatus? Status { get; set; }
-}
-
-/// <summary>BotAssociation is the Schema for the BotAssociations API. Associates an Amazon Connect instance to an Amazon Lex (V1) bot</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BotAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BotAssociationList";
-    public const string KubeGroup = "connect.aws.m.upbound.io";
-    public const string KubePluralName = "botassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BotAssociation> Items { get; set; }
 }

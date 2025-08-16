@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.neptune.aws.upbound.io;
+/// <summary>ClusterEndpoint is the Schema for the ClusterEndpoints API. Provides an Neptune Cluster Endpoint Resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ClusterEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterEndpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ClusterEndpointList";
+    public const string KubeGroup = "neptune.aws.upbound.io";
+    public const string KubePluralName = "clusterendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ClusterEndpoint> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterEndpointSpecForProviderClusterIdentifierRefPolicy
@@ -377,30 +403,4 @@ public partial class V1beta1ClusterEndpoint : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>ClusterEndpointStatus defines the observed state of ClusterEndpoint.</summary>
     [JsonPropertyName("status")]
     public V1beta1ClusterEndpointStatus? Status { get; set; }
-}
-
-/// <summary>ClusterEndpoint is the Schema for the ClusterEndpoints API. Provides an Neptune Cluster Endpoint Resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ClusterEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterEndpoint>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ClusterEndpointList";
-    public const string KubeGroup = "neptune.aws.upbound.io";
-    public const string KubePluralName = "clusterendpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ClusterEndpoint> Items { get; set; }
 }

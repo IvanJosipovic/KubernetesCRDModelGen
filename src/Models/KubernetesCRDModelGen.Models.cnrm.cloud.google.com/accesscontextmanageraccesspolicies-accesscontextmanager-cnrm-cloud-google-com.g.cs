@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
+/// <summary>AccessContextManagerAccessPolicy is the Schema for the AccessContextManagerAccessPolicy API As per https://cloud.google.com/config-connector/docs/reference/resource-docs/accesscontextmanager/accesscontextmanageraccesspolicy#annotations the parent is organization which is stored in the cnrm.cloud.google.com/organization-id annotation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccessContextManagerAccessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessContextManagerAccessPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccessContextManagerAccessPolicyList";
+    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "accesscontextmanageraccesspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccessContextManagerAccessPolicy> Items { get; set; }
+}
+
 /// <summary>AccessContextManagerAccessPolicySpec defines the desired state of AccessContextManagerAccessPolicy</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessContextManagerAccessPolicySpec
@@ -99,30 +125,4 @@ public partial class V1beta1AccessContextManagerAccessPolicy : IKubernetesObject
     /// <summary>AccessContextManagerAccessPolicyStatus defines the config connector machine state of AccessContextManagerAccessPolicy</summary>
     [JsonPropertyName("status")]
     public V1beta1AccessContextManagerAccessPolicyStatus? Status { get; set; }
-}
-
-/// <summary>AccessContextManagerAccessPolicy is the Schema for the AccessContextManagerAccessPolicy API As per https://cloud.google.com/config-connector/docs/reference/resource-docs/accesscontextmanager/accesscontextmanageraccesspolicy#annotations the parent is organization which is stored in the cnrm.cloud.google.com/organization-id annotation.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccessContextManagerAccessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessContextManagerAccessPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccessContextManagerAccessPolicyList";
-    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
-    public const string KubePluralName = "accesscontextmanageraccesspolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AccessContextManagerAccessPolicy> Items { get; set; }
 }

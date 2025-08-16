@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>MainRouteTableAssociation is the Schema for the MainRouteTableAssociations API. Provides a resource for managing the main routing table of a VPC.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MainRouteTableAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MainRouteTableAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MainRouteTableAssociationList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "mainroutetableassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MainRouteTableAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MainRouteTableAssociationSpecForProviderRouteTableIdRefPolicy
@@ -472,30 +498,4 @@ public partial class V1beta1MainRouteTableAssociation : IKubernetesObject<V1Obje
     /// <summary>MainRouteTableAssociationStatus defines the observed state of MainRouteTableAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1MainRouteTableAssociationStatus? Status { get; set; }
-}
-
-/// <summary>MainRouteTableAssociation is the Schema for the MainRouteTableAssociations API. Provides a resource for managing the main routing table of a VPC.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MainRouteTableAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MainRouteTableAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MainRouteTableAssociationList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "mainroutetableassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MainRouteTableAssociation> Items { get; set; }
 }

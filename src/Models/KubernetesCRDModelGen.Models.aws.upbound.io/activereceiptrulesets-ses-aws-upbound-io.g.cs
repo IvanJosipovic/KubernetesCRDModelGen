@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.upbound.io;
+/// <summary>ActiveReceiptRuleSet is the Schema for the ActiveReceiptRuleSets API. Provides a resource to designate the active SES receipt rule set</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ActiveReceiptRuleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ActiveReceiptRuleSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ActiveReceiptRuleSetList";
+    public const string KubeGroup = "ses.aws.upbound.io";
+    public const string KubePluralName = "activereceiptrulesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ActiveReceiptRuleSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActiveReceiptRuleSetSpecForProvider
@@ -193,30 +219,4 @@ public partial class V1beta1ActiveReceiptRuleSet : IKubernetesObject<V1ObjectMet
     /// <summary>ActiveReceiptRuleSetStatus defines the observed state of ActiveReceiptRuleSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1ActiveReceiptRuleSetStatus? Status { get; set; }
-}
-
-/// <summary>ActiveReceiptRuleSet is the Schema for the ActiveReceiptRuleSets API. Provides a resource to designate the active SES receipt rule set</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ActiveReceiptRuleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ActiveReceiptRuleSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ActiveReceiptRuleSetList";
-    public const string KubeGroup = "ses.aws.upbound.io";
-    public const string KubePluralName = "activereceiptrulesets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ActiveReceiptRuleSet> Items { get; set; }
 }

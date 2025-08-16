@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.discoveryengine.cnrm.cloud.google.com;
+/// <summary>DiscoveryEngineEngine is the Schema for the DiscoveryEngineEngine API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DiscoveryEngineEngineList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DiscoveryEngineEngine>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DiscoveryEngineEngineList";
+    public const string KubeGroup = "discoveryengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "discoveryengineengines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DiscoveryEngineEngine> Items { get; set; }
+}
+
 /// <summary>The configurationt generate the Dialogflow agent that is associated to  this Engine.   Note that these configurations are one-time consumed by  and passed to Dialogflow service. It means they cannot be retrieved using  [EngineService.GetEngine][google.cloud.discoveryengine.v1.EngineService.GetEngine]  or  [EngineService.ListEngines][google.cloud.discoveryengine.v1.EngineService.ListEngines]  API after engine creation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineEngineSpecChatEngineConfigAgentCreationConfig
@@ -235,30 +261,4 @@ public partial class V1alpha1DiscoveryEngineEngine : IKubernetesObject<V1ObjectM
     /// <summary>DiscoveryEngineEngineStatus defines the config connector machine state of DiscoveryEngineEngine</summary>
     [JsonPropertyName("status")]
     public V1alpha1DiscoveryEngineEngineStatus? Status { get; set; }
-}
-
-/// <summary>DiscoveryEngineEngine is the Schema for the DiscoveryEngineEngine API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DiscoveryEngineEngineList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DiscoveryEngineEngine>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DiscoveryEngineEngineList";
-    public const string KubeGroup = "discoveryengine.cnrm.cloud.google.com";
-    public const string KubePluralName = "discoveryengineengines";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DiscoveryEngineEngine> Items { get; set; }
 }

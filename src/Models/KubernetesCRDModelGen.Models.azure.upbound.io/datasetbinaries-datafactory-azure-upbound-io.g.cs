@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DataSetBinary is the Schema for the DataSetBinarys API. Manages a Data Factory Binary Dataset inside an Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataSetBinaryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetBinary>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataSetBinaryList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "datasetbinaries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataSetBinary> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetBinarySpecForProviderAzureBlobStorageLocation
@@ -753,30 +779,4 @@ public partial class V1beta1DataSetBinary : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>DataSetBinaryStatus defines the observed state of DataSetBinary.</summary>
     [JsonPropertyName("status")]
     public V1beta1DataSetBinaryStatus? Status { get; set; }
-}
-
-/// <summary>DataSetBinary is the Schema for the DataSetBinarys API. Manages a Data Factory Binary Dataset inside an Azure Data Factory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataSetBinaryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetBinary>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataSetBinaryList";
-    public const string KubeGroup = "datafactory.azure.upbound.io";
-    public const string KubePluralName = "datasetbinaries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataSetBinary> Items { get; set; }
 }

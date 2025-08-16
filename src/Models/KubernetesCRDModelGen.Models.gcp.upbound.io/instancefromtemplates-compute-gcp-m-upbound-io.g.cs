@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+/// <summary>InstanceFromTemplate is the Schema for the InstanceFromTemplates API. Manages a VM instance resource within GCE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InstanceFromTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceFromTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InstanceFromTemplateList";
+    public const string KubeGroup = "compute.gcp.m.upbound.io";
+    public const string KubePluralName = "instancefromtemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1InstanceFromTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceFromTemplateSpecForProviderAdvancedMachineFeatures
@@ -2927,30 +2953,4 @@ public partial class V1beta1InstanceFromTemplate : IKubernetesObject<V1ObjectMet
     /// <summary>InstanceFromTemplateStatus defines the observed state of InstanceFromTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1InstanceFromTemplateStatus? Status { get; set; }
-}
-
-/// <summary>InstanceFromTemplate is the Schema for the InstanceFromTemplates API. Manages a VM instance resource within GCE.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1InstanceFromTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceFromTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "InstanceFromTemplateList";
-    public const string KubeGroup = "compute.gcp.m.upbound.io";
-    public const string KubePluralName = "instancefromtemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1InstanceFromTemplate> Items { get; set; }
 }

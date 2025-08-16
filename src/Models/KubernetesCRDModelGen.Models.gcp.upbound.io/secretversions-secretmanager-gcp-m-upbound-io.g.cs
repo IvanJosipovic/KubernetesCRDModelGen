@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.gcp.m.upbound.io;
+/// <summary>SecretVersion is the Schema for the SecretVersions API. A secret version resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretVersionList";
+    public const string KubeGroup = "secretmanager.gcp.m.upbound.io";
+    public const string KubePluralName = "secretversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecretVersion> Items { get; set; }
+}
+
 /// <summary>The secret data. Must be no larger than 64KiB.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecForProviderSecretDataSecretRef
@@ -414,30 +440,4 @@ public partial class V1beta1SecretVersion : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>SecretVersionStatus defines the observed state of SecretVersion.</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretVersionStatus? Status { get; set; }
-}
-
-/// <summary>SecretVersion is the Schema for the SecretVersions API. A secret version resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretVersion>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretVersionList";
-    public const string KubeGroup = "secretmanager.gcp.m.upbound.io";
-    public const string KubePluralName = "secretversions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SecretVersion> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+/// <summary>Schema is the Schema for the Schemas API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1SchemaList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Schema>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "SchemaList";
+    public const string KubeGroup = "unity.databricks.crossplane.io";
+    public const string KubePluralName = "schemas";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1Schema> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SchemaSpecForProvider
@@ -345,30 +371,4 @@ public partial class V1alpha1Schema : IKubernetesObject<V1ObjectMeta>, ISpec<V1a
     /// <summary>SchemaStatus defines the observed state of Schema.</summary>
     [JsonPropertyName("status")]
     public V1alpha1SchemaStatus? Status { get; set; }
-}
-
-/// <summary>Schema is the Schema for the Schemas API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SchemaList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Schema>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SchemaList";
-    public const string KubeGroup = "unity.databricks.crossplane.io";
-    public const string KubePluralName = "schemas";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1Schema> Items { get; set; }
 }

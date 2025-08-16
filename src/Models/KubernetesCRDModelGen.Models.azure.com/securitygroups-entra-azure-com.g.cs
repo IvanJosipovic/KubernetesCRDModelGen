@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.entra.azure.com;
+/// <summary>SecurityGroup is an Entra Security Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1SecurityGroupList : IKubernetesObject<V1ListMeta>, IItems<V1SecurityGroup>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "SecurityGroupList";
+    public const string KubeGroup = "entra.azure.com";
+    public const string KubePluralName = "securitygroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1SecurityGroup> Items { get; set; }
+}
+
 /// <summary>EntraID: The Entra ID of the group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1SecurityGroupSpecOperatorSpecConfigmapsEntraID
@@ -158,30 +184,4 @@ public partial class V1SecurityGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1SecurityGroupStatus? Status { get; set; }
-}
-
-/// <summary>SecurityGroup is an Entra Security Group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1SecurityGroupList : IKubernetesObject<V1ListMeta>, IItems<V1SecurityGroup>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "SecurityGroupList";
-    public const string KubeGroup = "entra.azure.com";
-    public const string KubePluralName = "securitygroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1SecurityGroup> Items { get; set; }
 }

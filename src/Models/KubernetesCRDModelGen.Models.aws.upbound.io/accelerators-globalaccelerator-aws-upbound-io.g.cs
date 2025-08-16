@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.globalaccelerator.aws.upbound.io;
+/// <summary>Accelerator is the Schema for the Accelerators API. Provides a Global Accelerator accelerator.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AcceleratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Accelerator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AcceleratorList";
+    public const string KubeGroup = "globalaccelerator.aws.upbound.io";
+    public const string KubePluralName = "accelerators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Accelerator> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AcceleratorSpecForProviderAttributes
@@ -329,30 +355,4 @@ public partial class V1beta1Accelerator : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>AcceleratorStatus defines the observed state of Accelerator.</summary>
     [JsonPropertyName("status")]
     public V1beta1AcceleratorStatus? Status { get; set; }
-}
-
-/// <summary>Accelerator is the Schema for the Accelerators API. Provides a Global Accelerator accelerator.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AcceleratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Accelerator>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AcceleratorList";
-    public const string KubeGroup = "globalaccelerator.aws.upbound.io";
-    public const string KubePluralName = "accelerators";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Accelerator> Items { get; set; }
 }

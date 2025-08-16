@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53resolver.aws.upbound.io;
+/// <summary>RuleAssociation is the Schema for the RuleAssociations API. Provides a Route53 Resolver rule association.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RuleAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RuleAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RuleAssociationList";
+    public const string KubeGroup = "route53resolver.aws.upbound.io";
+    public const string KubePluralName = "ruleassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RuleAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleAssociationSpecForProviderResolverRuleIdRefPolicy
@@ -469,30 +495,4 @@ public partial class V1beta1RuleAssociation : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>RuleAssociationStatus defines the observed state of RuleAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1RuleAssociationStatus? Status { get; set; }
-}
-
-/// <summary>RuleAssociation is the Schema for the RuleAssociations API. Provides a Route53 Resolver rule association.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RuleAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RuleAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RuleAssociationList";
-    public const string KubeGroup = "route53resolver.aws.upbound.io";
-    public const string KubePluralName = "ruleassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RuleAssociation> Items { get; set; }
 }

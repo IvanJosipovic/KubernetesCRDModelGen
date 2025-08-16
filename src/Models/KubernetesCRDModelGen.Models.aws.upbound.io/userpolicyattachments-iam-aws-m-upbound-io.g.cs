@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.aws.m.upbound.io;
+/// <summary>UserPolicyAttachment is the Schema for the UserPolicyAttachments API. Attaches a Managed IAM Policy to an IAM user</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserPolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserPolicyAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserPolicyAttachmentList";
+    public const string KubeGroup = "iam.aws.m.upbound.io";
+    public const string KubePluralName = "userpolicyattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1UserPolicyAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPolicyAttachmentSpecForProviderPolicyArnRefPolicy
@@ -460,30 +486,4 @@ public partial class V1beta1UserPolicyAttachment : IKubernetesObject<V1ObjectMet
     /// <summary>UserPolicyAttachmentStatus defines the observed state of UserPolicyAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1UserPolicyAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>UserPolicyAttachment is the Schema for the UserPolicyAttachments API. Attaches a Managed IAM Policy to an IAM user</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1UserPolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserPolicyAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "UserPolicyAttachmentList";
-    public const string KubeGroup = "iam.aws.m.upbound.io";
-    public const string KubePluralName = "userpolicyattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1UserPolicyAttachment> Items { get; set; }
 }

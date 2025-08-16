@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.essentialcontacts.gcp.m.upbound.io;
+/// <summary>Contact is the Schema for the Contacts API. A contact that will receive notifications from Google Cloud.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContactList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Contact>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContactList";
+    public const string KubeGroup = "essentialcontacts.gcp.m.upbound.io";
+    public const string KubePluralName = "contacts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Contact> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContactSpecForProvider
@@ -200,30 +226,4 @@ public partial class V1beta1Contact : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>ContactStatus defines the observed state of Contact.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContactStatus? Status { get; set; }
-}
-
-/// <summary>Contact is the Schema for the Contacts API. A contact that will receive notifications from Google Cloud.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContactList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Contact>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContactList";
-    public const string KubeGroup = "essentialcontacts.gcp.m.upbound.io";
-    public const string KubePluralName = "contacts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Contact> Items { get; set; }
 }

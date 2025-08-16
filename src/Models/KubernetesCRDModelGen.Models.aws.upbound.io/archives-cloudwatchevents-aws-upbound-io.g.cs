@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchevents.aws.upbound.io;
+/// <summary>Archive is the Schema for the Archives API. Provides an EventBridge event archive resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ArchiveList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Archive>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ArchiveList";
+    public const string KubeGroup = "cloudwatchevents.aws.upbound.io";
+    public const string KubePluralName = "archives";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Archive> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ArchiveSpecForProviderEventSourceArnRefPolicy
@@ -497,30 +523,4 @@ public partial class V1beta1Archive : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>ArchiveStatus defines the observed state of Archive.</summary>
     [JsonPropertyName("status")]
     public V1beta1ArchiveStatus? Status { get; set; }
-}
-
-/// <summary>Archive is the Schema for the Archives API. Provides an EventBridge event archive resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ArchiveList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Archive>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ArchiveList";
-    public const string KubeGroup = "cloudwatchevents.aws.upbound.io";
-    public const string KubePluralName = "archives";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Archive> Items { get; set; }
 }

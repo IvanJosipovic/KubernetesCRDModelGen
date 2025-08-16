@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gateway.networking.k8s.io;
+/// <summary>HTTPRoute provides a way to route HTTP requests. This includes the capability to match requests by hostname, path, header, or query param. Filters can be used to specify additional processing steps. Backends specify where matching requests should be routed.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1HTTPRouteList : IKubernetesObject<V1ListMeta>, IItems<V1HTTPRoute>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "HTTPRouteList";
+    public const string KubeGroup = "gateway.networking.k8s.io";
+    public const string KubePluralName = "httproutes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1HTTPRoute> Items { get; set; }
+}
+
 /// <summary>ParentReference identifies an API object (usually a Gateway) that can be considered a parent of this resource (usually a route). There are two kinds of parent resources with "Core" support:  * Gateway (Gateway conformance profile) * Service (Mesh conformance profile, ClusterIP Services only)  This API may be extended in the future to support additional kinds of parent resources.  The API object must be valid in the cluster; the Group and Kind must be registered in the cluster for this reference to be valid.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1HTTPRouteSpecParentRefs
@@ -827,30 +853,4 @@ public partial class V1HTTPRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1HTTP
     /// <summary>Status defines the current state of HTTPRoute.</summary>
     [JsonPropertyName("status")]
     public V1HTTPRouteStatus? Status { get; set; }
-}
-
-/// <summary>HTTPRoute provides a way to route HTTP requests. This includes the capability to match requests by hostname, path, header, or query param. Filters can be used to specify additional processing steps. Backends specify where matching requests should be routed.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1HTTPRouteList : IKubernetesObject<V1ListMeta>, IItems<V1HTTPRoute>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "HTTPRouteList";
-    public const string KubeGroup = "gateway.networking.k8s.io";
-    public const string KubePluralName = "httproutes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1HTTPRoute> Items { get; set; }
 }

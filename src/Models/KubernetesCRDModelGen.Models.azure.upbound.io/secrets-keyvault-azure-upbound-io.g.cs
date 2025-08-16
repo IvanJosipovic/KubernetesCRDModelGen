@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.upbound.io;
+/// <summary>Secret is the Schema for the Secrets API. Manages a Key Vault Secret.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Secret>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretList";
+    public const string KubeGroup = "keyvault.azure.upbound.io";
+    public const string KubePluralName = "secrets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Secret> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretSpecForProviderKeyVaultIdRefPolicy
@@ -451,30 +477,4 @@ public partial class V1beta1Secret : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>SecretStatus defines the observed state of Secret.</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretStatus? Status { get; set; }
-}
-
-/// <summary>Secret is the Schema for the Secrets API. Manages a Key Vault Secret.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Secret>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretList";
-    public const string KubeGroup = "keyvault.azure.upbound.io";
-    public const string KubePluralName = "secrets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Secret> Items { get; set; }
 }

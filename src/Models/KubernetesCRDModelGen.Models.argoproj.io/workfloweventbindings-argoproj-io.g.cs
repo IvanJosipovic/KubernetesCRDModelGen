@@ -10,6 +10,32 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.argoproj.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1WorkflowEventBindingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WorkflowEventBinding>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "WorkflowEventBindingList";
+    public const string KubeGroup = "argoproj.io";
+    public const string KubePluralName = "workfloweventbindings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1WorkflowEventBinding> Items { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowEventBindingSpecEvent
 {
     /// <summary></summary>
@@ -1214,30 +1240,4 @@ public partial class V1alpha1WorkflowEventBinding : IKubernetesObject<V1ObjectMe
     /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1alpha1WorkflowEventBindingSpec Spec { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WorkflowEventBindingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WorkflowEventBinding>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "WorkflowEventBindingList";
-    public const string KubeGroup = "argoproj.io";
-    public const string KubePluralName = "workfloweventbindings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1WorkflowEventBinding> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.com;
+/// <summary>Storage version of v1api20220801.Service Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimdeployment.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220801storageServiceList : IKubernetesObject<V1ListMeta>, IItems<V1api20220801storageService>
+{
+    public const string KubeApiVersion = "v1api20220801storage";
+    public const string KubeKind = "ServiceList";
+    public const string KubeGroup = "apimanagement.azure.com";
+    public const string KubePluralName = "services";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220801storageService> Items { get; set; }
+}
+
 /// <summary>PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in the location. Supported only for Premium SKU being deployed in Virtual Network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220801storageServiceSpecAdditionalLocationsPublicIpAddressReference
@@ -1329,30 +1355,4 @@ public partial class V1api20220801storageService : IKubernetesObject<V1ObjectMet
     /// <summary>Storage version of v1api20220801.Service_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220801storageServiceStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20220801.Service Generator information: - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimdeployment.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220801storageServiceList : IKubernetesObject<V1ListMeta>, IItems<V1api20220801storageService>
-{
-    public const string KubeApiVersion = "v1api20220801storage";
-    public const string KubeKind = "ServiceList";
-    public const string KubeGroup = "apimanagement.azure.com";
-    public const string KubePluralName = "services";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20220801storageService> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.privateca.gcp.m.upbound.io;
+/// <summary>CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CertificateTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CertificateTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CertificateTemplateList";
+    public const string KubeGroup = "privateca.gcp.m.upbound.io";
+    public const string KubePluralName = "certificatetemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CertificateTemplate> Items { get; set; }
+}
+
 /// <summary>Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateTemplateSpecForProviderIdentityConstraintsCelExpression
@@ -1098,30 +1124,4 @@ public partial class V1beta1CertificateTemplate : IKubernetesObject<V1ObjectMeta
     /// <summary>CertificateTemplateStatus defines the observed state of CertificateTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1CertificateTemplateStatus? Status { get; set; }
-}
-
-/// <summary>CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CertificateTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CertificateTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CertificateTemplateList";
-    public const string KubeGroup = "privateca.gcp.m.upbound.io";
-    public const string KubePluralName = "certificatetemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CertificateTemplate> Items { get; set; }
 }

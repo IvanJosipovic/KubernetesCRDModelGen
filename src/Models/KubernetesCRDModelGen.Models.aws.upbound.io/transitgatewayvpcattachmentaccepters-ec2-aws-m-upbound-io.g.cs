@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>TransitGatewayVPCAttachmentAccepter is the Schema for the TransitGatewayVPCAttachmentAccepters API. Manages the accepter's side of an EC2 Transit Gateway VPC Attachment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TransitGatewayVPCAttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayVPCAttachmentAccepter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TransitGatewayVPCAttachmentAccepterList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "transitgatewayvpcattachmentaccepters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TransitGatewayVPCAttachmentAccepter> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayVPCAttachmentAccepterSpecForProviderTransitGatewayAttachmentIdRefPolicy
@@ -384,30 +410,4 @@ public partial class V1beta1TransitGatewayVPCAttachmentAccepter : IKubernetesObj
     /// <summary>TransitGatewayVPCAttachmentAccepterStatus defines the observed state of TransitGatewayVPCAttachmentAccepter.</summary>
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayVPCAttachmentAccepterStatus? Status { get; set; }
-}
-
-/// <summary>TransitGatewayVPCAttachmentAccepter is the Schema for the TransitGatewayVPCAttachmentAccepters API. Manages the accepter's side of an EC2 Transit Gateway VPC Attachment</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TransitGatewayVPCAttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayVPCAttachmentAccepter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TransitGatewayVPCAttachmentAccepterList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "transitgatewayvpcattachmentaccepters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TransitGatewayVPCAttachmentAccepter> Items { get; set; }
 }

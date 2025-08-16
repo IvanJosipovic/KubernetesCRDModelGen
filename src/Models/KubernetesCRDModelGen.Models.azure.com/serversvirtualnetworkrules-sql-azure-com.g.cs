@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/VirtualNetworkRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/virtualNetworkRules/{virtualNetworkRuleName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20211101storageServersVirtualNetworkRuleList : IKubernetesObject<V1ListMeta>, IItems<V1api20211101storageServersVirtualNetworkRule>
+{
+    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeKind = "ServersVirtualNetworkRuleList";
+    public const string KubeGroup = "sql.azure.com";
+    public const string KubePluralName = "serversvirtualnetworkrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20211101storageServersVirtualNetworkRule> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersVirtualNetworkRuleSpecOperatorSpecConfigMapExpressions
@@ -224,30 +250,4 @@ public partial class V1api20211101storageServersVirtualNetworkRule : IKubernetes
     /// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersVirtualNetworkRuleStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20211101.ServersVirtualNetworkRule Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/VirtualNetworkRules.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/virtualNetworkRules/{virtualNetworkRuleName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageServersVirtualNetworkRuleList : IKubernetesObject<V1ListMeta>, IItems<V1api20211101storageServersVirtualNetworkRule>
-{
-    public const string KubeApiVersion = "v1api20211101storage";
-    public const string KubeKind = "ServersVirtualNetworkRuleList";
-    public const string KubeGroup = "sql.azure.com";
-    public const string KubePluralName = "serversvirtualnetworkrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20211101storageServersVirtualNetworkRule> Items { get; set; }
 }

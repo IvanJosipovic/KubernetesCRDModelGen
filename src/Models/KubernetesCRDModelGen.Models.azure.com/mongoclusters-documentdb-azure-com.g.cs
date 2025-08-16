@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Storage version of v1api20240701.MongoCluster Generator information: - Generated from: /mongocluster/resource-manager/Microsoft.DocumentDB/stable/2024-07-01/mongoCluster.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240701storageMongoClusterList : IKubernetesObject<V1ListMeta>, IItems<V1api20240701storageMongoCluster>
+{
+    public const string KubeApiVersion = "v1api20240701storage";
+    public const string KubeKind = "MongoClusterList";
+    public const string KubeGroup = "documentdb.azure.com";
+    public const string KubePluralName = "mongoclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240701storageMongoCluster> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240701storageMongoClusterSpecOperatorSpecConfigMapExpressions
@@ -682,30 +708,4 @@ public partial class V1api20240701storageMongoCluster : IKubernetesObject<V1Obje
     /// <summary>Storage version of v1api20240701.MongoCluster_STATUS Represents a mongo cluster resource.</summary>
     [JsonPropertyName("status")]
     public V1api20240701storageMongoClusterStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240701.MongoCluster Generator information: - Generated from: /mongocluster/resource-manager/Microsoft.DocumentDB/stable/2024-07-01/mongoCluster.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/mongoClusters/{mongoClusterName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240701storageMongoClusterList : IKubernetesObject<V1ListMeta>, IItems<V1api20240701storageMongoCluster>
-{
-    public const string KubeApiVersion = "v1api20240701storage";
-    public const string KubeKind = "MongoClusterList";
-    public const string KubeGroup = "documentdb.azure.com";
-    public const string KubePluralName = "mongoclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240701storageMongoCluster> Items { get; set; }
 }

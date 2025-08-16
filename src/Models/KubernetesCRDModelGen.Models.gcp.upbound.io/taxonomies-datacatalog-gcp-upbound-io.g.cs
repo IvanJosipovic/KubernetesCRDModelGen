@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.gcp.upbound.io;
+/// <summary>Taxonomy is the Schema for the Taxonomys API. A collection of policy tags that classify data along a common axis.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TaxonomyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Taxonomy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TaxonomyList";
+    public const string KubeGroup = "datacatalog.gcp.upbound.io";
+    public const string KubePluralName = "taxonomies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Taxonomy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaxonomySpecForProvider
@@ -233,30 +259,4 @@ public partial class V1beta1Taxonomy : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>TaxonomyStatus defines the observed state of Taxonomy.</summary>
     [JsonPropertyName("status")]
     public V1beta1TaxonomyStatus? Status { get; set; }
-}
-
-/// <summary>Taxonomy is the Schema for the Taxonomys API. A collection of policy tags that classify data along a common axis.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TaxonomyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Taxonomy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TaxonomyList";
-    public const string KubeGroup = "datacatalog.gcp.upbound.io";
-    public const string KubePluralName = "taxonomies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Taxonomy> Items { get; set; }
 }

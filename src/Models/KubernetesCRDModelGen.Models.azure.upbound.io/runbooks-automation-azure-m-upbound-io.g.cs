@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.automation.azure.m.upbound.io;
+/// <summary>RunBook is the Schema for the RunBooks API. Manages a Automation Runbook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RunBookList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RunBook>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RunBookList";
+    public const string KubeGroup = "automation.azure.m.upbound.io";
+    public const string KubePluralName = "runbooks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RunBook> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RunBookSpecForProviderAutomationAccountNameRefPolicy
@@ -993,30 +1019,4 @@ public partial class V1beta1RunBook : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>RunBookStatus defines the observed state of RunBook.</summary>
     [JsonPropertyName("status")]
     public V1beta1RunBookStatus? Status { get; set; }
-}
-
-/// <summary>RunBook is the Schema for the RunBooks API. Manages a Automation Runbook.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RunBookList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RunBook>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RunBookList";
-    public const string KubeGroup = "automation.azure.m.upbound.io";
-    public const string KubePluralName = "runbooks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RunBook> Items { get; set; }
 }

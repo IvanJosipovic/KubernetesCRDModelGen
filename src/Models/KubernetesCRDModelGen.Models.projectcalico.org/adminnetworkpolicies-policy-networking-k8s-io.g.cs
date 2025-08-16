@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.policy.networking.k8s.io;
+/// <summary>AdminNetworkPolicy is  a cluster level resource that is part of the AdminNetworkPolicy API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AdminNetworkPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AdminNetworkPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AdminNetworkPolicyList";
+    public const string KubeGroup = "policy.networking.k8s.io";
+    public const string KubePluralName = "adminnetworkpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AdminNetworkPolicy> Items { get; set; }
+}
+
 /// <summary>Port selects a port on a pod(s) based on number.   Support: Core</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AdminNetworkPolicySpecEgressPortsPortNumber
@@ -617,30 +643,4 @@ public partial class V1alpha1AdminNetworkPolicy : IKubernetesObject<V1ObjectMeta
     /// <summary>Status is the status to be reported by the implementation.</summary>
     [JsonPropertyName("status")]
     public V1alpha1AdminNetworkPolicyStatus? Status { get; set; }
-}
-
-/// <summary>AdminNetworkPolicy is  a cluster level resource that is part of the AdminNetworkPolicy API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1AdminNetworkPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AdminNetworkPolicy>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "AdminNetworkPolicyList";
-    public const string KubeGroup = "policy.networking.k8s.io";
-    public const string KubePluralName = "adminnetworkpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1AdminNetworkPolicy> Items { get; set; }
 }

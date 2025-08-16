@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigQueryJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryJob>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigQueryJobList";
+    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigQueryJob> Items { get; set; }
 }
 
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKeyRef
+public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,11 +53,11 @@ public partial class BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKey
 
 /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopyDestinationEncryptionConfiguration
+public partial class V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
+    public V1beta1BigQueryJobSpecCopyDestinationEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
 
     /// <summary>Describes the Cloud KMS encryption key version used to protect destination BigQuery table.</summary>
     [JsonPropertyName("kmsKeyVersion")]
@@ -46,7 +66,7 @@ public partial class BigQueryJobSpecCopyDestinationEncryptionConfiguration
 
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopyDestinationTableTableRef
+public partial class V1beta1BigQueryJobSpecCopyDestinationTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
     [JsonPropertyName("external")]
@@ -63,16 +83,16 @@ public partial class BigQueryJobSpecCopyDestinationTableTableRef
 
 /// <summary>Immutable. The destination table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopyDestinationTable
+public partial class V1beta1BigQueryJobSpecCopyDestinationTable
 {
     /// <summary>A reference to the table.</summary>
     [JsonPropertyName("tableRef")]
-    public BigQueryJobSpecCopyDestinationTableTableRef TableRef { get; set; }
+    public V1beta1BigQueryJobSpecCopyDestinationTableTableRef TableRef { get; set; }
 }
 
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopySourceTablesTableRef
+public partial class V1beta1BigQueryJobSpecCopySourceTablesTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
     [JsonPropertyName("external")]
@@ -89,16 +109,16 @@ public partial class BigQueryJobSpecCopySourceTablesTableRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopySourceTables
+public partial class V1beta1BigQueryJobSpecCopySourceTables
 {
     /// <summary>A reference to the table.</summary>
     [JsonPropertyName("tableRef")]
-    public BigQueryJobSpecCopySourceTablesTableRef TableRef { get; set; }
+    public V1beta1BigQueryJobSpecCopySourceTablesTableRef TableRef { get; set; }
 }
 
 /// <summary>Immutable. Copies a table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecCopy
+public partial class V1beta1BigQueryJobSpecCopy
 {
     /// <summary>Immutable. Specifies whether the job is allowed to create new tables. The following values are supported: CREATE_IF_NEEDED: If the table does not exist, BigQuery creates the table. CREATE_NEVER: The table must already exist. If it does not, a 'notFound' error is returned in the job result. Creation, truncation and append actions occur as one atomic update upon job completion Default value: "CREATE_NEVER" Possible values: ["CREATE_IF_NEEDED", "CREATE_NEVER"].</summary>
     [JsonPropertyName("createDisposition")]
@@ -106,15 +126,15 @@ public partial class BigQueryJobSpecCopy
 
     /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
     [JsonPropertyName("destinationEncryptionConfiguration")]
-    public BigQueryJobSpecCopyDestinationEncryptionConfiguration? DestinationEncryptionConfiguration { get; set; }
+    public V1beta1BigQueryJobSpecCopyDestinationEncryptionConfiguration? DestinationEncryptionConfiguration { get; set; }
 
     /// <summary>Immutable. The destination table.</summary>
     [JsonPropertyName("destinationTable")]
-    public BigQueryJobSpecCopyDestinationTable? DestinationTable { get; set; }
+    public V1beta1BigQueryJobSpecCopyDestinationTable? DestinationTable { get; set; }
 
     /// <summary>Immutable. Source tables to copy.</summary>
     [JsonPropertyName("sourceTables")]
-    public IList<BigQueryJobSpecCopySourceTables> SourceTables { get; set; }
+    public IList<V1beta1BigQueryJobSpecCopySourceTables> SourceTables { get; set; }
 
     /// <summary>Immutable. Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value: "WRITE_EMPTY" Possible values: ["WRITE_TRUNCATE", "WRITE_APPEND", "WRITE_EMPTY"].</summary>
     [JsonPropertyName("writeDisposition")]
@@ -123,7 +143,7 @@ public partial class BigQueryJobSpecCopy
 
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecExtractSourceTableTableRef
+public partial class V1beta1BigQueryJobSpecExtractSourceTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
     [JsonPropertyName("external")]
@@ -140,16 +160,16 @@ public partial class BigQueryJobSpecExtractSourceTableTableRef
 
 /// <summary>Immutable. A reference to the table being exported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecExtractSourceTable
+public partial class V1beta1BigQueryJobSpecExtractSourceTable
 {
     /// <summary>A reference to the table.</summary>
     [JsonPropertyName("tableRef")]
-    public BigQueryJobSpecExtractSourceTableTableRef TableRef { get; set; }
+    public V1beta1BigQueryJobSpecExtractSourceTableTableRef TableRef { get; set; }
 }
 
 /// <summary>Immutable. Configures an extract job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecExtract
+public partial class V1beta1BigQueryJobSpecExtract
 {
     /// <summary>Immutable. The compression type to use for exported files. Possible values include GZIP, DEFLATE, SNAPPY, and NONE. The default value is NONE. DEFLATE and SNAPPY are only supported for Avro.</summary>
     [JsonPropertyName("compression")]
@@ -173,7 +193,7 @@ public partial class BigQueryJobSpecExtract
 
     /// <summary>Immutable. A reference to the table being exported.</summary>
     [JsonPropertyName("sourceTable")]
-    public BigQueryJobSpecExtractSourceTable? SourceTable { get; set; }
+    public V1beta1BigQueryJobSpecExtractSourceTable? SourceTable { get; set; }
 
     /// <summary>Immutable. Whether to use logical types when extracting to AVRO format.</summary>
     [JsonPropertyName("useAvroLogicalTypes")]
@@ -182,7 +202,7 @@ public partial class BigQueryJobSpecExtract
 
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKeyRef
+public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -199,11 +219,11 @@ public partial class BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKey
 
 /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoadDestinationEncryptionConfiguration
+public partial class V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
+    public V1beta1BigQueryJobSpecLoadDestinationEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
 
     /// <summary>Describes the Cloud KMS encryption key version used to protect destination BigQuery table.</summary>
     [JsonPropertyName("kmsKeyVersion")]
@@ -212,7 +232,7 @@ public partial class BigQueryJobSpecLoadDestinationEncryptionConfiguration
 
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoadDestinationTableTableRef
+public partial class V1beta1BigQueryJobSpecLoadDestinationTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
     [JsonPropertyName("external")]
@@ -229,16 +249,16 @@ public partial class BigQueryJobSpecLoadDestinationTableTableRef
 
 /// <summary>Immutable. The destination table to load the data into.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoadDestinationTable
+public partial class V1beta1BigQueryJobSpecLoadDestinationTable
 {
     /// <summary>A reference to the table.</summary>
     [JsonPropertyName("tableRef")]
-    public BigQueryJobSpecLoadDestinationTableTableRef TableRef { get; set; }
+    public V1beta1BigQueryJobSpecLoadDestinationTableTableRef TableRef { get; set; }
 }
 
 /// <summary>Immutable. Parquet Options for load and make external tables.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoadParquetOptions
+public partial class V1beta1BigQueryJobSpecLoadParquetOptions
 {
     /// <summary>Immutable. If sourceFormat is set to PARQUET, indicates whether to use schema inference specifically for Parquet LIST logical type.</summary>
     [JsonPropertyName("enableListInference")]
@@ -251,7 +271,7 @@ public partial class BigQueryJobSpecLoadParquetOptions
 
 /// <summary>Immutable. Time-based partitioning specification for the destination table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoadTimePartitioning
+public partial class V1beta1BigQueryJobSpecLoadTimePartitioning
 {
     /// <summary>Immutable. Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.</summary>
     [JsonPropertyName("expirationMs")]
@@ -268,7 +288,7 @@ public partial class BigQueryJobSpecLoadTimePartitioning
 
 /// <summary>Immutable. Configures a load job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecLoad
+public partial class V1beta1BigQueryJobSpecLoad
 {
     /// <summary>Immutable. Accept rows that are missing trailing optional columns. The missing values are treated as nulls. If false, records with missing trailing columns are treated as bad records, and if there are too many bad records, an invalid error is returned in the job result. The default value is false. Only applicable to CSV, ignored for other formats.</summary>
     [JsonPropertyName("allowJaggedRows")]
@@ -288,11 +308,11 @@ public partial class BigQueryJobSpecLoad
 
     /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
     [JsonPropertyName("destinationEncryptionConfiguration")]
-    public BigQueryJobSpecLoadDestinationEncryptionConfiguration? DestinationEncryptionConfiguration { get; set; }
+    public V1beta1BigQueryJobSpecLoadDestinationEncryptionConfiguration? DestinationEncryptionConfiguration { get; set; }
 
     /// <summary>Immutable. The destination table to load the data into.</summary>
     [JsonPropertyName("destinationTable")]
-    public BigQueryJobSpecLoadDestinationTable DestinationTable { get; set; }
+    public V1beta1BigQueryJobSpecLoadDestinationTable DestinationTable { get; set; }
 
     /// <summary>Immutable. The character encoding of the data. The supported values are UTF-8 or ISO-8859-1. The default value is UTF-8. BigQuery decodes the data after the raw, binary data has been split using the values of the quote and fieldDelimiter properties.</summary>
     [JsonPropertyName("encoding")]
@@ -320,7 +340,7 @@ public partial class BigQueryJobSpecLoad
 
     /// <summary>Immutable. Parquet Options for load and make external tables.</summary>
     [JsonPropertyName("parquetOptions")]
-    public BigQueryJobSpecLoadParquetOptions? ParquetOptions { get; set; }
+    public V1beta1BigQueryJobSpecLoadParquetOptions? ParquetOptions { get; set; }
 
     /// <summary>Immutable. If sourceFormat is set to "DATASTORE_BACKUP", indicates which entity properties to load into BigQuery from a Cloud Datastore backup. Property names are case sensitive and must be top-level properties. If no properties are specified, BigQuery loads all properties. If any named property isn't found in the Cloud Datastore backup, an invalid error is returned in the job result.</summary>
     [JsonPropertyName("projectionFields")]
@@ -348,7 +368,7 @@ public partial class BigQueryJobSpecLoad
 
     /// <summary>Immutable. Time-based partitioning specification for the destination table.</summary>
     [JsonPropertyName("timePartitioning")]
-    public BigQueryJobSpecLoadTimePartitioning? TimePartitioning { get; set; }
+    public V1beta1BigQueryJobSpecLoadTimePartitioning? TimePartitioning { get; set; }
 
     /// <summary>Immutable. Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value: "WRITE_EMPTY" Possible values: ["WRITE_TRUNCATE", "WRITE_APPEND", "WRITE_EMPTY"].</summary>
     [JsonPropertyName("writeDisposition")]
@@ -357,7 +377,7 @@ public partial class BigQueryJobSpecLoad
 
 /// <summary>A reference to the dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryDefaultDatasetDatasetRef
+public partial class V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryDataset` resource.</summary>
     [JsonPropertyName("external")]
@@ -374,16 +394,16 @@ public partial class BigQueryJobSpecQueryDefaultDatasetDatasetRef
 
 /// <summary>Immutable. Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryDefaultDataset
+public partial class V1beta1BigQueryJobSpecQueryDefaultDataset
 {
     /// <summary>A reference to the dataset.</summary>
     [JsonPropertyName("datasetRef")]
-    public BigQueryJobSpecQueryDefaultDatasetDatasetRef DatasetRef { get; set; }
+    public V1beta1BigQueryJobSpecQueryDefaultDatasetDatasetRef DatasetRef { get; set; }
 }
 
 /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKeyRef
+public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -400,11 +420,11 @@ public partial class BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKe
 
 /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryDestinationEncryptionConfiguration
+public partial class V1beta1BigQueryJobSpecQueryDestinationEncryptionConfiguration
 {
     /// <summary>Describes the Cloud KMS encryption key that will be used to protect destination BigQuery table. The BigQuery Service Account associated with your project requires access to this encryption key.</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
+    public V1beta1BigQueryJobSpecQueryDestinationEncryptionConfigurationKmsKeyRef KmsKeyRef { get; set; }
 
     /// <summary>Describes the Cloud KMS encryption key version used to protect destination BigQuery table.</summary>
     [JsonPropertyName("kmsKeyVersion")]
@@ -413,7 +433,7 @@ public partial class BigQueryJobSpecQueryDestinationEncryptionConfiguration
 
 /// <summary>A reference to the table.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryDestinationTableTableRef
+public partial class V1beta1BigQueryJobSpecQueryDestinationTableTableRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `BigQueryTable` resource.</summary>
     [JsonPropertyName("external")]
@@ -430,16 +450,16 @@ public partial class BigQueryJobSpecQueryDestinationTableTableRef
 
 /// <summary>Immutable. Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryDestinationTable
+public partial class V1beta1BigQueryJobSpecQueryDestinationTable
 {
     /// <summary>A reference to the table.</summary>
     [JsonPropertyName("tableRef")]
-    public BigQueryJobSpecQueryDestinationTableTableRef TableRef { get; set; }
+    public V1beta1BigQueryJobSpecQueryDestinationTableTableRef TableRef { get; set; }
 }
 
 /// <summary>Immutable. Options controlling the execution of scripts.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryScriptOptions
+public partial class V1beta1BigQueryJobSpecQueryScriptOptions
 {
     /// <summary>Immutable. Determines which statement in the script represents the "key result", used to populate the schema and query results of the script job. Possible values: ["LAST", "FIRST_SELECT"].</summary>
     [JsonPropertyName("keyResultStatement")]
@@ -456,7 +476,7 @@ public partial class BigQueryJobSpecQueryScriptOptions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQueryUserDefinedFunctionResources
+public partial class V1beta1BigQueryJobSpecQueryUserDefinedFunctionResources
 {
     /// <summary>Immutable. An inline resource that contains code for a user-defined function (UDF). Providing a inline code resource is equivalent to providing a URI for a file containing the same code.</summary>
     [JsonPropertyName("inlineCode")]
@@ -469,7 +489,7 @@ public partial class BigQueryJobSpecQueryUserDefinedFunctionResources
 
 /// <summary>Immutable. Configures a query job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpecQuery
+public partial class V1beta1BigQueryJobSpecQuery
 {
     /// <summary>Immutable. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance. Requires destinationTable to be set. For standard SQL queries, this flag is ignored and large results are always allowed. However, you must still set destinationTable when result size exceeds the allowed maximum response size.</summary>
     [JsonPropertyName("allowLargeResults")]
@@ -481,15 +501,15 @@ public partial class BigQueryJobSpecQuery
 
     /// <summary>Immutable. Specifies the default dataset to use for unqualified table names in the query. Note that this does not alter behavior of unqualified dataset names.</summary>
     [JsonPropertyName("defaultDataset")]
-    public BigQueryJobSpecQueryDefaultDataset? DefaultDataset { get; set; }
+    public V1beta1BigQueryJobSpecQueryDefaultDataset? DefaultDataset { get; set; }
 
     /// <summary>Immutable. Custom encryption configuration (e.g., Cloud KMS keys).</summary>
     [JsonPropertyName("destinationEncryptionConfiguration")]
-    public BigQueryJobSpecQueryDestinationEncryptionConfiguration? DestinationEncryptionConfiguration { get; set; }
+    public V1beta1BigQueryJobSpecQueryDestinationEncryptionConfiguration? DestinationEncryptionConfiguration { get; set; }
 
     /// <summary>Immutable. Describes the table where the query results should be stored. This property must be set for large results that exceed the maximum response size. For queries that produce anonymous (cached) results, this field will be populated by BigQuery.</summary>
     [JsonPropertyName("destinationTable")]
-    public BigQueryJobSpecQueryDestinationTable? DestinationTable { get; set; }
+    public V1beta1BigQueryJobSpecQueryDestinationTable? DestinationTable { get; set; }
 
     /// <summary>Immutable. If true and query uses legacy SQL dialect, flattens all nested and repeated fields in the query results. allowLargeResults must be true if this is set to false. For standard SQL queries, this flag is ignored and results are never flattened.</summary>
     [JsonPropertyName("flattenResults")]
@@ -521,7 +541,7 @@ public partial class BigQueryJobSpecQuery
 
     /// <summary>Immutable. Options controlling the execution of scripts.</summary>
     [JsonPropertyName("scriptOptions")]
-    public BigQueryJobSpecQueryScriptOptions? ScriptOptions { get; set; }
+    public V1beta1BigQueryJobSpecQueryScriptOptions? ScriptOptions { get; set; }
 
     /// <summary>Immutable. Specifies whether to use BigQuery's legacy SQL dialect for this query. The default value is true. If set to false, the query will use BigQuery's standard SQL.</summary>
     [JsonPropertyName("useLegacySql")]
@@ -533,7 +553,7 @@ public partial class BigQueryJobSpecQuery
 
     /// <summary>Immutable. Describes user-defined function resources used in the query.</summary>
     [JsonPropertyName("userDefinedFunctionResources")]
-    public IList<BigQueryJobSpecQueryUserDefinedFunctionResources>? UserDefinedFunctionResources { get; set; }
+    public IList<V1beta1BigQueryJobSpecQueryUserDefinedFunctionResources>? UserDefinedFunctionResources { get; set; }
 
     /// <summary>Immutable. Specifies the action that occurs if the destination table already exists. The following values are supported: WRITE_TRUNCATE: If the table already exists, BigQuery overwrites the table data and uses the schema from the query result. WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in the job result. Each action is atomic and only occurs if BigQuery is able to complete the job successfully. Creation, truncation and append actions occur as one atomic update upon job completion. Default value: "WRITE_EMPTY" Possible values: ["WRITE_TRUNCATE", "WRITE_APPEND", "WRITE_EMPTY"].</summary>
     [JsonPropertyName("writeDisposition")]
@@ -542,15 +562,15 @@ public partial class BigQueryJobSpecQuery
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobSpec
+public partial class V1beta1BigQueryJobSpec
 {
     /// <summary>Immutable. Copies a table.</summary>
     [JsonPropertyName("copy")]
-    public BigQueryJobSpecCopy? Copy { get; set; }
+    public V1beta1BigQueryJobSpecCopy? Copy { get; set; }
 
     /// <summary>Immutable. Configures an extract job.</summary>
     [JsonPropertyName("extract")]
-    public BigQueryJobSpecExtract? Extract { get; set; }
+    public V1beta1BigQueryJobSpecExtract? Extract { get; set; }
 
     /// <summary>Immutable. Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.</summary>
     [JsonPropertyName("jobTimeoutMs")]
@@ -558,7 +578,7 @@ public partial class BigQueryJobSpec
 
     /// <summary>Immutable. Configures a load job.</summary>
     [JsonPropertyName("load")]
-    public BigQueryJobSpecLoad? Load { get; set; }
+    public V1beta1BigQueryJobSpecLoad? Load { get; set; }
 
     /// <summary>Immutable. The geographic location of the job. The default value is US.</summary>
     [JsonPropertyName("location")]
@@ -566,7 +586,7 @@ public partial class BigQueryJobSpec
 
     /// <summary>Immutable. Configures a query job.</summary>
     [JsonPropertyName("query")]
-    public BigQueryJobSpecQuery? Query { get; set; }
+    public V1beta1BigQueryJobSpecQuery? Query { get; set; }
 
     /// <summary>Immutable. Optional. The jobId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -575,7 +595,7 @@ public partial class BigQueryJobSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobStatusConditions
+public partial class V1beta1BigQueryJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -600,7 +620,7 @@ public partial class BigQueryJobStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobStatusStatusErrorResult
+public partial class V1beta1BigQueryJobStatusStatusErrorResult
 {
     /// <summary>Specifies where the error occurred, if present.</summary>
     [JsonPropertyName("location")]
@@ -617,7 +637,7 @@ public partial class BigQueryJobStatusStatusErrorResult
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobStatusStatusErrors
+public partial class V1beta1BigQueryJobStatusStatusErrors
 {
     /// <summary>Specifies where the error occurred, if present.</summary>
     [JsonPropertyName("location")]
@@ -634,15 +654,15 @@ public partial class BigQueryJobStatusStatusErrors
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobStatusStatus
+public partial class V1beta1BigQueryJobStatusStatus
 {
     /// <summary>Final error result of the job. If present, indicates that the job has completed and was unsuccessful.</summary>
     [JsonPropertyName("errorResult")]
-    public IList<BigQueryJobStatusStatusErrorResult>? ErrorResult { get; set; }
+    public IList<V1beta1BigQueryJobStatusStatusErrorResult>? ErrorResult { get; set; }
 
     /// <summary>The first errors encountered during the running of the job. The final message includes the number of errors that caused the process to stop. Errors here do not necessarily mean that the job has not completed or was unsuccessful.</summary>
     [JsonPropertyName("errors")]
-    public IList<BigQueryJobStatusStatusErrors>? Errors { get; set; }
+    public IList<V1beta1BigQueryJobStatusStatusErrors>? Errors { get; set; }
 
     /// <summary>Running state of the job. Valid states include 'PENDING', 'RUNNING', and 'DONE'.</summary>
     [JsonPropertyName("state")]
@@ -651,11 +671,11 @@ public partial class BigQueryJobStatusStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJobStatus
+public partial class V1beta1BigQueryJobStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BigQueryJobStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1BigQueryJobStatusConditions>? Conditions { get; set; }
 
     /// <summary>The type of the job.</summary>
     [JsonPropertyName("jobType")]
@@ -667,7 +687,7 @@ public partial class BigQueryJobStatus
 
     /// <summary>The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.</summary>
     [JsonPropertyName("status")]
-    public IList<BigQueryJobStatusStatus>? Status { get; set; }
+    public IList<V1beta1BigQueryJobStatusStatus>? Status { get; set; }
 
     /// <summary>Email address of the user who ran the job.</summary>
     [JsonPropertyName("userEmail")]
@@ -676,25 +696,30 @@ public partial class BigQueryJobStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryJob
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigQueryJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigQueryJobSpec>, IStatus<V1beta1BigQueryJobStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigQueryJob";
+    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryjobs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigQueryJobMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BigQueryJobSpec? Spec { get; set; }
+    public V1beta1BigQueryJobSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BigQueryJobStatus? Status { get; set; }
+    public V1beta1BigQueryJobStatus? Status { get; set; }
 }

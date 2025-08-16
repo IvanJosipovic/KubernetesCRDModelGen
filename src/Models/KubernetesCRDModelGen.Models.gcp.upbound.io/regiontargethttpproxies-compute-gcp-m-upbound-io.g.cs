@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+/// <summary>RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegionTargetHTTPProxyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionTargetHTTPProxy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegionTargetHTTPProxyList";
+    public const string KubeGroup = "compute.gcp.m.upbound.io";
+    public const string KubePluralName = "regiontargethttpproxies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegionTargetHTTPProxy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionTargetHTTPProxySpecForProviderUrlMapRefPolicy
@@ -360,30 +386,4 @@ public partial class V1beta1RegionTargetHTTPProxy : IKubernetesObject<V1ObjectMe
     /// <summary>RegionTargetHTTPProxyStatus defines the observed state of RegionTargetHTTPProxy.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegionTargetHTTPProxyStatus? Status { get; set; }
-}
-
-/// <summary>RegionTargetHTTPProxy is the Schema for the RegionTargetHTTPProxys API. Represents a RegionTargetHttpProxy resource, which is used by one or more forwarding rules to route incoming HTTP requests to a URL map.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegionTargetHTTPProxyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionTargetHTTPProxy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegionTargetHTTPProxyList";
-    public const string KubeGroup = "compute.gcp.m.upbound.io";
-    public const string KubePluralName = "regiontargethttpproxies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegionTargetHTTPProxy> Items { get; set; }
 }

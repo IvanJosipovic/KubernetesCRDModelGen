@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.postgresql.cnpg.io;
+/// <summary>Publication is the Schema for the publications API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1PublicationList : IKubernetesObject<V1ListMeta>, IItems<V1Publication>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "PublicationList";
+    public const string KubeGroup = "postgresql.cnpg.io";
+    public const string KubePluralName = "publications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Publication> Items { get; set; }
+}
+
 /// <summary>The name of the PostgreSQL cluster that identifies the "publisher"</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1PublicationSpecCluster
@@ -138,30 +164,4 @@ public partial class V1Publication : IKubernetesObject<V1ObjectMeta>, ISpec<V1Pu
     /// <summary>PublicationStatus defines the observed state of Publication</summary>
     [JsonPropertyName("status")]
     public V1PublicationStatus? Status { get; set; }
-}
-
-/// <summary>Publication is the Schema for the publications API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1PublicationList : IKubernetesObject<V1ListMeta>, IItems<V1Publication>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "PublicationList";
-    public const string KubeGroup = "postgresql.cnpg.io";
-    public const string KubePluralName = "publications";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1Publication> Items { get; set; }
 }

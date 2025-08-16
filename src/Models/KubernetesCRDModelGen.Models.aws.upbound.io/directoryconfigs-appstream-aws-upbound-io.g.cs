@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appstream.aws.upbound.io;
+/// <summary>DirectoryConfig is the Schema for the DirectoryConfigs API. Provides an AppStream Directory Config</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DirectoryConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DirectoryConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DirectoryConfigList";
+    public const string KubeGroup = "appstream.aws.upbound.io";
+    public const string KubePluralName = "directoryconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DirectoryConfig> Items { get; set; }
+}
+
 /// <summary>Password for the account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DirectoryConfigSpecForProviderServiceAccountCredentialsAccountPasswordSecretRef
@@ -286,30 +312,4 @@ public partial class V1beta1DirectoryConfig : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>DirectoryConfigStatus defines the observed state of DirectoryConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1DirectoryConfigStatus? Status { get; set; }
-}
-
-/// <summary>DirectoryConfig is the Schema for the DirectoryConfigs API. Provides an AppStream Directory Config</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DirectoryConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DirectoryConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DirectoryConfigList";
-    public const string KubeGroup = "appstream.aws.upbound.io";
-    public const string KubePluralName = "directoryconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DirectoryConfig> Items { get; set; }
 }

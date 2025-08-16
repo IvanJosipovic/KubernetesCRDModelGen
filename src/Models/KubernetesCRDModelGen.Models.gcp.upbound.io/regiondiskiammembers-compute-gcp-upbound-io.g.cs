@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>RegionDiskIAMMember is the Schema for the RegionDiskIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegionDiskIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionDiskIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegionDiskIAMMemberList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "regiondiskiammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegionDiskIAMMember> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionDiskIAMMemberSpecForProviderCondition
@@ -424,30 +450,4 @@ public partial class V1beta1RegionDiskIAMMember : IKubernetesObject<V1ObjectMeta
     /// <summary>RegionDiskIAMMemberStatus defines the observed state of RegionDiskIAMMember.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegionDiskIAMMemberStatus? Status { get; set; }
-}
-
-/// <summary>RegionDiskIAMMember is the Schema for the RegionDiskIAMMembers API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegionDiskIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionDiskIAMMember>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegionDiskIAMMemberList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "regiondiskiammembers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegionDiskIAMMember> Items { get; set; }
 }

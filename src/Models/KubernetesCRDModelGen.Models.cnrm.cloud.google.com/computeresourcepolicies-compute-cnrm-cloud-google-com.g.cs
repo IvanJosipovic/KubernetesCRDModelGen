@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicyMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeResourcePolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeResourcePolicy>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeResourcePolicyList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeresourcepolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeResourcePolicy> Items { get; set; }
 }
 
 /// <summary>Immutable. Replication consistency group for asynchronous disk replication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecDiskConsistencyGroupPolicy
+public partial class V1beta1ComputeResourcePolicySpecDiskConsistencyGroupPolicy
 {
     /// <summary>Immutable. Enable disk consistency on the resource policy.</summary>
     [JsonPropertyName("enabled")]
@@ -25,7 +45,7 @@ public partial class ComputeResourcePolicySpecDiskConsistencyGroupPolicy
 
 /// <summary>Immutable. Resource policy for instances used for placement configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecGroupPlacementPolicy
+public partial class V1beta1ComputeResourcePolicySpecGroupPlacementPolicy
 {
     /// <summary>Immutable. The number of availability domains instances will be spread across. If two instances are in different availability domain, they will not be put in the same low latency network.</summary>
     [JsonPropertyName("availabilityDomainCount")]
@@ -46,7 +66,7 @@ public partial class ComputeResourcePolicySpecGroupPlacementPolicy
 
 /// <summary>Immutable. Specifies the schedule for starting instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecInstanceSchedulePolicyVmStartSchedule
+public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStartSchedule
 {
     /// <summary>Immutable. Specifies the frequency for the operation, using the unix-cron format.</summary>
     [JsonPropertyName("schedule")]
@@ -55,7 +75,7 @@ public partial class ComputeResourcePolicySpecInstanceSchedulePolicyVmStartSched
 
 /// <summary>Immutable. Specifies the schedule for stopping instances.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedule
+public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedule
 {
     /// <summary>Immutable. Specifies the frequency for the operation, using the unix-cron format.</summary>
     [JsonPropertyName("schedule")]
@@ -64,7 +84,7 @@ public partial class ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedu
 
 /// <summary>Immutable. Resource policy for scheduling instance operations.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecInstanceSchedulePolicy
+public partial class V1beta1ComputeResourcePolicySpecInstanceSchedulePolicy
 {
     /// <summary>Immutable. The expiration time of the schedule. The timestamp is an RFC3339 string.</summary>
     [JsonPropertyName("expirationTime")]
@@ -80,16 +100,16 @@ public partial class ComputeResourcePolicySpecInstanceSchedulePolicy
 
     /// <summary>Immutable. Specifies the schedule for starting instances.</summary>
     [JsonPropertyName("vmStartSchedule")]
-    public ComputeResourcePolicySpecInstanceSchedulePolicyVmStartSchedule? VmStartSchedule { get; set; }
+    public V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStartSchedule? VmStartSchedule { get; set; }
 
     /// <summary>Immutable. Specifies the schedule for stopping instances.</summary>
     [JsonPropertyName("vmStopSchedule")]
-    public ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedule? VmStopSchedule { get; set; }
+    public V1beta1ComputeResourcePolicySpecInstanceSchedulePolicyVmStopSchedule? VmStopSchedule { get; set; }
 }
 
 /// <summary>Immutable. Retention policy applied to snapshots created by this resource policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyRetentionPolicy
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyRetentionPolicy
 {
     /// <summary>Immutable. Maximum age of the snapshot that is allowed to be kept.</summary>
     [JsonPropertyName("maxRetentionDays")]
@@ -102,7 +122,7 @@ public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyRetentionPol
 
 /// <summary>Immutable. The policy will execute every nth day at the specified time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleDailySchedule
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleDailySchedule
 {
     /// <summary>Immutable. Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle. Days in cycle for snapshot schedule policy must be 1.</summary>
     [JsonPropertyName("daysInCycle")]
@@ -115,7 +135,7 @@ public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleDail
 
 /// <summary>Immutable. The policy will execute every nth hour starting at the specified time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleHourlySchedule
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleHourlySchedule
 {
     /// <summary>Immutable. The number of hours between snapshots.</summary>
     [JsonPropertyName("hoursInCycle")]
@@ -128,7 +148,7 @@ public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleHour
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks
 {
     /// <summary>Immutable. The day of the week to create the snapshot. e.g. MONDAY Possible values: ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"].</summary>
     [JsonPropertyName("day")]
@@ -141,33 +161,33 @@ public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeek
 
 /// <summary>Immutable. Allows specifying a snapshot time for each day of the week.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklySchedule
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklySchedule
 {
     /// <summary>Immutable. May contain up to seven (one for each day of the week) snapshot times.</summary>
     [JsonPropertyName("dayOfWeeks")]
-    public IList<ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks> DayOfWeeks { get; set; }
+    public IList<V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeeks> DayOfWeeks { get; set; }
 }
 
 /// <summary>Immutable. Contains one of an 'hourlySchedule', 'dailySchedule', or 'weeklySchedule'.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicySchedule
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySchedule
 {
     /// <summary>Immutable. The policy will execute every nth day at the specified time.</summary>
     [JsonPropertyName("dailySchedule")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleDailySchedule? DailySchedule { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleDailySchedule? DailySchedule { get; set; }
 
     /// <summary>Immutable. The policy will execute every nth hour starting at the specified time.</summary>
     [JsonPropertyName("hourlySchedule")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleHourlySchedule? HourlySchedule { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleHourlySchedule? HourlySchedule { get; set; }
 
     /// <summary>Immutable. Allows specifying a snapshot time for each day of the week.</summary>
     [JsonPropertyName("weeklySchedule")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklySchedule? WeeklySchedule { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyScheduleWeeklySchedule? WeeklySchedule { get; set; }
 }
 
 /// <summary>Immutable. Properties with which the snapshots are created, such as labels.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProperties
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProperties
 {
     /// <summary>Immutable. Creates the new snapshot in the snapshot chain labeled with the specified name. The chain name must be 1-63 characters long and comply with RFC1035.</summary>
     [JsonPropertyName("chainName")]
@@ -188,24 +208,24 @@ public partial class ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProp
 
 /// <summary>Immutable. Policy for creating snapshots of persistent disks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpecSnapshotSchedulePolicy
+public partial class V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicy
 {
     /// <summary>Immutable. Retention policy applied to snapshots created by this resource policy.</summary>
     [JsonPropertyName("retentionPolicy")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicyRetentionPolicy? RetentionPolicy { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicyRetentionPolicy? RetentionPolicy { get; set; }
 
     /// <summary>Immutable. Contains one of an 'hourlySchedule', 'dailySchedule', or 'weeklySchedule'.</summary>
     [JsonPropertyName("schedule")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicySchedule Schedule { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySchedule Schedule { get; set; }
 
     /// <summary>Immutable. Properties with which the snapshots are created, such as labels.</summary>
     [JsonPropertyName("snapshotProperties")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProperties? SnapshotProperties { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicySnapshotProperties? SnapshotProperties { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicySpec
+public partial class V1beta1ComputeResourcePolicySpec
 {
     /// <summary>Immutable. An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -213,15 +233,15 @@ public partial class ComputeResourcePolicySpec
 
     /// <summary>Immutable. Replication consistency group for asynchronous disk replication.</summary>
     [JsonPropertyName("diskConsistencyGroupPolicy")]
-    public ComputeResourcePolicySpecDiskConsistencyGroupPolicy? DiskConsistencyGroupPolicy { get; set; }
+    public V1beta1ComputeResourcePolicySpecDiskConsistencyGroupPolicy? DiskConsistencyGroupPolicy { get; set; }
 
     /// <summary>Immutable. Resource policy for instances used for placement configuration.</summary>
     [JsonPropertyName("groupPlacementPolicy")]
-    public ComputeResourcePolicySpecGroupPlacementPolicy? GroupPlacementPolicy { get; set; }
+    public V1beta1ComputeResourcePolicySpecGroupPlacementPolicy? GroupPlacementPolicy { get; set; }
 
     /// <summary>Immutable. Resource policy for scheduling instance operations.</summary>
     [JsonPropertyName("instanceSchedulePolicy")]
-    public ComputeResourcePolicySpecInstanceSchedulePolicy? InstanceSchedulePolicy { get; set; }
+    public V1beta1ComputeResourcePolicySpecInstanceSchedulePolicy? InstanceSchedulePolicy { get; set; }
 
     /// <summary>Immutable. Region where resource policy resides.</summary>
     [JsonPropertyName("region")]
@@ -233,12 +253,12 @@ public partial class ComputeResourcePolicySpec
 
     /// <summary>Immutable. Policy for creating snapshots of persistent disks.</summary>
     [JsonPropertyName("snapshotSchedulePolicy")]
-    public ComputeResourcePolicySpecSnapshotSchedulePolicy? SnapshotSchedulePolicy { get; set; }
+    public V1beta1ComputeResourcePolicySpecSnapshotSchedulePolicy? SnapshotSchedulePolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicyStatusConditions
+public partial class V1beta1ComputeResourcePolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -263,11 +283,11 @@ public partial class ComputeResourcePolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicyStatus
+public partial class V1beta1ComputeResourcePolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeResourcePolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeResourcePolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -280,25 +300,30 @@ public partial class ComputeResourcePolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeResourcePolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeResourcePolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeResourcePolicySpec>, IStatus<V1beta1ComputeResourcePolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeResourcePolicy";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeresourcepolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeResourcePolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeResourcePolicySpec Spec { get; set; }
+    public V1beta1ComputeResourcePolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeResourcePolicyStatus? Status { get; set; }
+    public V1beta1ComputeResourcePolicyStatus? Status { get; set; }
 }

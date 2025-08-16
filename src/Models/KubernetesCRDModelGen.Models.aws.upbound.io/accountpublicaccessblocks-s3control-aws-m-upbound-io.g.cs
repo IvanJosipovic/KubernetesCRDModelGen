@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.m.upbound.io;
+/// <summary>AccountPublicAccessBlock is the Schema for the AccountPublicAccessBlocks API. Manages S3 account-level Public Access Block Configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccountPublicAccessBlockList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccountPublicAccessBlock>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccountPublicAccessBlockList";
+    public const string KubeGroup = "s3control.aws.m.upbound.io";
+    public const string KubePluralName = "accountpublicaccessblocks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccountPublicAccessBlock> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountPublicAccessBlockSpecForProvider
@@ -208,30 +234,4 @@ public partial class V1beta1AccountPublicAccessBlock : IKubernetesObject<V1Objec
     /// <summary>AccountPublicAccessBlockStatus defines the observed state of AccountPublicAccessBlock.</summary>
     [JsonPropertyName("status")]
     public V1beta1AccountPublicAccessBlockStatus? Status { get; set; }
-}
-
-/// <summary>AccountPublicAccessBlock is the Schema for the AccountPublicAccessBlocks API. Manages S3 account-level Public Access Block Configuration</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccountPublicAccessBlockList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccountPublicAccessBlock>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccountPublicAccessBlockList";
-    public const string KubeGroup = "s3control.aws.m.upbound.io";
-    public const string KubePluralName = "accountpublicaccessblocks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AccountPublicAccessBlock> Items { get; set; }
 }

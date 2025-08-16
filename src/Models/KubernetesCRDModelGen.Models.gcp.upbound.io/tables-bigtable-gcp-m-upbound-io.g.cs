@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.gcp.m.upbound.io;
+/// <summary>Table is the Schema for the Tables API. Creates a Google Cloud Bigtable table inside an instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Table>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TableList";
+    public const string KubeGroup = "bigtable.gcp.m.upbound.io";
+    public const string KubePluralName = "tables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Table> Items { get; set; }
+}
+
 /// <summary>Defines an automated backup policy for a table, specified by Retention Period and Frequency. To create a table with automated backup disabled, either omit the automated_backup_policy argument, or set both Retention Period and Frequency properties to "0". To disable automated backup on an existing table that has automated backup enabled, set both Retention Period and Frequency properties to "0". When updating an existing table, to modify the Retention Period or Frequency properties of the resource's automated backup policy, set the respective property to a non-zero value. If the automated_backup_policy argument is not provided in the configuration on update, the resource's automated backup policy will not be modified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableSpecForProviderAutomatedBackupPolicy
@@ -390,30 +416,4 @@ public partial class V1beta1Table : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     /// <summary>TableStatus defines the observed state of Table.</summary>
     [JsonPropertyName("status")]
     public V1beta1TableStatus? Status { get; set; }
-}
-
-/// <summary>Table is the Schema for the Tables API. Creates a Google Cloud Bigtable table inside an instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Table>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TableList";
-    public const string KubeGroup = "bigtable.gcp.m.upbound.io";
-    public const string KubePluralName = "tables";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Table> Items { get; set; }
 }

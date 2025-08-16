@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+/// <summary>ReceiptRuleSet is the Schema for the ReceiptRuleSets API. Provides an SES receipt rule set resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ReceiptRuleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReceiptRuleSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ReceiptRuleSetList";
+    public const string KubeGroup = "ses.aws.m.upbound.io";
+    public const string KubePluralName = "receiptrulesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ReceiptRuleSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReceiptRuleSetSpecForProvider
@@ -172,30 +198,4 @@ public partial class V1beta1ReceiptRuleSet : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>ReceiptRuleSetStatus defines the observed state of ReceiptRuleSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1ReceiptRuleSetStatus? Status { get; set; }
-}
-
-/// <summary>ReceiptRuleSet is the Schema for the ReceiptRuleSets API. Provides an SES receipt rule set resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ReceiptRuleSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReceiptRuleSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ReceiptRuleSetList";
-    public const string KubeGroup = "ses.aws.m.upbound.io";
-    public const string KubePluralName = "receiptrulesets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ReceiptRuleSet> Items { get; set; }
 }

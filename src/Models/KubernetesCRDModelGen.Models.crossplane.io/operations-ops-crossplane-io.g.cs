@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ops.crossplane.io;
+/// <summary>An Operation defines a pipeline of functions that together constitute a day two operation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1OperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Operation>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "OperationList";
+    public const string KubeGroup = "ops.crossplane.io";
+    public const string KubePluralName = "operations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1Operation> Items { get; set; }
+}
+
 /// <summary>A SecretRef is a reference to a secret containing credentials that should be supplied to the function.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OperationSpecPipelineCredentialsSecretRef
@@ -239,30 +265,4 @@ public partial class V1alpha1Operation : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>OperationStatus represents the observed state of an operation.</summary>
     [JsonPropertyName("status")]
     public V1alpha1OperationStatus? Status { get; set; }
-}
-
-/// <summary>An Operation defines a pipeline of functions that together constitute a day two operation.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1OperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Operation>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "OperationList";
-    public const string KubeGroup = "ops.crossplane.io";
-    public const string KubePluralName = "operations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1Operation> Items { get; set; }
 }

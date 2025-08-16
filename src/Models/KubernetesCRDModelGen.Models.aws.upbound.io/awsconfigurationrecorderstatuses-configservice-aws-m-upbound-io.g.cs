@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configservice.aws.m.upbound.io;
+/// <summary>AWSConfigurationRecorderStatus is the Schema for the AWSConfigurationRecorderStatuss API. Manages status of an AWS Config Configuration Recorder.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AWSConfigurationRecorderStatusList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AWSConfigurationRecorderStatus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AWSConfigurationRecorderStatusList";
+    public const string KubeGroup = "configservice.aws.m.upbound.io";
+    public const string KubePluralName = "awsconfigurationrecorderstatuses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AWSConfigurationRecorderStatus> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AWSConfigurationRecorderStatusSpecForProvider
@@ -168,30 +194,4 @@ public partial class V1beta1AWSConfigurationRecorderStatus : IKubernetesObject<V
     /// <summary>AWSConfigurationRecorderStatusStatus defines the observed state of AWSConfigurationRecorderStatus.</summary>
     [JsonPropertyName("status")]
     public V1beta1AWSConfigurationRecorderStatusStatus? Status { get; set; }
-}
-
-/// <summary>AWSConfigurationRecorderStatus is the Schema for the AWSConfigurationRecorderStatuss API. Manages status of an AWS Config Configuration Recorder.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AWSConfigurationRecorderStatusList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AWSConfigurationRecorderStatus>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AWSConfigurationRecorderStatusList";
-    public const string KubeGroup = "configservice.aws.m.upbound.io";
-    public const string KubePluralName = "awsconfigurationrecorderstatuses";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AWSConfigurationRecorderStatus> Items { get; set; }
 }

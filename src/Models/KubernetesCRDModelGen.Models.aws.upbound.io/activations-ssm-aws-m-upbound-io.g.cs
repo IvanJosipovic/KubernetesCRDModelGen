@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+/// <summary>Activation is the Schema for the Activations API. Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ActivationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Activation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ActivationList";
+    public const string KubeGroup = "ssm.aws.m.upbound.io";
+    public const string KubePluralName = "activations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Activation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActivationSpecForProviderIamRoleRefPolicy
@@ -388,30 +414,4 @@ public partial class V1beta1Activation : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>ActivationStatus defines the observed state of Activation.</summary>
     [JsonPropertyName("status")]
     public V1beta1ActivationStatus? Status { get; set; }
-}
-
-/// <summary>Activation is the Schema for the Activations API. Registers an on-premises server or virtual machine with Amazon EC2 so that it can be managed using Run Command.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ActivationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Activation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ActivationList";
-    public const string KubeGroup = "ssm.aws.m.upbound.io";
-    public const string KubePluralName = "activations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Activation> Items { get; set; }
 }

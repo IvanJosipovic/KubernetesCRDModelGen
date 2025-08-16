@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>ComputeNetworkAttachment is the Schema for the ComputeNetworkAttachment API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeNetworkAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeNetworkAttachment>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeNetworkAttachmentList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenetworkattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeNetworkAttachment> Items { get; set; }
+}
+
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComputeNetworkAttachmentSpecProducerAcceptLists
@@ -273,30 +299,4 @@ public partial class V1alpha1ComputeNetworkAttachment : IKubernetesObject<V1Obje
     /// <summary>ComputeNetworkAttachmentStatus defines the config connector machine state of ComputeNetworkAttachment</summary>
     [JsonPropertyName("status")]
     public V1alpha1ComputeNetworkAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>ComputeNetworkAttachment is the Schema for the ComputeNetworkAttachment API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ComputeNetworkAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeNetworkAttachment>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ComputeNetworkAttachmentList";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computenetworkattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ComputeNetworkAttachment> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.databricks.crossplane.io;
+/// <summary>Dashboard is the Schema for the Dashboards API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DashboardList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Dashboard>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DashboardList";
+    public const string KubeGroup = "sql.databricks.crossplane.io";
+    public const string KubePluralName = "dashboards";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1Dashboard> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DashboardSpecForProvider
@@ -401,30 +427,4 @@ public partial class V1alpha1Dashboard : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>DashboardStatus defines the observed state of Dashboard.</summary>
     [JsonPropertyName("status")]
     public V1alpha1DashboardStatus? Status { get; set; }
-}
-
-/// <summary>Dashboard is the Schema for the Dashboards API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DashboardList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Dashboard>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DashboardList";
-    public const string KubeGroup = "sql.databricks.crossplane.io";
-    public const string KubePluralName = "dashboards";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1Dashboard> Items { get; set; }
 }

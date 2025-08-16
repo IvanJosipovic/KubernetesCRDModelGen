@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineFirewallRuleMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineFirewallRuleList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AppEngineFirewallRule>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineFirewallRuleList";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appenginefirewallrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AppEngineFirewallRule> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineFirewallRuleSpec
+public partial class V1alpha1AppEngineFirewallRuleSpec
 {
     /// <summary>The action to take if this rule matches. Possible values: ["UNSPECIFIED_ACTION", "ALLOW", "DENY"].</summary>
     [JsonPropertyName("action")]
@@ -41,7 +61,7 @@ public partial class AppEngineFirewallRuleSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineFirewallRuleStatusConditions
+public partial class V1alpha1AppEngineFirewallRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -66,11 +86,11 @@ public partial class AppEngineFirewallRuleStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineFirewallRuleStatus
+public partial class V1alpha1AppEngineFirewallRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AppEngineFirewallRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AppEngineFirewallRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -79,25 +99,30 @@ public partial class AppEngineFirewallRuleStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineFirewallRule
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineFirewallRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineFirewallRuleSpec>, IStatus<V1alpha1AppEngineFirewallRuleStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineFirewallRule";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appenginefirewallrules";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AppEngineFirewallRuleMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AppEngineFirewallRuleSpec Spec { get; set; }
+    public V1alpha1AppEngineFirewallRuleSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AppEngineFirewallRuleStatus? Status { get; set; }
+    public V1alpha1AppEngineFirewallRuleStatus? Status { get; set; }
 }

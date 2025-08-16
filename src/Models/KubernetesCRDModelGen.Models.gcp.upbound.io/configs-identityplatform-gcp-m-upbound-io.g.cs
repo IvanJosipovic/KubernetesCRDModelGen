@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+/// <summary>Config is the Schema for the Configs API. Identity Platform configuration for a Cloud project.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Config>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConfigList";
+    public const string KubeGroup = "identityplatform.gcp.m.upbound.io";
+    public const string KubePluralName = "configs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Config> Items { get; set; }
+}
+
 /// <summary>The user credentials to include in the JWT payload that is sent to the registered Blocking Functions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigSpecForProviderBlockingFunctionsForwardInboundCredentials
@@ -1209,30 +1235,4 @@ public partial class V1beta1Config : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>ConfigStatus defines the observed state of Config.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConfigStatus? Status { get; set; }
-}
-
-/// <summary>Config is the Schema for the Configs API. Identity Platform configuration for a Cloud project.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Config>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConfigList";
-    public const string KubeGroup = "identityplatform.gcp.m.upbound.io";
-    public const string KubePluralName = "configs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Config> Items { get; set; }
 }

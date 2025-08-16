@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.gcp.m.upbound.io;
+/// <summary>TagBinding is the Schema for the TagBindings API. A TagBinding represents a connection between a TagValue and a cloud resource (currently project, folder, or organization).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagBindingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagBinding>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagBindingList";
+    public const string KubeGroup = "tags.gcp.m.upbound.io";
+    public const string KubePluralName = "tagbindings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TagBinding> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagBindingSpecForProviderTagValueRefPolicy
@@ -320,30 +346,4 @@ public partial class V1beta1TagBinding : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>TagBindingStatus defines the observed state of TagBinding.</summary>
     [JsonPropertyName("status")]
     public V1beta1TagBindingStatus? Status { get; set; }
-}
-
-/// <summary>TagBinding is the Schema for the TagBindings API. A TagBinding represents a connection between a TagValue and a cloud resource (currently project, folder, or organization).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TagBindingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagBinding>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TagBindingList";
-    public const string KubeGroup = "tags.gcp.m.upbound.io";
-    public const string KubePluralName = "tagbindings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TagBinding> Items { get; set; }
 }

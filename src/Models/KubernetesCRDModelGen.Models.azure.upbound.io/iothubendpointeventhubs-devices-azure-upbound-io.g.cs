@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.upbound.io;
+/// <summary>IOTHubEndpointEventHub is the Schema for the IOTHubEndpointEventHubs API. Manages an IotHub EventHub Endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IOTHubEndpointEventHubList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubEndpointEventHub>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IOTHubEndpointEventHubList";
+    public const string KubeGroup = "devices.azure.upbound.io";
+    public const string KubePluralName = "iothubendpointeventhubs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IOTHubEndpointEventHub> Items { get; set; }
+}
+
 /// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointEventHubSpecForProviderConnectionStringSecretRef
@@ -471,30 +497,4 @@ public partial class V1beta1IOTHubEndpointEventHub : IKubernetesObject<V1ObjectM
     /// <summary>IOTHubEndpointEventHubStatus defines the observed state of IOTHubEndpointEventHub.</summary>
     [JsonPropertyName("status")]
     public V1beta1IOTHubEndpointEventHubStatus? Status { get; set; }
-}
-
-/// <summary>IOTHubEndpointEventHub is the Schema for the IOTHubEndpointEventHubs API. Manages an IotHub EventHub Endpoint</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IOTHubEndpointEventHubList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubEndpointEventHub>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IOTHubEndpointEventHubList";
-    public const string KubeGroup = "devices.azure.upbound.io";
-    public const string KubePluralName = "iothubendpointeventhubs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IOTHubEndpointEventHub> Items { get; set; }
 }

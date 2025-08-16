@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.upbound.io;
+/// <summary>ContainerService is the Schema for the ContainerServices API. Manages a Lightsail container service for running containerized applications.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContainerServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContainerServiceList";
+    public const string KubeGroup = "lightsail.aws.upbound.io";
+    public const string KubePluralName = "containerservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContainerService> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerServiceSpecForProviderPrivateRegistryAccessEcrImagePullerRole
@@ -413,30 +439,4 @@ public partial class V1beta1ContainerService : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>ContainerServiceStatus defines the observed state of ContainerService.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContainerServiceStatus? Status { get; set; }
-}
-
-/// <summary>ContainerService is the Schema for the ContainerServices API. Manages a Lightsail container service for running containerized applications.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContainerServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContainerServiceList";
-    public const string KubeGroup = "lightsail.aws.upbound.io";
-    public const string KubePluralName = "containerservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContainerService> Items { get; set; }
 }

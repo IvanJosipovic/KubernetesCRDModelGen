@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+/// <summary>MwsNetworkConnectivityConfig is the Schema for the MwsNetworkConnectivityConfigs API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MwsNetworkConnectivityConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsNetworkConnectivityConfig>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MwsNetworkConnectivityConfigList";
+    public const string KubeGroup = "deployment.databricks.crossplane.io";
+    public const string KubePluralName = "mwsnetworkconnectivityconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MwsNetworkConnectivityConfig> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsNetworkConnectivityConfigSpecForProviderEgressConfigDefaultRulesAwsStableIpRule
@@ -830,30 +856,4 @@ public partial class V1alpha1MwsNetworkConnectivityConfig : IKubernetesObject<V1
     /// <summary>MwsNetworkConnectivityConfigStatus defines the observed state of MwsNetworkConnectivityConfig.</summary>
     [JsonPropertyName("status")]
     public V1alpha1MwsNetworkConnectivityConfigStatus? Status { get; set; }
-}
-
-/// <summary>MwsNetworkConnectivityConfig is the Schema for the MwsNetworkConnectivityConfigs API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MwsNetworkConnectivityConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsNetworkConnectivityConfig>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MwsNetworkConnectivityConfigList";
-    public const string KubeGroup = "deployment.databricks.crossplane.io";
-    public const string KubePluralName = "mwsnetworkconnectivityconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MwsNetworkConnectivityConfig> Items { get; set; }
 }

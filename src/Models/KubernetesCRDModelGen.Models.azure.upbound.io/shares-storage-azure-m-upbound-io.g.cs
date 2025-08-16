@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+/// <summary>Share is the Schema for the Shares API. Manages a File Share within Azure Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ShareList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Share>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ShareList";
+    public const string KubeGroup = "storage.azure.m.upbound.io";
+    public const string KubePluralName = "shares";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Share> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ShareSpecForProviderAclAccessPolicy
@@ -470,30 +496,4 @@ public partial class V1beta1Share : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     /// <summary>ShareStatus defines the observed state of Share.</summary>
     [JsonPropertyName("status")]
     public V1beta1ShareStatus? Status { get; set; }
-}
-
-/// <summary>Share is the Schema for the Shares API. Manages a File Share within Azure Storage.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ShareList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Share>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ShareList";
-    public const string KubeGroup = "storage.azure.m.upbound.io";
-    public const string KubePluralName = "shares";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Share> Items { get; set; }
 }

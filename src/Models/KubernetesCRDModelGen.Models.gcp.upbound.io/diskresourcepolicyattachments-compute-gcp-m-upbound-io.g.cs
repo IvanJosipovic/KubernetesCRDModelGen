@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+/// <summary>DiskResourcePolicyAttachment is the Schema for the DiskResourcePolicyAttachments API. Adds existing resource policies to a disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DiskResourcePolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DiskResourcePolicyAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DiskResourcePolicyAttachmentList";
+    public const string KubeGroup = "compute.gcp.m.upbound.io";
+    public const string KubePluralName = "diskresourcepolicyattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DiskResourcePolicyAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiskResourcePolicyAttachmentSpecForProviderDiskRefPolicy
@@ -484,30 +510,4 @@ public partial class V1beta1DiskResourcePolicyAttachment : IKubernetesObject<V1O
     /// <summary>DiskResourcePolicyAttachmentStatus defines the observed state of DiskResourcePolicyAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1DiskResourcePolicyAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>DiskResourcePolicyAttachment is the Schema for the DiskResourcePolicyAttachments API. Adds existing resource policies to a disk.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DiskResourcePolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DiskResourcePolicyAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DiskResourcePolicyAttachmentList";
-    public const string KubeGroup = "compute.gcp.m.upbound.io";
-    public const string KubePluralName = "diskresourcepolicyattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DiskResourcePolicyAttachment> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+/// <summary>DatastreamPrivateConnection is the Schema for the DatastreamPrivateConnection API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DatastreamPrivateConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DatastreamPrivateConnection>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DatastreamPrivateConnectionList";
+    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
+    public const string KubePluralName = "datastreamprivateconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DatastreamPrivateConnection> Items { get; set; }
+}
+
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamPrivateConnectionSpecProjectRef
@@ -208,30 +234,4 @@ public partial class V1alpha1DatastreamPrivateConnection : IKubernetesObject<V1O
     /// <summary>DatastreamPrivateConnectionStatus defines the config connector machine state of DatastreamPrivateConnection</summary>
     [JsonPropertyName("status")]
     public V1alpha1DatastreamPrivateConnectionStatus? Status { get; set; }
-}
-
-/// <summary>DatastreamPrivateConnection is the Schema for the DatastreamPrivateConnection API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DatastreamPrivateConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DatastreamPrivateConnection>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DatastreamPrivateConnectionList";
-    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
-    public const string KubePluralName = "datastreamprivateconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DatastreamPrivateConnection> Items { get; set; }
 }

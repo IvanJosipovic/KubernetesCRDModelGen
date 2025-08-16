@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLDatabaseMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLDatabase>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLDatabaseList";
+    public const string KubeGroup = "sql.cnrm.cloud.google.com";
+    public const string KubePluralName = "sqldatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SQLDatabase> Items { get; set; }
 }
 
 /// <summary>The Cloud SQL instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLDatabaseSpecInstanceRef
+public partial class V1beta1SQLDatabaseSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class SQLDatabaseSpecInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLDatabaseSpec
+public partial class V1beta1SQLDatabaseSpec
 {
     /// <summary>The charset value. See MySQL's [Supported Character Sets and Collations](https://dev.mysql.com/doc/refman/5.7/en/charset-charsets.html) and Postgres' [Character Set Support](https://www.postgresql.org/docs/9.6/static/multibyte.html) for more details and supported values. Postgres databases only support a value of 'UTF8' at creation time.</summary>
     [JsonPropertyName("charset")]
@@ -49,7 +69,7 @@ public partial class SQLDatabaseSpec
 
     /// <summary>The Cloud SQL instance.</summary>
     [JsonPropertyName("instanceRef")]
-    public SQLDatabaseSpecInstanceRef InstanceRef { get; set; }
+    public V1beta1SQLDatabaseSpecInstanceRef InstanceRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -58,7 +78,7 @@ public partial class SQLDatabaseSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLDatabaseStatusConditions
+public partial class V1beta1SQLDatabaseStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -83,11 +103,11 @@ public partial class SQLDatabaseStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLDatabaseStatus
+public partial class V1beta1SQLDatabaseStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<SQLDatabaseStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1SQLDatabaseStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -100,25 +120,30 @@ public partial class SQLDatabaseStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLDatabase
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLDatabase : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLDatabaseSpec>, IStatus<V1beta1SQLDatabaseStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLDatabase";
+    public const string KubeGroup = "sql.cnrm.cloud.google.com";
+    public const string KubePluralName = "sqldatabases";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public SQLDatabaseMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public SQLDatabaseSpec Spec { get; set; }
+    public V1beta1SQLDatabaseSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public SQLDatabaseStatus? Status { get; set; }
+    public V1beta1SQLDatabaseStatus? Status { get; set; }
 }

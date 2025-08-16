@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+/// <summary>ContactFlow is the Schema for the ContactFlows API. Provides details about a specific Amazon Connect Contact Flow.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContactFlowList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContactFlow>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContactFlowList";
+    public const string KubeGroup = "connect.aws.upbound.io";
+    public const string KubePluralName = "contactflows";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContactFlow> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContactFlowSpecForProviderInstanceIdRefPolicy
@@ -413,30 +439,4 @@ public partial class V1beta1ContactFlow : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ContactFlowStatus defines the observed state of ContactFlow.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContactFlowStatus? Status { get; set; }
-}
-
-/// <summary>ContactFlow is the Schema for the ContactFlows API. Provides details about a specific Amazon Connect Contact Flow.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContactFlowList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContactFlow>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContactFlowList";
-    public const string KubeGroup = "connect.aws.upbound.io";
-    public const string KubePluralName = "contactflows";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContactFlow> Items { get; set; }
 }

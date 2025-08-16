@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+/// <summary>NotebookInstanceLifecycleConfiguration is the Schema for the NotebookInstanceLifecycleConfigurations API. Provides a lifecycle configuration for SageMaker AI Notebook Instances.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NotebookInstanceLifecycleConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotebookInstanceLifecycleConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NotebookInstanceLifecycleConfigurationList";
+    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
+    public const string KubePluralName = "notebookinstancelifecycleconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NotebookInstanceLifecycleConfiguration> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotebookInstanceLifecycleConfigurationSpecForProvider
@@ -200,30 +226,4 @@ public partial class V1beta1NotebookInstanceLifecycleConfiguration : IKubernetes
     /// <summary>NotebookInstanceLifecycleConfigurationStatus defines the observed state of NotebookInstanceLifecycleConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1NotebookInstanceLifecycleConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>NotebookInstanceLifecycleConfiguration is the Schema for the NotebookInstanceLifecycleConfigurations API. Provides a lifecycle configuration for SageMaker AI Notebook Instances.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NotebookInstanceLifecycleConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotebookInstanceLifecycleConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NotebookInstanceLifecycleConfigurationList";
-    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
-    public const string KubePluralName = "notebookinstancelifecycleconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NotebookInstanceLifecycleConfiguration> Items { get; set; }
 }

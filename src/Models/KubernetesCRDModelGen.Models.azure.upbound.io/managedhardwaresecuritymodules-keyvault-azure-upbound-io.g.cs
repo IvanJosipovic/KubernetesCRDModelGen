@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.upbound.io;
+/// <summary>ManagedHardwareSecurityModule is the Schema for the ManagedHardwareSecurityModules API. Manages a Key Vault Managed Hardware Security Module.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagedHardwareSecurityModuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagedHardwareSecurityModule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagedHardwareSecurityModuleList";
+    public const string KubeGroup = "keyvault.azure.upbound.io";
+    public const string KubePluralName = "managedhardwaresecuritymodules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ManagedHardwareSecurityModule> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedHardwareSecurityModuleSpecForProviderNetworkAcls
@@ -416,30 +442,4 @@ public partial class V1beta1ManagedHardwareSecurityModule : IKubernetesObject<V1
     /// <summary>ManagedHardwareSecurityModuleStatus defines the observed state of ManagedHardwareSecurityModule.</summary>
     [JsonPropertyName("status")]
     public V1beta1ManagedHardwareSecurityModuleStatus? Status { get; set; }
-}
-
-/// <summary>ManagedHardwareSecurityModule is the Schema for the ManagedHardwareSecurityModules API. Manages a Key Vault Managed Hardware Security Module.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ManagedHardwareSecurityModuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagedHardwareSecurityModule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ManagedHardwareSecurityModuleList";
-    public const string KubeGroup = "keyvault.azure.upbound.io";
-    public const string KubePluralName = "managedhardwaresecuritymodules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ManagedHardwareSecurityModule> Items { get; set; }
 }

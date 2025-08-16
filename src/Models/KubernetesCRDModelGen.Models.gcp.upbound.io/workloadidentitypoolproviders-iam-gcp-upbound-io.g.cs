@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.gcp.upbound.io;
+/// <summary>WorkloadIdentityPoolProvider is the Schema for the WorkloadIdentityPoolProviders API. A configuration for an external identity provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkloadIdentityPoolProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkloadIdentityPoolProvider>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkloadIdentityPoolProviderList";
+    public const string KubeGroup = "iam.gcp.upbound.io";
+    public const string KubePluralName = "workloadidentitypoolproviders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkloadIdentityPoolProvider> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkloadIdentityPoolProviderSpecForProviderAws
@@ -594,30 +620,4 @@ public partial class V1beta1WorkloadIdentityPoolProvider : IKubernetesObject<V1O
     /// <summary>WorkloadIdentityPoolProviderStatus defines the observed state of WorkloadIdentityPoolProvider.</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkloadIdentityPoolProviderStatus? Status { get; set; }
-}
-
-/// <summary>WorkloadIdentityPoolProvider is the Schema for the WorkloadIdentityPoolProviders API. A configuration for an external identity provider.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkloadIdentityPoolProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkloadIdentityPoolProvider>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkloadIdentityPoolProviderList";
-    public const string KubeGroup = "iam.gcp.upbound.io";
-    public const string KubePluralName = "workloadidentitypoolproviders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WorkloadIdentityPoolProvider> Items { get; set; }
 }

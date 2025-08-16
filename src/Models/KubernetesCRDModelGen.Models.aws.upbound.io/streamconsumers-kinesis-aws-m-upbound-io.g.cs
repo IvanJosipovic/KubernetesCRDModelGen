@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kinesis.aws.m.upbound.io;
+/// <summary>StreamConsumer is the Schema for the StreamConsumers API. Manages a Kinesis Stream Consumer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StreamConsumerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StreamConsumer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StreamConsumerList";
+    public const string KubeGroup = "kinesis.aws.m.upbound.io";
+    public const string KubePluralName = "streamconsumers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StreamConsumer> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StreamConsumerSpecForProviderStreamArnRefPolicy
@@ -348,30 +374,4 @@ public partial class V1beta1StreamConsumer : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>StreamConsumerStatus defines the observed state of StreamConsumer.</summary>
     [JsonPropertyName("status")]
     public V1beta1StreamConsumerStatus? Status { get; set; }
-}
-
-/// <summary>StreamConsumer is the Schema for the StreamConsumers API. Manages a Kinesis Stream Consumer.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StreamConsumerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StreamConsumer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StreamConsumerList";
-    public const string KubeGroup = "kinesis.aws.m.upbound.io";
-    public const string KubePluralName = "streamconsumers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StreamConsumer> Items { get; set; }
 }

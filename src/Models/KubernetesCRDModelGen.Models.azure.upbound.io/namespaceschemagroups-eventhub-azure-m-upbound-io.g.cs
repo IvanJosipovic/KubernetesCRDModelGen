@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.m.upbound.io;
+/// <summary>NamespaceSchemaGroup is the Schema for the NamespaceSchemaGroups API. Manages a Schema Group for a EventHub Namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NamespaceSchemaGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NamespaceSchemaGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NamespaceSchemaGroupList";
+    public const string KubeGroup = "eventhub.azure.m.upbound.io";
+    public const string KubePluralName = "namespaceschemagroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NamespaceSchemaGroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NamespaceSchemaGroupSpecForProviderNamespaceIdRefPolicy
@@ -252,30 +278,4 @@ public partial class V1beta1NamespaceSchemaGroup : IKubernetesObject<V1ObjectMet
     /// <summary>NamespaceSchemaGroupStatus defines the observed state of NamespaceSchemaGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1NamespaceSchemaGroupStatus? Status { get; set; }
-}
-
-/// <summary>NamespaceSchemaGroup is the Schema for the NamespaceSchemaGroups API. Manages a Schema Group for a EventHub Namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NamespaceSchemaGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NamespaceSchemaGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NamespaceSchemaGroupList";
-    public const string KubeGroup = "eventhub.azure.m.upbound.io";
-    public const string KubePluralName = "namespaceschemagroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NamespaceSchemaGroup> Items { get; set; }
 }

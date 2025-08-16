@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+/// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API. Manages an AWS Network Manager Attachment Accepter.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AttachmentAccepter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AttachmentAccepterList";
+    public const string KubeGroup = "networkmanager.aws.m.upbound.io";
+    public const string KubePluralName = "attachmentaccepters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AttachmentAccepter> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AttachmentAccepterSpecForProviderAttachmentIdRefPolicy
@@ -496,30 +522,4 @@ public partial class V1beta1AttachmentAccepter : IKubernetesObject<V1ObjectMeta>
     /// <summary>AttachmentAccepterStatus defines the observed state of AttachmentAccepter.</summary>
     [JsonPropertyName("status")]
     public V1beta1AttachmentAccepterStatus? Status { get; set; }
-}
-
-/// <summary>AttachmentAccepter is the Schema for the AttachmentAccepters API. Manages an AWS Network Manager Attachment Accepter.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AttachmentAccepter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AttachmentAccepterList";
-    public const string KubeGroup = "networkmanager.aws.m.upbound.io";
-    public const string KubePluralName = "attachmentaccepters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AttachmentAccepter> Items { get; set; }
 }

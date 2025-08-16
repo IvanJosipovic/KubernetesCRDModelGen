@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.gcp.m.upbound.io;
+/// <summary>TopicIAMMember is the Schema for the TopicIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TopicIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TopicIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TopicIAMMemberList";
+    public const string KubeGroup = "pubsub.gcp.m.upbound.io";
+    public const string KubePluralName = "topiciammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TopicIAMMember> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TopicIAMMemberSpecForProviderCondition
@@ -407,30 +433,4 @@ public partial class V1beta1TopicIAMMember : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>TopicIAMMemberStatus defines the observed state of TopicIAMMember.</summary>
     [JsonPropertyName("status")]
     public V1beta1TopicIAMMemberStatus? Status { get; set; }
-}
-
-/// <summary>TopicIAMMember is the Schema for the TopicIAMMembers API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TopicIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TopicIAMMember>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TopicIAMMemberList";
-    public const string KubeGroup = "pubsub.gcp.m.upbound.io";
-    public const string KubePluralName = "topiciammembers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TopicIAMMember> Items { get; set; }
 }

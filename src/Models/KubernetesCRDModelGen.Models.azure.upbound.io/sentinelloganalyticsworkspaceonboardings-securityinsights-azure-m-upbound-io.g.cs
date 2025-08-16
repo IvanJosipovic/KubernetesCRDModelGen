@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityinsights.azure.m.upbound.io;
+/// <summary>SentinelLogAnalyticsWorkspaceOnboarding is the Schema for the SentinelLogAnalyticsWorkspaceOnboardings API. Manages a Security Insights Sentinel Onboarding States.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelLogAnalyticsWorkspaceOnboarding>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SentinelLogAnalyticsWorkspaceOnboardingList";
+    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
+    public const string KubePluralName = "sentinelloganalyticsworkspaceonboardings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SentinelLogAnalyticsWorkspaceOnboarding> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingSpecForProviderWorkspaceIdRefPolicy
@@ -316,30 +342,4 @@ public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboarding : IKubernete
     /// <summary>SentinelLogAnalyticsWorkspaceOnboardingStatus defines the observed state of SentinelLogAnalyticsWorkspaceOnboarding.</summary>
     [JsonPropertyName("status")]
     public V1beta1SentinelLogAnalyticsWorkspaceOnboardingStatus? Status { get; set; }
-}
-
-/// <summary>SentinelLogAnalyticsWorkspaceOnboarding is the Schema for the SentinelLogAnalyticsWorkspaceOnboardings API. Manages a Security Insights Sentinel Onboarding States.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SentinelLogAnalyticsWorkspaceOnboardingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelLogAnalyticsWorkspaceOnboarding>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SentinelLogAnalyticsWorkspaceOnboardingList";
-    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
-    public const string KubePluralName = "sentinelloganalyticsworkspaceonboardings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SentinelLogAnalyticsWorkspaceOnboarding> Items { get; set; }
 }

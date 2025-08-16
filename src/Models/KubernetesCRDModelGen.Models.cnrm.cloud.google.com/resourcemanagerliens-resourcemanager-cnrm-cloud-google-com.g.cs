@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLienMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceManagerLienList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceManagerLien>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceManagerLienList";
+    public const string KubeGroup = "resourcemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "resourcemanagerliens";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceManagerLien> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLienSpecParentProjectRef
+public partial class V1beta1ResourceManagerLienSpecParentProjectRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,16 +53,16 @@ public partial class ResourceManagerLienSpecParentProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLienSpecParent
+public partial class V1beta1ResourceManagerLienSpecParent
 {
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public ResourceManagerLienSpecParentProjectRef? ProjectRef { get; set; }
+    public V1beta1ResourceManagerLienSpecParentProjectRef? ProjectRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLienSpec
+public partial class V1beta1ResourceManagerLienSpec
 {
     /// <summary>Immutable. A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be inspected programmatically. Maximum length of 200 characters.</summary>
     [JsonPropertyName("origin")]
@@ -50,7 +70,7 @@ public partial class ResourceManagerLienSpec
 
     /// <summary></summary>
     [JsonPropertyName("parent")]
-    public ResourceManagerLienSpecParent Parent { get; set; }
+    public V1beta1ResourceManagerLienSpecParent Parent { get; set; }
 
     /// <summary>Immutable. Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum length of 200 characters.</summary>
     [JsonPropertyName("reason")]
@@ -67,7 +87,7 @@ public partial class ResourceManagerLienSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLienStatusConditions
+public partial class V1beta1ResourceManagerLienStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -92,11 +112,11 @@ public partial class ResourceManagerLienStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLienStatus
+public partial class V1beta1ResourceManagerLienStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ResourceManagerLienStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ResourceManagerLienStatusConditions>? Conditions { get; set; }
 
     /// <summary>Time of creation.</summary>
     [JsonPropertyName("createTime")]
@@ -113,25 +133,30 @@ public partial class ResourceManagerLienStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ResourceManagerLien
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceManagerLien : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ResourceManagerLienSpec>, IStatus<V1beta1ResourceManagerLienStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceManagerLien";
+    public const string KubeGroup = "resourcemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "resourcemanagerliens";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ResourceManagerLienMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ResourceManagerLienSpec Spec { get; set; }
+    public V1beta1ResourceManagerLienSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ResourceManagerLienStatus? Status { get; set; }
+    public V1beta1ResourceManagerLienStatus? Status { get; set; }
 }

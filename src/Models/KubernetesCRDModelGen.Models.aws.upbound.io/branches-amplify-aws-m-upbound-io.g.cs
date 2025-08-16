@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.amplify.aws.m.upbound.io;
+/// <summary>Branch is the Schema for the Branchs API. Provides an Amplify Branch resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BranchList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Branch>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BranchList";
+    public const string KubeGroup = "amplify.aws.m.upbound.io";
+    public const string KubePluralName = "branches";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Branch> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BranchSpecForProviderAppIdRefPolicy
@@ -474,30 +500,4 @@ public partial class V1beta1Branch : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>BranchStatus defines the observed state of Branch.</summary>
     [JsonPropertyName("status")]
     public V1beta1BranchStatus? Status { get; set; }
-}
-
-/// <summary>Branch is the Schema for the Branchs API. Provides an Amplify Branch resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BranchList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Branch>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BranchList";
-    public const string KubeGroup = "amplify.aws.m.upbound.io";
-    public const string KubePluralName = "branches";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Branch> Items { get; set; }
 }

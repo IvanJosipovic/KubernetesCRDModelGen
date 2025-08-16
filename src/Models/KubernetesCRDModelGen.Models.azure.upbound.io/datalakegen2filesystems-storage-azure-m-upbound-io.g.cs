@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+/// <summary>DataLakeGen2FileSystem is the Schema for the DataLakeGen2FileSystems API. Manages a Data Lake Gen2 File System within an Azure Storage Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataLakeGen2FileSystemList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataLakeGen2FileSystem>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataLakeGen2FileSystemList";
+    public const string KubeGroup = "storage.azure.m.upbound.io";
+    public const string KubePluralName = "datalakegen2filesystems";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataLakeGen2FileSystem> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeGen2FileSystemSpecForProviderAce
@@ -427,30 +453,4 @@ public partial class V1beta1DataLakeGen2FileSystem : IKubernetesObject<V1ObjectM
     /// <summary>DataLakeGen2FileSystemStatus defines the observed state of DataLakeGen2FileSystem.</summary>
     [JsonPropertyName("status")]
     public V1beta1DataLakeGen2FileSystemStatus? Status { get; set; }
-}
-
-/// <summary>DataLakeGen2FileSystem is the Schema for the DataLakeGen2FileSystems API. Manages a Data Lake Gen2 File System within an Azure Storage Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataLakeGen2FileSystemList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataLakeGen2FileSystem>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataLakeGen2FileSystemList";
-    public const string KubeGroup = "storage.azure.m.upbound.io";
-    public const string KubePluralName = "datalakegen2filesystems";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataLakeGen2FileSystem> Items { get; set; }
 }

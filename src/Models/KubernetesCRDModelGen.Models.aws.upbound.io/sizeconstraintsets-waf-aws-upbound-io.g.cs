@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.waf.aws.upbound.io;
+/// <summary>SizeConstraintSet is the Schema for the SizeConstraintSets API. The</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SizeConstraintSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SizeConstraintSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SizeConstraintSetList";
+    public const string KubeGroup = "waf.aws.upbound.io";
+    public const string KubePluralName = "sizeconstraintsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SizeConstraintSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SizeConstraintSetSpecForProviderSizeConstraintsFieldToMatch
@@ -299,30 +325,4 @@ public partial class V1beta1SizeConstraintSet : IKubernetesObject<V1ObjectMeta>,
     /// <summary>SizeConstraintSetStatus defines the observed state of SizeConstraintSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1SizeConstraintSetStatus? Status { get; set; }
-}
-
-/// <summary>SizeConstraintSet is the Schema for the SizeConstraintSets API. The</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SizeConstraintSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SizeConstraintSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SizeConstraintSetList";
-    public const string KubeGroup = "waf.aws.upbound.io";
-    public const string KubePluralName = "sizeconstraintsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SizeConstraintSet> Items { get; set; }
 }

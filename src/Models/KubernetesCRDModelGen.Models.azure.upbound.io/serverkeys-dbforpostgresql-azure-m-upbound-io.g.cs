@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.m.upbound.io;
+/// <summary>ServerKey is the Schema for the ServerKeys API. Manages a PostgreSQL Server Key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServerKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServerKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServerKeyList";
+    public const string KubeGroup = "dbforpostgresql.azure.m.upbound.io";
+    public const string KubePluralName = "serverkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServerKey> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerKeySpecForProviderKeyVaultKeyIdRefPolicy
@@ -460,30 +486,4 @@ public partial class V1beta1ServerKey : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>ServerKeyStatus defines the observed state of ServerKey.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServerKeyStatus? Status { get; set; }
-}
-
-/// <summary>ServerKey is the Schema for the ServerKeys API. Manages a PostgreSQL Server Key.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServerKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServerKey>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServerKeyList";
-    public const string KubeGroup = "dbforpostgresql.azure.m.upbound.io";
-    public const string KubePluralName = "serverkeys";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServerKey> Items { get; set; }
 }

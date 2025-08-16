@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tpu.cnrm.cloud.google.com;
+/// <summary>TPUVirtualMachine is the Schema for the TPUVirtualMachine API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1TPUVirtualMachineList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TPUVirtualMachine>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "TPUVirtualMachineList";
+    public const string KubeGroup = "tpu.cnrm.cloud.google.com";
+    public const string KubePluralName = "tpuvirtualmachines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1TPUVirtualMachine> Items { get; set; }
+}
+
 /// <summary>The AccleratorConfig for the TPU Node.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TPUVirtualMachineSpecAcceleratorConfig
@@ -444,30 +470,4 @@ public partial class V1alpha1TPUVirtualMachine : IKubernetesObject<V1ObjectMeta>
     /// <summary>TPUVirtualMachineStatus defines the config connector machine state of TPUVirtualMachine</summary>
     [JsonPropertyName("status")]
     public V1alpha1TPUVirtualMachineStatus? Status { get; set; }
-}
-
-/// <summary>TPUVirtualMachine is the Schema for the TPUVirtualMachine API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1TPUVirtualMachineList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TPUVirtualMachine>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "TPUVirtualMachineList";
-    public const string KubeGroup = "tpu.cnrm.cloud.google.com";
-    public const string KubePluralName = "tpuvirtualmachines";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1TPUVirtualMachine> Items { get; set; }
 }

@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplateMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeNodeTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeNodeTemplate>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeNodeTemplateList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenodetemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeNodeTemplate> Items { get; set; }
 }
 
 /// <summary>Immutable. Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplateSpecNodeTypeFlexibility
+public partial class V1beta1ComputeNodeTemplateSpecNodeTypeFlexibility
 {
     /// <summary>Immutable. Number of virtual CPUs to use.</summary>
     [JsonPropertyName("cpus")]
@@ -33,7 +53,7 @@ public partial class ComputeNodeTemplateSpecNodeTypeFlexibility
 
 /// <summary>Immutable. The server binding policy for nodes using this template. Determines where the nodes should restart following a maintenance event.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplateSpecServerBinding
+public partial class V1beta1ComputeNodeTemplateSpecServerBinding
 {
     /// <summary>Immutable. Type of server binding policy. If 'RESTART_NODE_ON_ANY_SERVER', nodes using this template will restart on any physical server following a maintenance event.  If 'RESTART_NODE_ON_MINIMAL_SERVER', nodes using this template will restart on the same physical server following a maintenance event, instead of being live migrated to or restarted on a new physical server. This option may be useful if you are using software licenses tied to the underlying server characteristics such as physical sockets or cores, to avoid the need for additional licenses when maintenance occurs. However, VMs on such nodes will experience outages while maintenance is applied. Possible values: ["RESTART_NODE_ON_ANY_SERVER", "RESTART_NODE_ON_MINIMAL_SERVERS"].</summary>
     [JsonPropertyName("type")]
@@ -42,7 +62,7 @@ public partial class ComputeNodeTemplateSpecServerBinding
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplateSpec
+public partial class V1beta1ComputeNodeTemplateSpec
 {
     /// <summary>Immutable. CPU overcommit. Default value: "NONE" Possible values: ["ENABLED", "NONE"].</summary>
     [JsonPropertyName("cpuOvercommitType")]
@@ -58,7 +78,7 @@ public partial class ComputeNodeTemplateSpec
 
     /// <summary>Immutable. Flexible properties for the desired node type. Node groups that use this node template will create nodes of a type that matches these properties. Only one of nodeTypeFlexibility and nodeType can be specified.</summary>
     [JsonPropertyName("nodeTypeFlexibility")]
-    public ComputeNodeTemplateSpecNodeTypeFlexibility? NodeTypeFlexibility { get; set; }
+    public V1beta1ComputeNodeTemplateSpecNodeTypeFlexibility? NodeTypeFlexibility { get; set; }
 
     /// <summary>Immutable. Region where nodes using the node template will be created. If it is not provided, the provider region is used.</summary>
     [JsonPropertyName("region")]
@@ -70,12 +90,12 @@ public partial class ComputeNodeTemplateSpec
 
     /// <summary>Immutable. The server binding policy for nodes using this template. Determines where the nodes should restart following a maintenance event.</summary>
     [JsonPropertyName("serverBinding")]
-    public ComputeNodeTemplateSpecServerBinding? ServerBinding { get; set; }
+    public V1beta1ComputeNodeTemplateSpecServerBinding? ServerBinding { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplateStatusConditions
+public partial class V1beta1ComputeNodeTemplateStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -100,11 +120,11 @@ public partial class ComputeNodeTemplateStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplateStatus
+public partial class V1beta1ComputeNodeTemplateStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeNodeTemplateStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeNodeTemplateStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -121,25 +141,30 @@ public partial class ComputeNodeTemplateStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNodeTemplate
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeNodeTemplate : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeNodeTemplateSpec>, IStatus<V1beta1ComputeNodeTemplateStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeNodeTemplate";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenodetemplates";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeNodeTemplateMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeNodeTemplateSpec Spec { get; set; }
+    public V1beta1ComputeNodeTemplateSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeNodeTemplateStatus? Status { get; set; }
+    public V1beta1ComputeNodeTemplateStatus? Status { get; set; }
 }

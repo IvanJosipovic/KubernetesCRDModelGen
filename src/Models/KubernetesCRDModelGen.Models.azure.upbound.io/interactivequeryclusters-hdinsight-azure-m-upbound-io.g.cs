@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hdinsight.azure.m.upbound.io;
+/// <summary>InteractiveQueryCluster is the Schema for the InteractiveQueryClusters API. Manages a HDInsight Interactive Query Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InteractiveQueryClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InteractiveQueryCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InteractiveQueryClusterList";
+    public const string KubeGroup = "hdinsight.azure.m.upbound.io";
+    public const string KubePluralName = "interactivequeryclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1InteractiveQueryCluster> Items { get; set; }
+}
+
 /// <summary>A component_version block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InteractiveQueryClusterSpecForProviderComponentVersion
@@ -2944,30 +2970,4 @@ public partial class V1beta1InteractiveQueryCluster : IKubernetesObject<V1Object
     /// <summary>InteractiveQueryClusterStatus defines the observed state of InteractiveQueryCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1InteractiveQueryClusterStatus? Status { get; set; }
-}
-
-/// <summary>InteractiveQueryCluster is the Schema for the InteractiveQueryClusters API. Manages a HDInsight Interactive Query Cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1InteractiveQueryClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InteractiveQueryCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "InteractiveQueryClusterList";
-    public const string KubeGroup = "hdinsight.azure.m.upbound.io";
-    public const string KubePluralName = "interactivequeryclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1InteractiveQueryCluster> Items { get; set; }
 }

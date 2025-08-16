@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codepipeline.aws.m.upbound.io;
+/// <summary>Codepipeline is the Schema for the Codepipelines API. Provides a CodePipeline</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CodepipelineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Codepipeline>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CodepipelineList";
+    public const string KubeGroup = "codepipeline.aws.m.upbound.io";
+    public const string KubePluralName = "codepipelines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Codepipeline> Items { get; set; }
+}
+
 /// <summary>The encryption key block AWS CodePipeline uses to encrypt the data in the artifact store, such as an AWS Key Management Service (AWS KMS) key. If you don't specify a key, AWS CodePipeline uses the default key for Amazon Simple Storage Service (Amazon S3). An encryption_key block is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CodepipelineSpecForProviderArtifactStoreEncryptionKey
@@ -2218,30 +2244,4 @@ public partial class V1beta1Codepipeline : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>CodepipelineStatus defines the observed state of Codepipeline.</summary>
     [JsonPropertyName("status")]
     public V1beta1CodepipelineStatus? Status { get; set; }
-}
-
-/// <summary>Codepipeline is the Schema for the Codepipelines API. Provides a CodePipeline</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CodepipelineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Codepipeline>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CodepipelineList";
-    public const string KubeGroup = "codepipeline.aws.m.upbound.io";
-    public const string KubePluralName = "codepipelines";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Codepipeline> Items { get; set; }
 }

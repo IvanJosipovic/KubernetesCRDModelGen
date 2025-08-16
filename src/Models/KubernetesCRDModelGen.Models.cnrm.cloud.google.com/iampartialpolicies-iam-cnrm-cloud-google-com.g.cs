@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>IAMPartialPolicy is the Schema for the iampartialpolicy API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMPartialPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMPartialPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMPartialPolicyList";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iampartialpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IAMPartialPolicy> Items { get; set; }
+}
+
 /// <summary>Optional. The condition under which the binding applies.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPartialPolicySpecBindingsCondition
@@ -329,30 +355,4 @@ public partial class V1beta1IAMPartialPolicy : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>IAMPartialPolicyStatus defines the observed state of IAMPartialPolicy</summary>
     [JsonPropertyName("status")]
     public V1beta1IAMPartialPolicyStatus? Status { get; set; }
-}
-
-/// <summary>IAMPartialPolicy is the Schema for the iampartialpolicy API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAMPartialPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMPartialPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAMPartialPolicyList";
-    public const string KubeGroup = "iam.cnrm.cloud.google.com";
-    public const string KubePluralName = "iampartialpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IAMPartialPolicy> Items { get; set; }
 }

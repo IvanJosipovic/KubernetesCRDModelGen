@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.m.upbound.io;
+/// <summary>DistributionConfiguration is the Schema for the DistributionConfigurations API. Manage an Image Builder Distribution Configuration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DistributionConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DistributionConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DistributionConfigurationList";
+    public const string KubeGroup = "imagebuilder.aws.m.upbound.io";
+    public const string KubePluralName = "distributionconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DistributionConfiguration> Items { get; set; }
+}
+
 /// <summary>Configuration block of EC2 launch permissions to apply to the distributed AMI. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DistributionConfigurationSpecForProviderDistributionAmiDistributionConfigurationLaunchPermission
@@ -885,30 +911,4 @@ public partial class V1beta1DistributionConfiguration : IKubernetesObject<V1Obje
     /// <summary>DistributionConfigurationStatus defines the observed state of DistributionConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1DistributionConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>DistributionConfiguration is the Schema for the DistributionConfigurations API. Manage an Image Builder Distribution Configuration</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DistributionConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DistributionConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DistributionConfigurationList";
-    public const string KubeGroup = "imagebuilder.aws.m.upbound.io";
-    public const string KubePluralName = "distributionconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DistributionConfiguration> Items { get; set; }
 }

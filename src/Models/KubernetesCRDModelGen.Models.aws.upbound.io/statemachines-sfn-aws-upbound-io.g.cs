@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sfn.aws.upbound.io;
+/// <summary>StateMachine is the Schema for the StateMachines API. Provides a Step Function State Machine resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StateMachineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StateMachine>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StateMachineList";
+    public const string KubeGroup = "sfn.aws.upbound.io";
+    public const string KubePluralName = "statemachines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StateMachine> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StateMachineSpecForProviderEncryptionConfigurationKmsKeyIdRefPolicy
@@ -690,30 +716,4 @@ public partial class V1beta1StateMachine : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>StateMachineStatus defines the observed state of StateMachine.</summary>
     [JsonPropertyName("status")]
     public V1beta1StateMachineStatus? Status { get; set; }
-}
-
-/// <summary>StateMachine is the Schema for the StateMachines API. Provides a Step Function State Machine resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StateMachineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StateMachine>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StateMachineList";
-    public const string KubeGroup = "sfn.aws.upbound.io";
-    public const string KubePluralName = "statemachines";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StateMachine> Items { get; set; }
 }

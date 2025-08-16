@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mosaic.databricks.crossplane.io;
+/// <summary>VectorSearchIndex is the Schema for the VectorSearchIndexs API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VectorSearchIndexList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VectorSearchIndex>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VectorSearchIndexList";
+    public const string KubeGroup = "mosaic.databricks.crossplane.io";
+    public const string KubePluralName = "vectorsearchindices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VectorSearchIndex> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VectorSearchIndexSpecForProviderDeltaSyncIndexSpecEmbeddingSourceColumns
@@ -620,30 +646,4 @@ public partial class V1alpha1VectorSearchIndex : IKubernetesObject<V1ObjectMeta>
     /// <summary>VectorSearchIndexStatus defines the observed state of VectorSearchIndex.</summary>
     [JsonPropertyName("status")]
     public V1alpha1VectorSearchIndexStatus? Status { get; set; }
-}
-
-/// <summary>VectorSearchIndex is the Schema for the VectorSearchIndexs API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1VectorSearchIndexList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VectorSearchIndex>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "VectorSearchIndexList";
-    public const string KubeGroup = "mosaic.databricks.crossplane.io";
-    public const string KubePluralName = "vectorsearchindices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1VectorSearchIndex> Items { get; set; }
 }

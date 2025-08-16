@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>RouteTableAssociation is the Schema for the RouteTableAssociations API. Provides a resource to create an association between a route table and a subnet or a route table and an internet gateway or virtual private gateway.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RouteTableAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteTableAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RouteTableAssociationList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "routetableassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RouteTableAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteTableAssociationSpecForProviderGatewayIdRefPolicy
@@ -624,30 +650,4 @@ public partial class V1beta1RouteTableAssociation : IKubernetesObject<V1ObjectMe
     /// <summary>RouteTableAssociationStatus defines the observed state of RouteTableAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1RouteTableAssociationStatus? Status { get; set; }
-}
-
-/// <summary>RouteTableAssociation is the Schema for the RouteTableAssociations API. Provides a resource to create an association between a route table and a subnet or a route table and an internet gateway or virtual private gateway.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RouteTableAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteTableAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RouteTableAssociationList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "routetableassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RouteTableAssociation> Items { get; set; }
 }

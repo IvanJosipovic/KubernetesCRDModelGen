@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.com;
+/// <summary>Storage version of v1api20240302.Disk Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2024-03-02/disk.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240302storageDiskList : IKubernetesObject<V1ListMeta>, IItems<V1api20240302storageDisk>
+{
+    public const string KubeApiVersion = "v1api20240302storage";
+    public const string KubeKind = "DiskList";
+    public const string KubeGroup = "compute.azure.com";
+    public const string KubePluralName = "disks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240302storageDisk> Items { get; set; }
+}
+
 /// <summary>ElasticSanResourceReference: Required if createOption is CopyFromSanSnapshot. This is the ARM id of the source elastic san volume snapshot.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240302storageDiskSpecCreationDataElasticSanResourceReference
@@ -1304,30 +1330,4 @@ public partial class V1api20240302storageDisk : IKubernetesObject<V1ObjectMeta>,
     /// <summary>Storage version of v1api20240302.Disk_STATUS Disk resource.</summary>
     [JsonPropertyName("status")]
     public V1api20240302storageDiskStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240302.Disk Generator information: - Generated from: /compute/resource-manager/Microsoft.Compute/DiskRP/stable/2024-03-02/disk.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/disks/{diskName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240302storageDiskList : IKubernetesObject<V1ListMeta>, IItems<V1api20240302storageDisk>
-{
-    public const string KubeApiVersion = "v1api20240302storage";
-    public const string KubeKind = "DiskList";
-    public const string KubeGroup = "compute.azure.com";
-    public const string KubePluralName = "disks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240302storageDisk> Items { get; set; }
 }

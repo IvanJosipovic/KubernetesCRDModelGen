@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
+/// <summary>StorageAnywhereCache is the Schema for the StorageAnywhereCache API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageAnywhereCacheList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StorageAnywhereCache>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageAnywhereCacheList";
+    public const string KubeGroup = "storage.cnrm.cloud.google.com";
+    public const string KubePluralName = "storageanywherecaches";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StorageAnywhereCache> Items { get; set; }
+}
+
 /// <summary>Immutable. The reference to bucket where cache needs to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StorageAnywhereCacheSpecBucketRef
@@ -149,30 +175,4 @@ public partial class V1beta1StorageAnywhereCache : IKubernetesObject<V1ObjectMet
     /// <summary>StorageAnywhereCacheStatus defines the config connector machine state of StorageAnywhereCache</summary>
     [JsonPropertyName("status")]
     public V1beta1StorageAnywhereCacheStatus? Status { get; set; }
-}
-
-/// <summary>StorageAnywhereCache is the Schema for the StorageAnywhereCache API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StorageAnywhereCacheList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StorageAnywhereCache>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StorageAnywhereCacheList";
-    public const string KubeGroup = "storage.cnrm.cloud.google.com";
-    public const string KubePluralName = "storageanywherecaches";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StorageAnywhereCache> Items { get; set; }
 }

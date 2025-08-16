@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+/// <summary>MetastoreAssignment is the Schema for the MetastoreAssignments API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MetastoreAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MetastoreAssignment>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MetastoreAssignmentList";
+    public const string KubeGroup = "unity.databricks.crossplane.io";
+    public const string KubePluralName = "metastoreassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MetastoreAssignment> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreAssignmentSpecForProvider
@@ -269,30 +295,4 @@ public partial class V1alpha1MetastoreAssignment : IKubernetesObject<V1ObjectMet
     /// <summary>MetastoreAssignmentStatus defines the observed state of MetastoreAssignment.</summary>
     [JsonPropertyName("status")]
     public V1alpha1MetastoreAssignmentStatus? Status { get; set; }
-}
-
-/// <summary>MetastoreAssignment is the Schema for the MetastoreAssignments API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MetastoreAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MetastoreAssignment>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MetastoreAssignmentList";
-    public const string KubeGroup = "unity.databricks.crossplane.io";
-    public const string KubePluralName = "metastoreassignments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MetastoreAssignment> Items { get; set; }
 }

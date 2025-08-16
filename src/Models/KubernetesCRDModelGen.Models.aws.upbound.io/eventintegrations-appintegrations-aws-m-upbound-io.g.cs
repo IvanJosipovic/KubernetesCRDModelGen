@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appintegrations.aws.m.upbound.io;
+/// <summary>EventIntegration is the Schema for the EventIntegrations API. Provides details about a specific Amazon AppIntegrations Event Integration</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EventIntegrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventIntegration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EventIntegrationList";
+    public const string KubeGroup = "appintegrations.aws.m.upbound.io";
+    public const string KubePluralName = "eventintegrations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EventIntegration> Items { get; set; }
+}
+
 /// <summary>Block that defines the configuration information for the event filter. The Event Filter block is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventIntegrationSpecForProviderEventFilter
@@ -239,30 +265,4 @@ public partial class V1beta1EventIntegration : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>EventIntegrationStatus defines the observed state of EventIntegration.</summary>
     [JsonPropertyName("status")]
     public V1beta1EventIntegrationStatus? Status { get; set; }
-}
-
-/// <summary>EventIntegration is the Schema for the EventIntegrations API. Provides details about a specific Amazon AppIntegrations Event Integration</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EventIntegrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventIntegration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EventIntegrationList";
-    public const string KubeGroup = "appintegrations.aws.m.upbound.io";
-    public const string KubePluralName = "eventintegrations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1EventIntegration> Items { get; set; }
 }

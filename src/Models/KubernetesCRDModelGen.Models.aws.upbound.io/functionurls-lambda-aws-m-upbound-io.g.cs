@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.m.upbound.io;
+/// <summary>FunctionURL is the Schema for the FunctionURLs API. Manages a Lambda function URL.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FunctionURLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionURL>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FunctionURLList";
+    public const string KubeGroup = "lambda.aws.m.upbound.io";
+    public const string KubePluralName = "functionurls";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FunctionURL> Items { get; set; }
+}
+
 /// <summary>Cross-origin resource sharing (CORS) settings for the function URL. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionURLSpecForProviderCors
@@ -459,30 +485,4 @@ public partial class V1beta1FunctionURL : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>FunctionURLStatus defines the observed state of FunctionURL.</summary>
     [JsonPropertyName("status")]
     public V1beta1FunctionURLStatus? Status { get; set; }
-}
-
-/// <summary>FunctionURL is the Schema for the FunctionURLs API. Manages a Lambda function URL.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FunctionURLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionURL>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FunctionURLList";
-    public const string KubeGroup = "lambda.aws.m.upbound.io";
-    public const string KubePluralName = "functionurls";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FunctionURL> Items { get; set; }
 }

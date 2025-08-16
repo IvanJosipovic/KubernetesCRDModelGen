@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workspaces.aws.m.upbound.io;
+/// <summary>IPGroup is the Schema for the IPGroups API. Provides an IP access control group in AWS WorkSpaces Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IPGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IPGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IPGroupList";
+    public const string KubeGroup = "workspaces.aws.m.upbound.io";
+    public const string KubePluralName = "ipgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IPGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IPGroupSpecForProviderRules
@@ -247,30 +273,4 @@ public partial class V1beta1IPGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>IPGroupStatus defines the observed state of IPGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1IPGroupStatus? Status { get; set; }
-}
-
-/// <summary>IPGroup is the Schema for the IPGroups API. Provides an IP access control group in AWS WorkSpaces Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IPGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IPGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IPGroupList";
-    public const string KubeGroup = "workspaces.aws.m.upbound.io";
-    public const string KubePluralName = "ipgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IPGroup> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.speech.cnrm.cloud.google.com;
+/// <summary>SpeechPhraseSet is the Schema for the SpeechPhraseSet API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpeechPhraseSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpeechPhraseSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpeechPhraseSetList";
+    public const string KubeGroup = "speech.cnrm.cloud.google.com";
+    public const string KubePluralName = "speechphrasesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpeechPhraseSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpeechPhraseSetSpecPhrases
@@ -190,30 +216,4 @@ public partial class V1beta1SpeechPhraseSet : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>SpeechPhraseSetStatus defines the config connector machine state of SpeechPhraseSet</summary>
     [JsonPropertyName("status")]
     public V1beta1SpeechPhraseSetStatus? Status { get; set; }
-}
-
-/// <summary>SpeechPhraseSet is the Schema for the SpeechPhraseSet API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SpeechPhraseSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpeechPhraseSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SpeechPhraseSetList";
-    public const string KubeGroup = "speech.cnrm.cloud.google.com";
-    public const string KubePluralName = "speechphrasesets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SpeechPhraseSet> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.budgets.aws.upbound.io;
+/// <summary>BudgetAction is the Schema for the BudgetActions API. Provides a budget action resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BudgetActionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetAction>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BudgetActionList";
+    public const string KubeGroup = "budgets.aws.upbound.io";
+    public const string KubePluralName = "budgetactions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BudgetAction> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetActionSpecForProviderActionThreshold
@@ -1095,30 +1121,4 @@ public partial class V1beta1BudgetAction : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>BudgetActionStatus defines the observed state of BudgetAction.</summary>
     [JsonPropertyName("status")]
     public V1beta1BudgetActionStatus? Status { get; set; }
-}
-
-/// <summary>BudgetAction is the Schema for the BudgetActions API. Provides a budget action resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BudgetActionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetAction>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BudgetActionList";
-    public const string KubeGroup = "budgets.aws.upbound.io";
-    public const string KubePluralName = "budgetactions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BudgetAction> Items { get; set; }
 }

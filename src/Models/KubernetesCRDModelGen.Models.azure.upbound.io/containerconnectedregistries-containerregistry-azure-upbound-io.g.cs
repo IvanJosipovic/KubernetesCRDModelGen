@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.upbound.io;
+/// <summary>ContainerConnectedRegistry is the Schema for the ContainerConnectedRegistrys API. Manages a Container Connected Registry.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContainerConnectedRegistryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerConnectedRegistry>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContainerConnectedRegistryList";
+    public const string KubeGroup = "containerregistry.azure.upbound.io";
+    public const string KubePluralName = "containerconnectedregistries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContainerConnectedRegistry> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerConnectedRegistrySpecForProviderContainerRegistryIdRefPolicy
@@ -620,30 +646,4 @@ public partial class V1beta1ContainerConnectedRegistry : IKubernetesObject<V1Obj
     /// <summary>ContainerConnectedRegistryStatus defines the observed state of ContainerConnectedRegistry.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContainerConnectedRegistryStatus? Status { get; set; }
-}
-
-/// <summary>ContainerConnectedRegistry is the Schema for the ContainerConnectedRegistrys API. Manages a Container Connected Registry.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContainerConnectedRegistryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerConnectedRegistry>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContainerConnectedRegistryList";
-    public const string KubeGroup = "containerregistry.azure.upbound.io";
-    public const string KubePluralName = "containerconnectedregistries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContainerConnectedRegistry> Items { get; set; }
 }

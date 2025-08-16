@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.gcp.m.upbound.io;
+/// <summary>AppConnection is the Schema for the AppConnections API. A BeyondCorp AppConnection resource represents a BeyondCorp protected AppConnection to a remote application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppConnectionList";
+    public const string KubeGroup = "beyondcorp.gcp.m.upbound.io";
+    public const string KubePluralName = "appconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppConnection> Items { get; set; }
+}
+
 /// <summary>Address of the remote application endpoint for the BeyondCorp AppConnection. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectionSpecForProviderApplicationEndpoint
@@ -638,30 +664,4 @@ public partial class V1beta1AppConnection : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>AppConnectionStatus defines the observed state of AppConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppConnectionStatus? Status { get; set; }
-}
-
-/// <summary>AppConnection is the Schema for the AppConnections API. A BeyondCorp AppConnection resource represents a BeyondCorp protected AppConnection to a remote application.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppConnectionList";
-    public const string KubeGroup = "beyondcorp.gcp.m.upbound.io";
-    public const string KubePluralName = "appconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppConnection> Items { get; set; }
 }

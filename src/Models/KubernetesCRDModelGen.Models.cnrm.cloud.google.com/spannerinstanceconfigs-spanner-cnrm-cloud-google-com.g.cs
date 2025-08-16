@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+/// <summary>SpannerInstanceConfig is the Schema for the SpannerInstanceConfig API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1SpannerInstanceConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SpannerInstanceConfig>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "SpannerInstanceConfigList";
+    public const string KubeGroup = "spanner.cnrm.cloud.google.com";
+    public const string KubePluralName = "spannerinstanceconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1SpannerInstanceConfig> Items { get; set; }
+}
+
 /// <summary>Base configuration name, e.g. projects/&lt;project_name&gt;/instanceConfigs/nam3, based on which this configuration is created. Only set for user-managed configurations. `base_config` must refer to a configuration of type `GOOGLE_MANAGED` in the same project as this configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerInstanceConfigSpecBaseConfigRef
@@ -224,30 +250,4 @@ public partial class V1alpha1SpannerInstanceConfig : IKubernetesObject<V1ObjectM
     /// <summary>SpannerInstanceConfigStatus defines the config connector machine state of SpannerInstanceConfig</summary>
     [JsonPropertyName("status")]
     public V1alpha1SpannerInstanceConfigStatus? Status { get; set; }
-}
-
-/// <summary>SpannerInstanceConfig is the Schema for the SpannerInstanceConfig API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SpannerInstanceConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SpannerInstanceConfig>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SpannerInstanceConfigList";
-    public const string KubeGroup = "spanner.cnrm.cloud.google.com";
-    public const string KubePluralName = "spannerinstanceconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1SpannerInstanceConfig> Items { get; set; }
 }

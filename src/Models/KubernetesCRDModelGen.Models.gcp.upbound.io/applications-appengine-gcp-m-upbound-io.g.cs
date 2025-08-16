@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.gcp.m.upbound.io;
+/// <summary>Application is the Schema for the Applications API. Allows management of an App Engine application.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApplicationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Application>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApplicationList";
+    public const string KubeGroup = "appengine.gcp.m.upbound.io";
+    public const string KubePluralName = "applications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Application> Items { get; set; }
+}
+
 /// <summary>A block of optional settings to configure specific App Engine features:</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationSpecForProviderFeatureSettings
@@ -521,30 +547,4 @@ public partial class V1beta1Application : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ApplicationStatus defines the observed state of Application.</summary>
     [JsonPropertyName("status")]
     public V1beta1ApplicationStatus? Status { get; set; }
-}
-
-/// <summary>Application is the Schema for the Applications API. Allows management of an App Engine application.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApplicationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Application>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApplicationList";
-    public const string KubeGroup = "appengine.gcp.m.upbound.io";
-    public const string KubePluralName = "applications";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Application> Items { get; set; }
 }

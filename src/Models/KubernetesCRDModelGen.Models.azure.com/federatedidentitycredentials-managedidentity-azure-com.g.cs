@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedidentity.azure.com;
+/// <summary>Storage version of v1api20230131.FederatedIdentityCredential Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2023-01-31/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}/federatedIdentityCredentials/{federatedIdentityCredentialResourceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230131storageFederatedIdentityCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1api20230131storageFederatedIdentityCredential>
+{
+    public const string KubeApiVersion = "v1api20230131storage";
+    public const string KubeKind = "FederatedIdentityCredentialList";
+    public const string KubeGroup = "managedidentity.azure.com";
+    public const string KubePluralName = "federatedidentitycredentials";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230131storageFederatedIdentityCredential> Items { get; set; }
+}
+
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230131storageFederatedIdentityCredentialSpecIssuerFromConfig
@@ -278,30 +304,4 @@ public partial class V1api20230131storageFederatedIdentityCredential : IKubernet
     /// <summary>Storage version of v1api20230131.FederatedIdentityCredential_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230131storageFederatedIdentityCredentialStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20230131.FederatedIdentityCredential Generator information: - Generated from: /msi/resource-manager/Microsoft.ManagedIdentity/stable/2023-01-31/ManagedIdentity.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{resourceName}/federatedIdentityCredentials/{federatedIdentityCredentialResourceName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230131storageFederatedIdentityCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1api20230131storageFederatedIdentityCredential>
-{
-    public const string KubeApiVersion = "v1api20230131storage";
-    public const string KubeKind = "FederatedIdentityCredentialList";
-    public const string KubeGroup = "managedidentity.azure.com";
-    public const string KubePluralName = "federatedidentitycredentials";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20230131storageFederatedIdentityCredential> Items { get; set; }
 }

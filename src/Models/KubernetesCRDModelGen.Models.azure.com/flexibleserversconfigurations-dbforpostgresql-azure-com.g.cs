@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
+/// <summary>Storage version of v1api20240801.FlexibleServersConfiguration Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Configuration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/configurations/{configurationName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240801storageFlexibleServersConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1api20240801storageFlexibleServersConfiguration>
+{
+    public const string KubeApiVersion = "v1api20240801storage";
+    public const string KubeKind = "FlexibleServersConfigurationList";
+    public const string KubeGroup = "dbforpostgresql.azure.com";
+    public const string KubePluralName = "flexibleserversconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240801storageFlexibleServersConfiguration> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersConfigurationSpecOperatorSpecConfigMapExpressions
@@ -272,30 +298,4 @@ public partial class V1api20240801storageFlexibleServersConfiguration : IKuberne
     /// <summary>Storage version of v1api20240801.FlexibleServersConfiguration_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20240801storageFlexibleServersConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240801.FlexibleServersConfiguration Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Configuration.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/configurations/{configurationName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240801storageFlexibleServersConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1api20240801storageFlexibleServersConfiguration>
-{
-    public const string KubeApiVersion = "v1api20240801storage";
-    public const string KubeKind = "FlexibleServersConfigurationList";
-    public const string KubeGroup = "dbforpostgresql.azure.com";
-    public const string KubePluralName = "flexibleserversconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240801storageFlexibleServersConfiguration> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.upbound.io;
+/// <summary>SpringCloudContainerDeployment is the Schema for the SpringCloudContainerDeployments API. Manages a Spring Cloud Container Deployment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpringCloudContainerDeploymentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudContainerDeployment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpringCloudContainerDeploymentList";
+    public const string KubeGroup = "appplatform.azure.upbound.io";
+    public const string KubePluralName = "springcloudcontainerdeployments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpringCloudContainerDeployment> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudContainerDeploymentSpecForProviderQuota
@@ -400,30 +426,4 @@ public partial class V1beta1SpringCloudContainerDeployment : IKubernetesObject<V
     /// <summary>SpringCloudContainerDeploymentStatus defines the observed state of SpringCloudContainerDeployment.</summary>
     [JsonPropertyName("status")]
     public V1beta1SpringCloudContainerDeploymentStatus? Status { get; set; }
-}
-
-/// <summary>SpringCloudContainerDeployment is the Schema for the SpringCloudContainerDeployments API. Manages a Spring Cloud Container Deployment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SpringCloudContainerDeploymentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudContainerDeployment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SpringCloudContainerDeploymentList";
-    public const string KubeGroup = "appplatform.azure.upbound.io";
-    public const string KubePluralName = "springcloudcontainerdeployments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SpringCloudContainerDeployment> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.frontdoor.azure.com;
+/// <summary>Storage version of v1api20220501.WebApplicationFirewallPolicy Generator information: - Generated from: /frontdoor/resource-manager/Microsoft.Network/stable/2022-05-01/webapplicationfirewall.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220501storageWebApplicationFirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1api20220501storageWebApplicationFirewallPolicy>
+{
+    public const string KubeApiVersion = "v1api20220501storage";
+    public const string KubeKind = "WebApplicationFirewallPolicyList";
+    public const string KubeGroup = "network.frontdoor.azure.com";
+    public const string KubePluralName = "webapplicationfirewallpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220501storageWebApplicationFirewallPolicy> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20220501.MatchCondition Define a match condition.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220501storageWebApplicationFirewallPolicySpecCustomRulesRulesMatchConditions
@@ -866,30 +892,4 @@ public partial class V1api20220501storageWebApplicationFirewallPolicy : IKuberne
     /// <summary>Storage version of v1api20220501.WebApplicationFirewallPolicy_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220501storageWebApplicationFirewallPolicyStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20220501.WebApplicationFirewallPolicy Generator information: - Generated from: /frontdoor/resource-manager/Microsoft.Network/stable/2022-05-01/webapplicationfirewall.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220501storageWebApplicationFirewallPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1api20220501storageWebApplicationFirewallPolicy>
-{
-    public const string KubeApiVersion = "v1api20220501storage";
-    public const string KubeKind = "WebApplicationFirewallPolicyList";
-    public const string KubeGroup = "network.frontdoor.azure.com";
-    public const string KubePluralName = "webapplicationfirewallpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20220501storageWebApplicationFirewallPolicy> Items { get; set; }
 }

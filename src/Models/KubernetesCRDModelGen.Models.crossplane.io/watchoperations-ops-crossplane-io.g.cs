@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ops.crossplane.io;
+/// <summary>A WatchOperation creates Operations when watched resources change.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1WatchOperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WatchOperation>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "WatchOperationList";
+    public const string KubeGroup = "ops.crossplane.io";
+    public const string KubePluralName = "watchoperations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1WatchOperation> Items { get; set; }
+}
+
 /// <summary>Standard object metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WatchOperationSpecOperationTemplateMetadata
@@ -283,30 +309,4 @@ public partial class V1alpha1WatchOperation : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>WatchOperationStatus represents the observed state of a WatchOperation.</summary>
     [JsonPropertyName("status")]
     public V1alpha1WatchOperationStatus? Status { get; set; }
-}
-
-/// <summary>A WatchOperation creates Operations when watched resources change.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WatchOperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WatchOperation>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "WatchOperationList";
-    public const string KubeGroup = "ops.crossplane.io";
-    public const string KubePluralName = "watchoperations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1WatchOperation> Items { get; set; }
 }

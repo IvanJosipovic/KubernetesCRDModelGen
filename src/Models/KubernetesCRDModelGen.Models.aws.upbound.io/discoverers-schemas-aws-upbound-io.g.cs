@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.schemas.aws.upbound.io;
+/// <summary>Discoverer is the Schema for the Discoverers API. Provides an EventBridge Schema Discoverer resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DiscovererList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Discoverer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DiscovererList";
+    public const string KubeGroup = "schemas.aws.upbound.io";
+    public const string KubePluralName = "discoverers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Discoverer> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DiscovererSpecForProviderSourceArnRefPolicy
@@ -349,30 +375,4 @@ public partial class V1beta1Discoverer : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>DiscovererStatus defines the observed state of Discoverer.</summary>
     [JsonPropertyName("status")]
     public V1beta1DiscovererStatus? Status { get; set; }
-}
-
-/// <summary>Discoverer is the Schema for the Discoverers API. Provides an EventBridge Schema Discoverer resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DiscovererList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Discoverer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DiscovererList";
-    public const string KubeGroup = "schemas.aws.upbound.io";
-    public const string KubePluralName = "discoverers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Discoverer> Items { get; set; }
 }

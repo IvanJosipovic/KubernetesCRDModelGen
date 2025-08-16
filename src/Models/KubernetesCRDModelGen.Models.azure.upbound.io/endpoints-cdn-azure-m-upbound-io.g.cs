@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.m.upbound.io;
+/// <summary>Endpoint is the Schema for the Endpoints API. Manages a CDN (classic) Endpoint.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Endpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EndpointList";
+    public const string KubeGroup = "cdn.azure.m.upbound.io";
+    public const string KubePluralName = "endpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Endpoint> Items { get; set; }
+}
+
 /// <summary>A cache_expiration_action block as defined above.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointSpecForProviderDeliveryRuleCacheExpirationAction
@@ -2466,30 +2492,4 @@ public partial class V1beta1Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>EndpointStatus defines the observed state of Endpoint.</summary>
     [JsonPropertyName("status")]
     public V1beta1EndpointStatus? Status { get; set; }
-}
-
-/// <summary>Endpoint is the Schema for the Endpoints API. Manages a CDN (classic) Endpoint.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Endpoint>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EndpointList";
-    public const string KubeGroup = "cdn.azure.m.upbound.io";
-    public const string KubePluralName = "endpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Endpoint> Items { get; set; }
 }

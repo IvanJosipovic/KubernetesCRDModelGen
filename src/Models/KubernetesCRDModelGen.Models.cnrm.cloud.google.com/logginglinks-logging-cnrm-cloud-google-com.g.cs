@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+/// <summary>LoggingLink is the Schema for the LoggingLink API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1LoggingLinkList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1LoggingLink>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "LoggingLinkList";
+    public const string KubeGroup = "logging.cnrm.cloud.google.com";
+    public const string KubePluralName = "logginglinks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1LoggingLink> Items { get; set; }
+}
+
 /// <summary>The LoggingLogBucket that this Link is associated with</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1LoggingLinkSpecLoggingLogBucketRef
@@ -142,30 +168,4 @@ public partial class V1alpha1LoggingLink : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>LoggingLinkStatus defines the config connector machine state of LoggingLink</summary>
     [JsonPropertyName("status")]
     public V1alpha1LoggingLinkStatus? Status { get; set; }
-}
-
-/// <summary>LoggingLink is the Schema for the LoggingLink API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1LoggingLinkList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1LoggingLink>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "LoggingLinkList";
-    public const string KubeGroup = "logging.cnrm.cloud.google.com";
-    public const string KubePluralName = "logginglinks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1LoggingLink> Items { get; set; }
 }

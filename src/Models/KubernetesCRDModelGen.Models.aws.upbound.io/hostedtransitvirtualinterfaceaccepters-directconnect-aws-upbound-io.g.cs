@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.upbound.io;
+/// <summary>HostedTransitVirtualInterfaceAccepter is the Schema for the HostedTransitVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted transit virtual interface.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HostedTransitVirtualInterfaceAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HostedTransitVirtualInterfaceAccepter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HostedTransitVirtualInterfaceAccepterList";
+    public const string KubeGroup = "directconnect.aws.upbound.io";
+    public const string KubePluralName = "hostedtransitvirtualinterfaceaccepters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HostedTransitVirtualInterfaceAccepter> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HostedTransitVirtualInterfaceAccepterSpecForProviderDxGatewayIdRefPolicy
@@ -477,30 +503,4 @@ public partial class V1beta1HostedTransitVirtualInterfaceAccepter : IKubernetesO
     /// <summary>HostedTransitVirtualInterfaceAccepterStatus defines the observed state of HostedTransitVirtualInterfaceAccepter.</summary>
     [JsonPropertyName("status")]
     public V1beta1HostedTransitVirtualInterfaceAccepterStatus? Status { get; set; }
-}
-
-/// <summary>HostedTransitVirtualInterfaceAccepter is the Schema for the HostedTransitVirtualInterfaceAccepters API. Provides a resource to manage the accepter's side of a Direct Connect hosted transit virtual interface.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HostedTransitVirtualInterfaceAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HostedTransitVirtualInterfaceAccepter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HostedTransitVirtualInterfaceAccepterList";
-    public const string KubeGroup = "directconnect.aws.upbound.io";
-    public const string KubePluralName = "hostedtransitvirtualinterfaceaccepters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HostedTransitVirtualInterfaceAccepter> Items { get; set; }
 }

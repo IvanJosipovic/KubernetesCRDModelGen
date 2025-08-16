@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gamelift.aws.upbound.io;
+/// <summary>Alias is the Schema for the Aliass API. Provides a GameLift Alias resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AliasList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Alias>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AliasList";
+    public const string KubeGroup = "gamelift.aws.upbound.io";
+    public const string KubePluralName = "aliases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Alias> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AliasSpecForProviderRoutingStrategy
@@ -284,30 +310,4 @@ public partial class V1beta1Alias : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     /// <summary>AliasStatus defines the observed state of Alias.</summary>
     [JsonPropertyName("status")]
     public V1beta1AliasStatus? Status { get; set; }
-}
-
-/// <summary>Alias is the Schema for the Aliass API. Provides a GameLift Alias resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AliasList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Alias>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AliasList";
-    public const string KubeGroup = "gamelift.aws.upbound.io";
-    public const string KubePluralName = "aliases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Alias> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigqueryconnection.cnrm.cloud.google.com;
+/// <summary>BigQueryConnectionConnection is the Schema for the BigQueryConnectionConnection API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigQueryConnectionConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryConnectionConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigQueryConnectionConnectionList";
+    public const string KubeGroup = "bigqueryconnection.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryconnectionconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigQueryConnectionConnection> Items { get; set; }
+}
+
 /// <summary>Authentication using Google owned service account to assume into customer's AWS IAM Role.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryConnectionConnectionSpecAwsAccessRole
@@ -484,30 +510,4 @@ public partial class V1beta1BigQueryConnectionConnection : IKubernetesObject<V1O
     /// <summary>BigQueryConnectionConnectionStatus defines the config connector machine state of BigQueryConnectionConnection</summary>
     [JsonPropertyName("status")]
     public V1beta1BigQueryConnectionConnectionStatus? Status { get; set; }
-}
-
-/// <summary>BigQueryConnectionConnection is the Schema for the BigQueryConnectionConnection API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigQueryConnectionConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryConnectionConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigQueryConnectionConnectionList";
-    public const string KubeGroup = "bigqueryconnection.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigqueryconnectionconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BigQueryConnectionConnection> Items { get; set; }
 }

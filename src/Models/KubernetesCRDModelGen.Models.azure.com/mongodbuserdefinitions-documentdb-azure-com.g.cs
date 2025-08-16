@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.documentdb.azure.com;
+/// <summary>Storage version of v1api20240815.MongodbUserDefinition Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/mongorbac.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbUserDefinitions/{mongoUserDefinitionId}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240815storageMongodbUserDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1api20240815storageMongodbUserDefinition>
+{
+    public const string KubeApiVersion = "v1api20240815storage";
+    public const string KubeKind = "MongodbUserDefinitionList";
+    public const string KubeGroup = "documentdb.azure.com";
+    public const string KubePluralName = "mongodbuserdefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240815storageMongodbUserDefinition> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240815storageMongodbUserDefinitionSpecOperatorSpecConfigMapExpressions
@@ -274,30 +300,4 @@ public partial class V1api20240815storageMongodbUserDefinition : IKubernetesObje
     /// <summary>Storage version of v1api20240815.MongodbUserDefinition_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20240815storageMongodbUserDefinitionStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240815.MongodbUserDefinition Generator information: - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/mongorbac.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/mongodbUserDefinitions/{mongoUserDefinitionId}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240815storageMongodbUserDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1api20240815storageMongodbUserDefinition>
-{
-    public const string KubeApiVersion = "v1api20240815storage";
-    public const string KubeKind = "MongodbUserDefinitionList";
-    public const string KubeGroup = "documentdb.azure.com";
-    public const string KubePluralName = "mongodbuserdefinitions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240815storageMongodbUserDefinition> Items { get; set; }
 }

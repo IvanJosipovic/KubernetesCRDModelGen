@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lightsail.aws.m.upbound.io;
+/// <summary>KeyPair is the Schema for the KeyPairs API. Manages a Lightsail Key Pair.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KeyPairList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KeyPair>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KeyPairList";
+    public const string KubeGroup = "lightsail.aws.m.upbound.io";
+    public const string KubePluralName = "keypairs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1KeyPair> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeyPairSpecForProvider
@@ -228,30 +254,4 @@ public partial class V1beta1KeyPair : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>KeyPairStatus defines the observed state of KeyPair.</summary>
     [JsonPropertyName("status")]
     public V1beta1KeyPairStatus? Status { get; set; }
-}
-
-/// <summary>KeyPair is the Schema for the KeyPairs API. Manages a Lightsail Key Pair.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1KeyPairList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KeyPair>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "KeyPairList";
-    public const string KubeGroup = "lightsail.aws.m.upbound.io";
-    public const string KubePluralName = "keypairs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1KeyPair> Items { get; set; }
 }

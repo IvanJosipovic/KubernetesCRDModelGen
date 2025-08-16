@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.docdb.aws.m.upbound.io;
+/// <summary>GlobalCluster is the Schema for the GlobalClusters API. Manages a DocumentDB Global Cluster</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GlobalClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GlobalClusterList";
+    public const string KubeGroup = "docdb.aws.m.upbound.io";
+    public const string KubePluralName = "globalclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GlobalCluster> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalClusterSpecForProviderSourceDbClusterIdentifierRefPolicy
@@ -413,30 +439,4 @@ public partial class V1beta1GlobalCluster : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>GlobalClusterStatus defines the observed state of GlobalCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1GlobalClusterStatus? Status { get; set; }
-}
-
-/// <summary>GlobalCluster is the Schema for the GlobalClusters API. Manages a DocumentDB Global Cluster</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GlobalClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GlobalClusterList";
-    public const string KubeGroup = "docdb.aws.m.upbound.io";
-    public const string KubePluralName = "globalclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GlobalCluster> Items { get; set; }
 }

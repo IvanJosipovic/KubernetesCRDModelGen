@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.upbound.io;
+/// <summary>WindowsFunctionApp is the Schema for the WindowsFunctionApps API. Manages a Windows Function App.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WindowsFunctionAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WindowsFunctionApp>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WindowsFunctionAppList";
+    public const string KubeGroup = "web.azure.upbound.io";
+    public const string KubePluralName = "windowsfunctionapps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WindowsFunctionApp> Items { get; set; }
+}
+
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WindowsFunctionAppSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
@@ -4527,30 +4553,4 @@ public partial class V1beta1WindowsFunctionApp : IKubernetesObject<V1ObjectMeta>
     /// <summary>WindowsFunctionAppStatus defines the observed state of WindowsFunctionApp.</summary>
     [JsonPropertyName("status")]
     public V1beta1WindowsFunctionAppStatus? Status { get; set; }
-}
-
-/// <summary>WindowsFunctionApp is the Schema for the WindowsFunctionApps API. Manages a Windows Function App.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WindowsFunctionAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WindowsFunctionApp>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WindowsFunctionAppList";
-    public const string KubeGroup = "web.azure.upbound.io";
-    public const string KubePluralName = "windowsfunctionapps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WindowsFunctionApp> Items { get; set; }
 }

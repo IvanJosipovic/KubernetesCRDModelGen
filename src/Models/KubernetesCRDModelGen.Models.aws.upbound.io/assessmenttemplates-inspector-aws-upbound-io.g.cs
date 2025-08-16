@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.inspector.aws.upbound.io;
+/// <summary>AssessmentTemplate is the Schema for the AssessmentTemplates API. Provides an Inspector Classic Assessment Template.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AssessmentTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AssessmentTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AssessmentTemplateList";
+    public const string KubeGroup = "inspector.aws.upbound.io";
+    public const string KubePluralName = "assessmenttemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AssessmentTemplate> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AssessmentTemplateSpecForProviderEventSubscriptionTopicArnRefPolicy
@@ -552,30 +578,4 @@ public partial class V1beta1AssessmentTemplate : IKubernetesObject<V1ObjectMeta>
     /// <summary>AssessmentTemplateStatus defines the observed state of AssessmentTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1AssessmentTemplateStatus? Status { get; set; }
-}
-
-/// <summary>AssessmentTemplate is the Schema for the AssessmentTemplates API. Provides an Inspector Classic Assessment Template.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AssessmentTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AssessmentTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AssessmentTemplateList";
-    public const string KubeGroup = "inspector.aws.upbound.io";
-    public const string KubePluralName = "assessmenttemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AssessmentTemplate> Items { get; set; }
 }

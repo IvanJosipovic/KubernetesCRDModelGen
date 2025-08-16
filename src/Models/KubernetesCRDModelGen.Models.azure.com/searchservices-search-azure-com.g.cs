@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.search.azure.com;
+/// <summary>Storage version of v1api20231101.SearchService Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2023-11-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20231101storageSearchServiceList : IKubernetesObject<V1ListMeta>, IItems<V1api20231101storageSearchService>
+{
+    public const string KubeApiVersion = "v1api20231101storage";
+    public const string KubeKind = "SearchServiceList";
+    public const string KubeGroup = "search.azure.com";
+    public const string KubePluralName = "searchservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20231101storageSearchService> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20231101.DataPlaneAadOrApiKeyAuthOption Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20231101storageSearchServiceSpecAuthOptionsAadOrApiKey
@@ -642,30 +668,4 @@ public partial class V1api20231101storageSearchService : IKubernetesObject<V1Obj
     /// <summary>Storage version of v1api20231101.SearchService_STATUS Describes a search service and its current state.</summary>
     [JsonPropertyName("status")]
     public V1api20231101storageSearchServiceStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20231101.SearchService Generator information: - Generated from: /search/resource-manager/Microsoft.Search/stable/2023-11-01/search.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20231101storageSearchServiceList : IKubernetesObject<V1ListMeta>, IItems<V1api20231101storageSearchService>
-{
-    public const string KubeApiVersion = "v1api20231101storage";
-    public const string KubeKind = "SearchServiceList";
-    public const string KubeGroup = "search.azure.com";
-    public const string KubePluralName = "searchservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20231101storageSearchService> Items { get; set; }
 }

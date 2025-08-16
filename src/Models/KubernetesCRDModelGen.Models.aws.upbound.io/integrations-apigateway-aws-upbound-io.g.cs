@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigateway.aws.upbound.io;
+/// <summary>Integration is the Schema for the Integrations API. Provides an HTTP Method Integration for an API Gateway Integration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IntegrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Integration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IntegrationList";
+    public const string KubeGroup = "apigateway.aws.upbound.io";
+    public const string KubePluralName = "integrations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Integration> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IntegrationSpecForProviderConnectionIdRefPolicy
@@ -1048,30 +1074,4 @@ public partial class V1beta1Integration : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>IntegrationStatus defines the observed state of Integration.</summary>
     [JsonPropertyName("status")]
     public V1beta1IntegrationStatus? Status { get; set; }
-}
-
-/// <summary>Integration is the Schema for the Integrations API. Provides an HTTP Method Integration for an API Gateway Integration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IntegrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Integration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IntegrationList";
-    public const string KubeGroup = "apigateway.aws.upbound.io";
-    public const string KubePluralName = "integrations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Integration> Items { get; set; }
 }

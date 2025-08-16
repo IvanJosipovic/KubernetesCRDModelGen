@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.m.upbound.io;
+/// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AutoscalingGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AutoscalingGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AutoscalingGroupList";
+    public const string KubeGroup = "autoscaling.aws.m.upbound.io";
+    public const string KubePluralName = "autoscalinggroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AutoscalingGroup> Items { get; set; }
+}
+
 /// <summary>The instance capacity distribution across Availability Zones. See Availability Zone Distribution below for more details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingGroupSpecForProviderAvailabilityZoneDistribution
@@ -3299,30 +3325,4 @@ public partial class V1beta1AutoscalingGroup : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>AutoscalingGroupStatus defines the observed state of AutoscalingGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1AutoscalingGroupStatus? Status { get; set; }
-}
-
-/// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AutoscalingGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AutoscalingGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AutoscalingGroupList";
-    public const string KubeGroup = "autoscaling.aws.m.upbound.io";
-    public const string KubePluralName = "autoscalinggroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AutoscalingGroup> Items { get; set; }
 }

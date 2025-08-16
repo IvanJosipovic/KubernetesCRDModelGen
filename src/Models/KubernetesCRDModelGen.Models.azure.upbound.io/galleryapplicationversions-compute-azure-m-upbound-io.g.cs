@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.m.upbound.io;
+/// <summary>GalleryApplicationVersion is the Schema for the GalleryApplicationVersions API. Manages a Gallery Application Version.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GalleryApplicationVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GalleryApplicationVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GalleryApplicationVersionList";
+    public const string KubeGroup = "compute.azure.m.upbound.io";
+    public const string KubePluralName = "galleryapplicationversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GalleryApplicationVersion> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GalleryApplicationVersionSpecForProviderGalleryApplicationIdRefPolicy
@@ -877,30 +903,4 @@ public partial class V1beta1GalleryApplicationVersion : IKubernetesObject<V1Obje
     /// <summary>GalleryApplicationVersionStatus defines the observed state of GalleryApplicationVersion.</summary>
     [JsonPropertyName("status")]
     public V1beta1GalleryApplicationVersionStatus? Status { get; set; }
-}
-
-/// <summary>GalleryApplicationVersion is the Schema for the GalleryApplicationVersions API. Manages a Gallery Application Version.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GalleryApplicationVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GalleryApplicationVersion>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GalleryApplicationVersionList";
-    public const string KubeGroup = "compute.azure.m.upbound.io";
-    public const string KubePluralName = "galleryapplicationversions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GalleryApplicationVersion> Items { get; set; }
 }

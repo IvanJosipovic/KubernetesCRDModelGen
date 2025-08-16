@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.m.upbound.io;
+/// <summary>HSMClientCertificate is the Schema for the HSMClientCertificates API. Creates an HSM client certificate that an Amazon Redshift cluster will use to connect to the client's HSM in order to store and retrieve the keys used to encrypt the cluster databases.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HSMClientCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HSMClientCertificate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HSMClientCertificateList";
+    public const string KubeGroup = "redshift.aws.m.upbound.io";
+    public const string KubePluralName = "hsmclientcertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HSMClientCertificate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HSMClientCertificateSpecForProvider
@@ -180,30 +206,4 @@ public partial class V1beta1HSMClientCertificate : IKubernetesObject<V1ObjectMet
     /// <summary>HSMClientCertificateStatus defines the observed state of HSMClientCertificate.</summary>
     [JsonPropertyName("status")]
     public V1beta1HSMClientCertificateStatus? Status { get; set; }
-}
-
-/// <summary>HSMClientCertificate is the Schema for the HSMClientCertificates API. Creates an HSM client certificate that an Amazon Redshift cluster will use to connect to the client's HSM in order to store and retrieve the keys used to encrypt the cluster databases.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HSMClientCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HSMClientCertificate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HSMClientCertificateList";
-    public const string KubeGroup = "redshift.aws.m.upbound.io";
-    public const string KubePluralName = "hsmclientcertificates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HSMClientCertificate> Items { get; set; }
 }

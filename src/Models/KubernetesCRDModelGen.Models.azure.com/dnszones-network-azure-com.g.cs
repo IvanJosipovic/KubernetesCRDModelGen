@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20180501.DnsZone Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20180501storageDnsZoneList : IKubernetesObject<V1ListMeta>, IItems<V1api20180501storageDnsZone>
+{
+    public const string KubeApiVersion = "v1api20180501storage";
+    public const string KubeKind = "DnsZoneList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "dnszones";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20180501storageDnsZone> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZoneSpecOperatorSpecConfigMapExpressions
@@ -337,30 +363,4 @@ public partial class V1api20180501storageDnsZone : IKubernetesObject<V1ObjectMet
     /// <summary>Storage version of v1api20180501.DnsZone_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20180501storageDnsZoneStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20180501.DnsZone Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20180501storageDnsZoneList : IKubernetesObject<V1ListMeta>, IItems<V1api20180501storageDnsZone>
-{
-    public const string KubeApiVersion = "v1api20180501storage";
-    public const string KubeKind = "DnsZoneList";
-    public const string KubeGroup = "network.azure.com";
-    public const string KubePluralName = "dnszones";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20180501storageDnsZone> Items { get; set; }
 }

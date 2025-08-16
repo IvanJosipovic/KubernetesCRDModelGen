@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signalrservice.azure.com;
+/// <summary>Storage version of v1api20240301.CustomCertificate Generator information: - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2024-03-01/signalr.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/customCertificates/{certificateName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240301storageCustomCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageCustomCertificate>
+{
+    public const string KubeApiVersion = "v1api20240301storage";
+    public const string KubeKind = "CustomCertificateList";
+    public const string KubeGroup = "signalrservice.azure.com";
+    public const string KubePluralName = "customcertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240301storageCustomCertificate> Items { get; set; }
+}
+
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageCustomCertificateSpecKeyVaultBaseUriFromConfig
@@ -265,30 +291,4 @@ public partial class V1api20240301storageCustomCertificate : IKubernetesObject<V
     /// <summary>Storage version of v1api20240301.CustomCertificate_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20240301storageCustomCertificateStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240301.CustomCertificate Generator information: - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2024-03-01/signalr.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}/customCertificates/{certificateName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240301storageCustomCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageCustomCertificate>
-{
-    public const string KubeApiVersion = "v1api20240301storage";
-    public const string KubeKind = "CustomCertificateList";
-    public const string KubeGroup = "signalrservice.azure.com";
-    public const string KubePluralName = "customcertificates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240301storageCustomCertificate> Items { get; set; }
 }

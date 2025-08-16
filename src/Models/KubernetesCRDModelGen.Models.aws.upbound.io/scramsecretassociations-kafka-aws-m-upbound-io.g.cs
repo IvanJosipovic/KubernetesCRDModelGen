@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafka.aws.m.upbound.io;
+/// <summary>ScramSecretAssociation is the Schema for the ScramSecretAssociations API. Associates SCRAM secrets with a Managed Streaming for Kafka (MSK) cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ScramSecretAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ScramSecretAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ScramSecretAssociationList";
+    public const string KubeGroup = "kafka.aws.m.upbound.io";
+    public const string KubePluralName = "scramsecretassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ScramSecretAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScramSecretAssociationSpecForProviderClusterArnRefPolicy
@@ -468,30 +494,4 @@ public partial class V1beta1ScramSecretAssociation : IKubernetesObject<V1ObjectM
     /// <summary>ScramSecretAssociationStatus defines the observed state of ScramSecretAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1ScramSecretAssociationStatus? Status { get; set; }
-}
-
-/// <summary>ScramSecretAssociation is the Schema for the ScramSecretAssociations API. Associates SCRAM secrets with a Managed Streaming for Kafka (MSK) cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ScramSecretAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ScramSecretAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ScramSecretAssociationList";
-    public const string KubeGroup = "kafka.aws.m.upbound.io";
-    public const string KubePluralName = "scramsecretassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ScramSecretAssociation> Items { get; set; }
 }

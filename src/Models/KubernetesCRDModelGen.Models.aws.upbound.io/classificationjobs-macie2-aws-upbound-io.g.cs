@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.macie2.aws.upbound.io;
+/// <summary>ClassificationJob is the Schema for the ClassificationJobs API. Provides a resource to manage an AWS Macie Classification Job.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ClassificationJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClassificationJob>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ClassificationJobList";
+    public const string KubeGroup = "macie2.aws.upbound.io";
+    public const string KubePluralName = "classificationjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ClassificationJob> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClassificationJobSpecForProviderS3JobDefinitionBucketCriteriaExcludesAndSimpleCriterion
@@ -1381,30 +1407,4 @@ public partial class V1beta1ClassificationJob : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ClassificationJobStatus defines the observed state of ClassificationJob.</summary>
     [JsonPropertyName("status")]
     public V1beta1ClassificationJobStatus? Status { get; set; }
-}
-
-/// <summary>ClassificationJob is the Schema for the ClassificationJobs API. Provides a resource to manage an AWS Macie Classification Job.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ClassificationJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClassificationJob>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ClassificationJobList";
-    public const string KubeGroup = "macie2.aws.upbound.io";
-    public const string KubePluralName = "classificationjobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ClassificationJob> Items { get; set; }
 }

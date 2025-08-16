@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>MSSQLManagedInstanceActiveDirectoryAdministrator is the Schema for the MSSQLManagedInstanceActiveDirectoryAdministrators API. Manages an Active Directory Administrator on a Microsoft Azure SQL Managed Instance</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLManagedInstanceActiveDirectoryAdministrator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLManagedInstanceActiveDirectoryAdministratorList";
+    public const string KubeGroup = "sql.azure.upbound.io";
+    public const string KubePluralName = "mssqlmanagedinstanceactivedirectoryadministrators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLManagedInstanceActiveDirectoryAdministrator> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorSpecForProviderManagedInstanceIdRefPolicy
@@ -289,30 +315,4 @@ public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministrator : I
     /// <summary>MSSQLManagedInstanceActiveDirectoryAdministratorStatus defines the observed state of MSSQLManagedInstanceActiveDirectoryAdministrator.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLManagedInstanceActiveDirectoryAdministrator is the Schema for the MSSQLManagedInstanceActiveDirectoryAdministrators API. Manages an Active Directory Administrator on a Microsoft Azure SQL Managed Instance</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLManagedInstanceActiveDirectoryAdministratorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLManagedInstanceActiveDirectoryAdministrator>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLManagedInstanceActiveDirectoryAdministratorList";
-    public const string KubeGroup = "sql.azure.upbound.io";
-    public const string KubePluralName = "mssqlmanagedinstanceactivedirectoryadministrators";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLManagedInstanceActiveDirectoryAdministrator> Items { get; set; }
 }

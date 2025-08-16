@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.m.upbound.io;
+/// <summary>AppActionHTTP is the Schema for the AppActionHTTPs API. Manages an HTTP Action within a Logic App Workflow</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppActionHTTPList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppActionHTTP>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppActionHTTPList";
+    public const string KubeGroup = "logic.azure.m.upbound.io";
+    public const string KubePluralName = "appactionhttps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppActionHTTP> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppActionHTTPSpecForProviderLogicAppIdRefPolicy
@@ -339,30 +365,4 @@ public partial class V1beta1AppActionHTTP : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>AppActionHTTPStatus defines the observed state of AppActionHTTP.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppActionHTTPStatus? Status { get; set; }
-}
-
-/// <summary>AppActionHTTP is the Schema for the AppActionHTTPs API. Manages an HTTP Action within a Logic App Workflow</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppActionHTTPList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppActionHTTP>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppActionHTTPList";
-    public const string KubeGroup = "logic.azure.m.upbound.io";
-    public const string KubePluralName = "appactionhttps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppActionHTTP> Items { get; set; }
 }

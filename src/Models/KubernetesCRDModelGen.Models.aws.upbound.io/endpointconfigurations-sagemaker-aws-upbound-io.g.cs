@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker AI Endpoint Configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EndpointConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EndpointConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EndpointConfigurationList";
+    public const string KubeGroup = "sagemaker.aws.upbound.io";
+    public const string KubePluralName = "endpointconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EndpointConfiguration> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EndpointConfigurationSpecForProviderAsyncInferenceConfigClientConfig
@@ -1572,30 +1598,4 @@ public partial class V1beta1EndpointConfiguration : IKubernetesObject<V1ObjectMe
     /// <summary>EndpointConfigurationStatus defines the observed state of EndpointConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1EndpointConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>EndpointConfiguration is the Schema for the EndpointConfigurations API. Provides a SageMaker AI Endpoint Configuration resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EndpointConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EndpointConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EndpointConfigurationList";
-    public const string KubeGroup = "sagemaker.aws.upbound.io";
-    public const string KubePluralName = "endpointconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1EndpointConfiguration> Items { get; set; }
 }

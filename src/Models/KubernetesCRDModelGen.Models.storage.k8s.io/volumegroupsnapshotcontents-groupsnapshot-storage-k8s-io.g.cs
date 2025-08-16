@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.groupsnapshot.storage.k8s.io;
+/// <summary>VolumeGroupSnapshotContent represents the actual "on-disk" group snapshot object in the underlying storage system</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VolumeGroupSnapshotContentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VolumeGroupSnapshotContent>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VolumeGroupSnapshotContentList";
+    public const string KubeGroup = "groupsnapshot.storage.k8s.io";
+    public const string KubePluralName = "volumegroupsnapshotcontents";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VolumeGroupSnapshotContent> Items { get; set; }
+}
+
 /// <summary>GroupSnapshotHandles specifies the CSI "group_snapshot_id" of a pre-existing group snapshot and a list of CSI "snapshot_id" of pre-existing snapshots on the underlying storage system for which a Kubernetes object representation was (or should be) created. This field is immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VolumeGroupSnapshotContentSpecSourceGroupSnapshotHandles
@@ -171,30 +197,4 @@ public partial class V1beta1VolumeGroupSnapshotContent : IKubernetesObject<V1Obj
     /// <summary>status represents the current information of a group snapshot.</summary>
     [JsonPropertyName("status")]
     public V1beta1VolumeGroupSnapshotContentStatus? Status { get; set; }
-}
-
-/// <summary>VolumeGroupSnapshotContent represents the actual "on-disk" group snapshot object in the underlying storage system</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VolumeGroupSnapshotContentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VolumeGroupSnapshotContent>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VolumeGroupSnapshotContentList";
-    public const string KubeGroup = "groupsnapshot.storage.k8s.io";
-    public const string KubePluralName = "volumegroupsnapshotcontents";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VolumeGroupSnapshotContent> Items { get; set; }
 }

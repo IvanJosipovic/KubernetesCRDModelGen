@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.m.upbound.io;
+/// <summary>InstanceAttachment is the Schema for the InstanceAttachments API. An</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InstanceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InstanceAttachmentList";
+    public const string KubeGroup = "apigee.gcp.m.upbound.io";
+    public const string KubePluralName = "instanceattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1InstanceAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceAttachmentSpecForProviderEnvironmentRefPolicy
@@ -464,30 +490,4 @@ public partial class V1beta1InstanceAttachment : IKubernetesObject<V1ObjectMeta>
     /// <summary>InstanceAttachmentStatus defines the observed state of InstanceAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1InstanceAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>InstanceAttachment is the Schema for the InstanceAttachments API. An</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1InstanceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "InstanceAttachmentList";
-    public const string KubeGroup = "apigee.gcp.m.upbound.io";
-    public const string KubePluralName = "instanceattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1InstanceAttachment> Items { get; set; }
 }

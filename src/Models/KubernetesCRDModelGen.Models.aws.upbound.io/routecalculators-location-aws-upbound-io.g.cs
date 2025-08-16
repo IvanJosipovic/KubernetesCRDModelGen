@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.location.aws.upbound.io;
+/// <summary>RouteCalculator is the Schema for the RouteCalculators API. Provides a Location Service Route Calculator.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RouteCalculatorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteCalculator>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RouteCalculatorList";
+    public const string KubeGroup = "location.aws.upbound.io";
+    public const string KubePluralName = "routecalculators";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RouteCalculator> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteCalculatorSpecForProvider
@@ -229,30 +255,4 @@ public partial class V1beta1RouteCalculator : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>RouteCalculatorStatus defines the observed state of RouteCalculator.</summary>
     [JsonPropertyName("status")]
     public V1beta1RouteCalculatorStatus? Status { get; set; }
-}
-
-/// <summary>RouteCalculator is the Schema for the RouteCalculators API. Provides a Location Service Route Calculator.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RouteCalculatorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteCalculator>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RouteCalculatorList";
-    public const string KubeGroup = "location.aws.upbound.io";
-    public const string KubePluralName = "routecalculators";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RouteCalculator> Items { get; set; }
 }

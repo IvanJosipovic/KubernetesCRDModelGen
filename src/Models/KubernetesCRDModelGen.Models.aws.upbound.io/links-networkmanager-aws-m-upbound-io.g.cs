@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+/// <summary>Link is the Schema for the Links API. Manages a Network Manager link.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Link>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkList";
+    public const string KubeGroup = "networkmanager.aws.m.upbound.io";
+    public const string KubePluralName = "links";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Link> Items { get; set; }
+}
+
 /// <summary>Upload speed and download speed in Mbps. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkSpecForProviderBandwidth
@@ -567,30 +593,4 @@ public partial class V1beta1Link : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     /// <summary>LinkStatus defines the observed state of Link.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinkStatus? Status { get; set; }
-}
-
-/// <summary>Link is the Schema for the Links API. Manages a Network Manager link.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Link>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinkList";
-    public const string KubeGroup = "networkmanager.aws.m.upbound.io";
-    public const string KubePluralName = "links";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Link> Items { get; set; }
 }

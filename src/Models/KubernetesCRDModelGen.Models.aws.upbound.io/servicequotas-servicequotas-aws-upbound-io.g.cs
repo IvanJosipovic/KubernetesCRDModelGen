@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicequotas.aws.upbound.io;
+/// <summary>ServiceQuota is the Schema for the ServiceQuotas API. Manages an individual Service Quota</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceQuotaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceQuota>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceQuotaList";
+    public const string KubeGroup = "servicequotas.aws.upbound.io";
+    public const string KubePluralName = "servicequotas";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceQuota> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceQuotaSpecForProvider
@@ -287,30 +313,4 @@ public partial class V1beta1ServiceQuota : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>ServiceQuotaStatus defines the observed state of ServiceQuota.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServiceQuotaStatus? Status { get; set; }
-}
-
-/// <summary>ServiceQuota is the Schema for the ServiceQuotas API. Manages an individual Service Quota</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceQuotaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceQuota>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceQuotaList";
-    public const string KubeGroup = "servicequotas.aws.upbound.io";
-    public const string KubePluralName = "servicequotas";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServiceQuota> Items { get; set; }
 }

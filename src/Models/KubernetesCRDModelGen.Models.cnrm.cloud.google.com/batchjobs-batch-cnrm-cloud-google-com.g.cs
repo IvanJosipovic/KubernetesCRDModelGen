@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.cnrm.cloud.google.com;
+/// <summary>BatchJob is the Schema for the BatchJob API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BatchJobList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BatchJob>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BatchJobList";
+    public const string KubeGroup = "batch.cnrm.cloud.google.com";
+    public const string KubePluralName = "batchjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BatchJob> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BatchJobSpecAllocationPolicyInstancesPolicyAccelerators
@@ -1035,30 +1061,4 @@ public partial class V1alpha1BatchJob : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>BatchJobStatus defines the config connector machine state of BatchJob</summary>
     [JsonPropertyName("status")]
     public V1alpha1BatchJobStatus? Status { get; set; }
-}
-
-/// <summary>BatchJob is the Schema for the BatchJob API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BatchJobList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BatchJob>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BatchJobList";
-    public const string KubeGroup = "batch.cnrm.cloud.google.com";
-    public const string KubePluralName = "batchjobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1BatchJob> Items { get; set; }
 }

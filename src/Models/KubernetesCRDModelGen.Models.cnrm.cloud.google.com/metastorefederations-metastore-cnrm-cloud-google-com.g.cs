@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.metastore.cnrm.cloud.google.com;
+/// <summary>MetastoreFederation is the Schema for the MetastoreFederation API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MetastoreFederationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MetastoreFederation>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MetastoreFederationList";
+    public const string KubeGroup = "metastore.cnrm.cloud.google.com";
+    public const string KubePluralName = "metastorefederations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MetastoreFederation> Items { get; set; }
+}
+
 /// <summary>The relative resource name of the metastore that is being federated.  The formats of the relative resource names for the currently supported  metastores are listed below:   * BigQuery      * `projects/{project_id}`  * Dataproc Metastore      * `projects/{project_id}/locations/{location}/services/{service_id}`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreFederationSpecBackendMetastoresServiceRef
@@ -191,30 +217,4 @@ public partial class V1alpha1MetastoreFederation : IKubernetesObject<V1ObjectMet
     /// <summary>MetastoreFederationStatus defines the config connector machine state of MetastoreFederation</summary>
     [JsonPropertyName("status")]
     public V1alpha1MetastoreFederationStatus? Status { get; set; }
-}
-
-/// <summary>MetastoreFederation is the Schema for the MetastoreFederation API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MetastoreFederationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MetastoreFederation>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MetastoreFederationList";
-    public const string KubeGroup = "metastore.cnrm.cloud.google.com";
-    public const string KubePluralName = "metastorefederations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MetastoreFederation> Items { get; set; }
 }

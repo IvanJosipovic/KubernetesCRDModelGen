@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.upbound.io;
+/// <summary>AnalyticsHubListing is the Schema for the AnalyticsHubListings API. A Bigquery Analytics Hub data exchange listing</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AnalyticsHubListingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AnalyticsHubListing>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AnalyticsHubListingList";
+    public const string KubeGroup = "bigquery.gcp.upbound.io";
+    public const string KubePluralName = "analyticshublistings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AnalyticsHubListing> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AnalyticsHubListingSpecForProviderBigqueryDatasetDatasetRefPolicy
@@ -1031,30 +1057,4 @@ public partial class V1beta1AnalyticsHubListing : IKubernetesObject<V1ObjectMeta
     /// <summary>AnalyticsHubListingStatus defines the observed state of AnalyticsHubListing.</summary>
     [JsonPropertyName("status")]
     public V1beta1AnalyticsHubListingStatus? Status { get; set; }
-}
-
-/// <summary>AnalyticsHubListing is the Schema for the AnalyticsHubListings API. A Bigquery Analytics Hub data exchange listing</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AnalyticsHubListingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AnalyticsHubListing>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AnalyticsHubListingList";
-    public const string KubeGroup = "bigquery.gcp.upbound.io";
-    public const string KubePluralName = "analyticshublistings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AnalyticsHubListing> Items { get; set; }
 }

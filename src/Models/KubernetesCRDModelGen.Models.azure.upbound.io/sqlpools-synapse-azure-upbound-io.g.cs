@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.upbound.io;
+/// <summary>SQLPool is the Schema for the SQLPools API. Manages a Synapse SQL Pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLPoolList";
+    public const string KubeGroup = "synapse.azure.upbound.io";
+    public const string KubePluralName = "sqlpools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SQLPool> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLPoolSpecForProviderRestore
@@ -388,30 +414,4 @@ public partial class V1beta1SQLPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>SQLPoolStatus defines the observed state of SQLPool.</summary>
     [JsonPropertyName("status")]
     public V1beta1SQLPoolStatus? Status { get; set; }
-}
-
-/// <summary>SQLPool is the Schema for the SQLPools API. Manages a Synapse SQL Pool.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SQLPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLPool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SQLPoolList";
-    public const string KubeGroup = "synapse.azure.upbound.io";
-    public const string KubePluralName = "sqlpools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SQLPool> Items { get; set; }
 }

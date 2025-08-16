@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>Storage version of v1api20240901.ManagedCluster Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240901storageManagedClusterList : IKubernetesObject<V1ListMeta>, IItems<V1api20240901storageManagedCluster>
+{
+    public const string KubeApiVersion = "v1api20240901storage";
+    public const string KubeKind = "ManagedClusterList";
+    public const string KubeGroup = "containerservice.azure.com";
+    public const string KubePluralName = "managedclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240901storageManagedCluster> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20240901.ManagedClusterAADProfile For more details see [managed AAD on AKS](https://docs.microsoft.com/azure/aks/managed-aad).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageManagedClusterSpecAadProfile
@@ -5066,30 +5092,4 @@ public partial class V1api20240901storageManagedCluster : IKubernetesObject<V1Ob
     /// <summary>Storage version of v1api20240901.ManagedCluster_STATUS Managed cluster.</summary>
     [JsonPropertyName("status")]
     public V1api20240901storageManagedClusterStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240901.ManagedCluster Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240901storageManagedClusterList : IKubernetesObject<V1ListMeta>, IItems<V1api20240901storageManagedCluster>
-{
-    public const string KubeApiVersion = "v1api20240901storage";
-    public const string KubeKind = "ManagedClusterList";
-    public const string KubeGroup = "containerservice.azure.com";
-    public const string KubePluralName = "managedclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240901storageManagedCluster> Items { get; set; }
 }

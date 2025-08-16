@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.automation.azure.m.upbound.io;
+/// <summary>ConnectionClassicCertificate is the Schema for the ConnectionClassicCertificates API. Manages an Automation Connection with type</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConnectionClassicCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectionClassicCertificate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConnectionClassicCertificateList";
+    public const string KubeGroup = "automation.azure.m.upbound.io";
+    public const string KubePluralName = "connectionclassiccertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConnectionClassicCertificate> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionClassicCertificateSpecForProviderAutomationAccountNameRefPolicy
@@ -356,30 +382,4 @@ public partial class V1beta1ConnectionClassicCertificate : IKubernetesObject<V1O
     /// <summary>ConnectionClassicCertificateStatus defines the observed state of ConnectionClassicCertificate.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConnectionClassicCertificateStatus? Status { get; set; }
-}
-
-/// <summary>ConnectionClassicCertificate is the Schema for the ConnectionClassicCertificates API. Manages an Automation Connection with type</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConnectionClassicCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectionClassicCertificate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConnectionClassicCertificateList";
-    public const string KubeGroup = "automation.azure.m.upbound.io";
-    public const string KubePluralName = "connectionclassiccertificates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ConnectionClassicCertificate> Items { get; set; }
 }

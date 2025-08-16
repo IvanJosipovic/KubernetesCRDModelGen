@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20240301.PrivateLinkService Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/privateLinkService.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240301storagePrivateLinkServiceList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storagePrivateLinkService>
+{
+    public const string KubeApiVersion = "v1api20240301storage";
+    public const string KubeKind = "PrivateLinkServiceList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "privatelinkservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240301storagePrivateLinkService> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20240301.ResourceSet The base resource set for visibility and auto-approval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storagePrivateLinkServiceSpecAutoApproval
@@ -601,30 +627,4 @@ public partial class V1api20240301storagePrivateLinkService : IKubernetesObject<
     /// <summary>Storage version of v1api20240301.PrivateLinkService_STATUS_PrivateLinkService_SubResourceEmbedded Private link service resource.</summary>
     [JsonPropertyName("status")]
     public V1api20240301storagePrivateLinkServiceStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240301.PrivateLinkService Generator information: - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/privateLinkService.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/privateLinkServices/{serviceName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240301storagePrivateLinkServiceList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storagePrivateLinkService>
-{
-    public const string KubeApiVersion = "v1api20240301storage";
-    public const string KubeKind = "PrivateLinkServiceList";
-    public const string KubeGroup = "network.azure.com";
-    public const string KubePluralName = "privatelinkservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240301storagePrivateLinkService> Items { get; set; }
 }

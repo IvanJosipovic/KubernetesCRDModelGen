@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.upbound.io;
+/// <summary>ComputeCluster is the Schema for the ComputeClusters API. Manages a Machine Learning Compute Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeClusterList";
+    public const string KubeGroup = "machinelearningservices.azure.upbound.io";
+    public const string KubePluralName = "computeclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeCluster> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeClusterSpecForProviderIdentity
@@ -742,30 +768,4 @@ public partial class V1beta1ComputeCluster : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>ComputeClusterStatus defines the observed state of ComputeCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1ComputeClusterStatus? Status { get; set; }
-}
-
-/// <summary>ComputeCluster is the Schema for the ComputeClusters API. Manages a Machine Learning Compute Cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeClusterList";
-    public const string KubeGroup = "machinelearningservices.azure.upbound.io";
-    public const string KubePluralName = "computeclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ComputeCluster> Items { get; set; }
 }

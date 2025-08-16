@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containeraws.gcp.upbound.io;
+/// <summary>NodePool is the Schema for the NodePools API. An Anthos node pool running on AWS.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NodePoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NodePool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NodePoolList";
+    public const string KubeGroup = "containeraws.gcp.upbound.io";
+    public const string KubePluralName = "nodepools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NodePool> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodePoolSpecForProviderAutoscaling
@@ -1024,30 +1050,4 @@ public partial class V1beta1NodePool : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>NodePoolStatus defines the observed state of NodePool.</summary>
     [JsonPropertyName("status")]
     public V1beta1NodePoolStatus? Status { get; set; }
-}
-
-/// <summary>NodePool is the Schema for the NodePools API. An Anthos node pool running on AWS.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NodePoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NodePool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NodePoolList";
-    public const string KubeGroup = "containeraws.gcp.upbound.io";
-    public const string KubePluralName = "nodepools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NodePool> Items { get; set; }
 }

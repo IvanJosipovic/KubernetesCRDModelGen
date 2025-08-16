@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.upbound.io;
+/// <summary>AuthenticationProfile is the Schema for the AuthenticationProfiles API. Creates a Redshift authentication profile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AuthenticationProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AuthenticationProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AuthenticationProfileList";
+    public const string KubeGroup = "redshift.aws.upbound.io";
+    public const string KubePluralName = "authenticationprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AuthenticationProfile> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthenticationProfileSpecForProvider
@@ -189,30 +215,4 @@ public partial class V1beta1AuthenticationProfile : IKubernetesObject<V1ObjectMe
     /// <summary>AuthenticationProfileStatus defines the observed state of AuthenticationProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1AuthenticationProfileStatus? Status { get; set; }
-}
-
-/// <summary>AuthenticationProfile is the Schema for the AuthenticationProfiles API. Creates a Redshift authentication profile</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AuthenticationProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AuthenticationProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AuthenticationProfileList";
-    public const string KubeGroup = "redshift.aws.upbound.io";
-    public const string KubePluralName = "authenticationprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AuthenticationProfile> Items { get; set; }
 }

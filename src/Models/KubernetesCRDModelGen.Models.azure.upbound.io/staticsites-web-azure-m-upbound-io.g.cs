@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.m.upbound.io;
+/// <summary>StaticSite is the Schema for the StaticSites API. Manages a Static Site.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StaticSiteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StaticSite>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StaticSiteList";
+    public const string KubeGroup = "web.azure.m.upbound.io";
+    public const string KubePluralName = "staticsites";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StaticSite> Items { get; set; }
+}
+
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StaticSiteSpecForProviderIdentity
@@ -351,30 +377,4 @@ public partial class V1beta1StaticSite : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>StaticSiteStatus defines the observed state of StaticSite.</summary>
     [JsonPropertyName("status")]
     public V1beta1StaticSiteStatus? Status { get; set; }
-}
-
-/// <summary>StaticSite is the Schema for the StaticSites API. Manages a Static Site.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StaticSiteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StaticSite>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StaticSiteList";
-    public const string KubeGroup = "web.azure.m.upbound.io";
-    public const string KubePluralName = "staticsites";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StaticSite> Items { get; set; }
 }

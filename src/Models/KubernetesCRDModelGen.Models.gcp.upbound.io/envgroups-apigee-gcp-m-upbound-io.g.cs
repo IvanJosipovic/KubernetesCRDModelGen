@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.m.upbound.io;
+/// <summary>Envgroup is the Schema for the Envgroups API. An</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EnvgroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Envgroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EnvgroupList";
+    public const string KubeGroup = "apigee.gcp.m.upbound.io";
+    public const string KubePluralName = "envgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Envgroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvgroupSpecForProviderOrgIdRefPolicy
@@ -240,30 +266,4 @@ public partial class V1beta1Envgroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>EnvgroupStatus defines the observed state of Envgroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1EnvgroupStatus? Status { get; set; }
-}
-
-/// <summary>Envgroup is the Schema for the Envgroups API. An</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EnvgroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Envgroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EnvgroupList";
-    public const string KubeGroup = "apigee.gcp.m.upbound.io";
-    public const string KubePluralName = "envgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Envgroup> Items { get; set; }
 }

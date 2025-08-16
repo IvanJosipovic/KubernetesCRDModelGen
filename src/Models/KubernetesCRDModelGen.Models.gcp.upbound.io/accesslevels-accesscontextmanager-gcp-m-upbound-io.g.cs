@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.gcp.m.upbound.io;
+/// <summary>AccessLevel is the Schema for the AccessLevels API. An AccessLevel is a label that can be applied to requests to GCP services, along with a list of requirements necessary for the label to be applied.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccessLevelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessLevel>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccessLevelList";
+    public const string KubeGroup = "accesscontextmanager.gcp.m.upbound.io";
+    public const string KubePluralName = "accesslevels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccessLevel> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessLevelSpecForProviderBasicConditionsDevicePolicyOsConstraints
@@ -652,30 +678,4 @@ public partial class V1beta1AccessLevel : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>AccessLevelStatus defines the observed state of AccessLevel.</summary>
     [JsonPropertyName("status")]
     public V1beta1AccessLevelStatus? Status { get; set; }
-}
-
-/// <summary>AccessLevel is the Schema for the AccessLevels API. An AccessLevel is a label that can be applied to requests to GCP services, along with a list of requirements necessary for the label to be applied.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccessLevelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessLevel>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccessLevelList";
-    public const string KubeGroup = "accesscontextmanager.gcp.m.upbound.io";
-    public const string KubePluralName = "accesslevels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AccessLevel> Items { get; set; }
 }

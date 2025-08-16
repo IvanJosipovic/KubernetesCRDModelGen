@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.m.upbound.io;
+/// <summary>OutputServiceBusQueue is the Schema for the OutputServiceBusQueues API. Manages a Stream Analytics Output to a ServiceBus Queue.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OutputServiceBusQueueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputServiceBusQueue>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OutputServiceBusQueueList";
+    public const string KubeGroup = "streamanalytics.azure.m.upbound.io";
+    public const string KubePluralName = "outputservicebusqueues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OutputServiceBusQueue> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusQueueSpecForProviderQueueNameRefPolicy
@@ -941,30 +967,4 @@ public partial class V1beta1OutputServiceBusQueue : IKubernetesObject<V1ObjectMe
     /// <summary>OutputServiceBusQueueStatus defines the observed state of OutputServiceBusQueue.</summary>
     [JsonPropertyName("status")]
     public V1beta1OutputServiceBusQueueStatus? Status { get; set; }
-}
-
-/// <summary>OutputServiceBusQueue is the Schema for the OutputServiceBusQueues API. Manages a Stream Analytics Output to a ServiceBus Queue.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1OutputServiceBusQueueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputServiceBusQueue>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "OutputServiceBusQueueList";
-    public const string KubeGroup = "streamanalytics.azure.m.upbound.io";
-    public const string KubePluralName = "outputservicebusqueues";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1OutputServiceBusQueue> Items { get; set; }
 }

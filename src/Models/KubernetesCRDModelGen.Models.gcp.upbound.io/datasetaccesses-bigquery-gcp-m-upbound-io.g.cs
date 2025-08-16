@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.gcp.m.upbound.io;
+/// <summary>DatasetAccess is the Schema for the DatasetAccesss API. Gives dataset access for a single entity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatasetAccessList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatasetAccess>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatasetAccessList";
+    public const string KubeGroup = "bigquery.gcp.m.upbound.io";
+    public const string KubePluralName = "datasetaccesses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DatasetAccess> Items { get; set; }
+}
+
 /// <summary>Condition for the binding. If CEL expression in this field is true, this access binding will be considered. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetAccessSpecForProviderCondition
@@ -1691,30 +1717,4 @@ public partial class V1beta1DatasetAccess : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>DatasetAccessStatus defines the observed state of DatasetAccess.</summary>
     [JsonPropertyName("status")]
     public V1beta1DatasetAccessStatus? Status { get; set; }
-}
-
-/// <summary>DatasetAccess is the Schema for the DatasetAccesss API. Gives dataset access for a single entity.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DatasetAccessList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatasetAccess>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DatasetAccessList";
-    public const string KubeGroup = "bigquery.gcp.m.upbound.io";
-    public const string KubePluralName = "datasetaccesses";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DatasetAccess> Items { get; set; }
 }

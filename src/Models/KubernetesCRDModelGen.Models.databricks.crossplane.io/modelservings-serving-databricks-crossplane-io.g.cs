@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serving.databricks.crossplane.io;
+/// <summary>ModelServing is the Schema for the ModelServings API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ModelServingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ModelServing>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ModelServingList";
+    public const string KubeGroup = "serving.databricks.crossplane.io";
+    public const string KubePluralName = "modelservings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ModelServing> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ModelServingSpecForProviderAiGatewayFallbackConfig
@@ -2283,30 +2309,4 @@ public partial class V1alpha1ModelServing : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>ModelServingStatus defines the observed state of ModelServing.</summary>
     [JsonPropertyName("status")]
     public V1alpha1ModelServingStatus? Status { get; set; }
-}
-
-/// <summary>ModelServing is the Schema for the ModelServings API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ModelServingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ModelServing>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ModelServingList";
-    public const string KubeGroup = "serving.databricks.crossplane.io";
-    public const string KubePluralName = "modelservings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ModelServing> Items { get; set; }
 }

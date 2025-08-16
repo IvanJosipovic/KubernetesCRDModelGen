@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigqueryreservation.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationCapacityCommitmentMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryReservationCapacityCommitmentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigQueryReservationCapacityCommitment>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryReservationCapacityCommitmentList";
+    public const string KubeGroup = "bigqueryreservation.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryreservationcapacitycommitments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BigQueryReservationCapacityCommitment> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationCapacityCommitmentSpecProjectRef
+public partial class V1alpha1BigQueryReservationCapacityCommitmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class BigQueryReservationCapacityCommitmentSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationCapacityCommitmentSpec
+public partial class V1alpha1BigQueryReservationCapacityCommitmentSpec
 {
     /// <summary>Immutable. The edition type. Valid values are STANDARD, ENTERPRISE, ENTERPRISE_PLUS.</summary>
     [JsonPropertyName("edition")]
@@ -53,7 +73,7 @@ public partial class BigQueryReservationCapacityCommitmentSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public BigQueryReservationCapacityCommitmentSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1BigQueryReservationCapacityCommitmentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>The plan this capacity commitment is converted to after commitmentEndTime passes. Once the plan is changed, committed period is extended according to commitment plan. Only applicable some commitment plans.</summary>
     [JsonPropertyName("renewalPlan")]
@@ -70,7 +90,7 @@ public partial class BigQueryReservationCapacityCommitmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationCapacityCommitmentStatusConditions
+public partial class V1alpha1BigQueryReservationCapacityCommitmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -95,7 +115,7 @@ public partial class BigQueryReservationCapacityCommitmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationCapacityCommitmentStatus
+public partial class V1alpha1BigQueryReservationCapacityCommitmentStatus
 {
     /// <summary>The start of the current commitment period. It is applicable only for ACTIVE capacity commitments.</summary>
     [JsonPropertyName("commitmentEndTime")]
@@ -107,7 +127,7 @@ public partial class BigQueryReservationCapacityCommitmentStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BigQueryReservationCapacityCommitmentStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1BigQueryReservationCapacityCommitmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>The resource name of the capacity commitment, e.g., projects/myproject/locations/US/capacityCommitments/123.</summary>
     [JsonPropertyName("name")]
@@ -124,25 +144,30 @@ public partial class BigQueryReservationCapacityCommitmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryReservationCapacityCommitment
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryReservationCapacityCommitment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryReservationCapacityCommitmentSpec>, IStatus<V1alpha1BigQueryReservationCapacityCommitmentStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryReservationCapacityCommitment";
+    public const string KubeGroup = "bigqueryreservation.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigqueryreservationcapacitycommitments";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigQueryReservationCapacityCommitmentMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BigQueryReservationCapacityCommitmentSpec Spec { get; set; }
+    public V1alpha1BigQueryReservationCapacityCommitmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BigQueryReservationCapacityCommitmentStatus? Status { get; set; }
+    public V1alpha1BigQueryReservationCapacityCommitmentStatus? Status { get; set; }
 }

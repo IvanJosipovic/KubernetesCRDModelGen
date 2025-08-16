@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.gcp.upbound.io;
+/// <summary>SyncAuthorization is the Schema for the SyncAuthorizations API. Authorize the Synchronizer to download environment data from the control plane.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SyncAuthorizationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SyncAuthorization>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SyncAuthorizationList";
+    public const string KubeGroup = "apigee.gcp.upbound.io";
+    public const string KubePluralName = "syncauthorizations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SyncAuthorization> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SyncAuthorizationSpecForProviderNameRefPolicy
@@ -257,30 +283,4 @@ public partial class V1beta1SyncAuthorization : IKubernetesObject<V1ObjectMeta>,
     /// <summary>SyncAuthorizationStatus defines the observed state of SyncAuthorization.</summary>
     [JsonPropertyName("status")]
     public V1beta1SyncAuthorizationStatus? Status { get; set; }
-}
-
-/// <summary>SyncAuthorization is the Schema for the SyncAuthorizations API. Authorize the Synchronizer to download environment data from the control plane.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SyncAuthorizationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SyncAuthorization>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SyncAuthorizationList";
-    public const string KubeGroup = "apigee.gcp.upbound.io";
-    public const string KubePluralName = "syncauthorizations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SyncAuthorization> Items { get; set; }
 }

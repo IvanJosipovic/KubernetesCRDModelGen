@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.aws.m.upbound.io;
+/// <summary>ExternalKey is the Schema for the ExternalKeys API. Manages a single-Region or multi-Region primary KMS key that uses external key material.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ExternalKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ExternalKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ExternalKeyList";
+    public const string KubeGroup = "kms.aws.m.upbound.io";
+    public const string KubePluralName = "externalkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ExternalKey> Items { get; set; }
+}
+
 /// <summary>Base64 encoded 256-bit symmetric encryption key material to import. The CMK is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExternalKeySpecForProviderKeyMaterialBase64SecretRef
@@ -306,30 +332,4 @@ public partial class V1beta1ExternalKey : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ExternalKeyStatus defines the observed state of ExternalKey.</summary>
     [JsonPropertyName("status")]
     public V1beta1ExternalKeyStatus? Status { get; set; }
-}
-
-/// <summary>ExternalKey is the Schema for the ExternalKeys API. Manages a single-Region or multi-Region primary KMS key that uses external key material.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ExternalKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ExternalKey>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ExternalKeyList";
-    public const string KubeGroup = "kms.aws.m.upbound.io";
-    public const string KubePluralName = "externalkeys";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ExternalKey> Items { get; set; }
 }

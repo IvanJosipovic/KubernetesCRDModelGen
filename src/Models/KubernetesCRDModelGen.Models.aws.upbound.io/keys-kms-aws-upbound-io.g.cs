@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.aws.upbound.io;
+/// <summary>Key is the Schema for the Keys API. Manages a single-Region or multi-Region primary KMS key.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Key>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KeyList";
+    public const string KubeGroup = "kms.aws.upbound.io";
+    public const string KubePluralName = "keys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Key> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KeySpecForProvider
@@ -345,30 +371,4 @@ public partial class V1beta1Key : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     /// <summary>KeyStatus defines the observed state of Key.</summary>
     [JsonPropertyName("status")]
     public V1beta1KeyStatus? Status { get; set; }
-}
-
-/// <summary>Key is the Schema for the Keys API. Manages a single-Region or multi-Region primary KMS key.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1KeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Key>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "KeyList";
-    public const string KubeGroup = "kms.aws.upbound.io";
-    public const string KubePluralName = "keys";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Key> Items { get; set; }
 }

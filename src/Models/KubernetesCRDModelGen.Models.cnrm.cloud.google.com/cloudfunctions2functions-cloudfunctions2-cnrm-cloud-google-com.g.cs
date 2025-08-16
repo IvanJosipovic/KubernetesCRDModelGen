@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.cloudfunctions2.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CloudFunctions2FunctionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1CloudFunctions2Function>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CloudFunctions2FunctionList";
+    public const string KubeGroup = "cloudfunctions2.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudfunctions2functions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1CloudFunctions2Function> Items { get; set; }
 }
 
 /// <summary>If provided, get the source from this location in a Cloud Source Repository.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecBuildConfigSourceRepoSource
+public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceRepoSource
 {
     /// <summary>Regex matching branches to build.</summary>
     [JsonPropertyName("branchName")]
@@ -49,7 +69,7 @@ public partial class CloudFunctions2FunctionSpecBuildConfigSourceRepoSource
 
 /// <summary>If provided, get the source from this location in Google Cloud Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecBuildConfigSourceStorageSource
+public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorageSource
 {
     /// <summary>Google Cloud Storage bucket containing the source.</summary>
     [JsonPropertyName("bucket")]
@@ -66,20 +86,20 @@ public partial class CloudFunctions2FunctionSpecBuildConfigSourceStorageSource
 
 /// <summary>The location of the function source code.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecBuildConfigSource
+public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfigSource
 {
     /// <summary>If provided, get the source from this location in a Cloud Source Repository.</summary>
     [JsonPropertyName("repoSource")]
-    public CloudFunctions2FunctionSpecBuildConfigSourceRepoSource? RepoSource { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceRepoSource? RepoSource { get; set; }
 
     /// <summary>If provided, get the source from this location in Google Cloud Storage.</summary>
     [JsonPropertyName("storageSource")]
-    public CloudFunctions2FunctionSpecBuildConfigSourceStorageSource? StorageSource { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecBuildConfigSourceStorageSource? StorageSource { get; set; }
 }
 
 /// <summary>Describes the Build step of the function that builds a container from the given source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecBuildConfig
+public partial class V1alpha1CloudFunctions2FunctionSpecBuildConfig
 {
     /// <summary>The Cloud Build name of the latest successful deployment of the function.</summary>
     [JsonPropertyName("build")]
@@ -103,7 +123,7 @@ public partial class CloudFunctions2FunctionSpecBuildConfig
 
     /// <summary>The location of the function source code.</summary>
     [JsonPropertyName("source")]
-    public CloudFunctions2FunctionSpecBuildConfigSource? Source { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecBuildConfigSource? Source { get; set; }
 
     /// <summary>Name of the Cloud Build Custom Worker Pool that should be used to build the function.</summary>
     [JsonPropertyName("workerPool")]
@@ -112,7 +132,7 @@ public partial class CloudFunctions2FunctionSpecBuildConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecEventTriggerEventFilters
+public partial class V1alpha1CloudFunctions2FunctionSpecEventTriggerEventFilters
 {
     /// <summary>'Required. The name of a CloudEvents attribute. Currently, only a subset of attributes are supported for filtering. Use the 'gcloud eventarc providers describe' command to learn more about events and their attributes. Do not filter for the 'type' attribute here, as this is already achieved by the resource's 'event_type' attribute.</summary>
     [JsonPropertyName("attribute")]
@@ -129,11 +149,11 @@ public partial class CloudFunctions2FunctionSpecEventTriggerEventFilters
 
 /// <summary>An Eventarc trigger managed by Google Cloud Functions that fires events in response to a condition in another service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecEventTrigger
+public partial class V1alpha1CloudFunctions2FunctionSpecEventTrigger
 {
     /// <summary>Criteria used to filter events.</summary>
     [JsonPropertyName("eventFilters")]
-    public IList<CloudFunctions2FunctionSpecEventTriggerEventFilters>? EventFilters { get; set; }
+    public IList<V1alpha1CloudFunctions2FunctionSpecEventTriggerEventFilters>? EventFilters { get; set; }
 
     /// <summary>Required. The type of event to observe.</summary>
     [JsonPropertyName("eventType")]
@@ -162,7 +182,7 @@ public partial class CloudFunctions2FunctionSpecEventTrigger
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecProjectRef
+public partial class V1alpha1CloudFunctions2FunctionSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -179,7 +199,7 @@ public partial class CloudFunctions2FunctionSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVariables
+public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVariables
 {
     /// <summary>Name of the environment variable.</summary>
     [JsonPropertyName("key")]
@@ -200,7 +220,7 @@ public partial class CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions
+public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions
 {
     /// <summary>Relative path of the file under the mount path where the secret value for this version will be fetched and made available. For example, setting the mountPath as '/etc/secrets' and path as secret_foo would mount the secret value file at /etc/secrets/secret_foo.</summary>
     [JsonPropertyName("path")]
@@ -213,7 +233,7 @@ public partial class CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersio
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecServiceConfigSecretVolumes
+public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumes
 {
     /// <summary>The path within the container to mount the secret volume. For example, setting the mountPath as /etc/secrets would mount the secret value files under the /etc/secrets directory. This directory will also be completely shadowed and unavailable to mount any other secrets. Recommended mount path: /etc/secrets.</summary>
     [JsonPropertyName("mountPath")]
@@ -229,12 +249,12 @@ public partial class CloudFunctions2FunctionSpecServiceConfigSecretVolumes
 
     /// <summary>List of secret versions to mount for this secret. If empty, the latest version of the secret will be made available in a file named after the secret under the mount point.'.</summary>
     [JsonPropertyName("versions")]
-    public IList<CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions>? Versions { get; set; }
+    public IList<V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumesVersions>? Versions { get; set; }
 }
 
 /// <summary>Describes the Service being deployed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpecServiceConfig
+public partial class V1alpha1CloudFunctions2FunctionSpecServiceConfig
 {
     /// <summary>Whether 100% of traffic is routed to the latest revision. Defaults to true.</summary>
     [JsonPropertyName("allTrafficOnLatestRevision")]
@@ -274,11 +294,11 @@ public partial class CloudFunctions2FunctionSpecServiceConfig
 
     /// <summary>Secret environment variables configuration.</summary>
     [JsonPropertyName("secretEnvironmentVariables")]
-    public IList<CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVariables>? SecretEnvironmentVariables { get; set; }
+    public IList<V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretEnvironmentVariables>? SecretEnvironmentVariables { get; set; }
 
     /// <summary>Secret volumes configuration.</summary>
     [JsonPropertyName("secretVolumes")]
-    public IList<CloudFunctions2FunctionSpecServiceConfigSecretVolumes>? SecretVolumes { get; set; }
+    public IList<V1alpha1CloudFunctions2FunctionSpecServiceConfigSecretVolumes>? SecretVolumes { get; set; }
 
     /// <summary>Name of the service associated with a Function.</summary>
     [JsonPropertyName("service")]
@@ -307,11 +327,11 @@ public partial class CloudFunctions2FunctionSpecServiceConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionSpec
+public partial class V1alpha1CloudFunctions2FunctionSpec
 {
     /// <summary>Describes the Build step of the function that builds a container from the given source.</summary>
     [JsonPropertyName("buildConfig")]
-    public CloudFunctions2FunctionSpecBuildConfig? BuildConfig { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecBuildConfig? BuildConfig { get; set; }
 
     /// <summary>User-provided description of a function.</summary>
     [JsonPropertyName("description")]
@@ -319,7 +339,7 @@ public partial class CloudFunctions2FunctionSpec
 
     /// <summary>An Eventarc trigger managed by Google Cloud Functions that fires events in response to a condition in another service.</summary>
     [JsonPropertyName("eventTrigger")]
-    public CloudFunctions2FunctionSpecEventTrigger? EventTrigger { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecEventTrigger? EventTrigger { get; set; }
 
     /// <summary>Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources. It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -331,7 +351,7 @@ public partial class CloudFunctions2FunctionSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public CloudFunctions2FunctionSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -339,12 +359,12 @@ public partial class CloudFunctions2FunctionSpec
 
     /// <summary>Describes the Service being deployed.</summary>
     [JsonPropertyName("serviceConfig")]
-    public CloudFunctions2FunctionSpecServiceConfig? ServiceConfig { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpecServiceConfig? ServiceConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionStatusConditions
+public partial class V1alpha1CloudFunctions2FunctionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -369,11 +389,11 @@ public partial class CloudFunctions2FunctionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2FunctionStatus
+public partial class V1alpha1CloudFunctions2FunctionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<CloudFunctions2FunctionStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1CloudFunctions2FunctionStatusConditions>? Conditions { get; set; }
 
     /// <summary>The environment the function is hosted on.</summary>
     [JsonPropertyName("environment")]
@@ -398,25 +418,30 @@ public partial class CloudFunctions2FunctionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class CloudFunctions2Function
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CloudFunctions2Function : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1CloudFunctions2FunctionSpec>, IStatus<V1alpha1CloudFunctions2FunctionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CloudFunctions2Function";
+    public const string KubeGroup = "cloudfunctions2.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudfunctions2functions";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public CloudFunctions2FunctionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public CloudFunctions2FunctionSpec Spec { get; set; }
+    public V1alpha1CloudFunctions2FunctionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public CloudFunctions2FunctionStatus? Status { get; set; }
+    public V1alpha1CloudFunctions2FunctionStatus? Status { get; set; }
 }

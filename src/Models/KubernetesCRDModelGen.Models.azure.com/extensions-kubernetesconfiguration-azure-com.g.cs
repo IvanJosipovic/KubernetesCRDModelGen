@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kubernetesconfiguration.azure.com;
+/// <summary>Storage version of v1api20241101.Extension Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/extensions/stable/2024-11-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20241101storageExtensionList : IKubernetesObject<V1ListMeta>, IItems<V1api20241101storageExtension>
+{
+    public const string KubeApiVersion = "v1api20241101storage";
+    public const string KubeKind = "ExtensionList";
+    public const string KubeGroup = "kubernetesconfiguration.azure.com";
+    public const string KubePluralName = "extensions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20241101storageExtension> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20241101.Extension_Properties_AksAssignedIdentity_Spec</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20241101storageExtensionSpecAksAssignedIdentity
@@ -737,30 +763,4 @@ public partial class V1api20241101storageExtension : IKubernetesObject<V1ObjectM
     /// <summary>Storage version of v1api20241101.Extension_STATUS The Extension object.</summary>
     [JsonPropertyName("status")]
     public V1api20241101storageExtensionStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20241101.Extension Generator information: - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/extensions/stable/2024-11-01/extensions.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/extensions/{extensionName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20241101storageExtensionList : IKubernetesObject<V1ListMeta>, IItems<V1api20241101storageExtension>
-{
-    public const string KubeApiVersion = "v1api20241101storage";
-    public const string KubeKind = "ExtensionList";
-    public const string KubeGroup = "kubernetesconfiguration.azure.com";
-    public const string KubePluralName = "extensions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20241101storageExtension> Items { get; set; }
 }

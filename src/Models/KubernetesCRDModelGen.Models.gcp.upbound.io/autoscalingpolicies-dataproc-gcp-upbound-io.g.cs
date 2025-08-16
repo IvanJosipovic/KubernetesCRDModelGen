@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+/// <summary>AutoscalingPolicy is the Schema for the AutoscalingPolicys API. Describes an autoscaling policy for Dataproc cluster autoscaler.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AutoscalingPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AutoscalingPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AutoscalingPolicyList";
+    public const string KubeGroup = "dataproc.gcp.upbound.io";
+    public const string KubePluralName = "autoscalingpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AutoscalingPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AutoscalingPolicySpecForProviderBasicAlgorithmYarnConfig
@@ -445,30 +471,4 @@ public partial class V1beta1AutoscalingPolicy : IKubernetesObject<V1ObjectMeta>,
     /// <summary>AutoscalingPolicyStatus defines the observed state of AutoscalingPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1AutoscalingPolicyStatus? Status { get; set; }
-}
-
-/// <summary>AutoscalingPolicy is the Schema for the AutoscalingPolicys API. Describes an autoscaling policy for Dataproc cluster autoscaler.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AutoscalingPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AutoscalingPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AutoscalingPolicyList";
-    public const string KubeGroup = "dataproc.gcp.upbound.io";
-    public const string KubePluralName = "autoscalingpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AutoscalingPolicy> Items { get; set; }
 }

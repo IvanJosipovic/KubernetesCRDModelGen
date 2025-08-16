@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ecr.aws.m.upbound.io;
+/// <summary>RegistryScanningConfiguration is the Schema for the RegistryScanningConfigurations API. Provides an Elastic Container Registry Scanning Configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegistryScanningConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegistryScanningConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegistryScanningConfigurationList";
+    public const string KubeGroup = "ecr.aws.m.upbound.io";
+    public const string KubePluralName = "registryscanningconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegistryScanningConfiguration> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegistryScanningConfigurationSpecForProviderRuleRepositoryFilter
@@ -262,30 +288,4 @@ public partial class V1beta1RegistryScanningConfiguration : IKubernetesObject<V1
     /// <summary>RegistryScanningConfigurationStatus defines the observed state of RegistryScanningConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegistryScanningConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>RegistryScanningConfiguration is the Schema for the RegistryScanningConfigurations API. Provides an Elastic Container Registry Scanning Configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegistryScanningConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegistryScanningConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegistryScanningConfigurationList";
-    public const string KubeGroup = "ecr.aws.m.upbound.io";
-    public const string KubePluralName = "registryscanningconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegistryScanningConfiguration> Items { get; set; }
 }

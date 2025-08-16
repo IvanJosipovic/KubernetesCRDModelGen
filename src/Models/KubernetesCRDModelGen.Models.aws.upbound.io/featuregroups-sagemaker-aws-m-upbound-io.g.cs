@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+/// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FeatureGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FeatureGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FeatureGroupList";
+    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
+    public const string KubePluralName = "featuregroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FeatureGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureGroupSpecForProviderFeatureDefinitionCollectionConfigVectorConfig
@@ -878,30 +904,4 @@ public partial class V1beta1FeatureGroup : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>FeatureGroupStatus defines the observed state of FeatureGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1FeatureGroupStatus? Status { get; set; }
-}
-
-/// <summary>FeatureGroup is the Schema for the FeatureGroups API. Provides a SageMaker AI Feature Group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FeatureGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FeatureGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FeatureGroupList";
-    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
-    public const string KubePluralName = "featuregroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FeatureGroup> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.com;
+/// <summary>Storage version of v1api20230815.Cluster Generator information: - Generated from: /azure-kusto/resource-manager/Microsoft.Kusto/stable/2023-08-15/kusto.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230815storageClusterList : IKubernetesObject<V1ListMeta>, IItems<V1api20230815storageCluster>
+{
+    public const string KubeApiVersion = "v1api20230815storage";
+    public const string KubeKind = "ClusterList";
+    public const string KubeGroup = "kusto.azure.com";
+    public const string KubePluralName = "clusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230815storageCluster> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20230815.AcceptedAudiences Represents an accepted audience trusted by the cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230815storageClusterSpecAcceptedAudiences
@@ -972,30 +998,4 @@ public partial class V1api20230815storageCluster : IKubernetesObject<V1ObjectMet
     /// <summary>Storage version of v1api20230815.Cluster_STATUS Class representing a Kusto cluster.</summary>
     [JsonPropertyName("status")]
     public V1api20230815storageClusterStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20230815.Cluster Generator information: - Generated from: /azure-kusto/resource-manager/Microsoft.Kusto/stable/2023-08-15/kusto.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Kusto/clusters/{clusterName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230815storageClusterList : IKubernetesObject<V1ListMeta>, IItems<V1api20230815storageCluster>
-{
-    public const string KubeApiVersion = "v1api20230815storage";
-    public const string KubeKind = "ClusterList";
-    public const string KubeGroup = "kusto.azure.com";
-    public const string KubePluralName = "clusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20230815storageCluster> Items { get; set; }
 }

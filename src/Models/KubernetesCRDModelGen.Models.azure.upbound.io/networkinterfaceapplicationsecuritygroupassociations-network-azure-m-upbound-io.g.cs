@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>NetworkInterfaceApplicationSecurityGroupAssociation is the Schema for the NetworkInterfaceApplicationSecurityGroupAssociations API. Manages the association between a Network Interface and a Application Security Group</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkInterfaceApplicationSecurityGroupAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterfaceApplicationSecurityGroupAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkInterfaceApplicationSecurityGroupAssociationList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "networkinterfaceapplicationsecuritygroupassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkInterfaceApplicationSecurityGroupAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceApplicationSecurityGroupAssociationSpecForProviderApplicationSecurityGroupIdRefPolicy
@@ -460,30 +486,4 @@ public partial class V1beta1NetworkInterfaceApplicationSecurityGroupAssociation 
     /// <summary>NetworkInterfaceApplicationSecurityGroupAssociationStatus defines the observed state of NetworkInterfaceApplicationSecurityGroupAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceApplicationSecurityGroupAssociationStatus? Status { get; set; }
-}
-
-/// <summary>NetworkInterfaceApplicationSecurityGroupAssociation is the Schema for the NetworkInterfaceApplicationSecurityGroupAssociations API. Manages the association between a Network Interface and a Application Security Group</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkInterfaceApplicationSecurityGroupAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterfaceApplicationSecurityGroupAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkInterfaceApplicationSecurityGroupAssociationList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "networkinterfaceapplicationsecuritygroupassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NetworkInterfaceApplicationSecurityGroupAssociation> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIVersion defines a version of an API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIVersionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIVersion>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIVersionList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apiversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIVersion> Items { get; set; }
+}
+
 /// <summary>Cors defines the Cross-Origin Resource Sharing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIVersionSpecCors
@@ -192,30 +218,4 @@ public partial class V1alpha1APIVersion : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>The current status of this APIVersion.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIVersionStatus? Status { get; set; }
-}
-
-/// <summary>APIVersion defines a version of an API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIVersionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIVersion>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIVersionList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apiversions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIVersion> Items { get; set; }
 }

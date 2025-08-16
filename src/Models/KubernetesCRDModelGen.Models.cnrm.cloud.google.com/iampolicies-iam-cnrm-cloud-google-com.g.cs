@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
+/// <summary>IAMPolicy is the Schema for the iampolicies API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMPolicyList";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iampolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IAMPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAMPolicySpecAuditConfigsAuditLogConfigs
@@ -176,30 +202,4 @@ public partial class V1beta1IAMPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>IAMPolicyStatus defines the observed state of IAMPolicy</summary>
     [JsonPropertyName("status")]
     public V1beta1IAMPolicyStatus? Status { get; set; }
-}
-
-/// <summary>IAMPolicy is the Schema for the iampolicies API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAMPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAMPolicyList";
-    public const string KubeGroup = "iam.cnrm.cloud.google.com";
-    public const string KubePluralName = "iampolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IAMPolicy> Items { get; set; }
 }

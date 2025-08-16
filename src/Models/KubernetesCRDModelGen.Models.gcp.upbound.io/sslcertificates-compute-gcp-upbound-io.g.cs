@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>SSLCertificate is the Schema for the SSLCertificates API. An SslCertificate resource, used for HTTPS load balancing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SSLCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SSLCertificate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SSLCertificateList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "sslcertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SSLCertificate> Items { get; set; }
+}
+
 /// <summary>The certificate in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SSLCertificateSpecForProviderCertificateSecretRef
@@ -293,30 +319,4 @@ public partial class V1beta1SSLCertificate : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>SSLCertificateStatus defines the observed state of SSLCertificate.</summary>
     [JsonPropertyName("status")]
     public V1beta1SSLCertificateStatus? Status { get; set; }
-}
-
-/// <summary>SSLCertificate is the Schema for the SSLCertificates API. An SslCertificate resource, used for HTTPS load balancing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SSLCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SSLCertificate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SSLCertificateList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "sslcertificates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SSLCertificate> Items { get; set; }
 }

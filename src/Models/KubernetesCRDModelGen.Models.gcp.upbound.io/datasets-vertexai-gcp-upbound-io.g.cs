@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.gcp.upbound.io;
+/// <summary>Dataset is the Schema for the Datasets API. A collection of DataItems and Annotations on them.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatasetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Dataset>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatasetList";
+    public const string KubeGroup = "vertexai.gcp.upbound.io";
+    public const string KubePluralName = "datasets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Dataset> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatasetSpecForProviderEncryptionSpec
@@ -288,30 +314,4 @@ public partial class V1beta1Dataset : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>DatasetStatus defines the observed state of Dataset.</summary>
     [JsonPropertyName("status")]
     public V1beta1DatasetStatus? Status { get; set; }
-}
-
-/// <summary>Dataset is the Schema for the Datasets API. A collection of DataItems and Annotations on them.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DatasetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Dataset>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DatasetList";
-    public const string KubeGroup = "vertexai.gcp.upbound.io";
-    public const string KubePluralName = "datasets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Dataset> Items { get; set; }
 }

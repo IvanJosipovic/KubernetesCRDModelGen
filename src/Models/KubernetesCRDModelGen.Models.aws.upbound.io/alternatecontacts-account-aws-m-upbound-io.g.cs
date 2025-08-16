@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.account.aws.m.upbound.io;
+/// <summary>AlternateContact is the Schema for the AlternateContacts API. Manages the specified alternate contact attached to an AWS Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AlternateContactList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AlternateContact>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AlternateContactList";
+    public const string KubeGroup = "account.aws.m.upbound.io";
+    public const string KubePluralName = "alternatecontacts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AlternateContact> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AlternateContactSpecForProvider
@@ -216,30 +242,4 @@ public partial class V1beta1AlternateContact : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>AlternateContactStatus defines the observed state of AlternateContact.</summary>
     [JsonPropertyName("status")]
     public V1beta1AlternateContactStatus? Status { get; set; }
-}
-
-/// <summary>AlternateContact is the Schema for the AlternateContacts API. Manages the specified alternate contact attached to an AWS Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AlternateContactList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AlternateContact>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AlternateContactList";
-    public const string KubeGroup = "account.aws.m.upbound.io";
-    public const string KubePluralName = "alternatecontacts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AlternateContact> Items { get; set; }
 }

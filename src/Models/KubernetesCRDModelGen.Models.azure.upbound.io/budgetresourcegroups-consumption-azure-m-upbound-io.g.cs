@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.consumption.azure.m.upbound.io;
+/// <summary>BudgetResourceGroup is the Schema for the BudgetResourceGroups API. Manages a Resource Group Consumption Budget.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BudgetResourceGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetResourceGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BudgetResourceGroupList";
+    public const string KubeGroup = "consumption.azure.m.upbound.io";
+    public const string KubePluralName = "budgetresourcegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BudgetResourceGroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetResourceGroupSpecForProviderFilterDimensionValuesRefsPolicy
@@ -955,30 +981,4 @@ public partial class V1beta1BudgetResourceGroup : IKubernetesObject<V1ObjectMeta
     /// <summary>BudgetResourceGroupStatus defines the observed state of BudgetResourceGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1BudgetResourceGroupStatus? Status { get; set; }
-}
-
-/// <summary>BudgetResourceGroup is the Schema for the BudgetResourceGroups API. Manages a Resource Group Consumption Budget.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BudgetResourceGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetResourceGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BudgetResourceGroupList";
-    public const string KubeGroup = "consumption.azure.m.upbound.io";
-    public const string KubePluralName = "budgetresourcegroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BudgetResourceGroup> Items { get; set; }
 }

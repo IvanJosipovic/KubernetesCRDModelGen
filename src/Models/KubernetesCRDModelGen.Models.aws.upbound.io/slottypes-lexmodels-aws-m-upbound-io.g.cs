@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lexmodels.aws.m.upbound.io;
+/// <summary>SlotType is the Schema for the SlotTypes API. Provides details about a specific Amazon Lex Slot Type</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SlotTypeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SlotType>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SlotTypeList";
+    public const string KubeGroup = "lexmodels.aws.m.upbound.io";
+    public const string KubePluralName = "slottypes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SlotType> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SlotTypeSpecForProviderEnumerationValue
@@ -259,30 +285,4 @@ public partial class V1beta1SlotType : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>SlotTypeStatus defines the observed state of SlotType.</summary>
     [JsonPropertyName("status")]
     public V1beta1SlotTypeStatus? Status { get; set; }
-}
-
-/// <summary>SlotType is the Schema for the SlotTypes API. Provides details about a specific Amazon Lex Slot Type</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SlotTypeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SlotType>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SlotTypeList";
-    public const string KubeGroup = "lexmodels.aws.m.upbound.io";
-    public const string KubePluralName = "slottypes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SlotType> Items { get; set; }
 }

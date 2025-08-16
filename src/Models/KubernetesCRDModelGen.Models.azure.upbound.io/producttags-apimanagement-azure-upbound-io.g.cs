@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apimanagement.azure.upbound.io;
+/// <summary>ProductTag is the Schema for the ProductTags API. Manages an API Management Product tag</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProductTagList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProductTag>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProductTagList";
+    public const string KubeGroup = "apimanagement.azure.upbound.io";
+    public const string KubePluralName = "producttags";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProductTag> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProductTagSpecForProviderApiManagementNameRefPolicy
@@ -729,30 +755,4 @@ public partial class V1beta1ProductTag : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>ProductTagStatus defines the observed state of ProductTag.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProductTagStatus? Status { get; set; }
-}
-
-/// <summary>ProductTag is the Schema for the ProductTags API. Manages an API Management Product tag</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProductTagList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProductTag>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProductTagList";
-    public const string KubeGroup = "apimanagement.azure.upbound.io";
-    public const string KubePluralName = "producttags";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProductTag> Items { get; set; }
 }

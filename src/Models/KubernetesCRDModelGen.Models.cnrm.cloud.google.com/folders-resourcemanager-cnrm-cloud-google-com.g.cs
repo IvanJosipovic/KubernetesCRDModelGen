@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FolderMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FolderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Folder>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FolderList";
+    public const string KubeGroup = "resourcemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "folders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Folder> Items { get; set; }
 }
 
 /// <summary>The folder that this resource belongs to. Changing this forces the resource to be migrated to the newly specified folder. Only one of folderRef or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FolderSpecFolderRef
+public partial class V1beta1FolderSpecFolderRef
 {
     /// <summary>Allowed value: The `folderId` field of a `Folder` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class FolderSpecFolderRef
 
 /// <summary>The organization that this resource belongs to. Changing this forces the resource to be migrated to the newly specified organization. Only one of folderRef or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FolderSpecOrganizationRef
+public partial class V1beta1FolderSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +70,7 @@ public partial class FolderSpecOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FolderSpec
+public partial class V1beta1FolderSpec
 {
     /// <summary>The folder's display name. A folder's display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.</summary>
     [JsonPropertyName("displayName")]
@@ -58,11 +78,11 @@ public partial class FolderSpec
 
     /// <summary>The folder that this resource belongs to. Changing this forces the resource to be migrated to the newly specified folder. Only one of folderRef or organizationRef may be specified.</summary>
     [JsonPropertyName("folderRef")]
-    public FolderSpecFolderRef? FolderRef { get; set; }
+    public V1beta1FolderSpecFolderRef? FolderRef { get; set; }
 
     /// <summary>The organization that this resource belongs to. Changing this forces the resource to be migrated to the newly specified organization. Only one of folderRef or organizationRef may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public FolderSpecOrganizationRef? OrganizationRef { get; set; }
+    public V1beta1FolderSpecOrganizationRef? OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -71,7 +91,7 @@ public partial class FolderSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FolderStatusConditions
+public partial class V1beta1FolderStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +116,11 @@ public partial class FolderStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FolderStatus
+public partial class V1beta1FolderStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<FolderStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1FolderStatusConditions>? Conditions { get; set; }
 
     /// <summary>Timestamp when the Folder was created. Assigned by the server. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".</summary>
     [JsonPropertyName("createTime")]
@@ -125,25 +145,30 @@ public partial class FolderStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class Folder
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Folder : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1FolderSpec>, IStatus<V1beta1FolderStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Folder";
+    public const string KubeGroup = "resourcemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "folders";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public FolderMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public FolderSpec Spec { get; set; }
+    public V1beta1FolderSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public FolderStatus? Status { get; set; }
+    public V1beta1FolderStatus? Status { get; set; }
 }

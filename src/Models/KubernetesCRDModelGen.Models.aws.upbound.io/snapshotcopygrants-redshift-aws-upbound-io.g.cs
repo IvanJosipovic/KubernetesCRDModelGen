@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.upbound.io;
+/// <summary>SnapshotCopyGrant is the Schema for the SnapshotCopyGrants API. Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SnapshotCopyGrantList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SnapshotCopyGrant>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SnapshotCopyGrantList";
+    public const string KubeGroup = "redshift.aws.upbound.io";
+    public const string KubePluralName = "snapshotcopygrants";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SnapshotCopyGrant> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotCopyGrantSpecForProviderKmsKeyIdRefPolicy
@@ -349,30 +375,4 @@ public partial class V1beta1SnapshotCopyGrant : IKubernetesObject<V1ObjectMeta>,
     /// <summary>SnapshotCopyGrantStatus defines the observed state of SnapshotCopyGrant.</summary>
     [JsonPropertyName("status")]
     public V1beta1SnapshotCopyGrantStatus? Status { get; set; }
-}
-
-/// <summary>SnapshotCopyGrant is the Schema for the SnapshotCopyGrants API. Creates a snapshot copy grant that allows AWS Redshift to encrypt copied snapshots with a customer master key from AWS KMS in a destination region.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SnapshotCopyGrantList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SnapshotCopyGrant>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SnapshotCopyGrantList";
-    public const string KubeGroup = "redshift.aws.upbound.io";
-    public const string KubePluralName = "snapshotcopygrants";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SnapshotCopyGrant> Items { get; set; }
 }

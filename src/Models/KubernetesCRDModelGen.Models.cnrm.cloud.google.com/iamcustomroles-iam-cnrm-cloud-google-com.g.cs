@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.iam.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMCustomRoleMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMCustomRoleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAMCustomRole>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMCustomRoleList";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iamcustomroles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IAMCustomRole> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMCustomRoleSpec
+public partial class V1beta1IAMCustomRoleSpec
 {
     /// <summary>A human-readable description for the role.</summary>
     [JsonPropertyName("description")]
@@ -41,7 +61,7 @@ public partial class IAMCustomRoleSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMCustomRoleStatusConditions
+public partial class V1beta1IAMCustomRoleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -66,11 +86,11 @@ public partial class IAMCustomRoleStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMCustomRoleStatus
+public partial class V1beta1IAMCustomRoleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IAMCustomRoleStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1IAMCustomRoleStatusConditions>? Conditions { get; set; }
 
     /// <summary>The current deleted state of the role.</summary>
     [JsonPropertyName("deleted")]
@@ -87,25 +107,30 @@ public partial class IAMCustomRoleStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IAMCustomRole
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAMCustomRole : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IAMCustomRoleSpec>, IStatus<V1beta1IAMCustomRoleStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAMCustomRole";
+    public const string KubeGroup = "iam.cnrm.cloud.google.com";
+    public const string KubePluralName = "iamcustomroles";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IAMCustomRoleMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public IAMCustomRoleSpec Spec { get; set; }
+    public V1beta1IAMCustomRoleSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IAMCustomRoleStatus? Status { get; set; }
+    public V1beta1IAMCustomRoleStatus? Status { get; set; }
 }

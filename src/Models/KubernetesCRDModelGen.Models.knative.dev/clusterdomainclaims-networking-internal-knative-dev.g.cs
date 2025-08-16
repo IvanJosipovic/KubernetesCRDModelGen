@@ -8,15 +8,35 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.@internal.knative.dev;
-/// <summary></summary>
+/// <summary>ClusterDomainClaim is a cluster-wide reservation for a particular domain name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ClusterDomainClaimMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ClusterDomainClaimList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ClusterDomainClaim>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ClusterDomainClaimList";
+    public const string KubeGroup = "networking.internal.knative.dev";
+    public const string KubePluralName = "clusterdomainclaims";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ClusterDomainClaim> Items { get; set; }
 }
 
 /// <summary>Spec is the desired state of the ClusterDomainClaim. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ClusterDomainClaimSpec
+public partial class V1alpha1ClusterDomainClaimSpec
 {
     /// <summary>Namespace is the namespace which is allowed to create a DomainMapping using this ClusterDomainClaim's name.</summary>
     [JsonPropertyName("namespace")]
@@ -25,21 +45,26 @@ public partial class ClusterDomainClaimSpec
 
 /// <summary>ClusterDomainClaim is a cluster-wide reservation for a particular domain name.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ClusterDomainClaim
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ClusterDomainClaim : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ClusterDomainClaimSpec>
 {
-    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ClusterDomainClaim";
+    public const string KubeGroup = "networking.internal.knative.dev";
+    public const string KubePluralName = "clusterdomainclaims";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ClusterDomainClaimMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary>Spec is the desired state of the ClusterDomainClaim. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("spec")]
-    public ClusterDomainClaimSpec? Spec { get; set; }
+    public V1alpha1ClusterDomainClaimSpec? Spec { get; set; }
 }

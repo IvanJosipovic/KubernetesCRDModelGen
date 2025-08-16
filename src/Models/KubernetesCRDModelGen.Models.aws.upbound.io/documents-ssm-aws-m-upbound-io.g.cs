@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+/// <summary>Document is the Schema for the Documents API. Provides an SSM Document resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DocumentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Document>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DocumentList";
+    public const string KubeGroup = "ssm.aws.m.upbound.io";
+    public const string KubePluralName = "documents";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Document> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DocumentSpecForProviderAttachmentsSource
@@ -380,30 +406,4 @@ public partial class V1beta1Document : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>DocumentStatus defines the observed state of Document.</summary>
     [JsonPropertyName("status")]
     public V1beta1DocumentStatus? Status { get; set; }
-}
-
-/// <summary>Document is the Schema for the Documents API. Provides an SSM Document resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DocumentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Document>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DocumentList";
-    public const string KubeGroup = "ssm.aws.m.upbound.io";
-    public const string KubePluralName = "documents";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Document> Items { get; set; }
 }

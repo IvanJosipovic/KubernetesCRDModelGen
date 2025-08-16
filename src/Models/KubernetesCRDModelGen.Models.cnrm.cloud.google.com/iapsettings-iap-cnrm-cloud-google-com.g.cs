@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.cnrm.cloud.google.com;
+/// <summary>IAPSettings is the Schema for the IAPSettings API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IAPSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAPSettings>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IAPSettingsList";
+    public const string KubeGroup = "iap.cnrm.cloud.google.com";
+    public const string KubePluralName = "iapsettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IAPSettings> Items { get; set; }
+}
+
 /// <summary>Settings to configure and enable allowed domains.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IAPSettingsSpecAccessSettingsAllowedDomainsSettings
@@ -474,30 +500,4 @@ public partial class V1beta1IAPSettings : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>IAPSettingsStatus defines the config connector machine state of IAPSettings</summary>
     [JsonPropertyName("status")]
     public V1beta1IAPSettingsStatus? Status { get; set; }
-}
-
-/// <summary>IAPSettings is the Schema for the IAPSettings API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IAPSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IAPSettings>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IAPSettingsList";
-    public const string KubeGroup = "iap.cnrm.cloud.google.com";
-    public const string KubePluralName = "iapsettings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IAPSettings> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+/// <summary>SubscriptionPolicyExemption is the Schema for the SubscriptionPolicyExemptions API. Manages a Subscription Policy Exemption.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SubscriptionPolicyExemptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubscriptionPolicyExemption>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SubscriptionPolicyExemptionList";
+    public const string KubeGroup = "authorization.azure.upbound.io";
+    public const string KubePluralName = "subscriptionpolicyexemptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SubscriptionPolicyExemption> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyExemptionSpecForProviderPolicyAssignmentIdRefPolicy
@@ -393,30 +419,4 @@ public partial class V1beta1SubscriptionPolicyExemption : IKubernetesObject<V1Ob
     /// <summary>SubscriptionPolicyExemptionStatus defines the observed state of SubscriptionPolicyExemption.</summary>
     [JsonPropertyName("status")]
     public V1beta1SubscriptionPolicyExemptionStatus? Status { get; set; }
-}
-
-/// <summary>SubscriptionPolicyExemption is the Schema for the SubscriptionPolicyExemptions API. Manages a Subscription Policy Exemption.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SubscriptionPolicyExemptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubscriptionPolicyExemption>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SubscriptionPolicyExemptionList";
-    public const string KubeGroup = "authorization.azure.upbound.io";
-    public const string KubePluralName = "subscriptionpolicyexemptions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SubscriptionPolicyExemption> Items { get; set; }
 }

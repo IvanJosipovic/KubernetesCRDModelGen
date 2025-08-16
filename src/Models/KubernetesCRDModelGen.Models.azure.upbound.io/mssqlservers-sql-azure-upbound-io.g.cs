@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>MSSQLServer is the Schema for the MSSQLServers API. Manages a Microsoft SQL Azure Database Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLServer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLServerList";
+    public const string KubeGroup = "sql.azure.upbound.io";
+    public const string KubePluralName = "mssqlservers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLServer> Items { get; set; }
+}
+
 /// <summary>The password associated with the administrator_login user. Needs to comply with Azure's Password Policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLServerSpecForProviderAdministratorLoginPasswordSecretRef
@@ -1251,30 +1277,4 @@ public partial class V1beta1MSSQLServer : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>MSSQLServerStatus defines the observed state of MSSQLServer.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLServerStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLServer is the Schema for the MSSQLServers API. Manages a Microsoft SQL Azure Database Server.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLServer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLServerList";
-    public const string KubeGroup = "sql.azure.upbound.io";
-    public const string KubePluralName = "mssqlservers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLServer> Items { get; set; }
 }

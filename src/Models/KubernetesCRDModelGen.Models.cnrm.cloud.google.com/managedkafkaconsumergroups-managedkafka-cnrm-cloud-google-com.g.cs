@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedkafka.cnrm.cloud.google.com;
+/// <summary>ManagedKafkaConsumerGroup is the Schema for the ManagedKafkaConsumerGroup API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ManagedKafkaConsumerGroupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ManagedKafkaConsumerGroup>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ManagedKafkaConsumerGroupList";
+    public const string KubeGroup = "managedkafka.cnrm.cloud.google.com";
+    public const string KubePluralName = "managedkafkaconsumergroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ManagedKafkaConsumerGroup> Items { get; set; }
+}
+
 /// <summary>ClusterRef defines the resource reference to ManagedKafkaCluster, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ManagedKafkaConsumerGroupSpecClusterRef
@@ -176,30 +202,4 @@ public partial class V1alpha1ManagedKafkaConsumerGroup : IKubernetesObject<V1Obj
     /// <summary>ManagedKafkaConsumerGroupStatus defines the config connector machine state of ManagedKafkaConsumerGroup</summary>
     [JsonPropertyName("status")]
     public V1alpha1ManagedKafkaConsumerGroupStatus? Status { get; set; }
-}
-
-/// <summary>ManagedKafkaConsumerGroup is the Schema for the ManagedKafkaConsumerGroup API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ManagedKafkaConsumerGroupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ManagedKafkaConsumerGroup>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ManagedKafkaConsumerGroupList";
-    public const string KubeGroup = "managedkafka.cnrm.cloud.google.com";
-    public const string KubePluralName = "managedkafkaconsumergroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ManagedKafkaConsumerGroup> Items { get; set; }
 }

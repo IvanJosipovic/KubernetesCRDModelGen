@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.efs.aws.m.upbound.io;
+/// <summary>FileSystem is the Schema for the FileSystems API. Provides an Elastic File System (EFS) File System resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FileSystemList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FileSystem>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FileSystemList";
+    public const string KubeGroup = "efs.aws.m.upbound.io";
+    public const string KubePluralName = "filesystems";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FileSystem> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FileSystemSpecForProviderKmsKeyIdRefPolicy
@@ -547,30 +573,4 @@ public partial class V1beta1FileSystem : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>FileSystemStatus defines the observed state of FileSystem.</summary>
     [JsonPropertyName("status")]
     public V1beta1FileSystemStatus? Status { get; set; }
-}
-
-/// <summary>FileSystem is the Schema for the FileSystems API. Provides an Elastic File System (EFS) File System resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FileSystemList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FileSystem>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FileSystemList";
-    public const string KubeGroup = "efs.aws.m.upbound.io";
-    public const string KubePluralName = "filesystems";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FileSystem> Items { get; set; }
 }

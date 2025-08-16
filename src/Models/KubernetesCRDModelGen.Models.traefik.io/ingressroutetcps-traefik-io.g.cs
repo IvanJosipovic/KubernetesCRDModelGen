@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>IngressRouteTCP is the CRD implementation of a Traefik TCP Router.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IngressRouteTCPList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IngressRouteTCP>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IngressRouteTCPList";
+    public const string KubeGroup = "traefik.io";
+    public const string KubePluralName = "ingressroutetcps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1IngressRouteTCP> Items { get; set; }
+}
+
 /// <summary>ObjectReference is a generic reference to a Traefik resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteTCPSpecRoutesMiddlewares
@@ -209,30 +235,4 @@ public partial class V1alpha1IngressRouteTCP : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>IngressRouteTCPSpec defines the desired state of IngressRouteTCP.</summary>
     [JsonPropertyName("spec")]
     public V1alpha1IngressRouteTCPSpec Spec { get; set; }
-}
-
-/// <summary>IngressRouteTCP is the CRD implementation of a Traefik TCP Router.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1IngressRouteTCPList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IngressRouteTCP>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "IngressRouteTCPList";
-    public const string KubeGroup = "traefik.io";
-    public const string KubePluralName = "ingressroutetcps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1IngressRouteTCP> Items { get; set; }
 }

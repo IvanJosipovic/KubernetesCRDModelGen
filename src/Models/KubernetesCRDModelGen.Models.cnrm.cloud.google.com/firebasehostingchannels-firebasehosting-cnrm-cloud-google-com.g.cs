@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.firebasehosting.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseHostingChannelMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FirebaseHostingChannelList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1FirebaseHostingChannel>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FirebaseHostingChannelList";
+    public const string KubeGroup = "firebasehosting.cnrm.cloud.google.com";
+    public const string KubePluralName = "firebasehostingchannels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1FirebaseHostingChannel> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseHostingChannelSpec
+public partial class V1alpha1FirebaseHostingChannelSpec
 {
     /// <summary>The time at which the channel will be automatically deleted. If null, the channel will not be automatically deleted. This field is present in the output whether it's set directly or via the 'ttl' field.</summary>
     [JsonPropertyName("expireTime")]
@@ -41,7 +61,7 @@ public partial class FirebaseHostingChannelSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseHostingChannelStatusConditions
+public partial class V1alpha1FirebaseHostingChannelStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -66,11 +86,11 @@ public partial class FirebaseHostingChannelStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseHostingChannelStatus
+public partial class V1alpha1FirebaseHostingChannelStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<FirebaseHostingChannelStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1FirebaseHostingChannelStatusConditions>? Conditions { get; set; }
 
     /// <summary>The fully-qualified resource name for the channel, in the format: sites/SITE_ID/channels/CHANNEL_ID.</summary>
     [JsonPropertyName("name")]
@@ -83,25 +103,30 @@ public partial class FirebaseHostingChannelStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseHostingChannel
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FirebaseHostingChannel : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseHostingChannelSpec>, IStatus<V1alpha1FirebaseHostingChannelStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FirebaseHostingChannel";
+    public const string KubeGroup = "firebasehosting.cnrm.cloud.google.com";
+    public const string KubePluralName = "firebasehostingchannels";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public FirebaseHostingChannelMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public FirebaseHostingChannelSpec Spec { get; set; }
+    public V1alpha1FirebaseHostingChannelSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public FirebaseHostingChannelStatus? Status { get; set; }
+    public V1alpha1FirebaseHostingChannelStatus? Status { get; set; }
 }

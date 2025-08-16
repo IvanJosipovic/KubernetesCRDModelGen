@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.upbound.io;
+/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Manages a Network Manager Customer Gateway Association.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CustomerGatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomerGatewayAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CustomerGatewayAssociationList";
+    public const string KubeGroup = "networkmanager.aws.upbound.io";
+    public const string KubePluralName = "customergatewayassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CustomerGatewayAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerGatewayAssociationSpecForProviderCustomerGatewayArnRefPolicy
@@ -465,30 +491,4 @@ public partial class V1beta1CustomerGatewayAssociation : IKubernetesObject<V1Obj
     /// <summary>CustomerGatewayAssociationStatus defines the observed state of CustomerGatewayAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1CustomerGatewayAssociationStatus? Status { get; set; }
-}
-
-/// <summary>CustomerGatewayAssociation is the Schema for the CustomerGatewayAssociations API. Manages a Network Manager Customer Gateway Association.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CustomerGatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomerGatewayAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CustomerGatewayAssociationList";
-    public const string KubeGroup = "networkmanager.aws.upbound.io";
-    public const string KubePluralName = "customergatewayassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CustomerGatewayAssociation> Items { get; set; }
 }

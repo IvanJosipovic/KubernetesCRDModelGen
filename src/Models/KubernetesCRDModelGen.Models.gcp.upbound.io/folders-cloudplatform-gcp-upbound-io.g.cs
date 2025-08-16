@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.upbound.io;
+/// <summary>Folder is the Schema for the Folders API. Allows management of a Google Cloud Platform folder.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FolderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Folder>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FolderList";
+    public const string KubeGroup = "cloudplatform.gcp.upbound.io";
+    public const string KubePluralName = "folders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Folder> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderSpecForProviderParentRefPolicy
@@ -361,30 +387,4 @@ public partial class V1beta1Folder : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>FolderStatus defines the observed state of Folder.</summary>
     [JsonPropertyName("status")]
     public V1beta1FolderStatus? Status { get; set; }
-}
-
-/// <summary>Folder is the Schema for the Folders API. Allows management of a Google Cloud Platform folder.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FolderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Folder>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FolderList";
-    public const string KubeGroup = "cloudplatform.gcp.upbound.io";
-    public const string KubePluralName = "folders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Folder> Items { get; set; }
 }

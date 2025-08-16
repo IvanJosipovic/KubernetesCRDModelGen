@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.datafusion.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataFusionInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataFusionInstance>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataFusionInstanceList";
+    public const string KubeGroup = "datafusion.cnrm.cloud.google.com";
+    public const string KubePluralName = "datafusioninstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataFusionInstance> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceSpecDataprocServiceAccountRef
+public partial class V1beta1DataFusionInstanceSpecDataprocServiceAccountRef
 {
     /// <summary>User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines. This allows users to have fine-grained access control on Dataproc's accesses to cloud resources.  Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class DataFusionInstanceSpecDataprocServiceAccountRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceSpecNetworkConfigNetworkRef
+public partial class V1beta1DataFusionInstanceSpecNetworkConfigNetworkRef
 {
     /// <summary>Name of the network in the customer project with which the Tenant Project will be peered for executing pipelines. In case of shared VPC where the network resides in another host project the network should specified in the form of projects/{host-project-id}/global/networks/{network}  Allowed value: The Google Cloud resource name of a `ComputeNetwork` resource (format: `projects/{{project}}/global/networks/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -50,7 +70,7 @@ public partial class DataFusionInstanceSpecNetworkConfigNetworkRef
 
 /// <summary>Immutable. Network configuration options. These are required when a private Data Fusion instance is to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceSpecNetworkConfig
+public partial class V1beta1DataFusionInstanceSpecNetworkConfig
 {
     /// <summary>Immutable. The IP range in CIDR notation to use for the managed Data Fusion instance nodes. This range must not overlap with any other ranges used in the customer network.</summary>
     [JsonPropertyName("ipAllocation")]
@@ -58,16 +78,16 @@ public partial class DataFusionInstanceSpecNetworkConfig
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("networkRef")]
-    public DataFusionInstanceSpecNetworkConfigNetworkRef? NetworkRef { get; set; }
+    public V1beta1DataFusionInstanceSpecNetworkConfigNetworkRef? NetworkRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceSpec
+public partial class V1beta1DataFusionInstanceSpec
 {
     /// <summary></summary>
     [JsonPropertyName("dataprocServiceAccountRef")]
-    public DataFusionInstanceSpecDataprocServiceAccountRef? DataprocServiceAccountRef { get; set; }
+    public V1beta1DataFusionInstanceSpecDataprocServiceAccountRef? DataprocServiceAccountRef { get; set; }
 
     /// <summary>Immutable. A description of this instance.</summary>
     [JsonPropertyName("description")]
@@ -91,7 +111,7 @@ public partial class DataFusionInstanceSpec
 
     /// <summary>Immutable. Network configuration options. These are required when a private Data Fusion instance is to be created.</summary>
     [JsonPropertyName("networkConfig")]
-    public DataFusionInstanceSpecNetworkConfig? NetworkConfig { get; set; }
+    public V1beta1DataFusionInstanceSpecNetworkConfig? NetworkConfig { get; set; }
 
     /// <summary>Immutable. Map of additional options used to configure the behavior of Data Fusion instance.</summary>
     [JsonPropertyName("options")]
@@ -120,7 +140,7 @@ public partial class DataFusionInstanceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceStatusAvailableVersion
+public partial class V1beta1DataFusionInstanceStatusAvailableVersion
 {
     /// <summary>Represents a list of available feature names for a given version.</summary>
     [JsonPropertyName("availableFeatures")]
@@ -137,7 +157,7 @@ public partial class DataFusionInstanceStatusAvailableVersion
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceStatusConditions
+public partial class V1beta1DataFusionInstanceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -162,7 +182,7 @@ public partial class DataFusionInstanceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstanceStatus
+public partial class V1beta1DataFusionInstanceStatus
 {
     /// <summary>Output only. Endpoint on which the REST APIs is accessible.</summary>
     [JsonPropertyName("apiEndpoint")]
@@ -170,11 +190,11 @@ public partial class DataFusionInstanceStatus
 
     /// <summary>Available versions that the instance can be upgraded to.</summary>
     [JsonPropertyName("availableVersion")]
-    public IList<DataFusionInstanceStatusAvailableVersion>? AvailableVersion { get; set; }
+    public IList<V1beta1DataFusionInstanceStatusAvailableVersion>? AvailableVersion { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DataFusionInstanceStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1DataFusionInstanceStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The time the instance was created.</summary>
     [JsonPropertyName("createTime")]
@@ -215,25 +235,30 @@ public partial class DataFusionInstanceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataFusionInstance
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataFusionInstance : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataFusionInstanceSpec>, IStatus<V1beta1DataFusionInstanceStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataFusionInstance";
+    public const string KubeGroup = "datafusion.cnrm.cloud.google.com";
+    public const string KubePluralName = "datafusioninstances";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DataFusionInstanceMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DataFusionInstanceSpec Spec { get; set; }
+    public V1beta1DataFusionInstanceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DataFusionInstanceStatus? Status { get; set; }
+    public V1beta1DataFusionInstanceStatus? Status { get; set; }
 }

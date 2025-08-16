@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkebackup.cnrm.cloud.google.com;
+/// <summary>GKEBackupRestorePlan is the Schema for the GKEBackupRestorePlan API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1GKEBackupRestorePlanList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1GKEBackupRestorePlan>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "GKEBackupRestorePlanList";
+    public const string KubeGroup = "gkebackup.cnrm.cloud.google.com";
+    public const string KubePluralName = "gkebackuprestoreplans";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1GKEBackupRestorePlan> Items { get; set; }
+}
+
 /// <summary>Required. Immutable. A reference to the [BackupPlan][google.cloud.gkebackup.v1.BackupPlan] from which Backups may be used as the source for Restores created via this RestorePlan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GKEBackupRestorePlanSpecBackupPlanRef
@@ -514,30 +540,4 @@ public partial class V1alpha1GKEBackupRestorePlan : IKubernetesObject<V1ObjectMe
     /// <summary>GKEBackupRestorePlanStatus defines the config connector machine state of GKEBackupRestorePlan</summary>
     [JsonPropertyName("status")]
     public V1alpha1GKEBackupRestorePlanStatus? Status { get; set; }
-}
-
-/// <summary>GKEBackupRestorePlan is the Schema for the GKEBackupRestorePlan API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1GKEBackupRestorePlanList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1GKEBackupRestorePlan>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "GKEBackupRestorePlanList";
-    public const string KubeGroup = "gkebackup.cnrm.cloud.google.com";
-    public const string KubePluralName = "gkebackuprestoreplans";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1GKEBackupRestorePlan> Items { get; set; }
 }

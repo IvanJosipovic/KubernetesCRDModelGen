@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appengine.gcp.m.upbound.io;
+/// <summary>ServiceNetworkSettings is the Schema for the ServiceNetworkSettingss API. A NetworkSettings resource is a container for ingress settings for a version or service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceNetworkSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceNetworkSettings>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceNetworkSettingsList";
+    public const string KubeGroup = "appengine.gcp.m.upbound.io";
+    public const string KubePluralName = "servicenetworksettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceNetworkSettings> Items { get; set; }
+}
+
 /// <summary>Ingress settings for this service. Will apply to all versions. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceNetworkSettingsSpecForProviderNetworkSettings
@@ -355,30 +381,4 @@ public partial class V1beta1ServiceNetworkSettings : IKubernetesObject<V1ObjectM
     /// <summary>ServiceNetworkSettingsStatus defines the observed state of ServiceNetworkSettings.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServiceNetworkSettingsStatus? Status { get; set; }
-}
-
-/// <summary>ServiceNetworkSettings is the Schema for the ServiceNetworkSettingss API. A NetworkSettings resource is a container for ingress settings for a version or service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceNetworkSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceNetworkSettings>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceNetworkSettingsList";
-    public const string KubeGroup = "appengine.gcp.m.upbound.io";
-    public const string KubePluralName = "servicenetworksettings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServiceNetworkSettings> Items { get; set; }
 }

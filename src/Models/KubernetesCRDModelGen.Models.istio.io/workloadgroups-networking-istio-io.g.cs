@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1WorkloadGroupList : IKubernetesObject<V1ListMeta>, IItems<V1WorkloadGroup>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "WorkloadGroupList";
+    public const string KubeGroup = "networking.istio.io";
+    public const string KubePluralName = "workloadgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1WorkloadGroup> Items { get; set; }
+}
+
 /// <summary>Metadata that will be used for all corresponding `WorkloadEntries`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1WorkloadGroupSpecMetadata
@@ -213,30 +239,4 @@ public partial class V1WorkloadGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary></summary>
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1WorkloadGroupList : IKubernetesObject<V1ListMeta>, IItems<V1WorkloadGroup>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "WorkloadGroupList";
-    public const string KubeGroup = "networking.istio.io";
-    public const string KubePluralName = "workloadgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1WorkloadGroup> Items { get; set; }
 }

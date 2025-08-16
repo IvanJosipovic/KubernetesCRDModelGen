@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gkehub.cnrm.cloud.google.com;
+/// <summary>GKEHubFeatureMembership is the Schema for the gkehub API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GKEHubFeatureMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GKEHubFeatureMembership>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GKEHubFeatureMembershipList";
+    public const string KubeGroup = "gkehub.cnrm.cloud.google.com";
+    public const string KubePluralName = "gkehubfeaturememberships";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GKEHubFeatureMembership> Items { get; set; }
+}
+
 /// <summary>**DEPRECATED** Binauthz configuration for the cluster. This field will be ignored and should not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GKEHubFeatureMembershipSpecConfigmanagementBinauthz
@@ -499,30 +525,4 @@ public partial class V1beta1GKEHubFeatureMembership : IKubernetesObject<V1Object
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1beta1GKEHubFeatureMembershipStatus? Status { get; set; }
-}
-
-/// <summary>GKEHubFeatureMembership is the Schema for the gkehub API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GKEHubFeatureMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GKEHubFeatureMembership>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GKEHubFeatureMembershipList";
-    public const string KubeGroup = "gkehub.cnrm.cloud.google.com";
-    public const string KubePluralName = "gkehubfeaturememberships";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GKEHubFeatureMembership> Items { get; set; }
 }

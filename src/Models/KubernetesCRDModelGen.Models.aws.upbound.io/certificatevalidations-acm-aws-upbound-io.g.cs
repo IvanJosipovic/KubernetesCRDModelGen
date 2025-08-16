@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acm.aws.upbound.io;
+/// <summary>CertificateValidation is the Schema for the CertificateValidations API. Waits for and checks successful validation of an ACM certificate.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CertificateValidationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CertificateValidation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CertificateValidationList";
+    public const string KubeGroup = "acm.aws.upbound.io";
+    public const string KubePluralName = "certificatevalidations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CertificateValidation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateValidationSpecForProviderCertificateArnRefPolicy
@@ -329,30 +355,4 @@ public partial class V1beta1CertificateValidation : IKubernetesObject<V1ObjectMe
     /// <summary>CertificateValidationStatus defines the observed state of CertificateValidation.</summary>
     [JsonPropertyName("status")]
     public V1beta1CertificateValidationStatus? Status { get; set; }
-}
-
-/// <summary>CertificateValidation is the Schema for the CertificateValidations API. Waits for and checks successful validation of an ACM certificate.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CertificateValidationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CertificateValidation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CertificateValidationList";
-    public const string KubeGroup = "acm.aws.upbound.io";
-    public const string KubePluralName = "certificatevalidations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CertificateValidation> Items { get; set; }
 }

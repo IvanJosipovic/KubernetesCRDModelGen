@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.m.upbound.io;
+/// <summary>ProxyTarget is the Schema for the ProxyTargets API. Provides an RDS DB proxy target resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProxyTargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProxyTarget>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProxyTargetList";
+    public const string KubeGroup = "rds.aws.m.upbound.io";
+    public const string KubePluralName = "proxytargets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProxyTarget> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyTargetSpecForProviderDbInstanceIdentifierRefPolicy
@@ -516,30 +542,4 @@ public partial class V1beta1ProxyTarget : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ProxyTargetStatus defines the observed state of ProxyTarget.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProxyTargetStatus? Status { get; set; }
-}
-
-/// <summary>ProxyTarget is the Schema for the ProxyTargets API. Provides an RDS DB proxy target resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProxyTargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProxyTarget>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProxyTargetList";
-    public const string KubeGroup = "rds.aws.m.upbound.io";
-    public const string KubePluralName = "proxytargets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProxyTarget> Items { get; set; }
 }

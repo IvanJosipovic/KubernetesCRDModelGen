@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>TrafficMirrorFilter is the Schema for the TrafficMirrorFilters API. Provides an Traffic mirror filter</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TrafficMirrorFilterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficMirrorFilter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TrafficMirrorFilterList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "trafficmirrorfilters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TrafficMirrorFilter> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficMirrorFilterSpecForProvider
@@ -200,30 +226,4 @@ public partial class V1beta1TrafficMirrorFilter : IKubernetesObject<V1ObjectMeta
     /// <summary>TrafficMirrorFilterStatus defines the observed state of TrafficMirrorFilter.</summary>
     [JsonPropertyName("status")]
     public V1beta1TrafficMirrorFilterStatus? Status { get; set; }
-}
-
-/// <summary>TrafficMirrorFilter is the Schema for the TrafficMirrorFilters API. Provides an Traffic mirror filter</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TrafficMirrorFilterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficMirrorFilter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TrafficMirrorFilterList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "trafficmirrorfilters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TrafficMirrorFilter> Items { get; set; }
 }

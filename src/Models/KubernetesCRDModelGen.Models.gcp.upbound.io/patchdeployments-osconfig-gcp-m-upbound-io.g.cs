@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.osconfig.gcp.m.upbound.io;
+/// <summary>PatchDeployment is the Schema for the PatchDeployments API. Patch deployments are configurations that individual patch jobs use to complete a patch.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PatchDeploymentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PatchDeployment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PatchDeploymentList";
+    public const string KubeGroup = "osconfig.gcp.m.upbound.io";
+    public const string KubePluralName = "patchdeployments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PatchDeployment> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PatchDeploymentSpecForProviderInstanceFilterGroupLabels
@@ -1861,30 +1887,4 @@ public partial class V1beta1PatchDeployment : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>PatchDeploymentStatus defines the observed state of PatchDeployment.</summary>
     [JsonPropertyName("status")]
     public V1beta1PatchDeploymentStatus? Status { get; set; }
-}
-
-/// <summary>PatchDeployment is the Schema for the PatchDeployments API. Patch deployments are configurations that individual patch jobs use to complete a patch.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PatchDeploymentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PatchDeployment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PatchDeploymentList";
-    public const string KubeGroup = "osconfig.gcp.m.upbound.io";
-    public const string KubePluralName = "patchdeployments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PatchDeployment> Items { get; set; }
 }

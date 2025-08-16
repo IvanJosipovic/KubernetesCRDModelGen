@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.databricks.crossplane.io;
+/// <summary>SQLAlert is the Schema for the SQLAlerts API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1SQLAlertList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SQLAlert>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "SQLAlertList";
+    public const string KubeGroup = "sql.databricks.crossplane.io";
+    public const string KubePluralName = "sqlalerts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1SQLAlert> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLAlertSpecForProviderOptions
@@ -416,30 +442,4 @@ public partial class V1alpha1SQLAlert : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>SQLAlertStatus defines the observed state of SQLAlert.</summary>
     [JsonPropertyName("status")]
     public V1alpha1SQLAlertStatus? Status { get; set; }
-}
-
-/// <summary>SQLAlert is the Schema for the SQLAlerts API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SQLAlertList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SQLAlert>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SQLAlertList";
-    public const string KubeGroup = "sql.databricks.crossplane.io";
-    public const string KubePluralName = "sqlalerts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1SQLAlert> Items { get; set; }
 }

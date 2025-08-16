@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary>ApigeeInstanceAttachment is the Schema for the ApigeeInstanceAttachment API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApigeeInstanceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApigeeInstanceAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApigeeInstanceAttachmentList";
+    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigeeinstanceattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApigeeInstanceAttachment> Items { get; set; }
+}
+
 /// <summary>ID of the attached environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeInstanceAttachmentSpecEnvironmentRef
@@ -142,30 +168,4 @@ public partial class V1beta1ApigeeInstanceAttachment : IKubernetesObject<V1Objec
     /// <summary>ApigeeInstanceAttachmentStatus defines the config connector machine state of ApigeeInstanceAttachment</summary>
     [JsonPropertyName("status")]
     public V1beta1ApigeeInstanceAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>ApigeeInstanceAttachment is the Schema for the ApigeeInstanceAttachment API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApigeeInstanceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApigeeInstanceAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApigeeInstanceAttachmentList";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeinstanceattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ApigeeInstanceAttachment> Items { get; set; }
 }

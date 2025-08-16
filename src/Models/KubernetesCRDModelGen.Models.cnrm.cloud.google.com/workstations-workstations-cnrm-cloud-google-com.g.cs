@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workstations.cnrm.cloud.google.com;
+/// <summary>Workstation is the Schema for the Workstation API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkstationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workstation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkstationList";
+    public const string KubeGroup = "workstations.cnrm.cloud.google.com";
+    public const string KubePluralName = "workstations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Workstation> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationSpecAnnotations
@@ -187,30 +213,4 @@ public partial class V1beta1Workstation : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>WorkstationStatus defines the config connector machine state of Workstation</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkstationStatus? Status { get; set; }
-}
-
-/// <summary>Workstation is the Schema for the Workstation API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkstationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workstation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkstationList";
-    public const string KubeGroup = "workstations.cnrm.cloud.google.com";
-    public const string KubePluralName = "workstations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Workstation> Items { get; set; }
 }

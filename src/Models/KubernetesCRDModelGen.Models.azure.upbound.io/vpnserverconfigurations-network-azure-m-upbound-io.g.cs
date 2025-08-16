@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>VPNServerConfiguration is the Schema for the VPNServerConfigurations API. Manages a VPN Server Configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPNServerConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPNServerConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPNServerConfigurationList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "vpnserverconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPNServerConfiguration> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNServerConfigurationSpecForProviderAzureActiveDirectoryAuthentication
@@ -778,30 +804,4 @@ public partial class V1beta1VPNServerConfiguration : IKubernetesObject<V1ObjectM
     /// <summary>VPNServerConfigurationStatus defines the observed state of VPNServerConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1VPNServerConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>VPNServerConfiguration is the Schema for the VPNServerConfigurations API. Manages a VPN Server Configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VPNServerConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPNServerConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VPNServerConfigurationList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "vpnserverconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VPNServerConfiguration> Items { get; set; }
 }

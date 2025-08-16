@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>ApplicationInsightsWorkbookTemplate is the Schema for the ApplicationInsightsWorkbookTemplates API. Manages an Application Insights Workbook Template.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApplicationInsightsWorkbookTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsWorkbookTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApplicationInsightsWorkbookTemplateList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "applicationinsightsworkbooktemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApplicationInsightsWorkbookTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookTemplateSpecForProviderGalleries
@@ -480,30 +506,4 @@ public partial class V1beta1ApplicationInsightsWorkbookTemplate : IKubernetesObj
     /// <summary>ApplicationInsightsWorkbookTemplateStatus defines the observed state of ApplicationInsightsWorkbookTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsWorkbookTemplateStatus? Status { get; set; }
-}
-
-/// <summary>ApplicationInsightsWorkbookTemplate is the Schema for the ApplicationInsightsWorkbookTemplates API. Manages an Application Insights Workbook Template.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApplicationInsightsWorkbookTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsWorkbookTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApplicationInsightsWorkbookTemplateList";
-    public const string KubeGroup = "insights.azure.upbound.io";
-    public const string KubePluralName = "applicationinsightsworkbooktemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ApplicationInsightsWorkbookTemplate> Items { get; set; }
 }

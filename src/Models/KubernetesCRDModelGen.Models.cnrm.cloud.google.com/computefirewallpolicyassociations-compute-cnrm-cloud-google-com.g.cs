@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociationMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeFirewallPolicyAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeFirewallPolicyAssociation>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeFirewallPolicyAssociationList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computefirewallpolicyassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeFirewallPolicyAssociation> Items { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociationSpecAttachmentTargetRef
+public partial class V1beta1ComputeFirewallPolicyAssociationSpecAttachmentTargetRef
 {
     /// <summary>The target that the firewall policy is attached to.  Allowed values: * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`). * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -37,7 +57,7 @@ public partial class ComputeFirewallPolicyAssociationSpecAttachmentTargetRef
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociationSpecFirewallPolicyRef
+public partial class V1beta1ComputeFirewallPolicyAssociationSpecFirewallPolicyRef
 {
     /// <summary>The firewall policy ID of the association.  Allowed value: The Google Cloud resource name of a `ComputeFirewallPolicy` resource (format: `locations/global/firewallPolicies/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -54,15 +74,15 @@ public partial class ComputeFirewallPolicyAssociationSpecFirewallPolicyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociationSpec
+public partial class V1beta1ComputeFirewallPolicyAssociationSpec
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("attachmentTargetRef")]
-    public ComputeFirewallPolicyAssociationSpecAttachmentTargetRef AttachmentTargetRef { get; set; }
+    public V1beta1ComputeFirewallPolicyAssociationSpecAttachmentTargetRef AttachmentTargetRef { get; set; }
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("firewallPolicyRef")]
-    public ComputeFirewallPolicyAssociationSpecFirewallPolicyRef FirewallPolicyRef { get; set; }
+    public V1beta1ComputeFirewallPolicyAssociationSpecFirewallPolicyRef FirewallPolicyRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -71,7 +91,7 @@ public partial class ComputeFirewallPolicyAssociationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociationStatusConditions
+public partial class V1beta1ComputeFirewallPolicyAssociationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +116,11 @@ public partial class ComputeFirewallPolicyAssociationStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociationStatus
+public partial class V1beta1ComputeFirewallPolicyAssociationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeFirewallPolicyAssociationStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeFirewallPolicyAssociationStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -113,25 +133,30 @@ public partial class ComputeFirewallPolicyAssociationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeFirewallPolicyAssociation
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeFirewallPolicyAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeFirewallPolicyAssociationSpec>, IStatus<V1beta1ComputeFirewallPolicyAssociationStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeFirewallPolicyAssociation";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computefirewallpolicyassociations";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeFirewallPolicyAssociationMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeFirewallPolicyAssociationSpec Spec { get; set; }
+    public V1beta1ComputeFirewallPolicyAssociationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeFirewallPolicyAssociationStatus? Status { get; set; }
+    public V1beta1ComputeFirewallPolicyAssociationStatus? Status { get; set; }
 }

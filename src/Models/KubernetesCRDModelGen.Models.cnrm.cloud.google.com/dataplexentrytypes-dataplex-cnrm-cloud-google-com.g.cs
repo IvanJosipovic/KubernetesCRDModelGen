@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.cnrm.cloud.google.com;
+/// <summary>DataplexEntryType is the Schema for the DataplexEntryType API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataplexEntryTypeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataplexEntryType>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataplexEntryTypeList";
+    public const string KubeGroup = "dataplex.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataplexentrytypes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataplexEntryType> Items { get; set; }
+}
+
 /// <summary>Authorization contains constraints on the visibility of Entries that conform to the EntryType.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexEntryTypeSpecAuthorization
@@ -200,30 +226,4 @@ public partial class V1alpha1DataplexEntryType : IKubernetesObject<V1ObjectMeta>
     /// <summary>DataplexEntryTypeStatus defines the config connector machine state of DataplexEntryType</summary>
     [JsonPropertyName("status")]
     public V1alpha1DataplexEntryTypeStatus? Status { get; set; }
-}
-
-/// <summary>DataplexEntryType is the Schema for the DataplexEntryType API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataplexEntryTypeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataplexEntryType>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataplexEntryTypeList";
-    public const string KubeGroup = "dataplex.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataplexentrytypes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DataplexEntryType> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.databricks.crossplane.io;
+/// <summary>Query is the Schema for the Querys API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1QueryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Query>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "QueryList";
+    public const string KubeGroup = "sql.databricks.crossplane.io";
+    public const string KubePluralName = "queries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1Query> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1QuerySpecForProviderParameterDateRangeValueDateRangeValue
@@ -915,30 +941,4 @@ public partial class V1alpha1Query : IKubernetesObject<V1ObjectMeta>, ISpec<V1al
     /// <summary>QueryStatus defines the observed state of Query.</summary>
     [JsonPropertyName("status")]
     public V1alpha1QueryStatus? Status { get; set; }
-}
-
-/// <summary>Query is the Schema for the Querys API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1QueryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1Query>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "QueryList";
-    public const string KubeGroup = "sql.databricks.crossplane.io";
-    public const string KubePluralName = "queries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1Query> Items { get; set; }
 }

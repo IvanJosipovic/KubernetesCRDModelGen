@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.synapse.azure.m.upbound.io;
+/// <summary>SparkPool is the Schema for the SparkPools API. Manages a Synapse Spark Pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SparkPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SparkPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SparkPoolList";
+    public const string KubeGroup = "synapse.azure.m.upbound.io";
+    public const string KubePluralName = "sparkpools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SparkPool> Items { get; set; }
+}
+
 /// <summary>An auto_pause block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SparkPoolSpecForProviderAutoPause
@@ -576,30 +602,4 @@ public partial class V1beta1SparkPool : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>SparkPoolStatus defines the observed state of SparkPool.</summary>
     [JsonPropertyName("status")]
     public V1beta1SparkPoolStatus? Status { get; set; }
-}
-
-/// <summary>SparkPool is the Schema for the SparkPools API. Manages a Synapse Spark Pool.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SparkPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SparkPool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SparkPoolList";
-    public const string KubeGroup = "synapse.azure.m.upbound.io";
-    public const string KubePluralName = "sparkpools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SparkPool> Items { get; set; }
 }

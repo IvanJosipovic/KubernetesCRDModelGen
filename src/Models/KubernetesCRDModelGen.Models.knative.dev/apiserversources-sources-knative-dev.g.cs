@@ -8,9 +8,35 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sources.knative.dev;
+/// <summary>ApiServerSource is an event source that brings Kubernetes API server events into Knative.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1ApiServerSourceList : IKubernetesObject<V1ListMeta>, IItems<V1ApiServerSource>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "ApiServerSourceList";
+    public const string KubeGroup = "sources.knative.dev";
+    public const string KubePluralName = "apiserversources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1ApiServerSource> Items { get; set; }
+}
+
 /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApiServerSourceStatusAuth
+public partial class V1ApiServerSourceStatusAuth
 {
     /// <summary>ServiceAccountName is the name of the generated service account used for this components OIDC authentication.</summary>
     [JsonPropertyName("serviceAccountName")]
@@ -23,7 +49,7 @@ public partial class ApiServerSourceStatusAuth
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApiServerSourceStatusCeAttributes
+public partial class V1ApiServerSourceStatusCeAttributes
 {
     /// <summary>Source is the CloudEvents source attribute.</summary>
     [JsonPropertyName("source")]
@@ -36,7 +62,7 @@ public partial class ApiServerSourceStatusCeAttributes
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApiServerSourceStatusConditions
+public partial class V1ApiServerSourceStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -65,7 +91,7 @@ public partial class ApiServerSourceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApiServerSourceStatus
+public partial class V1ApiServerSourceStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -73,15 +99,15 @@ public partial class ApiServerSourceStatus
 
     /// <summary>Auth provides the relevant information for OIDC authentication.</summary>
     [JsonPropertyName("auth")]
-    public ApiServerSourceStatusAuth? Auth { get; set; }
+    public V1ApiServerSourceStatusAuth? Auth { get; set; }
 
     /// <summary>CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.</summary>
     [JsonPropertyName("ceAttributes")]
-    public IList<ApiServerSourceStatusCeAttributes>? CeAttributes { get; set; }
+    public IList<V1ApiServerSourceStatusCeAttributes>? CeAttributes { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ApiServerSourceStatusConditions>? Conditions { get; set; }
+    public IList<V1ApiServerSourceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -106,13 +132,30 @@ public partial class ApiServerSourceStatus
 
 /// <summary>ApiServerSource is an event source that brings Kubernetes API server events into Knative.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ApiServerSource
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1ApiServerSource : IKubernetesObject<V1ObjectMeta>, ISpec<JsonNode>, IStatus<V1ApiServerSourceStatus>
 {
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "ApiServerSource";
+    public const string KubeGroup = "sources.knative.dev";
+    public const string KubePluralName = "apiserversources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary></summary>
     [JsonPropertyName("spec")]
     public JsonNode? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ApiServerSourceStatus? Status { get; set; }
+    public V1ApiServerSourceStatus? Status { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIRateLimit defines how group of consumers are rate limited on a set of APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIRateLimitList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIRateLimit>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIRateLimitList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apiratelimits";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIRateLimit> Items { get; set; }
+}
+
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIRateLimitSpecApiSelectorMatchExpressions
@@ -125,30 +151,4 @@ public partial class V1alpha1APIRateLimit : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>The current status of this APIRateLimit.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIRateLimitStatus? Status { get; set; }
-}
-
-/// <summary>APIRateLimit defines how group of consumers are rate limited on a set of APIs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIRateLimitList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIRateLimit>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIRateLimitList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apiratelimits";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIRateLimit> Items { get; set; }
 }

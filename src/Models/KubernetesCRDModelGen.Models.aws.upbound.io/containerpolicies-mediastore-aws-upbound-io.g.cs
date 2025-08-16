@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.mediastore.aws.upbound.io;
+/// <summary>ContainerPolicy is the Schema for the ContainerPolicys API. Provides a MediaStore Container Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContainerPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContainerPolicyList";
+    public const string KubeGroup = "mediastore.aws.upbound.io";
+    public const string KubePluralName = "containerpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContainerPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerPolicySpecForProviderContainerNameRefPolicy
@@ -329,30 +355,4 @@ public partial class V1beta1ContainerPolicy : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>ContainerPolicyStatus defines the observed state of ContainerPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContainerPolicyStatus? Status { get; set; }
-}
-
-/// <summary>ContainerPolicy is the Schema for the ContainerPolicys API. Provides a MediaStore Container Policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContainerPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContainerPolicyList";
-    public const string KubeGroup = "mediastore.aws.upbound.io";
-    public const string KubePluralName = "containerpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContainerPolicy> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.m.upbound.io;
+/// <summary>ScopeMap is the Schema for the ScopeMaps API. Manages an Azure Container Registry scope map.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ScopeMapList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ScopeMap>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ScopeMapList";
+    public const string KubeGroup = "containerregistry.azure.m.upbound.io";
+    public const string KubePluralName = "scopemaps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ScopeMap> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScopeMapSpecForProviderContainerRegistryNameRefPolicy
@@ -332,30 +358,4 @@ public partial class V1beta1ScopeMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>ScopeMapStatus defines the observed state of ScopeMap.</summary>
     [JsonPropertyName("status")]
     public V1beta1ScopeMapStatus? Status { get; set; }
-}
-
-/// <summary>ScopeMap is the Schema for the ScopeMaps API. Manages an Azure Container Registry scope map.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ScopeMapList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ScopeMap>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ScopeMapList";
-    public const string KubeGroup = "containerregistry.azure.m.upbound.io";
-    public const string KubePluralName = "scopemaps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ScopeMap> Items { get; set; }
 }

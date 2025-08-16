@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pkg.crossplane.io;
+/// <summary>The DeploymentRuntimeConfig provides settings for the Kubernetes Deployment of a Provider or composition function package.  Read the Crossplane documentation for [more information about DeploymentRuntimeConfigs](https://docs.crossplane.io/latest/concepts/providers/#runtime-configuration).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DeploymentRuntimeConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeploymentRuntimeConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DeploymentRuntimeConfigList";
+    public const string KubeGroup = "pkg.crossplane.io";
+    public const string KubePluralName = "deploymentruntimeconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DeploymentRuntimeConfig> Items { get; set; }
+}
+
 /// <summary>Metadata contains the configurable metadata fields for the Deployment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentRuntimeConfigSpecDeploymentTemplateMetadata
@@ -5789,30 +5815,4 @@ public partial class V1beta1DeploymentRuntimeConfig : IKubernetesObject<V1Object
     /// <summary>DeploymentRuntimeConfigSpec specifies the configuration for a packaged controller. Values provided will override package manager defaults. Labels and annotations are passed to both the controller Deployment and ServiceAccount.</summary>
     [JsonPropertyName("spec")]
     public V1beta1DeploymentRuntimeConfigSpec? Spec { get; set; }
-}
-
-/// <summary>The DeploymentRuntimeConfig provides settings for the Kubernetes Deployment of a Provider or composition function package.  Read the Crossplane documentation for [more information about DeploymentRuntimeConfigs](https://docs.crossplane.io/latest/concepts/providers/#runtime-configuration).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DeploymentRuntimeConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeploymentRuntimeConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DeploymentRuntimeConfigList";
-    public const string KubeGroup = "pkg.crossplane.io";
-    public const string KubePluralName = "deploymentruntimeconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DeploymentRuntimeConfig> Items { get; set; }
 }

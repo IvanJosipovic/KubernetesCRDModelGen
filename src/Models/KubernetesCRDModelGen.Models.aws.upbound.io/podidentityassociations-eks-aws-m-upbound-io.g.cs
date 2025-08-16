@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eks.aws.m.upbound.io;
+/// <summary>PodIdentityAssociation is the Schema for the PodIdentityAssociations API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PodIdentityAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PodIdentityAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PodIdentityAssociationList";
+    public const string KubeGroup = "eks.aws.m.upbound.io";
+    public const string KubePluralName = "podidentityassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PodIdentityAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PodIdentityAssociationSpecForProviderClusterNameRefPolicy
@@ -688,30 +714,4 @@ public partial class V1beta1PodIdentityAssociation : IKubernetesObject<V1ObjectM
     /// <summary>PodIdentityAssociationStatus defines the observed state of PodIdentityAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1PodIdentityAssociationStatus? Status { get; set; }
-}
-
-/// <summary>PodIdentityAssociation is the Schema for the PodIdentityAssociations API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PodIdentityAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PodIdentityAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PodIdentityAssociationList";
-    public const string KubeGroup = "eks.aws.m.upbound.io";
-    public const string KubePluralName = "podidentityassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PodIdentityAssociation> Items { get; set; }
 }

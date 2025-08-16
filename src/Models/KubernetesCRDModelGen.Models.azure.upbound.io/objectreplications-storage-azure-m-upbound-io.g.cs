@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.m.upbound.io;
+/// <summary>ObjectReplication is the Schema for the ObjectReplications API. Copy Block Blobs between a source storage account and a destination account</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ObjectReplicationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ObjectReplication>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ObjectReplicationList";
+    public const string KubeGroup = "storage.azure.m.upbound.io";
+    public const string KubePluralName = "objectreplications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ObjectReplication> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectReplicationSpecForProviderDestinationStorageAccountIdRefPolicy
@@ -835,30 +861,4 @@ public partial class V1beta1ObjectReplication : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ObjectReplicationStatus defines the observed state of ObjectReplication.</summary>
     [JsonPropertyName("status")]
     public V1beta1ObjectReplicationStatus? Status { get; set; }
-}
-
-/// <summary>ObjectReplication is the Schema for the ObjectReplications API. Copy Block Blobs between a source storage account and a destination account</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ObjectReplicationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ObjectReplication>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ObjectReplicationList";
-    public const string KubeGroup = "storage.azure.m.upbound.io";
-    public const string KubePluralName = "objectreplications";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ObjectReplication> Items { get; set; }
 }

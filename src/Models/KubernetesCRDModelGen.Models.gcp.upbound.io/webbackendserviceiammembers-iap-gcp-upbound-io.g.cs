@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.gcp.upbound.io;
+/// <summary>WebBackendServiceIAMMember is the Schema for the WebBackendServiceIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WebBackendServiceIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WebBackendServiceIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WebBackendServiceIAMMemberList";
+    public const string KubeGroup = "iap.gcp.upbound.io";
+    public const string KubePluralName = "webbackendserviceiammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WebBackendServiceIAMMember> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebBackendServiceIAMMemberSpecForProviderCondition
@@ -412,30 +438,4 @@ public partial class V1beta1WebBackendServiceIAMMember : IKubernetesObject<V1Obj
     /// <summary>WebBackendServiceIAMMemberStatus defines the observed state of WebBackendServiceIAMMember.</summary>
     [JsonPropertyName("status")]
     public V1beta1WebBackendServiceIAMMemberStatus? Status { get; set; }
-}
-
-/// <summary>WebBackendServiceIAMMember is the Schema for the WebBackendServiceIAMMembers API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WebBackendServiceIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WebBackendServiceIAMMember>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WebBackendServiceIAMMemberList";
-    public const string KubeGroup = "iap.gcp.upbound.io";
-    public const string KubePluralName = "webbackendserviceiammembers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WebBackendServiceIAMMember> Items { get; set; }
 }

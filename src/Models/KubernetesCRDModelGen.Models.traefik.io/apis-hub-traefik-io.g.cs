@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>API defines an HTTP interface that is exposed to external clients. It specifies the supported versions and provides instructions for accessing its documentation. Once instantiated, an API object is associated with an Ingress, IngressRoute, or HTTPRoute resource, enabling the exposure of the described API to the outside world.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1API>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apis";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1API> Items { get; set; }
+}
+
 /// <summary>Cors defines the Cross-Origin Resource Sharing configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APISpecCors
@@ -201,30 +227,4 @@ public partial class V1alpha1API : IKubernetesObject<V1ObjectMeta>, ISpec<V1alph
     /// <summary>The current status of this API.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIStatus? Status { get; set; }
-}
-
-/// <summary>API defines an HTTP interface that is exposed to external clients. It specifies the supported versions and provides instructions for accessing its documentation. Once instantiated, an API object is associated with an Ingress, IngressRoute, or HTTPRoute resource, enabling the exposure of the described API to the outside world.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1API>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apis";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1API> Items { get; set; }
 }

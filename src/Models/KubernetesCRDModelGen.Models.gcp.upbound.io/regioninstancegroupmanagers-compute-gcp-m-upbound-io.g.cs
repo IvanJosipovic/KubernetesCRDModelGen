@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.m.upbound.io;
+/// <summary>RegionInstanceGroupManager is the Schema for the RegionInstanceGroupManagers API. Manages an Regional Instance Group within GCE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegionInstanceGroupManagerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionInstanceGroupManager>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegionInstanceGroupManagerList";
+    public const string KubeGroup = "compute.gcp.m.upbound.io";
+    public const string KubePluralName = "regioninstancegroupmanagers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegionInstanceGroupManager> Items { get; set; }
+}
+
 /// <summary>Properties to set on all instances in the group. After setting allInstancesConfig on the group, you must update the group's instances to apply the configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionInstanceGroupManagerSpecForProviderAllInstancesConfig
@@ -1572,30 +1598,4 @@ public partial class V1beta1RegionInstanceGroupManager : IKubernetesObject<V1Obj
     /// <summary>RegionInstanceGroupManagerStatus defines the observed state of RegionInstanceGroupManager.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegionInstanceGroupManagerStatus? Status { get; set; }
-}
-
-/// <summary>RegionInstanceGroupManager is the Schema for the RegionInstanceGroupManagers API. Manages an Regional Instance Group within GCE.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegionInstanceGroupManagerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegionInstanceGroupManager>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegionInstanceGroupManagerList";
-    public const string KubeGroup = "compute.gcp.m.upbound.io";
-    public const string KubePluralName = "regioninstancegroupmanagers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegionInstanceGroupManager> Items { get; set; }
 }

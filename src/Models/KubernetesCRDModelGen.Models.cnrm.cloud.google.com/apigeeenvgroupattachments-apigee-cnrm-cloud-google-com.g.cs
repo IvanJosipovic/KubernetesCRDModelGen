@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apigee.cnrm.cloud.google.com;
+/// <summary>ApigeeEnvgroupAttachment is the Schema for the ApigeeEnvgroupAttachment API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApigeeEnvgroupAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApigeeEnvgroupAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApigeeEnvgroupAttachmentList";
+    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigeeenvgroupattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApigeeEnvgroupAttachment> Items { get; set; }
+}
+
 /// <summary>Reference to parent Environment Group</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApigeeEnvgroupAttachmentSpecEnvgroupRef
@@ -142,30 +168,4 @@ public partial class V1beta1ApigeeEnvgroupAttachment : IKubernetesObject<V1Objec
     /// <summary>ApigeeEnvgroupAttachmentStatus defines the config connector machine state of ApigeeEnvgroupAttachment</summary>
     [JsonPropertyName("status")]
     public V1beta1ApigeeEnvgroupAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>ApigeeEnvgroupAttachment is the Schema for the ApigeeEnvgroupAttachment API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApigeeEnvgroupAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApigeeEnvgroupAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApigeeEnvgroupAttachmentList";
-    public const string KubeGroup = "apigee.cnrm.cloud.google.com";
-    public const string KubePluralName = "apigeeenvgroupattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ApigeeEnvgroupAttachment> Items { get; set; }
 }

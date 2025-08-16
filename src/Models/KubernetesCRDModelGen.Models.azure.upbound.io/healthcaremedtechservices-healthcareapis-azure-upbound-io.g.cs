@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
+/// <summary>HealthcareMedtechService is the Schema for the HealthcareMedtechServices API. Manages a Healthcare MedTech (Internet of Medical Things) devices Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HealthcareMedtechServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthcareMedtechService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HealthcareMedtechServiceList";
+    public const string KubeGroup = "healthcareapis.azure.upbound.io";
+    public const string KubePluralName = "healthcaremedtechservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HealthcareMedtechService> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareMedtechServiceSpecForProviderEventhubConsumerGroupNameRefPolicy
@@ -756,30 +782,4 @@ public partial class V1beta1HealthcareMedtechService : IKubernetesObject<V1Objec
     /// <summary>HealthcareMedtechServiceStatus defines the observed state of HealthcareMedtechService.</summary>
     [JsonPropertyName("status")]
     public V1beta1HealthcareMedtechServiceStatus? Status { get; set; }
-}
-
-/// <summary>HealthcareMedtechService is the Schema for the HealthcareMedtechServices API. Manages a Healthcare MedTech (Internet of Medical Things) devices Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HealthcareMedtechServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthcareMedtechService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HealthcareMedtechServiceList";
-    public const string KubeGroup = "healthcareapis.azure.upbound.io";
-    public const string KubePluralName = "healthcaremedtechservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HealthcareMedtechService> Items { get; set; }
 }

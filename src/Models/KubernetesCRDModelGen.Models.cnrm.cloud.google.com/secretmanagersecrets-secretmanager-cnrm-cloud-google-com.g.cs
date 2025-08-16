@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.cnrm.cloud.google.com;
+/// <summary>SecretManagerSecret is the Schema for the SecretManagerSecret API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretManagerSecretList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretManagerSecret>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretManagerSecretList";
+    public const string KubeGroup = "secretmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "secretmanagersecrets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecretManagerSecret> Items { get; set; }
+}
+
 /// <summary>Required. The resource name of the Cloud KMS CryptoKey used to encrypt  secret payloads.   For secrets using the  [UserManaged][google.cloud.secretmanager.v1.Replication.UserManaged]  replication policy type, Cloud KMS CryptoKeys must reside in the same  location as the [replica location][Secret.UserManaged.Replica.location].   For secrets using the  [Automatic][google.cloud.secretmanager.v1.Replication.Automatic]  replication policy type, Cloud KMS CryptoKeys must reside in `global`.   The expected format is `projects/*/locations/*/keyRings/*/cryptoKeys/*`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretSpecReplicationAutoCustomerManagedEncryptionKmsKeyRef
@@ -275,30 +301,4 @@ public partial class V1beta1SecretManagerSecret : IKubernetesObject<V1ObjectMeta
     /// <summary>SecretManagerSecretStatus defines the config connector machine state of SecretManagerSecret</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretManagerSecretStatus? Status { get; set; }
-}
-
-/// <summary>SecretManagerSecret is the Schema for the SecretManagerSecret API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretManagerSecretList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretManagerSecret>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretManagerSecretList";
-    public const string KubeGroup = "secretmanager.cnrm.cloud.google.com";
-    public const string KubePluralName = "secretmanagersecrets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SecretManagerSecret> Items { get; set; }
 }

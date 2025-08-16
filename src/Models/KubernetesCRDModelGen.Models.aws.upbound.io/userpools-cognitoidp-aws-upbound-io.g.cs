@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.upbound.io;
+/// <summary>UserPool is the Schema for the UserPools API. Provides a Cognito User Pool resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserPoolList";
+    public const string KubeGroup = "cognitoidp.aws.upbound.io";
+    public const string KubePluralName = "userpools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1UserPool> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserPoolSpecForProviderAccountRecoverySettingRecoveryMechanism
@@ -3573,30 +3599,4 @@ public partial class V1beta1UserPool : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>UserPoolStatus defines the observed state of UserPool.</summary>
     [JsonPropertyName("status")]
     public V1beta1UserPoolStatus? Status { get; set; }
-}
-
-/// <summary>UserPool is the Schema for the UserPools API. Provides a Cognito User Pool resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1UserPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserPool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "UserPoolList";
-    public const string KubeGroup = "cognitoidp.aws.upbound.io";
-    public const string KubePluralName = "userpools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1UserPool> Items { get; set; }
 }

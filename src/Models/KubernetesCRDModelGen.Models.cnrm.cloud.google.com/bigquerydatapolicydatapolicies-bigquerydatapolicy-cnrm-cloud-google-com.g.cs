@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigquerydatapolicy.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicyMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryDataPolicyDataPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigQueryDataPolicyDataPolicy>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryDataPolicyDataPolicyList";
+    public const string KubeGroup = "bigquerydatapolicy.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigquerydatapolicydatapolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BigQueryDataPolicyDataPolicy> Items { get; set; }
 }
 
 /// <summary>The data masking policy that specifies the data masking rule to use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicySpecDataMaskingPolicy
+public partial class V1alpha1BigQueryDataPolicyDataPolicySpecDataMaskingPolicy
 {
     /// <summary>The available masking rules. Learn more here: https://cloud.google.com/bigquery/docs/column-data-masking-intro#masking_options. Possible values: ["SHA256", "ALWAYS_NULL", "DEFAULT_MASKING_VALUE", "LAST_FOUR_CHARACTERS", "FIRST_FOUR_CHARACTERS", "EMAIL_MASK", "DATE_YEAR_MASK"].</summary>
     [JsonPropertyName("predefinedExpression")]
@@ -25,7 +45,7 @@ public partial class BigQueryDataPolicyDataPolicySpecDataMaskingPolicy
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicySpecProjectRef
+public partial class V1alpha1BigQueryDataPolicyDataPolicySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -42,11 +62,11 @@ public partial class BigQueryDataPolicyDataPolicySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicySpec
+public partial class V1alpha1BigQueryDataPolicyDataPolicySpec
 {
     /// <summary>The data masking policy that specifies the data masking rule to use.</summary>
     [JsonPropertyName("dataMaskingPolicy")]
-    public BigQueryDataPolicyDataPolicySpecDataMaskingPolicy? DataMaskingPolicy { get; set; }
+    public V1alpha1BigQueryDataPolicyDataPolicySpecDataMaskingPolicy? DataMaskingPolicy { get; set; }
 
     /// <summary>The enrollment level of the service. Possible values: ["COLUMN_LEVEL_SECURITY_POLICY", "DATA_MASKING_POLICY"].</summary>
     [JsonPropertyName("dataPolicyType")]
@@ -62,7 +82,7 @@ public partial class BigQueryDataPolicyDataPolicySpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public BigQueryDataPolicyDataPolicySpecProjectRef ProjectRef { get; set; }
+    public V1alpha1BigQueryDataPolicyDataPolicySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The dataPolicyId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -71,7 +91,7 @@ public partial class BigQueryDataPolicyDataPolicySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicyStatusConditions
+public partial class V1alpha1BigQueryDataPolicyDataPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +116,11 @@ public partial class BigQueryDataPolicyDataPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicyStatus
+public partial class V1alpha1BigQueryDataPolicyDataPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BigQueryDataPolicyDataPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1BigQueryDataPolicyDataPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Resource name of this data policy, in the format of projects/{project_number}/locations/{locationId}/dataPolicies/{dataPolicyId}.</summary>
     [JsonPropertyName("name")]
@@ -113,25 +133,30 @@ public partial class BigQueryDataPolicyDataPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDataPolicyDataPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryDataPolicyDataPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryDataPolicyDataPolicySpec>, IStatus<V1alpha1BigQueryDataPolicyDataPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryDataPolicyDataPolicy";
+    public const string KubeGroup = "bigquerydatapolicy.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigquerydatapolicydatapolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigQueryDataPolicyDataPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BigQueryDataPolicyDataPolicySpec Spec { get; set; }
+    public V1alpha1BigQueryDataPolicyDataPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BigQueryDataPolicyDataPolicyStatus? Status { get; set; }
+    public V1alpha1BigQueryDataPolicyDataPolicyStatus? Status { get; set; }
 }

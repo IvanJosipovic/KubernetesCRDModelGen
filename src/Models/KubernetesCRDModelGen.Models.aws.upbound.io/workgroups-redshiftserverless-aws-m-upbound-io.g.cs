@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshiftserverless.aws.m.upbound.io;
+/// <summary>Workgroup is the Schema for the Workgroups API. Provides a Redshift Serverless Workgroup resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkgroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workgroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkgroupList";
+    public const string KubeGroup = "redshiftserverless.aws.m.upbound.io";
+    public const string KubePluralName = "workgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Workgroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkgroupSpecForProviderConfigParameter
@@ -737,30 +763,4 @@ public partial class V1beta1Workgroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>WorkgroupStatus defines the observed state of Workgroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkgroupStatus? Status { get; set; }
-}
-
-/// <summary>Workgroup is the Schema for the Workgroups API. Provides a Redshift Serverless Workgroup resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkgroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workgroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkgroupList";
-    public const string KubeGroup = "redshiftserverless.aws.m.upbound.io";
-    public const string KubePluralName = "workgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Workgroup> Items { get; set; }
 }

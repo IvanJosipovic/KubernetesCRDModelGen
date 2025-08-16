@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeMachineImageList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeMachineImage>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeMachineImageList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computemachineimages";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeMachineImage> Items { get; set; }
 }
 
 /// <summary>Immutable. Encrypts the machine image using a customer-supplied encryption key.  After you encrypt a machine image with a customer-supplied key, you must provide the same key if you use the machine image later (e.g. to create a instance from the image).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageSpecMachineImageEncryptionKey
+public partial class V1alpha1ComputeMachineImageSpecMachineImageEncryptionKey
 {
     /// <summary>Immutable. The name of the encryption key that is stored in Google Cloud KMS.</summary>
     [JsonPropertyName("kmsKeyName")]
@@ -37,7 +57,7 @@ public partial class ComputeMachineImageSpecMachineImageEncryptionKey
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageSpecProjectRef
+public partial class V1alpha1ComputeMachineImageSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -54,7 +74,7 @@ public partial class ComputeMachineImageSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageSpecSourceInstanceRef
+public partial class V1alpha1ComputeMachineImageSpecSourceInstanceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -71,7 +91,7 @@ public partial class ComputeMachineImageSpecSourceInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageSpec
+public partial class V1alpha1ComputeMachineImageSpec
 {
     /// <summary>Immutable. A text description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -83,11 +103,11 @@ public partial class ComputeMachineImageSpec
 
     /// <summary>Immutable. Encrypts the machine image using a customer-supplied encryption key.  After you encrypt a machine image with a customer-supplied key, you must provide the same key if you use the machine image later (e.g. to create a instance from the image).</summary>
     [JsonPropertyName("machineImageEncryptionKey")]
-    public ComputeMachineImageSpecMachineImageEncryptionKey? MachineImageEncryptionKey { get; set; }
+    public V1alpha1ComputeMachineImageSpecMachineImageEncryptionKey? MachineImageEncryptionKey { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeMachineImageSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeMachineImageSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -95,12 +115,12 @@ public partial class ComputeMachineImageSpec
 
     /// <summary></summary>
     [JsonPropertyName("sourceInstanceRef")]
-    public ComputeMachineImageSpecSourceInstanceRef SourceInstanceRef { get; set; }
+    public V1alpha1ComputeMachineImageSpecSourceInstanceRef SourceInstanceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageStatusConditions
+public partial class V1alpha1ComputeMachineImageStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -125,11 +145,11 @@ public partial class ComputeMachineImageStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImageStatus
+public partial class V1alpha1ComputeMachineImageStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeMachineImageStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeMachineImageStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -146,25 +166,30 @@ public partial class ComputeMachineImageStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeMachineImage
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeMachineImage : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeMachineImageSpec>, IStatus<V1alpha1ComputeMachineImageStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeMachineImage";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computemachineimages";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeMachineImageMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeMachineImageSpec Spec { get; set; }
+    public V1alpha1ComputeMachineImageSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeMachineImageStatus? Status { get; set; }
+    public V1alpha1ComputeMachineImageStatus? Status { get; set; }
 }

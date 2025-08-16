@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.clouddeploy.cnrm.cloud.google.com;
+/// <summary>DeployCustomTargetType is the Schema for the DeployCustomTargetType API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DeployCustomTargetTypeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DeployCustomTargetType>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DeployCustomTargetTypeList";
+    public const string KubeGroup = "clouddeploy.cnrm.cloud.google.com";
+    public const string KubePluralName = "deploycustomtargettypes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DeployCustomTargetType> Items { get; set; }
+}
+
 /// <summary>Remote git repository containing the Skaffold Config modules.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DeployCustomTargetTypeSpecCustomActionsIncludeSkaffoldModulesGit
@@ -251,30 +277,4 @@ public partial class V1alpha1DeployCustomTargetType : IKubernetesObject<V1Object
     /// <summary>CustomTargetTypeStatus defines the config connector machine state of DeployCustomTargetType</summary>
     [JsonPropertyName("status")]
     public V1alpha1DeployCustomTargetTypeStatus? Status { get; set; }
-}
-
-/// <summary>DeployCustomTargetType is the Schema for the DeployCustomTargetType API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DeployCustomTargetTypeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DeployCustomTargetType>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DeployCustomTargetTypeList";
-    public const string KubeGroup = "clouddeploy.cnrm.cloud.google.com";
-    public const string KubePluralName = "deploycustomtargettypes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DeployCustomTargetType> Items { get; set; }
 }

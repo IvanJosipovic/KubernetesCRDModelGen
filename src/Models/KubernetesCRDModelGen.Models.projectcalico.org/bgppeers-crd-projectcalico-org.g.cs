@@ -10,6 +10,32 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1BGPPeerList : IKubernetesObject<V1ListMeta>, IItems<V1BGPPeer>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "BGPPeerList";
+    public const string KubeGroup = "crd.projectcalico.org";
+    public const string KubePluralName = "bgppeers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1BGPPeer> Items { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1BGPPeerSpecPasswordSecretKeyRef
 {
     /// <summary></summary>
@@ -131,30 +157,4 @@ public partial class V1BGPPeer : IKubernetesObject<V1ObjectMeta>, ISpec<V1BGPPee
     /// <summary></summary>
     [JsonPropertyName("spec")]
     public V1BGPPeerSpec? Spec { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1BGPPeerList : IKubernetesObject<V1ListMeta>, IItems<V1BGPPeer>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "BGPPeerList";
-    public const string KubeGroup = "crd.projectcalico.org";
-    public const string KubePluralName = "bgppeers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1BGPPeer> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kusto.azure.upbound.io;
+/// <summary>DatabasePrincipalAssignment is the Schema for the DatabasePrincipalAssignments API. Manages a Kusto / Data Explorer Database Principal Assignment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatabasePrincipalAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabasePrincipalAssignment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatabasePrincipalAssignmentList";
+    public const string KubeGroup = "kusto.azure.upbound.io";
+    public const string KubePluralName = "databaseprincipalassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DatabasePrincipalAssignment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabasePrincipalAssignmentSpecForProviderClusterNameRefPolicy
@@ -441,30 +467,4 @@ public partial class V1beta1DatabasePrincipalAssignment : IKubernetesObject<V1Ob
     /// <summary>DatabasePrincipalAssignmentStatus defines the observed state of DatabasePrincipalAssignment.</summary>
     [JsonPropertyName("status")]
     public V1beta1DatabasePrincipalAssignmentStatus? Status { get; set; }
-}
-
-/// <summary>DatabasePrincipalAssignment is the Schema for the DatabasePrincipalAssignments API. Manages a Kusto / Data Explorer Database Principal Assignment</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DatabasePrincipalAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabasePrincipalAssignment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DatabasePrincipalAssignmentList";
-    public const string KubeGroup = "kusto.azure.upbound.io";
-    public const string KubePluralName = "databaseprincipalassignments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DatabasePrincipalAssignment> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53recoveryreadiness.aws.m.upbound.io;
+/// <summary>ResourceSet is the Schema for the ResourceSets API. Provides an AWS Route 53 Recovery Readiness Resource Set</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceSetList";
+    public const string KubeGroup = "route53recoveryreadiness.aws.m.upbound.io";
+    public const string KubePluralName = "resourcesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceSet> Items { get; set; }
+}
+
 /// <summary>NLB resource a DNS Target Resource points to. Required if r53_resource is not set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSetSpecForProviderResourcesDnsTargetResourceTargetResourceNlbResource
@@ -571,30 +597,4 @@ public partial class V1beta1ResourceSet : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ResourceSetStatus defines the observed state of ResourceSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResourceSetStatus? Status { get; set; }
-}
-
-/// <summary>ResourceSet is the Schema for the ResourceSets API. Provides an AWS Route 53 Recovery Readiness Resource Set</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResourceSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResourceSetList";
-    public const string KubeGroup = "route53recoveryreadiness.aws.m.upbound.io";
-    public const string KubePluralName = "resourcesets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ResourceSet> Items { get; set; }
 }

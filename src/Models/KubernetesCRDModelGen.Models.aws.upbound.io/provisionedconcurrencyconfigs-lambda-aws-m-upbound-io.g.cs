@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.m.upbound.io;
+/// <summary>ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages an AWS Lambda Provisioned Concurrency Configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProvisionedConcurrencyConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProvisionedConcurrencyConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProvisionedConcurrencyConfigList";
+    public const string KubeGroup = "lambda.aws.m.upbound.io";
+    public const string KubePluralName = "provisionedconcurrencyconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProvisionedConcurrencyConfig> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisionedConcurrencyConfigSpecForProvider
@@ -204,30 +230,4 @@ public partial class V1beta1ProvisionedConcurrencyConfig : IKubernetesObject<V1O
     /// <summary>ProvisionedConcurrencyConfigStatus defines the observed state of ProvisionedConcurrencyConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProvisionedConcurrencyConfigStatus? Status { get; set; }
-}
-
-/// <summary>ProvisionedConcurrencyConfig is the Schema for the ProvisionedConcurrencyConfigs API. Manages an AWS Lambda Provisioned Concurrency Configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProvisionedConcurrencyConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProvisionedConcurrencyConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProvisionedConcurrencyConfigList";
-    public const string KubeGroup = "lambda.aws.m.upbound.io";
-    public const string KubePluralName = "provisionedconcurrencyconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProvisionedConcurrencyConfig> Items { get; set; }
 }

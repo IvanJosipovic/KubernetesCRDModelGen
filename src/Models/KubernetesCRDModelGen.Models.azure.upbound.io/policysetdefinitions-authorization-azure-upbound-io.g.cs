@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+/// <summary>PolicySetDefinition is the Schema for the PolicySetDefinitions API. Manages a policy set definition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PolicySetDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicySetDefinition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PolicySetDefinitionList";
+    public const string KubeGroup = "authorization.azure.upbound.io";
+    public const string KubePluralName = "policysetdefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PolicySetDefinition> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PolicySetDefinitionSpecForProviderManagementGroupIdRefPolicy
@@ -543,30 +569,4 @@ public partial class V1beta1PolicySetDefinition : IKubernetesObject<V1ObjectMeta
     /// <summary>PolicySetDefinitionStatus defines the observed state of PolicySetDefinition.</summary>
     [JsonPropertyName("status")]
     public V1beta1PolicySetDefinitionStatus? Status { get; set; }
-}
-
-/// <summary>PolicySetDefinition is the Schema for the PolicySetDefinitions API. Manages a policy set definition.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PolicySetDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PolicySetDefinition>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PolicySetDefinitionList";
-    public const string KubeGroup = "authorization.azure.upbound.io";
-    public const string KubePluralName = "policysetdefinitions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PolicySetDefinition> Items { get; set; }
 }

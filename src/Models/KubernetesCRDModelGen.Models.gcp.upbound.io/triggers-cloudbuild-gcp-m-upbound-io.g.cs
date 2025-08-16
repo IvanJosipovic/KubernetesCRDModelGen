@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.gcp.m.upbound.io;
+/// <summary>Trigger is the Schema for the Triggers API. Configuration for an automated build in response to source repository changes.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TriggerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Trigger>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TriggerList";
+    public const string KubeGroup = "cloudbuild.gcp.m.upbound.io";
+    public const string KubePluralName = "triggers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Trigger> Items { get; set; }
+}
+
 /// <summary>Configuration for manual approval to start a build invocation of this BuildTrigger. Builds created by this trigger will require approval before they execute. Any user with a Cloud Build Approver role for the project can approve a build. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerSpecForProviderApprovalConfig
@@ -2930,30 +2956,4 @@ public partial class V1beta1Trigger : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>TriggerStatus defines the observed state of Trigger.</summary>
     [JsonPropertyName("status")]
     public V1beta1TriggerStatus? Status { get; set; }
-}
-
-/// <summary>Trigger is the Schema for the Triggers API. Configuration for an automated build in response to source repository changes.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TriggerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Trigger>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TriggerList";
-    public const string KubeGroup = "cloudbuild.gcp.m.upbound.io";
-    public const string KubePluralName = "triggers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Trigger> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ecs.aws.m.upbound.io;
+/// <summary>TaskDefinition is the Schema for the TaskDefinitions API. Manages a revision of an ECS task definition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TaskDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TaskDefinition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TaskDefinitionList";
+    public const string KubeGroup = "ecs.aws.m.upbound.io";
+    public const string KubePluralName = "taskdefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TaskDefinition> Items { get; set; }
+}
+
 /// <summary>The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total amount of ephemeral storage available, beyond the default amount, for tasks hosted on AWS Fargate. See Ephemeral Storage.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TaskDefinitionSpecForProviderEphemeralStorage
@@ -1066,30 +1092,4 @@ public partial class V1beta1TaskDefinition : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>TaskDefinitionStatus defines the observed state of TaskDefinition.</summary>
     [JsonPropertyName("status")]
     public V1beta1TaskDefinitionStatus? Status { get; set; }
-}
-
-/// <summary>TaskDefinition is the Schema for the TaskDefinitions API. Manages a revision of an ECS task definition.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TaskDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TaskDefinition>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TaskDefinitionList";
-    public const string KubeGroup = "ecs.aws.m.upbound.io";
-    public const string KubePluralName = "taskdefinitions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TaskDefinition> Items { get; set; }
 }

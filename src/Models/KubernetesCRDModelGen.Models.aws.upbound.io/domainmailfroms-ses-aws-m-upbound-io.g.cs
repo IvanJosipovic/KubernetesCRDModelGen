@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+/// <summary>DomainMailFrom is the Schema for the DomainMailFroms API. Provides an SES domain MAIL FROM resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainMailFromList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainMailFrom>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainMailFromList";
+    public const string KubeGroup = "ses.aws.m.upbound.io";
+    public const string KubePluralName = "domainmailfroms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainMailFrom> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainMailFromSpecForProviderDomainRefPolicy
@@ -336,30 +362,4 @@ public partial class V1beta1DomainMailFrom : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>DomainMailFromStatus defines the observed state of DomainMailFrom.</summary>
     [JsonPropertyName("status")]
     public V1beta1DomainMailFromStatus? Status { get; set; }
-}
-
-/// <summary>DomainMailFrom is the Schema for the DomainMailFroms API. Provides an SES domain MAIL FROM resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DomainMailFromList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainMailFrom>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DomainMailFromList";
-    public const string KubeGroup = "ses.aws.m.upbound.io";
-    public const string KubePluralName = "domainmailfroms";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DomainMailFrom> Items { get; set; }
 }

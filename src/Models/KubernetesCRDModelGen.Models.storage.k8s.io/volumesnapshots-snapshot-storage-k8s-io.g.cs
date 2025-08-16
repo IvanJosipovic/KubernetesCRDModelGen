@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.snapshot.storage.k8s.io;
+/// <summary>VolumeSnapshot is a user's request for either creating a point-in-time snapshot of a persistent volume, or binding to a pre-existing snapshot.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1VolumeSnapshotList : IKubernetesObject<V1ListMeta>, IItems<V1VolumeSnapshot>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "VolumeSnapshotList";
+    public const string KubeGroup = "snapshot.storage.k8s.io";
+    public const string KubePluralName = "volumesnapshots";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1VolumeSnapshot> Items { get; set; }
+}
+
 /// <summary>source specifies where a snapshot will be created from. This field is immutable after creation. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotSpecSource
@@ -104,30 +130,4 @@ public partial class V1VolumeSnapshot : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>status represents the current information of a snapshot. Consumers must verify binding between VolumeSnapshot and VolumeSnapshotContent objects is successful (by validating that both VolumeSnapshot and VolumeSnapshotContent point at each other) before using this object.</summary>
     [JsonPropertyName("status")]
     public V1VolumeSnapshotStatus? Status { get; set; }
-}
-
-/// <summary>VolumeSnapshot is a user's request for either creating a point-in-time snapshot of a persistent volume, or binding to a pre-existing snapshot.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1VolumeSnapshotList : IKubernetesObject<V1ListMeta>, IItems<V1VolumeSnapshot>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "VolumeSnapshotList";
-    public const string KubeGroup = "snapshot.storage.k8s.io";
-    public const string KubePluralName = "volumesnapshots";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1VolumeSnapshot> Items { get; set; }
 }

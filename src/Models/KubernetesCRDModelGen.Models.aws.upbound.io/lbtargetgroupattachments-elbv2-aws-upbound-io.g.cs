@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.upbound.io;
+/// <summary>LBTargetGroupAttachment is the Schema for the LBTargetGroupAttachments API. Provides the ability to register instances and containers with a LB target group</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LBTargetGroupAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBTargetGroupAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LBTargetGroupAttachmentList";
+    public const string KubeGroup = "elbv2.aws.upbound.io";
+    public const string KubePluralName = "lbtargetgroupattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LBTargetGroupAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTargetGroupAttachmentSpecForProviderTargetGroupArnRefPolicy
@@ -353,30 +379,4 @@ public partial class V1beta1LBTargetGroupAttachment : IKubernetesObject<V1Object
     /// <summary>LBTargetGroupAttachmentStatus defines the observed state of LBTargetGroupAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1LBTargetGroupAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>LBTargetGroupAttachment is the Schema for the LBTargetGroupAttachments API. Provides the ability to register instances and containers with a LB target group</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LBTargetGroupAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBTargetGroupAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LBTargetGroupAttachmentList";
-    public const string KubeGroup = "elbv2.aws.upbound.io";
-    public const string KubePluralName = "lbtargetgroupattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LBTargetGroupAttachment> Items { get; set; }
 }

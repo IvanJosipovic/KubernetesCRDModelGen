@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.databricks.crossplane.io;
+/// <summary>File is the Schema for the Files API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FileList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1File>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FileList";
+    public const string KubeGroup = "storage.databricks.crossplane.io";
+    public const string KubePluralName = "files";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1File> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1FileSpecForProvider
@@ -301,30 +327,4 @@ public partial class V1alpha1File : IKubernetesObject<V1ObjectMeta>, ISpec<V1alp
     /// <summary>FileStatus defines the observed state of File.</summary>
     [JsonPropertyName("status")]
     public V1alpha1FileStatus? Status { get; set; }
-}
-
-/// <summary>File is the Schema for the Files API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1FileList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1File>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "FileList";
-    public const string KubeGroup = "storage.databricks.crossplane.io";
-    public const string KubePluralName = "files";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1File> Items { get; set; }
 }

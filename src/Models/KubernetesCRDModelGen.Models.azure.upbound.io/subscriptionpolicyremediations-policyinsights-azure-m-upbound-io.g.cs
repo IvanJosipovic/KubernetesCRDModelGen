@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.policyinsights.azure.m.upbound.io;
+/// <summary>SubscriptionPolicyRemediation is the Schema for the SubscriptionPolicyRemediations API. Manages an Azure Subscription Policy Remediation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SubscriptionPolicyRemediationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubscriptionPolicyRemediation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SubscriptionPolicyRemediationList";
+    public const string KubeGroup = "policyinsights.azure.m.upbound.io";
+    public const string KubePluralName = "subscriptionpolicyremediations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SubscriptionPolicyRemediation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyRemediationSpecForProviderPolicyAssignmentIdRefPolicy
@@ -388,30 +414,4 @@ public partial class V1beta1SubscriptionPolicyRemediation : IKubernetesObject<V1
     /// <summary>SubscriptionPolicyRemediationStatus defines the observed state of SubscriptionPolicyRemediation.</summary>
     [JsonPropertyName("status")]
     public V1beta1SubscriptionPolicyRemediationStatus? Status { get; set; }
-}
-
-/// <summary>SubscriptionPolicyRemediation is the Schema for the SubscriptionPolicyRemediations API. Manages an Azure Subscription Policy Remediation.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SubscriptionPolicyRemediationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubscriptionPolicyRemediation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SubscriptionPolicyRemediationList";
-    public const string KubeGroup = "policyinsights.azure.m.upbound.io";
-    public const string KubePluralName = "subscriptionpolicyremediations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SubscriptionPolicyRemediation> Items { get; set; }
 }

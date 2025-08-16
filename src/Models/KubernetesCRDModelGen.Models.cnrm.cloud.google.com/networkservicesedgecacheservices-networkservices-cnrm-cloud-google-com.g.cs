@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1NetworkServicesEdgeCacheServiceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NetworkServicesEdgeCacheService>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "NetworkServicesEdgeCacheServiceList";
+    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkservicesedgecacheservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1NetworkServicesEdgeCacheService> Items { get; set; }
 }
 
 /// <summary>Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecLogConfig
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecLogConfig
 {
     /// <summary>Specifies whether to enable logging for traffic served by this service.</summary>
     [JsonPropertyName("enable")]
@@ -29,7 +49,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecLogConfig
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecProjectRef
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -46,7 +66,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingHostRule
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingHostRule
 {
     /// <summary>A human-readable description of the hostRule.</summary>
     [JsonPropertyName("description")]
@@ -63,7 +83,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingHostRule
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd
 {
     /// <summary>The name of the header to add.</summary>
     [JsonPropertyName("headerName")]
@@ -80,7 +100,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove
 {
     /// <summary>The name of the header to remove.</summary>
     [JsonPropertyName("headerName")]
@@ -89,7 +109,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd
 {
     /// <summary>The name of the header to add.</summary>
     [JsonPropertyName("headerName")]
@@ -106,7 +126,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove
 {
     /// <summary>Headers to remove from the response prior to sending it back to the client.  Response headers are only sent to the client, and do not have an effect on the cache serving the response.</summary>
     [JsonPropertyName("headerName")]
@@ -115,28 +135,28 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary>The header actions, including adding &amp; removing headers, for requests that match this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderAction
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderAction
 {
     /// <summary>Describes a header to add.</summary>
     [JsonPropertyName("requestHeaderToAdd")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd>? RequestHeaderToAdd { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd>? RequestHeaderToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.</summary>
     [JsonPropertyName("requestHeaderToRemove")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove>? RequestHeaderToRemove { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove>? RequestHeaderToRemove { get; set; }
 
     /// <summary>Headers to add to the response prior to sending it back to the client.  Response headers are only sent to the client, and do not have an effect on the cache serving the response.</summary>
     [JsonPropertyName("responseHeaderToAdd")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd>? ResponseHeaderToAdd { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd>? ResponseHeaderToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the origin.</summary>
     [JsonPropertyName("responseHeaderToRemove")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove>? ResponseHeaderToRemove { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove>? ResponseHeaderToRemove { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch
 {
     /// <summary>The value of the header should exactly match contents of exactMatch.</summary>
     [JsonPropertyName("exactMatch")]
@@ -165,7 +185,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.</summary>
     [JsonPropertyName("exactMatch")]
@@ -182,7 +202,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRule
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRule
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL.</summary>
     [JsonPropertyName("fullPathMatch")]
@@ -190,7 +210,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
     /// <summary>Specifies a list of header match criteria, all of which must match corresponding headers in the request.</summary>
     [JsonPropertyName("headerMatch")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch>? HeaderMatch { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleHeaderMatch>? HeaderMatch { get; set; }
 
     /// <summary>Specifies that prefixMatch and fullPathMatch matches are case sensitive.</summary>
     [JsonPropertyName("ignoreCase")]
@@ -206,12 +226,12 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
     /// <summary>Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.</summary>
     [JsonPropertyName("queryParameterMatch")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch>? QueryParameterMatch { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch>? QueryParameterMatch { get; set; }
 }
 
 /// <summary>Enable signature generation or propagation on this route.  This field may only be specified when signedRequestMode is set to REQUIRE_TOKENS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures
 {
     /// <summary>The actions to take to add signatures to responses. Possible values: ["GENERATE_COOKIE", "GENERATE_TOKEN_HLS_COOKIELESS", "PROPAGATE_TOKEN_HLS_COOKIELESS"].</summary>
     [JsonPropertyName("actions")]
@@ -236,7 +256,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary>Defines the request parameters that contribute to the cache key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy
 {
     /// <summary>If true, requests to different hosts will be cached separately.  Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.</summary>
     [JsonPropertyName("excludeHost")]
@@ -269,7 +289,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary>Additional options for signed tokens.  signedTokenOptions may only be specified when signedRequestMode is REQUIRE_TOKENS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions
 {
     /// <summary>The allowed signature algorithms to use.  Defaults to using only ED25519.  You may specify up to 3 signature algorithms to use. Possible values: ["ED25519", "HMAC_SHA_256", "HMAC_SHA1"].</summary>
     [JsonPropertyName("allowedSignatureAlgorithms")]
@@ -282,15 +302,15 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary>The policy to use for defining caching and signed request behaviour for requests that match this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicy
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicy
 {
     /// <summary>Enable signature generation or propagation on this route.  This field may only be specified when signedRequestMode is set to REQUIRE_TOKENS.</summary>
     [JsonPropertyName("addSignatures")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures? AddSignatures { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyAddSignatures? AddSignatures { get; set; }
 
     /// <summary>Defines the request parameters that contribute to the cache key.</summary>
     [JsonPropertyName("cacheKeyPolicy")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy? CacheKeyPolicy { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy? CacheKeyPolicy { get; set; }
 
     /// <summary>Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.  For all cache modes, Cache-Control headers will be passed to the client. Use clientTtl to override what is sent to the client. Possible values: ["CACHE_ALL_STATIC", "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "BYPASS_CACHE"].</summary>
     [JsonPropertyName("cacheMode")]
@@ -330,12 +350,12 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
     /// <summary>Additional options for signed tokens.  signedTokenOptions may only be specified when signedRequestMode is REQUIRE_TOKENS.</summary>
     [JsonPropertyName("signedTokenOptions")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions? SignedTokenOptions { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicySignedTokenOptions? SignedTokenOptions { get; set; }
 }
 
 /// <summary>CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCorsPolicy
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials.  This translates to the Access-Control-Allow-Credentials response header.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -368,7 +388,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary>The URL rewrite configuration for requests that match this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionUrlRewrite
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected origin, the request's host header is replaced with contents of hostRewrite.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -385,24 +405,24 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary>In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteAction
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteAction
 {
     /// <summary>The policy to use for defining caching and signed request behaviour for requests that match this route.</summary>
     [JsonPropertyName("cdnPolicy")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicy? CdnPolicy { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCdnPolicy? CdnPolicy { get; set; }
 
     /// <summary>CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.</summary>
     [JsonPropertyName("corsPolicy")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCorsPolicy? CorsPolicy { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>The URL rewrite configuration for requests that match this route.</summary>
     [JsonPropertyName("urlRewrite")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionUrlRewrite? UrlRewrite { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteActionUrlRewrite? UrlRewrite { get; set; }
 }
 
 /// <summary>The URL redirect configuration for requests that match this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleUrlRedirect
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request.</summary>
     [JsonPropertyName("hostRedirect")]
@@ -431,7 +451,7 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRule
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRule
 {
     /// <summary>A human-readable description of the routeRule.</summary>
     [JsonPropertyName("description")]
@@ -439,11 +459,11 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
     /// <summary>The header actions, including adding &amp; removing headers, for requests that match this route.</summary>
     [JsonPropertyName("headerAction")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderAction? HeaderAction { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleHeaderAction? HeaderAction { get; set; }
 
     /// <summary>The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.</summary>
     [JsonPropertyName("matchRule")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRule> MatchRule { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleMatchRule> MatchRule { get; set; }
 
     /// <summary>The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names ("my-origin") or fully-qualified resource URLs - e.g. "networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin"  Only one of origin or urlRedirect can be set.</summary>
     [JsonPropertyName("origin")]
@@ -455,16 +475,16 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteR
 
     /// <summary>In response to a matching path, the routeAction performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected origin.</summary>
     [JsonPropertyName("routeAction")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteAction? RouteAction { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleRouteAction? RouteAction { get; set; }
 
     /// <summary>The URL redirect configuration for requests that match this route.</summary>
     [JsonPropertyName("urlRedirect")]
-    public NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleUrlRedirect? UrlRedirect { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRuleUrlRedirect? UrlRedirect { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher
 {
     /// <summary>A human-readable description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -476,25 +496,25 @@ public partial class NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher
 
     /// <summary>The routeRules to match against. routeRules support advanced routing behaviour, and can match on paths, headers and query parameters, as well as status codes and HTTP methods.</summary>
     [JsonPropertyName("routeRule")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRule> RouteRule { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcherRouteRule> RouteRule { get; set; }
 }
 
 /// <summary>Defines how requests are routed, modified, cached and/or which origin content is filled from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpecRouting
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpecRouting
 {
     /// <summary>The list of hostRules to match against. These rules define which hostnames the EdgeCacheService will match against, and which route configurations apply.</summary>
     [JsonPropertyName("hostRule")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingHostRule> HostRule { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingHostRule> HostRule { get; set; }
 
     /// <summary>The list of pathMatchers referenced via name by hostRules. PathMatcher is used to match the path portion of the URL when a HostRule matches the URL's host portion.</summary>
     [JsonPropertyName("pathMatcher")]
-    public IList<NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher> PathMatcher { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceSpecRoutingPathMatcher> PathMatcher { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceSpec
+public partial class V1alpha1NetworkServicesEdgeCacheServiceSpec
 {
     /// <summary>A human-readable description of the resource.</summary>
     [JsonPropertyName("description")]
@@ -518,11 +538,11 @@ public partial class NetworkServicesEdgeCacheServiceSpec
 
     /// <summary>Specifies the logging options for the traffic served by this service. If logging is enabled, logs will be exported to Cloud Logging.</summary>
     [JsonPropertyName("logConfig")]
-    public NetworkServicesEdgeCacheServiceSpecLogConfig? LogConfig { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecLogConfig? LogConfig { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public NetworkServicesEdgeCacheServiceSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Require TLS (HTTPS) for all clients connecting to this service.  Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443). You must have at least one (1) edgeSslCertificate specified to enable this.</summary>
     [JsonPropertyName("requireTls")]
@@ -534,7 +554,7 @@ public partial class NetworkServicesEdgeCacheServiceSpec
 
     /// <summary>Defines how requests are routed, modified, cached and/or which origin content is filled from.</summary>
     [JsonPropertyName("routing")]
-    public NetworkServicesEdgeCacheServiceSpecRouting Routing { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpecRouting Routing { get; set; }
 
     /// <summary>URL of the SslPolicy resource that will be associated with the EdgeCacheService.  If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.</summary>
     [JsonPropertyName("sslPolicy")]
@@ -543,7 +563,7 @@ public partial class NetworkServicesEdgeCacheServiceSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceStatusConditions
+public partial class V1alpha1NetworkServicesEdgeCacheServiceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -568,11 +588,11 @@ public partial class NetworkServicesEdgeCacheServiceStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheServiceStatus
+public partial class V1alpha1NetworkServicesEdgeCacheServiceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<NetworkServicesEdgeCacheServiceStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1NetworkServicesEdgeCacheServiceStatusConditions>? Conditions { get; set; }
 
     /// <summary>The IPv4 addresses associated with this service. Addresses are static for the lifetime of the service.</summary>
     [JsonPropertyName("ipv4Addresses")]
@@ -589,25 +609,30 @@ public partial class NetworkServicesEdgeCacheServiceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesEdgeCacheService
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1NetworkServicesEdgeCacheService : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1NetworkServicesEdgeCacheServiceSpec>, IStatus<V1alpha1NetworkServicesEdgeCacheServiceStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "NetworkServicesEdgeCacheService";
+    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkservicesedgecacheservices";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public NetworkServicesEdgeCacheServiceMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public NetworkServicesEdgeCacheServiceSpec Spec { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public NetworkServicesEdgeCacheServiceStatus? Status { get; set; }
+    public V1alpha1NetworkServicesEdgeCacheServiceStatus? Status { get; set; }
 }

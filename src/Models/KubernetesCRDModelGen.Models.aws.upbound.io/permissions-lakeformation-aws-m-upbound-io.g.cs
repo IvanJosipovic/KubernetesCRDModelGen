@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lakeformation.aws.m.upbound.io;
+/// <summary>Permissions is the Schema for the Permissionss API. Grants permissions to the principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PermissionsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Permissions>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PermissionsList";
+    public const string KubeGroup = "lakeformation.aws.m.upbound.io";
+    public const string KubePluralName = "permissions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Permissions> Items { get; set; }
+}
+
 /// <summary>Configuration block for a data cells filter resource. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PermissionsSpecForProviderDataCellsFilter
@@ -1164,30 +1190,4 @@ public partial class V1beta1Permissions : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>PermissionsStatus defines the observed state of Permissions.</summary>
     [JsonPropertyName("status")]
     public V1beta1PermissionsStatus? Status { get; set; }
-}
-
-/// <summary>Permissions is the Schema for the Permissionss API. Grants permissions to the principal to access metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PermissionsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Permissions>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PermissionsList";
-    public const string KubeGroup = "lakeformation.aws.m.upbound.io";
-    public const string KubePluralName = "permissions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Permissions> Items { get; set; }
 }

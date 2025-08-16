@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tags.gcp.m.upbound.io;
+/// <summary>TagKey is the Schema for the TagKeys API. A TagKey, used to group a set of TagValues.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagKeyList";
+    public const string KubeGroup = "tags.gcp.m.upbound.io";
+    public const string KubePluralName = "tagkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TagKey> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TagKeySpecForProvider
@@ -224,30 +250,4 @@ public partial class V1beta1TagKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>TagKeyStatus defines the observed state of TagKey.</summary>
     [JsonPropertyName("status")]
     public V1beta1TagKeyStatus? Status { get; set; }
-}
-
-/// <summary>TagKey is the Schema for the TagKeys API. A TagKey, used to group a set of TagValues.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TagKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagKey>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TagKeyList";
-    public const string KubeGroup = "tags.gcp.m.upbound.io";
-    public const string KubePluralName = "tagkeys";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TagKey> Items { get; set; }
 }

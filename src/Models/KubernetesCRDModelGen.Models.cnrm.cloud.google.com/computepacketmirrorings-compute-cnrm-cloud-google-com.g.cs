@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputePacketMirroringList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputePacketMirroring>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputePacketMirroringList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computepacketmirrorings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputePacketMirroring> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecCollectorIlbUrlRef
+public partial class V1beta1ComputePacketMirroringSpecCollectorIlbUrlRef
 {
     /// <summary>Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.  Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,16 +53,16 @@ public partial class ComputePacketMirroringSpecCollectorIlbUrlRef
 
 /// <summary>The Forwarding Rule resource of type `loadBalancingScheme=INTERNAL` that will be used as collector for mirrored traffic. The specified forwarding rule must have `isMirroringCollector` set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecCollectorIlb
+public partial class V1beta1ComputePacketMirroringSpecCollectorIlb
 {
     /// <summary></summary>
     [JsonPropertyName("urlRef")]
-    public ComputePacketMirroringSpecCollectorIlbUrlRef UrlRef { get; set; }
+    public V1beta1ComputePacketMirroringSpecCollectorIlbUrlRef UrlRef { get; set; }
 }
 
 /// <summary>Filter for mirrored traffic. If unspecified, all traffic is mirrored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecFilter
+public partial class V1beta1ComputePacketMirroringSpecFilter
 {
     /// <summary>IP CIDR ranges that apply as filter on the source (ingress) or destination (egress) IP in the IP header. Only IPv4 is supported. If no ranges are specified, all traffic that matches the specified IPProtocols is mirrored. If neither cidrRanges nor IPProtocols is specified, all traffic is mirrored.</summary>
     [JsonPropertyName("cidrRanges")]
@@ -59,7 +79,7 @@ public partial class ComputePacketMirroringSpecFilter
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef
+public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef
 {
     /// <summary>Resource URL to the virtual machine instance which is being mirrored.  Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -76,7 +96,7 @@ public partial class ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecMirroredResourcesInstances
+public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesInstances
 {
     /// <summary>Immutable. Output only. Unique identifier for the instance; defined by the server.</summary>
     [JsonPropertyName("canonicalUrl")]
@@ -84,12 +104,12 @@ public partial class ComputePacketMirroringSpecMirroredResourcesInstances
 
     /// <summary></summary>
     [JsonPropertyName("urlRef")]
-    public ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef? UrlRef { get; set; }
+    public V1beta1ComputePacketMirroringSpecMirroredResourcesInstancesUrlRef? UrlRef { get; set; }
 }
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRef
+public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRef
 {
     /// <summary>Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.  Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -106,7 +126,7 @@ public partial class ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecMirroredResourcesSubnetworks
+public partial class V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworks
 {
     /// <summary>Immutable. Output only. Unique identifier for the subnetwork; defined by the server.</summary>
     [JsonPropertyName("canonicalUrl")]
@@ -114,20 +134,20 @@ public partial class ComputePacketMirroringSpecMirroredResourcesSubnetworks
 
     /// <summary>Immutable.</summary>
     [JsonPropertyName("urlRef")]
-    public ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRef? UrlRef { get; set; }
+    public V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworksUrlRef? UrlRef { get; set; }
 }
 
 /// <summary>PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecMirroredResources
+public partial class V1beta1ComputePacketMirroringSpecMirroredResources
 {
     /// <summary>A set of virtual machine instances that are being mirrored. They must live in zones contained in the same region as this packetMirroring. Note that this config will apply only to those network interfaces of the Instances that belong to the network specified in this packetMirroring. You may specify a maximum of 50 Instances.</summary>
     [JsonPropertyName("instances")]
-    public IList<ComputePacketMirroringSpecMirroredResourcesInstances>? Instances { get; set; }
+    public IList<V1beta1ComputePacketMirroringSpecMirroredResourcesInstances>? Instances { get; set; }
 
     /// <summary>Immutable. A set of subnetworks for which traffic from/to all VM instances will be mirrored. They must live in the same region as this packetMirroring. You may specify a maximum of 5 subnetworks.</summary>
     [JsonPropertyName("subnetworks")]
-    public IList<ComputePacketMirroringSpecMirroredResourcesSubnetworks>? Subnetworks { get; set; }
+    public IList<V1beta1ComputePacketMirroringSpecMirroredResourcesSubnetworks>? Subnetworks { get; set; }
 
     /// <summary>A set of mirrored tags. Traffic from/to all VM instances that have one or more of these tags will be mirrored.</summary>
     [JsonPropertyName("tags")]
@@ -136,7 +156,7 @@ public partial class ComputePacketMirroringSpecMirroredResources
 
 /// <summary>Immutable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecNetworkUrlRef
+public partial class V1beta1ComputePacketMirroringSpecNetworkUrlRef
 {
     /// <summary>URL of the network resource.  Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -153,16 +173,16 @@ public partial class ComputePacketMirroringSpecNetworkUrlRef
 
 /// <summary>Immutable. Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecNetwork
+public partial class V1beta1ComputePacketMirroringSpecNetwork
 {
     /// <summary>Immutable.</summary>
     [JsonPropertyName("urlRef")]
-    public ComputePacketMirroringSpecNetworkUrlRef UrlRef { get; set; }
+    public V1beta1ComputePacketMirroringSpecNetworkUrlRef UrlRef { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpecProjectRef
+public partial class V1beta1ComputePacketMirroringSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -179,11 +199,11 @@ public partial class ComputePacketMirroringSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringSpec
+public partial class V1beta1ComputePacketMirroringSpec
 {
     /// <summary>The Forwarding Rule resource of type `loadBalancingScheme=INTERNAL` that will be used as collector for mirrored traffic. The specified forwarding rule must have `isMirroringCollector` set to true.</summary>
     [JsonPropertyName("collectorIlb")]
-    public ComputePacketMirroringSpecCollectorIlb CollectorIlb { get; set; }
+    public V1beta1ComputePacketMirroringSpecCollectorIlb CollectorIlb { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -195,7 +215,7 @@ public partial class ComputePacketMirroringSpec
 
     /// <summary>Filter for mirrored traffic. If unspecified, all traffic is mirrored.</summary>
     [JsonPropertyName("filter")]
-    public ComputePacketMirroringSpecFilter? Filter { get; set; }
+    public V1beta1ComputePacketMirroringSpecFilter? Filter { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -203,11 +223,11 @@ public partial class ComputePacketMirroringSpec
 
     /// <summary>PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.</summary>
     [JsonPropertyName("mirroredResources")]
-    public ComputePacketMirroringSpecMirroredResources MirroredResources { get; set; }
+    public V1beta1ComputePacketMirroringSpecMirroredResources MirroredResources { get; set; }
 
     /// <summary>Immutable. Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.</summary>
     [JsonPropertyName("network")]
-    public ComputePacketMirroringSpecNetwork Network { get; set; }
+    public V1beta1ComputePacketMirroringSpecNetwork Network { get; set; }
 
     /// <summary>The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.</summary>
     [JsonPropertyName("priority")]
@@ -215,7 +235,7 @@ public partial class ComputePacketMirroringSpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputePacketMirroringSpecProjectRef ProjectRef { get; set; }
+    public V1beta1ComputePacketMirroringSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -224,7 +244,7 @@ public partial class ComputePacketMirroringSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringStatusCollectorIlb
+public partial class V1beta1ComputePacketMirroringStatusCollectorIlb
 {
     /// <summary>Output only. Unique identifier for the forwarding rule; defined by the server.</summary>
     [JsonPropertyName("canonicalUrl")]
@@ -233,7 +253,7 @@ public partial class ComputePacketMirroringStatusCollectorIlb
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringStatusConditions
+public partial class V1beta1ComputePacketMirroringStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -258,7 +278,7 @@ public partial class ComputePacketMirroringStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringStatusNetwork
+public partial class V1beta1ComputePacketMirroringStatusNetwork
 {
     /// <summary>Output only. Unique identifier for the network; defined by the server.</summary>
     [JsonPropertyName("canonicalUrl")]
@@ -267,15 +287,15 @@ public partial class ComputePacketMirroringStatusNetwork
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroringStatus
+public partial class V1beta1ComputePacketMirroringStatus
 {
     /// <summary></summary>
     [JsonPropertyName("collectorIlb")]
-    public ComputePacketMirroringStatusCollectorIlb? CollectorIlb { get; set; }
+    public V1beta1ComputePacketMirroringStatusCollectorIlb? CollectorIlb { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputePacketMirroringStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputePacketMirroringStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The unique identifier for the resource. This identifier is defined by the server.</summary>
     [JsonPropertyName("id")]
@@ -283,7 +303,7 @@ public partial class ComputePacketMirroringStatus
 
     /// <summary></summary>
     [JsonPropertyName("network")]
-    public ComputePacketMirroringStatusNetwork? Network { get; set; }
+    public V1beta1ComputePacketMirroringStatusNetwork? Network { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -300,25 +320,30 @@ public partial class ComputePacketMirroringStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputePacketMirroring
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputePacketMirroring : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputePacketMirroringSpec>, IStatus<V1beta1ComputePacketMirroringStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputePacketMirroring";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computepacketmirrorings";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputePacketMirroringMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputePacketMirroringSpec Spec { get; set; }
+    public V1beta1ComputePacketMirroringSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputePacketMirroringStatus? Status { get; set; }
+    public V1beta1ComputePacketMirroringStatus? Status { get; set; }
 }

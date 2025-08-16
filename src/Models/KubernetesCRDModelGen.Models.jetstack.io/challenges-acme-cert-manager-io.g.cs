@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acme.certmanager.io;
+/// <summary>Challenge is a type to represent a Challenge request with an ACME server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1ChallengeList : IKubernetesObject<V1ListMeta>, IItems<V1Challenge>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "ChallengeList";
+    public const string KubeGroup = "acme.cert-manager.io";
+    public const string KubePluralName = "challenges";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Challenge> Items { get; set; }
+}
+
 /// <summary>References a properly configured ACME-type Issuer which should be used to create this Challenge. If the Issuer does not exist, processing will be retried. If the Issuer is not an 'ACME' Issuer, an error will be returned and the Challenge will be marked as failed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1ChallengeSpecIssuerRef
@@ -2167,30 +2193,4 @@ public partial class V1Challenge : IKubernetesObject<V1ObjectMeta>, ISpec<V1Chal
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1ChallengeStatus? Status { get; set; }
-}
-
-/// <summary>Challenge is a type to represent a Challenge request with an ACME server</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1ChallengeList : IKubernetesObject<V1ListMeta>, IItems<V1Challenge>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "ChallengeList";
-    public const string KubeGroup = "acme.cert-manager.io";
-    public const string KubePluralName = "challenges";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1Challenge> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanager.aws.m.upbound.io;
+/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API. Manages an AWS Network Manager Connect Attachment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConnectAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConnectAttachmentList";
+    public const string KubeGroup = "networkmanager.aws.m.upbound.io";
+    public const string KubePluralName = "connectattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConnectAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectAttachmentSpecForProviderCoreNetworkIdRefPolicy
@@ -707,30 +733,4 @@ public partial class V1beta1ConnectAttachment : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ConnectAttachmentStatus defines the observed state of ConnectAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConnectAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>ConnectAttachment is the Schema for the ConnectAttachments API. Manages an AWS Network Manager Connect Attachment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConnectAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConnectAttachmentList";
-    public const string KubeGroup = "networkmanager.aws.m.upbound.io";
-    public const string KubePluralName = "connectattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ConnectAttachment> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>InstanceTemplate is the Schema for the InstanceTemplates API. Manages a VM instance template resource within GCE.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InstanceTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InstanceTemplateList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "instancetemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1InstanceTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceTemplateSpecForProviderAdvancedMachineFeatures
@@ -2684,30 +2710,4 @@ public partial class V1beta1InstanceTemplate : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>InstanceTemplateStatus defines the observed state of InstanceTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1InstanceTemplateStatus? Status { get; set; }
-}
-
-/// <summary>InstanceTemplate is the Schema for the InstanceTemplates API. Manages a VM instance template resource within GCE.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1InstanceTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "InstanceTemplateList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "instancetemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1InstanceTemplate> Items { get; set; }
 }

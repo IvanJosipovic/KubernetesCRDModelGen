@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerattached.cnrm.cloud.google.com;
+/// <summary>ContainerAttachedCluster is the Schema for the ContainerAttachedCluster API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContainerAttachedClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerAttachedCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContainerAttachedClusterList";
+    public const string KubeGroup = "containerattached.cnrm.cloud.google.com";
+    public const string KubePluralName = "containerattachedclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContainerAttachedCluster> Items { get; set; }
+}
+
 /// <summary>Optional. Configuration related to the cluster RBAC settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerAttachedClusterSpecAuthorization
@@ -328,30 +354,4 @@ public partial class V1beta1ContainerAttachedCluster : IKubernetesObject<V1Objec
     /// <summary>ContainerAttachedClusterStatus defines the config connector machine state of ContainerAttachedCluster</summary>
     [JsonPropertyName("status")]
     public V1beta1ContainerAttachedClusterStatus? Status { get; set; }
-}
-
-/// <summary>ContainerAttachedCluster is the Schema for the ContainerAttachedCluster API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContainerAttachedClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerAttachedCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContainerAttachedClusterList";
-    public const string KubeGroup = "containerattached.cnrm.cloud.google.com";
-    public const string KubePluralName = "containerattachedclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContainerAttachedCluster> Items { get; set; }
 }

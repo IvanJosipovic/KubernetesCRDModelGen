@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.upbound.io;
+/// <summary>ProjectService is the Schema for the ProjectServices API. Allows management of a single API service for a Google Cloud project.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectServiceList";
+    public const string KubeGroup = "cloudplatform.gcp.upbound.io";
+    public const string KubePluralName = "projectservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProjectService> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectServiceSpecForProviderProjectRefPolicy
@@ -345,30 +371,4 @@ public partial class V1beta1ProjectService : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>ProjectServiceStatus defines the observed state of ProjectService.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProjectServiceStatus? Status { get; set; }
-}
-
-/// <summary>ProjectService is the Schema for the ProjectServices API. Allows management of a single API service for a Google Cloud project.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProjectServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProjectServiceList";
-    public const string KubeGroup = "cloudplatform.gcp.upbound.io";
-    public const string KubePluralName = "projectservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProjectService> Items { get; set; }
 }

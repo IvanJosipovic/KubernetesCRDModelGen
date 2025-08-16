@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storagecache.azure.upbound.io;
+/// <summary>HPCCacheAccessPolicy is the Schema for the HPCCacheAccessPolicys API. Manages a HPC Cache Access Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HPCCacheAccessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HPCCacheAccessPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HPCCacheAccessPolicyList";
+    public const string KubeGroup = "storagecache.azure.upbound.io";
+    public const string KubePluralName = "hpccacheaccesspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HPCCacheAccessPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HPCCacheAccessPolicySpecForProviderAccessRule
@@ -432,30 +458,4 @@ public partial class V1beta1HPCCacheAccessPolicy : IKubernetesObject<V1ObjectMet
     /// <summary>HPCCacheAccessPolicyStatus defines the observed state of HPCCacheAccessPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1HPCCacheAccessPolicyStatus? Status { get; set; }
-}
-
-/// <summary>HPCCacheAccessPolicy is the Schema for the HPCCacheAccessPolicys API. Manages a HPC Cache Access Policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HPCCacheAccessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HPCCacheAccessPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HPCCacheAccessPolicyList";
-    public const string KubeGroup = "storagecache.azure.upbound.io";
-    public const string KubePluralName = "hpccacheaccesspolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HPCCacheAccessPolicy> Items { get; set; }
 }

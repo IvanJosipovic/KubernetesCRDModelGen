@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
+/// <summary>AlloyDBCluster is the Schema for the AlloyDBCluster API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AlloyDBClusterList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AlloyDBCluster>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AlloyDBClusterList";
+    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
+    public const string KubePluralName = "alloydbclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AlloyDBCluster> Items { get; set; }
+}
+
 /// <summary>The fully-qualified resource name of the KMS key. Each Cloud KMS key is regionalized and has the following format: projects/[PROJECT]/locations/[REGION]/keyRings/[RING]/cryptoKeys/[KEY_NAME]</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AlloyDBClusterSpecAutomatedBackupPolicyEncryptionConfigKmsKeyNameRef
@@ -686,30 +712,4 @@ public partial class V1alpha1AlloyDBCluster : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>AlloyDBClusterStatus defines the config connector machine state of AlloyDBCluster</summary>
     [JsonPropertyName("status")]
     public V1alpha1AlloyDBClusterStatus? Status { get; set; }
-}
-
-/// <summary>AlloyDBCluster is the Schema for the AlloyDBCluster API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1AlloyDBClusterList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AlloyDBCluster>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "AlloyDBClusterList";
-    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
-    public const string KubePluralName = "alloydbclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1AlloyDBCluster> Items { get; set; }
 }

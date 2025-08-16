@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DNSCNAMERecord is the Schema for the DNSCNAMERecords API. Manages a DNS CNAME Record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DNSCNAMERecordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DNSCNAMERecord>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DNSCNAMERecordList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "dnscnamerecords";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DNSCNAMERecord> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSCNAMERecordSpecForProviderResourceGroupNameRefPolicy
@@ -493,30 +519,4 @@ public partial class V1beta1DNSCNAMERecord : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>DNSCNAMERecordStatus defines the observed state of DNSCNAMERecord.</summary>
     [JsonPropertyName("status")]
     public V1beta1DNSCNAMERecordStatus? Status { get; set; }
-}
-
-/// <summary>DNSCNAMERecord is the Schema for the DNSCNAMERecords API. Manages a DNS CNAME Record.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DNSCNAMERecordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DNSCNAMERecord>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DNSCNAMERecordList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "dnscnamerecords";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DNSCNAMERecord> Items { get; set; }
 }

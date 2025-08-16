@@ -8,9 +8,35 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1EventPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1EventPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "EventPolicyList";
+    public const string KubeGroup = "eventing.knative.dev";
+    public const string KubePluralName = "eventpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1EventPolicy> Items { get; set; }
+}
+
 /// <summary>Ref contains a direct reference to a resource which is allowed to send events to the target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecFromRef
+public partial class V1alpha1EventPolicySpecFromRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -31,11 +57,11 @@ public partial class EventPolicySpecFromRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecFrom
+public partial class V1alpha1EventPolicySpecFrom
 {
     /// <summary>Ref contains a direct reference to a resource which is allowed to send events to the target.</summary>
     [JsonPropertyName("ref")]
-    public EventPolicySpecFromRef? Ref { get; set; }
+    public V1alpha1EventPolicySpecFromRef? Ref { get; set; }
 
     /// <summary>Sub sets the OIDC identity name to be allowed to send events to the target. It is also possible to set a glob-like pattern to match any suffix.</summary>
     [JsonPropertyName("sub")]
@@ -44,7 +70,7 @@ public partial class EventPolicySpecFrom
 
 /// <summary>Ref contains the direct reference to a target</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecToRef
+public partial class V1alpha1EventPolicySpecToRef
 {
     /// <summary>API version of the referent.</summary>
     [JsonPropertyName("apiVersion")]
@@ -61,7 +87,7 @@ public partial class EventPolicySpecToRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecToSelectorMatchExpressions
+public partial class V1alpha1EventPolicySpecToSelectorMatchExpressions
 {
     /// <summary>key is the label key that the selector applies to.</summary>
     [JsonPropertyName("key")]
@@ -78,7 +104,7 @@ public partial class EventPolicySpecToSelectorMatchExpressions
 
 /// <summary>Selector contains a selector to group targets</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecToSelector
+public partial class V1alpha1EventPolicySpecToSelector
 {
     /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
     [JsonPropertyName("apiVersion")]
@@ -90,7 +116,7 @@ public partial class EventPolicySpecToSelector
 
     /// <summary>matchExpressions is a list of label selector requirements. The requirements are ANDed.</summary>
     [JsonPropertyName("matchExpressions")]
-    public IList<EventPolicySpecToSelectorMatchExpressions>? MatchExpressions { get; set; }
+    public IList<V1alpha1EventPolicySpecToSelectorMatchExpressions>? MatchExpressions { get; set; }
 
     /// <summary>matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.</summary>
     [JsonPropertyName("matchLabels")]
@@ -99,20 +125,20 @@ public partial class EventPolicySpecToSelector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecTo
+public partial class V1alpha1EventPolicySpecTo
 {
     /// <summary>Ref contains the direct reference to a target</summary>
     [JsonPropertyName("ref")]
-    public EventPolicySpecToRef? Ref { get; set; }
+    public V1alpha1EventPolicySpecToRef? Ref { get; set; }
 
     /// <summary>Selector contains a selector to group targets</summary>
     [JsonPropertyName("selector")]
-    public EventPolicySpecToSelector? Selector { get; set; }
+    public V1alpha1EventPolicySpecToSelector? Selector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpecFilters
+public partial class V1alpha1EventPolicySpecFilters
 {
     /// <summary>All evaluates to true if all the nested expressions evaluate to true. It must contain at least one filter expression</summary>
     [JsonPropertyName("all")]
@@ -145,24 +171,24 @@ public partial class EventPolicySpecFilters
 
 /// <summary>Spec defines the desired state of the EventPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicySpec
+public partial class V1alpha1EventPolicySpec
 {
     /// <summary>From is the list of sources or oidc identities, which are allowed to send events to the targets (.spec.to).</summary>
     [JsonPropertyName("from")]
-    public IList<EventPolicySpecFrom>? From { get; set; }
+    public IList<V1alpha1EventPolicySpecFrom>? From { get; set; }
 
     /// <summary>To lists all resources for which this policy applies. Resources in this list must act like an ingress and have an audience. The resources are part of the same namespace as the EventPolicy. An empty list means it applies to all resources in the EventPolicies namespace</summary>
     [JsonPropertyName("to")]
-    public IList<EventPolicySpecTo>? To { get; set; }
+    public IList<V1alpha1EventPolicySpecTo>? To { get; set; }
 
     /// <summary>Filters is an array of SubscriptionsAPIFilters that evaluate to true or false. If any filter expression in the array evaluates to false, the event will not continue pass the ingress of the target resources of the policy</summary>
     [JsonPropertyName("filters")]
-    public IList<EventPolicySpecFilters>? Filters { get; set; }
+    public IList<V1alpha1EventPolicySpecFilters>? Filters { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicyStatusConditions
+public partial class V1alpha1EventPolicyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -191,7 +217,7 @@ public partial class EventPolicyStatusConditions
 
 /// <summary>Status represents the current state of the EventPolicy. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicyStatus
+public partial class V1alpha1EventPolicyStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -199,7 +225,7 @@ public partial class EventPolicyStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<EventPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1EventPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>From is the list of resolved oidc identities from .spec.from</summary>
     [JsonPropertyName("from")]
@@ -212,13 +238,30 @@ public partial class EventPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class EventPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1EventPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1EventPolicySpec>, IStatus<V1alpha1EventPolicyStatus>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "EventPolicy";
+    public const string KubeGroup = "eventing.knative.dev";
+    public const string KubePluralName = "eventpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary>Spec defines the desired state of the EventPolicy.</summary>
     [JsonPropertyName("spec")]
-    public EventPolicySpec? Spec { get; set; }
+    public V1alpha1EventPolicySpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the EventPolicy. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public EventPolicyStatus? Status { get; set; }
+    public V1alpha1EventPolicyStatus? Status { get; set; }
 }

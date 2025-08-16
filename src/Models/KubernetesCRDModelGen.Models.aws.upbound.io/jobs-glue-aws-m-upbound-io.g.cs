@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.m.upbound.io;
+/// <summary>Job is the Schema for the Jobs API. Provides an Glue Job resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1JobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Job>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "JobList";
+    public const string KubeGroup = "glue.aws.m.upbound.io";
+    public const string KubePluralName = "jobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Job> Items { get; set; }
+}
+
 /// <summary>The command of the job. Defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobSpecForProviderCommand
@@ -954,30 +980,4 @@ public partial class V1beta1Job : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     /// <summary>JobStatus defines the observed state of Job.</summary>
     [JsonPropertyName("status")]
     public V1beta1JobStatus? Status { get; set; }
-}
-
-/// <summary>Job is the Schema for the Jobs API. Provides an Glue Job resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1JobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Job>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "JobList";
-    public const string KubeGroup = "glue.aws.m.upbound.io";
-    public const string KubePluralName = "jobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Job> Items { get; set; }
 }

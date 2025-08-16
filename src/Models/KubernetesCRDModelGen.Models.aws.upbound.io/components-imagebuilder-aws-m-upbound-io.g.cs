@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.m.upbound.io;
+/// <summary>Component is the Schema for the Components API. Manage an Image Builder Component</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComponentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Component>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComponentList";
+    public const string KubeGroup = "imagebuilder.aws.m.upbound.io";
+    public const string KubePluralName = "components";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Component> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComponentSpecForProviderKmsKeyIdRefPolicy
@@ -456,30 +482,4 @@ public partial class V1beta1Component : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>ComponentStatus defines the observed state of Component.</summary>
     [JsonPropertyName("status")]
     public V1beta1ComponentStatus? Status { get; set; }
-}
-
-/// <summary>Component is the Schema for the Components API. Manage an Image Builder Component</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComponentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Component>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComponentList";
-    public const string KubeGroup = "imagebuilder.aws.m.upbound.io";
-    public const string KubePluralName = "components";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Component> Items { get; set; }
 }

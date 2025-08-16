@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logic.azure.m.upbound.io;
+/// <summary>AppIntegrationAccountPartner is the Schema for the AppIntegrationAccountPartners API. Manages a Logic App Integration Account Partner.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppIntegrationAccountPartnerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppIntegrationAccountPartner>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppIntegrationAccountPartnerList";
+    public const string KubeGroup = "logic.azure.m.upbound.io";
+    public const string KubePluralName = "appintegrationaccountpartners";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppIntegrationAccountPartner> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppIntegrationAccountPartnerSpecForProviderBusinessIdentity
@@ -371,30 +397,4 @@ public partial class V1beta1AppIntegrationAccountPartner : IKubernetesObject<V1O
     /// <summary>AppIntegrationAccountPartnerStatus defines the observed state of AppIntegrationAccountPartner.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppIntegrationAccountPartnerStatus? Status { get; set; }
-}
-
-/// <summary>AppIntegrationAccountPartner is the Schema for the AppIntegrationAccountPartners API. Manages a Logic App Integration Account Partner.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppIntegrationAccountPartnerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppIntegrationAccountPartner>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppIntegrationAccountPartnerList";
-    public const string KubeGroup = "logic.azure.m.upbound.io";
-    public const string KubePluralName = "appintegrationaccountpartners";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppIntegrationAccountPartner> Items { get; set; }
 }

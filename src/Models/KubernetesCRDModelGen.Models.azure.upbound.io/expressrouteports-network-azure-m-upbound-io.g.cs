@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>ExpressRoutePort is the Schema for the ExpressRoutePorts API. Manages a Express Route Port.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ExpressRoutePortList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ExpressRoutePort>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ExpressRoutePortList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "expressrouteports";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ExpressRoutePort> Items { get; set; }
+}
+
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExpressRoutePortSpecForProviderIdentity
@@ -593,30 +619,4 @@ public partial class V1beta1ExpressRoutePort : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>ExpressRoutePortStatus defines the observed state of ExpressRoutePort.</summary>
     [JsonPropertyName("status")]
     public V1beta1ExpressRoutePortStatus? Status { get; set; }
-}
-
-/// <summary>ExpressRoutePort is the Schema for the ExpressRoutePorts API. Manages a Express Route Port.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ExpressRoutePortList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ExpressRoutePort>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ExpressRoutePortList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "expressrouteports";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ExpressRoutePort> Items { get; set; }
 }

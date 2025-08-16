@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.filestore.gcp.m.upbound.io;
+/// <summary>Backup is the Schema for the Backups API. A Google Cloud Filestore backup.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Backup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupList";
+    public const string KubeGroup = "filestore.gcp.m.upbound.io";
+    public const string KubePluralName = "backups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Backup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupSpecForProviderSourceInstanceRefPolicy
@@ -408,30 +434,4 @@ public partial class V1beta1Backup : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>BackupStatus defines the observed state of Backup.</summary>
     [JsonPropertyName("status")]
     public V1beta1BackupStatus? Status { get; set; }
-}
-
-/// <summary>Backup is the Schema for the Backups API. A Google Cloud Filestore backup.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BackupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Backup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BackupList";
-    public const string KubeGroup = "filestore.gcp.m.upbound.io";
-    public const string KubePluralName = "backups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Backup> Items { get; set; }
 }

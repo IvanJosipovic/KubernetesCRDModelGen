@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>VPCEndpointSecurityGroupAssociation is the Schema for the VPCEndpointSecurityGroupAssociations API. Provides a resource to create an association between a VPC endpoint and a security group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPCEndpointSecurityGroupAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCEndpointSecurityGroupAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPCEndpointSecurityGroupAssociationList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "vpcendpointsecuritygroupassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPCEndpointSecurityGroupAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCEndpointSecurityGroupAssociationSpecForProviderSecurityGroupIdRefPolicy
@@ -469,30 +495,4 @@ public partial class V1beta1VPCEndpointSecurityGroupAssociation : IKubernetesObj
     /// <summary>VPCEndpointSecurityGroupAssociationStatus defines the observed state of VPCEndpointSecurityGroupAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1VPCEndpointSecurityGroupAssociationStatus? Status { get; set; }
-}
-
-/// <summary>VPCEndpointSecurityGroupAssociation is the Schema for the VPCEndpointSecurityGroupAssociations API. Provides a resource to create an association between a VPC endpoint and a security group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VPCEndpointSecurityGroupAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCEndpointSecurityGroupAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VPCEndpointSecurityGroupAssociationList";
-    public const string KubeGroup = "ec2.aws.upbound.io";
-    public const string KubePluralName = "vpcendpointsecuritygroupassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VPCEndpointSecurityGroupAssociation> Items { get; set; }
 }

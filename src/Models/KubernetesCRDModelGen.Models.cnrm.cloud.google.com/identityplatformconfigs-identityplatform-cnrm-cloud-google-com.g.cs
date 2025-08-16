@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityPlatformConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityPlatformConfig>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityPlatformConfigList";
+    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "identityplatformconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IdentityPlatformConfig> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecBlockingFunctionsTriggersFunctionUriRef
+public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggersFunctionUriRef
 {
     /// <summary>HTTP URI trigger for the Cloud Function.  Allowed value: The `httpsTrigger.url` field of a `CloudFunctionsFunction` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,11 +53,11 @@ public partial class IdentityPlatformConfigSpecBlockingFunctionsTriggersFunction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecBlockingFunctionsTriggers
+public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers
 {
     /// <summary></summary>
     [JsonPropertyName("functionUriRef")]
-    public IdentityPlatformConfigSpecBlockingFunctionsTriggersFunctionUriRef? FunctionUriRef { get; set; }
+    public V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggersFunctionUriRef? FunctionUriRef { get; set; }
 
     /// <summary>When the trigger was changed.</summary>
     [JsonPropertyName("updateTime")]
@@ -46,16 +66,16 @@ public partial class IdentityPlatformConfigSpecBlockingFunctionsTriggers
 
 /// <summary>Configuration related to blocking functions.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecBlockingFunctions
+public partial class V1beta1IdentityPlatformConfigSpecBlockingFunctions
 {
     /// <summary>Map of Trigger to event type. Key should be one of the supported event types: "beforeCreate", "beforeSignIn"</summary>
     [JsonPropertyName("triggers")]
-    public IDictionary<string, IdentityPlatformConfigSpecBlockingFunctionsTriggers>? Triggers { get; set; }
+    public IDictionary<string, V1beta1IdentityPlatformConfigSpecBlockingFunctionsTriggers>? Triggers { get; set; }
 }
 
 /// <summary>Configuration related to restricting a user's ability to affect their account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecClientPermissions
+public partial class V1beta1IdentityPlatformConfigSpecClientPermissions
 {
     /// <summary>When true, end users cannot delete their account on the associated project through any of our API methods</summary>
     [JsonPropertyName("disabledUserDeletion")]
@@ -68,16 +88,16 @@ public partial class IdentityPlatformConfigSpecClientPermissions
 
 /// <summary>Options related to how clients making requests on behalf of a project should be configured.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecClient
+public partial class V1beta1IdentityPlatformConfigSpecClient
 {
     /// <summary>Configuration related to restricting a user's ability to affect their account.</summary>
     [JsonPropertyName("permissions")]
-    public IdentityPlatformConfigSpecClientPermissions? Permissions { get; set; }
+    public V1beta1IdentityPlatformConfigSpecClientPermissions? Permissions { get; set; }
 }
 
 /// <summary>Configuration for this project's multi-factor authentication, including whether it is active and what factors can be used for the second factor</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecMfa
+public partial class V1beta1IdentityPlatformConfigSpecMfa
 {
     /// <summary>Whether MultiFactor Authentication has been enabled for this project. Possible values: STATE_UNSPECIFIED, DISABLED, ENABLED, MANDATORY</summary>
     [JsonPropertyName("state")]
@@ -86,7 +106,7 @@ public partial class IdentityPlatformConfigSpecMfa
 
 /// <summary>Configuration for logging requests made to this project to Stackdriver Logging</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecMonitoringRequestLogging
+public partial class V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging
 {
     /// <summary>Whether logging is enabled for this project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -95,16 +115,16 @@ public partial class IdentityPlatformConfigSpecMonitoringRequestLogging
 
 /// <summary>Configuration related to monitoring project activity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecMonitoring
+public partial class V1beta1IdentityPlatformConfigSpecMonitoring
 {
     /// <summary>Configuration for logging requests made to this project to Stackdriver Logging</summary>
     [JsonPropertyName("requestLogging")]
-    public IdentityPlatformConfigSpecMonitoringRequestLogging? RequestLogging { get; set; }
+    public V1beta1IdentityPlatformConfigSpecMonitoringRequestLogging? RequestLogging { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef
+public partial class V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef
 {
     /// <summary>The default cloud parent org or folder that the tenant project should be created under. The parent resource name should be in the format of "&lt;type&gt;/&lt;number&gt;", such as "folders/123" or "organizations/456". If the value is not set, the tenant will be created under the same organization or folder as the agent project.  Allowed values: * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`). * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -125,7 +145,7 @@ public partial class IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationR
 
 /// <summary>Configuration related to multi-tenant functionality.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecMultiTenant
+public partial class V1beta1IdentityPlatformConfigSpecMultiTenant
 {
     /// <summary>Whether this project can have tenants or not.</summary>
     [JsonPropertyName("allowTenants")]
@@ -133,12 +153,12 @@ public partial class IdentityPlatformConfigSpecMultiTenant
 
     /// <summary></summary>
     [JsonPropertyName("defaultTenantLocationRef")]
-    public IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef? DefaultTenantLocationRef { get; set; }
+    public V1beta1IdentityPlatformConfigSpecMultiTenantDefaultTenantLocationRef? DefaultTenantLocationRef { get; set; }
 }
 
 /// <summary>Email template for change email</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailChangeEmailTemplate
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailChangeEmailTemplate
 {
     /// <summary>Immutable. Email body</summary>
     [JsonPropertyName("body")]
@@ -167,7 +187,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailChangeEmailT
 
 /// <summary>Information of custom domain DNS verification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailDnsInfo
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailDnsInfo
 {
     /// <summary>Whether to use custom domain.</summary>
     [JsonPropertyName("useCustomDomain")]
@@ -176,7 +196,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailDnsInfo
 
 /// <summary>Email template for reset password</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailResetPasswordTemplate
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailResetPasswordTemplate
 {
     /// <summary>Email body</summary>
     [JsonPropertyName("body")]
@@ -205,7 +225,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailResetPasswor
 
 /// <summary>Email template for reverting second factor addition emails</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailRevertSecondFactorAdditionTemplate
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailRevertSecondFactorAdditionTemplate
 {
     /// <summary>Immutable. Email body</summary>
     [JsonPropertyName("body")]
@@ -234,7 +254,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailRevertSecond
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -247,16 +267,16 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>SMTP relay password</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -264,12 +284,12 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom? ValueFrom { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPasswordValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Use a custom SMTP relay</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtp
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtp
 {
     /// <summary>SMTP relay host</summary>
     [JsonPropertyName("host")]
@@ -277,7 +297,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtp
 
     /// <summary>SMTP relay password</summary>
     [JsonPropertyName("password")]
-    public IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword? Password { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtpPassword? Password { get; set; }
 
     /// <summary>SMTP relay port</summary>
     [JsonPropertyName("port")]
@@ -298,7 +318,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailSmtp
 
 /// <summary>Email template for verify email</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate
 {
     /// <summary>Immutable. Email body</summary>
     [JsonPropertyName("body")]
@@ -327,7 +347,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailT
 
 /// <summary>Options for email sending.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendEmail
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendEmail
 {
     /// <summary>action url in email template.</summary>
     [JsonPropertyName("callbackUri")]
@@ -335,11 +355,11 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmail
 
     /// <summary>Email template for change email</summary>
     [JsonPropertyName("changeEmailTemplate")]
-    public IdentityPlatformConfigSpecNotificationSendEmailChangeEmailTemplate? ChangeEmailTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailChangeEmailTemplate? ChangeEmailTemplate { get; set; }
 
     /// <summary>Information of custom domain DNS verification.</summary>
     [JsonPropertyName("dnsInfo")]
-    public IdentityPlatformConfigSpecNotificationSendEmailDnsInfo? DnsInfo { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailDnsInfo? DnsInfo { get; set; }
 
     /// <summary>The method used for sending an email. Possible values: METHOD_UNSPECIFIED, DEFAULT, CUSTOM_SMTP</summary>
     [JsonPropertyName("method")]
@@ -347,24 +367,24 @@ public partial class IdentityPlatformConfigSpecNotificationSendEmail
 
     /// <summary>Email template for reset password</summary>
     [JsonPropertyName("resetPasswordTemplate")]
-    public IdentityPlatformConfigSpecNotificationSendEmailResetPasswordTemplate? ResetPasswordTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailResetPasswordTemplate? ResetPasswordTemplate { get; set; }
 
     /// <summary>Email template for reverting second factor addition emails</summary>
     [JsonPropertyName("revertSecondFactorAdditionTemplate")]
-    public IdentityPlatformConfigSpecNotificationSendEmailRevertSecondFactorAdditionTemplate? RevertSecondFactorAdditionTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailRevertSecondFactorAdditionTemplate? RevertSecondFactorAdditionTemplate { get; set; }
 
     /// <summary>Use a custom SMTP relay</summary>
     [JsonPropertyName("smtp")]
-    public IdentityPlatformConfigSpecNotificationSendEmailSmtp? Smtp { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailSmtp? Smtp { get; set; }
 
     /// <summary>Email template for verify email</summary>
     [JsonPropertyName("verifyEmailTemplate")]
-    public IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate? VerifyEmailTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmailVerifyEmailTemplate? VerifyEmailTemplate { get; set; }
 }
 
 /// <summary>Options for SMS sending.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotificationSendSms
+public partial class V1beta1IdentityPlatformConfigSpecNotificationSendSms
 {
     /// <summary>Whether to use the accept_language header for SMS.</summary>
     [JsonPropertyName("useDeviceLocale")]
@@ -373,7 +393,7 @@ public partial class IdentityPlatformConfigSpecNotificationSendSms
 
 /// <summary>Configuration related to sending notifications to users.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecNotification
+public partial class V1beta1IdentityPlatformConfigSpecNotification
 {
     /// <summary>Default locale used for email and SMS in IETF BCP 47 format.</summary>
     [JsonPropertyName("defaultLocale")]
@@ -381,16 +401,16 @@ public partial class IdentityPlatformConfigSpecNotification
 
     /// <summary>Options for email sending.</summary>
     [JsonPropertyName("sendEmail")]
-    public IdentityPlatformConfigSpecNotificationSendEmail? SendEmail { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendEmail? SendEmail { get; set; }
 
     /// <summary>Options for SMS sending.</summary>
     [JsonPropertyName("sendSms")]
-    public IdentityPlatformConfigSpecNotificationSendSms? SendSms { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotificationSendSms? SendSms { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecProjectRef
+public partial class V1beta1IdentityPlatformConfigSpecProjectRef
 {
     /// <summary>The project of the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -407,7 +427,7 @@ public partial class IdentityPlatformConfigSpecProjectRef
 
 /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
+public partial class V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
 {
     /// <summary>Corresponds to the 'refill_token_count' field in QuotaServer config</summary>
     [JsonPropertyName("quota")]
@@ -424,16 +444,16 @@ public partial class IdentityPlatformConfigSpecQuotaSignUpQuotaConfig
 
 /// <summary>Configuration related to quotas.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecQuota
+public partial class V1beta1IdentityPlatformConfigSpecQuota
 {
     /// <summary>Quota for the Signup endpoint, if overwritten. Signup quota is measured in sign ups per project per hour per IP.</summary>
     [JsonPropertyName("signUpQuotaConfig")]
-    public IdentityPlatformConfigSpecQuotaSignUpQuotaConfig? SignUpQuotaConfig { get; set; }
+    public V1beta1IdentityPlatformConfigSpecQuotaSignUpQuotaConfig? SignUpQuotaConfig { get; set; }
 }
 
 /// <summary>Configuration options related to authenticating an anonymous user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecSignInAnonymous
+public partial class V1beta1IdentityPlatformConfigSpecSignInAnonymous
 {
     /// <summary>Whether anonymous user auth is enabled for the project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -442,7 +462,7 @@ public partial class IdentityPlatformConfigSpecSignInAnonymous
 
 /// <summary>Configuration options related to authenticating a user by their email address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecSignInEmail
+public partial class V1beta1IdentityPlatformConfigSpecSignInEmail
 {
     /// <summary>Whether email auth is enabled for the project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -455,7 +475,7 @@ public partial class IdentityPlatformConfigSpecSignInEmail
 
 /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecSignInPhoneNumber
+public partial class V1beta1IdentityPlatformConfigSpecSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -468,7 +488,7 @@ public partial class IdentityPlatformConfigSpecSignInPhoneNumber
 
 /// <summary>Configuration related to local sign in methods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpecSignIn
+public partial class V1beta1IdentityPlatformConfigSpecSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
     [JsonPropertyName("allowDuplicateEmails")]
@@ -476,20 +496,20 @@ public partial class IdentityPlatformConfigSpecSignIn
 
     /// <summary>Configuration options related to authenticating an anonymous user.</summary>
     [JsonPropertyName("anonymous")]
-    public IdentityPlatformConfigSpecSignInAnonymous? Anonymous { get; set; }
+    public V1beta1IdentityPlatformConfigSpecSignInAnonymous? Anonymous { get; set; }
 
     /// <summary>Configuration options related to authenticating a user by their email address.</summary>
     [JsonPropertyName("email")]
-    public IdentityPlatformConfigSpecSignInEmail? Email { get; set; }
+    public V1beta1IdentityPlatformConfigSpecSignInEmail? Email { get; set; }
 
     /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
     [JsonPropertyName("phoneNumber")]
-    public IdentityPlatformConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
+    public V1beta1IdentityPlatformConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigSpec
+public partial class V1beta1IdentityPlatformConfigSpec
 {
     /// <summary>List of domains authorized for OAuth redirects</summary>
     [JsonPropertyName("authorizedDomains")]
@@ -497,44 +517,44 @@ public partial class IdentityPlatformConfigSpec
 
     /// <summary>Configuration related to blocking functions.</summary>
     [JsonPropertyName("blockingFunctions")]
-    public IdentityPlatformConfigSpecBlockingFunctions? BlockingFunctions { get; set; }
+    public V1beta1IdentityPlatformConfigSpecBlockingFunctions? BlockingFunctions { get; set; }
 
     /// <summary>Options related to how clients making requests on behalf of a project should be configured.</summary>
     [JsonPropertyName("client")]
-    public IdentityPlatformConfigSpecClient? Client { get; set; }
+    public V1beta1IdentityPlatformConfigSpecClient? Client { get; set; }
 
     /// <summary>Configuration for this project's multi-factor authentication, including whether it is active and what factors can be used for the second factor</summary>
     [JsonPropertyName("mfa")]
-    public IdentityPlatformConfigSpecMfa? Mfa { get; set; }
+    public V1beta1IdentityPlatformConfigSpecMfa? Mfa { get; set; }
 
     /// <summary>Configuration related to monitoring project activity.</summary>
     [JsonPropertyName("monitoring")]
-    public IdentityPlatformConfigSpecMonitoring? Monitoring { get; set; }
+    public V1beta1IdentityPlatformConfigSpecMonitoring? Monitoring { get; set; }
 
     /// <summary>Configuration related to multi-tenant functionality.</summary>
     [JsonPropertyName("multiTenant")]
-    public IdentityPlatformConfigSpecMultiTenant? MultiTenant { get; set; }
+    public V1beta1IdentityPlatformConfigSpecMultiTenant? MultiTenant { get; set; }
 
     /// <summary>Configuration related to sending notifications to users.</summary>
     [JsonPropertyName("notification")]
-    public IdentityPlatformConfigSpecNotification? Notification { get; set; }
+    public V1beta1IdentityPlatformConfigSpecNotification? Notification { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public IdentityPlatformConfigSpecProjectRef ProjectRef { get; set; }
+    public V1beta1IdentityPlatformConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Configuration related to quotas.</summary>
     [JsonPropertyName("quota")]
-    public IdentityPlatformConfigSpecQuota? Quota { get; set; }
+    public V1beta1IdentityPlatformConfigSpecQuota? Quota { get; set; }
 
     /// <summary>Configuration related to local sign in methods.</summary>
     [JsonPropertyName("signIn")]
-    public IdentityPlatformConfigSpecSignIn? SignIn { get; set; }
+    public V1beta1IdentityPlatformConfigSpecSignIn? SignIn { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusClient
+public partial class V1beta1IdentityPlatformConfigStatusClient
 {
     /// <summary>Output only. API key that can be used when making requests for this project.</summary>
     [JsonPropertyName("apiKey")]
@@ -547,7 +567,7 @@ public partial class IdentityPlatformConfigStatusClient
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusConditions
+public partial class V1beta1IdentityPlatformConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -572,7 +592,7 @@ public partial class IdentityPlatformConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendEmailChangeEmailTemplate
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailChangeEmailTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
     [JsonPropertyName("customized")]
@@ -581,7 +601,7 @@ public partial class IdentityPlatformConfigStatusNotificationSendEmailChangeEmai
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendEmailDnsInfo
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailDnsInfo
 {
     /// <summary>Output only. The applied verified custom domain.</summary>
     [JsonPropertyName("customDomain")]
@@ -602,7 +622,7 @@ public partial class IdentityPlatformConfigStatusNotificationSendEmailDnsInfo
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendEmailResetPasswordTemplate
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailResetPasswordTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
     [JsonPropertyName("customized")]
@@ -611,7 +631,7 @@ public partial class IdentityPlatformConfigStatusNotificationSendEmailResetPassw
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendEmailRevertSecondFactorAdditionTemplate
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailRevertSecondFactorAdditionTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
     [JsonPropertyName("customized")]
@@ -620,7 +640,7 @@ public partial class IdentityPlatformConfigStatusNotificationSendEmailRevertSeco
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate
 {
     /// <summary>Output only. Whether the body or subject of the email is customized.</summary>
     [JsonPropertyName("customized")]
@@ -629,32 +649,32 @@ public partial class IdentityPlatformConfigStatusNotificationSendEmailVerifyEmai
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendEmail
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendEmail
 {
     /// <summary></summary>
     [JsonPropertyName("changeEmailTemplate")]
-    public IdentityPlatformConfigStatusNotificationSendEmailChangeEmailTemplate? ChangeEmailTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendEmailChangeEmailTemplate? ChangeEmailTemplate { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("dnsInfo")]
-    public IdentityPlatformConfigStatusNotificationSendEmailDnsInfo? DnsInfo { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendEmailDnsInfo? DnsInfo { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("resetPasswordTemplate")]
-    public IdentityPlatformConfigStatusNotificationSendEmailResetPasswordTemplate? ResetPasswordTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendEmailResetPasswordTemplate? ResetPasswordTemplate { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("revertSecondFactorAdditionTemplate")]
-    public IdentityPlatformConfigStatusNotificationSendEmailRevertSecondFactorAdditionTemplate? RevertSecondFactorAdditionTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendEmailRevertSecondFactorAdditionTemplate? RevertSecondFactorAdditionTemplate { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("verifyEmailTemplate")]
-    public IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate? VerifyEmailTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendEmailVerifyEmailTemplate? VerifyEmailTemplate { get; set; }
 }
 
 /// <summary>Output only. The template to use when sending an SMS.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate
 {
     /// <summary>Output only. The SMS's content. Can contain the following placeholders which will be replaced with the appropriate values: %APP_NAME% - For Android or iOS apps, the app's display name. For web apps, the domain hosting the application. %LOGIN_CODE% - The OOB code being sent in the SMS.</summary>
     [JsonPropertyName("content")]
@@ -663,29 +683,29 @@ public partial class IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotificationSendSms
+public partial class V1beta1IdentityPlatformConfigStatusNotificationSendSms
 {
     /// <summary>Output only. The template to use when sending an SMS.</summary>
     [JsonPropertyName("smsTemplate")]
-    public IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate? SmsTemplate { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendSmsSmsTemplate? SmsTemplate { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusNotification
+public partial class V1beta1IdentityPlatformConfigStatusNotification
 {
     /// <summary></summary>
     [JsonPropertyName("sendEmail")]
-    public IdentityPlatformConfigStatusNotificationSendEmail? SendEmail { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendEmail? SendEmail { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sendSms")]
-    public IdentityPlatformConfigStatusNotificationSendSms? SendSms { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotificationSendSms? SendSms { get; set; }
 }
 
 /// <summary>Output only. Hash config information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusSignInEmailHashConfig
+public partial class V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig
 {
     /// <summary>Output only. Different password hash algorithms used in Identity Toolkit. Possible values: HASH_ALGORITHM_UNSPECIFIED, HMAC_SHA256, HMAC_SHA1, HMAC_MD5, SCRYPT, PBKDF_SHA1, MD5, HMAC_SHA512, SHA1, BCRYPT, PBKDF2_SHA256, SHA256, SHA512, STANDARD_SCRYPT</summary>
     [JsonPropertyName("algorithm")]
@@ -710,16 +730,16 @@ public partial class IdentityPlatformConfigStatusSignInEmailHashConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusSignInEmail
+public partial class V1beta1IdentityPlatformConfigStatusSignInEmail
 {
     /// <summary>Output only. Hash config information.</summary>
     [JsonPropertyName("hashConfig")]
-    public IdentityPlatformConfigStatusSignInEmailHashConfig? HashConfig { get; set; }
+    public V1beta1IdentityPlatformConfigStatusSignInEmailHashConfig? HashConfig { get; set; }
 }
 
 /// <summary>Output only. Hash config information.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusSignInHashConfig
+public partial class V1beta1IdentityPlatformConfigStatusSignInHashConfig
 {
     /// <summary>Output only. Different password hash algorithms used in Identity Toolkit. Possible values: HASH_ALGORITHM_UNSPECIFIED, HMAC_SHA256, HMAC_SHA1, HMAC_MD5, SCRYPT, PBKDF_SHA1, MD5, HMAC_SHA512, SHA1, BCRYPT, PBKDF2_SHA256, SHA256, SHA512, STANDARD_SCRYPT</summary>
     [JsonPropertyName("algorithm")]
@@ -744,32 +764,32 @@ public partial class IdentityPlatformConfigStatusSignInHashConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatusSignIn
+public partial class V1beta1IdentityPlatformConfigStatusSignIn
 {
     /// <summary></summary>
     [JsonPropertyName("email")]
-    public IdentityPlatformConfigStatusSignInEmail? Email { get; set; }
+    public V1beta1IdentityPlatformConfigStatusSignInEmail? Email { get; set; }
 
     /// <summary>Output only. Hash config information.</summary>
     [JsonPropertyName("hashConfig")]
-    public IdentityPlatformConfigStatusSignInHashConfig? HashConfig { get; set; }
+    public V1beta1IdentityPlatformConfigStatusSignInHashConfig? HashConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfigStatus
+public partial class V1beta1IdentityPlatformConfigStatus
 {
     /// <summary></summary>
     [JsonPropertyName("client")]
-    public IdentityPlatformConfigStatusClient? Client { get; set; }
+    public V1beta1IdentityPlatformConfigStatusClient? Client { get; set; }
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IdentityPlatformConfigStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1IdentityPlatformConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("notification")]
-    public IdentityPlatformConfigStatusNotification? Notification { get; set; }
+    public V1beta1IdentityPlatformConfigStatusNotification? Notification { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -777,7 +797,7 @@ public partial class IdentityPlatformConfigStatus
 
     /// <summary></summary>
     [JsonPropertyName("signIn")]
-    public IdentityPlatformConfigStatusSignIn? SignIn { get; set; }
+    public V1beta1IdentityPlatformConfigStatusSignIn? SignIn { get; set; }
 
     /// <summary>Output only. The subtype of this config. Possible values: SUBTYPE_UNSPECIFIED, IDENTITY_PLATFORM, FIREBASE_AUTH</summary>
     [JsonPropertyName("subtype")]
@@ -786,25 +806,30 @@ public partial class IdentityPlatformConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformConfig
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityPlatformConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1IdentityPlatformConfigSpec>, IStatus<V1beta1IdentityPlatformConfigStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityPlatformConfig";
+    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "identityplatformconfigs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IdentityPlatformConfigMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public IdentityPlatformConfigSpec Spec { get; set; }
+    public V1beta1IdentityPlatformConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IdentityPlatformConfigStatus? Status { get; set; }
+    public V1beta1IdentityPlatformConfigStatus? Status { get; set; }
 }

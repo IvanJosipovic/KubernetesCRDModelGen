@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.gcp.m.upbound.io;
+/// <summary>Database is the Schema for the Databases API. A Cloud Spanner Database which is hosted on a Spanner instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Database>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatabaseList";
+    public const string KubeGroup = "spanner.gcp.m.upbound.io";
+    public const string KubePluralName = "databases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Database> Items { get; set; }
+}
+
 /// <summary>Encryption configuration for the database Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseSpecForProviderEncryptionConfig
@@ -367,30 +393,4 @@ public partial class V1beta1Database : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>DatabaseStatus defines the observed state of Database.</summary>
     [JsonPropertyName("status")]
     public V1beta1DatabaseStatus? Status { get; set; }
-}
-
-/// <summary>Database is the Schema for the Databases API. A Cloud Spanner Database which is hosted on a Spanner instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Database>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DatabaseList";
-    public const string KubeGroup = "spanner.gcp.m.upbound.io";
-    public const string KubePluralName = "databases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Database> Items { get; set; }
 }

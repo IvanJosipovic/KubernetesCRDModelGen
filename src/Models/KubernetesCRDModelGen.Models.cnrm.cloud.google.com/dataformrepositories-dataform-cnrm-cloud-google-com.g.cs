@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataform.cnrm.cloud.google.com;
+/// <summary>DataformRepository is the Schema for the dataform API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataformRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataformRepository>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataformRepositoryList";
+    public const string KubeGroup = "dataform.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataformrepositories";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataformRepository> Items { get; set; }
+}
+
 /// <summary>The name of the Secret Manager secret version to use as an authentication token for Git operations. Must be in the format projects/* /secrets/* /versions/*.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataformRepositorySpecGitRemoteSettingsAuthenticationTokenSecretVersionRef
@@ -269,30 +295,4 @@ public partial class V1beta1DataformRepository : IKubernetesObject<V1ObjectMeta>
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1beta1DataformRepositoryStatus? Status { get; set; }
-}
-
-/// <summary>DataformRepository is the Schema for the dataform API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataformRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataformRepository>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataformRepositoryList";
-    public const string KubeGroup = "dataform.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataformrepositories";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataformRepository> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hdinsight.azure.m.upbound.io;
+/// <summary>HBaseCluster is the Schema for the HBaseClusters API. Manages a HDInsight HBase Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HBaseClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HBaseCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HBaseClusterList";
+    public const string KubeGroup = "hdinsight.azure.m.upbound.io";
+    public const string KubePluralName = "hbaseclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HBaseCluster> Items { get; set; }
+}
+
 /// <summary>A component_version block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HBaseClusterSpecForProviderComponentVersion
@@ -2932,30 +2958,4 @@ public partial class V1beta1HBaseCluster : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>HBaseClusterStatus defines the observed state of HBaseCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1HBaseClusterStatus? Status { get; set; }
-}
-
-/// <summary>HBaseCluster is the Schema for the HBaseClusters API. Manages a HDInsight HBase Cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HBaseClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HBaseCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HBaseClusterList";
-    public const string KubeGroup = "hdinsight.azure.m.upbound.io";
-    public const string KubePluralName = "hbaseclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HBaseCluster> Items { get; set; }
 }

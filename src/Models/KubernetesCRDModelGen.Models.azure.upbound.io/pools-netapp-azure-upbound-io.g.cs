@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.netapp.azure.upbound.io;
+/// <summary>Pool is the Schema for the Pools API. Manages a Pool within a NetApp Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Pool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PoolList";
+    public const string KubeGroup = "netapp.azure.upbound.io";
+    public const string KubePluralName = "pools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Pool> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PoolSpecForProviderAccountNameRefPolicy
@@ -397,30 +423,4 @@ public partial class V1beta1Pool : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     /// <summary>PoolStatus defines the observed state of Pool.</summary>
     [JsonPropertyName("status")]
     public V1beta1PoolStatus? Status { get; set; }
-}
-
-/// <summary>Pool is the Schema for the Pools API. Manages a Pool within a NetApp Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Pool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PoolList";
-    public const string KubeGroup = "netapp.azure.upbound.io";
-    public const string KubePluralName = "pools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Pool> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.upbound.io;
+/// <summary>DBSnapshotCopy is the Schema for the DBSnapshotCopys API. Manages an RDS database instance snapshot copy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DBSnapshotCopyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DBSnapshotCopy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DBSnapshotCopyList";
+    public const string KubeGroup = "rds.aws.upbound.io";
+    public const string KubePluralName = "dbsnapshotcopies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DBSnapshotCopy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DBSnapshotCopySpecForProviderKmsKeyIdRefPolicy
@@ -609,30 +635,4 @@ public partial class V1beta1DBSnapshotCopy : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>DBSnapshotCopyStatus defines the observed state of DBSnapshotCopy.</summary>
     [JsonPropertyName("status")]
     public V1beta1DBSnapshotCopyStatus? Status { get; set; }
-}
-
-/// <summary>DBSnapshotCopy is the Schema for the DBSnapshotCopys API. Manages an RDS database instance snapshot copy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DBSnapshotCopyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DBSnapshotCopy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DBSnapshotCopyList";
-    public const string KubeGroup = "rds.aws.upbound.io";
-    public const string KubePluralName = "dbsnapshotcopies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DBSnapshotCopy> Items { get; set; }
 }

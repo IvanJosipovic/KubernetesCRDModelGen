@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appconfig.aws.m.upbound.io;
+/// <summary>ExtensionAssociation is the Schema for the ExtensionAssociations API. Associates an AppConfig Extension with a Resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ExtensionAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ExtensionAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ExtensionAssociationList";
+    public const string KubeGroup = "appconfig.aws.m.upbound.io";
+    public const string KubePluralName = "extensionassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ExtensionAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ExtensionAssociationSpecForProviderExtensionArnRefPolicy
@@ -488,30 +514,4 @@ public partial class V1beta1ExtensionAssociation : IKubernetesObject<V1ObjectMet
     /// <summary>ExtensionAssociationStatus defines the observed state of ExtensionAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1ExtensionAssociationStatus? Status { get; set; }
-}
-
-/// <summary>ExtensionAssociation is the Schema for the ExtensionAssociations API. Associates an AppConfig Extension with a Resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ExtensionAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ExtensionAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ExtensionAssociationList";
-    public const string KubeGroup = "appconfig.aws.m.upbound.io";
-    public const string KubePluralName = "extensionassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ExtensionAssociation> Items { get; set; }
 }

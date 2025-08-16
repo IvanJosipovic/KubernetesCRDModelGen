@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AccessContextManagerAccessLevelConditionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AccessContextManagerAccessLevelCondition>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AccessContextManagerAccessLevelConditionList";
+    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "accesscontextmanageraccesslevelconditions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AccessContextManagerAccessLevelCondition> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionSpecAccessLevelRef
+public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecAccessLevelRef
 {
     /// <summary>Allowed value: The `name` field of an `AccessContextManagerAccessLevel` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class AccessContextManagerAccessLevelConditionSpecAccessLevelRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionSpecDevicePolicyOsConstraints
+public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicyOsConstraints
 {
     /// <summary>Immutable. The minimum allowed OS version. If not set, any version of this OS satisfies the constraint. Format: "major.minor.patch" such as "10.5.301", "9.2.1".</summary>
     [JsonPropertyName("minimumVersion")]
@@ -46,7 +66,7 @@ public partial class AccessContextManagerAccessLevelConditionSpecDevicePolicyOsC
 
 /// <summary>Immutable. Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionSpecDevicePolicy
+public partial class V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicy
 {
     /// <summary>Immutable. A list of allowed device management levels. An empty list allows all management levels. Possible values: ["MANAGEMENT_UNSPECIFIED", "NONE", "BASIC", "COMPLETE"].</summary>
     [JsonPropertyName("allowedDeviceManagementLevels")]
@@ -58,7 +78,7 @@ public partial class AccessContextManagerAccessLevelConditionSpecDevicePolicy
 
     /// <summary>Immutable. A list of allowed OS versions. An empty list allows all types and all versions.</summary>
     [JsonPropertyName("osConstraints")]
-    public IList<AccessContextManagerAccessLevelConditionSpecDevicePolicyOsConstraints>? OsConstraints { get; set; }
+    public IList<V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicyOsConstraints>? OsConstraints { get; set; }
 
     /// <summary>Immutable. Whether the device needs to be approved by the customer admin.</summary>
     [JsonPropertyName("requireAdminApproval")]
@@ -75,15 +95,15 @@ public partial class AccessContextManagerAccessLevelConditionSpecDevicePolicy
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionSpec
+public partial class V1alpha1AccessContextManagerAccessLevelConditionSpec
 {
     /// <summary></summary>
     [JsonPropertyName("accessLevelRef")]
-    public AccessContextManagerAccessLevelConditionSpecAccessLevelRef? AccessLevelRef { get; set; }
+    public V1alpha1AccessContextManagerAccessLevelConditionSpecAccessLevelRef? AccessLevelRef { get; set; }
 
     /// <summary>Immutable. Device specific restrictions, all restrictions must hold for the Condition to be true. If not specified, all devices are allowed.</summary>
     [JsonPropertyName("devicePolicy")]
-    public AccessContextManagerAccessLevelConditionSpecDevicePolicy? DevicePolicy { get; set; }
+    public V1alpha1AccessContextManagerAccessLevelConditionSpecDevicePolicy? DevicePolicy { get; set; }
 
     /// <summary>Immutable. A list of CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address block, the specified IP address portion must be properly truncated (i.e. all the host bits must be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets in order for this Condition to be true. If empty, all IP addresses are allowed.</summary>
     [JsonPropertyName("ipSubnetworks")]
@@ -112,7 +132,7 @@ public partial class AccessContextManagerAccessLevelConditionSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionStatusConditions
+public partial class V1alpha1AccessContextManagerAccessLevelConditionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -137,11 +157,11 @@ public partial class AccessContextManagerAccessLevelConditionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelConditionStatus
+public partial class V1alpha1AccessContextManagerAccessLevelConditionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AccessContextManagerAccessLevelConditionStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AccessContextManagerAccessLevelConditionStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -150,25 +170,30 @@ public partial class AccessContextManagerAccessLevelConditionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerAccessLevelCondition
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AccessContextManagerAccessLevelCondition : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerAccessLevelConditionSpec>, IStatus<V1alpha1AccessContextManagerAccessLevelConditionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AccessContextManagerAccessLevelCondition";
+    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "accesscontextmanageraccesslevelconditions";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AccessContextManagerAccessLevelConditionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AccessContextManagerAccessLevelConditionSpec? Spec { get; set; }
+    public V1alpha1AccessContextManagerAccessLevelConditionSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AccessContextManagerAccessLevelConditionStatus? Status { get; set; }
+    public V1alpha1AccessContextManagerAccessLevelConditionStatus? Status { get; set; }
 }

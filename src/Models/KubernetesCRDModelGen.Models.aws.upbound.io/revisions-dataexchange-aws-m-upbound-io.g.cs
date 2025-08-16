@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataexchange.aws.m.upbound.io;
+/// <summary>Revision is the Schema for the Revisions API. Provides a DataExchange Revision</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RevisionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Revision>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RevisionList";
+    public const string KubeGroup = "dataexchange.aws.m.upbound.io";
+    public const string KubePluralName = "revisions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Revision> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RevisionSpecForProviderDataSetIdRefPolicy
@@ -348,30 +374,4 @@ public partial class V1beta1Revision : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>RevisionStatus defines the observed state of Revision.</summary>
     [JsonPropertyName("status")]
     public V1beta1RevisionStatus? Status { get; set; }
-}
-
-/// <summary>Revision is the Schema for the Revisions API. Provides a DataExchange Revision</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RevisionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Revision>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RevisionList";
-    public const string KubeGroup = "dataexchange.aws.m.upbound.io";
-    public const string KubePluralName = "revisions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Revision> Items { get; set; }
 }

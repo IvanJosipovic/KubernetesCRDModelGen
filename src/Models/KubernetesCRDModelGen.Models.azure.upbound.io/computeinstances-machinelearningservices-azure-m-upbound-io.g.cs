@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.m.upbound.io;
+/// <summary>ComputeInstance is the Schema for the ComputeInstances API. Manages a Machine Learning Compute Instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeInstanceList";
+    public const string KubeGroup = "machinelearningservices.azure.m.upbound.io";
+    public const string KubePluralName = "computeinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeInstance> Items { get; set; }
+}
+
 /// <summary>A assign_to_user block as defined below. A user explicitly assigned to a personal compute instance. Changing this forces a new Machine Learning Compute Instance to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeInstanceSpecForProviderAssignToUser
@@ -613,30 +639,4 @@ public partial class V1beta1ComputeInstance : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>ComputeInstanceStatus defines the observed state of ComputeInstance.</summary>
     [JsonPropertyName("status")]
     public V1beta1ComputeInstanceStatus? Status { get; set; }
-}
-
-/// <summary>ComputeInstance is the Schema for the ComputeInstances API. Manages a Machine Learning Compute Instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeInstance>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeInstanceList";
-    public const string KubeGroup = "machinelearningservices.azure.m.upbound.io";
-    public const string KubePluralName = "computeinstances";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ComputeInstance> Items { get; set; }
 }

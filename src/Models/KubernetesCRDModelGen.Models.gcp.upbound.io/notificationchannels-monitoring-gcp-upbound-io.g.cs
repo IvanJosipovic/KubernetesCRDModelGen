@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.monitoring.gcp.upbound.io;
+/// <summary>NotificationChannel is the Schema for the NotificationChannels API. A NotificationChannel is a medium through which an alert is delivered when a policy violation is detected.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NotificationChannelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotificationChannel>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NotificationChannelList";
+    public const string KubeGroup = "monitoring.gcp.upbound.io";
+    public const string KubePluralName = "notificationchannels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NotificationChannel> Items { get; set; }
+}
+
 /// <summary>An authorization token for a notification channel. Channel types that support this field include: slack Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NotificationChannelSpecForProviderSensitiveLabelsAuthTokenSecretRef
@@ -489,30 +515,4 @@ public partial class V1beta1NotificationChannel : IKubernetesObject<V1ObjectMeta
     /// <summary>NotificationChannelStatus defines the observed state of NotificationChannel.</summary>
     [JsonPropertyName("status")]
     public V1beta1NotificationChannelStatus? Status { get; set; }
-}
-
-/// <summary>NotificationChannel is the Schema for the NotificationChannels API. A NotificationChannel is a medium through which an alert is delivered when a policy violation is detected.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NotificationChannelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NotificationChannel>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NotificationChannelList";
-    public const string KubeGroup = "monitoring.gcp.upbound.io";
-    public const string KubePluralName = "notificationchannels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NotificationChannel> Items { get; set; }
 }

@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.identityplatform.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IdentityPlatformProjectDefaultConfig>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IdentityPlatformProjectDefaultConfigList";
+    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "identityplatformprojectdefaultconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1IdentityPlatformProjectDefaultConfig> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpecProjectRef
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class IdentityPlatformProjectDefaultConfigSpecProjectRef
 
 /// <summary>Configuration options related to authenticating an anonymous user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpecSignInAnonymous
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInAnonymous
 {
     /// <summary>Whether anonymous user auth is enabled for the project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -42,7 +62,7 @@ public partial class IdentityPlatformProjectDefaultConfigSpecSignInAnonymous
 
 /// <summary>Configuration options related to authenticating a user by their email address.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpecSignInEmail
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInEmail
 {
     /// <summary>Whether email auth is enabled for the project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -55,7 +75,7 @@ public partial class IdentityPlatformProjectDefaultConfigSpecSignInEmail
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpecSignInHashConfig
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInHashConfig
 {
     /// <summary>Different password hash algorithms used in Identity Toolkit.</summary>
     [JsonPropertyName("algorithm")]
@@ -80,7 +100,7 @@ public partial class IdentityPlatformProjectDefaultConfigSpecSignInHashConfig
 
 /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber
 {
     /// <summary>Whether phone number auth is enabled for the project or not.</summary>
     [JsonPropertyName("enabled")]
@@ -93,7 +113,7 @@ public partial class IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber
 
 /// <summary>Configuration related to local sign in methods.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpecSignIn
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn
 {
     /// <summary>Whether to allow more than one account to have the same email.</summary>
     [JsonPropertyName("allowDuplicateEmails")]
@@ -101,28 +121,28 @@ public partial class IdentityPlatformProjectDefaultConfigSpecSignIn
 
     /// <summary>Configuration options related to authenticating an anonymous user.</summary>
     [JsonPropertyName("anonymous")]
-    public IdentityPlatformProjectDefaultConfigSpecSignInAnonymous? Anonymous { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInAnonymous? Anonymous { get; set; }
 
     /// <summary>Configuration options related to authenticating a user by their email address.</summary>
     [JsonPropertyName("email")]
-    public IdentityPlatformProjectDefaultConfigSpecSignInEmail? Email { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInEmail? Email { get; set; }
 
     /// <summary>Output only. Hash config information.</summary>
     [JsonPropertyName("hashConfig")]
-    public IList<IdentityPlatformProjectDefaultConfigSpecSignInHashConfig>? HashConfig { get; set; }
+    public IList<V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInHashConfig>? HashConfig { get; set; }
 
     /// <summary>Configuration options related to authenticated a user by their phone number.</summary>
     [JsonPropertyName("phoneNumber")]
-    public IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignInPhoneNumber? PhoneNumber { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigSpec
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigSpec
 {
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public IdentityPlatformProjectDefaultConfigSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -130,12 +150,12 @@ public partial class IdentityPlatformProjectDefaultConfigSpec
 
     /// <summary>Configuration related to local sign in methods.</summary>
     [JsonPropertyName("signIn")]
-    public IdentityPlatformProjectDefaultConfigSpecSignIn? SignIn { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigSpecSignIn? SignIn { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigStatusConditions
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -160,11 +180,11 @@ public partial class IdentityPlatformProjectDefaultConfigStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfigStatus
+public partial class V1alpha1IdentityPlatformProjectDefaultConfigStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IdentityPlatformProjectDefaultConfigStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1IdentityPlatformProjectDefaultConfigStatusConditions>? Conditions { get; set; }
 
     /// <summary>The name of the Config resource. Example: "projects/my-awesome-project/config".</summary>
     [JsonPropertyName("name")]
@@ -177,25 +197,30 @@ public partial class IdentityPlatformProjectDefaultConfigStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IdentityPlatformProjectDefaultConfig
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IdentityPlatformProjectDefaultConfig : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IdentityPlatformProjectDefaultConfigSpec>, IStatus<V1alpha1IdentityPlatformProjectDefaultConfigStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IdentityPlatformProjectDefaultConfig";
+    public const string KubeGroup = "identityplatform.cnrm.cloud.google.com";
+    public const string KubePluralName = "identityplatformprojectdefaultconfigs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public IdentityPlatformProjectDefaultConfigMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public IdentityPlatformProjectDefaultConfigSpec Spec { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IdentityPlatformProjectDefaultConfigStatus? Status { get; set; }
+    public V1alpha1IdentityPlatformProjectDefaultConfigStatus? Status { get; set; }
 }

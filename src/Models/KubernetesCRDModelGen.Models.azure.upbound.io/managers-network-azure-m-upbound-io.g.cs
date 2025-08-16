@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>Manager is the Schema for the Managers API. Manages a Network Manager.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Manager>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagerList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "managers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Manager> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagerSpecForProviderResourceGroupNameRefPolicy
@@ -348,30 +374,4 @@ public partial class V1beta1Manager : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>ManagerStatus defines the observed state of Manager.</summary>
     [JsonPropertyName("status")]
     public V1beta1ManagerStatus? Status { get; set; }
-}
-
-/// <summary>Manager is the Schema for the Managers API. Manages a Network Manager.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ManagerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Manager>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ManagerList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "managers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Manager> Items { get; set; }
 }

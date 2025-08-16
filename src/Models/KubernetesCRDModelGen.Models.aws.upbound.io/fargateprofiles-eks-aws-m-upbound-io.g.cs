@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eks.aws.m.upbound.io;
+/// <summary>FargateProfile is the Schema for the FargateProfiles API. Manages an EKS Fargate Profile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FargateProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FargateProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FargateProfileList";
+    public const string KubeGroup = "eks.aws.m.upbound.io";
+    public const string KubePluralName = "fargateprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FargateProfile> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FargateProfileSpecForProviderClusterNameRefPolicy
@@ -699,30 +725,4 @@ public partial class V1beta1FargateProfile : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>FargateProfileStatus defines the observed state of FargateProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1FargateProfileStatus? Status { get; set; }
-}
-
-/// <summary>FargateProfile is the Schema for the FargateProfiles API. Manages an EKS Fargate Profile</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FargateProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FargateProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FargateProfileList";
-    public const string KubeGroup = "eks.aws.m.upbound.io";
-    public const string KubePluralName = "fargateprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FargateProfile> Items { get; set; }
 }

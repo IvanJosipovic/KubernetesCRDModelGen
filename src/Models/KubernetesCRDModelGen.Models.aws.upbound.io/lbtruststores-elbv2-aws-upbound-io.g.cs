@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.upbound.io;
+/// <summary>LBTrustStore is the Schema for the LBTrustStores API. Provides a Trust Store resource for use with Load Balancers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LBTrustStoreList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBTrustStore>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LBTrustStoreList";
+    public const string KubeGroup = "elbv2.aws.upbound.io";
+    public const string KubePluralName = "lbtruststores";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LBTrustStore> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBTrustStoreSpecForProvider
@@ -249,30 +275,4 @@ public partial class V1beta1LBTrustStore : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>LBTrustStoreStatus defines the observed state of LBTrustStore.</summary>
     [JsonPropertyName("status")]
     public V1beta1LBTrustStoreStatus? Status { get; set; }
-}
-
-/// <summary>LBTrustStore is the Schema for the LBTrustStores API. Provides a Trust Store resource for use with Load Balancers.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LBTrustStoreList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBTrustStore>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LBTrustStoreList";
-    public const string KubeGroup = "elbv2.aws.upbound.io";
-    public const string KubePluralName = "lbtruststores";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LBTrustStore> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary>KMSKeyRing represents a KMS KeyRing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KMSKeyRingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KMSKeyRing>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KMSKeyRingList";
+    public const string KubeGroup = "kms.cnrm.cloud.google.com";
+    public const string KubePluralName = "kmskeyrings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1KMSKeyRing> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSKeyRingSpec
@@ -91,30 +117,4 @@ public partial class V1beta1KMSKeyRing : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1beta1KMSKeyRingStatus? Status { get; set; }
-}
-
-/// <summary>KMSKeyRing represents a KMS KeyRing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1KMSKeyRingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KMSKeyRing>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "KMSKeyRingList";
-    public const string KubeGroup = "kms.cnrm.cloud.google.com";
-    public const string KubePluralName = "kmskeyrings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1KMSKeyRing> Items { get; set; }
 }

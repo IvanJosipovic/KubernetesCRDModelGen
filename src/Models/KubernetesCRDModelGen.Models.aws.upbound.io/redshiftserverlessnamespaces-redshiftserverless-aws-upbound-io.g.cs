@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshiftserverless.aws.upbound.io;
+/// <summary>RedshiftServerlessNamespace is the Schema for the RedshiftServerlessNamespaces API. Provides a Redshift Serverless Namespace resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedshiftServerlessNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedshiftServerlessNamespace>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedshiftServerlessNamespaceList";
+    public const string KubeGroup = "redshiftserverless.aws.upbound.io";
+    public const string KubePluralName = "redshiftserverlessnamespaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedshiftServerlessNamespace> Items { get; set; }
+}
+
 /// <summary>The password of the administrator for the first database created in the namespace. Conflicts with manage_admin_password and admin_user_password_wo.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedshiftServerlessNamespaceSpecForProviderAdminUserPasswordSecretRef
@@ -781,30 +807,4 @@ public partial class V1beta1RedshiftServerlessNamespace : IKubernetesObject<V1Ob
     /// <summary>RedshiftServerlessNamespaceStatus defines the observed state of RedshiftServerlessNamespace.</summary>
     [JsonPropertyName("status")]
     public V1beta1RedshiftServerlessNamespaceStatus? Status { get; set; }
-}
-
-/// <summary>RedshiftServerlessNamespace is the Schema for the RedshiftServerlessNamespaces API. Provides a Redshift Serverless Namespace resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RedshiftServerlessNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedshiftServerlessNamespace>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RedshiftServerlessNamespaceList";
-    public const string KubeGroup = "redshiftserverless.aws.upbound.io";
-    public const string KubePluralName = "redshiftserverlessnamespaces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RedshiftServerlessNamespace> Items { get; set; }
 }

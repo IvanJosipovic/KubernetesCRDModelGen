@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.m.upbound.io;
+/// <summary>HealthcareService is the Schema for the HealthcareServices API. Manages a Healthcare Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HealthcareServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthcareService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HealthcareServiceList";
+    public const string KubeGroup = "healthcareapis.azure.m.upbound.io";
+    public const string KubePluralName = "healthcareservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HealthcareService> Items { get; set; }
+}
+
 /// <summary>An authentication_configuration block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareServiceSpecForProviderAuthenticationConfiguration
@@ -521,30 +547,4 @@ public partial class V1beta1HealthcareService : IKubernetesObject<V1ObjectMeta>,
     /// <summary>HealthcareServiceStatus defines the observed state of HealthcareService.</summary>
     [JsonPropertyName("status")]
     public V1beta1HealthcareServiceStatus? Status { get; set; }
-}
-
-/// <summary>HealthcareService is the Schema for the HealthcareServices API. Manages a Healthcare Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HealthcareServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthcareService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HealthcareServiceList";
-    public const string KubeGroup = "healthcareapis.azure.m.upbound.io";
-    public const string KubePluralName = "healthcareservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HealthcareService> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>DefaultNetworkACL is the Schema for the DefaultNetworkACLs API. Manage a default network ACL.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DefaultNetworkACLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DefaultNetworkACL>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DefaultNetworkACLList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "defaultnetworkacls";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DefaultNetworkACL> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DefaultNetworkACLSpecForProviderDefaultNetworkAclIdRefPolicy
@@ -883,30 +909,4 @@ public partial class V1beta1DefaultNetworkACL : IKubernetesObject<V1ObjectMeta>,
     /// <summary>DefaultNetworkACLStatus defines the observed state of DefaultNetworkACL.</summary>
     [JsonPropertyName("status")]
     public V1beta1DefaultNetworkACLStatus? Status { get; set; }
-}
-
-/// <summary>DefaultNetworkACL is the Schema for the DefaultNetworkACLs API. Manage a default network ACL.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DefaultNetworkACLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DefaultNetworkACL>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DefaultNetworkACLList";
-    public const string KubeGroup = "ec2.aws.upbound.io";
-    public const string KubePluralName = "defaultnetworkacls";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DefaultNetworkACL> Items { get; set; }
 }

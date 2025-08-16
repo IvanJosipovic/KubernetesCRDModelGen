@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.upbound.io;
+/// <summary>ManagedZone is the Schema for the ManagedZones API. A zone is a subtree of the DNS namespace under one administrative responsibility.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagedZoneList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagedZone>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagedZoneList";
+    public const string KubeGroup = "dns.gcp.upbound.io";
+    public const string KubePluralName = "managedzones";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ManagedZone> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedZoneSpecForProviderCloudLoggingConfig
@@ -1083,30 +1109,4 @@ public partial class V1beta1ManagedZone : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ManagedZoneStatus defines the observed state of ManagedZone.</summary>
     [JsonPropertyName("status")]
     public V1beta1ManagedZoneStatus? Status { get; set; }
-}
-
-/// <summary>ManagedZone is the Schema for the ManagedZones API. A zone is a subtree of the DNS namespace under one administrative responsibility.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ManagedZoneList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagedZone>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ManagedZoneList";
-    public const string KubeGroup = "dns.gcp.upbound.io";
-    public const string KubePluralName = "managedzones";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ManagedZone> Items { get; set; }
 }

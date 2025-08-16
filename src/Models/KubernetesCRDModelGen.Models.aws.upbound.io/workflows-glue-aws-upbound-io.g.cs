@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.glue.aws.upbound.io;
+/// <summary>Workflow is the Schema for the Workflows API. Provides a Glue Workflow resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkflowList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workflow>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkflowList";
+    public const string KubeGroup = "glue.aws.upbound.io";
+    public const string KubePluralName = "workflows";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Workflow> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowSpecForProvider
@@ -233,30 +259,4 @@ public partial class V1beta1Workflow : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>WorkflowStatus defines the observed state of Workflow.</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkflowStatus? Status { get; set; }
-}
-
-/// <summary>Workflow is the Schema for the Workflows API. Provides a Glue Workflow resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkflowList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workflow>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkflowList";
-    public const string KubeGroup = "glue.aws.upbound.io";
-    public const string KubePluralName = "workflows";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Workflow> Items { get; set; }
 }

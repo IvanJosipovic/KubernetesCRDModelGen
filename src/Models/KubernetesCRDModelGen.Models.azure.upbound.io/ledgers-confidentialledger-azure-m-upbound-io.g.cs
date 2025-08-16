@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.confidentialledger.azure.m.upbound.io;
+/// <summary>Ledger is the Schema for the Ledgers API. Manages a Confidential Ledger.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LedgerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Ledger>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LedgerList";
+    public const string KubeGroup = "confidentialledger.azure.m.upbound.io";
+    public const string KubePluralName = "ledgers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Ledger> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LedgerSpecForProviderAzureadBasedServicePrincipal
@@ -386,30 +412,4 @@ public partial class V1beta1Ledger : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>LedgerStatus defines the observed state of Ledger.</summary>
     [JsonPropertyName("status")]
     public V1beta1LedgerStatus? Status { get; set; }
-}
-
-/// <summary>Ledger is the Schema for the Ledgers API. Manages a Confidential Ledger.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LedgerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Ledger>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LedgerList";
-    public const string KubeGroup = "confidentialledger.azure.m.upbound.io";
-    public const string KubePluralName = "ledgers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Ledger> Items { get; set; }
 }

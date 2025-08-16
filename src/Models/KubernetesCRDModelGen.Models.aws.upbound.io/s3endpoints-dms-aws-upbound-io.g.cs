@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dms.aws.upbound.io;
+/// <summary>S3Endpoint is the Schema for the S3Endpoints API. Provides a DMS (Data Migration Service) S3 endpoint resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1S3EndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1S3Endpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "S3EndpointList";
+    public const string KubeGroup = "dms.aws.upbound.io";
+    public const string KubePluralName = "s3endpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1S3Endpoint> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1S3EndpointSpecForProviderKmsKeyArnRefPolicy
@@ -1145,30 +1171,4 @@ public partial class V1beta1S3Endpoint : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>S3EndpointStatus defines the observed state of S3Endpoint.</summary>
     [JsonPropertyName("status")]
     public V1beta1S3EndpointStatus? Status { get; set; }
-}
-
-/// <summary>S3Endpoint is the Schema for the S3Endpoints API. Provides a DMS (Data Migration Service) S3 endpoint resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1S3EndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1S3Endpoint>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "S3EndpointList";
-    public const string KubeGroup = "dms.aws.upbound.io";
-    public const string KubePluralName = "s3endpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1S3Endpoint> Items { get; set; }
 }

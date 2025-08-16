@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kafka.aws.m.upbound.io;
+/// <summary>ServerlessCluster is the Schema for the ServerlessClusters API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServerlessClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServerlessCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServerlessClusterList";
+    public const string KubeGroup = "kafka.aws.m.upbound.io";
+    public const string KubePluralName = "serverlessclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServerlessCluster> Items { get; set; }
+}
+
 /// <summary>Details for client authentication using IAM. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerlessClusterSpecForProviderClientAuthenticationSaslIam
@@ -628,30 +654,4 @@ public partial class V1beta1ServerlessCluster : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ServerlessClusterStatus defines the observed state of ServerlessCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServerlessClusterStatus? Status { get; set; }
-}
-
-/// <summary>ServerlessCluster is the Schema for the ServerlessClusters API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServerlessClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServerlessCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServerlessClusterList";
-    public const string KubeGroup = "kafka.aws.m.upbound.io";
-    public const string KubePluralName = "serverlessclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServerlessCluster> Items { get; set; }
 }

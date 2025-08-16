@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+/// <summary>TriggerSchedule is the Schema for the TriggerSchedules API. Manages a Trigger Schedule inside a Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TriggerScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TriggerSchedule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TriggerScheduleList";
+    public const string KubeGroup = "datafactory.azure.m.upbound.io";
+    public const string KubePluralName = "triggerschedules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TriggerSchedule> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TriggerScheduleSpecForProviderDataFactoryIdRefPolicy
@@ -669,30 +695,4 @@ public partial class V1beta1TriggerSchedule : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>TriggerScheduleStatus defines the observed state of TriggerSchedule.</summary>
     [JsonPropertyName("status")]
     public V1beta1TriggerScheduleStatus? Status { get; set; }
-}
-
-/// <summary>TriggerSchedule is the Schema for the TriggerSchedules API. Manages a Trigger Schedule inside a Azure Data Factory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TriggerScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TriggerSchedule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TriggerScheduleList";
-    public const string KubeGroup = "datafactory.azure.m.upbound.io";
-    public const string KubePluralName = "triggerschedules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TriggerSchedule> Items { get; set; }
 }
