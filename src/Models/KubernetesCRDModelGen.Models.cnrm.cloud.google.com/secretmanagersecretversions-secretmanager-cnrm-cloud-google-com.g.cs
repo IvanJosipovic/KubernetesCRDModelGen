@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretmanager.cnrm.cloud.google.com;
+/// <summary>SecretManagerSecretVersion is the Schema for the SecretManagerSecretVersion API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretManagerSecretVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretManagerSecretVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretManagerSecretVersionList";
+    public const string KubeGroup = "secretmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "secretmanagersecretversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecretManagerSecretVersion> Items { get; set; }
+}
+
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretManagerSecretVersionSpecSecretDataValueFromSecretKeyRef
@@ -283,30 +309,4 @@ public partial class V1beta1SecretManagerSecretVersion : IKubernetesObject<V1Obj
     /// <summary>SecretManagerSecretVersionStatus defines the config connector machine state of SecretManagerSecretVersion</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretManagerSecretVersionStatus? Status { get; set; }
-}
-
-/// <summary>SecretManagerSecretVersion is the Schema for the SecretManagerSecretVersion API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretManagerSecretVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretManagerSecretVersion>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretManagerSecretVersionList";
-    public const string KubeGroup = "secretmanager.cnrm.cloud.google.com";
-    public const string KubePluralName = "secretmanagersecretversions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SecretManagerSecretVersion> Items { get; set; }
 }

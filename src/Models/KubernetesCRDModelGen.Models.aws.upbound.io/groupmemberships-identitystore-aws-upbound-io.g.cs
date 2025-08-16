@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identitystore.aws.upbound.io;
+/// <summary>GroupMembership is the Schema for the GroupMemberships API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GroupMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GroupMembership>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GroupMembershipList";
+    public const string KubeGroup = "identitystore.aws.upbound.io";
+    public const string KubePluralName = "groupmemberships";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GroupMembership> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GroupMembershipSpecForProviderGroupIdRefPolicy
@@ -469,30 +495,4 @@ public partial class V1beta1GroupMembership : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>GroupMembershipStatus defines the observed state of GroupMembership.</summary>
     [JsonPropertyName("status")]
     public V1beta1GroupMembershipStatus? Status { get; set; }
-}
-
-/// <summary>GroupMembership is the Schema for the GroupMemberships API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GroupMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GroupMembership>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GroupMembershipList";
-    public const string KubeGroup = "identitystore.aws.upbound.io";
-    public const string KubePluralName = "groupmemberships";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GroupMembership> Items { get; set; }
 }

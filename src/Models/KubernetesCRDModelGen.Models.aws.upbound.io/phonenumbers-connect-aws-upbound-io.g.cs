@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+/// <summary>PhoneNumber is the Schema for the PhoneNumbers API. Provides details about a specific Amazon Connect Phone Number.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PhoneNumberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PhoneNumber>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PhoneNumberList";
+    public const string KubeGroup = "connect.aws.upbound.io";
+    public const string KubePluralName = "phonenumbers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PhoneNumber> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PhoneNumberSpecForProviderTargetArnRefPolicy
@@ -406,30 +432,4 @@ public partial class V1beta1PhoneNumber : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>PhoneNumberStatus defines the observed state of PhoneNumber.</summary>
     [JsonPropertyName("status")]
     public V1beta1PhoneNumberStatus? Status { get; set; }
-}
-
-/// <summary>PhoneNumber is the Schema for the PhoneNumbers API. Provides details about a specific Amazon Connect Phone Number.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PhoneNumberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PhoneNumber>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PhoneNumberList";
-    public const string KubeGroup = "connect.aws.upbound.io";
-    public const string KubePluralName = "phonenumbers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PhoneNumber> Items { get; set; }
 }

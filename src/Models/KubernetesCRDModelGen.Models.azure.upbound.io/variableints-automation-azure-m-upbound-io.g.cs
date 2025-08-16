@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.automation.azure.m.upbound.io;
+/// <summary>VariableInt is the Schema for the VariableInts API. Manages a integer variable in Azure Automation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VariableIntList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VariableInt>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VariableIntList";
+    public const string KubeGroup = "automation.azure.m.upbound.io";
+    public const string KubePluralName = "variableints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VariableInt> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VariableIntSpecForProviderAutomationAccountNameRefPolicy
@@ -344,30 +370,4 @@ public partial class V1beta1VariableInt : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>VariableIntStatus defines the observed state of VariableInt.</summary>
     [JsonPropertyName("status")]
     public V1beta1VariableIntStatus? Status { get; set; }
-}
-
-/// <summary>VariableInt is the Schema for the VariableInts API. Manages a integer variable in Azure Automation.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VariableIntList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VariableInt>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VariableIntList";
-    public const string KubeGroup = "automation.azure.m.upbound.io";
-    public const string KubePluralName = "variableints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VariableInt> Items { get; set; }
 }

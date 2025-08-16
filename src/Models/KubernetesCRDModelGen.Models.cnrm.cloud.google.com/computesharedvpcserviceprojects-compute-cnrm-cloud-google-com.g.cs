@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSharedVPCServiceProjectMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeSharedVPCServiceProjectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeSharedVPCServiceProject>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeSharedVPCServiceProjectList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computesharedvpcserviceprojects";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeSharedVPCServiceProject> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSharedVPCServiceProjectSpecProjectRef
+public partial class V1beta1ComputeSharedVPCServiceProjectSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ComputeSharedVPCServiceProjectSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSharedVPCServiceProjectSpec
+public partial class V1beta1ComputeSharedVPCServiceProjectSpec
 {
     /// <summary>The deletion policy for the shared VPC service. Setting ABANDON allows the resource 				to be abandoned rather than deleted. Possible values are: "ABANDON".</summary>
     [JsonPropertyName("deletionPolicy")]
@@ -41,12 +61,12 @@ public partial class ComputeSharedVPCServiceProjectSpec
 
     /// <summary></summary>
     [JsonPropertyName("projectRef")]
-    public ComputeSharedVPCServiceProjectSpecProjectRef ProjectRef { get; set; }
+    public V1beta1ComputeSharedVPCServiceProjectSpecProjectRef ProjectRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSharedVPCServiceProjectStatusConditions
+public partial class V1beta1ComputeSharedVPCServiceProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -71,11 +91,11 @@ public partial class ComputeSharedVPCServiceProjectStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSharedVPCServiceProjectStatus
+public partial class V1beta1ComputeSharedVPCServiceProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeSharedVPCServiceProjectStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeSharedVPCServiceProjectStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -84,25 +104,30 @@ public partial class ComputeSharedVPCServiceProjectStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeSharedVPCServiceProject
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeSharedVPCServiceProject : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeSharedVPCServiceProjectSpec>, IStatus<V1beta1ComputeSharedVPCServiceProjectStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeSharedVPCServiceProject";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computesharedvpcserviceprojects";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeSharedVPCServiceProjectMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeSharedVPCServiceProjectSpec Spec { get; set; }
+    public V1beta1ComputeSharedVPCServiceProjectSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeSharedVPCServiceProjectStatus? Status { get; set; }
+    public V1beta1ComputeSharedVPCServiceProjectStatus? Status { get; set; }
 }

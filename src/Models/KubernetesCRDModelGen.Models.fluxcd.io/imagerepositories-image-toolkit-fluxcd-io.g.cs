@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
+/// <summary>ImageRepository is the Schema for the imagerepositories API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2ImageRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta2ImageRepository>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "ImageRepositoryList";
+    public const string KubeGroup = "image.toolkit.fluxcd.io";
+    public const string KubePluralName = "imagerepositories";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2ImageRepository> Items { get; set; }
+}
+
 /// <summary>NamespaceSelector selects the namespaces to which this ACL applies. An empty map of MatchLabels matches all namespaces in a cluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImageRepositorySpecAccessFromNamespaceSelectors
@@ -209,30 +235,4 @@ public partial class V1beta2ImageRepository : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>ImageRepositoryStatus defines the observed state of ImageRepository</summary>
     [JsonPropertyName("status")]
     public V1beta2ImageRepositoryStatus? Status { get; set; }
-}
-
-/// <summary>ImageRepository is the Schema for the imagerepositories API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2ImageRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1beta2ImageRepository>
-{
-    public const string KubeApiVersion = "v1beta2";
-    public const string KubeKind = "ImageRepositoryList";
-    public const string KubeGroup = "image.toolkit.fluxcd.io";
-    public const string KubePluralName = "imagerepositories";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta2ImageRepository> Items { get; set; }
 }

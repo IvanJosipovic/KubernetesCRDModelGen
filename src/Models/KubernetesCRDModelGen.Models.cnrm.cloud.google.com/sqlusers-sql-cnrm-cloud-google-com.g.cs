@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLUserList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLUser>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLUserList";
+    public const string KubeGroup = "sql.cnrm.cloud.google.com";
+    public const string KubePluralName = "sqlusers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SQLUser> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpecInstanceRef
+public partial class V1beta1SQLUserSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `SQLInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class SQLUserSpecInstanceRef
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpecPasswordValueFromSecretKeyRef
+public partial class V1beta1SQLUserSpecPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -46,16 +66,16 @@ public partial class SQLUserSpecPasswordValueFromSecretKeyRef
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpecPasswordValueFrom
+public partial class V1beta1SQLUserSpecPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public SQLUserSpecPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1SQLUserSpecPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpecPassword
+public partial class V1beta1SQLUserSpecPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -63,12 +83,12 @@ public partial class SQLUserSpecPassword
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public SQLUserSpecPasswordValueFrom? ValueFrom { get; set; }
+    public V1beta1SQLUserSpecPasswordValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpecPasswordPolicyStatus
+public partial class V1beta1SQLUserSpecPasswordPolicyStatus
 {
     /// <summary>If true, user does not have login privileges.</summary>
     [JsonPropertyName("locked")]
@@ -81,7 +101,7 @@ public partial class SQLUserSpecPasswordPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpecPasswordPolicy
+public partial class V1beta1SQLUserSpecPasswordPolicy
 {
     /// <summary>Number of failed attempts allowed before the user get locked.</summary>
     [JsonPropertyName("allowedFailedAttempts")]
@@ -101,12 +121,12 @@ public partial class SQLUserSpecPasswordPolicy
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public IList<SQLUserSpecPasswordPolicyStatus>? Status { get; set; }
+    public IList<V1beta1SQLUserSpecPasswordPolicyStatus>? Status { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserSpec
+public partial class V1beta1SQLUserSpec
 {
     /// <summary>Immutable. The host the user can connect from. This is only supported for MySQL instances. Don't set this field for PostgreSQL instances. Can be an IP address. Changing this forces a new resource to be created.</summary>
     [JsonPropertyName("host")]
@@ -114,15 +134,15 @@ public partial class SQLUserSpec
 
     /// <summary></summary>
     [JsonPropertyName("instanceRef")]
-    public SQLUserSpecInstanceRef InstanceRef { get; set; }
+    public V1beta1SQLUserSpecInstanceRef InstanceRef { get; set; }
 
     /// <summary>The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to                 either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.</summary>
     [JsonPropertyName("password")]
-    public SQLUserSpecPassword? Password { get; set; }
+    public V1beta1SQLUserSpecPassword? Password { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("passwordPolicy")]
-    public SQLUserSpecPasswordPolicy? PasswordPolicy { get; set; }
+    public V1beta1SQLUserSpecPasswordPolicy? PasswordPolicy { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -135,7 +155,7 @@ public partial class SQLUserSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserStatusConditions
+public partial class V1beta1SQLUserStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -160,7 +180,7 @@ public partial class SQLUserStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserStatusSqlServerUserDetails
+public partial class V1beta1SQLUserStatusSqlServerUserDetails
 {
     /// <summary>If the user has been disabled.</summary>
     [JsonPropertyName("disabled")]
@@ -173,11 +193,11 @@ public partial class SQLUserStatusSqlServerUserDetails
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUserStatus
+public partial class V1beta1SQLUserStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<SQLUserStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1SQLUserStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -185,30 +205,35 @@ public partial class SQLUserStatus
 
     /// <summary></summary>
     [JsonPropertyName("sqlServerUserDetails")]
-    public IList<SQLUserStatusSqlServerUserDetails>? SqlServerUserDetails { get; set; }
+    public IList<V1beta1SQLUserStatusSqlServerUserDetails>? SqlServerUserDetails { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class SQLUser
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLUser : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1SQLUserSpec>, IStatus<V1beta1SQLUserStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLUser";
+    public const string KubeGroup = "sql.cnrm.cloud.google.com";
+    public const string KubePluralName = "sqlusers";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public SQLUserMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public SQLUserSpec Spec { get; set; }
+    public V1beta1SQLUserSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public SQLUserStatus? Status { get; set; }
+    public V1beta1SQLUserStatus? Status { get; set; }
 }

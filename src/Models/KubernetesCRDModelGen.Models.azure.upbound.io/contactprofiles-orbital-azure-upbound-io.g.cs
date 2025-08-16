@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.orbital.azure.upbound.io;
+/// <summary>ContactProfile is the Schema for the ContactProfiles API. Manages a orbital contact profile resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContactProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContactProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContactProfileList";
+    public const string KubeGroup = "orbital.azure.upbound.io";
+    public const string KubePluralName = "contactprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContactProfile> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContactProfileSpecForProviderLinksChannelsEndPoint
@@ -678,30 +704,4 @@ public partial class V1beta1ContactProfile : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>ContactProfileStatus defines the observed state of ContactProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContactProfileStatus? Status { get; set; }
-}
-
-/// <summary>ContactProfile is the Schema for the ContactProfiles API. Manages a orbital contact profile resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContactProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContactProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContactProfileList";
-    public const string KubeGroup = "orbital.azure.upbound.io";
-    public const string KubePluralName = "contactprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContactProfile> Items { get; set; }
 }

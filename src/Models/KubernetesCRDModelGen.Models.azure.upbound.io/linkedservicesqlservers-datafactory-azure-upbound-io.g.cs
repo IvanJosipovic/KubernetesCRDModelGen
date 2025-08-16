@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>LinkedServiceSQLServer is the Schema for the LinkedServiceSQLServers API. Manages a Linked Service (connection) between a SQL Server and Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkedServiceSQLServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceSQLServer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkedServiceSQLServerList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "linkedservicesqlservers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinkedServiceSQLServer> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceSQLServerSpecForProviderDataFactoryIdRefPolicy
@@ -555,30 +581,4 @@ public partial class V1beta1LinkedServiceSQLServer : IKubernetesObject<V1ObjectM
     /// <summary>LinkedServiceSQLServerStatus defines the observed state of LinkedServiceSQLServer.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceSQLServerStatus? Status { get; set; }
-}
-
-/// <summary>LinkedServiceSQLServer is the Schema for the LinkedServiceSQLServers API. Manages a Linked Service (connection) between a SQL Server and Azure Data Factory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinkedServiceSQLServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceSQLServer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinkedServiceSQLServerList";
-    public const string KubeGroup = "datafactory.azure.upbound.io";
-    public const string KubePluralName = "linkedservicesqlservers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LinkedServiceSQLServer> Items { get; set; }
 }

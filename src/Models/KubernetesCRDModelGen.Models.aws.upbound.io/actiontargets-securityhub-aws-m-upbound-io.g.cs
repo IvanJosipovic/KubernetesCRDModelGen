@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityhub.aws.m.upbound.io;
+/// <summary>ActionTarget is the Schema for the ActionTargets API. Creates Security Hub custom action.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ActionTargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ActionTarget>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ActionTargetList";
+    public const string KubeGroup = "securityhub.aws.m.upbound.io";
+    public const string KubePluralName = "actiontargets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ActionTarget> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActionTargetSpecForProvider
@@ -184,30 +210,4 @@ public partial class V1beta1ActionTarget : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>ActionTargetStatus defines the observed state of ActionTarget.</summary>
     [JsonPropertyName("status")]
     public V1beta1ActionTargetStatus? Status { get; set; }
-}
-
-/// <summary>ActionTarget is the Schema for the ActionTargets API. Creates Security Hub custom action.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ActionTargetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ActionTarget>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ActionTargetList";
-    public const string KubeGroup = "securityhub.aws.m.upbound.io";
-    public const string KubePluralName = "actiontargets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ActionTarget> Items { get; set; }
 }

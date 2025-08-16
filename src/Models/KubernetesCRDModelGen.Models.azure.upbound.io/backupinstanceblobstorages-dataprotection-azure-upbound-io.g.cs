@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+/// <summary>BackupInstanceBlobStorage is the Schema for the BackupInstanceBlobStorages API. Manages a Backup Instance Blob Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupInstanceBlobStorageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupInstanceBlobStorage>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupInstanceBlobStorageList";
+    public const string KubeGroup = "dataprotection.azure.upbound.io";
+    public const string KubePluralName = "backupinstanceblobstorages";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupInstanceBlobStorage> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceBlobStorageSpecForProviderBackupPolicyIdRefPolicy
@@ -545,30 +571,4 @@ public partial class V1beta1BackupInstanceBlobStorage : IKubernetesObject<V1Obje
     /// <summary>BackupInstanceBlobStorageStatus defines the observed state of BackupInstanceBlobStorage.</summary>
     [JsonPropertyName("status")]
     public V1beta1BackupInstanceBlobStorageStatus? Status { get; set; }
-}
-
-/// <summary>BackupInstanceBlobStorage is the Schema for the BackupInstanceBlobStorages API. Manages a Backup Instance Blob Storage.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BackupInstanceBlobStorageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupInstanceBlobStorage>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BackupInstanceBlobStorageList";
-    public const string KubeGroup = "dataprotection.azure.upbound.io";
-    public const string KubePluralName = "backupinstanceblobstorages";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BackupInstanceBlobStorage> Items { get; set; }
 }

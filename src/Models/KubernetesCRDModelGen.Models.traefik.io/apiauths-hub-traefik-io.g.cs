@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIAuth defines the authentication configuration for APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIAuthList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIAuth>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIAuthList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apiauths";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIAuth> Items { get; set; }
+}
+
 /// <summary>APIKey configures API key authentication.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIAuthSpecApiKey
@@ -117,30 +143,4 @@ public partial class V1alpha1APIAuth : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>The current status of this APIAuth.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIAuthStatus? Status { get; set; }
-}
-
-/// <summary>APIAuth defines the authentication configuration for APIs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIAuthList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIAuth>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIAuthList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apiauths";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIAuth> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafv2.aws.m.upbound.io;
+/// <summary>RuleGroup is the Schema for the RuleGroups API. Creates a WAFv2 rule group resource. The 'rule' field is not supported due to Kubernetes CRD size limitations with deeply nested fields. Please use the 'ruleJson' field to define rules.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RuleGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RuleGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RuleGroupList";
+    public const string KubeGroup = "wafv2.aws.m.upbound.io";
+    public const string KubePluralName = "rulegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RuleGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecForProviderCustomResponseBody
@@ -366,30 +392,4 @@ public partial class V1beta1RuleGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>RuleGroupStatus defines the observed state of RuleGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1RuleGroupStatus? Status { get; set; }
-}
-
-/// <summary>RuleGroup is the Schema for the RuleGroups API. Creates a WAFv2 rule group resource. The 'rule' field is not supported due to Kubernetes CRD size limitations with deeply nested fields. Please use the 'ruleJson' field to define rules.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RuleGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RuleGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RuleGroupList";
-    public const string KubeGroup = "wafv2.aws.m.upbound.io";
-    public const string KubePluralName = "rulegroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RuleGroup> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.metastore.cnrm.cloud.google.com;
+/// <summary>MetastoreService is the Schema for the MetastoreService API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MetastoreServiceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MetastoreService>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MetastoreServiceList";
+    public const string KubeGroup = "metastore.cnrm.cloud.google.com";
+    public const string KubePluralName = "metastoreservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MetastoreService> Items { get; set; }
+}
+
 /// <summary>The fully qualified customer provided Cloud KMS key name to use for customer data encryption</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MetastoreServiceSpecEncryptionConfigKmsKeyRef
@@ -484,30 +510,4 @@ public partial class V1alpha1MetastoreService : IKubernetesObject<V1ObjectMeta>,
     /// <summary>MetastoreServiceStatus defines the config connector machine state of MetastoreService</summary>
     [JsonPropertyName("status")]
     public V1alpha1MetastoreServiceStatus? Status { get; set; }
-}
-
-/// <summary>MetastoreService is the Schema for the MetastoreService API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MetastoreServiceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MetastoreService>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MetastoreServiceList";
-    public const string KubeGroup = "metastore.cnrm.cloud.google.com";
-    public const string KubePluralName = "metastoreservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MetastoreService> Items { get; set; }
 }

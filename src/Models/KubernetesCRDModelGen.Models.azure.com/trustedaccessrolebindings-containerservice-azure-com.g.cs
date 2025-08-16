@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/trustedAccessRoleBindings/{trustedAccessRoleBindingName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240901storageTrustedAccessRoleBindingList : IKubernetesObject<V1ListMeta>, IItems<V1api20240901storageTrustedAccessRoleBinding>
+{
+    public const string KubeApiVersion = "v1api20240901storage";
+    public const string KubeKind = "TrustedAccessRoleBindingList";
+    public const string KubeGroup = "containerservice.azure.com";
+    public const string KubePluralName = "trustedaccessrolebindings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240901storageTrustedAccessRoleBinding> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240901storageTrustedAccessRoleBindingSpecOperatorSpecConfigMapExpressions
@@ -261,30 +287,4 @@ public partial class V1api20240901storageTrustedAccessRoleBinding : IKubernetesO
     /// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20240901storageTrustedAccessRoleBindingStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240901.TrustedAccessRoleBinding Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/aks/stable/2024-09-01/managedClusters.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/managedClusters/{resourceName}/trustedAccessRoleBindings/{trustedAccessRoleBindingName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240901storageTrustedAccessRoleBindingList : IKubernetesObject<V1ListMeta>, IItems<V1api20240901storageTrustedAccessRoleBinding>
-{
-    public const string KubeApiVersion = "v1api20240901storage";
-    public const string KubeKind = "TrustedAccessRoleBindingList";
-    public const string KubeGroup = "containerservice.azure.com";
-    public const string KubePluralName = "trustedaccessrolebindings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240901storageTrustedAccessRoleBinding> Items { get; set; }
 }

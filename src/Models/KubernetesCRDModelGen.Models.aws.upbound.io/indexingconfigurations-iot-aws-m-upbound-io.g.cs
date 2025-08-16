@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+/// <summary>IndexingConfiguration is the Schema for the IndexingConfigurations API. Managing IoT Thing indexing.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IndexingConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IndexingConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IndexingConfigurationList";
+    public const string KubeGroup = "iot.aws.m.upbound.io";
+    public const string KubePluralName = "indexingconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IndexingConfiguration> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexingConfigurationSpecForProviderThingGroupIndexingConfigurationCustomField
@@ -513,30 +539,4 @@ public partial class V1beta1IndexingConfiguration : IKubernetesObject<V1ObjectMe
     /// <summary>IndexingConfigurationStatus defines the observed state of IndexingConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1IndexingConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>IndexingConfiguration is the Schema for the IndexingConfigurations API. Managing IoT Thing indexing.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IndexingConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IndexingConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IndexingConfigurationList";
-    public const string KubeGroup = "iot.aws.m.upbound.io";
-    public const string KubePluralName = "indexingconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IndexingConfiguration> Items { get; set; }
 }

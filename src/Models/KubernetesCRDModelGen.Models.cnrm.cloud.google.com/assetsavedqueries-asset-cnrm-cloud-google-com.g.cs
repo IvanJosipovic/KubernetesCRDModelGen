@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.asset.cnrm.cloud.google.com;
+/// <summary>AssetSavedQuery is the Schema for the AssetSavedQuery API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AssetSavedQueryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AssetSavedQuery>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AssetSavedQueryList";
+    public const string KubeGroup = "asset.cnrm.cloud.google.com";
+    public const string KubePluralName = "assetsavedqueries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AssetSavedQuery> Items { get; set; }
+}
+
 /// <summary>Optional. Specifies roles or permissions for analysis. This is optional.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1AssetSavedQuerySpecContentIamPolicyAnalysisQueryAccessSelector
@@ -290,30 +316,4 @@ public partial class V1alpha1AssetSavedQuery : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>AssetSavedQueryStatus defines the config connector machine state of AssetSavedQuery</summary>
     [JsonPropertyName("status")]
     public V1alpha1AssetSavedQueryStatus? Status { get; set; }
-}
-
-/// <summary>AssetSavedQuery is the Schema for the AssetSavedQuery API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1AssetSavedQueryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AssetSavedQuery>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "AssetSavedQueryList";
-    public const string KubeGroup = "asset.cnrm.cloud.google.com";
-    public const string KubePluralName = "assetsavedqueries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1AssetSavedQuery> Items { get; set; }
 }

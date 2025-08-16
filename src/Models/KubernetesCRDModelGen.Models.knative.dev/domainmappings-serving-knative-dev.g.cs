@@ -8,15 +8,35 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serving.knative.dev;
-/// <summary></summary>
+/// <summary>DomainMapping is a mapping from a custom hostname to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainMappingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainMapping>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainMappingList";
+    public const string KubeGroup = "serving.knative.dev";
+    public const string KubePluralName = "domainmappings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainMapping> Items { get; set; }
 }
 
 /// <summary>Ref specifies the target of the Domain Mapping.  The object identified by the Ref must be an Addressable with a URL of the form `{name}.{namespace}.{domain}` where `{domain}` is the cluster domain, and `{name}` and `{namespace}` are the name and namespace of a Kubernetes Service.  This contract is satisfied by Knative types such as Knative Services and Knative Routes, and by Kubernetes Services.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingSpecRef
+public partial class V1beta1DomainMappingSpecRef
 {
     /// <summary>Address points to a specific Address Name.</summary>
     [JsonPropertyName("address")]
@@ -45,7 +65,7 @@ public partial class DomainMappingSpecRef
 
 /// <summary>TLS allows the DomainMapping to terminate TLS traffic with an existing secret.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingSpecTls
+public partial class V1beta1DomainMappingSpecTls
 {
     /// <summary>SecretName is the name of the existing secret used to terminate TLS traffic.</summary>
     [JsonPropertyName("secretName")]
@@ -54,20 +74,20 @@ public partial class DomainMappingSpecTls
 
 /// <summary>Spec is the desired state of the DomainMapping. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingSpec
+public partial class V1beta1DomainMappingSpec
 {
     /// <summary>Ref specifies the target of the Domain Mapping.  The object identified by the Ref must be an Addressable with a URL of the form `{name}.{namespace}.{domain}` where `{domain}` is the cluster domain, and `{name}` and `{namespace}` are the name and namespace of a Kubernetes Service.  This contract is satisfied by Knative types such as Knative Services and Knative Routes, and by Kubernetes Services.</summary>
     [JsonPropertyName("ref")]
-    public DomainMappingSpecRef Ref { get; set; }
+    public V1beta1DomainMappingSpecRef Ref { get; set; }
 
     /// <summary>TLS allows the DomainMapping to terminate TLS traffic with an existing secret.</summary>
     [JsonPropertyName("tls")]
-    public DomainMappingSpecTls? Tls { get; set; }
+    public V1beta1DomainMappingSpecTls? Tls { get; set; }
 }
 
 /// <summary>Address holds the information needed for a DomainMapping to be the target of an event.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingStatusAddress
+public partial class V1beta1DomainMappingStatusAddress
 {
     /// <summary>CACerts is the Certification Authority (CA) certificates in PEM format according to https://www.rfc-editor.org/rfc/rfc7468.</summary>
     [JsonPropertyName("CACerts")]
@@ -88,7 +108,7 @@ public partial class DomainMappingStatusAddress
 
 /// <summary>Condition defines a readiness condition for a Knative resource. See: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#typical-status-properties</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingStatusConditions
+public partial class V1beta1DomainMappingStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -117,11 +137,11 @@ public partial class DomainMappingStatusConditions
 
 /// <summary>Status is the current state of the DomainMapping. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMappingStatus
+public partial class V1beta1DomainMappingStatus
 {
     /// <summary>Address holds the information needed for a DomainMapping to be the target of an event.</summary>
     [JsonPropertyName("address")]
-    public DomainMappingStatusAddress? Address { get; set; }
+    public V1beta1DomainMappingStatusAddress? Address { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -129,7 +149,7 @@ public partial class DomainMappingStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DomainMappingStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1DomainMappingStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -142,25 +162,30 @@ public partial class DomainMappingStatus
 
 /// <summary>DomainMapping is a mapping from a custom hostname to an Addressable.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DomainMapping
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DomainMappingSpec>, IStatus<V1beta1DomainMappingStatus>
 {
-    /// <summary>APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainMapping";
+    public const string KubeGroup = "serving.knative.dev";
+    public const string KubePluralName = "domainmappings";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DomainMappingMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary>Spec is the desired state of the DomainMapping. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("spec")]
-    public DomainMappingSpec? Spec { get; set; }
+    public V1beta1DomainMappingSpec? Spec { get; set; }
 
     /// <summary>Status is the current state of the DomainMapping. More info: https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status</summary>
     [JsonPropertyName("status")]
-    public DomainMappingStatus? Status { get; set; }
+    public V1beta1DomainMappingStatus? Status { get; set; }
 }

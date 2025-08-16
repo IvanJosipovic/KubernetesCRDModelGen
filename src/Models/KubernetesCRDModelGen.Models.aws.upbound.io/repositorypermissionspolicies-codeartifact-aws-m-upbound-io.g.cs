@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codeartifact.aws.m.upbound.io;
+/// <summary>RepositoryPermissionsPolicy is the Schema for the RepositoryPermissionsPolicys API. Provides a CodeArtifact Repository Permissions Policy resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RepositoryPermissionsPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RepositoryPermissionsPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RepositoryPermissionsPolicyList";
+    public const string KubeGroup = "codeartifact.aws.m.upbound.io";
+    public const string KubePluralName = "repositorypermissionspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RepositoryPermissionsPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RepositoryPermissionsPolicySpecForProviderDomainRefPolicy
@@ -356,30 +382,4 @@ public partial class V1beta1RepositoryPermissionsPolicy : IKubernetesObject<V1Ob
     /// <summary>RepositoryPermissionsPolicyStatus defines the observed state of RepositoryPermissionsPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1RepositoryPermissionsPolicyStatus? Status { get; set; }
-}
-
-/// <summary>RepositoryPermissionsPolicy is the Schema for the RepositoryPermissionsPolicys API. Provides a CodeArtifact Repository Permissions Policy resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RepositoryPermissionsPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RepositoryPermissionsPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RepositoryPermissionsPolicyList";
-    public const string KubeGroup = "codeartifact.aws.m.upbound.io";
-    public const string KubePluralName = "repositorypermissionspolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RepositoryPermissionsPolicy> Items { get; set; }
 }

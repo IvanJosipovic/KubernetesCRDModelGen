@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploy.aws.m.upbound.io;
+/// <summary>DeploymentConfig is the Schema for the DeploymentConfigs API. Provides a CodeDeploy deployment config.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DeploymentConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeploymentConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DeploymentConfigList";
+    public const string KubeGroup = "deploy.aws.m.upbound.io";
+    public const string KubePluralName = "deploymentconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DeploymentConfig> Items { get; set; }
+}
+
 /// <summary>A minimum_healthy_hosts block. Required for Server compute platform. Minimum Healthy Hosts are documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentConfigSpecForProviderMinimumHealthyHosts
@@ -470,30 +496,4 @@ public partial class V1beta1DeploymentConfig : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>DeploymentConfigStatus defines the observed state of DeploymentConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1DeploymentConfigStatus? Status { get; set; }
-}
-
-/// <summary>DeploymentConfig is the Schema for the DeploymentConfigs API. Provides a CodeDeploy deployment config.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DeploymentConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeploymentConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DeploymentConfigList";
-    public const string KubeGroup = "deploy.aws.m.upbound.io";
-    public const string KubePluralName = "deploymentconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DeploymentConfig> Items { get; set; }
 }

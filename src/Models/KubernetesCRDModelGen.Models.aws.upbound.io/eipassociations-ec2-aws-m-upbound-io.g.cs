@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>EIPAssociation is the Schema for the EIPAssociations API. Provides an AWS EIP Association</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EIPAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EIPAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EIPAssociationList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "eipassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EIPAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EIPAssociationSpecForProviderAllocationIdRefPolicy
@@ -516,30 +542,4 @@ public partial class V1beta1EIPAssociation : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>EIPAssociationStatus defines the observed state of EIPAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1EIPAssociationStatus? Status { get; set; }
-}
-
-/// <summary>EIPAssociation is the Schema for the EIPAssociations API. Provides an AWS EIP Association</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EIPAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EIPAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EIPAssociationList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "eipassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1EIPAssociation> Items { get; set; }
 }

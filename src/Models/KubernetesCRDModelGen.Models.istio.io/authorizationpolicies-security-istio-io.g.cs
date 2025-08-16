@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.istio.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AuthorizationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AuthorizationPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AuthorizationPolicyList";
+    public const string KubeGroup = "security.istio.io";
+    public const string KubePluralName = "authorizationpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AuthorizationPolicy> Items { get; set; }
+}
+
 /// <summary>Specifies detailed configuration of the CUSTOM action.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AuthorizationPolicySpecProvider
@@ -267,30 +293,4 @@ public partial class V1beta1AuthorizationPolicy : IKubernetesObject<V1ObjectMeta
     /// <summary></summary>
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AuthorizationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AuthorizationPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AuthorizationPolicyList";
-    public const string KubeGroup = "security.istio.io";
-    public const string KubePluralName = "authorizationpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AuthorizationPolicy> Items { get; set; }
 }

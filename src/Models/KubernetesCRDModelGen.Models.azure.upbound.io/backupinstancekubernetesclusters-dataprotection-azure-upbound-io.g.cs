@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+/// <summary>BackupInstanceKubernetesCluster is the Schema for the BackupInstanceKubernetesClusters API. Manages a Backup Instance to back up a Kubernetes Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupInstanceKubernetesClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupInstanceKubernetesCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupInstanceKubernetesClusterList";
+    public const string KubeGroup = "dataprotection.azure.upbound.io";
+    public const string KubePluralName = "backupinstancekubernetesclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupInstanceKubernetesCluster> Items { get; set; }
+}
+
 /// <summary>A backup_datasource_parameters block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceKubernetesClusterSpecForProviderBackupDatasourceParameters
@@ -784,30 +810,4 @@ public partial class V1beta1BackupInstanceKubernetesCluster : IKubernetesObject<
     /// <summary>BackupInstanceKubernetesClusterStatus defines the observed state of BackupInstanceKubernetesCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1BackupInstanceKubernetesClusterStatus? Status { get; set; }
-}
-
-/// <summary>BackupInstanceKubernetesCluster is the Schema for the BackupInstanceKubernetesClusters API. Manages a Backup Instance to back up a Kubernetes Cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BackupInstanceKubernetesClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupInstanceKubernetesCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BackupInstanceKubernetesClusterList";
-    public const string KubeGroup = "dataprotection.azure.upbound.io";
-    public const string KubePluralName = "backupinstancekubernetesclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BackupInstanceKubernetesCluster> Items { get; set; }
 }

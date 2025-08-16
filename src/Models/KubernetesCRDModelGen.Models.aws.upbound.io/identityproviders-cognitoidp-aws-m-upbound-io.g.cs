@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.m.upbound.io;
+/// <summary>IdentityProvider is the Schema for the IdentityProviders API. Provides a Cognito User Identity Provider resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityProvider>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityProviderList";
+    public const string KubeGroup = "cognitoidp.aws.m.upbound.io";
+    public const string KubePluralName = "identityproviders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IdentityProvider> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityProviderSpecForProviderUserPoolIdRefPolicy
@@ -372,30 +398,4 @@ public partial class V1beta1IdentityProvider : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>IdentityProviderStatus defines the observed state of IdentityProvider.</summary>
     [JsonPropertyName("status")]
     public V1beta1IdentityProviderStatus? Status { get; set; }
-}
-
-/// <summary>IdentityProvider is the Schema for the IdentityProviders API. Provides a Cognito User Identity Provider resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IdentityProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityProvider>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IdentityProviderList";
-    public const string KubeGroup = "cognitoidp.aws.m.upbound.io";
-    public const string KubePluralName = "identityproviders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IdentityProvider> Items { get; set; }
 }

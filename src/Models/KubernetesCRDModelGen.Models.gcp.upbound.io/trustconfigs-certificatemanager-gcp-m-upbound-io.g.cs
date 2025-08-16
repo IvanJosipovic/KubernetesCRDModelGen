@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificatemanager.gcp.m.upbound.io;
+/// <summary>TrustConfig is the Schema for the TrustConfigs API. TrustConfig represents a resource that represents your Public Key Infrastructure (PKI) configuration in Certificate Manager for use in mutual TLS authentication scenarios.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TrustConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrustConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TrustConfigList";
+    public const string KubeGroup = "certificatemanager.gcp.m.upbound.io";
+    public const string KubePluralName = "trustconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TrustConfig> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrustConfigSpecForProviderAllowlistedCertificates
@@ -430,30 +456,4 @@ public partial class V1beta1TrustConfig : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>TrustConfigStatus defines the observed state of TrustConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1TrustConfigStatus? Status { get; set; }
-}
-
-/// <summary>TrustConfig is the Schema for the TrustConfigs API. TrustConfig represents a resource that represents your Public Key Infrastructure (PKI) configuration in Certificate Manager for use in mutual TLS authentication scenarios.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TrustConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrustConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TrustConfigList";
-    public const string KubeGroup = "certificatemanager.gcp.m.upbound.io";
-    public const string KubePluralName = "trustconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TrustConfig> Items { get; set; }
 }

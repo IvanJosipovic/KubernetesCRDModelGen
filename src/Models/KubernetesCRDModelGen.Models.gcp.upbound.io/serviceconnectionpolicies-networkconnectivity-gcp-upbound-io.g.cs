@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.gcp.upbound.io;
+/// <summary>ServiceConnectionPolicy is the Schema for the ServiceConnectionPolicys API. Manage Service Connection Policies.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceConnectionPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceConnectionPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceConnectionPolicyList";
+    public const string KubeGroup = "networkconnectivity.gcp.upbound.io";
+    public const string KubePluralName = "serviceconnectionpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceConnectionPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceConnectionPolicySpecForProviderNetworkRefPolicy
@@ -671,30 +697,4 @@ public partial class V1beta1ServiceConnectionPolicy : IKubernetesObject<V1Object
     /// <summary>ServiceConnectionPolicyStatus defines the observed state of ServiceConnectionPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServiceConnectionPolicyStatus? Status { get; set; }
-}
-
-/// <summary>ServiceConnectionPolicy is the Schema for the ServiceConnectionPolicys API. Manage Service Connection Policies.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceConnectionPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceConnectionPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceConnectionPolicyList";
-    public const string KubeGroup = "networkconnectivity.gcp.upbound.io";
-    public const string KubePluralName = "serviceconnectionpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServiceConnectionPolicy> Items { get; set; }
 }

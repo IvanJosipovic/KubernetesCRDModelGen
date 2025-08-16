@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>Router is the Schema for the Routers API. Represents a Router resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RouterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Router>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RouterList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "routers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Router> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouterSpecForProviderBgpAdvertisedIpRanges
@@ -550,30 +576,4 @@ public partial class V1beta1Router : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>RouterStatus defines the observed state of Router.</summary>
     [JsonPropertyName("status")]
     public V1beta1RouterStatus? Status { get; set; }
-}
-
-/// <summary>Router is the Schema for the Routers API. Represents a Router resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RouterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Router>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RouterList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "routers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Router> Items { get; set; }
 }

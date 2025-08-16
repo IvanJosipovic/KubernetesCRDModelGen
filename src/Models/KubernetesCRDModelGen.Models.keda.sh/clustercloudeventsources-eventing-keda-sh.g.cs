@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.keda.sh;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ClusterCloudEventSourceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ClusterCloudEventSource>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ClusterCloudEventSourceList";
+    public const string KubeGroup = "eventing.keda.sh";
+    public const string KubePluralName = "clustercloudeventsources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ClusterCloudEventSource> Items { get; set; }
+}
+
 /// <summary>AuthenticationRef points to the TriggerAuthentication or ClusterTriggerAuthentication object that is used to authenticate the scaler with the environment</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ClusterCloudEventSourceSpecAuthenticationRef
@@ -144,30 +170,4 @@ public partial class V1alpha1ClusterCloudEventSource : IKubernetesObject<V1Objec
     /// <summary>CloudEventSourceStatus defines the observed state of CloudEventSource</summary>
     [JsonPropertyName("status")]
     public V1alpha1ClusterCloudEventSourceStatus? Status { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ClusterCloudEventSourceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ClusterCloudEventSource>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ClusterCloudEventSourceList";
-    public const string KubeGroup = "eventing.keda.sh";
-    public const string KubePluralName = "clustercloudeventsources";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ClusterCloudEventSource> Items { get; set; }
 }

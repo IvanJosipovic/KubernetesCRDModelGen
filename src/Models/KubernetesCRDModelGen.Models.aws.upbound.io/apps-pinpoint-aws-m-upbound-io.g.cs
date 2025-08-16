@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pinpoint.aws.m.upbound.io;
+/// <summary>App is the Schema for the Apps API. Provides a Pinpoint App resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1App>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppList";
+    public const string KubeGroup = "pinpoint.aws.m.upbound.io";
+    public const string KubePluralName = "apps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1App> Items { get; set; }
+}
+
 /// <summary>Specifies settings for invoking an AWS Lambda function that customizes a segment for a campaign</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppSpecForProviderCampaignHook
@@ -381,30 +407,4 @@ public partial class V1beta1App : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     /// <summary>AppStatus defines the observed state of App.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppStatus? Status { get; set; }
-}
-
-/// <summary>App is the Schema for the Apps API. Provides a Pinpoint App resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1App>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppList";
-    public const string KubeGroup = "pinpoint.aws.m.upbound.io";
-    public const string KubePluralName = "apps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1App> Items { get; set; }
 }

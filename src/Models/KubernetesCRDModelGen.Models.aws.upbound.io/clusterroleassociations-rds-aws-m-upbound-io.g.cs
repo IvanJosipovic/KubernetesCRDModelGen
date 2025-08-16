@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.m.upbound.io;
+/// <summary>ClusterRoleAssociation is the Schema for the ClusterRoleAssociations API. Manages a RDS DB Cluster association with an IAM Role.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ClusterRoleAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterRoleAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ClusterRoleAssociationList";
+    public const string KubeGroup = "rds.aws.m.upbound.io";
+    public const string KubePluralName = "clusterroleassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ClusterRoleAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterRoleAssociationSpecForProviderDbClusterIdentifierRefPolicy
@@ -480,30 +506,4 @@ public partial class V1beta1ClusterRoleAssociation : IKubernetesObject<V1ObjectM
     /// <summary>ClusterRoleAssociationStatus defines the observed state of ClusterRoleAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1ClusterRoleAssociationStatus? Status { get; set; }
-}
-
-/// <summary>ClusterRoleAssociation is the Schema for the ClusterRoleAssociations API. Manages a RDS DB Cluster association with an IAM Role.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ClusterRoleAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterRoleAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ClusterRoleAssociationList";
-    public const string KubeGroup = "rds.aws.m.upbound.io";
-    public const string KubePluralName = "clusterroleassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ClusterRoleAssociation> Items { get; set; }
 }

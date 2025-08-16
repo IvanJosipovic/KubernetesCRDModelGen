@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+/// <summary>SQLRoleDefinition is the Schema for the SQLRoleDefinitions API. Manages a Cosmos DB SQL Role Definition.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLRoleDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLRoleDefinition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLRoleDefinitionList";
+    public const string KubeGroup = "cosmosdb.azure.upbound.io";
+    public const string KubePluralName = "sqlroledefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SQLRoleDefinition> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLRoleDefinitionSpecForProviderAccountNameRefPolicy
@@ -536,30 +562,4 @@ public partial class V1beta1SQLRoleDefinition : IKubernetesObject<V1ObjectMeta>,
     /// <summary>SQLRoleDefinitionStatus defines the observed state of SQLRoleDefinition.</summary>
     [JsonPropertyName("status")]
     public V1beta1SQLRoleDefinitionStatus? Status { get; set; }
-}
-
-/// <summary>SQLRoleDefinition is the Schema for the SQLRoleDefinitions API. Manages a Cosmos DB SQL Role Definition.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SQLRoleDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLRoleDefinition>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SQLRoleDefinitionList";
-    public const string KubeGroup = "cosmosdb.azure.upbound.io";
-    public const string KubePluralName = "sqlroledefinitions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SQLRoleDefinition> Items { get; set; }
 }

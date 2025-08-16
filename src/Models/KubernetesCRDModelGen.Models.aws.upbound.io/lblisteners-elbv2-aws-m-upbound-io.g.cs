@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elbv2.aws.m.upbound.io;
+/// <summary>LBListener is the Schema for the LBListeners API. Provides a Load Balancer Listener resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LBListenerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBListener>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LBListenerList";
+    public const string KubeGroup = "elbv2.aws.m.upbound.io";
+    public const string KubePluralName = "lblisteners";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LBListener> Items { get; set; }
+}
+
 /// <summary>Configuration block for using Amazon Cognito to authenticate users. Specify only when type is authenticate-cognito. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBListenerSpecForProviderDefaultActionAuthenticateCognito
@@ -1665,30 +1691,4 @@ public partial class V1beta1LBListener : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>LBListenerStatus defines the observed state of LBListener.</summary>
     [JsonPropertyName("status")]
     public V1beta1LBListenerStatus? Status { get; set; }
-}
-
-/// <summary>LBListener is the Schema for the LBListeners API. Provides a Load Balancer Listener resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LBListenerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBListener>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LBListenerList";
-    public const string KubeGroup = "elbv2.aws.m.upbound.io";
-    public const string KubePluralName = "lblisteners";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LBListener> Items { get; set; }
 }

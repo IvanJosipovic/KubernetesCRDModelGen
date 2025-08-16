@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.relay.azure.upbound.io;
+/// <summary>HybridConnection is the Schema for the HybridConnections API. Manages an Azure Relay Hybrid Connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HybridConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HybridConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HybridConnectionList";
+    public const string KubeGroup = "relay.azure.upbound.io";
+    public const string KubePluralName = "hybridconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HybridConnection> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HybridConnectionSpecForProviderRelayNamespaceNameRefPolicy
@@ -485,30 +511,4 @@ public partial class V1beta1HybridConnection : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>HybridConnectionStatus defines the observed state of HybridConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1HybridConnectionStatus? Status { get; set; }
-}
-
-/// <summary>HybridConnection is the Schema for the HybridConnections API. Manages an Azure Relay Hybrid Connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HybridConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HybridConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HybridConnectionList";
-    public const string KubeGroup = "relay.azure.upbound.io";
-    public const string KubePluralName = "hybridconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HybridConnection> Items { get; set; }
 }

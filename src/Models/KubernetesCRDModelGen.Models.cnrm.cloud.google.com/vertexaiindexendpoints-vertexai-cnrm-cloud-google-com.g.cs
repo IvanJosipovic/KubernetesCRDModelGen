@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexEndpointMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIIndexEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VertexAIIndexEndpoint>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIIndexEndpointList";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaiindexendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VertexAIIndexEndpoint> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexEndpointSpecProjectRef
+public partial class V1alpha1VertexAIIndexEndpointSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class VertexAIIndexEndpointSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexEndpointSpec
+public partial class V1alpha1VertexAIIndexEndpointSpec
 {
     /// <summary>The description of the Index.</summary>
     [JsonPropertyName("description")]
@@ -49,7 +69,7 @@ public partial class VertexAIIndexEndpointSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public VertexAIIndexEndpointSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1VertexAIIndexEndpointSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. If true, the deployed index will be accessible through public endpoint.</summary>
     [JsonPropertyName("publicEndpointEnabled")]
@@ -66,7 +86,7 @@ public partial class VertexAIIndexEndpointSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexEndpointStatusConditions
+public partial class V1alpha1VertexAIIndexEndpointStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -91,11 +111,11 @@ public partial class VertexAIIndexEndpointStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexEndpointStatus
+public partial class V1alpha1VertexAIIndexEndpointStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<VertexAIIndexEndpointStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1VertexAIIndexEndpointStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp of when the Index was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -124,25 +144,30 @@ public partial class VertexAIIndexEndpointStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIIndexEndpoint
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIIndexEndpoint : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIIndexEndpointSpec>, IStatus<V1alpha1VertexAIIndexEndpointStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIIndexEndpoint";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaiindexendpoints";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public VertexAIIndexEndpointMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public VertexAIIndexEndpointSpec Spec { get; set; }
+    public V1alpha1VertexAIIndexEndpointSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public VertexAIIndexEndpointStatus? Status { get; set; }
+    public V1alpha1VertexAIIndexEndpointStatus? Status { get; set; }
 }

@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeURLMapList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeURLMap>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeURLMapList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeurlmaps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeURLMap> Items { get; set; }
 }
 
 /// <summary>The specification for allowing client side cross-origin requests. Please see [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionCorsPolicy
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -53,7 +73,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionCorsPolicy
 
 /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyAbort
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
     [JsonPropertyName("httpStatus")]
@@ -66,7 +86,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyAbor
 
 /// <summary>Specifies the value of the fixed delay interval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -79,11 +99,11 @@ public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDela
 
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelay
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval.</summary>
     [JsonPropertyName("fixedDelay")]
-    public ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelayFixedDelay? FixedDelay { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelayFixedDelay? FixedDelay { get; set; }
 
     /// <summary>The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection. The value must be between 0.0 and 100.0 inclusive.</summary>
     [JsonPropertyName("percentage")]
@@ -92,20 +112,20 @@ public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDela
 
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by a load balancer on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests. timeout and retryPolicy is ignored by clients that are configured with a faultInjectionPolicy if: 1. The traffic is generated by fault injection AND 2. The fault injection is not a delay fault injection. Fault injection is not supported with the global external HTTP(S) load balancer (classic). To see which load balancers support fault injection, see Load balancing: [Routing and traffic management features](https://cloud.google.com/load-balancing/docs/features#routing-traffic-management).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicy
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
     [JsonPropertyName("abort")]
-    public ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
 
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
     [JsonPropertyName("delay")]
-    public ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
 /// <summary>The backend service resource being mirrored to. The backend service configured for a mirroring policy must reference backends that are of the same type as the original backend service matched in the URL map. Serverless NEG backends are not currently supported as a mirrored backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicyBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -122,16 +142,16 @@ public partial class ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicyBacke
 
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicy
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>The backend service resource being mirrored to. The backend service configured for a mirroring policy must reference backends that are of the same type as the original backend service matched in the URL map. Serverless NEG backends are not currently supported as a mirrored backend service.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicyBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicyBackendServiceRef? BackendServiceRef { get; set; }
 }
 
 /// <summary>Specifies a non-zero timeout per retry attempt.  If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionRetryPolicyPerTryTimeout
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -144,7 +164,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionRetryPolicyPerTryTimeout
 
 /// <summary>Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionRetryPolicy
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</summary>
     [JsonPropertyName("numRetries")]
@@ -152,7 +172,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionRetryPolicy
 
     /// <summary>Specifies a non-zero timeout per retry attempt.  If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.</summary>
     [JsonPropertyName("perTryTimeout")]
-    public ComputeURLMapSpecDefaultRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
 
     /// <summary>Specifies one or more conditions when this retry policy applies. Valid values are listed below. Only the following codes are supported when the URL map is bound to target gRPC proxy that has validateForProxyless field set to true: cancelled, deadline-exceeded, internal, resource-exhausted, unavailable.   - 5xx : retry is attempted if the instance or endpoint responds with any 5xx response code, or if the instance or endpoint does not respond at all. For example, disconnects, reset, read timeout, connection failure, and refused streams.   - gateway-error : Similar to 5xx, but only applies to response codes 502, 503 or 504.   - connect-failure : a retry is attempted on failures connecting to the instance or endpoint. For example, connection timeouts.   - retriable-4xx : a retry is attempted if the instance or endpoint responds with a 4xx response code. The only error that you can retry is error code 409.   - refused-stream : a retry is attempted if the instance or endpoint resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry.   - cancelled : a retry is attempted if the gRPC status code in the response header is set to cancelled.   - deadline-exceeded : a retry is attempted if the gRPC status code in the response header is set to deadline-exceeded.   - internal :  a retry is attempted if the gRPC status code in the response header is set to internal.   - resource-exhausted : a retry is attempted if the gRPC status code in the response header is set to resource-exhausted.   - unavailable : a retry is attempted if the gRPC status code in the response header is set to unavailable.</summary>
     [JsonPropertyName("retryConditions")]
@@ -161,7 +181,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionRetryPolicy
 
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (known as end-of-stream) up until the response has been processed. Timeout includes all retries. If not specified, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionTimeout
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -174,7 +194,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionTimeout
 
 /// <summary>The spec to modify the URL of the request, before forwarding the request to the matched service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionUrlRewrite
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionUrlRewrite
 {
     /// <summary>Before forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be from 1 to 255 characters.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -187,7 +207,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionUrlRewrite
 
 /// <summary>The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -204,7 +224,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesB
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -221,7 +241,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesH
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -238,11 +258,11 @@ public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesH
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. headerAction is not supported for load balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderAction
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request before forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -250,7 +270,7 @@ public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesH
 
     /// <summary>Headers to add the response before sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response before sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -259,15 +279,15 @@ public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesH
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServices
+public partial class V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesBackendServiceRef? BackendServiceRef { get; set; }
 
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap. headerAction is not supported for load balancers that have their loadBalancingScheme set to EXTERNAL. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
 
     /// <summary>Specifies the fraction of traffic sent to a backend service, computed as weight / (sum of all weightedBackendService weights in routeAction) . The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backend service, subsequent requests are sent to the same backend service as determined by the backend service's session affinity policy. The value must be from 0 to 1000.</summary>
     [JsonPropertyName("weight")]
@@ -276,40 +296,40 @@ public partial class ComputeURLMapSpecDefaultRouteActionWeightedBackendServices
 
 /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultRouteAction
+public partial class V1beta1ComputeURLMapSpecDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/).</summary>
     [JsonPropertyName("corsPolicy")]
-    public ComputeURLMapSpecDefaultRouteActionCorsPolicy? CorsPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by a load balancer on a percentage of requests before sending those requests to the backend service. Similarly requests from clients can be aborted by the load balancer for a percentage of requests. timeout and retryPolicy is ignored by clients that are configured with a faultInjectionPolicy if: 1. The traffic is generated by fault injection AND 2. The fault injection is not a delay fault injection. Fault injection is not supported with the global external HTTP(S) load balancer (classic). To see which load balancers support fault injection, see Load balancing: [Routing and traffic management features](https://cloud.google.com/load-balancing/docs/features#routing-traffic-management).</summary>
     [JsonPropertyName("faultInjectionPolicy")]
-    public ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. The load balancer does not wait for responses from the shadow service. Before sending traffic to the shadow service, the host / authority header is suffixed with -shadow. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
-    public ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
 
     /// <summary>Specifies the retry policy associated with this route.</summary>
     [JsonPropertyName("retryPolicy")]
-    public ComputeURLMapSpecDefaultRouteActionRetryPolicy? RetryPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionRetryPolicy? RetryPolicy { get; set; }
 
     /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (known as end-of-stream) up until the response has been processed. Timeout includes all retries. If not specified, this field uses the largest timeout among all backend services associated with the route. Not supported when the URL map is bound to a target gRPC proxy that has validateForProxyless field set to true.</summary>
     [JsonPropertyName("timeout")]
-    public ComputeURLMapSpecDefaultRouteActionTimeout? Timeout { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionTimeout? Timeout { get; set; }
 
     /// <summary>The spec to modify the URL of the request, before forwarding the request to the matched service. urlRewrite is the only action supported in UrlMaps for external HTTP(S) load balancers. Not supported when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.</summary>
     [JsonPropertyName("urlRewrite")]
-    public ComputeURLMapSpecDefaultRouteActionUrlRewrite? UrlRewrite { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteActionUrlRewrite? UrlRewrite { get; set; }
 
     /// <summary>A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non-zero number. After a backend service is identified and before forwarding the request to the backend service, advanced routing actions such as URL rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.</summary>
     [JsonPropertyName("weightedBackendServices")]
-    public IList<ComputeURLMapSpecDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
+    public IList<V1beta1ComputeURLMapSpecDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultServiceBackendBucketRef
+public partial class V1beta1ComputeURLMapSpecDefaultServiceBackendBucketRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -326,7 +346,7 @@ public partial class ComputeURLMapSpecDefaultServiceBackendBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultServiceBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecDefaultServiceBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -343,20 +363,20 @@ public partial class ComputeURLMapSpecDefaultServiceBackendServiceRef
 
 /// <summary>The defaultService resource to which traffic is directed if none of the hostRules match. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service. If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of defaultService, defaultUrlRedirect or defaultRouteAction.weightedBackendService must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultService
+public partial class V1beta1ComputeURLMapSpecDefaultService
 {
     /// <summary></summary>
     [JsonPropertyName("backendBucketRef")]
-    public ComputeURLMapSpecDefaultServiceBackendBucketRef? BackendBucketRef { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultServiceBackendBucketRef? BackendBucketRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecDefaultServiceBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultServiceBackendServiceRef? BackendServiceRef { get; set; }
 }
 
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecDefaultUrlRedirect
+public partial class V1beta1ComputeURLMapSpecDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRedirect")]
@@ -385,7 +405,7 @@ public partial class ComputeURLMapSpecDefaultUrlRedirect
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -402,7 +422,7 @@ public partial class ComputeURLMapSpecHeaderActionRequestHeadersToAdd
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -419,11 +439,11 @@ public partial class ComputeURLMapSpecHeaderActionResponseHeadersToAdd
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. The headerAction specified here take effect after headerAction specified under pathMatcher.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecHeaderAction
+public partial class V1beta1ComputeURLMapSpecHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -431,7 +451,7 @@ public partial class ComputeURLMapSpecHeaderAction
 
     /// <summary>Headers to add the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -440,7 +460,7 @@ public partial class ComputeURLMapSpecHeaderAction
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecHostRule
+public partial class V1beta1ComputeURLMapSpecHostRule
 {
     /// <summary>An optional description of this HostRule. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -457,7 +477,7 @@ public partial class ComputeURLMapSpecHostRule
 
 /// <summary>The specification for allowing client side cross-origin requests. Please see [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionCorsPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access-Control-Allow-Credentials header.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -494,7 +514,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionCorsPolicy
 
 /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
     [JsonPropertyName("httpStatus")]
@@ -507,7 +527,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectio
 
 /// <summary>Specifies the value of the fixed delay interval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -520,11 +540,11 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectio
 
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval.</summary>
     [JsonPropertyName("fixedDelay")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay? FixedDelay { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelayFixedDelay? FixedDelay { get; set; }
 
     /// <summary>The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection. The value must be between 0.0 and 100.0 inclusive.</summary>
     [JsonPropertyName("percentage")]
@@ -533,20 +553,20 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectio
 
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests.  timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
     [JsonPropertyName("abort")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
 
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
     [JsonPropertyName("delay")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
 /// <summary>Required. The backend service resource being mirrored to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -563,16 +583,16 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirror
 
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicy
 {
     /// <summary>Required. The backend service resource being mirrored to.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicyBackendServiceRef BackendServiceRef { get; set; }
 }
 
 /// <summary>Specifies a non-zero timeout per retry attempt.  If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -585,7 +605,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicyPe
 
 /// <summary>Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0. If not specified, defaults to 1.</summary>
     [JsonPropertyName("numRetries")]
@@ -593,7 +613,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy
 
     /// <summary>Specifies a non-zero timeout per retry attempt.  If not specified, will use the timeout set in HttpRouteAction. If timeout in HttpRouteAction is not set, will use the largest timeout among all backend services associated with the route.</summary>
     [JsonPropertyName("perTryTimeout")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
 
     /// <summary>Specfies one or more conditions when this retry rule applies. Valid values are:  * 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code,   or if the backend service does not respond at all, example: disconnects, reset, read timeout, * connection failure, and refused streams. * gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504. * connect-failure: Loadbalancer will retry on failures connecting to backend services,   for example due to connection timeouts. * retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.   Currently the only retriable error supported is 409. * refused-stream:Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code.   This reset type indicates that it is safe to retry. * cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled * deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted * unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable.</summary>
     [JsonPropertyName("retryConditions")]
@@ -602,7 +622,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy
 
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.  If not specified, will use the largest timeout among all backend services associated with the route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionTimeout
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -615,7 +635,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionTimeout
 
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionUrlRewrite
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite.  The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -628,7 +648,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionUrlRewrite
 
 /// <summary>The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -645,7 +665,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBacke
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header to add.</summary>
     [JsonPropertyName("headerName")]
@@ -662,7 +682,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBacke
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header to add.</summary>
     [JsonPropertyName("headerName")]
@@ -679,11 +699,11 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBacke
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService.  headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -691,7 +711,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBacke
 
     /// <summary>Headers to add the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -700,15 +720,15 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBacke
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServices
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServices
 {
     /// <summary>The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesBackendServiceRef? BackendServiceRef { get; set; }
 
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService.  headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
 
     /// <summary>Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) .  The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy.  The value must be between 0 and 1000.</summary>
     [JsonPropertyName("weight")]
@@ -717,40 +737,40 @@ public partial class ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBacke
 
 /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.  Only one of defaultRouteAction or defaultUrlRedirect must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultRouteAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see [W3C Recommendation for Cross Origin Resource Sharing](https://www.w3.org/TR/cors/).</summary>
     [JsonPropertyName("corsPolicy")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionCorsPolicy? CorsPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests.  timeout and retryPolicy will be ignored by clients that are configured with a faultInjectionPolicy.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
 
     /// <summary>Specifies the retry policy associated with this route.</summary>
     [JsonPropertyName("retryPolicy")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy? RetryPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionRetryPolicy? RetryPolicy { get; set; }
 
     /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries.  If not specified, will use the largest timeout among all backend services associated with the route.</summary>
     [JsonPropertyName("timeout")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionTimeout? Timeout { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionTimeout? Timeout { get; set; }
 
     /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service.</summary>
     [JsonPropertyName("urlRewrite")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteActionUrlRewrite? UrlRewrite { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionUrlRewrite? UrlRewrite { get; set; }
 
     /// <summary>A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one weightedBackendService with weight set to a non 0 number.  Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions like Url rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.</summary>
     [JsonPropertyName("weightedBackendServices")]
-    public IList<ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherDefaultRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultServiceBackendBucketRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultServiceBackendBucketRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -767,7 +787,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultServiceBackendBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultServiceBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultServiceBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -784,20 +804,20 @@ public partial class ComputeURLMapSpecPathMatcherDefaultServiceBackendServiceRef
 
 /// <summary>The default service to use if none of the pathRules defined by this PathMatcher is matched by the URL's path portion. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultService
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultService
 {
     /// <summary></summary>
     [JsonPropertyName("backendBucketRef")]
-    public ComputeURLMapSpecPathMatcherDefaultServiceBackendBucketRef? BackendBucketRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultServiceBackendBucketRef? BackendBucketRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherDefaultServiceBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultServiceBackendServiceRef? BackendServiceRef { get; set; }
 }
 
 /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherDefaultUrlRedirect
+public partial class V1beta1ComputeURLMapSpecPathMatcherDefaultUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRedirect")]
@@ -826,7 +846,7 @@ public partial class ComputeURLMapSpecPathMatcherDefaultUrlRedirect
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -843,7 +863,7 @@ public partial class ComputeURLMapSpecPathMatcherHeaderActionRequestHeadersToAdd
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -860,11 +880,11 @@ public partial class ComputeURLMapSpecPathMatcherHeaderActionResponseHeadersToAd
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherHeaderAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -872,7 +892,7 @@ public partial class ComputeURLMapSpecPathMatcherHeaderAction
 
     /// <summary>Headers to add the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -881,7 +901,7 @@ public partial class ComputeURLMapSpecPathMatcherHeaderAction
 
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionCorsPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -918,7 +938,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionCorsPolicy
 
 /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
     [JsonPropertyName("httpStatus")]
@@ -931,7 +951,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjecti
 
 /// <summary>Specifies the value of the fixed delay interval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -944,11 +964,11 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjecti
 
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval.</summary>
     [JsonPropertyName("fixedDelay")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay FixedDelay { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay FixedDelay { get; set; }
 
     /// <summary>The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection. The value must be between 0.0 and 100.0 inclusive.</summary>
     [JsonPropertyName("percentage")]
@@ -957,20 +977,20 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjecti
 
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
     [JsonPropertyName("abort")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
 
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
     [JsonPropertyName("delay")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
 /// <summary>Required. The backend service resource being mirrored to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -987,16 +1007,16 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirro
 
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicy
 {
     /// <summary>Required. The backend service resource being mirrored to.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicyBackendServiceRef BackendServiceRef { get; set; }
 }
 
 /// <summary>Specifies a non-zero timeout per retry attempt.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -1009,7 +1029,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicyP
 
 /// <summary>Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
@@ -1017,7 +1037,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy
 
     /// <summary>Specifies a non-zero timeout per retry attempt.</summary>
     [JsonPropertyName("perTryTimeout")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
 
     /// <summary>Specifies one or more conditions when this retry rule applies. Valid values are:  - 5xx: Loadbalancer will attempt a retry if the backend service responds with any 5xx response code, or if the backend service does not respond at all, example: disconnects, reset, read timeout, connection failure, and refused streams. - gateway-error: Similar to 5xx, but only applies to response codes 502, 503 or 504. - connect-failure: Loadbalancer will retry on failures connecting to backend services, for example due to connection timeouts. - retriable-4xx: Loadbalancer will retry for retriable 4xx response codes. Currently the only retriable error supported is 409. - refused-stream: Loadbalancer will retry if the backend service resets the stream with a REFUSED_STREAM error code. This reset type indicates that it is safe to retry. - cancelled: Loadbalancer will retry if the gRPC status code in the response header is set to cancelled - deadline-exceeded: Loadbalancer will retry if the gRPC status code in the response header is set to deadline-exceeded - resource-exhausted: Loadbalancer will retry if the gRPC status code in the response header is set to resource-exhausted - unavailable: Loadbalancer will retry if the gRPC status code in the response header is set to unavailable.</summary>
     [JsonPropertyName("retryConditions")]
@@ -1026,7 +1046,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy
 
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionTimeout
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -1039,7 +1059,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionTimeout
 
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionUrlRewrite
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -1052,7 +1072,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionUrlRewrite
 
 /// <summary>Required. The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -1069,7 +1089,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBack
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -1086,7 +1106,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBack
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -1103,11 +1123,11 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBack
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -1115,7 +1135,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBack
 
     /// <summary>Headers to add the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -1124,15 +1144,15 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBack
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServices
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServices
 {
     /// <summary>Required. The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesBackendServiceRef BackendServiceRef { get; set; }
 
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
 
     /// <summary>Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) . The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy. The value must be between 0 and 1000.</summary>
     [JsonPropertyName("weight")]
@@ -1141,40 +1161,40 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBack
 
 /// <summary>In response to a matching path, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleRouteAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing.</summary>
     [JsonPropertyName("corsPolicy")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionCorsPolicy? CorsPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
 
     /// <summary>Specifies the retry policy associated with this route.</summary>
     [JsonPropertyName("retryPolicy")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy? RetryPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionRetryPolicy? RetryPolicy { get; set; }
 
     /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds.</summary>
     [JsonPropertyName("timeout")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionTimeout? Timeout { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionTimeout? Timeout { get; set; }
 
     /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service.</summary>
     [JsonPropertyName("urlRewrite")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteActionUrlRewrite? UrlRewrite { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionUrlRewrite? UrlRewrite { get; set; }
 
     /// <summary>A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one  weightedBackendService with weight set to a non 0 number. Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions like Url rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.</summary>
     [JsonPropertyName("weightedBackendServices")]
-    public IList<ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleServiceBackendBucketRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleServiceBackendBucketRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -1191,7 +1211,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleServiceBackendBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleServiceBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleServiceBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -1208,20 +1228,20 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleServiceBackendServiceRe
 
 /// <summary>The backend service to which traffic is directed if this rule is matched. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect, service or routeAction.weightedBackendService must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleService
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleService
 {
     /// <summary></summary>
     [JsonPropertyName("backendBucketRef")]
-    public ComputeURLMapSpecPathMatcherPathRuleServiceBackendBucketRef? BackendBucketRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleServiceBackendBucketRef? BackendBucketRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherPathRuleServiceBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleServiceBackendServiceRef? BackendServiceRef { get; set; }
 }
 
 /// <summary>When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRuleUrlRedirect
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRuleUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRedirect")]
@@ -1250,7 +1270,7 @@ public partial class ComputeURLMapSpecPathMatcherPathRuleUrlRedirect
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherPathRule
+public partial class V1beta1ComputeURLMapSpecPathMatcherPathRule
 {
     /// <summary>The list of path patterns to match. Each must start with / and the only place a \* is allowed is at the end following a /. The string fed to the path matcher does not include any text after the first ? or #, and those chars are not allowed here.</summary>
     [JsonPropertyName("paths")]
@@ -1258,20 +1278,20 @@ public partial class ComputeURLMapSpecPathMatcherPathRule
 
     /// <summary>In response to a matching path, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set.</summary>
     [JsonPropertyName("routeAction")]
-    public ComputeURLMapSpecPathMatcherPathRuleRouteAction? RouteAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleRouteAction? RouteAction { get; set; }
 
     /// <summary>The backend service to which traffic is directed if this rule is matched. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect, service or routeAction.weightedBackendService must be set.</summary>
     [JsonPropertyName("service")]
-    public ComputeURLMapSpecPathMatcherPathRuleService? Service { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleService? Service { get; set; }
 
     /// <summary>When a path pattern is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set.</summary>
     [JsonPropertyName("urlRedirect")]
-    public ComputeURLMapSpecPathMatcherPathRuleUrlRedirect? UrlRedirect { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherPathRuleUrlRedirect? UrlRedirect { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -1288,7 +1308,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderActionRequestHe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -1305,11 +1325,11 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderActionResponseH
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. The headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].r outeAction.weightedBackendService.backendServiceWeightAction[].headerAction.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -1317,7 +1337,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderAction
 
     /// <summary>Headers to add the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -1326,7 +1346,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesHeaderAction
 
 /// <summary>The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0]  * -3 will match * 0 will not match * 0.25 will not match * -3someString will not match.  Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch
 {
     /// <summary>The end of the range (exclusive).</summary>
     [JsonPropertyName("rangeEnd")]
@@ -1339,7 +1359,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatch
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatches
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatches
 {
     /// <summary>The value should exactly match contents of exactMatch. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.</summary>
     [JsonPropertyName("exactMatch")]
@@ -1363,7 +1383,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatch
 
     /// <summary>The header value must be an integer and its value must be in the range specified in rangeMatch. If the header does not contain an integer, number or is empty, the match fails. For example for a range [-5, 0]  * -3 will match * 0 will not match * 0.25 will not match * -3someString will not match.  Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.</summary>
     [JsonPropertyName("rangeMatch")]
-    public ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch? RangeMatch { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatchesRangeMatch? RangeMatch { get; set; }
 
     /// <summary>The value of the header must match the regular expression specified in regexMatch. For regular expression grammar, please see: en.cppreference.com/w/cpp/regex/ecmascript  For matching against a port specified in the HTTP request, use a headerMatch with headerName set to PORT and a regular expression that satisfies the RFC2616 Host header's port specifier. Only one of exactMatch, prefixMatch, suffixMatch, regexMatch, presentMatch or rangeMatch must be set.</summary>
     [JsonPropertyName("regexMatch")]
@@ -1376,7 +1396,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatch
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels
 {
     /// <summary>Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.</summary>
     [JsonPropertyName("name")]
@@ -1389,11 +1409,11 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFil
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFilters
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFilters
 {
     /// <summary>The list of label value pairs that must match labels in the provided metadata based on filterMatchCriteria  This list must not be empty and can have at the most 64 entries.</summary>
     [JsonPropertyName("filterLabels")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels> FilterLabels { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFiltersFilterLabels> FilterLabels { get; set; }
 
     /// <summary>Specifies how individual filterLabel matches within the list of filterLabels contribute towards the overall metadataFilter match. Supported values are:  * MATCH_ANY: At least one of the filterLabels must have a matching label in the provided metadata. * MATCH_ALL: All filterLabels must have matching labels in the provided metadata. Possible values: ["MATCH_ALL", "MATCH_ANY"].</summary>
     [JsonPropertyName("filterMatchCriteria")]
@@ -1402,7 +1422,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFil
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesQueryParameterMatches
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesQueryParameterMatches
 {
     /// <summary>The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch. Only one of presentMatch, exactMatch and regexMatch must be set.</summary>
     [JsonPropertyName("exactMatch")]
@@ -1423,7 +1443,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRulesQueryParame
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRules
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRules
 {
     /// <summary>For satisfying the matchRule condition, the path of the request must exactly match the value specified in fullPathMatch after removing any query parameters and anchor that may be part of the original URL. FullPathMatch must be between 1 and 1024 characters. Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
     [JsonPropertyName("fullPathMatch")]
@@ -1431,7 +1451,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRules
 
     /// <summary>Specifies a list of header match criteria, all of which must match corresponding headers in the request.</summary>
     [JsonPropertyName("headerMatches")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatches>? HeaderMatches { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesHeaderMatches>? HeaderMatches { get; set; }
 
     /// <summary>Specifies that prefixMatch and fullPathMatch matches are case sensitive. Defaults to false.</summary>
     [JsonPropertyName("ignoreCase")]
@@ -1439,7 +1459,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRules
 
     /// <summary>Opaque filter criteria used by Loadbalancer to restrict routing configuration to a limited set xDS compliant clients. In their xDS requests to Loadbalancer, xDS clients present node metadata. If a match takes place, the relevant routing configuration is made available to those proxies. For each metadataFilter in this list, if its filterMatchCriteria is set to MATCH_ANY, at least one of the filterLabels must match the corresponding label provided in the metadata. If its filterMatchCriteria is set to MATCH_ALL, then all of its filterLabels must match with corresponding labels in the provided metadata. metadataFilters specified here can be overrides those specified in ForwardingRule that refers to this UrlMap. metadataFilters only applies to Loadbalancers that have their loadBalancingScheme set to INTERNAL_SELF_MANAGED.</summary>
     [JsonPropertyName("metadataFilters")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFilters>? MetadataFilters { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesMetadataFilters>? MetadataFilters { get; set; }
 
     /// <summary>For satisfying the matchRule condition, the path of the request must match the wildcard pattern specified in pathTemplateMatch after removing any query parameters and anchor that may be part of the original URL.  pathTemplateMatch must be between 1 and 255 characters (inclusive).  The pattern specified by pathTemplateMatch may have at most 5 wildcard operators and at most 5 variable captures in total.</summary>
     [JsonPropertyName("pathTemplateMatch")]
@@ -1451,7 +1471,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRules
 
     /// <summary>Specifies a list of query parameter match criteria, all of which must match corresponding query parameters in the request.</summary>
     [JsonPropertyName("queryParameterMatches")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesMatchRulesQueryParameterMatches>? QueryParameterMatches { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRulesQueryParameterMatches>? QueryParameterMatches { get; set; }
 
     /// <summary>For satisfying the matchRule condition, the path of the request must satisfy the regular expression specified in regexMatch after removing any query parameters and anchor supplied with the original URL. For regular expression grammar please see en.cppreference.com/w/cpp/regex/ecmascript  Only one of prefixMatch, fullPathMatch or regexMatch must be specified.</summary>
     [JsonPropertyName("regexMatch")]
@@ -1460,7 +1480,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesMatchRules
 
 /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionCorsPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionCorsPolicy
 {
     /// <summary>In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This translates to the Access- Control-Allow-Credentials header. Defaults to false.</summary>
     [JsonPropertyName("allowCredentials")]
@@ -1497,7 +1517,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionCorsPolicy
 
 /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort
 {
     /// <summary>The HTTP status code used to abort the request. The value must be between 200 and 599 inclusive.</summary>
     [JsonPropertyName("httpStatus")]
@@ -1510,7 +1530,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjec
 
 /// <summary>Specifies the value of the fixed delay interval.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -1523,11 +1543,11 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjec
 
 /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay
 {
     /// <summary>Specifies the value of the fixed delay interval.</summary>
     [JsonPropertyName("fixedDelay")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay? FixedDelay { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelayFixedDelay? FixedDelay { get; set; }
 
     /// <summary>The percentage of traffic (connections/operations/requests) on which delay will be introduced as part of fault injection. The value must be between 0.0 and 100.0 inclusive.</summary>
     [JsonPropertyName("percentage")]
@@ -1536,20 +1556,20 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjec
 
 /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicy
 {
     /// <summary>The specification for how client requests are aborted as part of fault injection.</summary>
     [JsonPropertyName("abort")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyAbort? Abort { get; set; }
 
     /// <summary>The specification for how client requests are delayed as part of fault injection, before being sent to a backend service.</summary>
     [JsonPropertyName("delay")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicyDelay? Delay { get; set; }
 }
 
 /// <summary>Required. The backend service resource being mirrored to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicyBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicyBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -1566,16 +1586,16 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMir
 
 /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicy
 {
     /// <summary>Required. The backend service resource being mirrored to.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicyBackendServiceRef BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicyBackendServiceRef BackendServiceRef { get; set; }
 }
 
 /// <summary>Specifies a non-zero timeout per retry attempt.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -1588,7 +1608,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolic
 
 /// <summary>Specifies the retry policy associated with this route.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicy
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicy
 {
     /// <summary>Specifies the allowed number retries. This number must be &gt; 0.</summary>
     [JsonPropertyName("numRetries")]
@@ -1596,7 +1616,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolic
 
     /// <summary>Specifies a non-zero timeout per retry attempt.</summary>
     [JsonPropertyName("perTryTimeout")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicyPerTryTimeout? PerTryTimeout { get; set; }
 
     /// <summary>Specifies one or more conditions when this retry rule applies. Valid values are:  * 5xx: Loadbalancer will attempt a retry if the backend service responds with   any 5xx response code, or if the backend service does not respond at all,   example: disconnects, reset, read timeout, connection failure, and refused   streams. * gateway-error: Similar to 5xx, but only applies to response codes   502, 503 or 504. * connect-failure: Loadbalancer will retry on failures   connecting to backend services, for example due to connection timeouts. * retriable-4xx: Loadbalancer will retry for retriable 4xx response codes.   Currently the only retriable error supported is 409. * refused-stream: Loadbalancer will retry if the backend service resets the stream with a   REFUSED_STREAM error code. This reset type indicates that it is safe to retry. * cancelled: Loadbalancer will retry if the gRPC status code in the response   header is set to cancelled * deadline-exceeded: Loadbalancer will retry if the   gRPC status code in the response header is set to deadline-exceeded * resource-exhausted: Loadbalancer will retry if the gRPC status code in the response   header is set to resource-exhausted * unavailable: Loadbalancer will retry if the gRPC status code in   the response header is set to unavailable.</summary>
     [JsonPropertyName("retryConditions")]
@@ -1605,7 +1625,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolic
 
 /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionTimeout
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionTimeout
 {
     /// <summary>Span of time that's a fraction of a second at nanosecond resolution. Durations less than one second are represented with a 0 'seconds' field and a positive 'nanos' field. Must be from 0 to 999,999,999 inclusive.</summary>
     [JsonPropertyName("nanos")]
@@ -1618,7 +1638,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionTimeout
 
 /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionUrlRewrite
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionUrlRewrite
 {
     /// <summary>Prior to forwarding the request to the selected service, the request's host header is replaced with contents of hostRewrite. The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRewrite")]
@@ -1635,7 +1655,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionUrlRewrite
 
 /// <summary>Required. The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -1652,7 +1672,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -1669,7 +1689,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd
 {
     /// <summary>The name of the header.</summary>
     [JsonPropertyName("headerName")]
@@ -1686,11 +1706,11 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBa
 
 /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction
 {
     /// <summary>Headers to add to a matching request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionRequestHeadersToAdd>? RequestHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the request prior to forwarding the request to the backendService.</summary>
     [JsonPropertyName("requestHeadersToRemove")]
@@ -1698,7 +1718,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBa
 
     /// <summary>Headers to add the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToAdd")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderActionResponseHeadersToAdd>? ResponseHeadersToAdd { get; set; }
 
     /// <summary>A list of header names for headers that need to be removed from the response prior to sending the response back to the client.</summary>
     [JsonPropertyName("responseHeadersToRemove")]
@@ -1707,15 +1727,15 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBa
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServices
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServices
 {
     /// <summary>Required. The default backend service resource. Before forwarding the request to backendService, the loadbalancer applies any relevant headerActions specified as part of this backendServiceWeight.</summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesBackendServiceRef BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesBackendServiceRef BackendServiceRef { get; set; }
 
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. headerAction specified here take effect before headerAction in the enclosing HttpRouteRule, PathMatcher and UrlMap.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServicesHeaderAction? HeaderAction { get; set; }
 
     /// <summary>Specifies the fraction of traffic sent to backendService, computed as weight / (sum of all weightedBackendService weights in routeAction) . The selection of a backend service is determined only for new traffic. Once a user's request has been directed to a backendService, subsequent requests will be sent to the same backendService as determined by the BackendService's session affinity policy. The value must be between 0 and 1000.</summary>
     [JsonPropertyName("weight")]
@@ -1724,40 +1744,40 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBa
 
 /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesRouteAction
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteAction
 {
     /// <summary>The specification for allowing client side cross-origin requests. Please see W3C Recommendation for Cross Origin Resource Sharing.</summary>
     [JsonPropertyName("corsPolicy")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionCorsPolicy? CorsPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionCorsPolicy? CorsPolicy { get; set; }
 
     /// <summary>The specification for fault injection introduced into traffic to test the resiliency of clients to backend service failure. As part of fault injection, when clients send requests to a backend service, delays can be introduced by Loadbalancer on a percentage of requests before sending those request to the backend service. Similarly requests from clients can be aborted by the Loadbalancer for a percentage of requests. timeout and retry_policy will be ignored by clients that are configured with a fault_injection_policy.</summary>
     [JsonPropertyName("faultInjectionPolicy")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionFaultInjectionPolicy? FaultInjectionPolicy { get; set; }
 
     /// <summary>Specifies the policy on how requests intended for the route's backends are shadowed to a separate mirrored backend service. Loadbalancer does not wait for responses from the shadow service. Prior to sending traffic to the shadow service, the host / authority header is suffixed with -shadow.</summary>
     [JsonPropertyName("requestMirrorPolicy")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRequestMirrorPolicy? RequestMirrorPolicy { get; set; }
 
     /// <summary>Specifies the retry policy associated with this route.</summary>
     [JsonPropertyName("retryPolicy")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicy? RetryPolicy { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionRetryPolicy? RetryPolicy { get; set; }
 
     /// <summary>Specifies the timeout for the selected route. Timeout is computed from the time the request is has been fully processed (i.e. end-of-stream) up until the response has been completely processed. Timeout includes all retries. If not specified, the default value is 15 seconds.</summary>
     [JsonPropertyName("timeout")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionTimeout? Timeout { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionTimeout? Timeout { get; set; }
 
     /// <summary>The spec to modify the URL of the request, prior to forwarding the request to the matched service.</summary>
     [JsonPropertyName("urlRewrite")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteActionUrlRewrite? UrlRewrite { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionUrlRewrite? UrlRewrite { get; set; }
 
     /// <summary>A list of weighted backend services to send traffic to when a route match occurs. The weights determine the fraction of traffic that flows to their corresponding backend service. If all traffic needs to go to a single backend service, there must be one  weightedBackendService with weight set to a non 0 number. Once a backendService is identified and before forwarding the request to the backend service, advanced routing actions like Url rewrites and header transformations are applied depending on additional settings specified in this HttpRouteAction.</summary>
     [JsonPropertyName("weightedBackendServices")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteActionWeightedBackendServices>? WeightedBackendServices { get; set; }
 }
 
 /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRulesUrlRedirect
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRulesUrlRedirect
 {
     /// <summary>The host that will be used in the redirect response instead of the one that was supplied in the request. The value must be between 1 and 255 characters.</summary>
     [JsonPropertyName("hostRedirect")]
@@ -1786,15 +1806,15 @@ public partial class ComputeURLMapSpecPathMatcherRouteRulesUrlRedirect
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcherRouteRules
+public partial class V1beta1ComputeURLMapSpecPathMatcherRouteRules
 {
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. The headerAction specified here are applied before the matching pathMatchers[].headerAction and after pathMatchers[].routeRules[].r outeAction.weightedBackendService.backendServiceWeightAction[].headerAction.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecPathMatcherRouteRulesHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesHeaderAction? HeaderAction { get; set; }
 
     /// <summary>The rules for determining a match.</summary>
     [JsonPropertyName("matchRules")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRulesMatchRules>? MatchRules { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRulesMatchRules>? MatchRules { get; set; }
 
     /// <summary>For routeRules within a given pathMatcher, priority determines the order in which load balancer will interpret routeRules. RouteRules are evaluated in order of priority, from the lowest to highest number. The priority of a rule decreases as its number increases (1, 2, 3, N+1). The first rule that matches the request is applied.  You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 0 and 2147483647 inclusive.  Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.</summary>
     [JsonPropertyName("priority")]
@@ -1802,7 +1822,7 @@ public partial class ComputeURLMapSpecPathMatcherRouteRules
 
     /// <summary>In response to a matching matchRule, the load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If  routeAction specifies any weightedBackendServices, service must not be set. Conversely if service is set, routeAction cannot contain any  weightedBackendServices. Only one of routeAction or urlRedirect must be set.</summary>
     [JsonPropertyName("routeAction")]
-    public ComputeURLMapSpecPathMatcherRouteRulesRouteAction? RouteAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesRouteAction? RouteAction { get; set; }
 
     /// <summary>The region backend service resource to which traffic is directed if this rule is matched. If routeAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if service is specified, routeAction cannot contain any weightedBackendService s. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of urlRedirect, service or routeAction.weightedBackendService must be set.</summary>
     [JsonPropertyName("service")]
@@ -1810,24 +1830,24 @@ public partial class ComputeURLMapSpecPathMatcherRouteRules
 
     /// <summary>When this rule is matched, the request is redirected to a URL specified by urlRedirect. If urlRedirect is specified, service or routeAction must not be set.</summary>
     [JsonPropertyName("urlRedirect")]
-    public ComputeURLMapSpecPathMatcherRouteRulesUrlRedirect? UrlRedirect { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherRouteRulesUrlRedirect? UrlRedirect { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecPathMatcher
+public partial class V1beta1ComputeURLMapSpecPathMatcher
 {
     /// <summary>defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs advanced routing actions like URL rewrites, header transformations, etc. prior to forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices.  Only one of defaultRouteAction or defaultUrlRedirect must be set.</summary>
     [JsonPropertyName("defaultRouteAction")]
-    public ComputeURLMapSpecPathMatcherDefaultRouteAction? DefaultRouteAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultRouteAction? DefaultRouteAction { get; set; }
 
     /// <summary>The default service to use if none of the pathRules defined by this PathMatcher is matched by the URL's path portion. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service.</summary>
     [JsonPropertyName("defaultService")]
-    public ComputeURLMapSpecPathMatcherDefaultService? DefaultService { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultService? DefaultService { get; set; }
 
     /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.</summary>
     [JsonPropertyName("defaultUrlRedirect")]
-    public ComputeURLMapSpecPathMatcherDefaultUrlRedirect? DefaultUrlRedirect { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherDefaultUrlRedirect? DefaultUrlRedirect { get; set; }
 
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -1835,7 +1855,7 @@ public partial class ComputeURLMapSpecPathMatcher
 
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. HeaderAction specified here are applied after the matching HttpRouteRule HeaderAction and before the HeaderAction in the UrlMap.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecPathMatcherHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecPathMatcherHeaderAction? HeaderAction { get; set; }
 
     /// <summary>The name to which this PathMatcher is referred by the HostRule.</summary>
     [JsonPropertyName("name")]
@@ -1843,16 +1863,16 @@ public partial class ComputeURLMapSpecPathMatcher
 
     /// <summary>The list of path rules. Use this list instead of routeRules when routing based on simple path matching is all that's required. The order by which path rules are specified does not matter. Matches are always done on the longest-path-first basis. For example: a pathRule with a path /a/b/c/* will match before /a/b/* irrespective of the order in which those paths appear in this list. Within a given pathMatcher, only one of pathRules or routeRules must be set.</summary>
     [JsonPropertyName("pathRule")]
-    public IList<ComputeURLMapSpecPathMatcherPathRule>? PathRule { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherPathRule>? PathRule { get; set; }
 
     /// <summary>The list of ordered HTTP route rules. Use this list instead of pathRules when advanced route matching and routing actions are desired. The order of specifying routeRules matters: the first rule that matches will cause its specified routing action to take effect. Within a given pathMatcher, only one of pathRules or routeRules must be set. routeRules are not supported in UrlMaps intended for External load balancers.</summary>
     [JsonPropertyName("routeRules")]
-    public IList<ComputeURLMapSpecPathMatcherRouteRules>? RouteRules { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcherRouteRules>? RouteRules { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecTestServiceBackendBucketRef
+public partial class V1beta1ComputeURLMapSpecTestServiceBackendBucketRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -1869,7 +1889,7 @@ public partial class ComputeURLMapSpecTestServiceBackendBucketRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecTestServiceBackendServiceRef
+public partial class V1beta1ComputeURLMapSpecTestServiceBackendServiceRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeBackendService` resource.</summary>
     [JsonPropertyName("external")]
@@ -1886,20 +1906,20 @@ public partial class ComputeURLMapSpecTestServiceBackendServiceRef
 
 /// <summary>The backend service resource that should be matched by this test. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecTestService
+public partial class V1beta1ComputeURLMapSpecTestService
 {
     /// <summary></summary>
     [JsonPropertyName("backendBucketRef")]
-    public ComputeURLMapSpecTestServiceBackendBucketRef? BackendBucketRef { get; set; }
+    public V1beta1ComputeURLMapSpecTestServiceBackendBucketRef? BackendBucketRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("backendServiceRef")]
-    public ComputeURLMapSpecTestServiceBackendServiceRef? BackendServiceRef { get; set; }
+    public V1beta1ComputeURLMapSpecTestServiceBackendServiceRef? BackendServiceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpecTest
+public partial class V1beta1ComputeURLMapSpecTest
 {
     /// <summary>Description of this test case.</summary>
     [JsonPropertyName("description")]
@@ -1915,24 +1935,24 @@ public partial class ComputeURLMapSpecTest
 
     /// <summary>The backend service resource that should be matched by this test. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service.</summary>
     [JsonPropertyName("service")]
-    public ComputeURLMapSpecTestService Service { get; set; }
+    public V1beta1ComputeURLMapSpecTestService Service { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapSpec
+public partial class V1beta1ComputeURLMapSpec
 {
     /// <summary>defaultRouteAction takes effect when none of the hostRules match. The load balancer performs advanced routing actions, such as URL rewrites and header transformations, before forwarding the request to the selected backend. If defaultRouteAction specifies any weightedBackendServices, defaultService must not be set. Conversely if defaultService is set, defaultRouteAction cannot contain any weightedBackendServices. Only one of defaultRouteAction or defaultUrlRedirect must be set. URL maps for Classic external HTTP(S) load balancers only support the urlRewrite action within defaultRouteAction. defaultRouteAction has no effect when the URL map is bound to a target gRPC proxy that has the validateForProxyless field set to true.</summary>
     [JsonPropertyName("defaultRouteAction")]
-    public ComputeURLMapSpecDefaultRouteAction? DefaultRouteAction { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultRouteAction? DefaultRouteAction { get; set; }
 
     /// <summary>The defaultService resource to which traffic is directed if none of the hostRules match. For the Global URL Map, it should be a reference to the backend service or backend bucket. For the Regional URL Map, it should be a reference to the backend service. If defaultRouteAction is additionally specified, advanced routing actions like URL Rewrites, etc. take effect prior to sending the request to the backend. However, if defaultService is specified, defaultRouteAction cannot contain any weightedBackendServices. Conversely, if routeAction specifies any weightedBackendServices, service must not be specified. Only one of defaultService, defaultUrlRedirect or defaultRouteAction.weightedBackendService must be set.</summary>
     [JsonPropertyName("defaultService")]
-    public ComputeURLMapSpecDefaultService? DefaultService { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultService? DefaultService { get; set; }
 
     /// <summary>When none of the specified hostRules match, the request is redirected to a URL specified by defaultUrlRedirect. If defaultUrlRedirect is specified, defaultService or defaultRouteAction must not be set.</summary>
     [JsonPropertyName("defaultUrlRedirect")]
-    public ComputeURLMapSpecDefaultUrlRedirect? DefaultUrlRedirect { get; set; }
+    public V1beta1ComputeURLMapSpecDefaultUrlRedirect? DefaultUrlRedirect { get; set; }
 
     /// <summary>An optional description of this resource. Provide this property when you create the resource.</summary>
     [JsonPropertyName("description")]
@@ -1940,11 +1960,11 @@ public partial class ComputeURLMapSpec
 
     /// <summary>Specifies changes to request and response headers that need to take effect for the selected backendService. The headerAction specified here take effect after headerAction specified under pathMatcher.</summary>
     [JsonPropertyName("headerAction")]
-    public ComputeURLMapSpecHeaderAction? HeaderAction { get; set; }
+    public V1beta1ComputeURLMapSpecHeaderAction? HeaderAction { get; set; }
 
     /// <summary>The list of HostRules to use against the URL.</summary>
     [JsonPropertyName("hostRule")]
-    public IList<ComputeURLMapSpecHostRule>? HostRule { get; set; }
+    public IList<V1beta1ComputeURLMapSpecHostRule>? HostRule { get; set; }
 
     /// <summary>Location represents the geographical location of the ComputeURLMap. Specify a region name or "global" for global resources. Reference: GCP definition of regions/zones (https://cloud.google.com/compute/docs/regions-zones/)</summary>
     [JsonPropertyName("location")]
@@ -1952,7 +1972,7 @@ public partial class ComputeURLMapSpec
 
     /// <summary>The list of named PathMatchers to use against the URL.</summary>
     [JsonPropertyName("pathMatcher")]
-    public IList<ComputeURLMapSpecPathMatcher>? PathMatcher { get; set; }
+    public IList<V1beta1ComputeURLMapSpecPathMatcher>? PathMatcher { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -1960,12 +1980,12 @@ public partial class ComputeURLMapSpec
 
     /// <summary>The list of expected URL mappings. Requests to update this UrlMap will succeed only if all of the test cases pass.</summary>
     [JsonPropertyName("test")]
-    public IList<ComputeURLMapSpecTest>? Test { get; set; }
+    public IList<V1beta1ComputeURLMapSpecTest>? Test { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapStatusConditions
+public partial class V1beta1ComputeURLMapStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -1990,11 +2010,11 @@ public partial class ComputeURLMapStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMapStatus
+public partial class V1beta1ComputeURLMapStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeURLMapStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeURLMapStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -2019,25 +2039,30 @@ public partial class ComputeURLMapStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeURLMap
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeURLMap : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeURLMapSpec>, IStatus<V1beta1ComputeURLMapStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeURLMap";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeurlmaps";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeURLMapMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeURLMapSpec Spec { get; set; }
+    public V1beta1ComputeURLMapSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeURLMapStatus? Status { get; set; }
+    public V1beta1ComputeURLMapStatus? Status { get; set; }
 }

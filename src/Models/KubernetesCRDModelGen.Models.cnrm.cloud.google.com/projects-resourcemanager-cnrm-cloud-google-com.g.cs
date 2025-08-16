@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.resourcemanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Project>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectList";
+    public const string KubeGroup = "resourcemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "projects";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Project> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectSpecBillingAccountRef
+public partial class V1beta1ProjectSpecBillingAccountRef
 {
     /// <summary>Allowed value: The `name` field of a `BillingAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ProjectSpecBillingAccountRef
 
 /// <summary>The folder that this resource belongs to. Changing this forces the resource to be migrated to the newly specified folder. Only one of folderRef or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectSpecFolderRef
+public partial class V1beta1ProjectSpecFolderRef
 {
     /// <summary>Allowed value: The `folderId` field of a `Folder` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +70,7 @@ public partial class ProjectSpecFolderRef
 
 /// <summary>The organization that this resource belongs to. Changing this forces the resource to be migrated to the newly specified organization. Only one of folderRef or organizationRef may be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectSpecOrganizationRef
+public partial class V1beta1ProjectSpecOrganizationRef
 {
     /// <summary>Allowed value: The `name` field of an `Organization` resource.</summary>
     [JsonPropertyName("external")]
@@ -67,15 +87,15 @@ public partial class ProjectSpecOrganizationRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectSpec
+public partial class V1beta1ProjectSpec
 {
     /// <summary></summary>
     [JsonPropertyName("billingAccountRef")]
-    public ProjectSpecBillingAccountRef? BillingAccountRef { get; set; }
+    public V1beta1ProjectSpecBillingAccountRef? BillingAccountRef { get; set; }
 
     /// <summary>The folder that this resource belongs to. Changing this forces the resource to be migrated to the newly specified folder. Only one of folderRef or organizationRef may be specified.</summary>
     [JsonPropertyName("folderRef")]
-    public ProjectSpecFolderRef? FolderRef { get; set; }
+    public V1beta1ProjectSpecFolderRef? FolderRef { get; set; }
 
     /// <summary>The display name of the project.</summary>
     [JsonPropertyName("name")]
@@ -83,7 +103,7 @@ public partial class ProjectSpec
 
     /// <summary>The organization that this resource belongs to. Changing this forces the resource to be migrated to the newly specified organization. Only one of folderRef or organizationRef may be specified.</summary>
     [JsonPropertyName("organizationRef")]
-    public ProjectSpecOrganizationRef? OrganizationRef { get; set; }
+    public V1beta1ProjectSpecOrganizationRef? OrganizationRef { get; set; }
 
     /// <summary>Immutable. Optional. The projectId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -92,7 +112,7 @@ public partial class ProjectSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectStatusConditions
+public partial class V1beta1ProjectStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -117,11 +137,11 @@ public partial class ProjectStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ProjectStatus
+public partial class V1beta1ProjectStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ProjectStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ProjectStatusConditions>? Conditions { get; set; }
 
     /// <summary>The numeric identifier of the project.</summary>
     [JsonPropertyName("number")]
@@ -134,25 +154,30 @@ public partial class ProjectStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class Project
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1Project : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ProjectSpec>, IStatus<V1beta1ProjectStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "Project";
+    public const string KubeGroup = "resourcemanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "projects";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ProjectMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ProjectSpec Spec { get; set; }
+    public V1beta1ProjectSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ProjectStatus? Status { get; set; }
+    public V1beta1ProjectStatus? Status { get; set; }
 }

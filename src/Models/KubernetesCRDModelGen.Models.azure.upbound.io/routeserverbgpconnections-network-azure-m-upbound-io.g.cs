@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>RouteServerBGPConnection is the Schema for the RouteServerBGPConnections API. Manages a BGP Connection for a Route Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RouteServerBGPConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteServerBGPConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RouteServerBGPConnectionList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "routeserverbgpconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RouteServerBGPConnection> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RouteServerBGPConnectionSpecForProviderRouteServerIdRefPolicy
@@ -252,30 +278,4 @@ public partial class V1beta1RouteServerBGPConnection : IKubernetesObject<V1Objec
     /// <summary>RouteServerBGPConnectionStatus defines the observed state of RouteServerBGPConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1RouteServerBGPConnectionStatus? Status { get; set; }
-}
-
-/// <summary>RouteServerBGPConnection is the Schema for the RouteServerBGPConnections API. Manages a BGP Connection for a Route Server.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RouteServerBGPConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RouteServerBGPConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RouteServerBGPConnectionList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "routeserverbgpconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RouteServerBGPConnection> Items { get; set; }
 }

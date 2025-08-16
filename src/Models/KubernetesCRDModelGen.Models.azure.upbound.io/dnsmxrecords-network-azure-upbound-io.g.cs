@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>DNSMXRecord is the Schema for the DNSMXRecords API. Manages a DNS MX Record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DNSMXRecordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DNSMXRecord>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DNSMXRecordList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "dnsmxrecords";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DNSMXRecord> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DNSMXRecordSpecForProviderRecord
@@ -392,30 +418,4 @@ public partial class V1beta1DNSMXRecord : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>DNSMXRecordStatus defines the observed state of DNSMXRecord.</summary>
     [JsonPropertyName("status")]
     public V1beta1DNSMXRecordStatus? Status { get; set; }
-}
-
-/// <summary>DNSMXRecord is the Schema for the DNSMXRecords API. Manages a DNS MX Record.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DNSMXRecordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DNSMXRecord>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DNSMXRecordList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "dnsmxrecords";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DNSMXRecord> Items { get; set; }
 }

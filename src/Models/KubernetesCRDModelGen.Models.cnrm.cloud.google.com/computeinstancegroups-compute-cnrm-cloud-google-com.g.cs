@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeInstanceGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeInstanceGroup>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeInstanceGroupList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeinstancegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeInstanceGroup> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupSpecInstances
+public partial class V1beta1ComputeInstanceGroupSpecInstances
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ComputeInstanceGroupSpecInstances
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupSpecNamedPort
+public partial class V1beta1ComputeInstanceGroupSpecNamedPort
 {
     /// <summary>The name which the port will be mapped to.</summary>
     [JsonPropertyName("name")]
@@ -46,7 +66,7 @@ public partial class ComputeInstanceGroupSpecNamedPort
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupSpecNetworkRef
+public partial class V1beta1ComputeInstanceGroupSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -63,7 +83,7 @@ public partial class ComputeInstanceGroupSpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupSpec
+public partial class V1beta1ComputeInstanceGroupSpec
 {
     /// <summary>Immutable. An optional textual description of the instance group.</summary>
     [JsonPropertyName("description")]
@@ -71,15 +91,15 @@ public partial class ComputeInstanceGroupSpec
 
     /// <summary></summary>
     [JsonPropertyName("instances")]
-    public IList<ComputeInstanceGroupSpecInstances>? Instances { get; set; }
+    public IList<V1beta1ComputeInstanceGroupSpecInstances>? Instances { get; set; }
 
     /// <summary>The named port configuration.</summary>
     [JsonPropertyName("namedPort")]
-    public IList<ComputeInstanceGroupSpecNamedPort>? NamedPort { get; set; }
+    public IList<V1beta1ComputeInstanceGroupSpecNamedPort>? NamedPort { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public ComputeInstanceGroupSpecNetworkRef? NetworkRef { get; set; }
+    public V1beta1ComputeInstanceGroupSpecNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -92,7 +112,7 @@ public partial class ComputeInstanceGroupSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupStatusConditions
+public partial class V1beta1ComputeInstanceGroupStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -117,11 +137,11 @@ public partial class ComputeInstanceGroupStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroupStatus
+public partial class V1beta1ComputeInstanceGroupStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeInstanceGroupStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeInstanceGroupStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -138,25 +158,30 @@ public partial class ComputeInstanceGroupStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeInstanceGroup
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeInstanceGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeInstanceGroupSpec>, IStatus<V1beta1ComputeInstanceGroupStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeInstanceGroup";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeinstancegroups";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeInstanceGroupMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeInstanceGroupSpec Spec { get; set; }
+    public V1beta1ComputeInstanceGroupSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeInstanceGroupStatus? Status { get; set; }
+    public V1beta1ComputeInstanceGroupStatus? Status { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+/// <summary>VirtualMachineExtension is the Schema for the VirtualMachineExtensions API. Manages a Virtual Machine Extension to provide post deployment configuration and run automated tasks.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualMachineExtensionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualMachineExtension>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualMachineExtensionList";
+    public const string KubeGroup = "compute.azure.upbound.io";
+    public const string KubePluralName = "virtualmachineextensions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualMachineExtension> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualMachineExtensionSpecForProviderProtectedSettingsFromKeyVault
@@ -421,30 +447,4 @@ public partial class V1beta1VirtualMachineExtension : IKubernetesObject<V1Object
     /// <summary>VirtualMachineExtensionStatus defines the observed state of VirtualMachineExtension.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualMachineExtensionStatus? Status { get; set; }
-}
-
-/// <summary>VirtualMachineExtension is the Schema for the VirtualMachineExtensions API. Manages a Virtual Machine Extension to provide post deployment configuration and run automated tasks.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualMachineExtensionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualMachineExtension>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualMachineExtensionList";
-    public const string KubeGroup = "compute.azure.upbound.io";
-    public const string KubePluralName = "virtualmachineextensions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualMachineExtension> Items { get; set; }
 }

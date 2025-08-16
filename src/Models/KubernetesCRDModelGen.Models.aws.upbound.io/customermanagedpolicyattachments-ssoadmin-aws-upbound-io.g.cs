@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssoadmin.aws.upbound.io;
+/// <summary>CustomerManagedPolicyAttachment is the Schema for the CustomerManagedPolicyAttachments API. Manages a customer managed policy for a Single Sign-On (SSO) Permission Set</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CustomerManagedPolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomerManagedPolicyAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CustomerManagedPolicyAttachmentList";
+    public const string KubeGroup = "ssoadmin.aws.upbound.io";
+    public const string KubePluralName = "customermanagedpolicyattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CustomerManagedPolicyAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomerManagedPolicyAttachmentSpecForProviderCustomerManagedPolicyReferencePolicyNameRefPolicy
@@ -436,30 +462,4 @@ public partial class V1beta1CustomerManagedPolicyAttachment : IKubernetesObject<
     /// <summary>CustomerManagedPolicyAttachmentStatus defines the observed state of CustomerManagedPolicyAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1CustomerManagedPolicyAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>CustomerManagedPolicyAttachment is the Schema for the CustomerManagedPolicyAttachments API. Manages a customer managed policy for a Single Sign-On (SSO) Permission Set</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CustomerManagedPolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomerManagedPolicyAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CustomerManagedPolicyAttachmentList";
-    public const string KubeGroup = "ssoadmin.aws.upbound.io";
-    public const string KubePluralName = "customermanagedpolicyattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CustomerManagedPolicyAttachment> Items { get; set; }
 }

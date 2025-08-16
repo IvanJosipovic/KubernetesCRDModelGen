@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.tf.upbound.io;
+/// <summary>A StoreConfig configures how GCP controller should store connection details.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StoreConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StoreConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StoreConfigList";
+    public const string KubeGroup = "tf.upbound.io";
+    public const string KubePluralName = "storeconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StoreConfig> Items { get; set; }
+}
+
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StoreConfigSpecKubernetesAuthEnv
@@ -190,30 +216,4 @@ public partial class V1beta1StoreConfig : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>A StoreConfigStatus represents the status of a StoreConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1StoreConfigStatus? Status { get; set; }
-}
-
-/// <summary>A StoreConfig configures how GCP controller should store connection details.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StoreConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StoreConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StoreConfigList";
-    public const string KubeGroup = "tf.upbound.io";
-    public const string KubePluralName = "storeconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StoreConfig> Items { get; set; }
 }

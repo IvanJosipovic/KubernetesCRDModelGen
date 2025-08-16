@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+/// <summary>DataprocNodeGroup is the Schema for the DataprocNodeGroup API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataprocNodeGroupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataprocNodeGroup>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataprocNodeGroupList";
+    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataprocnodegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataprocNodeGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocNodeGroupSpecNodeGroupConfigAccelerators
@@ -343,30 +369,4 @@ public partial class V1alpha1DataprocNodeGroup : IKubernetesObject<V1ObjectMeta>
     /// <summary>DataprocNodeGroupStatus defines the config connector machine state of DataprocNodeGroup</summary>
     [JsonPropertyName("status")]
     public V1alpha1DataprocNodeGroupStatus? Status { get; set; }
-}
-
-/// <summary>DataprocNodeGroup is the Schema for the DataprocNodeGroup API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataprocNodeGroupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataprocNodeGroup>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataprocNodeGroupList";
-    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataprocnodegroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DataprocNodeGroup> Items { get; set; }
 }

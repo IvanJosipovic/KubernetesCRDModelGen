@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.cnrm.cloud.google.com;
+/// <summary>DatastreamConnectionProfile is the Schema for the DatastreamConnectionProfile API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DatastreamConnectionProfileList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DatastreamConnectionProfile>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DatastreamConnectionProfileList";
+    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
+    public const string KubePluralName = "datastreamconnectionprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DatastreamConnectionProfile> Items { get; set; }
+}
+
 /// <summary>BigQuery Connection Profile configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DatastreamConnectionProfileSpecBigQueryProfile
@@ -522,30 +548,4 @@ public partial class V1alpha1DatastreamConnectionProfile : IKubernetesObject<V1O
     /// <summary>DatastreamConnectionProfileStatus defines the config connector machine state of DatastreamConnectionProfile</summary>
     [JsonPropertyName("status")]
     public V1alpha1DatastreamConnectionProfileStatus? Status { get; set; }
-}
-
-/// <summary>DatastreamConnectionProfile is the Schema for the DatastreamConnectionProfile API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DatastreamConnectionProfileList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DatastreamConnectionProfile>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DatastreamConnectionProfileList";
-    public const string KubeGroup = "datastream.cnrm.cloud.google.com";
-    public const string KubePluralName = "datastreamconnectionprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DatastreamConnectionProfile> Items { get; set; }
 }

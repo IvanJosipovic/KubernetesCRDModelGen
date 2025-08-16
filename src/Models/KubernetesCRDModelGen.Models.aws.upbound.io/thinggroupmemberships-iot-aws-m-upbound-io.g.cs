@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.m.upbound.io;
+/// <summary>ThingGroupMembership is the Schema for the ThingGroupMemberships API. Adds an IoT Thing to an IoT Thing Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ThingGroupMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ThingGroupMembership>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ThingGroupMembershipList";
+    public const string KubeGroup = "iot.aws.m.upbound.io";
+    public const string KubePluralName = "thinggroupmemberships";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ThingGroupMembership> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingGroupMembershipSpecForProvider
@@ -192,30 +218,4 @@ public partial class V1beta1ThingGroupMembership : IKubernetesObject<V1ObjectMet
     /// <summary>ThingGroupMembershipStatus defines the observed state of ThingGroupMembership.</summary>
     [JsonPropertyName("status")]
     public V1beta1ThingGroupMembershipStatus? Status { get; set; }
-}
-
-/// <summary>ThingGroupMembership is the Schema for the ThingGroupMemberships API. Adds an IoT Thing to an IoT Thing Group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ThingGroupMembershipList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ThingGroupMembership>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ThingGroupMembershipList";
-    public const string KubeGroup = "iot.aws.m.upbound.io";
-    public const string KubePluralName = "thinggroupmemberships";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ThingGroupMembership> Items { get; set; }
 }

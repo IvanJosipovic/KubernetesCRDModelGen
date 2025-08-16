@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.upbound.io;
+/// <summary>RedisCacheAccessPolicy is the Schema for the RedisCacheAccessPolicys API. Manages a Redis Cache Access Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisCacheAccessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCacheAccessPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisCacheAccessPolicyList";
+    public const string KubeGroup = "cache.azure.upbound.io";
+    public const string KubePluralName = "rediscacheaccesspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisCacheAccessPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisCacheAccessPolicySpecForProviderRedisCacheIdRefPolicy
@@ -253,30 +279,4 @@ public partial class V1beta1RedisCacheAccessPolicy : IKubernetesObject<V1ObjectM
     /// <summary>RedisCacheAccessPolicyStatus defines the observed state of RedisCacheAccessPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1RedisCacheAccessPolicyStatus? Status { get; set; }
-}
-
-/// <summary>RedisCacheAccessPolicy is the Schema for the RedisCacheAccessPolicys API. Manages a Redis Cache Access Policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RedisCacheAccessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCacheAccessPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RedisCacheAccessPolicyList";
-    public const string KubeGroup = "cache.azure.upbound.io";
-    public const string KubePluralName = "rediscacheaccesspolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RedisCacheAccessPolicy> Items { get; set; }
 }

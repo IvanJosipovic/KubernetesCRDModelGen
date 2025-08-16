@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicecatalog.aws.upbound.io;
+/// <summary>PortfolioShare is the Schema for the PortfolioShares API. Manages a Service Catalog Portfolio Share</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PortfolioShareList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PortfolioShare>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PortfolioShareList";
+    public const string KubeGroup = "servicecatalog.aws.upbound.io";
+    public const string KubePluralName = "portfolioshares";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PortfolioShare> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioShareSpecForProviderPortfolioIdRefPolicy
@@ -393,30 +419,4 @@ public partial class V1beta1PortfolioShare : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>PortfolioShareStatus defines the observed state of PortfolioShare.</summary>
     [JsonPropertyName("status")]
     public V1beta1PortfolioShareStatus? Status { get; set; }
-}
-
-/// <summary>PortfolioShare is the Schema for the PortfolioShares API. Manages a Service Catalog Portfolio Share</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PortfolioShareList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PortfolioShare>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PortfolioShareList";
-    public const string KubeGroup = "servicecatalog.aws.upbound.io";
-    public const string KubePluralName = "portfolioshares";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PortfolioShare> Items { get; set; }
 }

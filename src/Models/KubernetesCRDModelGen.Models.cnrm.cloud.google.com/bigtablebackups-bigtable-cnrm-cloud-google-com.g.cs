@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+/// <summary>BigtableBackup is the Schema for the BigtableBackup API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigtableBackupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigtableBackup>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigtableBackupList";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtablebackups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BigtableBackup> Items { get; set; }
+}
+
 /// <summary>ClusterRef defines the resource reference to BigtableCluster, which "External" field holds the GCP identifier for the KRM object.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BigtableBackupSpecClusterRef
@@ -221,30 +247,4 @@ public partial class V1alpha1BigtableBackup : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>BigtableBackupStatus defines the config connector machine state of BigtableBackup</summary>
     [JsonPropertyName("status")]
     public V1alpha1BigtableBackupStatus? Status { get; set; }
-}
-
-/// <summary>BigtableBackup is the Schema for the BigtableBackup API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BigtableBackupList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigtableBackup>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BigtableBackupList";
-    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigtablebackups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1BigtableBackup> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aws.m.upbound.io;
+/// <summary>A ProviderConfig configures the AWS provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProviderConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProviderConfigList";
+    public const string KubeGroup = "aws.m.upbound.io";
+    public const string KubePluralName = "providerconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProviderConfig> Items { get; set; }
+}
+
 /// <summary>Tag is session tag that can be used to assume an IAM Role</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecAssumeRoleChainTags
@@ -409,30 +435,4 @@ public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProviderConfigStatus? Status { get; set; }
-}
-
-/// <summary>A ProviderConfig configures the AWS provider.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProviderConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProviderConfigList";
-    public const string KubeGroup = "aws.m.upbound.io";
-    public const string KubePluralName = "providerconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProviderConfig> Items { get; set; }
 }

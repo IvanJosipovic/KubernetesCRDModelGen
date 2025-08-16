@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.m.upbound.io;
+/// <summary>VirtualService is the Schema for the VirtualServices API. Provides an AWS App Mesh virtual service resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualServiceList";
+    public const string KubeGroup = "appmesh.aws.m.upbound.io";
+    public const string KubePluralName = "virtualservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualService> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualServiceSpecForProviderMeshNameRefPolicy
@@ -788,30 +814,4 @@ public partial class V1beta1VirtualService : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>VirtualServiceStatus defines the observed state of VirtualService.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualServiceStatus? Status { get; set; }
-}
-
-/// <summary>VirtualService is the Schema for the VirtualServices API. Provides an AWS App Mesh virtual service resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualServiceList";
-    public const string KubeGroup = "appmesh.aws.m.upbound.io";
-    public const string KubePluralName = "virtualservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualService> Items { get; set; }
 }

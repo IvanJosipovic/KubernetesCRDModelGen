@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>SubnetRouteTableAssociation is the Schema for the SubnetRouteTableAssociations API. Associates a</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SubnetRouteTableAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubnetRouteTableAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SubnetRouteTableAssociationList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "subnetroutetableassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SubnetRouteTableAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetRouteTableAssociationSpecForProviderRouteTableIdRefPolicy
@@ -449,30 +475,4 @@ public partial class V1beta1SubnetRouteTableAssociation : IKubernetesObject<V1Ob
     /// <summary>SubnetRouteTableAssociationStatus defines the observed state of SubnetRouteTableAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1SubnetRouteTableAssociationStatus? Status { get; set; }
-}
-
-/// <summary>SubnetRouteTableAssociation is the Schema for the SubnetRouteTableAssociations API. Associates a</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SubnetRouteTableAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubnetRouteTableAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SubnetRouteTableAssociationList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "subnetroutetableassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SubnetRouteTableAssociation> Items { get; set; }
 }

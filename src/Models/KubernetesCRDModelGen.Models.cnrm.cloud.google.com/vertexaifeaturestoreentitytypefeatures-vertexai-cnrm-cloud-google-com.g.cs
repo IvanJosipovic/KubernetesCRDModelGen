@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIFeaturestoreEntityTypeFeatureMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VertexAIFeaturestoreEntityTypeFeature>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIFeaturestoreEntityTypeFeatureList";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaifeaturestoreentitytypefeatures";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VertexAIFeaturestoreEntityTypeFeature> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIFeaturestoreEntityTypeFeatureSpec
+public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec
 {
     /// <summary>Description of the feature.</summary>
     [JsonPropertyName("description")]
@@ -37,7 +57,7 @@ public partial class VertexAIFeaturestoreEntityTypeFeatureSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIFeaturestoreEntityTypeFeatureStatusConditions
+public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -62,11 +82,11 @@ public partial class VertexAIFeaturestoreEntityTypeFeatureStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIFeaturestoreEntityTypeFeatureStatus
+public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<VertexAIFeaturestoreEntityTypeFeatureStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatusConditions>? Conditions { get; set; }
 
     /// <summary>The timestamp of when the entity type was created in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits.</summary>
     [JsonPropertyName("createTime")]
@@ -91,25 +111,30 @@ public partial class VertexAIFeaturestoreEntityTypeFeatureStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class VertexAIFeaturestoreEntityTypeFeature
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIFeaturestoreEntityTypeFeature : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec>, IStatus<V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIFeaturestoreEntityTypeFeature";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaifeaturestoreentitytypefeatures";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public VertexAIFeaturestoreEntityTypeFeatureMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public VertexAIFeaturestoreEntityTypeFeatureSpec Spec { get; set; }
+    public V1alpha1VertexAIFeaturestoreEntityTypeFeatureSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public VertexAIFeaturestoreEntityTypeFeatureStatus? Status { get; set; }
+    public V1alpha1VertexAIFeaturestoreEntityTypeFeatureStatus? Status { get; set; }
 }

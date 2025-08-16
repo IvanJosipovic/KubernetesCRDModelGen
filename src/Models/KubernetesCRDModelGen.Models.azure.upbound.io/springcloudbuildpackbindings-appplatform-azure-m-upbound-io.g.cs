@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appplatform.azure.m.upbound.io;
+/// <summary>SpringCloudBuildPackBinding is the Schema for the SpringCloudBuildPackBindings API. Manages a Spring Cloud Build Pack Binding.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpringCloudBuildPackBindingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudBuildPackBinding>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpringCloudBuildPackBindingList";
+    public const string KubeGroup = "appplatform.azure.m.upbound.io";
+    public const string KubePluralName = "springcloudbuildpackbindings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpringCloudBuildPackBinding> Items { get; set; }
+}
+
 /// <summary>A launch block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudBuildPackBindingSpecForProviderLaunch
@@ -291,30 +317,4 @@ public partial class V1beta1SpringCloudBuildPackBinding : IKubernetesObject<V1Ob
     /// <summary>SpringCloudBuildPackBindingStatus defines the observed state of SpringCloudBuildPackBinding.</summary>
     [JsonPropertyName("status")]
     public V1beta1SpringCloudBuildPackBindingStatus? Status { get; set; }
-}
-
-/// <summary>SpringCloudBuildPackBinding is the Schema for the SpringCloudBuildPackBindings API. Manages a Spring Cloud Build Pack Binding.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SpringCloudBuildPackBindingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudBuildPackBinding>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SpringCloudBuildPackBindingList";
-    public const string KubeGroup = "appplatform.azure.m.upbound.io";
-    public const string KubePluralName = "springcloudbuildpackbindings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SpringCloudBuildPackBinding> Items { get; set; }
 }

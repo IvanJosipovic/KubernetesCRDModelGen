@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>GlobalNetworkEndpointGroup is the Schema for the GlobalNetworkEndpointGroups API. A global network endpoint group contains endpoints that reside outside of Google Cloud.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GlobalNetworkEndpointGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalNetworkEndpointGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GlobalNetworkEndpointGroupList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "globalnetworkendpointgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GlobalNetworkEndpointGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GlobalNetworkEndpointGroupSpecForProvider
@@ -221,30 +247,4 @@ public partial class V1beta1GlobalNetworkEndpointGroup : IKubernetesObject<V1Obj
     /// <summary>GlobalNetworkEndpointGroupStatus defines the observed state of GlobalNetworkEndpointGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1GlobalNetworkEndpointGroupStatus? Status { get; set; }
-}
-
-/// <summary>GlobalNetworkEndpointGroup is the Schema for the GlobalNetworkEndpointGroups API. A global network endpoint group contains endpoints that reside outside of Google Cloud.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GlobalNetworkEndpointGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GlobalNetworkEndpointGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GlobalNetworkEndpointGroupList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "globalnetworkendpointgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GlobalNetworkEndpointGroup> Items { get; set; }
 }

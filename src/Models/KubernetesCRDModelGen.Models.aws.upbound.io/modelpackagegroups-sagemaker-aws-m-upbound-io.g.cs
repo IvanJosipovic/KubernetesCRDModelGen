@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+/// <summary>ModelPackageGroup is the Schema for the ModelPackageGroups API. Provides a SageMaker AI Model Package Group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ModelPackageGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ModelPackageGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ModelPackageGroupList";
+    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
+    public const string KubePluralName = "modelpackagegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ModelPackageGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ModelPackageGroupSpecForProvider
@@ -188,30 +214,4 @@ public partial class V1beta1ModelPackageGroup : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ModelPackageGroupStatus defines the observed state of ModelPackageGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1ModelPackageGroupStatus? Status { get; set; }
-}
-
-/// <summary>ModelPackageGroup is the Schema for the ModelPackageGroups API. Provides a SageMaker AI Model Package Group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ModelPackageGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ModelPackageGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ModelPackageGroupList";
-    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
-    public const string KubePluralName = "modelpackagegroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ModelPackageGroup> Items { get; set; }
 }

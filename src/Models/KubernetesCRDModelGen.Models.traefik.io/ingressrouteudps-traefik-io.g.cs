@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.traefik.io;
+/// <summary>IngressRouteUDP is a CRD implementation of a Traefik UDP Router.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IngressRouteUDPList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IngressRouteUDP>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IngressRouteUDPList";
+    public const string KubeGroup = "traefik.io";
+    public const string KubePluralName = "ingressrouteudps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1IngressRouteUDP> Items { get; set; }
+}
+
 /// <summary>ServiceUDP defines an upstream UDP service to proxy traffic to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1IngressRouteUDPSpecRoutesServices
@@ -83,30 +109,4 @@ public partial class V1alpha1IngressRouteUDP : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>IngressRouteUDPSpec defines the desired state of a IngressRouteUDP.</summary>
     [JsonPropertyName("spec")]
     public V1alpha1IngressRouteUDPSpec Spec { get; set; }
-}
-
-/// <summary>IngressRouteUDP is a CRD implementation of a Traefik UDP Router.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1IngressRouteUDPList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IngressRouteUDP>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "IngressRouteUDPList";
-    public const string KubeGroup = "traefik.io";
-    public const string KubePluralName = "ingressrouteudps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1IngressRouteUDP> Items { get; set; }
 }

@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.networkservices.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkServicesTLSRouteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkServicesTLSRoute>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkServicesTLSRouteList";
+    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkservicestlsroutes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkServicesTLSRoute> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecGateways
+public partial class V1beta1NetworkServicesTLSRouteSpecGateways
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesGateway` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class NetworkServicesTLSRouteSpecGateways
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecMeshes
+public partial class V1beta1NetworkServicesTLSRouteSpecMeshes
 {
     /// <summary>Allowed value: The `selfLink` field of a `NetworkServicesMesh` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +70,7 @@ public partial class NetworkServicesTLSRouteSpecMeshes
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecProjectRef
+public partial class V1beta1NetworkServicesTLSRouteSpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -67,7 +87,7 @@ public partial class NetworkServicesTLSRouteSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef
+public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef
 {
     /// <summary>Required. The URL of a BackendService to route traffic to.  Allowed value: The Google Cloud resource name of a `ComputeBackendService` resource (format: `projects/{{project}}/global/backendServices/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -84,11 +104,11 @@ public partial class NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRe
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecRulesActionDestinations
+public partial class V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations
 {
     /// <summary></summary>
     [JsonPropertyName("serviceRef")]
-    public NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef ServiceRef { get; set; }
+    public V1beta1NetworkServicesTLSRouteSpecRulesActionDestinationsServiceRef ServiceRef { get; set; }
 
     /// <summary>Optional. Specifies the proportion of requests forwareded to the backend referenced by the service_name field. This is computed as: weight/Sum(weights in destinations) Weights in all destinations does not need to sum up to 100.</summary>
     [JsonPropertyName("weight")]
@@ -97,16 +117,16 @@ public partial class NetworkServicesTLSRouteSpecRulesActionDestinations
 
 /// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecRulesAction
+public partial class V1beta1NetworkServicesTLSRouteSpecRulesAction
 {
     /// <summary>Required. The destination services to which traffic should be forwarded. At least one destination service is required.</summary>
     [JsonPropertyName("destinations")]
-    public IList<NetworkServicesTLSRouteSpecRulesActionDestinations> Destinations { get; set; }
+    public IList<V1beta1NetworkServicesTLSRouteSpecRulesActionDestinations> Destinations { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecRulesMatches
+public partial class V1beta1NetworkServicesTLSRouteSpecRulesMatches
 {
     /// <summary>Optional. ALPN (Application-Layer Protocol Negotiation) to match against. Examples: "http/1.1", "h2". At least one of sni_host and alpn is required. Up to 5 alpns across all matches can be set.</summary>
     [JsonPropertyName("alpn")]
@@ -119,20 +139,20 @@ public partial class NetworkServicesTLSRouteSpecRulesMatches
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpecRules
+public partial class V1beta1NetworkServicesTLSRouteSpecRules
 {
     /// <summary>Required. The detailed rule defining how to route matched traffic.</summary>
     [JsonPropertyName("action")]
-    public NetworkServicesTLSRouteSpecRulesAction Action { get; set; }
+    public V1beta1NetworkServicesTLSRouteSpecRulesAction Action { get; set; }
 
     /// <summary>Required. RouteMatch defines the predicate used to match requests to a given action. Multiple match types are "OR"ed for evaluation.</summary>
     [JsonPropertyName("matches")]
-    public IList<NetworkServicesTLSRouteSpecRulesMatches> Matches { get; set; }
+    public IList<V1beta1NetworkServicesTLSRouteSpecRulesMatches> Matches { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteSpec
+public partial class V1beta1NetworkServicesTLSRouteSpec
 {
     /// <summary>Optional. A free-text description of the resource. Max length 1024 characters.</summary>
     [JsonPropertyName("description")]
@@ -140,7 +160,7 @@ public partial class NetworkServicesTLSRouteSpec
 
     /// <summary></summary>
     [JsonPropertyName("gateways")]
-    public IList<NetworkServicesTLSRouteSpecGateways>? Gateways { get; set; }
+    public IList<V1beta1NetworkServicesTLSRouteSpecGateways>? Gateways { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -148,11 +168,11 @@ public partial class NetworkServicesTLSRouteSpec
 
     /// <summary></summary>
     [JsonPropertyName("meshes")]
-    public IList<NetworkServicesTLSRouteSpecMeshes>? Meshes { get; set; }
+    public IList<V1beta1NetworkServicesTLSRouteSpecMeshes>? Meshes { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public NetworkServicesTLSRouteSpecProjectRef ProjectRef { get; set; }
+    public V1beta1NetworkServicesTLSRouteSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -160,12 +180,12 @@ public partial class NetworkServicesTLSRouteSpec
 
     /// <summary>Required. Rules that define how traffic is routed and handled. At least one RouteRule must be supplied. If there are multiple rules then the action taken will be the first rule to match.</summary>
     [JsonPropertyName("rules")]
-    public IList<NetworkServicesTLSRouteSpecRules> Rules { get; set; }
+    public IList<V1beta1NetworkServicesTLSRouteSpecRules> Rules { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteStatusConditions
+public partial class V1beta1NetworkServicesTLSRouteStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -190,11 +210,11 @@ public partial class NetworkServicesTLSRouteStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRouteStatus
+public partial class V1beta1NetworkServicesTLSRouteStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<NetworkServicesTLSRouteStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1NetworkServicesTLSRouteStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. The timestamp when the resource was created.</summary>
     [JsonPropertyName("createTime")]
@@ -215,25 +235,30 @@ public partial class NetworkServicesTLSRouteStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class NetworkServicesTLSRoute
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkServicesTLSRoute : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1NetworkServicesTLSRouteSpec>, IStatus<V1beta1NetworkServicesTLSRouteStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkServicesTLSRoute";
+    public const string KubeGroup = "networkservices.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkservicestlsroutes";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public NetworkServicesTLSRouteMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public NetworkServicesTLSRouteSpec Spec { get; set; }
+    public V1beta1NetworkServicesTLSRouteSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public NetworkServicesTLSRouteStatus? Status { get; set; }
+    public V1beta1NetworkServicesTLSRouteStatus? Status { get; set; }
 }

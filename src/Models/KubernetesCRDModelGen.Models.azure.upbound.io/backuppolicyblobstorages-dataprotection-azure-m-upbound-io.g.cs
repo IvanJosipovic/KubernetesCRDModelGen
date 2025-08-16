@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.m.upbound.io;
+/// <summary>BackupPolicyBlobStorage is the Schema for the BackupPolicyBlobStorages API. Manages a Backup Policy Blob Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupPolicyBlobStorageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupPolicyBlobStorage>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupPolicyBlobStorageList";
+    public const string KubeGroup = "dataprotection.azure.m.upbound.io";
+    public const string KubePluralName = "backuppolicyblobstorages";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupPolicyBlobStorage> Items { get; set; }
+}
+
 /// <summary>A criteria block as defined below. Changing this forces a new Backup Policy Blob Storage to be created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyBlobStorageSpecForProviderRetentionRuleCriteria
@@ -477,30 +503,4 @@ public partial class V1beta1BackupPolicyBlobStorage : IKubernetesObject<V1Object
     /// <summary>BackupPolicyBlobStorageStatus defines the observed state of BackupPolicyBlobStorage.</summary>
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyBlobStorageStatus? Status { get; set; }
-}
-
-/// <summary>BackupPolicyBlobStorage is the Schema for the BackupPolicyBlobStorages API. Manages a Backup Policy Blob Storage.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BackupPolicyBlobStorageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupPolicyBlobStorage>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BackupPolicyBlobStorageList";
-    public const string KubeGroup = "dataprotection.azure.m.upbound.io";
-    public const string KubePluralName = "backuppolicyblobstorages";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BackupPolicyBlobStorage> Items { get; set; }
 }

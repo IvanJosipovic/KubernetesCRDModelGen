@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+/// <summary>OriginAccessIdentity is the Schema for the OriginAccessIdentitys API. Provides a CloudFront origin access identity.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OriginAccessIdentityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OriginAccessIdentity>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OriginAccessIdentityList";
+    public const string KubeGroup = "cloudfront.aws.m.upbound.io";
+    public const string KubePluralName = "originaccessidentities";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OriginAccessIdentity> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OriginAccessIdentitySpecForProvider
@@ -184,30 +210,4 @@ public partial class V1beta1OriginAccessIdentity : IKubernetesObject<V1ObjectMet
     /// <summary>OriginAccessIdentityStatus defines the observed state of OriginAccessIdentity.</summary>
     [JsonPropertyName("status")]
     public V1beta1OriginAccessIdentityStatus? Status { get; set; }
-}
-
-/// <summary>OriginAccessIdentity is the Schema for the OriginAccessIdentitys API. Provides a CloudFront origin access identity.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1OriginAccessIdentityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OriginAccessIdentity>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "OriginAccessIdentityList";
-    public const string KubeGroup = "cloudfront.aws.m.upbound.io";
-    public const string KubePluralName = "originaccessidentities";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1OriginAccessIdentity> Items { get; set; }
 }

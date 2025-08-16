@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devicefarm.aws.upbound.io;
+/// <summary>InstanceProfile is the Schema for the InstanceProfiles API. Provides a Devicefarm instance profile</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InstanceProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InstanceProfileList";
+    public const string KubeGroup = "devicefarm.aws.upbound.io";
+    public const string KubePluralName = "instanceprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1InstanceProfile> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InstanceProfileSpecForProvider
@@ -257,30 +283,4 @@ public partial class V1beta1InstanceProfile : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>InstanceProfileStatus defines the observed state of InstanceProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1InstanceProfileStatus? Status { get; set; }
-}
-
-/// <summary>InstanceProfile is the Schema for the InstanceProfiles API. Provides a Devicefarm instance profile</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1InstanceProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1InstanceProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "InstanceProfileList";
-    public const string KubeGroup = "devicefarm.aws.upbound.io";
-    public const string KubePluralName = "instanceprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1InstanceProfile> Items { get; set; }
 }

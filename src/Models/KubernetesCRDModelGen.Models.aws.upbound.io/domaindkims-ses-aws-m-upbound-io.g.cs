@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+/// <summary>DomainDKIM is the Schema for the DomainDKIMs API. Provides an SES domain DKIM generation resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainDKIMList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainDKIM>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainDKIMList";
+    public const string KubeGroup = "ses.aws.m.upbound.io";
+    public const string KubePluralName = "domaindkims";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainDKIM> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainDKIMSpecForProvider
@@ -161,30 +187,4 @@ public partial class V1beta1DomainDKIM : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>DomainDKIMStatus defines the observed state of DomainDKIM.</summary>
     [JsonPropertyName("status")]
     public V1beta1DomainDKIMStatus? Status { get; set; }
-}
-
-/// <summary>DomainDKIM is the Schema for the DomainDKIMs API. Provides an SES domain DKIM generation resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DomainDKIMList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainDKIM>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DomainDKIMList";
-    public const string KubeGroup = "ses.aws.m.upbound.io";
-    public const string KubePluralName = "domaindkims";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DomainDKIM> Items { get; set; }
 }

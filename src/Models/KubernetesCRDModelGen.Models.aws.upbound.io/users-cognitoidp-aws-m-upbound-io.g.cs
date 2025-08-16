@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.m.upbound.io;
+/// <summary>User is the Schema for the Users API. Provides a Cognito User resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserList : IKubernetesObject<V1ListMeta>, IItems<V1beta1User>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserList";
+    public const string KubeGroup = "cognitoidp.aws.m.upbound.io";
+    public const string KubePluralName = "users";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1User> Items { get; set; }
+}
+
 /// <summary>The user's permanent password. This password must conform to the password policy specified by user pool the user belongs to. The welcome message always contains only temporary_password value. You can suppress sending the welcome message with the message_action argument. Amazon Cognito does not store the password value. Conflicts with temporary_password.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserSpecForProviderPasswordSecretRef
@@ -412,30 +438,4 @@ public partial class V1beta1User : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     /// <summary>UserStatus defines the observed state of User.</summary>
     [JsonPropertyName("status")]
     public V1beta1UserStatus? Status { get; set; }
-}
-
-/// <summary>User is the Schema for the Users API. Provides a Cognito User resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1UserList : IKubernetesObject<V1ListMeta>, IItems<V1beta1User>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "UserList";
-    public const string KubeGroup = "cognitoidp.aws.m.upbound.io";
-    public const string KubePluralName = "users";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1User> Items { get; set; }
 }

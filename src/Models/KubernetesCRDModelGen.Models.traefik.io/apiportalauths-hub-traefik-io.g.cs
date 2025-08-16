@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIPortalAuth defines the authentication configuration for an APIPortal.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIPortalAuthList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIPortalAuth>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIPortalAuthList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apiportalauths";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIPortalAuth> Items { get; set; }
+}
+
 /// <summary>Claims configures JWT claim mappings for user attributes.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPortalAuthSpecOidcClaims
@@ -116,30 +142,4 @@ public partial class V1alpha1APIPortalAuth : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>The current status of this APIPortalAuth.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIPortalAuthStatus? Status { get; set; }
-}
-
-/// <summary>APIPortalAuth defines the authentication configuration for an APIPortal.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIPortalAuthList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIPortalAuth>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIPortalAuthList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apiportalauths";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIPortalAuth> Items { get; set; }
 }

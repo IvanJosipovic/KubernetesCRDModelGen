@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+/// <summary>OutputServiceBusTopic is the Schema for the OutputServiceBusTopics API. Manages a Stream Analytics Output to a ServiceBus Topic.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OutputServiceBusTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputServiceBusTopic>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OutputServiceBusTopicList";
+    public const string KubeGroup = "streamanalytics.azure.upbound.io";
+    public const string KubePluralName = "outputservicebustopics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OutputServiceBusTopic> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OutputServiceBusTopicSpecForProviderResourceGroupNameRefPolicy
@@ -885,30 +911,4 @@ public partial class V1beta1OutputServiceBusTopic : IKubernetesObject<V1ObjectMe
     /// <summary>OutputServiceBusTopicStatus defines the observed state of OutputServiceBusTopic.</summary>
     [JsonPropertyName("status")]
     public V1beta1OutputServiceBusTopicStatus? Status { get; set; }
-}
-
-/// <summary>OutputServiceBusTopic is the Schema for the OutputServiceBusTopics API. Manages a Stream Analytics Output to a ServiceBus Topic.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1OutputServiceBusTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OutputServiceBusTopic>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "OutputServiceBusTopicList";
-    public const string KubeGroup = "streamanalytics.azure.upbound.io";
-    public const string KubePluralName = "outputservicebustopics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1OutputServiceBusTopic> Items { get; set; }
 }

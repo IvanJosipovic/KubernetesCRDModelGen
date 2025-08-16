@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatchlogs.aws.m.upbound.io;
+/// <summary>DestinationPolicy is the Schema for the DestinationPolicys API. Provides a CloudWatch Logs destination policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DestinationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DestinationPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DestinationPolicyList";
+    public const string KubeGroup = "cloudwatchlogs.aws.m.upbound.io";
+    public const string KubePluralName = "destinationpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DestinationPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DestinationPolicySpecForProvider
@@ -180,30 +206,4 @@ public partial class V1beta1DestinationPolicy : IKubernetesObject<V1ObjectMeta>,
     /// <summary>DestinationPolicyStatus defines the observed state of DestinationPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1DestinationPolicyStatus? Status { get; set; }
-}
-
-/// <summary>DestinationPolicy is the Schema for the DestinationPolicys API. Provides a CloudWatch Logs destination policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DestinationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DestinationPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DestinationPolicyList";
-    public const string KubeGroup = "cloudwatchlogs.aws.m.upbound.io";
-    public const string KubePluralName = "destinationpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DestinationPolicy> Items { get; set; }
 }

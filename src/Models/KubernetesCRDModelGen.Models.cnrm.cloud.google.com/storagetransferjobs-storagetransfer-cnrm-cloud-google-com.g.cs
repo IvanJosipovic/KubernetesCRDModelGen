@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.storagetransfer.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageTransferJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StorageTransferJob>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageTransferJobList";
+    public const string KubeGroup = "storagetransfer.cnrm.cloud.google.com";
+    public const string KubePluralName = "storagetransferjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StorageTransferJob> Items { get; set; }
 }
 
 /// <summary>The PubSubTopic to which to publish notifications.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecNotificationConfigTopicRef
+public partial class V1beta1StorageTransferJobSpecNotificationConfigTopicRef
 {
     /// <summary>Allowed value: string of the format `projects/{{project}}/topics/{{value}}`, where {{value}} is the `name` field of a `PubSubTopic` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class StorageTransferJobSpecNotificationConfigTopicRef
 
 /// <summary>Notification configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecNotificationConfig
+public partial class V1beta1StorageTransferJobSpecNotificationConfig
 {
     /// <summary>Event types for which a notification is desired. If empty, send notifications for all event types. The valid types are "TRANSFER_OPERATION_SUCCESS", "TRANSFER_OPERATION_FAILED", "TRANSFER_OPERATION_ABORTED".</summary>
     [JsonPropertyName("eventTypes")]
@@ -45,12 +65,12 @@ public partial class StorageTransferJobSpecNotificationConfig
 
     /// <summary>The PubSubTopic to which to publish notifications.</summary>
     [JsonPropertyName("topicRef")]
-    public StorageTransferJobSpecNotificationConfigTopicRef TopicRef { get; set; }
+    public V1beta1StorageTransferJobSpecNotificationConfigTopicRef TopicRef { get; set; }
 }
 
 /// <summary>The last day the recurring transfer will be run. If schedule_end_date is the same as schedule_start_date, the transfer will be executed only once.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecScheduleScheduleEndDate
+public partial class V1beta1StorageTransferJobSpecScheduleScheduleEndDate
 {
     /// <summary>Day of month. Must be from 1 to 31 and valid for the year and month.</summary>
     [JsonPropertyName("day")]
@@ -67,7 +87,7 @@ public partial class StorageTransferJobSpecScheduleScheduleEndDate
 
 /// <summary>The first day the recurring transfer is scheduled to run. If schedule_start_date is in the past, the transfer will run for the first time on the following day.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecScheduleScheduleStartDate
+public partial class V1beta1StorageTransferJobSpecScheduleScheduleStartDate
 {
     /// <summary>Day of month. Must be from 1 to 31 and valid for the year and month.</summary>
     [JsonPropertyName("day")]
@@ -84,7 +104,7 @@ public partial class StorageTransferJobSpecScheduleScheduleStartDate
 
 /// <summary>The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecScheduleStartTimeOfDay
+public partial class V1beta1StorageTransferJobSpecScheduleStartTimeOfDay
 {
     /// <summary>Hours of day in 24 hour format. Should be from 0 to 23.</summary>
     [JsonPropertyName("hours")]
@@ -105,7 +125,7 @@ public partial class StorageTransferJobSpecScheduleStartTimeOfDay
 
 /// <summary>Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecSchedule
+public partial class V1beta1StorageTransferJobSpecSchedule
 {
     /// <summary>Interval between the start of each scheduled transfer. If unspecified, the default value is 24 hours. This value may not be less than 1 hour. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".</summary>
     [JsonPropertyName("repeatInterval")]
@@ -113,20 +133,20 @@ public partial class StorageTransferJobSpecSchedule
 
     /// <summary>The last day the recurring transfer will be run. If schedule_end_date is the same as schedule_start_date, the transfer will be executed only once.</summary>
     [JsonPropertyName("scheduleEndDate")]
-    public StorageTransferJobSpecScheduleScheduleEndDate? ScheduleEndDate { get; set; }
+    public V1beta1StorageTransferJobSpecScheduleScheduleEndDate? ScheduleEndDate { get; set; }
 
     /// <summary>The first day the recurring transfer is scheduled to run. If schedule_start_date is in the past, the transfer will run for the first time on the following day.</summary>
     [JsonPropertyName("scheduleStartDate")]
-    public StorageTransferJobSpecScheduleScheduleStartDate ScheduleStartDate { get; set; }
+    public V1beta1StorageTransferJobSpecScheduleScheduleStartDate ScheduleStartDate { get; set; }
 
     /// <summary>The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone.</summary>
     [JsonPropertyName("startTimeOfDay")]
-    public StorageTransferJobSpecScheduleStartTimeOfDay? StartTimeOfDay { get; set; }
+    public V1beta1StorageTransferJobSpecScheduleStartTimeOfDay? StartTimeOfDay { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -139,16 +159,16 @@ public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessK
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>AWS Key ID.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyId
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyId
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -156,12 +176,12 @@ public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessK
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom? ValueFrom { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyIdValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -174,16 +194,16 @@ public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessK
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>AWS Secret Access Key.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -191,29 +211,29 @@ public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessK
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom? ValueFrom { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKeyValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary>AWS credentials block.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKey
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKey
 {
     /// <summary>AWS Key ID.</summary>
     [JsonPropertyName("accessKeyId")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyId AccessKeyId { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeyAccessKeyId AccessKeyId { get; set; }
 
     /// <summary>AWS Secret Access Key.</summary>
     [JsonPropertyName("secretAccessKey")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey SecretAccessKey { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKeySecretAccessKey SecretAccessKey { get; set; }
 }
 
 /// <summary>An AWS S3 data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAwsS3DataSource
+public partial class V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSource
 {
     /// <summary>AWS credentials block.</summary>
     [JsonPropertyName("awsAccessKey")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKey? AwsAccessKey { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSourceAwsAccessKey? AwsAccessKey { get; set; }
 
     /// <summary>S3 Bucket name.</summary>
     [JsonPropertyName("bucketName")]
@@ -230,7 +250,7 @@ public partial class StorageTransferJobSpecTransferSpecAwsS3DataSource
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef
+public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -243,16 +263,16 @@ public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourc
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom
+public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Azure shared access signature.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken
+public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -260,25 +280,25 @@ public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourc
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom? ValueFrom { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasTokenValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary> Credentials used to authenticate API requests to Azure.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentials
+public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentials
 {
     /// <summary>Azure shared access signature.</summary>
     [JsonPropertyName("sasToken")]
-    public StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken SasToken { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentialsSasToken SasToken { get; set; }
 }
 
 /// <summary>An Azure Blob Storage data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSource
+public partial class V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSource
 {
     /// <summary> Credentials used to authenticate API requests to Azure.</summary>
     [JsonPropertyName("azureCredentials")]
-    public StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentials AzureCredentials { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourceAzureCredentials AzureCredentials { get; set; }
 
     /// <summary>The container to transfer from the Azure Storage account.</summary>
     [JsonPropertyName("container")]
@@ -295,7 +315,7 @@ public partial class StorageTransferJobSpecTransferSpecAzureBlobStorageDataSourc
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef
+public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -312,11 +332,11 @@ public partial class StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef
 
 /// <summary>A Google Cloud Storage data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecGcsDataSink
+public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSink
 {
     /// <summary></summary>
     [JsonPropertyName("bucketRef")]
-    public StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef BucketRef { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecGcsDataSinkBucketRef BucketRef { get; set; }
 
     /// <summary>Google Cloud Storage path in bucket to transfer.</summary>
     [JsonPropertyName("path")]
@@ -325,7 +345,7 @@ public partial class StorageTransferJobSpecTransferSpecGcsDataSink
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef
+public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef
 {
     /// <summary>Allowed value: The `name` field of a `StorageBucket` resource.</summary>
     [JsonPropertyName("external")]
@@ -342,11 +362,11 @@ public partial class StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef
 
 /// <summary>A Google Cloud Storage data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecGcsDataSource
+public partial class V1beta1StorageTransferJobSpecTransferSpecGcsDataSource
 {
     /// <summary></summary>
     [JsonPropertyName("bucketRef")]
-    public StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef BucketRef { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecGcsDataSourceBucketRef BucketRef { get; set; }
 
     /// <summary>Google Cloud Storage path in bucket to transfer.</summary>
     [JsonPropertyName("path")]
@@ -355,7 +375,7 @@ public partial class StorageTransferJobSpecTransferSpecGcsDataSource
 
 /// <summary>A HTTP URL data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecHttpDataSource
+public partial class V1beta1StorageTransferJobSpecTransferSpecHttpDataSource
 {
     /// <summary>The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.</summary>
     [JsonPropertyName("listUrl")]
@@ -364,7 +384,7 @@ public partial class StorageTransferJobSpecTransferSpecHttpDataSource
 
 /// <summary>Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' last_modification_time do not exclude objects in a data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecObjectConditions
+public partial class V1beta1StorageTransferJobSpecTransferSpecObjectConditions
 {
     /// <summary>exclude_prefixes must follow the requirements described for include_prefixes.</summary>
     [JsonPropertyName("excludePrefixes")]
@@ -393,7 +413,7 @@ public partial class StorageTransferJobSpecTransferSpecObjectConditions
 
 /// <summary>A POSIX filesystem data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecPosixDataSink
+public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSink
 {
     /// <summary>Root directory path to the filesystem.</summary>
     [JsonPropertyName("rootDirectory")]
@@ -402,7 +422,7 @@ public partial class StorageTransferJobSpecTransferSpecPosixDataSink
 
 /// <summary>A POSIX filesystem data source.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecPosixDataSource
+public partial class V1beta1StorageTransferJobSpecTransferSpecPosixDataSource
 {
     /// <summary>Root directory path to the filesystem.</summary>
     [JsonPropertyName("rootDirectory")]
@@ -411,7 +431,7 @@ public partial class StorageTransferJobSpecTransferSpecPosixDataSource
 
 /// <summary>Characteristics of how to treat files from datasource and sink during job. If the option delete_objects_unique_in_sink is true, object conditions based on objects' last_modification_time are ignored and do not exclude objects in a data source or a data sink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpecTransferOptions
+public partial class V1beta1StorageTransferJobSpecTransferSpecTransferOptions
 {
     /// <summary>Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and delete_objects_unique_in_sink are mutually exclusive.</summary>
     [JsonPropertyName("deleteObjectsFromSourceAfterTransfer")]
@@ -432,39 +452,39 @@ public partial class StorageTransferJobSpecTransferSpecTransferOptions
 
 /// <summary>Transfer specification.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpecTransferSpec
+public partial class V1beta1StorageTransferJobSpecTransferSpec
 {
     /// <summary>An AWS S3 data source.</summary>
     [JsonPropertyName("awsS3DataSource")]
-    public StorageTransferJobSpecTransferSpecAwsS3DataSource? AwsS3DataSource { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAwsS3DataSource? AwsS3DataSource { get; set; }
 
     /// <summary>An Azure Blob Storage data source.</summary>
     [JsonPropertyName("azureBlobStorageDataSource")]
-    public StorageTransferJobSpecTransferSpecAzureBlobStorageDataSource? AzureBlobStorageDataSource { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecAzureBlobStorageDataSource? AzureBlobStorageDataSource { get; set; }
 
     /// <summary>A Google Cloud Storage data sink.</summary>
     [JsonPropertyName("gcsDataSink")]
-    public StorageTransferJobSpecTransferSpecGcsDataSink? GcsDataSink { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecGcsDataSink? GcsDataSink { get; set; }
 
     /// <summary>A Google Cloud Storage data source.</summary>
     [JsonPropertyName("gcsDataSource")]
-    public StorageTransferJobSpecTransferSpecGcsDataSource? GcsDataSource { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecGcsDataSource? GcsDataSource { get; set; }
 
     /// <summary>A HTTP URL data source.</summary>
     [JsonPropertyName("httpDataSource")]
-    public StorageTransferJobSpecTransferSpecHttpDataSource? HttpDataSource { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecHttpDataSource? HttpDataSource { get; set; }
 
     /// <summary>Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' last_modification_time do not exclude objects in a data sink.</summary>
     [JsonPropertyName("objectConditions")]
-    public StorageTransferJobSpecTransferSpecObjectConditions? ObjectConditions { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecObjectConditions? ObjectConditions { get; set; }
 
     /// <summary>A POSIX filesystem data sink.</summary>
     [JsonPropertyName("posixDataSink")]
-    public StorageTransferJobSpecTransferSpecPosixDataSink? PosixDataSink { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecPosixDataSink? PosixDataSink { get; set; }
 
     /// <summary>A POSIX filesystem data source.</summary>
     [JsonPropertyName("posixDataSource")]
-    public StorageTransferJobSpecTransferSpecPosixDataSource? PosixDataSource { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecPosixDataSource? PosixDataSource { get; set; }
 
     /// <summary>Immutable. Specifies the agent pool name associated with the posix data source. When unspecified, the default name is used.</summary>
     [JsonPropertyName("sinkAgentPoolName")]
@@ -476,12 +496,12 @@ public partial class StorageTransferJobSpecTransferSpec
 
     /// <summary>Characteristics of how to treat files from datasource and sink during job. If the option delete_objects_unique_in_sink is true, object conditions based on objects' last_modification_time are ignored and do not exclude objects in a data source or a data sink.</summary>
     [JsonPropertyName("transferOptions")]
-    public StorageTransferJobSpecTransferSpecTransferOptions? TransferOptions { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpecTransferOptions? TransferOptions { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobSpec
+public partial class V1beta1StorageTransferJobSpec
 {
     /// <summary>Unique description to identify the Transfer Job.</summary>
     [JsonPropertyName("description")]
@@ -489,7 +509,7 @@ public partial class StorageTransferJobSpec
 
     /// <summary>Notification configuration.</summary>
     [JsonPropertyName("notificationConfig")]
-    public StorageTransferJobSpecNotificationConfig? NotificationConfig { get; set; }
+    public V1beta1StorageTransferJobSpecNotificationConfig? NotificationConfig { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -497,7 +517,7 @@ public partial class StorageTransferJobSpec
 
     /// <summary>Schedule specification defining when the Transfer Job should be scheduled to start, end and what time to run.</summary>
     [JsonPropertyName("schedule")]
-    public StorageTransferJobSpecSchedule? Schedule { get; set; }
+    public V1beta1StorageTransferJobSpecSchedule? Schedule { get; set; }
 
     /// <summary>Status of the job. Default: ENABLED. NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.</summary>
     [JsonPropertyName("status")]
@@ -505,12 +525,12 @@ public partial class StorageTransferJobSpec
 
     /// <summary>Transfer specification.</summary>
     [JsonPropertyName("transferSpec")]
-    public StorageTransferJobSpecTransferSpec TransferSpec { get; set; }
+    public V1beta1StorageTransferJobSpecTransferSpec TransferSpec { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobStatusConditions
+public partial class V1beta1StorageTransferJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -535,11 +555,11 @@ public partial class StorageTransferJobStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJobStatus
+public partial class V1beta1StorageTransferJobStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<StorageTransferJobStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1StorageTransferJobStatusConditions>? Conditions { get; set; }
 
     /// <summary>When the Transfer Job was created.</summary>
     [JsonPropertyName("creationTime")]
@@ -564,25 +584,30 @@ public partial class StorageTransferJobStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageTransferJob
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageTransferJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageTransferJobSpec>, IStatus<V1beta1StorageTransferJobStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageTransferJob";
+    public const string KubeGroup = "storagetransfer.cnrm.cloud.google.com";
+    public const string KubePluralName = "storagetransferjobs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public StorageTransferJobMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public StorageTransferJobSpec Spec { get; set; }
+    public V1beta1StorageTransferJobSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public StorageTransferJobStatus? Status { get; set; }
+    public V1beta1StorageTransferJobStatus? Status { get; set; }
 }

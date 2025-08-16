@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>SharedVPCHostProject is the Schema for the SharedVPCHostProjects API. Enables the Google Compute Engine Shared VPC feature for a project, assigning it as a host project.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SharedVPCHostProjectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SharedVPCHostProject>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SharedVPCHostProjectList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "sharedvpchostprojects";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SharedVPCHostProject> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedVPCHostProjectSpecForProviderProjectRefPolicy
@@ -309,30 +335,4 @@ public partial class V1beta1SharedVPCHostProject : IKubernetesObject<V1ObjectMet
     /// <summary>SharedVPCHostProjectStatus defines the observed state of SharedVPCHostProject.</summary>
     [JsonPropertyName("status")]
     public V1beta1SharedVPCHostProjectStatus? Status { get; set; }
-}
-
-/// <summary>SharedVPCHostProject is the Schema for the SharedVPCHostProjects API. Enables the Google Compute Engine Shared VPC feature for a project, assigning it as a host project.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SharedVPCHostProjectList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SharedVPCHostProject>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SharedVPCHostProjectList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "sharedvpchostprojects";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SharedVPCHostProject> Items { get; set; }
 }

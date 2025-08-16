@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.alloydb.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AlloyDBUserList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AlloyDBUser>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AlloyDBUserList";
+    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
+    public const string KubePluralName = "alloydbusers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AlloyDBUser> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserSpecClusterRef
+public partial class V1beta1AlloyDBUserSpecClusterRef
 {
     /// <summary>Allowed value: The `name` field of an `AlloyDBCluster` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class AlloyDBUserSpecClusterRef
 
 /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserSpecPasswordValueFromSecretKeyRef
+public partial class V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef
 {
     /// <summary>Key that identifies the value to be extracted.</summary>
     [JsonPropertyName("key")]
@@ -46,16 +66,16 @@ public partial class AlloyDBUserSpecPasswordValueFromSecretKeyRef
 
 /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserSpecPasswordValueFrom
+public partial class V1beta1AlloyDBUserSpecPasswordValueFrom
 {
     /// <summary>Reference to a value with the given key in the given Secret in the resource's namespace.</summary>
     [JsonPropertyName("secretKeyRef")]
-    public AlloyDBUserSpecPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
+    public V1beta1AlloyDBUserSpecPasswordValueFromSecretKeyRef? SecretKeyRef { get; set; }
 }
 
 /// <summary>Password for this database user.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserSpecPassword
+public partial class V1beta1AlloyDBUserSpecPassword
 {
     /// <summary>Value of the field. Cannot be used if 'valueFrom' is specified.</summary>
     [JsonPropertyName("value")]
@@ -63,16 +83,16 @@ public partial class AlloyDBUserSpecPassword
 
     /// <summary>Source for the field's value. Cannot be used if 'value' is specified.</summary>
     [JsonPropertyName("valueFrom")]
-    public AlloyDBUserSpecPasswordValueFrom? ValueFrom { get; set; }
+    public V1beta1AlloyDBUserSpecPasswordValueFrom? ValueFrom { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserSpec
+public partial class V1beta1AlloyDBUserSpec
 {
     /// <summary></summary>
     [JsonPropertyName("clusterRef")]
-    public AlloyDBUserSpecClusterRef ClusterRef { get; set; }
+    public V1beta1AlloyDBUserSpecClusterRef ClusterRef { get; set; }
 
     /// <summary>List of database roles this database user has.</summary>
     [JsonPropertyName("databaseRoles")]
@@ -80,7 +100,7 @@ public partial class AlloyDBUserSpec
 
     /// <summary>Password for this database user.</summary>
     [JsonPropertyName("password")]
-    public AlloyDBUserSpecPassword? Password { get; set; }
+    public V1beta1AlloyDBUserSpecPassword? Password { get; set; }
 
     /// <summary>Immutable. Optional. The userId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -93,7 +113,7 @@ public partial class AlloyDBUserSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserStatusConditions
+public partial class V1beta1AlloyDBUserStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -118,11 +138,11 @@ public partial class AlloyDBUserStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUserStatus
+public partial class V1beta1AlloyDBUserStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AlloyDBUserStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1AlloyDBUserStatusConditions>? Conditions { get; set; }
 
     /// <summary>Name of the resource in the form of projects/{project}/locations/{location}/clusters/{cluster}/users/{user}.</summary>
     [JsonPropertyName("name")]
@@ -135,25 +155,30 @@ public partial class AlloyDBUserStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AlloyDBUser
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AlloyDBUser : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1AlloyDBUserSpec>, IStatus<V1beta1AlloyDBUserStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AlloyDBUser";
+    public const string KubeGroup = "alloydb.cnrm.cloud.google.com";
+    public const string KubePluralName = "alloydbusers";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AlloyDBUserMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AlloyDBUserSpec Spec { get; set; }
+    public V1beta1AlloyDBUserSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AlloyDBUserStatus? Status { get; set; }
+    public V1beta1AlloyDBUserStatus? Status { get; set; }
 }

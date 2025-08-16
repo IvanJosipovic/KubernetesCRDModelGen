@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.com;
+/// <summary>Storage version of v1api20220301.Site Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220301storageSiteList : IKubernetesObject<V1ListMeta>, IItems<V1api20220301storageSite>
+{
+    public const string KubeApiVersion = "v1api20220301storage";
+    public const string KubeKind = "SiteList";
+    public const string KubeGroup = "web.azure.com";
+    public const string KubePluralName = "sites";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220301storageSite> Items { get; set; }
+}
+
 /// <summary>SourceWebAppReference: ARM resource ID of the source app. App resource ID is of the form /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName} for production slots and /subscriptions/{subId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{siteName}/slots/{slotName} for other slots.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220301storageSiteSpecCloningInfoSourceWebAppReference
@@ -2821,30 +2847,4 @@ public partial class V1api20220301storageSite : IKubernetesObject<V1ObjectMeta>,
     /// <summary>Storage version of v1api20220301.Site_STATUS A web app, a mobile app backend, or an API app.</summary>
     [JsonPropertyName("status")]
     public V1api20220301storageSiteStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20220301.Site Generator information: - Generated from: /web/resource-manager/Microsoft.Web/stable/2022-03-01/WebApps.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220301storageSiteList : IKubernetesObject<V1ListMeta>, IItems<V1api20220301storageSite>
-{
-    public const string KubeApiVersion = "v1api20220301storage";
-    public const string KubeKind = "SiteList";
-    public const string KubeGroup = "web.azure.com";
-    public const string KubePluralName = "sites";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20220301storageSite> Items { get; set; }
 }

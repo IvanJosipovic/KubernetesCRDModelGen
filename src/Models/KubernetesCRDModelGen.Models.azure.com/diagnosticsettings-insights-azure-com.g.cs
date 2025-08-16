@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.com;
+/// <summary>Storage version of v1api20210501preview.DiagnosticSetting Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/preview/2021-05-01-preview/diagnosticsSettings_API.json - ARM URI: /{resourceUri}/providers/Microsoft.Insights/diagnosticSettings/{name}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20210501previewstorageDiagnosticSettingList : IKubernetesObject<V1ListMeta>, IItems<V1api20210501previewstorageDiagnosticSetting>
+{
+    public const string KubeApiVersion = "v1api20210501previewstorage";
+    public const string KubeKind = "DiagnosticSettingList";
+    public const string KubeGroup = "insights.azure.com";
+    public const string KubePluralName = "diagnosticsettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20210501previewstorageDiagnosticSetting> Items { get; set; }
+}
+
 /// <summary>EventHubAuthorizationRuleReference: The resource Id for the event hub authorization rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210501previewstorageDiagnosticSettingSpecEventHubAuthorizationRuleReference
@@ -552,30 +578,4 @@ public partial class V1api20210501previewstorageDiagnosticSetting : IKubernetesO
     /// <summary>Storage version of v1api20210501preview.DiagnosticSetting_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20210501previewstorageDiagnosticSettingStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20210501preview.DiagnosticSetting Generator information: - Generated from: /monitor/resource-manager/Microsoft.Insights/preview/2021-05-01-preview/diagnosticsSettings_API.json - ARM URI: /{resourceUri}/providers/Microsoft.Insights/diagnosticSettings/{name}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20210501previewstorageDiagnosticSettingList : IKubernetesObject<V1ListMeta>, IItems<V1api20210501previewstorageDiagnosticSetting>
-{
-    public const string KubeApiVersion = "v1api20210501previewstorage";
-    public const string KubeKind = "DiagnosticSettingList";
-    public const string KubeGroup = "insights.azure.com";
-    public const string KubePluralName = "diagnosticsettings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20210501previewstorageDiagnosticSetting> Items { get; set; }
 }

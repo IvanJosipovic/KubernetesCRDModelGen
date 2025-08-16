@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workspace.databricks.crossplane.io;
+/// <summary>GlobalInitScript is the Schema for the GlobalInitScripts API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1GlobalInitScriptList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1GlobalInitScript>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "GlobalInitScriptList";
+    public const string KubeGroup = "workspace.databricks.crossplane.io";
+    public const string KubePluralName = "globalinitscripts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1GlobalInitScript> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1GlobalInitScriptSpecForProvider
@@ -305,30 +331,4 @@ public partial class V1alpha1GlobalInitScript : IKubernetesObject<V1ObjectMeta>,
     /// <summary>GlobalInitScriptStatus defines the observed state of GlobalInitScript.</summary>
     [JsonPropertyName("status")]
     public V1alpha1GlobalInitScriptStatus? Status { get; set; }
-}
-
-/// <summary>GlobalInitScript is the Schema for the GlobalInitScripts API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1GlobalInitScriptList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1GlobalInitScript>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "GlobalInitScriptList";
-    public const string KubeGroup = "workspace.databricks.crossplane.io";
-    public const string KubePluralName = "globalinitscripts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1GlobalInitScript> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.licensemanager.aws.m.upbound.io;
+/// <summary>LicenseConfiguration is the Schema for the LicenseConfigurations API. Provides a License Manager license configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LicenseConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LicenseConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LicenseConfigurationList";
+    public const string KubeGroup = "licensemanager.aws.m.upbound.io";
+    public const string KubePluralName = "licenseconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LicenseConfiguration> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LicenseConfigurationSpecForProvider
@@ -252,30 +278,4 @@ public partial class V1beta1LicenseConfiguration : IKubernetesObject<V1ObjectMet
     /// <summary>LicenseConfigurationStatus defines the observed state of LicenseConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1LicenseConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>LicenseConfiguration is the Schema for the LicenseConfigurations API. Provides a License Manager license configuration resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LicenseConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LicenseConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LicenseConfigurationList";
-    public const string KubeGroup = "licensemanager.aws.m.upbound.io";
-    public const string KubePluralName = "licenseconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LicenseConfiguration> Items { get; set; }
 }

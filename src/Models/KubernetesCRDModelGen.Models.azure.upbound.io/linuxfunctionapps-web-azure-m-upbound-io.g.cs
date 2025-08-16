@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.m.upbound.io;
+/// <summary>LinuxFunctionApp is the Schema for the LinuxFunctionApps API. Manages a Linux Function App.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinuxFunctionAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinuxFunctionApp>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinuxFunctionAppList";
+    public const string KubeGroup = "web.azure.m.upbound.io";
+    public const string KubePluralName = "linuxfunctionapps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinuxFunctionApp> Items { get; set; }
+}
+
 /// <summary>The OAuth 2.0 client secret that was created for the app used for authentication. Cannot be specified with client_secret_setting_name. The Client Secret for the Client ID. Cannot be used with `client_secret_setting_name`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinuxFunctionAppSpecForProviderAuthSettingsActiveDirectoryClientSecretSecretRef
@@ -4761,30 +4787,4 @@ public partial class V1beta1LinuxFunctionApp : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>LinuxFunctionAppStatus defines the observed state of LinuxFunctionApp.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinuxFunctionAppStatus? Status { get; set; }
-}
-
-/// <summary>LinuxFunctionApp is the Schema for the LinuxFunctionApps API. Manages a Linux Function App.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinuxFunctionAppList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinuxFunctionApp>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinuxFunctionAppList";
-    public const string KubeGroup = "web.azure.m.upbound.io";
-    public const string KubePluralName = "linuxfunctionapps";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LinuxFunctionApp> Items { get; set; }
 }

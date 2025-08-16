@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIBundle defines a set of APIs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIBundleList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIBundle>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIBundleList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apibundles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIBundle> Items { get; set; }
+}
+
 /// <summary>A label selector requirement is a selector that contains values, a key, and an operator that relates the key and values.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIBundleSpecApiSelectorMatchExpressions
@@ -109,30 +135,4 @@ public partial class V1alpha1APIBundle : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>The current status of this APIBundle.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIBundleStatus? Status { get; set; }
-}
-
-/// <summary>APIBundle defines a set of APIs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIBundleList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIBundle>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIBundleList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apibundles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIBundle> Items { get; set; }
 }

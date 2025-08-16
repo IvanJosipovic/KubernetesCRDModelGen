@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.evidently.aws.upbound.io;
+/// <summary>Feature is the Schema for the Features API. Provides a CloudWatch Evidently Feature resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FeatureList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Feature>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FeatureList";
+    public const string KubeGroup = "evidently.aws.upbound.io";
+    public const string KubePluralName = "features";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Feature> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FeatureSpecForProviderProjectRefPolicy
@@ -464,30 +490,4 @@ public partial class V1beta1Feature : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>FeatureStatus defines the observed state of Feature.</summary>
     [JsonPropertyName("status")]
     public V1beta1FeatureStatus? Status { get; set; }
-}
-
-/// <summary>Feature is the Schema for the Features API. Provides a CloudWatch Evidently Feature resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FeatureList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Feature>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FeatureList";
-    public const string KubeGroup = "evidently.aws.upbound.io";
-    public const string KubePluralName = "features";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Feature> Items { get; set; }
 }

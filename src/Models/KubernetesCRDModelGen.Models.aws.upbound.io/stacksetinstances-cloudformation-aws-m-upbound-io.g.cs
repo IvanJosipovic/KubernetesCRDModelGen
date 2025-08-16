@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudformation.aws.m.upbound.io;
+/// <summary>StackSetInstance is the Schema for the StackSetInstances API. Manages a CloudFormation StackSet Instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StackSetInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StackSetInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StackSetInstanceList";
+    public const string KubeGroup = "cloudformation.aws.m.upbound.io";
+    public const string KubePluralName = "stacksetinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StackSetInstance> Items { get; set; }
+}
+
 /// <summary>AWS Organizations accounts to which StackSets deploys. StackSets doesn't deploy stack instances to the organization management account, even if the organization management account is in your organization or in an OU in your organization. Drift detection is not possible for this argument. See deployment_targets below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetInstanceSpecForProviderDeploymentTargets
@@ -587,30 +613,4 @@ public partial class V1beta1StackSetInstance : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>StackSetInstanceStatus defines the observed state of StackSetInstance.</summary>
     [JsonPropertyName("status")]
     public V1beta1StackSetInstanceStatus? Status { get; set; }
-}
-
-/// <summary>StackSetInstance is the Schema for the StackSetInstances API. Manages a CloudFormation StackSet Instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StackSetInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StackSetInstance>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StackSetInstanceList";
-    public const string KubeGroup = "cloudformation.aws.m.upbound.io";
-    public const string KubePluralName = "stacksetinstances";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StackSetInstance> Items { get; set; }
 }

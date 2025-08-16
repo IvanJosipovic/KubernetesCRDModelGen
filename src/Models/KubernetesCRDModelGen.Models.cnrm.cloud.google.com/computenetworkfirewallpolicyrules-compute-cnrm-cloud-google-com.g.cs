@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeNetworkFirewallPolicyRule>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeNetworkFirewallPolicyRuleList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenetworkfirewallpolicyrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeNetworkFirewallPolicyRule> Items { get; set; }
 }
 
 /// <summary>The firewall policy of the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef
 {
     /// <summary>Allowed value: The `networkFirewallPolicyId` field of a `ComputeNetworkFirewallPolicy` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs
 {
     /// <summary>The IP protocol to which this rule applies. The protocol type is required when creating a firewall rule. This value can either be one of the following well known protocol strings (`tcp`, `udp`, `icmp`, `esp`, `ah`, `ipip`, `sctp`), or the IP protocol number.</summary>
     [JsonPropertyName("ipProtocol")]
@@ -46,7 +66,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags
 {
     /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.</summary>
     [JsonPropertyName("name")]
@@ -59,7 +79,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags
 
 /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecMatch
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch
 {
     /// <summary>Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10. Destination address groups is only supported in Egress rules.</summary>
     [JsonPropertyName("destAddressGroups")]
@@ -83,7 +103,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecMatch
 
     /// <summary>Pairs of IP protocols and ports that the rule should match.</summary>
     [JsonPropertyName("layer4Configs")]
-    public IList<ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs> Layer4Configs { get; set; }
+    public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchLayer4Configs> Layer4Configs { get; set; }
 
     /// <summary>Address groups which should be matched against the traffic source. Maximum number of source address groups is 10. Source address groups is only supported in Ingress rules.</summary>
     [JsonPropertyName("srcAddressGroups")]
@@ -103,7 +123,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecMatch
 
     /// <summary>List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the &lt;code&gt;srcSecureTag&lt;/code&gt; are INEFFECTIVE, and there is no &lt;code&gt;srcIpRange&lt;/code&gt;, this rule will be ignored. Maximum number of source tag values allowed is 256.</summary>
     [JsonPropertyName("srcSecureTags")]
-    public IList<ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags>? SrcSecureTags { get; set; }
+    public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatchSrcSecureTags>? SrcSecureTags { get; set; }
 
     /// <summary>Name of the Google Cloud Threat Intelligence list.</summary>
     [JsonPropertyName("srcThreatIntelligences")]
@@ -112,7 +132,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecMatch
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecProjectRef
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -129,7 +149,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags
 {
     /// <summary>Name of the secure tag, created with TagManager's TagValue API. @pattern tagValues/[0-9]+.</summary>
     [JsonPropertyName("name")]
@@ -142,7 +162,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags
 
 /// <summary>A list of service accounts indicating the sets of instances that are applied with this rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -159,7 +179,7 @@ public partial class ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleSpec
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleSpec
 {
     /// <summary>The Action to perform when the client connection triggers the rule. Valid actions are "allow", "deny" and "goto_next".</summary>
     [JsonPropertyName("action")]
@@ -183,15 +203,15 @@ public partial class ComputeNetworkFirewallPolicyRuleSpec
 
     /// <summary>The firewall policy of the resource.</summary>
     [JsonPropertyName("firewallPolicyRef")]
-    public ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef FirewallPolicyRef { get; set; }
+    public V1alpha1ComputeNetworkFirewallPolicyRuleSpecFirewallPolicyRef FirewallPolicyRef { get; set; }
 
     /// <summary>A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.</summary>
     [JsonPropertyName("match")]
-    public ComputeNetworkFirewallPolicyRuleSpecMatch Match { get; set; }
+    public V1alpha1ComputeNetworkFirewallPolicyRuleSpecMatch Match { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeNetworkFirewallPolicyRuleSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeNetworkFirewallPolicyRuleSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The priority of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -203,16 +223,16 @@ public partial class ComputeNetworkFirewallPolicyRuleSpec
 
     /// <summary>A list of secure tags that controls which instances the firewall rule applies to. If &lt;code&gt;targetSecureTag&lt;/code&gt; are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. &lt;code&gt;targetSecureTag&lt;/code&gt; may not be set at the same time as &lt;code&gt;targetServiceAccounts&lt;/code&gt;. If neither &lt;code&gt;targetServiceAccounts&lt;/code&gt; nor &lt;code&gt;targetSecureTag&lt;/code&gt; are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.</summary>
     [JsonPropertyName("targetSecureTags")]
-    public IList<ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags>? TargetSecureTags { get; set; }
+    public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetSecureTags>? TargetSecureTags { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("targetServiceAccountRefs")]
-    public IList<ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs>? TargetServiceAccountRefs { get; set; }
+    public IList<V1alpha1ComputeNetworkFirewallPolicyRuleSpecTargetServiceAccountRefs>? TargetServiceAccountRefs { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleStatusConditions
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -237,11 +257,11 @@ public partial class ComputeNetworkFirewallPolicyRuleStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRuleStatus
+public partial class V1alpha1ComputeNetworkFirewallPolicyRuleStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeNetworkFirewallPolicyRuleStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeNetworkFirewallPolicyRuleStatusConditions>? Conditions { get; set; }
 
     /// <summary>Type of the resource. Always `compute#firewallPolicyRule` for firewall policy rules.</summary>
     [JsonPropertyName("kind")]
@@ -258,25 +278,30 @@ public partial class ComputeNetworkFirewallPolicyRuleStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeNetworkFirewallPolicyRule
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeNetworkFirewallPolicyRule : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeNetworkFirewallPolicyRuleSpec>, IStatus<V1alpha1ComputeNetworkFirewallPolicyRuleStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeNetworkFirewallPolicyRule";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computenetworkfirewallpolicyrules";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeNetworkFirewallPolicyRuleMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeNetworkFirewallPolicyRuleSpec Spec { get; set; }
+    public V1alpha1ComputeNetworkFirewallPolicyRuleSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeNetworkFirewallPolicyRuleStatus? Status { get; set; }
+    public V1alpha1ComputeNetworkFirewallPolicyRuleStatus? Status { get; set; }
 }

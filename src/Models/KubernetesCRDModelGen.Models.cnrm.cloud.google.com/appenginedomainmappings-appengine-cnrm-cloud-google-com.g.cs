@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMappingMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineDomainMappingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AppEngineDomainMapping>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineDomainMappingList";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appenginedomainmappings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AppEngineDomainMapping> Items { get; set; }
 }
 
 /// <summary>SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMappingSpecSslSettings
+public partial class V1alpha1AppEngineDomainMappingSpecSslSettings
 {
     /// <summary>ID of the AuthorizedCertificate resource configuring SSL for the application. Clearing this field will remove SSL support. By default, a managed certificate is automatically created for every domain mapping. To omit SSL support or to configure SSL manually, specify 'SslManagementType.MANUAL' on a 'CREATE' or 'UPDATE' request. You must be authorized to administer the 'AuthorizedCertificate' resource to manually map it to a DomainMapping resource. Example: 12345.</summary>
     [JsonPropertyName("certificateId")]
@@ -33,7 +53,7 @@ public partial class AppEngineDomainMappingSpecSslSettings
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMappingSpec
+public partial class V1alpha1AppEngineDomainMappingSpec
 {
     /// <summary>Whether the domain creation should override any existing mappings for this domain. By default, overrides are rejected. Default value: "STRICT" Possible values: ["STRICT", "OVERRIDE"].</summary>
     [JsonPropertyName("overrideStrategy")]
@@ -49,12 +69,12 @@ public partial class AppEngineDomainMappingSpec
 
     /// <summary>SSL configuration for this domain. If unconfigured, this domain will not serve with SSL.</summary>
     [JsonPropertyName("sslSettings")]
-    public AppEngineDomainMappingSpecSslSettings? SslSettings { get; set; }
+    public V1alpha1AppEngineDomainMappingSpecSslSettings? SslSettings { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMappingStatusConditions
+public partial class V1alpha1AppEngineDomainMappingStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -79,7 +99,7 @@ public partial class AppEngineDomainMappingStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMappingStatusResourceRecords
+public partial class V1alpha1AppEngineDomainMappingStatusResourceRecords
 {
     /// <summary>Relative name of the object affected by this record. Only applicable for CNAME records. Example: 'www'.</summary>
     [JsonPropertyName("name")]
@@ -96,11 +116,11 @@ public partial class AppEngineDomainMappingStatusResourceRecords
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMappingStatus
+public partial class V1alpha1AppEngineDomainMappingStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AppEngineDomainMappingStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AppEngineDomainMappingStatusConditions>? Conditions { get; set; }
 
     /// <summary>Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.</summary>
     [JsonPropertyName("name")]
@@ -112,30 +132,35 @@ public partial class AppEngineDomainMappingStatus
 
     /// <summary>The resource records required to configure this domain mapping. These records must be added to the domain's DNS configuration in order to serve the application via this domain mapping.</summary>
     [JsonPropertyName("resourceRecords")]
-    public IList<AppEngineDomainMappingStatusResourceRecords>? ResourceRecords { get; set; }
+    public IList<V1alpha1AppEngineDomainMappingStatusResourceRecords>? ResourceRecords { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineDomainMapping
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineDomainMapping : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineDomainMappingSpec>, IStatus<V1alpha1AppEngineDomainMappingStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineDomainMapping";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appenginedomainmappings";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AppEngineDomainMappingMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AppEngineDomainMappingSpec? Spec { get; set; }
+    public V1alpha1AppEngineDomainMappingSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AppEngineDomainMappingStatus? Status { get; set; }
+    public V1alpha1AppEngineDomainMappingStatus? Status { get; set; }
 }

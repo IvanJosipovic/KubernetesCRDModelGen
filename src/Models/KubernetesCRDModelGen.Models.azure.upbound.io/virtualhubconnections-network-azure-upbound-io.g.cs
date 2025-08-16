@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>VirtualHubConnection is the Schema for the VirtualHubConnections API. Manages a Connection for a Virtual Hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualHubConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualHubConnectionList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "virtualhubconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualHubConnection> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubConnectionSpecForProviderRemoteVirtualNetworkIdRefPolicy
@@ -722,30 +748,4 @@ public partial class V1beta1VirtualHubConnection : IKubernetesObject<V1ObjectMet
     /// <summary>VirtualHubConnectionStatus defines the observed state of VirtualHubConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualHubConnectionStatus? Status { get; set; }
-}
-
-/// <summary>VirtualHubConnection is the Schema for the VirtualHubConnections API. Manages a Connection for a Virtual Hub.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualHubConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualHubConnectionList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "virtualhubconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualHubConnection> Items { get; set; }
 }

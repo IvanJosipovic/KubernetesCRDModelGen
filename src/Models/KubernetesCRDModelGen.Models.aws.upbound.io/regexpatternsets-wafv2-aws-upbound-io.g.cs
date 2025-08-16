@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafv2.aws.upbound.io;
+/// <summary>RegexPatternSet is the Schema for the RegexPatternSets API. Provides an AWS WAFv2 Regex Pattern Set resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegexPatternSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegexPatternSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegexPatternSetList";
+    public const string KubeGroup = "wafv2.aws.upbound.io";
+    public const string KubePluralName = "regexpatternsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegexPatternSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexPatternSetSpecForProviderRegularExpression
@@ -276,30 +302,4 @@ public partial class V1beta1RegexPatternSet : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>RegexPatternSetStatus defines the observed state of RegexPatternSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegexPatternSetStatus? Status { get; set; }
-}
-
-/// <summary>RegexPatternSet is the Schema for the RegexPatternSets API. Provides an AWS WAFv2 Regex Pattern Set resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegexPatternSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegexPatternSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegexPatternSetList";
-    public const string KubeGroup = "wafv2.aws.upbound.io";
-    public const string KubePluralName = "regexpatternsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegexPatternSet> Items { get; set; }
 }

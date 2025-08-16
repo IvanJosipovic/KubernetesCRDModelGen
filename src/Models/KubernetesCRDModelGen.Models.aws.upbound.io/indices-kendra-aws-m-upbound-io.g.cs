@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kendra.aws.m.upbound.io;
+/// <summary>Index is the Schema for the Indexs API. Provides an Amazon Kendra Index resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IndexList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Index>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IndexList";
+    public const string KubeGroup = "kendra.aws.m.upbound.io";
+    public const string KubePluralName = "indices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Index> Items { get; set; }
+}
+
 /// <summary>A block that sets the number of additional document storage and query capacity units that should be used by the index. Detailed below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IndexSpecForProviderCapacityUnits
@@ -966,30 +992,4 @@ public partial class V1beta1Index : IKubernetesObject<V1ObjectMeta>, ISpec<V1bet
     /// <summary>IndexStatus defines the observed state of Index.</summary>
     [JsonPropertyName("status")]
     public V1beta1IndexStatus? Status { get; set; }
-}
-
-/// <summary>Index is the Schema for the Indexs API. Provides an Amazon Kendra Index resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IndexList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Index>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IndexList";
-    public const string KubeGroup = "kendra.aws.m.upbound.io";
-    public const string KubePluralName = "indices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Index> Items { get; set; }
 }

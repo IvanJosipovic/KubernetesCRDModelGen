@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elb.aws.m.upbound.io;
+/// <summary>LBCookieStickinessPolicy is the Schema for the LBCookieStickinessPolicys API. Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LBCookieStickinessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBCookieStickinessPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LBCookieStickinessPolicyList";
+    public const string KubeGroup = "elb.aws.m.upbound.io";
+    public const string KubePluralName = "lbcookiestickinesspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LBCookieStickinessPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LBCookieStickinessPolicySpecForProviderLoadBalancerRefPolicy
@@ -348,30 +374,4 @@ public partial class V1beta1LBCookieStickinessPolicy : IKubernetesObject<V1Objec
     /// <summary>LBCookieStickinessPolicyStatus defines the observed state of LBCookieStickinessPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1LBCookieStickinessPolicyStatus? Status { get; set; }
-}
-
-/// <summary>LBCookieStickinessPolicy is the Schema for the LBCookieStickinessPolicys API. Provides a load balancer cookie stickiness policy, which allows an ELB to control the sticky session lifetime of the browser.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LBCookieStickinessPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LBCookieStickinessPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LBCookieStickinessPolicyList";
-    public const string KubeGroup = "elb.aws.m.upbound.io";
-    public const string KubePluralName = "lbcookiestickinesspolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LBCookieStickinessPolicy> Items { get; set; }
 }

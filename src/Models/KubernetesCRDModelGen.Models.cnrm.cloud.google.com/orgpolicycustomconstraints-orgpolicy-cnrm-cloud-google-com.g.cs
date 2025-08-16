@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.orgpolicy.cnrm.cloud.google.com;
+/// <summary>OrgPolicyCustomConstraint is the Schema for the OrgPolicyCustomConstraint API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1OrgPolicyCustomConstraintList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1OrgPolicyCustomConstraint>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "OrgPolicyCustomConstraintList";
+    public const string KubeGroup = "orgpolicy.cnrm.cloud.google.com";
+    public const string KubePluralName = "orgpolicycustomconstraints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1OrgPolicyCustomConstraint> Items { get; set; }
+}
+
 /// <summary>The Organization that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyCustomConstraintSpecOrganizationRef
@@ -137,30 +163,4 @@ public partial class V1alpha1OrgPolicyCustomConstraint : IKubernetesObject<V1Obj
     /// <summary>OrgPolicyCustomConstraintStatus defines the config connector machine state of OrgPolicyCustomConstraint</summary>
     [JsonPropertyName("status")]
     public V1alpha1OrgPolicyCustomConstraintStatus? Status { get; set; }
-}
-
-/// <summary>OrgPolicyCustomConstraint is the Schema for the OrgPolicyCustomConstraint API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1OrgPolicyCustomConstraintList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1OrgPolicyCustomConstraint>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "OrgPolicyCustomConstraintList";
-    public const string KubeGroup = "orgpolicy.cnrm.cloud.google.com";
-    public const string KubePluralName = "orgpolicycustomconstraints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1OrgPolicyCustomConstraint> Items { get; set; }
 }

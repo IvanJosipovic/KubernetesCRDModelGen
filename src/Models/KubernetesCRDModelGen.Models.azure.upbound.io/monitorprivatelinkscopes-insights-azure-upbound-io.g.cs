@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>MonitorPrivateLinkScope is the Schema for the MonitorPrivateLinkScopes API. Manages an Azure Monitor Private Link Scope</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitorPrivateLinkScopeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitorPrivateLinkScope>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitorPrivateLinkScopeList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "monitorprivatelinkscopes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MonitorPrivateLinkScope> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorPrivateLinkScopeSpecForProviderResourceGroupNameRefPolicy
@@ -277,30 +303,4 @@ public partial class V1beta1MonitorPrivateLinkScope : IKubernetesObject<V1Object
     /// <summary>MonitorPrivateLinkScopeStatus defines the observed state of MonitorPrivateLinkScope.</summary>
     [JsonPropertyName("status")]
     public V1beta1MonitorPrivateLinkScopeStatus? Status { get; set; }
-}
-
-/// <summary>MonitorPrivateLinkScope is the Schema for the MonitorPrivateLinkScopes API. Manages an Azure Monitor Private Link Scope</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitorPrivateLinkScopeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitorPrivateLinkScope>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitorPrivateLinkScopeList";
-    public const string KubeGroup = "insights.azure.upbound.io";
-    public const string KubePluralName = "monitorprivatelinkscopes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MonitorPrivateLinkScope> Items { get; set; }
 }

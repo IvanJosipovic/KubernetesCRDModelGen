@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.configservice.aws.upbound.io;
+/// <summary>ConfigRule is the Schema for the ConfigRules API. Provides an AWS Config Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConfigRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConfigRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConfigRuleList";
+    public const string KubeGroup = "configservice.aws.upbound.io";
+    public const string KubePluralName = "configrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConfigRule> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConfigRuleSpecForProviderEvaluationMode
@@ -656,30 +682,4 @@ public partial class V1beta1ConfigRule : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>ConfigRuleStatus defines the observed state of ConfigRule.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConfigRuleStatus? Status { get; set; }
-}
-
-/// <summary>ConfigRule is the Schema for the ConfigRules API. Provides an AWS Config Rule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConfigRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConfigRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConfigRuleList";
-    public const string KubeGroup = "configservice.aws.upbound.io";
-    public const string KubePluralName = "configrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ConfigRule> Items { get; set; }
 }

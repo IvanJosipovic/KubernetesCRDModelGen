@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.beyondcorp.gcp.m.upbound.io;
+/// <summary>AppConnector is the Schema for the AppConnectors API. A BeyondCorp AppConnector resource represents an application facing component deployed proximal to and with direct access to the application instances.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppConnectorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppConnector>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppConnectorList";
+    public const string KubeGroup = "beyondcorp.gcp.m.upbound.io";
+    public const string KubePluralName = "appconnectors";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppConnector> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppConnectorSpecForProviderPrincipalInfoServiceAccountEmailRefPolicy
@@ -414,30 +440,4 @@ public partial class V1beta1AppConnector : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>AppConnectorStatus defines the observed state of AppConnector.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppConnectorStatus? Status { get; set; }
-}
-
-/// <summary>AppConnector is the Schema for the AppConnectors API. A BeyondCorp AppConnector resource represents an application facing component deployed proximal to and with direct access to the application instances.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppConnectorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppConnector>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppConnectorList";
-    public const string KubeGroup = "beyondcorp.gcp.m.upbound.io";
-    public const string KubePluralName = "appconnectors";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppConnector> Items { get; set; }
 }

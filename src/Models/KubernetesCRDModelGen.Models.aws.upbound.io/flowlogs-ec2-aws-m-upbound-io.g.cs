@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>FlowLog is the Schema for the FlowLogs API. Provides a VPC/Subnet/ENI Flow Log</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FlowLogList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FlowLog>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FlowLogList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "flowlogs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FlowLog> Items { get; set; }
+}
+
 /// <summary>Describes the destination options for a flow log. More details below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FlowLogSpecForProviderDestinationOptions
@@ -959,30 +985,4 @@ public partial class V1beta1FlowLog : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>FlowLogStatus defines the observed state of FlowLog.</summary>
     [JsonPropertyName("status")]
     public V1beta1FlowLogStatus? Status { get; set; }
-}
-
-/// <summary>FlowLog is the Schema for the FlowLogs API. Provides a VPC/Subnet/ENI Flow Log</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FlowLogList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FlowLog>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FlowLogList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "flowlogs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FlowLog> Items { get; set; }
 }

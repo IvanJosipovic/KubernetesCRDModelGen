@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.m.upbound.io;
+/// <summary>ResponseHeadersPolicy is the Schema for the ResponseHeadersPolicys API. Provides a CloudFront response headers policy resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResponseHeadersPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResponseHeadersPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResponseHeadersPolicyList";
+    public const string KubeGroup = "cloudfront.aws.m.upbound.io";
+    public const string KubePluralName = "responseheaderspolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResponseHeadersPolicy> Items { get; set; }
+}
+
 /// <summary>Object that contains an attribute items that contains a list of HTTP header names that CloudFront includes as values for the Access-Control-Allow-Headers HTTP response header.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResponseHeadersPolicySpecForProviderCorsConfigAccessControlAllowHeaders
@@ -975,30 +1001,4 @@ public partial class V1beta1ResponseHeadersPolicy : IKubernetesObject<V1ObjectMe
     /// <summary>ResponseHeadersPolicyStatus defines the observed state of ResponseHeadersPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResponseHeadersPolicyStatus? Status { get; set; }
-}
-
-/// <summary>ResponseHeadersPolicy is the Schema for the ResponseHeadersPolicys API. Provides a CloudFront response headers policy resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResponseHeadersPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResponseHeadersPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResponseHeadersPolicyList";
-    public const string KubeGroup = "cloudfront.aws.m.upbound.io";
-    public const string KubePluralName = "responseheaderspolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ResponseHeadersPolicy> Items { get; set; }
 }

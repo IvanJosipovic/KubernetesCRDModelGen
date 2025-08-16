@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.upbound.io;
+/// <summary>MultiRegionAccessPoint is the Schema for the MultiRegionAccessPoints API. Provides a resource to manage an S3 Multi-Region Access Point associated with specified buckets.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MultiRegionAccessPointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MultiRegionAccessPoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MultiRegionAccessPointList";
+    public const string KubeGroup = "s3control.aws.upbound.io";
+    public const string KubePluralName = "multiregionaccesspoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MultiRegionAccessPoint> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MultiRegionAccessPointSpecForProviderDetailsPublicAccessBlock
@@ -421,30 +447,4 @@ public partial class V1beta1MultiRegionAccessPoint : IKubernetesObject<V1ObjectM
     /// <summary>MultiRegionAccessPointStatus defines the observed state of MultiRegionAccessPoint.</summary>
     [JsonPropertyName("status")]
     public V1beta1MultiRegionAccessPointStatus? Status { get; set; }
-}
-
-/// <summary>MultiRegionAccessPoint is the Schema for the MultiRegionAccessPoints API. Provides a resource to manage an S3 Multi-Region Access Point associated with specified buckets.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MultiRegionAccessPointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MultiRegionAccessPoint>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MultiRegionAccessPointList";
-    public const string KubeGroup = "s3control.aws.upbound.io";
-    public const string KubePluralName = "multiregionaccesspoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MultiRegionAccessPoint> Items { get; set; }
 }

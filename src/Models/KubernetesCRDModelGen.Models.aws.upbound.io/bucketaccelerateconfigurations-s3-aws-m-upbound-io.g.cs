@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3.aws.m.upbound.io;
+/// <summary>BucketAccelerateConfiguration is the Schema for the BucketAccelerateConfigurations API. Provides an S3 bucket accelerate configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BucketAccelerateConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BucketAccelerateConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BucketAccelerateConfigurationList";
+    public const string KubeGroup = "s3.aws.m.upbound.io";
+    public const string KubePluralName = "bucketaccelerateconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BucketAccelerateConfiguration> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BucketAccelerateConfigurationSpecForProviderBucketRefPolicy
@@ -336,30 +362,4 @@ public partial class V1beta1BucketAccelerateConfiguration : IKubernetesObject<V1
     /// <summary>BucketAccelerateConfigurationStatus defines the observed state of BucketAccelerateConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1BucketAccelerateConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>BucketAccelerateConfiguration is the Schema for the BucketAccelerateConfigurations API. Provides an S3 bucket accelerate configuration resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BucketAccelerateConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BucketAccelerateConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BucketAccelerateConfigurationList";
-    public const string KubeGroup = "s3.aws.m.upbound.io";
-    public const string KubePluralName = "bucketaccelerateconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BucketAccelerateConfiguration> Items { get; set; }
 }

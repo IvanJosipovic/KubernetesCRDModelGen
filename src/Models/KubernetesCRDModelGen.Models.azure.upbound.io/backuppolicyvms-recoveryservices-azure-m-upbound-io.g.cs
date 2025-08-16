@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.recoveryservices.azure.m.upbound.io;
+/// <summary>BackupPolicyVM is the Schema for the BackupPolicyVMs API. Manages an Azure Backup VM Backup Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupPolicyVMList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupPolicyVM>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupPolicyVMList";
+    public const string KubeGroup = "recoveryservices.azure.m.upbound.io";
+    public const string KubePluralName = "backuppolicyvms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupPolicyVM> Items { get; set; }
+}
+
 /// <summary>Configures the Policy backup frequency, times &amp; days as documented in the backup block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupPolicyVMSpecForProviderBackup
@@ -848,30 +874,4 @@ public partial class V1beta1BackupPolicyVM : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>BackupPolicyVMStatus defines the observed state of BackupPolicyVM.</summary>
     [JsonPropertyName("status")]
     public V1beta1BackupPolicyVMStatus? Status { get; set; }
-}
-
-/// <summary>BackupPolicyVM is the Schema for the BackupPolicyVMs API. Manages an Azure Backup VM Backup Policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BackupPolicyVMList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupPolicyVM>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BackupPolicyVMList";
-    public const string KubeGroup = "recoveryservices.azure.m.upbound.io";
-    public const string KubePluralName = "backuppolicyvms";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BackupPolicyVM> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.gcp.m.upbound.io;
+/// <summary>ObjectACL is the Schema for the ObjectACLs API. Creates a new object ACL in Google Cloud Storage.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ObjectACLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ObjectACL>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ObjectACLList";
+    public const string KubeGroup = "storage.gcp.m.upbound.io";
+    public const string KubePluralName = "objectacls";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ObjectACL> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ObjectACLSpecForProviderBucketRefPolicy
@@ -484,30 +510,4 @@ public partial class V1beta1ObjectACL : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>ObjectACLStatus defines the observed state of ObjectACL.</summary>
     [JsonPropertyName("status")]
     public V1beta1ObjectACLStatus? Status { get; set; }
-}
-
-/// <summary>ObjectACL is the Schema for the ObjectACLs API. Creates a new object ACL in Google Cloud Storage.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ObjectACLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ObjectACL>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ObjectACLList";
-    public const string KubeGroup = "storage.gcp.m.upbound.io";
-    public const string KubePluralName = "objectacls";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ObjectACL> Items { get; set; }
 }

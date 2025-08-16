@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eks.aws.m.upbound.io;
+/// <summary>AccessEntry is the Schema for the AccessEntrys API. Access Entry Configurations for an EKS Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccessEntryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessEntry>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccessEntryList";
+    public const string KubeGroup = "eks.aws.m.upbound.io";
+    public const string KubePluralName = "accessentries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccessEntry> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessEntrySpecForProviderClusterNameRefPolicy
@@ -380,30 +406,4 @@ public partial class V1beta1AccessEntry : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>AccessEntryStatus defines the observed state of AccessEntry.</summary>
     [JsonPropertyName("status")]
     public V1beta1AccessEntryStatus? Status { get; set; }
-}
-
-/// <summary>AccessEntry is the Schema for the AccessEntrys API. Access Entry Configurations for an EKS Cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccessEntryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessEntry>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccessEntryList";
-    public const string KubeGroup = "eks.aws.m.upbound.io";
-    public const string KubePluralName = "accessentries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AccessEntry> Items { get; set; }
 }

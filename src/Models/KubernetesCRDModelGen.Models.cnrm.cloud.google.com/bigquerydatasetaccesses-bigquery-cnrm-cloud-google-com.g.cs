@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryDatasetAccessList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BigQueryDatasetAccess>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryDatasetAccessList";
+    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigquerydatasetaccesses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BigQueryDatasetAccess> Items { get; set; }
 }
 
 /// <summary>Immutable. The dataset this entry applies to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessSpecDatasetDataset
+public partial class V1alpha1BigQueryDatasetAccessSpecDatasetDataset
 {
     /// <summary>Immutable. The ID of the dataset containing this table.</summary>
     [JsonPropertyName("datasetId")]
@@ -29,11 +49,11 @@ public partial class BigQueryDatasetAccessSpecDatasetDataset
 
 /// <summary>Immutable. Grants all resources of particular types in a particular dataset read access to the current dataset.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessSpecDataset
+public partial class V1alpha1BigQueryDatasetAccessSpecDataset
 {
     /// <summary>Immutable. The dataset this entry applies to.</summary>
     [JsonPropertyName("dataset")]
-    public BigQueryDatasetAccessSpecDatasetDataset Dataset { get; set; }
+    public V1alpha1BigQueryDatasetAccessSpecDatasetDataset Dataset { get; set; }
 
     /// <summary>Immutable. Which resources in the dataset this entry applies to. Currently, only views are supported, but additional target types may be added in the future. Possible values: VIEWS.</summary>
     [JsonPropertyName("targetTypes")]
@@ -42,7 +62,7 @@ public partial class BigQueryDatasetAccessSpecDataset
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessSpecProjectRef
+public partial class V1alpha1BigQueryDatasetAccessSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -59,7 +79,7 @@ public partial class BigQueryDatasetAccessSpecProjectRef
 
 /// <summary>Immutable. A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessSpecView
+public partial class V1alpha1BigQueryDatasetAccessSpecView
 {
     /// <summary>Immutable. The ID of the dataset containing this table.</summary>
     [JsonPropertyName("datasetId")]
@@ -76,11 +96,11 @@ public partial class BigQueryDatasetAccessSpecView
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessSpec
+public partial class V1alpha1BigQueryDatasetAccessSpec
 {
     /// <summary>Immutable. Grants all resources of particular types in a particular dataset read access to the current dataset.</summary>
     [JsonPropertyName("dataset")]
-    public BigQueryDatasetAccessSpecDataset? Dataset { get; set; }
+    public V1alpha1BigQueryDatasetAccessSpecDataset? Dataset { get; set; }
 
     /// <summary>Immutable. A unique ID for this dataset, without the project name. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 1,024 characters.</summary>
     [JsonPropertyName("datasetId")]
@@ -100,7 +120,7 @@ public partial class BigQueryDatasetAccessSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public BigQueryDatasetAccessSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1BigQueryDatasetAccessSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The routine of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -120,12 +140,12 @@ public partial class BigQueryDatasetAccessSpec
 
     /// <summary>Immutable. A view from a different dataset to grant access to. Queries executed against that view will have read access to tables in this dataset. The role field is not required when this field is set. If that view is updated by any user, access to the view needs to be granted again via an update operation.</summary>
     [JsonPropertyName("view")]
-    public BigQueryDatasetAccessSpecView? View { get; set; }
+    public V1alpha1BigQueryDatasetAccessSpecView? View { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessStatusConditions
+public partial class V1alpha1BigQueryDatasetAccessStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -150,7 +170,7 @@ public partial class BigQueryDatasetAccessStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccessStatus
+public partial class V1alpha1BigQueryDatasetAccessStatus
 {
     /// <summary>If true, represents that that the iam_member in the config was translated to a different member type by the API, and is stored in state as a different member type.</summary>
     [JsonPropertyName("apiUpdatedMember")]
@@ -158,7 +178,7 @@ public partial class BigQueryDatasetAccessStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BigQueryDatasetAccessStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1BigQueryDatasetAccessStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -167,25 +187,30 @@ public partial class BigQueryDatasetAccessStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigQueryDatasetAccess
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BigQueryDatasetAccess : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1BigQueryDatasetAccessSpec>, IStatus<V1alpha1BigQueryDatasetAccessStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BigQueryDatasetAccess";
+    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigquerydatasetaccesses";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigQueryDatasetAccessMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BigQueryDatasetAccessSpec Spec { get; set; }
+    public V1alpha1BigQueryDatasetAccessSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BigQueryDatasetAccessStatus? Status { get; set; }
+    public V1alpha1BigQueryDatasetAccessStatus? Status { get; set; }
 }

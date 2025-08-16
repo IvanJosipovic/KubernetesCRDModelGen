@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.snapshot.storage.k8s.io;
+/// <summary>VolumeSnapshotContent represents the actual "on-disk" snapshot object in the underlying storage system</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1VolumeSnapshotContentList : IKubernetesObject<V1ListMeta>, IItems<V1VolumeSnapshotContent>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "VolumeSnapshotContentList";
+    public const string KubeGroup = "snapshot.storage.k8s.io";
+    public const string KubePluralName = "volumesnapshotcontents";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1VolumeSnapshotContent> Items { get; set; }
+}
+
 /// <summary>source specifies whether the snapshot is (or should be) dynamically provisioned or already exists, and just requires a Kubernetes object representation. This field is immutable after creation. Required.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1VolumeSnapshotContentSpecSource
@@ -153,30 +179,4 @@ public partial class V1VolumeSnapshotContent : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>status represents the current information of a snapshot.</summary>
     [JsonPropertyName("status")]
     public V1VolumeSnapshotContentStatus? Status { get; set; }
-}
-
-/// <summary>VolumeSnapshotContent represents the actual "on-disk" snapshot object in the underlying storage system</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1VolumeSnapshotContentList : IKubernetesObject<V1ListMeta>, IItems<V1VolumeSnapshotContent>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "VolumeSnapshotContentList";
-    public const string KubeGroup = "snapshot.storage.k8s.io";
-    public const string KubePluralName = "volumesnapshotcontents";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1VolumeSnapshotContent> Items { get; set; }
 }

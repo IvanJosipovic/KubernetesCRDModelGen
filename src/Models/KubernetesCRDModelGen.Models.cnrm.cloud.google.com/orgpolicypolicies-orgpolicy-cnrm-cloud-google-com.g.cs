@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.orgpolicy.cnrm.cloud.google.com;
+/// <summary>OrgPolicyPolicy is the Schema for the OrgPolicyPolicy API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1OrgPolicyPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1OrgPolicyPolicy>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "OrgPolicyPolicyList";
+    public const string KubeGroup = "orgpolicy.cnrm.cloud.google.com";
+    public const string KubePluralName = "orgpolicypolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1OrgPolicyPolicy> Items { get; set; }
+}
+
 /// <summary>A condition which determines whether this rule is used in the evaluation of the policy. When set, the `expression` field in the `Expr' must include from 1 to 10 subexpressions, joined by the "||" or "&amp;&amp;" operators. Each subexpression must be of the form "resource.matchTag('&lt;ORG_ID&gt;/tag_key_short_name, 'tag_value_short_name')". or "resource.matchTagId('tagKeys/key_id', 'tagValues/value_id')". where key_name and value_name are the resource names for Label Keys and Values. These names are available from the Tag Manager Service. An example expression is: "resource.matchTag('123456789/environment, 'prod')". or "resource.matchTagId('tagKeys/123', 'tagValues/456')".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1OrgPolicyPolicySpecDryRunSpecRulesCondition
@@ -353,30 +379,4 @@ public partial class V1alpha1OrgPolicyPolicy : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>OrgPolicyPolicyStatus defines the config connector machine state of OrgPolicyPolicy</summary>
     [JsonPropertyName("status")]
     public V1alpha1OrgPolicyPolicyStatus? Status { get; set; }
-}
-
-/// <summary>OrgPolicyPolicy is the Schema for the OrgPolicyPolicy API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1OrgPolicyPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1OrgPolicyPolicy>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "OrgPolicyPolicyList";
-    public const string KubeGroup = "orgpolicy.cnrm.cloud.google.com";
-    public const string KubePluralName = "orgpolicypolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1OrgPolicyPolicy> Items { get; set; }
 }

@@ -8,9 +8,35 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventing.knative.dev;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1RequestReplyList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1RequestReply>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "RequestReplyList";
+    public const string KubeGroup = "eventing.knative.dev";
+    public const string KubePluralName = "requestreplies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1RequestReply> Items { get; set; }
+}
+
 /// <summary>A KReference referring to the broker this RequestReply forwards events to. CrossNamespace references are not allowed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplySpecBrokerRef
+public partial class V1alpha1RequestReplySpecBrokerRef
 {
     /// <summary>API Version of the broker.</summary>
     [JsonPropertyName("apiVersion")]
@@ -27,11 +53,11 @@ public partial class RequestReplySpecBrokerRef
 
 /// <summary>Spec defines the desired state of the RequestReply.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplySpec
+public partial class V1alpha1RequestReplySpec
 {
     /// <summary>A KReference referring to the broker this RequestReply forwards events to. CrossNamespace references are not allowed.</summary>
     [JsonPropertyName("brokerRef")]
-    public RequestReplySpecBrokerRef? BrokerRef { get; set; }
+    public V1alpha1RequestReplySpecBrokerRef? BrokerRef { get; set; }
 
     /// <summary>The name of the cloudevent attribute where the correlation id will be set on new events.</summary>
     [JsonPropertyName("correlationAttribute")]
@@ -56,7 +82,7 @@ public partial class RequestReplySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplyStatusConditions
+public partial class V1alpha1RequestReplyStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -85,7 +111,7 @@ public partial class RequestReplyStatusConditions
 
 /// <summary>RequestReply is Addressable. It exposes the endpoint as an URI to get events delivered.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplyStatusAddress
+public partial class V1alpha1RequestReplyStatusAddress
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -106,7 +132,7 @@ public partial class RequestReplyStatusAddress
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplyStatusAddresses
+public partial class V1alpha1RequestReplyStatusAddresses
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -127,7 +153,7 @@ public partial class RequestReplyStatusAddresses
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplyStatusPolicies
+public partial class V1alpha1RequestReplyStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates whichversion of EventPolicy is supported by the resource.</summary>
     [JsonPropertyName("apiVersion")]
@@ -140,7 +166,7 @@ public partial class RequestReplyStatusPolicies
 
 /// <summary>Status represents the current state of the RequestReply. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReplyStatus
+public partial class V1alpha1RequestReplyStatus
 {
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -148,19 +174,19 @@ public partial class RequestReplyStatus
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<RequestReplyStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1RequestReplyStatusConditions>? Conditions { get; set; }
 
     /// <summary>RequestReply is Addressable. It exposes the endpoint as an URI to get events delivered.</summary>
     [JsonPropertyName("address")]
-    public RequestReplyStatusAddress? Address { get; set; }
+    public V1alpha1RequestReplyStatusAddress? Address { get; set; }
 
     /// <summary>RequestReply is Addressable. It exposes the endpoints as URIs to get events delivered.</summary>
     [JsonPropertyName("addresses")]
-    public IList<RequestReplyStatusAddresses>? Addresses { get; set; }
+    public IList<V1alpha1RequestReplyStatusAddresses>? Addresses { get; set; }
 
     /// <summary>List of applied EventPolicies</summary>
     [JsonPropertyName("policies")]
-    public IList<RequestReplyStatusPolicies>? Policies { get; set; }
+    public IList<V1alpha1RequestReplyStatusPolicies>? Policies { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -169,13 +195,30 @@ public partial class RequestReplyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class RequestReply
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1RequestReply : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1RequestReplySpec>, IStatus<V1alpha1RequestReplyStatus>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "RequestReply";
+    public const string KubeGroup = "eventing.knative.dev";
+    public const string KubePluralName = "requestreplies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary>Spec defines the desired state of the RequestReply.</summary>
     [JsonPropertyName("spec")]
-    public RequestReplySpec? Spec { get; set; }
+    public V1alpha1RequestReplySpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the RequestReply. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public RequestReplyStatus? Status { get; set; }
+    public V1alpha1RequestReplyStatus? Status { get; set; }
 }

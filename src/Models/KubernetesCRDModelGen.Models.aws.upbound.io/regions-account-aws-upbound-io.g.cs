@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.account.aws.upbound.io;
+/// <summary>Region is the Schema for the Regions API. Enable (Opt-In) or Disable (Opt-Out) a particular Region for an AWS account</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Region>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegionList";
+    public const string KubeGroup = "account.aws.upbound.io";
+    public const string KubePluralName = "regions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Region> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegionSpecForProvider
@@ -205,30 +231,4 @@ public partial class V1beta1Region : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>RegionStatus defines the observed state of Region.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegionStatus? Status { get; set; }
-}
-
-/// <summary>Region is the Schema for the Regions API. Enable (Opt-In) or Disable (Opt-Out) a particular Region for an AWS account</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Region>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegionList";
-    public const string KubeGroup = "account.aws.upbound.io";
-    public const string KubePluralName = "regions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Region> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.aws.m.upbound.io;
+/// <summary>JobDefinition is the Schema for the JobDefinitions API. Provides a Batch Job Definition resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1JobDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1JobDefinition>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "JobDefinitionList";
+    public const string KubeGroup = "batch.aws.m.upbound.io";
+    public const string KubePluralName = "jobdefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1JobDefinition> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1JobDefinitionSpecForProviderEksPropertiesPodPropertiesContainersEnv
@@ -1495,30 +1521,4 @@ public partial class V1beta1JobDefinition : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>JobDefinitionStatus defines the observed state of JobDefinition.</summary>
     [JsonPropertyName("status")]
     public V1beta1JobDefinitionStatus? Status { get; set; }
-}
-
-/// <summary>JobDefinition is the Schema for the JobDefinitions API. Provides a Batch Job Definition resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1JobDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1JobDefinition>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "JobDefinitionList";
-    public const string KubeGroup = "batch.aws.m.upbound.io";
-    public const string KubePluralName = "jobdefinitions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1JobDefinition> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.upbound.io;
+/// <summary>ProjectBucketConfig is the Schema for the ProjectBucketConfigs API. Manages a project-level logging bucket config.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectBucketConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectBucketConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectBucketConfigList";
+    public const string KubeGroup = "logging.gcp.upbound.io";
+    public const string KubePluralName = "projectbucketconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProjectBucketConfig> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectBucketConfigSpecForProviderCmekSettingsKmsKeyNameRefPolicy
@@ -543,30 +569,4 @@ public partial class V1beta1ProjectBucketConfig : IKubernetesObject<V1ObjectMeta
     /// <summary>ProjectBucketConfigStatus defines the observed state of ProjectBucketConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProjectBucketConfigStatus? Status { get; set; }
-}
-
-/// <summary>ProjectBucketConfig is the Schema for the ProjectBucketConfigs API. Manages a project-level logging bucket config.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProjectBucketConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectBucketConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProjectBucketConfigList";
-    public const string KubeGroup = "logging.gcp.upbound.io";
-    public const string KubePluralName = "projectbucketconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProjectBucketConfig> Items { get; set; }
 }

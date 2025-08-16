@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firebaserules.gcp.upbound.io;
+/// <summary>Ruleset is the Schema for the Rulesets API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RulesetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Ruleset>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RulesetList";
+    public const string KubeGroup = "firebaserules.gcp.upbound.io";
+    public const string KubePluralName = "rulesets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Ruleset> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RulesetSpecForProviderSourceFiles
@@ -304,30 +330,4 @@ public partial class V1beta1Ruleset : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>RulesetStatus defines the observed state of Ruleset.</summary>
     [JsonPropertyName("status")]
     public V1beta1RulesetStatus? Status { get; set; }
-}
-
-/// <summary>Ruleset is the Schema for the Rulesets API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RulesetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Ruleset>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RulesetList";
-    public const string KubeGroup = "firebaserules.gcp.upbound.io";
-    public const string KubePluralName = "rulesets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Ruleset> Items { get; set; }
 }

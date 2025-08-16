@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workstations.cnrm.cloud.google.com;
+/// <summary>WorkstationConfig is the Schema for the WorkstationConfig API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkstationConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkstationConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkstationConfigList";
+    public const string KubeGroup = "workstations.cnrm.cloud.google.com";
+    public const string KubePluralName = "workstationconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkstationConfig> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkstationConfigSpecAnnotations
@@ -487,30 +513,4 @@ public partial class V1beta1WorkstationConfig : IKubernetesObject<V1ObjectMeta>,
     /// <summary>WorkstationConfigStatus defines the config connector machine state of WorkstationConfig</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkstationConfigStatus? Status { get; set; }
-}
-
-/// <summary>WorkstationConfig is the Schema for the WorkstationConfig API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkstationConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkstationConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkstationConfigList";
-    public const string KubeGroup = "workstations.cnrm.cloud.google.com";
-    public const string KubePluralName = "workstationconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WorkstationConfig> Items { get; set; }
 }

@@ -10,6 +10,32 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.extensions.istio.io;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1WasmPluginList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WasmPlugin>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "WasmPluginList";
+    public const string KubeGroup = "extensions.istio.io";
+    public const string KubePluralName = "wasmplugins";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1WasmPlugin> Items { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WasmPluginSpecMatchPorts
 {
     /// <summary></summary>
@@ -204,30 +230,4 @@ public partial class V1alpha1WasmPlugin : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary></summary>
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WasmPluginList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WasmPlugin>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "WasmPluginList";
-    public const string KubeGroup = "extensions.istio.io";
-    public const string KubePluralName = "wasmplugins";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1WasmPlugin> Items { get; set; }
 }

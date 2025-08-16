@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeTargetVPNGatewayMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeTargetVPNGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeTargetVPNGateway>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeTargetVPNGatewayList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computetargetvpngateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeTargetVPNGateway> Items { get; set; }
 }
 
 /// <summary>The network this VPN gateway is accepting traffic for.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeTargetVPNGatewaySpecNetworkRef
+public partial class V1beta1ComputeTargetVPNGatewaySpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ComputeTargetVPNGatewaySpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeTargetVPNGatewaySpec
+public partial class V1beta1ComputeTargetVPNGatewaySpec
 {
     /// <summary>Immutable. An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -41,7 +61,7 @@ public partial class ComputeTargetVPNGatewaySpec
 
     /// <summary>The network this VPN gateway is accepting traffic for.</summary>
     [JsonPropertyName("networkRef")]
-    public ComputeTargetVPNGatewaySpecNetworkRef NetworkRef { get; set; }
+    public V1beta1ComputeTargetVPNGatewaySpecNetworkRef NetworkRef { get; set; }
 
     /// <summary>Immutable. The region this gateway should sit in.</summary>
     [JsonPropertyName("region")]
@@ -54,7 +74,7 @@ public partial class ComputeTargetVPNGatewaySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeTargetVPNGatewayStatusConditions
+public partial class V1beta1ComputeTargetVPNGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -79,11 +99,11 @@ public partial class ComputeTargetVPNGatewayStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeTargetVPNGatewayStatus
+public partial class V1beta1ComputeTargetVPNGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeTargetVPNGatewayStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1ComputeTargetVPNGatewayStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -104,25 +124,30 @@ public partial class ComputeTargetVPNGatewayStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeTargetVPNGateway
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeTargetVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1ComputeTargetVPNGatewaySpec>, IStatus<V1beta1ComputeTargetVPNGatewayStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeTargetVPNGateway";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computetargetvpngateways";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeTargetVPNGatewayMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeTargetVPNGatewaySpec Spec { get; set; }
+    public V1beta1ComputeTargetVPNGatewaySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeTargetVPNGatewayStatus? Status { get; set; }
+    public V1beta1ComputeTargetVPNGatewayStatus? Status { get; set; }
 }

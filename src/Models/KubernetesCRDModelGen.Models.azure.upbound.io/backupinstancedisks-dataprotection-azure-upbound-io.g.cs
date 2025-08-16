@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataprotection.azure.upbound.io;
+/// <summary>BackupInstanceDisk is the Schema for the BackupInstanceDisks API. Manages a Backup Instance to back up Disk.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BackupInstanceDiskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupInstanceDisk>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BackupInstanceDiskList";
+    public const string KubeGroup = "dataprotection.azure.upbound.io";
+    public const string KubePluralName = "backupinstancedisks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BackupInstanceDisk> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BackupInstanceDiskSpecForProviderBackupPolicyIdRefPolicy
@@ -673,30 +699,4 @@ public partial class V1beta1BackupInstanceDisk : IKubernetesObject<V1ObjectMeta>
     /// <summary>BackupInstanceDiskStatus defines the observed state of BackupInstanceDisk.</summary>
     [JsonPropertyName("status")]
     public V1beta1BackupInstanceDiskStatus? Status { get; set; }
-}
-
-/// <summary>BackupInstanceDisk is the Schema for the BackupInstanceDisks API. Manages a Backup Instance to back up Disk.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BackupInstanceDiskList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BackupInstanceDisk>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BackupInstanceDiskList";
-    public const string KubeGroup = "dataprotection.azure.upbound.io";
-    public const string KubePluralName = "backupinstancedisks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BackupInstanceDisk> Items { get; set; }
 }

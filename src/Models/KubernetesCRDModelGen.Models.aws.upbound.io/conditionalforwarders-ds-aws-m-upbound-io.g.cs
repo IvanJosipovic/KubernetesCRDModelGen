@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ds.aws.m.upbound.io;
+/// <summary>ConditionalForwarder is the Schema for the ConditionalForwarders API. Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConditionalForwarderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConditionalForwarder>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConditionalForwarderList";
+    public const string KubeGroup = "ds.aws.m.upbound.io";
+    public const string KubePluralName = "conditionalforwarders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConditionalForwarder> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConditionalForwarderSpecForProviderDirectoryIdRefPolicy
@@ -256,30 +282,4 @@ public partial class V1beta1ConditionalForwarder : IKubernetesObject<V1ObjectMet
     /// <summary>ConditionalForwarderStatus defines the observed state of ConditionalForwarder.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConditionalForwarderStatus? Status { get; set; }
-}
-
-/// <summary>ConditionalForwarder is the Schema for the ConditionalForwarders API. Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConditionalForwarderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConditionalForwarder>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConditionalForwarderList";
-    public const string KubeGroup = "ds.aws.m.upbound.io";
-    public const string KubePluralName = "conditionalforwarders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ConditionalForwarder> Items { get; set; }
 }

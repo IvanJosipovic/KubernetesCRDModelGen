@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.connect.aws.upbound.io;
+/// <summary>HoursOfOperation is the Schema for the HoursOfOperations API. Provides details about a specific Amazon Connect Hours of Operation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2HoursOfOperationList : IKubernetesObject<V1ListMeta>, IItems<V1beta2HoursOfOperation>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "HoursOfOperationList";
+    public const string KubeGroup = "connect.aws.upbound.io";
+    public const string KubePluralName = "hoursofoperations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2HoursOfOperation> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2HoursOfOperationSpecForProviderConfigEndTime
@@ -518,30 +544,4 @@ public partial class V1beta2HoursOfOperation : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>HoursOfOperationStatus defines the observed state of HoursOfOperation.</summary>
     [JsonPropertyName("status")]
     public V1beta2HoursOfOperationStatus? Status { get; set; }
-}
-
-/// <summary>HoursOfOperation is the Schema for the HoursOfOperations API. Provides details about a specific Amazon Connect Hours of Operation.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2HoursOfOperationList : IKubernetesObject<V1ListMeta>, IItems<V1beta2HoursOfOperation>
-{
-    public const string KubeApiVersion = "v1beta2";
-    public const string KubeKind = "HoursOfOperationList";
-    public const string KubeGroup = "connect.aws.upbound.io";
-    public const string KubePluralName = "hoursofoperations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta2HoursOfOperation> Items { get; set; }
 }

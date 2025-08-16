@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudtasks.cnrm.cloud.google.com;
+/// <summary>TasksQueue is the Schema for the TasksQueue API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1TasksQueueList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TasksQueue>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "TasksQueueList";
+    public const string KubeGroup = "cloudtasks.cnrm.cloud.google.com";
+    public const string KubePluralName = "tasksqueues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1TasksQueue> Items { get; set; }
+}
+
 /// <summary>Overrides for  [task-level  app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].  These settings apply only to  [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in this  queue. [Http tasks][google.cloud.tasks.v2.HttpRequest] are not affected.   If set, `app_engine_routing_override` is used for all  [App Engine tasks][google.cloud.tasks.v2.AppEngineHttpRequest] in the  queue, no matter what the setting is for the [task-level  app_engine_routing][google.cloud.tasks.v2.AppEngineHttpRequest.app_engine_routing].</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TasksQueueSpecAppEngineRoutingOverride
@@ -221,30 +247,4 @@ public partial class V1alpha1TasksQueue : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>TasksQueueStatus defines the config connector machine state of TasksQueue</summary>
     [JsonPropertyName("status")]
     public V1alpha1TasksQueueStatus? Status { get; set; }
-}
-
-/// <summary>TasksQueue is the Schema for the TasksQueue API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1TasksQueueList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TasksQueue>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "TasksQueueList";
-    public const string KubeGroup = "cloudtasks.cnrm.cloud.google.com";
-    public const string KubePluralName = "tasksqueues";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1TasksQueue> Items { get; set; }
 }

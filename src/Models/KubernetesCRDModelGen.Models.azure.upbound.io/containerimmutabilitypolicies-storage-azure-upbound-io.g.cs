@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.storage.azure.upbound.io;
+/// <summary>ContainerImmutabilityPolicy is the Schema for the ContainerImmutabilityPolicys API. Manages an Immutability Policy for a Container within an Azure Storage Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ContainerImmutabilityPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerImmutabilityPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ContainerImmutabilityPolicyList";
+    public const string KubeGroup = "storage.azure.upbound.io";
+    public const string KubePluralName = "containerimmutabilitypolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ContainerImmutabilityPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ContainerImmutabilityPolicySpecForProviderStorageContainerResourceManagerIdRefPolicy
@@ -289,30 +315,4 @@ public partial class V1beta1ContainerImmutabilityPolicy : IKubernetesObject<V1Ob
     /// <summary>ContainerImmutabilityPolicyStatus defines the observed state of ContainerImmutabilityPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1ContainerImmutabilityPolicyStatus? Status { get; set; }
-}
-
-/// <summary>ContainerImmutabilityPolicy is the Schema for the ContainerImmutabilityPolicys API. Manages an Immutability Policy for a Container within an Azure Storage Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ContainerImmutabilityPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ContainerImmutabilityPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ContainerImmutabilityPolicyList";
-    public const string KubeGroup = "storage.azure.upbound.io";
-    public const string KubePluralName = "containerimmutabilitypolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ContainerImmutabilityPolicy> Items { get; set; }
 }

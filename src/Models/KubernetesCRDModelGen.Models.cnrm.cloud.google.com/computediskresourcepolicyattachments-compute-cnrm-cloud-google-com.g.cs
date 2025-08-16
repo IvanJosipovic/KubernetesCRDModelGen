@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachmentMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeDiskResourcePolicyAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeDiskResourcePolicyAttachment>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeDiskResourcePolicyAttachmentList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computediskresourcepolicyattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeDiskResourcePolicyAttachment> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachmentSpecDiskRef
+public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpecDiskRef
 {
     /// <summary>Allowed value: The `name` field of a `ComputeDisk` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ComputeDiskResourcePolicyAttachmentSpecDiskRef
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachmentSpecProjectRef
+public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,15 +70,15 @@ public partial class ComputeDiskResourcePolicyAttachmentSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachmentSpec
+public partial class V1alpha1ComputeDiskResourcePolicyAttachmentSpec
 {
     /// <summary></summary>
     [JsonPropertyName("diskRef")]
-    public ComputeDiskResourcePolicyAttachmentSpecDiskRef DiskRef { get; set; }
+    public V1alpha1ComputeDiskResourcePolicyAttachmentSpecDiskRef DiskRef { get; set; }
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeDiskResourcePolicyAttachmentSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeDiskResourcePolicyAttachmentSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -71,7 +91,7 @@ public partial class ComputeDiskResourcePolicyAttachmentSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachmentStatusConditions
+public partial class V1alpha1ComputeDiskResourcePolicyAttachmentStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +116,11 @@ public partial class ComputeDiskResourcePolicyAttachmentStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachmentStatus
+public partial class V1alpha1ComputeDiskResourcePolicyAttachmentStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeDiskResourcePolicyAttachmentStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeDiskResourcePolicyAttachmentStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -109,25 +129,30 @@ public partial class ComputeDiskResourcePolicyAttachmentStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeDiskResourcePolicyAttachment
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeDiskResourcePolicyAttachment : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeDiskResourcePolicyAttachmentSpec>, IStatus<V1alpha1ComputeDiskResourcePolicyAttachmentStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeDiskResourcePolicyAttachment";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computediskresourcepolicyattachments";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeDiskResourcePolicyAttachmentMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeDiskResourcePolicyAttachmentSpec Spec { get; set; }
+    public V1alpha1ComputeDiskResourcePolicyAttachmentSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeDiskResourcePolicyAttachmentStatus? Status { get; set; }
+    public V1alpha1ComputeDiskResourcePolicyAttachmentStatus? Status { get; set; }
 }

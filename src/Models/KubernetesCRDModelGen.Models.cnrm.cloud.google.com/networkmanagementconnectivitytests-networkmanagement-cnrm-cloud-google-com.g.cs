@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkmanagement.cnrm.cloud.google.com;
+/// <summary>NetworkManagementConnectivityTest is the Schema for the NetworkManagementConnectivityTest API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1NetworkManagementConnectivityTestList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NetworkManagementConnectivityTest>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "NetworkManagementConnectivityTestList";
+    public const string KubeGroup = "networkmanagement.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkmanagementconnectivitytests";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1NetworkManagementConnectivityTest> Items { get; set; }
+}
+
 /// <summary>An [App Engine](https://cloud.google.com/appengine) [service version](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1/apps.services.versions).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkManagementConnectivityTestSpecDestinationAppEngineVersion
@@ -2959,30 +2985,4 @@ public partial class V1alpha1NetworkManagementConnectivityTest : IKubernetesObje
     /// <summary>NetworkManagementConnectivityTestStatus defines the config connector machine state of NetworkManagementConnectivityTest</summary>
     [JsonPropertyName("status")]
     public V1alpha1NetworkManagementConnectivityTestStatus? Status { get; set; }
-}
-
-/// <summary>NetworkManagementConnectivityTest is the Schema for the NetworkManagementConnectivityTest API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1NetworkManagementConnectivityTestList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NetworkManagementConnectivityTest>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "NetworkManagementConnectivityTestList";
-    public const string KubeGroup = "networkmanagement.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkmanagementconnectivitytests";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1NetworkManagementConnectivityTest> Items { get; set; }
 }

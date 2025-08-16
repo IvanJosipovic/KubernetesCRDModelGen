@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.batch.azure.com;
+/// <summary>Storage version of v1api20210101.BatchAccount Generator information: - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20210101storageBatchAccountList : IKubernetesObject<V1ListMeta>, IItems<V1api20210101storageBatchAccount>
+{
+    public const string KubeApiVersion = "v1api20210101storage";
+    public const string KubeKind = "BatchAccountList";
+    public const string KubeGroup = "batch.azure.com";
+    public const string KubePluralName = "batchaccounts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20210101storageBatchAccount> Items { get; set; }
+}
+
 /// <summary>StorageAccountReference: The resource ID of the storage account to be used for auto-storage account.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20210101storageBatchAccountSpecAutoStorageStorageAccountReference
@@ -572,30 +598,4 @@ public partial class V1api20210101storageBatchAccount : IKubernetesObject<V1Obje
     /// <summary>Storage version of v1api20210101.BatchAccount_STATUS Contains information about an Azure Batch account.</summary>
     [JsonPropertyName("status")]
     public V1api20210101storageBatchAccountStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20210101.BatchAccount Generator information: - Generated from: /batch/resource-manager/Microsoft.Batch/stable/2021-01-01/BatchManagement.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Batch/batchAccounts/{accountName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20210101storageBatchAccountList : IKubernetesObject<V1ListMeta>, IItems<V1api20210101storageBatchAccount>
-{
-    public const string KubeApiVersion = "v1api20210101storage";
-    public const string KubeKind = "BatchAccountList";
-    public const string KubeGroup = "batch.azure.com";
-    public const string KubePluralName = "batchaccounts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20210101storageBatchAccount> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>DataSetMySQL is the Schema for the DataSetMySQLs API. Manages a MySQL Dataset inside a Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataSetMySQLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetMySQL>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataSetMySQLList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "datasetmysqls";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataSetMySQL> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetMySQLSpecForProviderDataFactoryIdRefPolicy
@@ -516,30 +542,4 @@ public partial class V1beta1DataSetMySQL : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>DataSetMySQLStatus defines the observed state of DataSetMySQL.</summary>
     [JsonPropertyName("status")]
     public V1beta1DataSetMySQLStatus? Status { get; set; }
-}
-
-/// <summary>DataSetMySQL is the Schema for the DataSetMySQLs API. Manages a MySQL Dataset inside a Azure Data Factory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataSetMySQLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetMySQL>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataSetMySQLList";
-    public const string KubeGroup = "datafactory.azure.upbound.io";
-    public const string KubePluralName = "datasetmysqls";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataSetMySQL> Items { get; set; }
 }

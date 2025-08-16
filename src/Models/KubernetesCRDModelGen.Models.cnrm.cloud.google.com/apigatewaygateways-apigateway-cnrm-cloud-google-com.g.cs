@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.apigateway.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class APIGatewayGatewayMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIGatewayGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIGatewayGateway>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIGatewayGatewayList";
+    public const string KubeGroup = "apigateway.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigatewaygateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIGatewayGateway> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class APIGatewayGatewaySpecProjectRef
+public partial class V1alpha1APIGatewayGatewaySpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class APIGatewayGatewaySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class APIGatewayGatewaySpec
+public partial class V1alpha1APIGatewayGatewaySpec
 {
     /// <summary>Resource name of the API Config for this Gateway. Format: projects/{project}/locations/global/apis/{api}/configs/{apiConfig}. When changing api configs please ensure the new config is a new resource and the lifecycle rule 'create_before_destroy' is set.</summary>
     [JsonPropertyName("apiConfig")]
@@ -45,7 +65,7 @@ public partial class APIGatewayGatewaySpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public APIGatewayGatewaySpecProjectRef ProjectRef { get; set; }
+    public V1alpha1APIGatewayGatewaySpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. The region of the gateway for the API.</summary>
     [JsonPropertyName("region")]
@@ -58,7 +78,7 @@ public partial class APIGatewayGatewaySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class APIGatewayGatewayStatusConditions
+public partial class V1alpha1APIGatewayGatewayStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -83,11 +103,11 @@ public partial class APIGatewayGatewayStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class APIGatewayGatewayStatus
+public partial class V1alpha1APIGatewayGatewayStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<APIGatewayGatewayStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1APIGatewayGatewayStatusConditions>? Conditions { get; set; }
 
     /// <summary>The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.</summary>
     [JsonPropertyName("defaultHostname")]
@@ -104,25 +124,30 @@ public partial class APIGatewayGatewayStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class APIGatewayGateway
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIGatewayGateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1APIGatewayGatewaySpec>, IStatus<V1alpha1APIGatewayGatewayStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIGatewayGateway";
+    public const string KubeGroup = "apigateway.cnrm.cloud.google.com";
+    public const string KubePluralName = "apigatewaygateways";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public APIGatewayGatewayMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public APIGatewayGatewaySpec Spec { get; set; }
+    public V1alpha1APIGatewayGatewaySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public APIGatewayGatewayStatus? Status { get; set; }
+    public V1alpha1APIGatewayGatewayStatus? Status { get; set; }
 }

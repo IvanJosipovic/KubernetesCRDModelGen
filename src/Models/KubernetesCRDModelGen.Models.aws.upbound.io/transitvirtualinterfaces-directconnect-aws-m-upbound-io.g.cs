@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.directconnect.aws.m.upbound.io;
+/// <summary>TransitVirtualInterface is the Schema for the TransitVirtualInterfaces API. Provides a Direct Connect transit virtual interface resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TransitVirtualInterfaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitVirtualInterface>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TransitVirtualInterfaceList";
+    public const string KubeGroup = "directconnect.aws.m.upbound.io";
+    public const string KubePluralName = "transitvirtualinterfaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TransitVirtualInterface> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitVirtualInterfaceSpecForProviderConnectionIdRefPolicy
@@ -608,30 +634,4 @@ public partial class V1beta1TransitVirtualInterface : IKubernetesObject<V1Object
     /// <summary>TransitVirtualInterfaceStatus defines the observed state of TransitVirtualInterface.</summary>
     [JsonPropertyName("status")]
     public V1beta1TransitVirtualInterfaceStatus? Status { get; set; }
-}
-
-/// <summary>TransitVirtualInterface is the Schema for the TransitVirtualInterfaces API. Provides a Direct Connect transit virtual interface resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TransitVirtualInterfaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitVirtualInterface>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TransitVirtualInterfaceList";
-    public const string KubeGroup = "directconnect.aws.m.upbound.io";
-    public const string KubePluralName = "transitvirtualinterfaces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TransitVirtualInterface> Items { get; set; }
 }

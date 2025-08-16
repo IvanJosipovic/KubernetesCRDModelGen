@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudbuild.cnrm.cloud.google.com;
+/// <summary>CloudBuildWorkerPool is the Schema for the CloudBuild WorkerPool API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CloudBuildWorkerPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CloudBuildWorkerPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CloudBuildWorkerPoolList";
+    public const string KubeGroup = "cloudbuild.cnrm.cloud.google.com";
+    public const string KubePluralName = "cloudbuildworkerpools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CloudBuildWorkerPool> Items { get; set; }
+}
+
 /// <summary>Immutable. The network definition that the workers are peered to. If this section is left empty, the workers will be peered to `WorkerPool.project_id` on the service producer network.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudBuildWorkerPoolSpecPrivatePoolV1ConfigNetworkConfigPeeredNetworkRef
@@ -243,30 +269,4 @@ public partial class V1beta1CloudBuildWorkerPool : IKubernetesObject<V1ObjectMet
     /// <summary>CloudBuildWorkerPoolStatus defines the observed state of Instance</summary>
     [JsonPropertyName("status")]
     public V1beta1CloudBuildWorkerPoolStatus? Status { get; set; }
-}
-
-/// <summary>CloudBuildWorkerPool is the Schema for the CloudBuild WorkerPool API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CloudBuildWorkerPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CloudBuildWorkerPool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CloudBuildWorkerPoolList";
-    public const string KubeGroup = "cloudbuild.cnrm.cloud.google.com";
-    public const string KubePluralName = "cloudbuildworkerpools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CloudBuildWorkerPool> Items { get; set; }
 }

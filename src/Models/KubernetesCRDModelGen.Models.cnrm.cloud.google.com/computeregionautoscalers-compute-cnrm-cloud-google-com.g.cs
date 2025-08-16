@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeRegionAutoscalerList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeRegionAutoscaler>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeRegionAutoscalerList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeregionautoscalers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeRegionAutoscaler> Items { get; set; }
 }
 
 /// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtilization
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtilization
 {
     /// <summary>Indicates whether predictive autoscaling based on CPU metric is enabled. Valid values are:  - NONE (default). No predictive method is used. The autoscaler scales the group to meet current demand based on real-time metrics.  - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.</summary>
     [JsonPropertyName("predictiveMethod")]
@@ -29,7 +49,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtilization
 
 /// <summary>Configuration parameters of autoscaling based on a load balancer.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBalancingUtilization
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBalancingUtilization
 {
     /// <summary>Fraction of backend capacity utilization (set in HTTP(s) load balancing configuration) that autoscaler should maintain. Must be a positive float value. If not defined, the default is 0.8.</summary>
     [JsonPropertyName("target")]
@@ -38,7 +58,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBalancingUt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyMetric
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyMetric
 {
     /// <summary>A filter string to be used as the filter string for a Stackdriver Monitoring TimeSeries.list API call. This filter is used to select a specific TimeSeries for the purpose of autoscaling and to determine whether the metric is exporting per-instance or per-group data.  You can only use the AND operator for joining selectors. You can only use direct equality comparison operator (=) without any functions for each selector. You can specify the metric in both the filter string and in the metric field. However, if specified in both places, the metric must be identical.  The monitored resource type determines what kind of values are expected for the metric. If it is a gce_instance, the autoscaler expects the metric to include a separate TimeSeries for each instance in a group. In such a case, you cannot filter on resource labels.  If the resource type is any other value, the autoscaler expects this metric to contain values that apply to the entire autoscaled instance group and resource label filtering can be performed to point autoscaler at the correct TimeSeries to scale upon. This is called a per-group metric for the purpose of autoscaling.  If not specified, the type defaults to gce_instance.  You should provide a filter that is selective enough to pick just one TimeSeries for the autoscaled group or for each of the instances (if you are using gce_instance resource type). If multiple TimeSeries are returned upon the query execution, the autoscaler will sum their respective values to obtain its scaling value.</summary>
     [JsonPropertyName("filter")]
@@ -63,7 +83,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyMetric
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControlMaxScaledDownReplicas
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControlMaxScaledDownReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
     [JsonPropertyName("fixed")]
@@ -76,11 +96,11 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownContro
 
 /// <summary>Defines scale down controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControl
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControl
 {
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("maxScaledDownReplicas")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControlMaxScaledDownReplicas? MaxScaledDownReplicas { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControlMaxScaledDownReplicas? MaxScaledDownReplicas { get; set; }
 
     /// <summary>How long back autoscaling should look when computing recommendations to include directives regarding slower scale down, as described above.</summary>
     [JsonPropertyName("timeWindowSec")]
@@ -89,7 +109,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownContro
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControlMaxScaledInReplicas
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControlMaxScaledInReplicas
 {
     /// <summary>Specifies a fixed number of VM instances. This must be a positive integer.</summary>
     [JsonPropertyName("fixed")]
@@ -102,11 +122,11 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControlM
 
 /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControl
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControl
 {
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("maxScaledInReplicas")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControlMaxScaledInReplicas? MaxScaledInReplicas { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControlMaxScaledInReplicas? MaxScaledInReplicas { get; set; }
 
     /// <summary>How long back autoscaling should look when computing recommendations to include directives regarding slower scale down, as described above.</summary>
     [JsonPropertyName("timeWindowSec")]
@@ -115,7 +135,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControl
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedules
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedules
 {
     /// <summary>A description of a scaling schedule.</summary>
     [JsonPropertyName("description")]
@@ -148,7 +168,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedule
 
 /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.  If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecAutoscalingPolicy
+public partial class V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicy
 {
     /// <summary>The number of seconds that the autoscaler should wait before it starts collecting information from a new instance. This prevents the autoscaler from collecting information when the instance is initializing, during which the collected usage would not be reliable. The default time autoscaler waits is 60 seconds.  Virtual machine initialization times might vary because of numerous factors. We recommend that you test how long an instance may take to initialize. To do this, create an instance and time the startup process.</summary>
     [JsonPropertyName("cooldownPeriod")]
@@ -156,11 +176,11 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicy
 
     /// <summary>Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.</summary>
     [JsonPropertyName("cpuUtilization")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtilization? CpuUtilization { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyCpuUtilization? CpuUtilization { get; set; }
 
     /// <summary>Configuration parameters of autoscaling based on a load balancer.</summary>
     [JsonPropertyName("loadBalancingUtilization")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBalancingUtilization? LoadBalancingUtilization { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyLoadBalancingUtilization? LoadBalancingUtilization { get; set; }
 
     /// <summary>The maximum number of instances that the autoscaler can scale up to. This is required when creating or updating an autoscaler. The maximum number of replicas should not be lower than minimal number of replicas.</summary>
     [JsonPropertyName("maxReplicas")]
@@ -168,7 +188,7 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicy
 
     /// <summary>Configuration parameters of autoscaling based on a custom metric.</summary>
     [JsonPropertyName("metric")]
-    public IList<ComputeRegionAutoscalerSpecAutoscalingPolicyMetric>? Metric { get; set; }
+    public IList<V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyMetric>? Metric { get; set; }
 
     /// <summary>The minimum number of replicas that the autoscaler can scale down to. This cannot be less than 0. If not provided, autoscaler will choose a default value depending on maximum number of instances allowed.</summary>
     [JsonPropertyName("minReplicas")]
@@ -180,20 +200,20 @@ public partial class ComputeRegionAutoscalerSpecAutoscalingPolicy
 
     /// <summary>Defines scale down controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
     [JsonPropertyName("scaleDownControl")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControl? ScaleDownControl { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleDownControl? ScaleDownControl { get; set; }
 
     /// <summary>Defines scale in controls to reduce the risk of response latency and outages due to abrupt scale-in events.</summary>
     [JsonPropertyName("scaleInControl")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControl? ScaleInControl { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScaleInControl? ScaleInControl { get; set; }
 
     /// <summary>Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler and they can overlap.</summary>
     [JsonPropertyName("scalingSchedules")]
-    public IList<ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
+    public IList<V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicyScalingSchedules>? ScalingSchedules { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpecProjectRef
+public partial class V1alpha1ComputeRegionAutoscalerSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -210,11 +230,11 @@ public partial class ComputeRegionAutoscalerSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerSpec
+public partial class V1alpha1ComputeRegionAutoscalerSpec
 {
     /// <summary>The configuration parameters for the autoscaling algorithm. You can define one or more of the policies for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization.  If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.</summary>
     [JsonPropertyName("autoscalingPolicy")]
-    public ComputeRegionAutoscalerSpecAutoscalingPolicy AutoscalingPolicy { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecAutoscalingPolicy AutoscalingPolicy { get; set; }
 
     /// <summary>An optional description of this resource.</summary>
     [JsonPropertyName("description")]
@@ -222,7 +242,7 @@ public partial class ComputeRegionAutoscalerSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ComputeRegionAutoscalerSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. URL of the region where the instance group resides.</summary>
     [JsonPropertyName("region")]
@@ -239,7 +259,7 @@ public partial class ComputeRegionAutoscalerSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerStatusConditions
+public partial class V1alpha1ComputeRegionAutoscalerStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -264,11 +284,11 @@ public partial class ComputeRegionAutoscalerStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscalerStatus
+public partial class V1alpha1ComputeRegionAutoscalerStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeRegionAutoscalerStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeRegionAutoscalerStatusConditions>? Conditions { get; set; }
 
     /// <summary>Creation timestamp in RFC3339 text format.</summary>
     [JsonPropertyName("creationTimestamp")]
@@ -285,25 +305,30 @@ public partial class ComputeRegionAutoscalerStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeRegionAutoscaler
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeRegionAutoscaler : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeRegionAutoscalerSpec>, IStatus<V1alpha1ComputeRegionAutoscalerStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeRegionAutoscaler";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeregionautoscalers";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeRegionAutoscalerMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeRegionAutoscalerSpec Spec { get; set; }
+    public V1alpha1ComputeRegionAutoscalerSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeRegionAutoscalerStatus? Status { get; set; }
+    public V1alpha1ComputeRegionAutoscalerStatus? Status { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.certificateregistration.azure.upbound.io;
+/// <summary>AppServiceCertificateOrder is the Schema for the AppServiceCertificateOrders API. Manages an App Service Certificate Order.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppServiceCertificateOrderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppServiceCertificateOrder>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppServiceCertificateOrderList";
+    public const string KubeGroup = "certificateregistration.azure.upbound.io";
+    public const string KubePluralName = "appservicecertificateorders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppServiceCertificateOrder> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppServiceCertificateOrderSpecForProviderResourceGroupNameRefPolicy
@@ -394,30 +420,4 @@ public partial class V1beta1AppServiceCertificateOrder : IKubernetesObject<V1Obj
     /// <summary>AppServiceCertificateOrderStatus defines the observed state of AppServiceCertificateOrder.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppServiceCertificateOrderStatus? Status { get; set; }
-}
-
-/// <summary>AppServiceCertificateOrder is the Schema for the AppServiceCertificateOrders API. Manages an App Service Certificate Order.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppServiceCertificateOrderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppServiceCertificateOrder>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppServiceCertificateOrderList";
-    public const string KubeGroup = "certificateregistration.azure.upbound.io";
-    public const string KubePluralName = "appservicecertificateorders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppServiceCertificateOrder> Items { get; set; }
 }

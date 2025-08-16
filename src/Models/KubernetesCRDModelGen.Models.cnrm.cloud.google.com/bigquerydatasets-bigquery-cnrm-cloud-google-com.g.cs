@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigquery.cnrm.cloud.google.com;
+/// <summary>BigQueryDataset is the Schema for the BigQueryDataset API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigQueryDatasetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryDataset>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigQueryDatasetList";
+    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigquerydatasets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigQueryDataset> Items { get; set; }
+}
+
 /// <summary>The dataset this entry applies to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigQueryDatasetSpecAccessDatasetDataset
@@ -312,30 +338,4 @@ public partial class V1beta1BigQueryDataset : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>BigQueryDatasetStatus defines the config connector machine state of BigQueryDataset</summary>
     [JsonPropertyName("status")]
     public V1beta1BigQueryDatasetStatus? Status { get; set; }
-}
-
-/// <summary>BigQueryDataset is the Schema for the BigQueryDataset API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigQueryDatasetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigQueryDataset>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigQueryDatasetList";
-    public const string KubeGroup = "bigquery.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigquerydatasets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BigQueryDataset> Items { get; set; }
 }

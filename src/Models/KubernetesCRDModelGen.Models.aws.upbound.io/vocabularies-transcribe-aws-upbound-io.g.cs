@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.transcribe.aws.upbound.io;
+/// <summary>Vocabulary is the Schema for the Vocabularys API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VocabularyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Vocabulary>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VocabularyList";
+    public const string KubeGroup = "transcribe.aws.upbound.io";
+    public const string KubePluralName = "vocabularies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Vocabulary> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VocabularySpecForProvider
@@ -237,30 +263,4 @@ public partial class V1beta1Vocabulary : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>VocabularyStatus defines the observed state of Vocabulary.</summary>
     [JsonPropertyName("status")]
     public V1beta1VocabularyStatus? Status { get; set; }
-}
-
-/// <summary>Vocabulary is the Schema for the Vocabularys API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VocabularyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Vocabulary>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VocabularyList";
-    public const string KubeGroup = "transcribe.aws.upbound.io";
-    public const string KubePluralName = "vocabularies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Vocabulary> Items { get; set; }
 }

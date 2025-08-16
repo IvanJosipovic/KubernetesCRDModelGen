@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
+/// <summary>BigtableAppProfile is the Schema for the BigtableAppProfile API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigtableAppProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigtableAppProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigtableAppProfileList";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtableappprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigtableAppProfile> Items { get; set; }
+}
+
 /// <summary>Specifies that this app profile is intended for read-only usage via the Data Boost feature. Please opt-in to this feature by setting the `alpha.cnrm.cloud.google.com/reconciler: direct` annotation.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BigtableAppProfileSpecDataBoostIsolationReadOnly
@@ -167,30 +193,4 @@ public partial class V1beta1BigtableAppProfile : IKubernetesObject<V1ObjectMeta>
     /// <summary>BigtableAppProfileStatus defines the config connector machine state of BigtableAppProfile</summary>
     [JsonPropertyName("status")]
     public V1beta1BigtableAppProfileStatus? Status { get; set; }
-}
-
-/// <summary>BigtableAppProfile is the Schema for the BigtableAppProfile API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BigtableAppProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigtableAppProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BigtableAppProfileList";
-    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
-    public const string KubePluralName = "bigtableappprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BigtableAppProfile> Items { get; set; }
 }

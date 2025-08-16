@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lambda.aws.m.upbound.io;
+/// <summary>EventSourceMapping is the Schema for the EventSourceMappings API. Manages an AWS Lambda Event Source Mapping.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EventSourceMappingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventSourceMapping>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EventSourceMappingList";
+    public const string KubeGroup = "lambda.aws.m.upbound.io";
+    public const string KubePluralName = "eventsourcemappings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EventSourceMapping> Items { get; set; }
+}
+
 /// <summary>Additional configuration block for Amazon Managed Kafka sources. Incompatible with self_managed_event_source and self_managed_kafka_event_source_config. See below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventSourceMappingSpecForProviderAmazonManagedKafkaEventSourceConfig
@@ -1316,30 +1342,4 @@ public partial class V1beta1EventSourceMapping : IKubernetesObject<V1ObjectMeta>
     /// <summary>EventSourceMappingStatus defines the observed state of EventSourceMapping.</summary>
     [JsonPropertyName("status")]
     public V1beta1EventSourceMappingStatus? Status { get; set; }
-}
-
-/// <summary>EventSourceMapping is the Schema for the EventSourceMappings API. Manages an AWS Lambda Event Source Mapping.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EventSourceMappingList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventSourceMapping>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EventSourceMappingList";
-    public const string KubeGroup = "lambda.aws.m.upbound.io";
-    public const string KubePluralName = "eventsourcemappings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1EventSourceMapping> Items { get; set; }
 }

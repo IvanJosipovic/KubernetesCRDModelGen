@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudquota.cnrm.cloud.google.com;
+/// <summary>APIQuotaPreference is the Schema for the APIQuotaPreference API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIQuotaPreferenceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIQuotaPreference>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIQuotaPreferenceList";
+    public const string KubeGroup = "cloudquota.cnrm.cloud.google.com";
+    public const string KubePluralName = "apiquotapreferences";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIQuotaPreference> Items { get; set; }
+}
+
 /// <summary>FolderRef represents the Folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIQuotaPreferenceSpecFolderRef
@@ -233,30 +259,4 @@ public partial class V1alpha1APIQuotaPreference : IKubernetesObject<V1ObjectMeta
     /// <summary>APIQuotaPreferenceStatus defines the config connector machine state of APIQuotaPreference</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIQuotaPreferenceStatus? Status { get; set; }
-}
-
-/// <summary>APIQuotaPreference is the Schema for the APIQuotaPreference API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIQuotaPreferenceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIQuotaPreference>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIQuotaPreferenceList";
-    public const string KubeGroup = "cloudquota.cnrm.cloud.google.com";
-    public const string KubePluralName = "apiquotapreferences";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIQuotaPreference> Items { get; set; }
 }

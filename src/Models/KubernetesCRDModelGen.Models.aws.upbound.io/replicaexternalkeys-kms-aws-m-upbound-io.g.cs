@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.aws.m.upbound.io;
+/// <summary>ReplicaExternalKey is the Schema for the ReplicaExternalKeys API. Manages a KMS multi-Region replica key that uses external key material.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ReplicaExternalKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReplicaExternalKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ReplicaExternalKeyList";
+    public const string KubeGroup = "kms.aws.m.upbound.io";
+    public const string KubePluralName = "replicaexternalkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ReplicaExternalKey> Items { get; set; }
+}
+
 /// <summary>Base64 encoded 256-bit symmetric encryption key material to import. The KMS key is permanently associated with this key material. The same key material can be reimported, but you cannot import different key material.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ReplicaExternalKeySpecForProviderKeyMaterialBase64SecretRef
@@ -454,30 +480,4 @@ public partial class V1beta1ReplicaExternalKey : IKubernetesObject<V1ObjectMeta>
     /// <summary>ReplicaExternalKeyStatus defines the observed state of ReplicaExternalKey.</summary>
     [JsonPropertyName("status")]
     public V1beta1ReplicaExternalKeyStatus? Status { get; set; }
-}
-
-/// <summary>ReplicaExternalKey is the Schema for the ReplicaExternalKeys API. Manages a KMS multi-Region replica key that uses external key material.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ReplicaExternalKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ReplicaExternalKey>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ReplicaExternalKeyList";
-    public const string KubeGroup = "kms.aws.m.upbound.io";
-    public const string KubePluralName = "replicaexternalkeys";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ReplicaExternalKey> Items { get; set; }
 }

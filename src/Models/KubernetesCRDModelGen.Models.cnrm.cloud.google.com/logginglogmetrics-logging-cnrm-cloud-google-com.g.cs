@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.cnrm.cloud.google.com;
+/// <summary>LoggingLogMetric is the Schema for the logging API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoggingLogMetricList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoggingLogMetric>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoggingLogMetricList";
+    public const string KubeGroup = "logging.cnrm.cloud.google.com";
+    public const string KubePluralName = "logginglogmetrics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LoggingLogMetric> Items { get; set; }
+}
+
 /// <summary>The explicit buckets.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoggingLogMetricSpecBucketOptionsExplicitBuckets
@@ -317,30 +343,4 @@ public partial class V1beta1LoggingLogMetric : IKubernetesObject<V1ObjectMeta>, 
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1beta1LoggingLogMetricStatus? Status { get; set; }
-}
-
-/// <summary>LoggingLogMetric is the Schema for the logging API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LoggingLogMetricList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoggingLogMetric>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LoggingLogMetricList";
-    public const string KubeGroup = "logging.cnrm.cloud.google.com";
-    public const string KubePluralName = "logginglogmetrics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LoggingLogMetric> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>VirtualHubIP is the Schema for the VirtualHubIPs API. Manages a Virtual Hub IP. This resource is also known as a Route Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualHubIPList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubIP>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualHubIPList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "virtualhubips";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualHubIP> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubIPSpecForProviderPublicIpAddressIdRefPolicy
@@ -545,30 +571,4 @@ public partial class V1beta1VirtualHubIP : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>VirtualHubIPStatus defines the observed state of VirtualHubIP.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualHubIPStatus? Status { get; set; }
-}
-
-/// <summary>VirtualHubIP is the Schema for the VirtualHubIPs API. Manages a Virtual Hub IP. This resource is also known as a Route Server.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualHubIPList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubIP>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualHubIPList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "virtualhubips";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualHubIP> Items { get; set; }
 }

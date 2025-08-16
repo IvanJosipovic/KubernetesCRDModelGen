@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.storage.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageBucketList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StorageBucket>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageBucketList";
+    public const string KubeGroup = "storage.cnrm.cloud.google.com";
+    public const string KubePluralName = "storagebuckets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StorageBucket> Items { get; set; }
 }
 
 /// <summary>The bucket's autoclass configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecAutoclass
+public partial class V1beta1StorageBucketSpecAutoclass
 {
     /// <summary>While set to true, autoclass automatically transitions objects in your bucket to appropriate storage classes based on each object's access pattern.</summary>
     [JsonPropertyName("enabled")]
@@ -25,7 +45,7 @@ public partial class StorageBucketSpecAutoclass
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecCors
+public partial class V1beta1StorageBucketSpecCors
 {
     /// <summary>The value, in seconds, to return in the Access-Control-Max-Age header used in preflight responses.</summary>
     [JsonPropertyName("maxAgeSeconds")]
@@ -46,7 +66,7 @@ public partial class StorageBucketSpecCors
 
 /// <summary>The bucket's custom location configuration, which specifies the individual regions that comprise a dual-region bucket. If the bucket is designated a single or multi-region, the parameters are empty.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecCustomPlacementConfig
+public partial class V1beta1StorageBucketSpecCustomPlacementConfig
 {
     /// <summary>The list of individual regions that comprise a dual-region bucket. See the docs for a list of acceptable regions.</summary>
     [JsonPropertyName("dataLocations")]
@@ -55,7 +75,7 @@ public partial class StorageBucketSpecCustomPlacementConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecEncryptionKmsKeyRef
+public partial class V1beta1StorageBucketSpecEncryptionKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -72,16 +92,16 @@ public partial class StorageBucketSpecEncryptionKmsKeyRef
 
 /// <summary>The bucket's encryption configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecEncryption
+public partial class V1beta1StorageBucketSpecEncryption
 {
     /// <summary></summary>
     [JsonPropertyName("kmsKeyRef")]
-    public StorageBucketSpecEncryptionKmsKeyRef KmsKeyRef { get; set; }
+    public V1beta1StorageBucketSpecEncryptionKmsKeyRef KmsKeyRef { get; set; }
 }
 
 /// <summary>The Lifecycle Rule's action configuration. A single block of this type is supported.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecLifecycleRuleAction
+public partial class V1beta1StorageBucketSpecLifecycleRuleAction
 {
     /// <summary>The target Storage Class of objects affected by this Lifecycle Rule. Supported values include: MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.</summary>
     [JsonPropertyName("storageClass")]
@@ -94,7 +114,7 @@ public partial class StorageBucketSpecLifecycleRuleAction
 
 /// <summary>The Lifecycle Rule's condition configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecLifecycleRuleCondition
+public partial class V1beta1StorageBucketSpecLifecycleRuleCondition
 {
     /// <summary>Minimum age of an object in days to satisfy this condition.</summary>
     [JsonPropertyName("age")]
@@ -143,20 +163,20 @@ public partial class StorageBucketSpecLifecycleRuleCondition
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecLifecycleRule
+public partial class V1beta1StorageBucketSpecLifecycleRule
 {
     /// <summary>The Lifecycle Rule's action configuration. A single block of this type is supported.</summary>
     [JsonPropertyName("action")]
-    public StorageBucketSpecLifecycleRuleAction Action { get; set; }
+    public V1beta1StorageBucketSpecLifecycleRuleAction Action { get; set; }
 
     /// <summary>The Lifecycle Rule's condition configuration.</summary>
     [JsonPropertyName("condition")]
-    public StorageBucketSpecLifecycleRuleCondition Condition { get; set; }
+    public V1beta1StorageBucketSpecLifecycleRuleCondition Condition { get; set; }
 }
 
 /// <summary>The bucket's Access &amp; Storage Logs configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecLogging
+public partial class V1beta1StorageBucketSpecLogging
 {
     /// <summary>The bucket that will receive log objects.</summary>
     [JsonPropertyName("logBucket")]
@@ -169,7 +189,7 @@ public partial class StorageBucketSpecLogging
 
 /// <summary>Configuration of the bucket's data retention policy for how long objects in the bucket should be retained.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecRetentionPolicy
+public partial class V1beta1StorageBucketSpecRetentionPolicy
 {
     /// <summary>If set to true, the bucket will be locked and permanently restrict edits to the bucket's retention policy.  Caution: Locking a bucket is an irreversible action.</summary>
     [JsonPropertyName("isLocked")]
@@ -182,7 +202,7 @@ public partial class StorageBucketSpecRetentionPolicy
 
 /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. If it is not provided, by default Google Cloud Storage sets this to default soft delete policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecSoftDeletePolicy
+public partial class V1beta1StorageBucketSpecSoftDeletePolicy
 {
     /// <summary>The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be permanently deleted. Default value is 604800.</summary>
     [JsonPropertyName("retentionDurationSeconds")]
@@ -191,7 +211,7 @@ public partial class StorageBucketSpecSoftDeletePolicy
 
 /// <summary>The bucket's Versioning configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecVersioning
+public partial class V1beta1StorageBucketSpecVersioning
 {
     /// <summary>While set to true, versioning is fully enabled for this bucket.</summary>
     [JsonPropertyName("enabled")]
@@ -200,7 +220,7 @@ public partial class StorageBucketSpecVersioning
 
 /// <summary>Configuration if the bucket acts as a website.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpecWebsite
+public partial class V1beta1StorageBucketSpecWebsite
 {
     /// <summary>Behaves as the bucket's directory index where missing objects are treated as potential directories.</summary>
     [JsonPropertyName("mainPageSuffix")]
@@ -213,11 +233,11 @@ public partial class StorageBucketSpecWebsite
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketSpec
+public partial class V1beta1StorageBucketSpec
 {
     /// <summary>The bucket's autoclass configuration.</summary>
     [JsonPropertyName("autoclass")]
-    public StorageBucketSpecAutoclass? Autoclass { get; set; }
+    public V1beta1StorageBucketSpecAutoclass? Autoclass { get; set; }
 
     /// <summary>DEPRECATED. Please use the `uniformBucketLevelAccess` field as this field has been renamed by Google. The `uniformBucketLevelAccess` field will supersede this field. Enables Bucket PolicyOnly access to a bucket.</summary>
     [JsonPropertyName("bucketPolicyOnly")]
@@ -225,11 +245,11 @@ public partial class StorageBucketSpec
 
     /// <summary>The bucket's Cross-Origin Resource Sharing (CORS) configuration.</summary>
     [JsonPropertyName("cors")]
-    public IList<StorageBucketSpecCors>? Cors { get; set; }
+    public IList<V1beta1StorageBucketSpecCors>? Cors { get; set; }
 
     /// <summary>The bucket's custom location configuration, which specifies the individual regions that comprise a dual-region bucket. If the bucket is designated a single or multi-region, the parameters are empty.</summary>
     [JsonPropertyName("customPlacementConfig")]
-    public StorageBucketSpecCustomPlacementConfig? CustomPlacementConfig { get; set; }
+    public V1beta1StorageBucketSpecCustomPlacementConfig? CustomPlacementConfig { get; set; }
 
     /// <summary>Whether or not to automatically apply an eventBasedHold to new objects added to the bucket.</summary>
     [JsonPropertyName("defaultEventBasedHold")]
@@ -237,11 +257,11 @@ public partial class StorageBucketSpec
 
     /// <summary>The bucket's encryption configuration.</summary>
     [JsonPropertyName("encryption")]
-    public StorageBucketSpecEncryption? Encryption { get; set; }
+    public V1beta1StorageBucketSpecEncryption? Encryption { get; set; }
 
     /// <summary>The bucket's Lifecycle Rules configuration.</summary>
     [JsonPropertyName("lifecycleRule")]
-    public IList<StorageBucketSpecLifecycleRule>? LifecycleRule { get; set; }
+    public IList<V1beta1StorageBucketSpecLifecycleRule>? LifecycleRule { get; set; }
 
     /// <summary>The Google Cloud Storage location.</summary>
     [JsonPropertyName("location")]
@@ -249,7 +269,7 @@ public partial class StorageBucketSpec
 
     /// <summary>The bucket's Access &amp; Storage Logs configuration.</summary>
     [JsonPropertyName("logging")]
-    public StorageBucketSpecLogging? Logging { get; set; }
+    public V1beta1StorageBucketSpecLogging? Logging { get; set; }
 
     /// <summary>Prevents public access to a bucket.</summary>
     [JsonPropertyName("publicAccessPrevention")]
@@ -265,11 +285,11 @@ public partial class StorageBucketSpec
 
     /// <summary>Configuration of the bucket's data retention policy for how long objects in the bucket should be retained.</summary>
     [JsonPropertyName("retentionPolicy")]
-    public StorageBucketSpecRetentionPolicy? RetentionPolicy { get; set; }
+    public V1beta1StorageBucketSpecRetentionPolicy? RetentionPolicy { get; set; }
 
     /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. If it is not provided, by default Google Cloud Storage sets this to default soft delete policy.</summary>
     [JsonPropertyName("softDeletePolicy")]
-    public StorageBucketSpecSoftDeletePolicy? SoftDeletePolicy { get; set; }
+    public V1beta1StorageBucketSpecSoftDeletePolicy? SoftDeletePolicy { get; set; }
 
     /// <summary>The Storage Class of the new bucket. Supported values include: STANDARD, MULTI_REGIONAL, REGIONAL, NEARLINE, COLDLINE, ARCHIVE.</summary>
     [JsonPropertyName("storageClass")]
@@ -281,16 +301,16 @@ public partial class StorageBucketSpec
 
     /// <summary>The bucket's Versioning configuration.</summary>
     [JsonPropertyName("versioning")]
-    public StorageBucketSpecVersioning? Versioning { get; set; }
+    public V1beta1StorageBucketSpecVersioning? Versioning { get; set; }
 
     /// <summary>Configuration if the bucket acts as a website.</summary>
     [JsonPropertyName("website")]
-    public StorageBucketSpecWebsite? Website { get; set; }
+    public V1beta1StorageBucketSpecWebsite? Website { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketStatusConditions
+public partial class V1beta1StorageBucketStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -315,7 +335,7 @@ public partial class StorageBucketStatusConditions
 
 /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. If it is not provided, by default Google Cloud Storage sets this to default soft delete policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketStatusObservedStateSoftDeletePolicy
+public partial class V1beta1StorageBucketStatusObservedStateSoftDeletePolicy
 {
     /// <summary>Server-determined value that indicates the time from which the policy, or one with a greater retention, was effective. This value is in RFC 3339 format.</summary>
     [JsonPropertyName("effectiveTime")]
@@ -328,20 +348,20 @@ public partial class StorageBucketStatusObservedStateSoftDeletePolicy
 
 /// <summary>The observed state of the underlying GCP resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketStatusObservedState
+public partial class V1beta1StorageBucketStatusObservedState
 {
     /// <summary>The bucket's soft delete policy, which defines the period of time that soft-deleted objects will be retained, and cannot be permanently deleted. If it is not provided, by default Google Cloud Storage sets this to default soft delete policy.</summary>
     [JsonPropertyName("softDeletePolicy")]
-    public StorageBucketStatusObservedStateSoftDeletePolicy? SoftDeletePolicy { get; set; }
+    public V1beta1StorageBucketStatusObservedStateSoftDeletePolicy? SoftDeletePolicy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucketStatus
+public partial class V1beta1StorageBucketStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<StorageBucketStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1StorageBucketStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -349,7 +369,7 @@ public partial class StorageBucketStatus
 
     /// <summary>The observed state of the underlying GCP resource.</summary>
     [JsonPropertyName("observedState")]
-    public StorageBucketStatusObservedState? ObservedState { get; set; }
+    public V1beta1StorageBucketStatusObservedState? ObservedState { get; set; }
 
     /// <summary>The URI of the created resource.</summary>
     [JsonPropertyName("selfLink")]
@@ -362,25 +382,30 @@ public partial class StorageBucketStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class StorageBucket
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StorageBucket : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1StorageBucketSpec>, IStatus<V1beta1StorageBucketStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StorageBucket";
+    public const string KubeGroup = "storage.cnrm.cloud.google.com";
+    public const string KubePluralName = "storagebuckets";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public StorageBucketMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public StorageBucketSpec? Spec { get; set; }
+    public V1beta1StorageBucketSpec? Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public StorageBucketStatus? Status { get; set; }
+    public V1beta1StorageBucketStatus? Status { get; set; }
 }

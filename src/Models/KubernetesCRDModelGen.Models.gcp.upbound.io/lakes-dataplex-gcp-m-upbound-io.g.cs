@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.gcp.m.upbound.io;
+/// <summary>Lake is the Schema for the Lakes API. The Dataplex Lake resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LakeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Lake>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LakeList";
+    public const string KubeGroup = "dataplex.gcp.m.upbound.io";
+    public const string KubePluralName = "lakes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Lake> Items { get; set; }
+}
+
 /// <summary>Optional. Settings to manage lake and Dataproc Metastore service instance association.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LakeSpecForProviderMetastore
@@ -317,30 +343,4 @@ public partial class V1beta1Lake : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     /// <summary>LakeStatus defines the observed state of Lake.</summary>
     [JsonPropertyName("status")]
     public V1beta1LakeStatus? Status { get; set; }
-}
-
-/// <summary>Lake is the Schema for the Lakes API. The Dataplex Lake resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LakeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Lake>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LakeList";
-    public const string KubeGroup = "dataplex.gcp.m.upbound.io";
-    public const string KubePluralName = "lakes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Lake> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>TransitGatewayPeeringAttachmentAccepter is the Schema for the TransitGatewayPeeringAttachmentAccepters API. Manages the accepter's side of an EC2 Transit Gateway peering Attachment</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TransitGatewayPeeringAttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayPeeringAttachmentAccepter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TransitGatewayPeeringAttachmentAccepterList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "transitgatewaypeeringattachmentaccepters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TransitGatewayPeeringAttachmentAccepter> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TransitGatewayPeeringAttachmentAccepterSpecForProviderTransitGatewayAttachmentIdRefPolicy
@@ -344,30 +370,4 @@ public partial class V1beta1TransitGatewayPeeringAttachmentAccepter : IKubernete
     /// <summary>TransitGatewayPeeringAttachmentAccepterStatus defines the observed state of TransitGatewayPeeringAttachmentAccepter.</summary>
     [JsonPropertyName("status")]
     public V1beta1TransitGatewayPeeringAttachmentAccepterStatus? Status { get; set; }
-}
-
-/// <summary>TransitGatewayPeeringAttachmentAccepter is the Schema for the TransitGatewayPeeringAttachmentAccepters API. Manages the accepter's side of an EC2 Transit Gateway peering Attachment</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TransitGatewayPeeringAttachmentAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TransitGatewayPeeringAttachmentAccepter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TransitGatewayPeeringAttachmentAccepterList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "transitgatewaypeeringattachmentaccepters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TransitGatewayPeeringAttachmentAccepter> Items { get; set; }
 }

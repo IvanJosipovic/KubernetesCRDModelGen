@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>NetworkInterfaceAttachment is the Schema for the NetworkInterfaceAttachments API. Attach an Elastic network interface (ENI) resource with EC2 instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkInterfaceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterfaceAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkInterfaceAttachmentList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "networkinterfaceattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkInterfaceAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceAttachmentSpecForProviderInstanceIdRefPolicy
@@ -488,30 +514,4 @@ public partial class V1beta1NetworkInterfaceAttachment : IKubernetesObject<V1Obj
     /// <summary>NetworkInterfaceAttachmentStatus defines the observed state of NetworkInterfaceAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>NetworkInterfaceAttachment is the Schema for the NetworkInterfaceAttachments API. Attach an Elastic network interface (ENI) resource with EC2 instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkInterfaceAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterfaceAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkInterfaceAttachmentList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "networkinterfaceattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NetworkInterfaceAttachment> Items { get; set; }
 }

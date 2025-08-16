@@ -176,8 +176,8 @@ spec:
 ";
         var types = GetTypeYaml(yaml, "Test", "TestList");
 
-        ShouldHaveCorrectAttributeArguments(types[0], "Test");
-        ShouldHaveCorrectAttributeArguments(types[1], "TestList");
+        ShouldHaveCorrectAttributeArguments(types[1], "Test");
+        ShouldHaveCorrectAttributeArguments(types[0], "TestList");
 
         static void ShouldHaveCorrectAttributeArguments(Type type, string namedKind)
         {
@@ -230,8 +230,8 @@ spec:
 ";
         var types = GetTypeYaml(yaml, "Test", "TestList");
 
-        ShouldHaveCorrectAttributeArguments(types[0], "Test");
-        ShouldHaveCorrectAttributeArguments(types[1], "TestList");
+        ShouldHaveCorrectAttributeArguments(types[1], "Test");
+        ShouldHaveCorrectAttributeArguments(types[0], "TestList");
 
         static void ShouldHaveCorrectAttributeArguments(Type type, string namedKind)
         {
@@ -335,8 +335,8 @@ spec:
 ";
         var types = GetTypeYaml(yaml, "Test", "TestList");
 
-        ShouldHaveCorrectFieldValues(types[0], "Test");
-        ShouldHaveCorrectFieldValues(types[1], "TestList");
+        ShouldHaveCorrectFieldValues(types[1], "Test");
+        ShouldHaveCorrectFieldValues(types[0], "TestList");
 
         static void ShouldHaveCorrectFieldValues(Type type, string namedKind)
         {
@@ -383,9 +383,9 @@ spec:
                 someString:
                   type: string
 ";
-        var types = GetTypeYaml(yaml, "Test", "TestList");
+        var type = GetTypeYaml(yaml, "Test");
 
-        var specType = types[0].GetProperty("Spec").PropertyType;
+        var specType = type.GetProperty("Spec").PropertyType;
 
         specType.GetProperty("SomeString").PropertyType.Should().Be<string?>();
     }

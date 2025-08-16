@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elastictranscoder.aws.upbound.io;
+/// <summary>Preset is the Schema for the Presets API. Provides an Elastic Transcoder preset resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PresetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Preset>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PresetList";
+    public const string KubeGroup = "elastictranscoder.aws.upbound.io";
+    public const string KubePluralName = "presets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Preset> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PresetSpecForProviderAudio
@@ -856,30 +882,4 @@ public partial class V1beta1Preset : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>PresetStatus defines the observed state of Preset.</summary>
     [JsonPropertyName("status")]
     public V1beta1PresetStatus? Status { get; set; }
-}
-
-/// <summary>Preset is the Schema for the Presets API. Provides an Elastic Transcoder preset resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PresetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Preset>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PresetList";
-    public const string KubeGroup = "elastictranscoder.aws.upbound.io";
-    public const string KubePluralName = "presets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Preset> Items { get; set; }
 }

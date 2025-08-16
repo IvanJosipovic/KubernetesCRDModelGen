@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>LinkedServiceCosmosDB is the Schema for the LinkedServiceCosmosDBs API. Manages a Linked Service (connection) between a CosmosDB and Azure Data Factory using SQL API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkedServiceCosmosDBList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceCosmosDB>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkedServiceCosmosDBList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "linkedservicecosmosdbs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinkedServiceCosmosDB> Items { get; set; }
+}
+
 /// <summary>The account key of the Azure Cosmos DB account. Required if connection_string is unspecified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceCosmosDBSpecForProviderAccountKeySecretRef
@@ -409,30 +435,4 @@ public partial class V1beta1LinkedServiceCosmosDB : IKubernetesObject<V1ObjectMe
     /// <summary>LinkedServiceCosmosDBStatus defines the observed state of LinkedServiceCosmosDB.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceCosmosDBStatus? Status { get; set; }
-}
-
-/// <summary>LinkedServiceCosmosDB is the Schema for the LinkedServiceCosmosDBs API. Manages a Linked Service (connection) between a CosmosDB and Azure Data Factory using SQL API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinkedServiceCosmosDBList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceCosmosDB>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinkedServiceCosmosDBList";
-    public const string KubeGroup = "datafactory.azure.upbound.io";
-    public const string KubePluralName = "linkedservicecosmosdbs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LinkedServiceCosmosDB> Items { get; set; }
 }

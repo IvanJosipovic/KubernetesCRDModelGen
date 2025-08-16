@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>LoadBalancerOutboundRule is the Schema for the LoadBalancerOutboundRules API. Manages a Load Balancer Outbound Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoadBalancerOutboundRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoadBalancerOutboundRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoadBalancerOutboundRuleList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "loadbalanceroutboundrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LoadBalancerOutboundRule> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerOutboundRuleSpecForProviderBackendAddressPoolIdRefPolicy
@@ -472,30 +498,4 @@ public partial class V1beta1LoadBalancerOutboundRule : IKubernetesObject<V1Objec
     /// <summary>LoadBalancerOutboundRuleStatus defines the observed state of LoadBalancerOutboundRule.</summary>
     [JsonPropertyName("status")]
     public V1beta1LoadBalancerOutboundRuleStatus? Status { get; set; }
-}
-
-/// <summary>LoadBalancerOutboundRule is the Schema for the LoadBalancerOutboundRules API. Manages a Load Balancer Outbound Rule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LoadBalancerOutboundRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoadBalancerOutboundRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LoadBalancerOutboundRuleList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "loadbalanceroutboundrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LoadBalancerOutboundRule> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networking.istio.io;
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1DestinationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1DestinationRule>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "DestinationRuleList";
+    public const string KubeGroup = "networking.istio.io";
+    public const string KubePluralName = "destinationrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1DestinationRule> Items { get; set; }
+}
+
 /// <summary>HTTP connection pool settings.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1DestinationRuleSpecSubsetsTrafficPolicyConnectionPoolHttp
@@ -1631,30 +1657,4 @@ public partial class V1DestinationRule : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary></summary>
     [JsonPropertyName("status")]
     public JsonNode? Status { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1DestinationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1DestinationRule>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "DestinationRuleList";
-    public const string KubeGroup = "networking.istio.io";
-    public const string KubePluralName = "destinationrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1DestinationRule> Items { get; set; }
 }

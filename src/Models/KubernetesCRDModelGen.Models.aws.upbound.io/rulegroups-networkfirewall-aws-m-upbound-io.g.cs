@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkfirewall.aws.m.upbound.io;
+/// <summary>RuleGroup is the Schema for the RuleGroups API. Provides an AWS Network Firewall Rule Group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RuleGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RuleGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RuleGroupList";
+    public const string KubeGroup = "networkfirewall.aws.m.upbound.io";
+    public const string KubePluralName = "rulegroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RuleGroup> Items { get; set; }
+}
+
 /// <summary>KMS encryption configuration settings. See Encryption Configuration below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RuleGroupSpecForProviderEncryptionConfiguration
@@ -1587,30 +1613,4 @@ public partial class V1beta1RuleGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>RuleGroupStatus defines the observed state of RuleGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1RuleGroupStatus? Status { get; set; }
-}
-
-/// <summary>RuleGroup is the Schema for the RuleGroups API. Provides an AWS Network Firewall Rule Group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RuleGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RuleGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RuleGroupList";
-    public const string KubeGroup = "networkfirewall.aws.m.upbound.io";
-    public const string KubePluralName = "rulegroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RuleGroup> Items { get; set; }
 }

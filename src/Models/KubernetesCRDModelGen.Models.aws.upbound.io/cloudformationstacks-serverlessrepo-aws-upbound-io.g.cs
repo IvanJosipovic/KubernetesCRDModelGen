@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serverlessrepo.aws.upbound.io;
+/// <summary>CloudFormationStack is the Schema for the CloudFormationStacks API. Deploys an Application CloudFormation Stack from the Serverless Application Repository.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CloudFormationStackList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CloudFormationStack>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CloudFormationStackList";
+    public const string KubeGroup = "serverlessrepo.aws.upbound.io";
+    public const string KubePluralName = "cloudformationstacks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CloudFormationStack> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CloudFormationStackSpecForProvider
@@ -257,30 +283,4 @@ public partial class V1beta1CloudFormationStack : IKubernetesObject<V1ObjectMeta
     /// <summary>CloudFormationStackStatus defines the observed state of CloudFormationStack.</summary>
     [JsonPropertyName("status")]
     public V1beta1CloudFormationStackStatus? Status { get; set; }
-}
-
-/// <summary>CloudFormationStack is the Schema for the CloudFormationStacks API. Deploys an Application CloudFormation Stack from the Serverless Application Repository.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CloudFormationStackList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CloudFormationStack>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CloudFormationStackList";
-    public const string KubeGroup = "serverlessrepo.aws.upbound.io";
-    public const string KubePluralName = "cloudformationstacks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CloudFormationStack> Items { get; set; }
 }

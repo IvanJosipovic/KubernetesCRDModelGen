@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vmwareengine.cnrm.cloud.google.com;
+/// <summary>VMwareEngineNetworkPeering is the Schema for the VMwareEngineNetworkPeering API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VMwareEngineNetworkPeeringList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VMwareEngineNetworkPeering>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VMwareEngineNetworkPeeringList";
+    public const string KubeGroup = "vmwareengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "vmwareenginenetworkpeerings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VMwareEngineNetworkPeering> Items { get; set; }
+}
+
 /// <summary>Reference to a ComputeNetwork. Exactly one of VMwareEngineNetworkRef or ComputeNetworkRef must be specified.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VMwareEngineNetworkPeeringSpecPeerNetworkComputeNetworkRef
@@ -249,30 +275,4 @@ public partial class V1alpha1VMwareEngineNetworkPeering : IKubernetesObject<V1Ob
     /// <summary>VMwareEngineNetworkPeeringStatus defines the config connector machine state of VMwareEngineNetworkPeering</summary>
     [JsonPropertyName("status")]
     public V1alpha1VMwareEngineNetworkPeeringStatus? Status { get; set; }
-}
-
-/// <summary>VMwareEngineNetworkPeering is the Schema for the VMwareEngineNetworkPeering API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1VMwareEngineNetworkPeeringList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VMwareEngineNetworkPeering>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "VMwareEngineNetworkPeeringList";
-    public const string KubeGroup = "vmwareengine.cnrm.cloud.google.com";
-    public const string KubePluralName = "vmwareenginenetworkpeerings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1VMwareEngineNetworkPeering> Items { get; set; }
 }

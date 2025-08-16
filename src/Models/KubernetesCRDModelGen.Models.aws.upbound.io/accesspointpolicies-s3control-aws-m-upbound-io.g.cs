@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.s3control.aws.m.upbound.io;
+/// <summary>AccessPointPolicy is the Schema for the AccessPointPolicys API. Provides a resource to manage an S3 Access Point resource policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccessPointPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessPointPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccessPointPolicyList";
+    public const string KubeGroup = "s3control.aws.m.upbound.io";
+    public const string KubePluralName = "accesspointpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccessPointPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccessPointPolicySpecForProviderAccessPointArnRefPolicy
@@ -328,30 +354,4 @@ public partial class V1beta1AccessPointPolicy : IKubernetesObject<V1ObjectMeta>,
     /// <summary>AccessPointPolicyStatus defines the observed state of AccessPointPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1AccessPointPolicyStatus? Status { get; set; }
-}
-
-/// <summary>AccessPointPolicy is the Schema for the AccessPointPolicys API. Provides a resource to manage an S3 Access Point resource policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccessPointPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccessPointPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccessPointPolicyList";
-    public const string KubeGroup = "s3control.aws.m.upbound.io";
-    public const string KubePluralName = "accesspointpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AccessPointPolicy> Items { get; set; }
 }

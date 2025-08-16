@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.route53.aws.upbound.io;
+/// <summary>DelegationSet is the Schema for the DelegationSets API. Provides a Route53 Delegation Set resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DelegationSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DelegationSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DelegationSetList";
+    public const string KubeGroup = "route53.aws.upbound.io";
+    public const string KubePluralName = "delegationsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DelegationSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DelegationSetSpecForProvider
@@ -189,30 +215,4 @@ public partial class V1beta1DelegationSet : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>DelegationSetStatus defines the observed state of DelegationSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1DelegationSetStatus? Status { get; set; }
-}
-
-/// <summary>DelegationSet is the Schema for the DelegationSets API. Provides a Route53 Delegation Set resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DelegationSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DelegationSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DelegationSetList";
-    public const string KubeGroup = "route53.aws.upbound.io";
-    public const string KubePluralName = "delegationsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DelegationSet> Items { get; set; }
 }

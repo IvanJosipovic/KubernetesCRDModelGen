@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.firehose.aws.m.upbound.io;
+/// <summary>DeliveryStream is the Schema for the DeliveryStreams API. Provides a AWS Kinesis Firehose Delivery Stream</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DeliveryStreamList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeliveryStream>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DeliveryStreamList";
+    public const string KubeGroup = "firehose.aws.m.upbound.io";
+    public const string KubePluralName = "deliverystreams";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DeliveryStream> Items { get; set; }
+}
+
 /// <summary>The CloudWatch Logging Options for the delivery stream. See cloudwatch_logging_options block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeliveryStreamSpecForProviderElasticsearchConfigurationCloudwatchLoggingOptions
@@ -12549,30 +12575,4 @@ public partial class V1beta1DeliveryStream : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>DeliveryStreamStatus defines the observed state of DeliveryStream.</summary>
     [JsonPropertyName("status")]
     public V1beta1DeliveryStreamStatus? Status { get; set; }
-}
-
-/// <summary>DeliveryStream is the Schema for the DeliveryStreams API. Provides a AWS Kinesis Firehose Delivery Stream</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DeliveryStreamList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeliveryStream>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DeliveryStreamList";
-    public const string KubeGroup = "firehose.aws.m.upbound.io";
-    public const string KubePluralName = "deliverystreams";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DeliveryStream> Items { get; set; }
 }

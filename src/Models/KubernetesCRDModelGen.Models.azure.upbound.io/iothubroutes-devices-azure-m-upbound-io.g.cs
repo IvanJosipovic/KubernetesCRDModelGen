@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.m.upbound.io;
+/// <summary>IOTHubRoute is the Schema for the IOTHubRoutes API. Manages an IotHub Route</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IOTHubRouteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubRoute>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IOTHubRouteList";
+    public const string KubeGroup = "devices.azure.m.upbound.io";
+    public const string KubePluralName = "iothubroutes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IOTHubRoute> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubRouteSpecForProviderEndpointNamesRefsPolicy
@@ -500,30 +526,4 @@ public partial class V1beta1IOTHubRoute : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>IOTHubRouteStatus defines the observed state of IOTHubRoute.</summary>
     [JsonPropertyName("status")]
     public V1beta1IOTHubRouteStatus? Status { get; set; }
-}
-
-/// <summary>IOTHubRoute is the Schema for the IOTHubRoutes API. Manages an IotHub Route</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IOTHubRouteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubRoute>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IOTHubRouteList";
-    public const string KubeGroup = "devices.azure.m.upbound.io";
-    public const string KubePluralName = "iothubroutes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IOTHubRoute> Items { get; set; }
 }

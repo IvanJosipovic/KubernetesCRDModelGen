@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityinsights.azure.m.upbound.io;
+/// <summary>SentinelWatchlist is the Schema for the SentinelWatchlists API. Manages a Sentinel Watchlist.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SentinelWatchlistList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelWatchlist>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SentinelWatchlistList";
+    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
+    public const string KubePluralName = "sentinelwatchlists";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SentinelWatchlist> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelWatchlistSpecForProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -288,30 +314,4 @@ public partial class V1beta1SentinelWatchlist : IKubernetesObject<V1ObjectMeta>,
     /// <summary>SentinelWatchlistStatus defines the observed state of SentinelWatchlist.</summary>
     [JsonPropertyName("status")]
     public V1beta1SentinelWatchlistStatus? Status { get; set; }
-}
-
-/// <summary>SentinelWatchlist is the Schema for the SentinelWatchlists API. Manages a Sentinel Watchlist.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SentinelWatchlistList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelWatchlist>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SentinelWatchlistList";
-    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
-    public const string KubePluralName = "sentinelwatchlists";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SentinelWatchlist> Items { get; set; }
 }

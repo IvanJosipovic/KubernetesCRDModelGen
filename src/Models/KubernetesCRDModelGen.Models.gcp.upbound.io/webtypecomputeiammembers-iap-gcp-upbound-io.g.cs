@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iap.gcp.upbound.io;
+/// <summary>WebTypeComputeIAMMember is the Schema for the WebTypeComputeIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WebTypeComputeIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WebTypeComputeIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WebTypeComputeIAMMemberList";
+    public const string KubeGroup = "iap.gcp.upbound.io";
+    public const string KubePluralName = "webtypecomputeiammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WebTypeComputeIAMMember> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WebTypeComputeIAMMemberSpecForProviderCondition
@@ -272,30 +298,4 @@ public partial class V1beta1WebTypeComputeIAMMember : IKubernetesObject<V1Object
     /// <summary>WebTypeComputeIAMMemberStatus defines the observed state of WebTypeComputeIAMMember.</summary>
     [JsonPropertyName("status")]
     public V1beta1WebTypeComputeIAMMemberStatus? Status { get; set; }
-}
-
-/// <summary>WebTypeComputeIAMMember is the Schema for the WebTypeComputeIAMMembers API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WebTypeComputeIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WebTypeComputeIAMMember>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WebTypeComputeIAMMemberList";
-    public const string KubeGroup = "iap.gcp.upbound.io";
-    public const string KubePluralName = "webtypecomputeiammembers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WebTypeComputeIAMMember> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.upbound.io;
+/// <summary>DomainConfiguration is the Schema for the DomainConfigurations API. Creates and manages an AWS IoT domain configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DomainConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DomainConfigurationList";
+    public const string KubeGroup = "iot.aws.upbound.io";
+    public const string KubePluralName = "domainconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DomainConfiguration> Items { get; set; }
+}
+
 /// <summary>An object that specifies the authorization service for a domain. See the authorizer_config Block below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DomainConfigurationSpecForProviderAuthorizerConfig
@@ -503,30 +529,4 @@ public partial class V1beta1DomainConfiguration : IKubernetesObject<V1ObjectMeta
     /// <summary>DomainConfigurationStatus defines the observed state of DomainConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1DomainConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>DomainConfiguration is the Schema for the DomainConfigurations API. Creates and manages an AWS IoT domain configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DomainConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DomainConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DomainConfigurationList";
-    public const string KubeGroup = "iot.aws.upbound.io";
-    public const string KubePluralName = "domainconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DomainConfiguration> Items { get; set; }
 }

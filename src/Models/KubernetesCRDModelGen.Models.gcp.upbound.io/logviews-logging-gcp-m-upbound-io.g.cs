@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.m.upbound.io;
+/// <summary>LogView is the Schema for the LogViews API. Describes a view over log entries in a bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LogViewList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LogView>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LogViewList";
+    public const string KubeGroup = "logging.gcp.m.upbound.io";
+    public const string KubePluralName = "logviews";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LogView> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LogViewSpecForProviderBucketRefPolicy
@@ -276,30 +302,4 @@ public partial class V1beta1LogView : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>LogViewStatus defines the observed state of LogView.</summary>
     [JsonPropertyName("status")]
     public V1beta1LogViewStatus? Status { get; set; }
-}
-
-/// <summary>LogView is the Schema for the LogViews API. Describes a view over log entries in a bucket.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LogViewList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LogView>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LogViewList";
-    public const string KubeGroup = "logging.gcp.m.upbound.io";
-    public const string KubePluralName = "logviews";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LogView> Items { get; set; }
 }

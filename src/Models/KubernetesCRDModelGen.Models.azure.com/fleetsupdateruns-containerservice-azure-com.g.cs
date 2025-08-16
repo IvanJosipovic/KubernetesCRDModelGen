@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerservice.azure.com;
+/// <summary>Storage version of v1api20230315preview.FleetsUpdateRun Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230315previewstorageFleetsUpdateRunList : IKubernetesObject<V1ListMeta>, IItems<V1api20230315previewstorageFleetsUpdateRun>
+{
+    public const string KubeApiVersion = "v1api20230315previewstorage";
+    public const string KubeKind = "FleetsUpdateRunList";
+    public const string KubeGroup = "containerservice.azure.com";
+    public const string KubePluralName = "fleetsupdateruns";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230315previewstorageFleetsUpdateRun> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20230315preview.ManagedClusterUpgradeSpec The upgrade to apply to a ManagedCluster.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230315previewstorageFleetsUpdateRunSpecManagedClusterUpdateUpgrade
@@ -1072,30 +1098,4 @@ public partial class V1api20230315previewstorageFleetsUpdateRun : IKubernetesObj
     /// <summary>Storage version of v1api20230315preview.FleetsUpdateRun_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230315previewstorageFleetsUpdateRunStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20230315preview.FleetsUpdateRun Generator information: - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230315previewstorageFleetsUpdateRunList : IKubernetesObject<V1ListMeta>, IItems<V1api20230315previewstorageFleetsUpdateRun>
-{
-    public const string KubeApiVersion = "v1api20230315previewstorage";
-    public const string KubeKind = "FleetsUpdateRunList";
-    public const string KubeGroup = "containerservice.azure.com";
-    public const string KubePluralName = "fleetsupdateruns";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20230315previewstorageFleetsUpdateRun> Items { get; set; }
 }

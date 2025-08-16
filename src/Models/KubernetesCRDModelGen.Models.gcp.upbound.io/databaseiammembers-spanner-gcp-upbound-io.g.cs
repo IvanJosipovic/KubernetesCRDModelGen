@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.gcp.upbound.io;
+/// <summary>DatabaseIAMMember is the Schema for the DatabaseIAMMembers API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatabaseIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabaseIAMMember>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatabaseIAMMemberList";
+    public const string KubeGroup = "spanner.gcp.upbound.io";
+    public const string KubePluralName = "databaseiammembers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DatabaseIAMMember> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseIAMMemberSpecForProviderCondition
@@ -552,30 +578,4 @@ public partial class V1beta1DatabaseIAMMember : IKubernetesObject<V1ObjectMeta>,
     /// <summary>DatabaseIAMMemberStatus defines the observed state of DatabaseIAMMember.</summary>
     [JsonPropertyName("status")]
     public V1beta1DatabaseIAMMemberStatus? Status { get; set; }
-}
-
-/// <summary>DatabaseIAMMember is the Schema for the DatabaseIAMMembers API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DatabaseIAMMemberList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabaseIAMMember>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DatabaseIAMMemberList";
-    public const string KubeGroup = "spanner.gcp.upbound.io";
-    public const string KubePluralName = "databaseiammembers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DatabaseIAMMember> Items { get; set; }
 }

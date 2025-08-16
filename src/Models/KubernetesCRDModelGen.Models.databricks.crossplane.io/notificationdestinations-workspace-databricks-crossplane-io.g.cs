@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workspace.databricks.crossplane.io;
+/// <summary>NotificationDestination is the Schema for the NotificationDestinations API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1NotificationDestinationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NotificationDestination>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "NotificationDestinationList";
+    public const string KubeGroup = "workspace.databricks.crossplane.io";
+    public const string KubePluralName = "notificationdestinations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1NotificationDestination> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NotificationDestinationSpecForProviderConfigEmail
@@ -755,30 +781,4 @@ public partial class V1alpha1NotificationDestination : IKubernetesObject<V1Objec
     /// <summary>NotificationDestinationStatus defines the observed state of NotificationDestination.</summary>
     [JsonPropertyName("status")]
     public V1alpha1NotificationDestinationStatus? Status { get; set; }
-}
-
-/// <summary>NotificationDestination is the Schema for the NotificationDestinations API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1NotificationDestinationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NotificationDestination>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "NotificationDestinationList";
-    public const string KubeGroup = "workspace.databricks.crossplane.io";
-    public const string KubePluralName = "notificationdestinations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1NotificationDestination> Items { get; set; }
 }

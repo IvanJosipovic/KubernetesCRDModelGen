@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.healthcare.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1HealthcareDICOMStoreList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1HealthcareDICOMStore>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "HealthcareDICOMStoreList";
+    public const string KubeGroup = "healthcare.cnrm.cloud.google.com";
+    public const string KubePluralName = "healthcaredicomstores";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1HealthcareDICOMStore> Items { get; set; }
 }
 
 /// <summary>A nested object resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreSpecNotificationConfig
+public partial class V1alpha1HealthcareDICOMStoreSpecNotificationConfig
 {
     /// <summary>The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client. PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message. It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.</summary>
     [JsonPropertyName("pubsubTopic")]
@@ -25,7 +45,7 @@ public partial class HealthcareDICOMStoreSpecNotificationConfig
 
 /// <summary>BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination
+public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination
 {
     /// <summary>a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
     [JsonPropertyName("tableUri")]
@@ -34,16 +54,16 @@ public partial class HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreSpecStreamConfigs
+public partial class V1alpha1HealthcareDICOMStoreSpecStreamConfigs
 {
     /// <summary>BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.</summary>
     [JsonPropertyName("bigqueryDestination")]
-    public HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination BigqueryDestination { get; set; }
+    public V1alpha1HealthcareDICOMStoreSpecStreamConfigsBigqueryDestination BigqueryDestination { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreSpec
+public partial class V1alpha1HealthcareDICOMStoreSpec
 {
     /// <summary>Immutable. Identifies the dataset addressed by this request. Must be in the format 'projects/{project}/locations/{location}/datasets/{dataset}'.</summary>
     [JsonPropertyName("dataset")]
@@ -51,7 +71,7 @@ public partial class HealthcareDICOMStoreSpec
 
     /// <summary>A nested object resource.</summary>
     [JsonPropertyName("notificationConfig")]
-    public HealthcareDICOMStoreSpecNotificationConfig? NotificationConfig { get; set; }
+    public V1alpha1HealthcareDICOMStoreSpecNotificationConfig? NotificationConfig { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -59,12 +79,12 @@ public partial class HealthcareDICOMStoreSpec
 
     /// <summary>To enable streaming to BigQuery, configure the streamConfigs object in your DICOM store. streamConfigs is an array, so you can specify multiple BigQuery destinations. You can stream metadata from a single DICOM store to up to five BigQuery tables in a BigQuery dataset.</summary>
     [JsonPropertyName("streamConfigs")]
-    public IList<HealthcareDICOMStoreSpecStreamConfigs>? StreamConfigs { get; set; }
+    public IList<V1alpha1HealthcareDICOMStoreSpecStreamConfigs>? StreamConfigs { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreStatusConditions
+public partial class V1alpha1HealthcareDICOMStoreStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -89,11 +109,11 @@ public partial class HealthcareDICOMStoreStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStoreStatus
+public partial class V1alpha1HealthcareDICOMStoreStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<HealthcareDICOMStoreStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1HealthcareDICOMStoreStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -106,25 +126,30 @@ public partial class HealthcareDICOMStoreStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class HealthcareDICOMStore
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1HealthcareDICOMStore : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1HealthcareDICOMStoreSpec>, IStatus<V1alpha1HealthcareDICOMStoreStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "HealthcareDICOMStore";
+    public const string KubeGroup = "healthcare.cnrm.cloud.google.com";
+    public const string KubePluralName = "healthcaredicomstores";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public HealthcareDICOMStoreMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public HealthcareDICOMStoreSpec Spec { get; set; }
+    public V1alpha1HealthcareDICOMStoreSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public HealthcareDICOMStoreStatus? Status { get; set; }
+    public V1alpha1HealthcareDICOMStoreStatus? Status { get; set; }
 }

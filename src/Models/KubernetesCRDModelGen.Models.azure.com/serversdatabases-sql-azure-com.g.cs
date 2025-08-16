@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.com;
+/// <summary>Storage version of v1api20211101.ServersDatabase Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20211101storageServersDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1api20211101storageServersDatabase>
+{
+    public const string KubeApiVersion = "v1api20211101storage";
+    public const string KubeKind = "ServersDatabaseList";
+    public const string KubeGroup = "sql.azure.com";
+    public const string KubePluralName = "serversdatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20211101storageServersDatabase> Items { get; set; }
+}
+
 /// <summary>ElasticPoolReference: The resource identifier of the elastic pool containing this database.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20211101storageServersDatabaseSpecElasticPoolReference
@@ -802,30 +828,4 @@ public partial class V1api20211101storageServersDatabase : IKubernetesObject<V1O
     /// <summary>Storage version of v1api20211101.ServersDatabase_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20211101storageServersDatabaseStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20211101.ServersDatabase Generator information: - Generated from: /sql/resource-manager/Microsoft.Sql/stable/2021-11-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20211101storageServersDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1api20211101storageServersDatabase>
-{
-    public const string KubeApiVersion = "v1api20211101storage";
-    public const string KubeKind = "ServersDatabaseList";
-    public const string KubeGroup = "sql.azure.com";
-    public const string KubePluralName = "serversdatabases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20211101storageServersDatabase> Items { get; set; }
 }

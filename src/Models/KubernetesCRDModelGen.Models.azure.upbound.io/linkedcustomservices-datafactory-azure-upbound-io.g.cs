@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.upbound.io;
+/// <summary>LinkedCustomService is the Schema for the LinkedCustomServices API. Manages a Linked Service (connection) between a resource and Azure Data Factory. This is a generic resource that supports all different Linked Service Types.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkedCustomServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedCustomService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkedCustomServiceList";
+    public const string KubeGroup = "datafactory.azure.upbound.io";
+    public const string KubePluralName = "linkedcustomservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinkedCustomService> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedCustomServiceSpecForProviderDataFactoryIdRefPolicy
@@ -364,30 +390,4 @@ public partial class V1beta1LinkedCustomService : IKubernetesObject<V1ObjectMeta
     /// <summary>LinkedCustomServiceStatus defines the observed state of LinkedCustomService.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinkedCustomServiceStatus? Status { get; set; }
-}
-
-/// <summary>LinkedCustomService is the Schema for the LinkedCustomServices API. Manages a Linked Service (connection) between a resource and Azure Data Factory. This is a generic resource that supports all different Linked Service Types.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinkedCustomServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedCustomService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinkedCustomServiceList";
-    public const string KubeGroup = "datafactory.azure.upbound.io";
-    public const string KubePluralName = "linkedcustomservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LinkedCustomService> Items { get; set; }
 }

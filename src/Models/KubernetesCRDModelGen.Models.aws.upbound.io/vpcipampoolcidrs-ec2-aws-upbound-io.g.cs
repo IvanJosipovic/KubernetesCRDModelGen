@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>VPCIpamPoolCidr is the Schema for the VPCIpamPoolCidrs API. Provisions a CIDR from an IPAM address pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPCIpamPoolCidrList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCIpamPoolCidr>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPCIpamPoolCidrList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "vpcipampoolcidrs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPCIpamPoolCidr> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCIpamPoolCidrSpecForProviderCidrAuthorizationContext
@@ -396,30 +422,4 @@ public partial class V1beta1VPCIpamPoolCidr : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>VPCIpamPoolCidrStatus defines the observed state of VPCIpamPoolCidr.</summary>
     [JsonPropertyName("status")]
     public V1beta1VPCIpamPoolCidrStatus? Status { get; set; }
-}
-
-/// <summary>VPCIpamPoolCidr is the Schema for the VPCIpamPoolCidrs API. Provisions a CIDR from an IPAM address pool.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VPCIpamPoolCidrList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCIpamPoolCidr>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VPCIpamPoolCidrList";
-    public const string KubeGroup = "ec2.aws.upbound.io";
-    public const string KubePluralName = "vpcipampoolcidrs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VPCIpamPoolCidr> Items { get; set; }
 }

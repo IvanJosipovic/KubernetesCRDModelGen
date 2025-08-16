@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>NodeTemplate is the Schema for the NodeTemplates API. Represents a NodeTemplate resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NodeTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NodeTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NodeTemplateList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "nodetemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NodeTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NodeTemplateSpecForProviderAccelerators
@@ -453,30 +479,4 @@ public partial class V1beta1NodeTemplate : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>NodeTemplateStatus defines the observed state of NodeTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1NodeTemplateStatus? Status { get; set; }
-}
-
-/// <summary>NodeTemplate is the Schema for the NodeTemplates API. Represents a NodeTemplate resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NodeTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NodeTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NodeTemplateList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "nodetemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NodeTemplate> Items { get; set; }
 }

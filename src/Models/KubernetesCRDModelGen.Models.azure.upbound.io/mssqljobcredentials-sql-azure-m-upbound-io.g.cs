@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.m.upbound.io;
+/// <summary>MSSQLJobCredential is the Schema for the MSSQLJobCredentials API. Manages an Elastic Job Credential.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLJobCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLJobCredential>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLJobCredentialList";
+    public const string KubeGroup = "sql.azure.m.upbound.io";
+    public const string KubePluralName = "mssqljobcredentials";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLJobCredential> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLJobCredentialSpecForProviderJobAgentIdRefPolicy
@@ -298,30 +324,4 @@ public partial class V1beta1MSSQLJobCredential : IKubernetesObject<V1ObjectMeta>
     /// <summary>MSSQLJobCredentialStatus defines the observed state of MSSQLJobCredential.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLJobCredentialStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLJobCredential is the Schema for the MSSQLJobCredentials API. Manages an Elastic Job Credential.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLJobCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLJobCredential>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLJobCredentialList";
-    public const string KubeGroup = "sql.azure.m.upbound.io";
-    public const string KubePluralName = "mssqljobcredentials";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLJobCredential> Items { get; set; }
 }

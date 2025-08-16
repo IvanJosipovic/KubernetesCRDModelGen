@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.botservice.azure.m.upbound.io;
+/// <summary>BotChannelsRegistration is the Schema for the BotChannelsRegistrations API. Manages a Bot Channels Registration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BotChannelsRegistrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotChannelsRegistration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BotChannelsRegistrationList";
+    public const string KubeGroup = "botservice.azure.m.upbound.io";
+    public const string KubePluralName = "botchannelsregistrations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BotChannelsRegistration> Items { get; set; }
+}
+
 /// <summary>The Application Insights API Key to associate with the Bot Channels Registration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelsRegistrationSpecForProviderDeveloperAppInsightsApiKeySecretRef
@@ -506,30 +532,4 @@ public partial class V1beta1BotChannelsRegistration : IKubernetesObject<V1Object
     /// <summary>BotChannelsRegistrationStatus defines the observed state of BotChannelsRegistration.</summary>
     [JsonPropertyName("status")]
     public V1beta1BotChannelsRegistrationStatus? Status { get; set; }
-}
-
-/// <summary>BotChannelsRegistration is the Schema for the BotChannelsRegistrations API. Manages a Bot Channels Registration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BotChannelsRegistrationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotChannelsRegistration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BotChannelsRegistrationList";
-    public const string KubeGroup = "botservice.azure.m.upbound.io";
-    public const string KubePluralName = "botchannelsregistrations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BotChannelsRegistration> Items { get; set; }
 }

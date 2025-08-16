@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>MSSQLVirtualNetworkRule is the Schema for the MSSQLVirtualNetworkRules API. Manages an Azure SQL Virtual Network Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLVirtualNetworkRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLVirtualNetworkRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLVirtualNetworkRuleList";
+    public const string KubeGroup = "sql.azure.upbound.io";
+    public const string KubePluralName = "mssqlvirtualnetworkrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLVirtualNetworkRule> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLVirtualNetworkRuleSpecForProviderServerIdRefPolicy
@@ -393,30 +419,4 @@ public partial class V1beta1MSSQLVirtualNetworkRule : IKubernetesObject<V1Object
     /// <summary>MSSQLVirtualNetworkRuleStatus defines the observed state of MSSQLVirtualNetworkRule.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLVirtualNetworkRuleStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLVirtualNetworkRule is the Schema for the MSSQLVirtualNetworkRules API. Manages an Azure SQL Virtual Network Rule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLVirtualNetworkRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLVirtualNetworkRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLVirtualNetworkRuleList";
-    public const string KubeGroup = "sql.azure.upbound.io";
-    public const string KubePluralName = "mssqlvirtualnetworkrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLVirtualNetworkRule> Items { get; set; }
 }

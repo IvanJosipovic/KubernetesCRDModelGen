@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.m.upbound.io;
+/// <summary>VPCPeeringConnectionAccepter is the Schema for the VPCPeeringConnectionAccepters API. Manage the accepter's side of a VPC Peering Connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPCPeeringConnectionAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCPeeringConnectionAccepter>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPCPeeringConnectionAccepterList";
+    public const string KubeGroup = "ec2.aws.m.upbound.io";
+    public const string KubePluralName = "vpcpeeringconnectionaccepters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPCPeeringConnectionAccepter> Items { get; set; }
+}
+
 /// <summary>A configuration block that describes [VPC Peering Connection] (https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html) options set for the accepter VPC.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPCPeeringConnectionAccepterSpecForProviderAccepter
@@ -438,30 +464,4 @@ public partial class V1beta1VPCPeeringConnectionAccepter : IKubernetesObject<V1O
     /// <summary>VPCPeeringConnectionAccepterStatus defines the observed state of VPCPeeringConnectionAccepter.</summary>
     [JsonPropertyName("status")]
     public V1beta1VPCPeeringConnectionAccepterStatus? Status { get; set; }
-}
-
-/// <summary>VPCPeeringConnectionAccepter is the Schema for the VPCPeeringConnectionAccepters API. Manage the accepter's side of a VPC Peering Connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VPCPeeringConnectionAccepterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPCPeeringConnectionAccepter>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VPCPeeringConnectionAccepterList";
-    public const string KubeGroup = "ec2.aws.m.upbound.io";
-    public const string KubePluralName = "vpcpeeringconnectionaccepters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VPCPeeringConnectionAccepter> Items { get; set; }
 }

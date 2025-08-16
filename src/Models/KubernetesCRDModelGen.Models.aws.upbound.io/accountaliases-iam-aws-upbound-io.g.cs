@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.aws.upbound.io;
+/// <summary>AccountAlias is the Schema for the AccountAliass API. Manages the account alias for the AWS Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AccountAliasList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccountAlias>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AccountAliasList";
+    public const string KubeGroup = "iam.aws.upbound.io";
+    public const string KubePluralName = "accountaliases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AccountAlias> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AccountAliasSpecForProvider
@@ -171,30 +197,4 @@ public partial class V1beta1AccountAlias : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>AccountAliasStatus defines the observed state of AccountAlias.</summary>
     [JsonPropertyName("status")]
     public V1beta1AccountAliasStatus? Status { get; set; }
-}
-
-/// <summary>AccountAlias is the Schema for the AccountAliass API. Manages the account alias for the AWS Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AccountAliasList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AccountAlias>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AccountAliasList";
-    public const string KubeGroup = "iam.aws.upbound.io";
-    public const string KubePluralName = "accountaliases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AccountAlias> Items { get; set; }
 }

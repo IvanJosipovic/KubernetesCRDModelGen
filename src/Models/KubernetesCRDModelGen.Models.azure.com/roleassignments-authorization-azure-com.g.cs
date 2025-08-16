@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.com;
+/// <summary>Storage version of v1api20220401.RoleAssignment Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220401storageRoleAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1api20220401storageRoleAssignment>
+{
+    public const string KubeApiVersion = "v1api20220401storage";
+    public const string KubeKind = "RoleAssignmentList";
+    public const string KubeGroup = "authorization.azure.com";
+    public const string KubePluralName = "roleassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220401storageRoleAssignment> Items { get; set; }
+}
+
 /// <summary>DelegatedManagedIdentityResourceReference: Id of the delegated managed identity resource</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageRoleAssignmentSpecDelegatedManagedIdentityResourceReference
@@ -330,30 +356,4 @@ public partial class V1api20220401storageRoleAssignment : IKubernetesObject<V1Ob
     /// <summary>Storage version of v1api20220401.RoleAssignment_STATUS Role Assignments</summary>
     [JsonPropertyName("status")]
     public V1api20220401storageRoleAssignmentStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20220401.RoleAssignment Generator information: - Generated from: /authorization/resource-manager/Microsoft.Authorization/stable/2022-04-01/authorization-RoleAssignmentsCalls.json - ARM URI: /{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220401storageRoleAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1api20220401storageRoleAssignment>
-{
-    public const string KubeApiVersion = "v1api20220401storage";
-    public const string KubeKind = "RoleAssignmentList";
-    public const string KubeGroup = "authorization.azure.com";
-    public const string KubePluralName = "roleassignments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20220401storageRoleAssignment> Items { get; set; }
 }

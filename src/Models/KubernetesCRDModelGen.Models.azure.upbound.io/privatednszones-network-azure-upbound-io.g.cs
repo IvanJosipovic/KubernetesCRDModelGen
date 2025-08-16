@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>PrivateDNSZone is the Schema for the PrivateDNSZones API. Manages a Private DNS Zone.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateDNSZoneList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateDNSZone>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateDNSZoneList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "privatednszones";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivateDNSZone> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSZoneSpecForProviderResourceGroupNameRefPolicy
@@ -392,30 +418,4 @@ public partial class V1beta1PrivateDNSZone : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>PrivateDNSZoneStatus defines the observed state of PrivateDNSZone.</summary>
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSZoneStatus? Status { get; set; }
-}
-
-/// <summary>PrivateDNSZone is the Schema for the PrivateDNSZones API. Manages a Private DNS Zone.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrivateDNSZoneList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateDNSZone>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrivateDNSZoneList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "privatednszones";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PrivateDNSZone> Items { get; set; }
 }

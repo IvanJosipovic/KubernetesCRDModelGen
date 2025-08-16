@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.gcp.upbound.io;
+/// <summary>GarbageCollectionPolicy is the Schema for the GarbageCollectionPolicys API. Creates a Google Cloud Bigtable GC Policy inside a family.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GarbageCollectionPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GarbageCollectionPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GarbageCollectionPolicyList";
+    public const string KubeGroup = "bigtable.gcp.upbound.io";
+    public const string KubePluralName = "garbagecollectionpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GarbageCollectionPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GarbageCollectionPolicySpecForProviderInstanceNameRefPolicy
@@ -611,30 +637,4 @@ public partial class V1beta1GarbageCollectionPolicy : IKubernetesObject<V1Object
     /// <summary>GarbageCollectionPolicyStatus defines the observed state of GarbageCollectionPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1GarbageCollectionPolicyStatus? Status { get; set; }
-}
-
-/// <summary>GarbageCollectionPolicy is the Schema for the GarbageCollectionPolicys API. Creates a Google Cloud Bigtable GC Policy inside a family.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GarbageCollectionPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GarbageCollectionPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GarbageCollectionPolicyList";
-    public const string KubeGroup = "bigtable.gcp.upbound.io";
-    public const string KubePluralName = "garbagecollectionpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GarbageCollectionPolicy> Items { get; set; }
 }

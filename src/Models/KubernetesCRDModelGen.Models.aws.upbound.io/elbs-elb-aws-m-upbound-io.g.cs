@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elb.aws.m.upbound.io;
+/// <summary>ELB is the Schema for the ELBs API. Provides an Elastic Load Balancer resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ELBList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ELB>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ELBList";
+    public const string KubeGroup = "elb.aws.m.upbound.io";
+    public const string KubePluralName = "elbs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ELB> Items { get; set; }
+}
+
 /// <summary>An Access Logs block. Access Logs documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ELBSpecForProviderAccessLogs
@@ -857,30 +883,4 @@ public partial class V1beta1ELB : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1
     /// <summary>ELBStatus defines the observed state of ELB.</summary>
     [JsonPropertyName("status")]
     public V1beta1ELBStatus? Status { get; set; }
-}
-
-/// <summary>ELB is the Schema for the ELBs API. Provides an Elastic Load Balancer resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ELBList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ELB>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ELBList";
-    public const string KubeGroup = "elb.aws.m.upbound.io";
-    public const string KubePluralName = "elbs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ELB> Items { get; set; }
 }

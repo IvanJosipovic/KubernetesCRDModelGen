@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.relay.azure.m.upbound.io;
+/// <summary>EventRelayNamespace is the Schema for the EventRelayNamespaces API. Manages an Azure Relay Namespace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EventRelayNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventRelayNamespace>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EventRelayNamespaceList";
+    public const string KubeGroup = "relay.azure.m.upbound.io";
+    public const string KubePluralName = "eventrelaynamespaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EventRelayNamespace> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EventRelayNamespaceSpecForProviderResourceGroupNameRefPolicy
@@ -268,30 +294,4 @@ public partial class V1beta1EventRelayNamespace : IKubernetesObject<V1ObjectMeta
     /// <summary>EventRelayNamespaceStatus defines the observed state of EventRelayNamespace.</summary>
     [JsonPropertyName("status")]
     public V1beta1EventRelayNamespaceStatus? Status { get; set; }
-}
-
-/// <summary>EventRelayNamespace is the Schema for the EventRelayNamespaces API. Manages an Azure Relay Namespace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EventRelayNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1EventRelayNamespace>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EventRelayNamespaceList";
-    public const string KubeGroup = "relay.azure.m.upbound.io";
-    public const string KubePluralName = "eventrelaynamespaces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1EventRelayNamespace> Items { get; set; }
 }

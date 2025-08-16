@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>TargetTCPProxy is the Schema for the TargetTCPProxys API. Represents a TargetTcpProxy resource, which is used by one or more global forwarding rule to route incoming TCP requests to a Backend service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TargetTCPProxyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TargetTCPProxy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TargetTCPProxyList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "targettcpproxies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TargetTCPProxy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TargetTCPProxySpecForProviderBackendServiceRefPolicy
@@ -369,30 +395,4 @@ public partial class V1beta1TargetTCPProxy : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>TargetTCPProxyStatus defines the observed state of TargetTCPProxy.</summary>
     [JsonPropertyName("status")]
     public V1beta1TargetTCPProxyStatus? Status { get; set; }
-}
-
-/// <summary>TargetTCPProxy is the Schema for the TargetTCPProxys API. Represents a TargetTcpProxy resource, which is used by one or more global forwarding rule to route incoming TCP requests to a Backend service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TargetTCPProxyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TargetTCPProxy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TargetTCPProxyList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "targettcpproxies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TargetTCPProxy> Items { get; set; }
 }

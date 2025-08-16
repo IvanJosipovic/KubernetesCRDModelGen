@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.log.databricks.crossplane.io;
+/// <summary>MwsLogDelivery is the Schema for the MwsLogDeliverys API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MwsLogDeliveryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsLogDelivery>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MwsLogDeliveryList";
+    public const string KubeGroup = "log.databricks.crossplane.io";
+    public const string KubePluralName = "mwslogdeliveries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MwsLogDelivery> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsLogDeliverySpecForProvider
@@ -365,30 +391,4 @@ public partial class V1alpha1MwsLogDelivery : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>MwsLogDeliveryStatus defines the observed state of MwsLogDelivery.</summary>
     [JsonPropertyName("status")]
     public V1alpha1MwsLogDeliveryStatus? Status { get; set; }
-}
-
-/// <summary>MwsLogDelivery is the Schema for the MwsLogDeliverys API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MwsLogDeliveryList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsLogDelivery>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MwsLogDeliveryList";
-    public const string KubeGroup = "log.databricks.crossplane.io";
-    public const string KubePluralName = "mwslogdeliveries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MwsLogDelivery> Items { get; set; }
 }

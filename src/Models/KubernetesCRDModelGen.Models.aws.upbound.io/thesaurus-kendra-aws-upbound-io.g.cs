@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kendra.aws.upbound.io;
+/// <summary>Thesaurus is the Schema for the Thesauruss API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ThesaurusList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Thesaurus>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ThesaurusList";
+    public const string KubeGroup = "kendra.aws.upbound.io";
+    public const string KubePluralName = "thesaurus";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Thesaurus> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThesaurusSpecForProviderIndexIdRefPolicy
@@ -816,30 +842,4 @@ public partial class V1beta1Thesaurus : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>ThesaurusStatus defines the observed state of Thesaurus.</summary>
     [JsonPropertyName("status")]
     public V1beta1ThesaurusStatus? Status { get; set; }
-}
-
-/// <summary>Thesaurus is the Schema for the Thesauruss API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ThesaurusList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Thesaurus>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ThesaurusList";
-    public const string KubeGroup = "kendra.aws.upbound.io";
-    public const string KubePluralName = "thesaurus";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Thesaurus> Items { get; set; }
 }

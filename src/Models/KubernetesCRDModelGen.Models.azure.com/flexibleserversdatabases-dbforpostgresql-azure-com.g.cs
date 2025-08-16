@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dbforpostgresql.azure.com;
+/// <summary>Storage version of v1api20240801.FlexibleServersDatabase Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/databases/{databaseName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240801storageFlexibleServersDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1api20240801storageFlexibleServersDatabase>
+{
+    public const string KubeApiVersion = "v1api20240801storage";
+    public const string KubeKind = "FlexibleServersDatabaseList";
+    public const string KubeGroup = "dbforpostgresql.azure.com";
+    public const string KubePluralName = "flexibleserversdatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240801storageFlexibleServersDatabase> Items { get; set; }
+}
+
 /// <summary>DestinationExpression is a CEL expression and a destination to store the result in. The destination may be a secret or a configmap. The value of the expression is stored at the specified location in the destination.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240801storageFlexibleServersDatabaseSpecOperatorSpecConfigMapExpressions
@@ -236,30 +262,4 @@ public partial class V1api20240801storageFlexibleServersDatabase : IKubernetesOb
     /// <summary>Storage version of v1api20240801.FlexibleServersDatabase_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20240801storageFlexibleServersDatabaseStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240801.FlexibleServersDatabase Generator information: - Generated from: /postgresql/resource-manager/Microsoft.DBforPostgreSQL/stable/2024-08-01/Databases.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DBforPostgreSQL/flexibleServers/{serverName}/databases/{databaseName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240801storageFlexibleServersDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1api20240801storageFlexibleServersDatabase>
-{
-    public const string KubeApiVersion = "v1api20240801storage";
-    public const string KubeKind = "FlexibleServersDatabaseList";
-    public const string KubeGroup = "dbforpostgresql.azure.com";
-    public const string KubePluralName = "flexibleserversdatabases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240801storageFlexibleServersDatabase> Items { get; set; }
 }

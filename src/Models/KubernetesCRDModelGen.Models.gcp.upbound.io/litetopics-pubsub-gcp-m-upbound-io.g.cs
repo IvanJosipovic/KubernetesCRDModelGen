@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.gcp.m.upbound.io;
+/// <summary>LiteTopic is the Schema for the LiteTopics API. A named resource to which messages are sent by publishers.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LiteTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LiteTopic>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LiteTopicList";
+    public const string KubeGroup = "pubsub.gcp.m.upbound.io";
+    public const string KubePluralName = "litetopics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LiteTopic> Items { get; set; }
+}
+
 /// <summary>The capacity configuration. Structure is documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LiteTopicSpecForProviderPartitionConfigCapacity
@@ -504,30 +530,4 @@ public partial class V1beta1LiteTopic : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>LiteTopicStatus defines the observed state of LiteTopic.</summary>
     [JsonPropertyName("status")]
     public V1beta1LiteTopicStatus? Status { get; set; }
-}
-
-/// <summary>LiteTopic is the Schema for the LiteTopics API. A named resource to which messages are sent by publishers.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LiteTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LiteTopic>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LiteTopicList";
-    public const string KubeGroup = "pubsub.gcp.m.upbound.io";
-    public const string KubePluralName = "litetopics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LiteTopic> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.colab.cnrm.cloud.google.com;
+/// <summary>ColabRuntime is the Schema for the ColabRuntime API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ColabRuntimeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ColabRuntime>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ColabRuntimeList";
+    public const string KubeGroup = "colab.cnrm.cloud.google.com";
+    public const string KubePluralName = "colabruntimes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ColabRuntime> Items { get; set; }
+}
+
 /// <summary>The pointer to NotebookRuntimeTemplate this NotebookRuntime is created from.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ColabRuntimeSpecColabRuntimeTemplateRef
@@ -236,30 +262,4 @@ public partial class V1alpha1ColabRuntime : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>ColabRuntimeStatus defines the config connector machine state of ColabRuntime</summary>
     [JsonPropertyName("status")]
     public V1alpha1ColabRuntimeStatus? Status { get; set; }
-}
-
-/// <summary>ColabRuntime is the Schema for the ColabRuntime API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ColabRuntimeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ColabRuntime>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ColabRuntimeList";
-    public const string KubeGroup = "colab.cnrm.cloud.google.com";
-    public const string KubePluralName = "colabruntimes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ColabRuntime> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.analysisservices.azure.upbound.io;
+/// <summary>Server is the Schema for the Servers API. Manages an Analysis Services Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Server>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServerList";
+    public const string KubeGroup = "analysisservices.azure.upbound.io";
+    public const string KubePluralName = "servers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Server> Items { get; set; }
+}
+
 /// <summary>URI and SAS token for a blob container to store backups.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServerSpecForProviderBackupBlobContainerUriSecretRef
@@ -502,30 +528,4 @@ public partial class V1beta1Server : IKubernetesObject<V1ObjectMeta>, ISpec<V1be
     /// <summary>ServerStatus defines the observed state of Server.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServerStatus? Status { get; set; }
-}
-
-/// <summary>Server is the Schema for the Servers API. Manages an Analysis Services Server.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Server>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServerList";
-    public const string KubeGroup = "analysisservices.azure.upbound.io";
-    public const string KubePluralName = "servers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Server> Items { get; set; }
 }

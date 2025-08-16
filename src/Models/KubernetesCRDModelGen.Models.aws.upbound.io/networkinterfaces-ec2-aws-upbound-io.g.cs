@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ec2.aws.upbound.io;
+/// <summary>NetworkInterface is the Schema for the NetworkInterfaces API. Provides an Elastic network interface (ENI) resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkInterfaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterface>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkInterfaceList";
+    public const string KubeGroup = "ec2.aws.upbound.io";
+    public const string KubePluralName = "networkinterfaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkInterface> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkInterfaceSpecForProviderSecurityGroupRefsPolicy
@@ -718,30 +744,4 @@ public partial class V1beta1NetworkInterface : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>NetworkInterfaceStatus defines the observed state of NetworkInterface.</summary>
     [JsonPropertyName("status")]
     public V1beta1NetworkInterfaceStatus? Status { get; set; }
-}
-
-/// <summary>NetworkInterface is the Schema for the NetworkInterfaces API. Provides an Elastic network interface (ENI) resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkInterfaceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkInterface>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkInterfaceList";
-    public const string KubeGroup = "ec2.aws.upbound.io";
-    public const string KubePluralName = "networkinterfaces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NetworkInterface> Items { get; set; }
 }

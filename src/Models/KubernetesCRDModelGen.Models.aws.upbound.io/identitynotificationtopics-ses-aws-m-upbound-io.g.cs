@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ses.aws.m.upbound.io;
+/// <summary>IdentityNotificationTopic is the Schema for the IdentityNotificationTopics API. Setting AWS SES Identity Notification Topic</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IdentityNotificationTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityNotificationTopic>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IdentityNotificationTopicList";
+    public const string KubeGroup = "ses.aws.m.upbound.io";
+    public const string KubePluralName = "identitynotificationtopics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IdentityNotificationTopic> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IdentityNotificationTopicSpecForProviderIdentityRefPolicy
@@ -492,30 +518,4 @@ public partial class V1beta1IdentityNotificationTopic : IKubernetesObject<V1Obje
     /// <summary>IdentityNotificationTopicStatus defines the observed state of IdentityNotificationTopic.</summary>
     [JsonPropertyName("status")]
     public V1beta1IdentityNotificationTopicStatus? Status { get; set; }
-}
-
-/// <summary>IdentityNotificationTopic is the Schema for the IdentityNotificationTopics API. Setting AWS SES Identity Notification Topic</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IdentityNotificationTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IdentityNotificationTopic>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IdentityNotificationTopicList";
-    public const string KubeGroup = "ses.aws.m.upbound.io";
-    public const string KubePluralName = "identitynotificationtopics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IdentityNotificationTopic> Items { get; set; }
 }

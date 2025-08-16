@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>ApplicationInsightsWorkbook is the Schema for the ApplicationInsightsWorkbooks API. Manages an Azure Workbook.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApplicationInsightsWorkbookList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsWorkbook>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApplicationInsightsWorkbookList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "applicationinsightsworkbooks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApplicationInsightsWorkbook> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsWorkbookSpecForProviderIdentity
@@ -476,30 +502,4 @@ public partial class V1beta1ApplicationInsightsWorkbook : IKubernetesObject<V1Ob
     /// <summary>ApplicationInsightsWorkbookStatus defines the observed state of ApplicationInsightsWorkbook.</summary>
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsWorkbookStatus? Status { get; set; }
-}
-
-/// <summary>ApplicationInsightsWorkbook is the Schema for the ApplicationInsightsWorkbooks API. Manages an Azure Workbook.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApplicationInsightsWorkbookList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsWorkbook>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApplicationInsightsWorkbookList";
-    public const string KubeGroup = "insights.azure.upbound.io";
-    public const string KubePluralName = "applicationinsightsworkbooks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ApplicationInsightsWorkbook> Items { get; set; }
 }

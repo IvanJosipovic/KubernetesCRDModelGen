@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.cnrm.cloud.google.com;
+/// <summary>SQLInstance is the Schema for the sql API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SQLInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SQLInstanceList";
+    public const string KubeGroup = "sql.cnrm.cloud.google.com";
+    public const string KubePluralName = "sqlinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SQLInstance> Items { get; set; }
+}
+
 /// <summary>Binary log coordinates, if specified, identify the position up to which the source instance is cloned. If not specified, the source instance is cloned up to the most recent binary log coordinates.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SQLInstanceSpecCloneSourceBinLogCoordinates
@@ -843,30 +869,4 @@ public partial class V1beta1SQLInstance : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1beta1SQLInstanceStatus? Status { get; set; }
-}
-
-/// <summary>SQLInstance is the Schema for the sql API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SQLInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SQLInstance>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SQLInstanceList";
-    public const string KubeGroup = "sql.cnrm.cloud.google.com";
-    public const string KubePluralName = "sqlinstances";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SQLInstance> Items { get; set; }
 }

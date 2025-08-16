@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.acme.certmanager.io;
+/// <summary>Order is a type to represent an Order with an ACME server</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1OrderList : IKubernetesObject<V1ListMeta>, IItems<V1Order>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "OrderList";
+    public const string KubeGroup = "acme.cert-manager.io";
+    public const string KubePluralName = "orders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1Order> Items { get; set; }
+}
+
 /// <summary>IssuerRef references a properly configured ACME-type Issuer which should be used to create this Order. If the Issuer does not exist, processing will be retried. If the Issuer is not an 'ACME' Issuer, an error will be returned and the Order will be marked as failed.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OrderSpecIssuerRef
@@ -161,30 +187,4 @@ public partial class V1Order : IKubernetesObject<V1ObjectMeta>, ISpec<V1OrderSpe
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1OrderStatus? Status { get; set; }
-}
-
-/// <summary>Order is a type to represent an Order with an ACME server</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1OrderList : IKubernetesObject<V1ListMeta>, IItems<V1Order>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "OrderList";
-    public const string KubeGroup = "acme.cert-manager.io";
-    public const string KubePluralName = "orders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1Order> Items { get; set; }
 }

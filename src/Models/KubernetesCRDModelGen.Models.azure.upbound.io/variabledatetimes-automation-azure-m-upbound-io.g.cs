@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.automation.azure.m.upbound.io;
+/// <summary>VariableDateTime is the Schema for the VariableDateTimes API. Manages a DateTime variable in Azure Automation.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VariableDateTimeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VariableDateTime>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VariableDateTimeList";
+    public const string KubeGroup = "automation.azure.m.upbound.io";
+    public const string KubePluralName = "variabledatetimes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VariableDateTime> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VariableDateTimeSpecForProviderAutomationAccountNameRefPolicy
@@ -344,30 +370,4 @@ public partial class V1beta1VariableDateTime : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>VariableDateTimeStatus defines the observed state of VariableDateTime.</summary>
     [JsonPropertyName("status")]
     public V1beta1VariableDateTimeStatus? Status { get; set; }
-}
-
-/// <summary>VariableDateTime is the Schema for the VariableDateTimes API. Manages a DateTime variable in Azure Automation.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VariableDateTimeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VariableDateTime>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VariableDateTimeList";
-    public const string KubeGroup = "automation.azure.m.upbound.io";
-    public const string KubePluralName = "variabledatetimes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VariableDateTime> Items { get; set; }
 }

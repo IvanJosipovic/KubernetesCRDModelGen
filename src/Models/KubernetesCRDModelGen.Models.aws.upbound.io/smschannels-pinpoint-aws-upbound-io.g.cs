@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pinpoint.aws.upbound.io;
+/// <summary>SMSChannel is the Schema for the SMSChannels API. Use the</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SMSChannelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SMSChannel>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SMSChannelList";
+    public const string KubeGroup = "pinpoint.aws.upbound.io";
+    public const string KubePluralName = "smschannels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SMSChannel> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SMSChannelSpecForProviderApplicationIdRefPolicy
@@ -361,30 +387,4 @@ public partial class V1beta1SMSChannel : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>SMSChannelStatus defines the observed state of SMSChannel.</summary>
     [JsonPropertyName("status")]
     public V1beta1SMSChannelStatus? Status { get; set; }
-}
-
-/// <summary>SMSChannel is the Schema for the SMSChannels API. Use the</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SMSChannelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SMSChannel>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SMSChannelList";
-    public const string KubeGroup = "pinpoint.aws.upbound.io";
-    public const string KubePluralName = "smschannels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SMSChannel> Items { get; set; }
 }

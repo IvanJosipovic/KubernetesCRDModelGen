@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sfn.aws.m.upbound.io;
+/// <summary>Activity is the Schema for the Activitys API. Provides a Step Function Activity resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ActivityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Activity>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ActivityList";
+    public const string KubeGroup = "sfn.aws.m.upbound.io";
+    public const string KubePluralName = "activities";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Activity> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ActivitySpecForProviderEncryptionConfigurationKmsKeyIdRefPolicy
@@ -383,30 +409,4 @@ public partial class V1beta1Activity : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>ActivityStatus defines the observed state of Activity.</summary>
     [JsonPropertyName("status")]
     public V1beta1ActivityStatus? Status { get; set; }
-}
-
-/// <summary>Activity is the Schema for the Activitys API. Provides a Step Function Activity resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ActivityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Activity>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ActivityList";
-    public const string KubeGroup = "sfn.aws.m.upbound.io";
-    public const string KubePluralName = "activities";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Activity> Items { get; set; }
 }

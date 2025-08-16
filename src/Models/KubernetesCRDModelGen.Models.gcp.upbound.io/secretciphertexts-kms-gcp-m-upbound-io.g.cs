@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.gcp.m.upbound.io;
+/// <summary>SecretCiphertext is the Schema for the SecretCiphertexts API. Encrypts secret data with Google Cloud KMS and provides access to the ciphertext.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretCiphertextList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretCiphertext>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretCiphertextList";
+    public const string KubeGroup = "kms.gcp.m.upbound.io";
+    public const string KubePluralName = "secretciphertexts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecretCiphertext> Items { get; set; }
+}
+
 /// <summary>The additional authenticated data used for integrity checks during encryption and decryption. Note: This property is sensitive and will not be displayed in the plan.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretCiphertextSpecForProviderAdditionalAuthenticatedDataSecretRef
@@ -354,30 +380,4 @@ public partial class V1beta1SecretCiphertext : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>SecretCiphertextStatus defines the observed state of SecretCiphertext.</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretCiphertextStatus? Status { get; set; }
-}
-
-/// <summary>SecretCiphertext is the Schema for the SecretCiphertexts API. Encrypts secret data with Google Cloud KMS and provides access to the ciphertext.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretCiphertextList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretCiphertext>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretCiphertextList";
-    public const string KubeGroup = "kms.gcp.m.upbound.io";
-    public const string KubePluralName = "secretciphertexts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SecretCiphertext> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>VirtualHubRouteTable is the Schema for the VirtualHubRouteTables API. Manages a Virtual Hub Route Table.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualHubRouteTableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubRouteTable>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualHubRouteTableList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "virtualhubroutetables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualHubRouteTable> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubRouteTableSpecForProviderRouteNextHopRefPolicy
@@ -468,30 +494,4 @@ public partial class V1beta1VirtualHubRouteTable : IKubernetesObject<V1ObjectMet
     /// <summary>VirtualHubRouteTableStatus defines the observed state of VirtualHubRouteTable.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualHubRouteTableStatus? Status { get; set; }
-}
-
-/// <summary>VirtualHubRouteTable is the Schema for the VirtualHubRouteTables API. Manages a Virtual Hub Route Table.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualHubRouteTableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubRouteTable>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualHubRouteTableList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "virtualhubroutetables";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualHubRouteTable> Items { get; set; }
 }

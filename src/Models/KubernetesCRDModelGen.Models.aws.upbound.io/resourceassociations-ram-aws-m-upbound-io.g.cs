@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ram.aws.m.upbound.io;
+/// <summary>ResourceAssociation is the Schema for the ResourceAssociations API. Manages a Resource Access Manager (RAM) Resource Association.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceAssociationList";
+    public const string KubeGroup = "ram.aws.m.upbound.io";
+    public const string KubePluralName = "resourceassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceAssociationSpecForProviderResourceShareArnRefPolicy
@@ -324,30 +350,4 @@ public partial class V1beta1ResourceAssociation : IKubernetesObject<V1ObjectMeta
     /// <summary>ResourceAssociationStatus defines the observed state of ResourceAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResourceAssociationStatus? Status { get; set; }
-}
-
-/// <summary>ResourceAssociation is the Schema for the ResourceAssociations API. Manages a Resource Access Manager (RAM) Resource Association.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResourceAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResourceAssociationList";
-    public const string KubeGroup = "ram.aws.m.upbound.io";
-    public const string KubePluralName = "resourceassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ResourceAssociation> Items { get; set; }
 }

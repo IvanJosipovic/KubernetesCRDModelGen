@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.m.upbound.io;
+/// <summary>StudioLifecycleConfig is the Schema for the StudioLifecycleConfigs API. Provides a SageMaker AI Studio Lifecycle Config resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StudioLifecycleConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StudioLifecycleConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StudioLifecycleConfigList";
+    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
+    public const string KubePluralName = "studiolifecycleconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StudioLifecycleConfig> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StudioLifecycleConfigSpecForProvider
@@ -200,30 +226,4 @@ public partial class V1beta1StudioLifecycleConfig : IKubernetesObject<V1ObjectMe
     /// <summary>StudioLifecycleConfigStatus defines the observed state of StudioLifecycleConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1StudioLifecycleConfigStatus? Status { get; set; }
-}
-
-/// <summary>StudioLifecycleConfig is the Schema for the StudioLifecycleConfigs API. Provides a SageMaker AI Studio Lifecycle Config resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StudioLifecycleConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StudioLifecycleConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StudioLifecycleConfigList";
-    public const string KubeGroup = "sagemaker.aws.m.upbound.io";
-    public const string KubePluralName = "studiolifecycleconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StudioLifecycleConfig> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>HaVPNGateway is the Schema for the HaVPNGateways API. Represents a VPN gateway running in GCP.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HaVPNGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HaVPNGateway>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HaVPNGatewayList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "havpngateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HaVPNGateway> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HaVPNGatewaySpecForProviderNetworkRefPolicy
@@ -576,30 +602,4 @@ public partial class V1beta1HaVPNGateway : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>HaVPNGatewayStatus defines the observed state of HaVPNGateway.</summary>
     [JsonPropertyName("status")]
     public V1beta1HaVPNGatewayStatus? Status { get; set; }
-}
-
-/// <summary>HaVPNGateway is the Schema for the HaVPNGateways API. Represents a VPN gateway running in GCP.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HaVPNGatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HaVPNGateway>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HaVPNGatewayList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "havpngateways";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HaVPNGateway> Items { get; set; }
 }

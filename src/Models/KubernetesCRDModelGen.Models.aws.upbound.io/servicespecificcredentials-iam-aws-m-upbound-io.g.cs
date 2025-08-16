@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.aws.m.upbound.io;
+/// <summary>ServiceSpecificCredential is the Schema for the ServiceSpecificCredentials API. Provides an IAM Service Specific Credential.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceSpecificCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceSpecificCredential>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceSpecificCredentialList";
+    public const string KubeGroup = "iam.aws.m.upbound.io";
+    public const string KubePluralName = "servicespecificcredentials";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceSpecificCredential> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceSpecificCredentialSpecForProviderUserNameRefPolicy
@@ -336,30 +362,4 @@ public partial class V1beta1ServiceSpecificCredential : IKubernetesObject<V1Obje
     /// <summary>ServiceSpecificCredentialStatus defines the observed state of ServiceSpecificCredential.</summary>
     [JsonPropertyName("status")]
     public V1beta1ServiceSpecificCredentialStatus? Status { get; set; }
-}
-
-/// <summary>ServiceSpecificCredential is the Schema for the ServiceSpecificCredentials API. Provides an IAM Service Specific Credential.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceSpecificCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceSpecificCredential>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceSpecificCredentialList";
-    public const string KubeGroup = "iam.aws.m.upbound.io";
-    public const string KubePluralName = "servicespecificcredentials";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServiceSpecificCredential> Items { get; set; }
 }

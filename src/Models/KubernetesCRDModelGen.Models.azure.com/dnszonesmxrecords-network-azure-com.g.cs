@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20180501.DnsZonesMXRecord Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/MX/{relativeRecordSetName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20180501storageDnsZonesMXRecordList : IKubernetesObject<V1ListMeta>, IItems<V1api20180501storageDnsZonesMXRecord>
+{
+    public const string KubeApiVersion = "v1api20180501storage";
+    public const string KubeKind = "DnsZonesMXRecordList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "dnszonesmxrecords";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20180501storageDnsZonesMXRecord> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20180501.AaaaRecord An AAAA record.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20180501storageDnsZonesMXRecordSpecAAAARecords
@@ -702,30 +728,4 @@ public partial class V1api20180501storageDnsZonesMXRecord : IKubernetesObject<V1
     /// <summary>Storage version of v1api20180501.DnsZonesMXRecord_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20180501storageDnsZonesMXRecordStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20180501.DnsZonesMXRecord Generator information: - Generated from: /dns/resource-manager/Microsoft.Network/stable/2018-05-01/dns.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/dnsZones/{zoneName}/MX/{relativeRecordSetName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20180501storageDnsZonesMXRecordList : IKubernetesObject<V1ListMeta>, IItems<V1api20180501storageDnsZonesMXRecord>
-{
-    public const string KubeApiVersion = "v1api20180501storage";
-    public const string KubeKind = "DnsZonesMXRecordList";
-    public const string KubeGroup = "network.azure.com";
-    public const string KubePluralName = "dnszonesmxrecords";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20180501storageDnsZonesMXRecord> Items { get; set; }
 }

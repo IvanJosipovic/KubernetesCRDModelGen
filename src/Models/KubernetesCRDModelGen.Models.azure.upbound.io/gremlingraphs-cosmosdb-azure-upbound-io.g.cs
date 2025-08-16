@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+/// <summary>GremlinGraph is the Schema for the GremlinGraphs API. Manages a Gremlin Graph within a Cosmos DB Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GremlinGraphList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GremlinGraph>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GremlinGraphList";
+    public const string KubeGroup = "cosmosdb.azure.upbound.io";
+    public const string KubePluralName = "gremlingraphs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GremlinGraph> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinGraphSpecForProviderAccountNameRefPolicy
@@ -782,30 +808,4 @@ public partial class V1beta1GremlinGraph : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>GremlinGraphStatus defines the observed state of GremlinGraph.</summary>
     [JsonPropertyName("status")]
     public V1beta1GremlinGraphStatus? Status { get; set; }
-}
-
-/// <summary>GremlinGraph is the Schema for the GremlinGraphs API. Manages a Gremlin Graph within a Cosmos DB Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GremlinGraphList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GremlinGraph>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GremlinGraphList";
-    public const string KubeGroup = "cosmosdb.azure.upbound.io";
-    public const string KubePluralName = "gremlingraphs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GremlinGraph> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.codepipeline.aws.m.upbound.io;
+/// <summary>CustomActionType is the Schema for the CustomActionTypes API. Provides a CodePipeline CustomActionType.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CustomActionTypeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomActionType>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CustomActionTypeList";
+    public const string KubeGroup = "codepipeline.aws.m.upbound.io";
+    public const string KubePluralName = "customactiontypes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CustomActionType> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CustomActionTypeSpecForProviderConfigurationProperty
@@ -504,30 +530,4 @@ public partial class V1beta1CustomActionType : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>CustomActionTypeStatus defines the observed state of CustomActionType.</summary>
     [JsonPropertyName("status")]
     public V1beta1CustomActionTypeStatus? Status { get; set; }
-}
-
-/// <summary>CustomActionType is the Schema for the CustomActionTypes API. Provides a CodePipeline CustomActionType.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CustomActionTypeList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CustomActionType>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CustomActionTypeList";
-    public const string KubeGroup = "codepipeline.aws.m.upbound.io";
-    public const string KubePluralName = "customactiontypes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CustomActionType> Items { get; set; }
 }

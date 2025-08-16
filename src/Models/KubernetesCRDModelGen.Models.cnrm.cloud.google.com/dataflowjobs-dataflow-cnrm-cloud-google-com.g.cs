@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dataflow.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataflowJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataflowJob>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataflowJobList";
+    public const string KubeGroup = "dataflow.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataflowjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataflowJob> Items { get; set; }
 }
 
 /// <summary>The name for the Cloud KMS key for the job.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobSpecKmsKeyRef
+public partial class V1beta1DataflowJobSpecKmsKeyRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `KMSCryptoKey` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class DataflowJobSpecKmsKeyRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobSpecNetworkRef
+public partial class V1beta1DataflowJobSpecNetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeNetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,7 +70,7 @@ public partial class DataflowJobSpecNetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobSpecServiceAccountRef
+public partial class V1beta1DataflowJobSpecServiceAccountRef
 {
     /// <summary>Allowed value: The `email` field of an `IAMServiceAccount` resource.</summary>
     [JsonPropertyName("external")]
@@ -67,7 +87,7 @@ public partial class DataflowJobSpecServiceAccountRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobSpecSubnetworkRef
+public partial class V1beta1DataflowJobSpecSubnetworkRef
 {
     /// <summary>Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.</summary>
     [JsonPropertyName("external")]
@@ -84,7 +104,7 @@ public partial class DataflowJobSpecSubnetworkRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobSpec
+public partial class V1beta1DataflowJobSpec
 {
     /// <summary>List of experiments that should be used by the job. An example value is ["enable_stackdriver_agent_metrics"].</summary>
     [JsonPropertyName("additionalExperiments")]
@@ -100,7 +120,7 @@ public partial class DataflowJobSpec
 
     /// <summary>The name for the Cloud KMS key for the job.</summary>
     [JsonPropertyName("kmsKeyRef")]
-    public DataflowJobSpecKmsKeyRef? KmsKeyRef { get; set; }
+    public V1beta1DataflowJobSpecKmsKeyRef? KmsKeyRef { get; set; }
 
     /// <summary>The machine type to use for the job.</summary>
     [JsonPropertyName("machineType")]
@@ -112,7 +132,7 @@ public partial class DataflowJobSpec
 
     /// <summary></summary>
     [JsonPropertyName("networkRef")]
-    public DataflowJobSpecNetworkRef? NetworkRef { get; set; }
+    public V1beta1DataflowJobSpecNetworkRef? NetworkRef { get; set; }
 
     /// <summary>Key/Value pairs to be passed to the Dataflow job (as used in the template).</summary>
     [JsonPropertyName("parameters")]
@@ -128,11 +148,11 @@ public partial class DataflowJobSpec
 
     /// <summary></summary>
     [JsonPropertyName("serviceAccountRef")]
-    public DataflowJobSpecServiceAccountRef? ServiceAccountRef { get; set; }
+    public V1beta1DataflowJobSpecServiceAccountRef? ServiceAccountRef { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("subnetworkRef")]
-    public DataflowJobSpecSubnetworkRef? SubnetworkRef { get; set; }
+    public V1beta1DataflowJobSpecSubnetworkRef? SubnetworkRef { get; set; }
 
     /// <summary>A writeable location on Google Cloud Storage for the Dataflow job to dump its temporary data.</summary>
     [JsonPropertyName("tempGcsLocation")]
@@ -153,7 +173,7 @@ public partial class DataflowJobSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobStatusConditions
+public partial class V1beta1DataflowJobStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -178,11 +198,11 @@ public partial class DataflowJobStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJobStatus
+public partial class V1beta1DataflowJobStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DataflowJobStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1DataflowJobStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique ID of this job.</summary>
     [JsonPropertyName("jobId")]
@@ -203,25 +223,30 @@ public partial class DataflowJobStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataflowJob
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataflowJob : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataflowJobSpec>, IStatus<V1beta1DataflowJobStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataflowJob";
+    public const string KubeGroup = "dataflow.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataflowjobs";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DataflowJobMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DataflowJobSpec Spec { get; set; }
+    public V1beta1DataflowJobSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DataflowJobStatus? Status { get; set; }
+    public V1beta1DataflowJobStatus? Status { get; set; }
 }

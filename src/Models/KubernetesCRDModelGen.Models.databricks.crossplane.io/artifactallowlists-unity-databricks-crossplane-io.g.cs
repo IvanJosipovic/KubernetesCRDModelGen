@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.unity.databricks.crossplane.io;
+/// <summary>ArtifactAllowlist is the Schema for the ArtifactAllowlists API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ArtifactAllowlistList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ArtifactAllowlist>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ArtifactAllowlistList";
+    public const string KubeGroup = "unity.databricks.crossplane.io";
+    public const string KubePluralName = "artifactallowlists";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ArtifactAllowlist> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ArtifactAllowlistSpecForProviderArtifactMatcher
@@ -332,30 +358,4 @@ public partial class V1alpha1ArtifactAllowlist : IKubernetesObject<V1ObjectMeta>
     /// <summary>ArtifactAllowlistStatus defines the observed state of ArtifactAllowlist.</summary>
     [JsonPropertyName("status")]
     public V1alpha1ArtifactAllowlistStatus? Status { get; set; }
-}
-
-/// <summary>ArtifactAllowlist is the Schema for the ArtifactAllowlists API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ArtifactAllowlistList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ArtifactAllowlist>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ArtifactAllowlistList";
-    public const string KubeGroup = "unity.databricks.crossplane.io";
-    public const string KubePluralName = "artifactallowlists";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ArtifactAllowlist> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.m.upbound.io;
+/// <summary>RiskConfiguration is the Schema for the RiskConfigurations API. Provides a Cognito Risk Configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RiskConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RiskConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RiskConfigurationList";
+    public const string KubeGroup = "cognitoidp.aws.m.upbound.io";
+    public const string KubePluralName = "riskconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RiskConfiguration> Items { get; set; }
+}
+
 /// <summary>Action to take for a high risk. See action block below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RiskConfigurationSpecForProviderAccountTakeoverRiskConfigurationActionsHighAction
@@ -912,30 +938,4 @@ public partial class V1beta1RiskConfiguration : IKubernetesObject<V1ObjectMeta>,
     /// <summary>RiskConfigurationStatus defines the observed state of RiskConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1RiskConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>RiskConfiguration is the Schema for the RiskConfigurations API. Provides a Cognito Risk Configuration resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RiskConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RiskConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RiskConfigurationList";
-    public const string KubeGroup = "cognitoidp.aws.m.upbound.io";
-    public const string KubePluralName = "riskconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RiskConfiguration> Items { get; set; }
 }

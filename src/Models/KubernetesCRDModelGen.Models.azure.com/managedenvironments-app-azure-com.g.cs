@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.app.azure.com;
+/// <summary>Storage version of v1api20240301.ManagedEnvironment Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/ManagedEnvironments.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240301storageManagedEnvironmentList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageManagedEnvironment>
+{
+    public const string KubeApiVersion = "v1api20240301storage";
+    public const string KubeKind = "ManagedEnvironmentList";
+    public const string KubeGroup = "app.azure.com";
+    public const string KubePluralName = "managedenvironments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240301storageManagedEnvironment> Items { get; set; }
+}
+
 /// <summary>SecretReference is a reference to a Kubernetes secret and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageManagedEnvironmentSpecAppLogsConfigurationLogAnalyticsConfigurationSharedKey
@@ -782,30 +808,4 @@ public partial class V1api20240301storageManagedEnvironment : IKubernetesObject<
     /// <summary>Storage version of v1api20240301.ManagedEnvironment_STATUS An environment for hosting container apps</summary>
     [JsonPropertyName("status")]
     public V1api20240301storageManagedEnvironmentStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240301.ManagedEnvironment Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/ManagedEnvironments.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/managedEnvironments/{environmentName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240301storageManagedEnvironmentList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageManagedEnvironment>
-{
-    public const string KubeApiVersion = "v1api20240301storage";
-    public const string KubeKind = "ManagedEnvironmentList";
-    public const string KubeGroup = "app.azure.com";
-    public const string KubePluralName = "managedenvironments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240301storageManagedEnvironment> Items { get; set; }
 }

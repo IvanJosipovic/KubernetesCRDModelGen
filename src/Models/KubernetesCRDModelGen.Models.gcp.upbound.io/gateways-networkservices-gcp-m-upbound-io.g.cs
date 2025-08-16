@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkservices.gcp.m.upbound.io;
+/// <summary>Gateway is the Schema for the Gateways API. Gateway represents the configuration for a proxy, typically a load balancer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Gateway>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GatewayList";
+    public const string KubeGroup = "networkservices.gcp.m.upbound.io";
+    public const string KubePluralName = "gateways";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Gateway> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewaySpecForProviderCertificateUrlsRefsPolicy
@@ -944,30 +970,4 @@ public partial class V1beta1Gateway : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>GatewayStatus defines the observed state of Gateway.</summary>
     [JsonPropertyName("status")]
     public V1beta1GatewayStatus? Status { get; set; }
-}
-
-/// <summary>Gateway is the Schema for the Gateways API. Gateway represents the configuration for a proxy, typically a load balancer.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GatewayList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Gateway>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GatewayList";
-    public const string KubeGroup = "networkservices.gcp.m.upbound.io";
-    public const string KubePluralName = "gateways";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Gateway> Items { get; set; }
 }

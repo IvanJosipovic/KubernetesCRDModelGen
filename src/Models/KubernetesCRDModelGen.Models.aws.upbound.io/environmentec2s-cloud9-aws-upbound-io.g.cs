@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloud9.aws.upbound.io;
+/// <summary>EnvironmentEC2 is the Schema for the EnvironmentEC2s API. Provides a Cloud9 EC2 Development Environment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1EnvironmentEC2List : IKubernetesObject<V1ListMeta>, IItems<V1beta1EnvironmentEC2>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "EnvironmentEC2List";
+    public const string KubeGroup = "cloud9.aws.upbound.io";
+    public const string KubePluralName = "environmentec2s";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1EnvironmentEC2> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1EnvironmentEC2SpecForProviderSubnetIdRefPolicy
@@ -425,30 +451,4 @@ public partial class V1beta1EnvironmentEC2 : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>EnvironmentEC2Status defines the observed state of EnvironmentEC2.</summary>
     [JsonPropertyName("status")]
     public V1beta1EnvironmentEC2Status? Status { get; set; }
-}
-
-/// <summary>EnvironmentEC2 is the Schema for the EnvironmentEC2s API. Provides a Cloud9 EC2 Development Environment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1EnvironmentEC2List : IKubernetesObject<V1ListMeta>, IItems<V1beta1EnvironmentEC2>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "EnvironmentEC2List";
-    public const string KubeGroup = "cloud9.aws.upbound.io";
-    public const string KubePluralName = "environmentec2s";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1EnvironmentEC2> Items { get; set; }
 }

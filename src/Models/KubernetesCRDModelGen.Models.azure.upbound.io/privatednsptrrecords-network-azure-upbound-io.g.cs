@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>PrivateDNSPTRRecord is the Schema for the PrivateDNSPTRRecords API. Manages a Private DNS PTR Record.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateDNSPTRRecordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateDNSPTRRecord>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateDNSPTRRecordList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "privatednsptrrecords";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivateDNSPTRRecord> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateDNSPTRRecordSpecForProviderResourceGroupNameRefPolicy
@@ -353,30 +379,4 @@ public partial class V1beta1PrivateDNSPTRRecord : IKubernetesObject<V1ObjectMeta
     /// <summary>PrivateDNSPTRRecordStatus defines the observed state of PrivateDNSPTRRecord.</summary>
     [JsonPropertyName("status")]
     public V1beta1PrivateDNSPTRRecordStatus? Status { get; set; }
-}
-
-/// <summary>PrivateDNSPTRRecord is the Schema for the PrivateDNSPTRRecords API. Manages a Private DNS PTR Record.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrivateDNSPTRRecordList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateDNSPTRRecord>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrivateDNSPTRRecordList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "privatednsptrrecords";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PrivateDNSPTRRecord> Items { get; set; }
 }

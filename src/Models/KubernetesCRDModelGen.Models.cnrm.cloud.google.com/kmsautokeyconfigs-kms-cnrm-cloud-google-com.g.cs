@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.kms.cnrm.cloud.google.com;
+/// <summary>KMSAutokeyConfig is the Schema for the KMSAutokeyConfig API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1KMSAutokeyConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KMSAutokeyConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "KMSAutokeyConfigList";
+    public const string KubeGroup = "kms.cnrm.cloud.google.com";
+    public const string KubePluralName = "kmsautokeyconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1KMSAutokeyConfig> Items { get; set; }
+}
+
 /// <summary>Immutable. The folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1KMSAutokeyConfigSpecFolderRef
@@ -142,30 +168,4 @@ public partial class V1beta1KMSAutokeyConfig : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>KMSAutokeyConfigStatus defines the config connector machine state of KMSAutokeyConfig</summary>
     [JsonPropertyName("status")]
     public V1beta1KMSAutokeyConfigStatus? Status { get; set; }
-}
-
-/// <summary>KMSAutokeyConfig is the Schema for the KMSAutokeyConfig API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1KMSAutokeyConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1KMSAutokeyConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "KMSAutokeyConfigList";
-    public const string KubeGroup = "kms.cnrm.cloud.google.com";
-    public const string KubePluralName = "kmsautokeyconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1KMSAutokeyConfig> Items { get; set; }
 }

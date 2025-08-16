@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.healthcareapis.azure.upbound.io;
+/// <summary>HealthcareDICOMService is the Schema for the HealthcareDICOMServices API. Manages a Healthcare DICOM (Digital Imaging and Communications in Medicine) Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1HealthcareDICOMServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthcareDICOMService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "HealthcareDICOMServiceList";
+    public const string KubeGroup = "healthcareapis.azure.upbound.io";
+    public const string KubePluralName = "healthcaredicomservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1HealthcareDICOMService> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1HealthcareDICOMServiceSpecForProviderCors
@@ -536,30 +562,4 @@ public partial class V1beta1HealthcareDICOMService : IKubernetesObject<V1ObjectM
     /// <summary>HealthcareDICOMServiceStatus defines the observed state of HealthcareDICOMService.</summary>
     [JsonPropertyName("status")]
     public V1beta1HealthcareDICOMServiceStatus? Status { get; set; }
-}
-
-/// <summary>HealthcareDICOMService is the Schema for the HealthcareDICOMServices API. Manages a Healthcare DICOM (Digital Imaging and Communications in Medicine) Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1HealthcareDICOMServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1HealthcareDICOMService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "HealthcareDICOMServiceList";
-    public const string KubeGroup = "healthcareapis.azure.upbound.io";
-    public const string KubePluralName = "healthcaredicomservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1HealthcareDICOMService> Items { get; set; }
 }

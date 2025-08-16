@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redshift.aws.m.upbound.io;
+/// <summary>SnapshotScheduleAssociation is the Schema for the SnapshotScheduleAssociations API. Provides an Association Redshift Cluster and Snapshot Schedule resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SnapshotScheduleAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SnapshotScheduleAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SnapshotScheduleAssociationList";
+    public const string KubeGroup = "redshift.aws.m.upbound.io";
+    public const string KubePluralName = "snapshotscheduleassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SnapshotScheduleAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SnapshotScheduleAssociationSpecForProviderClusterIdentifierRefPolicy
@@ -468,30 +494,4 @@ public partial class V1beta1SnapshotScheduleAssociation : IKubernetesObject<V1Ob
     /// <summary>SnapshotScheduleAssociationStatus defines the observed state of SnapshotScheduleAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1SnapshotScheduleAssociationStatus? Status { get; set; }
-}
-
-/// <summary>SnapshotScheduleAssociation is the Schema for the SnapshotScheduleAssociations API. Provides an Association Redshift Cluster and Snapshot Schedule resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SnapshotScheduleAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SnapshotScheduleAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SnapshotScheduleAssociationList";
-    public const string KubeGroup = "redshift.aws.m.upbound.io";
-    public const string KubePluralName = "snapshotscheduleassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SnapshotScheduleAssociation> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.source.toolkit.fluxcd.io;
+/// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1OCIRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1OCIRepository>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "OCIRepositoryList";
+    public const string KubeGroup = "source.toolkit.fluxcd.io";
+    public const string KubePluralName = "ocirepositories";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1OCIRepository> Items { get; set; }
+}
+
 /// <summary>CertSecretRef can be given the name of a Secret containing either or both of  - a PEM-encoded client certificate (`tls.crt`) and private key (`tls.key`); - a PEM-encoded CA certificate (`ca.crt`)  and whichever are supplied, will be used for connecting to the registry. The client cert and key are useful if you are authenticating with a certificate; the CA cert is useful if you are using a self-signed server certificate. The Secret must be of type `Opaque` or `kubernetes.io/tls`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1OCIRepositorySpecCertSecretRef
@@ -305,30 +331,4 @@ public partial class V1OCIRepository : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>OCIRepositoryStatus defines the observed state of OCIRepository</summary>
     [JsonPropertyName("status")]
     public V1OCIRepositoryStatus? Status { get; set; }
-}
-
-/// <summary>OCIRepository is the Schema for the ocirepositories API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1OCIRepositoryList : IKubernetesObject<V1ListMeta>, IItems<V1OCIRepository>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "OCIRepositoryList";
-    public const string KubeGroup = "source.toolkit.fluxcd.io";
-    public const string KubePluralName = "ocirepositories";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1OCIRepository> Items { get; set; }
 }

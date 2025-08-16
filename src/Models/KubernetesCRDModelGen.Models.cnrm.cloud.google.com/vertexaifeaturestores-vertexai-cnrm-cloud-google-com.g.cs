@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.vertexai.cnrm.cloud.google.com;
+/// <summary>VertexAIFeaturestore is the Schema for the VertexAIFeaturestore API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1VertexAIFeaturestoreList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VertexAIFeaturestore>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "VertexAIFeaturestoreList";
+    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
+    public const string KubePluralName = "vertexaifeaturestores";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1VertexAIFeaturestore> Items { get; set; }
+}
+
 /// <summary>Required. The Cloud KMS resource identifier of the customer managed encryption key used to protect a resource. The key needs to be in the same region as where the compute resource is created.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1VertexAIFeaturestoreSpecEncryptionSpecKmsKeyRef
@@ -213,30 +239,4 @@ public partial class V1alpha1VertexAIFeaturestore : IKubernetesObject<V1ObjectMe
     /// <summary>VertexAIFeaturestoreStatus defines the config connector machine state of VertexAIFeaturestore</summary>
     [JsonPropertyName("status")]
     public V1alpha1VertexAIFeaturestoreStatus? Status { get; set; }
-}
-
-/// <summary>VertexAIFeaturestore is the Schema for the VertexAIFeaturestore API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1VertexAIFeaturestoreList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1VertexAIFeaturestore>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "VertexAIFeaturestoreList";
-    public const string KubeGroup = "vertexai.cnrm.cloud.google.com";
-    public const string KubePluralName = "vertexaifeaturestores";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1VertexAIFeaturestore> Items { get; set; }
 }

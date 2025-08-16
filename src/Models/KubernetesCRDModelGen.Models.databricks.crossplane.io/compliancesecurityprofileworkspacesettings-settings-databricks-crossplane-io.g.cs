@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.settings.databricks.crossplane.io;
+/// <summary>ComplianceSecurityProfileWorkspaceSetting is the Schema for the ComplianceSecurityProfileWorkspaceSettings API. &lt;no value&gt;</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComplianceSecurityProfileWorkspaceSettingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComplianceSecurityProfileWorkspaceSetting>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComplianceSecurityProfileWorkspaceSettingList";
+    public const string KubeGroup = "settings.databricks.crossplane.io";
+    public const string KubePluralName = "compliancesecurityprofileworkspacesettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComplianceSecurityProfileWorkspaceSetting> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ComplianceSecurityProfileWorkspaceSettingSpecForProviderComplianceSecurityProfileWorkspace
@@ -308,30 +334,4 @@ public partial class V1alpha1ComplianceSecurityProfileWorkspaceSetting : IKubern
     /// <summary>ComplianceSecurityProfileWorkspaceSettingStatus defines the observed state of ComplianceSecurityProfileWorkspaceSetting.</summary>
     [JsonPropertyName("status")]
     public V1alpha1ComplianceSecurityProfileWorkspaceSettingStatus? Status { get; set; }
-}
-
-/// <summary>ComplianceSecurityProfileWorkspaceSetting is the Schema for the ComplianceSecurityProfileWorkspaceSettings API. &lt;no value&gt;</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ComplianceSecurityProfileWorkspaceSettingList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComplianceSecurityProfileWorkspaceSetting>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ComplianceSecurityProfileWorkspaceSettingList";
-    public const string KubeGroup = "settings.databricks.crossplane.io";
-    public const string KubePluralName = "compliancesecurityprofileworkspacesettings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ComplianceSecurityProfileWorkspaceSetting> Items { get; set; }
 }

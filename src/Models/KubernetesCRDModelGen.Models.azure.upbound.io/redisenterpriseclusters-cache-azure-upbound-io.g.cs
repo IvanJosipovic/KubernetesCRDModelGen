@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.upbound.io;
+/// <summary>RedisEnterpriseCluster is the Schema for the RedisEnterpriseClusters API. Manages a Redis Enterprise Cluster.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisEnterpriseClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisEnterpriseCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisEnterpriseClusterList";
+    public const string KubeGroup = "cache.azure.upbound.io";
+    public const string KubePluralName = "redisenterpriseclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisEnterpriseCluster> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisEnterpriseClusterSpecForProviderResourceGroupNameRefPolicy
@@ -305,30 +331,4 @@ public partial class V1beta1RedisEnterpriseCluster : IKubernetesObject<V1ObjectM
     /// <summary>RedisEnterpriseClusterStatus defines the observed state of RedisEnterpriseCluster.</summary>
     [JsonPropertyName("status")]
     public V1beta1RedisEnterpriseClusterStatus? Status { get; set; }
-}
-
-/// <summary>RedisEnterpriseCluster is the Schema for the RedisEnterpriseClusters API. Manages a Redis Enterprise Cluster.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RedisEnterpriseClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisEnterpriseCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RedisEnterpriseClusterList";
-    public const string KubeGroup = "cache.azure.upbound.io";
-    public const string KubePluralName = "redisenterpriseclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RedisEnterpriseCluster> Items { get; set; }
 }

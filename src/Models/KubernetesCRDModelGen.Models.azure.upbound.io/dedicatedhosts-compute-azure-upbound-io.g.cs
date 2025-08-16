@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.upbound.io;
+/// <summary>DedicatedHost is the Schema for the DedicatedHosts API. Manage a Dedicated Host within a Dedicated Host Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DedicatedHostList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DedicatedHost>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DedicatedHostList";
+    public const string KubeGroup = "compute.azure.upbound.io";
+    public const string KubePluralName = "dedicatedhosts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DedicatedHost> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DedicatedHostSpecForProvider
@@ -249,30 +275,4 @@ public partial class V1beta1DedicatedHost : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>DedicatedHostStatus defines the observed state of DedicatedHost.</summary>
     [JsonPropertyName("status")]
     public V1beta1DedicatedHostStatus? Status { get; set; }
-}
-
-/// <summary>DedicatedHost is the Schema for the DedicatedHosts API. Manage a Dedicated Host within a Dedicated Host Group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DedicatedHostList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DedicatedHost>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DedicatedHostList";
-    public const string KubeGroup = "compute.azure.upbound.io";
-    public const string KubePluralName = "dedicatedhosts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DedicatedHost> Items { get; set; }
 }

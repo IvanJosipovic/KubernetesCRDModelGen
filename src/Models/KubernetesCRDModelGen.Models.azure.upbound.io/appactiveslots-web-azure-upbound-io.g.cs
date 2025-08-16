@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.upbound.io;
+/// <summary>AppActiveSlot is the Schema for the AppActiveSlots API. Manages a Web App Active Slot.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppActiveSlotList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppActiveSlot>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppActiveSlotList";
+    public const string KubeGroup = "web.azure.upbound.io";
+    public const string KubePluralName = "appactiveslots";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppActiveSlot> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppActiveSlotSpecForProviderSlotIdRefPolicy
@@ -325,30 +351,4 @@ public partial class V1beta1AppActiveSlot : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>AppActiveSlotStatus defines the observed state of AppActiveSlot.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppActiveSlotStatus? Status { get; set; }
-}
-
-/// <summary>AppActiveSlot is the Schema for the AppActiveSlots API. Manages a Web App Active Slot.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppActiveSlotList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppActiveSlot>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppActiveSlotList";
-    public const string KubeGroup = "web.azure.upbound.io";
-    public const string KubePluralName = "appactiveslots";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppActiveSlot> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appmesh.aws.m.upbound.io;
+/// <summary>GatewayRoute is the Schema for the GatewayRoutes API. Provides an AWS App Mesh gateway route resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GatewayRouteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GatewayRoute>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GatewayRouteList";
+    public const string KubeGroup = "appmesh.aws.m.upbound.io";
+    public const string KubePluralName = "gatewayroutes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GatewayRoute> Items { get; set; }
+}
+
 /// <summary>Virtual service gateway route target.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GatewayRouteSpecForProviderSpecGrpcRouteActionTargetVirtualService
@@ -2138,30 +2164,4 @@ public partial class V1beta1GatewayRoute : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>GatewayRouteStatus defines the observed state of GatewayRoute.</summary>
     [JsonPropertyName("status")]
     public V1beta1GatewayRouteStatus? Status { get; set; }
-}
-
-/// <summary>GatewayRoute is the Schema for the GatewayRoutes API. Provides an AWS App Mesh gateway route resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GatewayRouteList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GatewayRoute>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GatewayRouteList";
-    public const string KubeGroup = "appmesh.aws.m.upbound.io";
-    public const string KubePluralName = "gatewayroutes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GatewayRoute> Items { get; set; }
 }

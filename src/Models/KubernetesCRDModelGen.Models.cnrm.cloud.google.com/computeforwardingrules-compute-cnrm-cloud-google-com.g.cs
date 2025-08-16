@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
+/// <summary>ComputeForwardingRule is the Schema for the compute API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ComputeForwardingRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeForwardingRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ComputeForwardingRuleList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeforwardingrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ComputeForwardingRule> Items { get; set; }
+}
+
 /// <summary>A ComputeBackendService to receive the matched traffic. This is used only for internal load balancing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ComputeForwardingRuleSpecBackendServiceRef
@@ -479,30 +505,4 @@ public partial class V1beta1ComputeForwardingRule : IKubernetesObject<V1ObjectMe
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1beta1ComputeForwardingRuleStatus? Status { get; set; }
-}
-
-/// <summary>ComputeForwardingRule is the Schema for the compute API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ComputeForwardingRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ComputeForwardingRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ComputeForwardingRuleList";
-    public const string KubeGroup = "compute.cnrm.cloud.google.com";
-    public const string KubePluralName = "computeforwardingrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ComputeForwardingRule> Items { get; set; }
 }

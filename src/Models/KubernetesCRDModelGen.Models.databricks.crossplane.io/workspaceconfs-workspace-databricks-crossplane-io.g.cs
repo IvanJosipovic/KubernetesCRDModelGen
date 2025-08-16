@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workspace.databricks.crossplane.io;
+/// <summary>WorkspaceConf is the Schema for the WorkspaceConfs API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1WorkspaceConfList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WorkspaceConf>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "WorkspaceConfList";
+    public const string KubeGroup = "workspace.databricks.crossplane.io";
+    public const string KubePluralName = "workspaceconfs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1WorkspaceConf> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkspaceConfSpecForProvider
@@ -245,30 +271,4 @@ public partial class V1alpha1WorkspaceConf : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>WorkspaceConfStatus defines the observed state of WorkspaceConf.</summary>
     [JsonPropertyName("status")]
     public V1alpha1WorkspaceConfStatus? Status { get; set; }
-}
-
-/// <summary>WorkspaceConf is the Schema for the WorkspaceConfs API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WorkspaceConfList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WorkspaceConf>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "WorkspaceConfList";
-    public const string KubeGroup = "workspace.databricks.crossplane.io";
-    public const string KubePluralName = "workspaceconfs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1WorkspaceConf> Items { get; set; }
 }

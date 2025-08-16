@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+/// <summary>MwsWorkspaces is the Schema for the MwsWorkspacess API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MwsWorkspacesList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsWorkspaces>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MwsWorkspacesList";
+    public const string KubeGroup = "deployment.databricks.crossplane.io";
+    public const string KubePluralName = "mwsworkspaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MwsWorkspaces> Items { get; set; }
+}
+
 /// <summary>Account Id that could be found in the top right corner of Accounts Console.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsWorkspacesSpecForProviderAccountIdSecretRef
@@ -883,30 +909,4 @@ public partial class V1alpha1MwsWorkspaces : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>MwsWorkspacesStatus defines the observed state of MwsWorkspaces.</summary>
     [JsonPropertyName("status")]
     public V1alpha1MwsWorkspacesStatus? Status { get; set; }
-}
-
-/// <summary>MwsWorkspaces is the Schema for the MwsWorkspacess API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MwsWorkspacesList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsWorkspaces>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MwsWorkspacesList";
-    public const string KubeGroup = "deployment.databricks.crossplane.io";
-    public const string KubePluralName = "mwsworkspaces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MwsWorkspaces> Items { get; set; }
 }

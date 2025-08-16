@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventhub.azure.com;
+/// <summary>Storage version of v1api20240101.Namespace Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240101storageNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1api20240101storageNamespace>
+{
+    public const string KubeApiVersion = "v1api20240101storage";
+    public const string KubeKind = "NamespaceList";
+    public const string KubeGroup = "eventhub.azure.com";
+    public const string KubePluralName = "namespaces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240101storageNamespace> Items { get; set; }
+}
+
 /// <summary>ClusterArmReference: Cluster ARM ID of the Namespace.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240101storageNamespaceSpecClusterArmReference
@@ -749,30 +775,4 @@ public partial class V1api20240101storageNamespace : IKubernetesObject<V1ObjectM
     /// <summary>Storage version of v1api20240101.Namespace_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20240101storageNamespaceStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240101.Namespace Generator information: - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/namespaces.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240101storageNamespaceList : IKubernetesObject<V1ListMeta>, IItems<V1api20240101storageNamespace>
-{
-    public const string KubeApiVersion = "v1api20240101storage";
-    public const string KubeKind = "NamespaceList";
-    public const string KubeGroup = "eventhub.azure.com";
-    public const string KubePluralName = "namespaces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240101storageNamespace> Items { get; set; }
 }

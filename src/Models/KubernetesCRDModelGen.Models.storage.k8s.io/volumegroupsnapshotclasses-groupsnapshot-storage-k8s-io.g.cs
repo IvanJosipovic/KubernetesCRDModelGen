@@ -11,6 +11,32 @@ namespace KubernetesCRDModelGen.Models.groupsnapshot.storage.k8s.io;
 /// <summary>VolumeGroupSnapshotClass specifies parameters that a underlying storage system uses when creating a volume group snapshot. A specific VolumeGroupSnapshotClass is used by specifying its name in a VolumeGroupSnapshot object. VolumeGroupSnapshotClasses are non-namespaced.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 [KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VolumeGroupSnapshotClassList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VolumeGroupSnapshotClass>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VolumeGroupSnapshotClassList";
+    public const string KubeGroup = "groupsnapshot.storage.k8s.io";
+    public const string KubePluralName = "volumegroupsnapshotclasses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VolumeGroupSnapshotClass> Items { get; set; }
+}
+
+/// <summary>VolumeGroupSnapshotClass specifies parameters that a underlying storage system uses when creating a volume group snapshot. A specific VolumeGroupSnapshotClass is used by specifying its name in a VolumeGroupSnapshot object. VolumeGroupSnapshotClasses are non-namespaced.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
 public partial class V1beta1VolumeGroupSnapshotClass : IKubernetesObject<V1ObjectMeta>
 {
     public const string KubeApiVersion = "v1beta1";
@@ -40,30 +66,4 @@ public partial class V1beta1VolumeGroupSnapshotClass : IKubernetesObject<V1Objec
     /// <summary>Parameters is a key-value map with storage driver specific parameters for creating group snapshots. These values are opaque to Kubernetes and are passed directly to the driver.</summary>
     [JsonPropertyName("parameters")]
     public IDictionary<string, string>? Parameters { get; set; }
-}
-
-/// <summary>VolumeGroupSnapshotClass specifies parameters that a underlying storage system uses when creating a volume group snapshot. A specific VolumeGroupSnapshotClass is used by specifying its name in a VolumeGroupSnapshot object. VolumeGroupSnapshotClasses are non-namespaced.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VolumeGroupSnapshotClassList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VolumeGroupSnapshotClass>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VolumeGroupSnapshotClassList";
-    public const string KubeGroup = "groupsnapshot.storage.k8s.io";
-    public const string KubePluralName = "volumegroupsnapshotclasses";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VolumeGroupSnapshotClass> Items { get; set; }
 }

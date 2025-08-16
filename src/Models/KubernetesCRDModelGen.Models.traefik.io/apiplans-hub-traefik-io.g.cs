@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.hub.traefik.io;
+/// <summary>APIPlan defines API Plan policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1APIPlanList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIPlan>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "APIPlanList";
+    public const string KubeGroup = "hub.traefik.io";
+    public const string KubePluralName = "apiplans";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1APIPlan> Items { get; set; }
+}
+
 /// <summary>Quota defines the quota policy.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1APIPlanSpecQuota
@@ -100,30 +126,4 @@ public partial class V1alpha1APIPlan : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>The current status of this APIPlan.</summary>
     [JsonPropertyName("status")]
     public V1alpha1APIPlanStatus? Status { get; set; }
-}
-
-/// <summary>APIPlan defines API Plan policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1APIPlanList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1APIPlan>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "APIPlanList";
-    public const string KubeGroup = "hub.traefik.io";
-    public const string KubePluralName = "apiplans";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1APIPlan> Items { get; set; }
 }

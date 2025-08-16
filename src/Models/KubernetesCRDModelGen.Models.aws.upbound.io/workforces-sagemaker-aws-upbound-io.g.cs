@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sagemaker.aws.upbound.io;
+/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkforceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workforce>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkforceList";
+    public const string KubeGroup = "sagemaker.aws.upbound.io";
+    public const string KubePluralName = "workforces";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Workforce> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkforceSpecForProviderCognitoConfigClientIdRefPolicy
@@ -775,30 +801,4 @@ public partial class V1beta1Workforce : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>WorkforceStatus defines the observed state of Workforce.</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkforceStatus? Status { get; set; }
-}
-
-/// <summary>Workforce is the Schema for the Workforces API. Provides a SageMaker AI Workforce resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkforceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Workforce>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkforceList";
-    public const string KubeGroup = "sagemaker.aws.upbound.io";
-    public const string KubePluralName = "workforces";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Workforce> Items { get; set; }
 }

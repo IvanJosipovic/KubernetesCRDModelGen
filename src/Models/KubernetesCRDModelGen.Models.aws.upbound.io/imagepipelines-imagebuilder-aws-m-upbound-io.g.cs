@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.imagebuilder.aws.m.upbound.io;
+/// <summary>ImagePipeline is the Schema for the ImagePipelines API. Manages an Image Builder Image Pipeline</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ImagePipelineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ImagePipeline>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ImagePipelineList";
+    public const string KubeGroup = "imagebuilder.aws.m.upbound.io";
+    public const string KubePluralName = "imagepipelines";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ImagePipeline> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ImagePipelineSpecForProviderImageRecipeArnRefPolicy
@@ -910,30 +936,4 @@ public partial class V1beta1ImagePipeline : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>ImagePipelineStatus defines the observed state of ImagePipeline.</summary>
     [JsonPropertyName("status")]
     public V1beta1ImagePipelineStatus? Status { get; set; }
-}
-
-/// <summary>ImagePipeline is the Schema for the ImagePipelines API. Manages an Image Builder Image Pipeline</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ImagePipelineList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ImagePipeline>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ImagePipelineList";
-    public const string KubeGroup = "imagebuilder.aws.m.upbound.io";
-    public const string KubePluralName = "imagepipelines";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ImagePipeline> Items { get; set; }
 }

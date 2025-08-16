@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backupdr.cnrm.cloud.google.com;
+/// <summary>BackupDRBackupPlan is the Schema for the BackupDRBackupPlan API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BackupDRBackupPlanList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BackupDRBackupPlan>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BackupDRBackupPlanList";
+    public const string KubeGroup = "backupdr.cnrm.cloud.google.com";
+    public const string KubePluralName = "backupdrbackupplans";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BackupDRBackupPlan> Items { get; set; }
+}
+
 /// <summary>Required. A BackupWindow defines the window of day during which backup jobs  will run. Jobs are queued at the beginning of the window and will be marked  as `NOT_RUN` if they do not start by the end of the window.   Note: running jobs will not be cancelled at the end of the window.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRBackupPlanSpecBackupRulesStandardScheduleBackupWindow
@@ -262,30 +288,4 @@ public partial class V1alpha1BackupDRBackupPlan : IKubernetesObject<V1ObjectMeta
     /// <summary>BackupDRBackupPlanStatus defines the config connector machine state of BackupDRBackupPlan</summary>
     [JsonPropertyName("status")]
     public V1alpha1BackupDRBackupPlanStatus? Status { get; set; }
-}
-
-/// <summary>BackupDRBackupPlan is the Schema for the BackupDRBackupPlan API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BackupDRBackupPlanList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BackupDRBackupPlan>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BackupDRBackupPlanList";
-    public const string KubeGroup = "backupdr.cnrm.cloud.google.com";
-    public const string KubePluralName = "backupdrbackupplans";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1BackupDRBackupPlan> Items { get; set; }
 }

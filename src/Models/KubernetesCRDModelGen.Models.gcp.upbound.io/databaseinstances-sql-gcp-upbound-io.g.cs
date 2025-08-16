@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.gcp.upbound.io;
+/// <summary>DatabaseInstance is the Schema for the DatabaseInstances API. Creates a new SQL database instance in Google Cloud SQL.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DatabaseInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabaseInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DatabaseInstanceList";
+    public const string KubeGroup = "sql.gcp.upbound.io";
+    public const string KubePluralName = "databaseinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DatabaseInstance> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DatabaseInstanceSpecForProviderClone
@@ -2280,30 +2306,4 @@ public partial class V1beta1DatabaseInstance : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>DatabaseInstanceStatus defines the observed state of DatabaseInstance.</summary>
     [JsonPropertyName("status")]
     public V1beta1DatabaseInstanceStatus? Status { get; set; }
-}
-
-/// <summary>DatabaseInstance is the Schema for the DatabaseInstances API. Creates a new SQL database instance in Google Cloud SQL.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DatabaseInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DatabaseInstance>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DatabaseInstanceList";
-    public const string KubeGroup = "sql.gcp.upbound.io";
-    public const string KubePluralName = "databaseinstances";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DatabaseInstance> Items { get; set; }
 }

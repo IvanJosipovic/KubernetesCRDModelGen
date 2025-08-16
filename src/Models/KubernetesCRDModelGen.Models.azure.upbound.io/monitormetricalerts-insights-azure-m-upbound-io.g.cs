@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.m.upbound.io;
+/// <summary>MonitorMetricAlert is the Schema for the MonitorMetricAlerts API. Manages a Metric Alert within Azure Monitor</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MonitorMetricAlertList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitorMetricAlert>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MonitorMetricAlertList";
+    public const string KubeGroup = "insights.azure.m.upbound.io";
+    public const string KubePluralName = "monitormetricalerts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MonitorMetricAlert> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MonitorMetricAlertSpecForProviderActionActionGroupIdRefPolicy
@@ -1110,30 +1136,4 @@ public partial class V1beta1MonitorMetricAlert : IKubernetesObject<V1ObjectMeta>
     /// <summary>MonitorMetricAlertStatus defines the observed state of MonitorMetricAlert.</summary>
     [JsonPropertyName("status")]
     public V1beta1MonitorMetricAlertStatus? Status { get; set; }
-}
-
-/// <summary>MonitorMetricAlert is the Schema for the MonitorMetricAlerts API. Manages a Metric Alert within Azure Monitor</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MonitorMetricAlertList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MonitorMetricAlert>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MonitorMetricAlertList";
-    public const string KubeGroup = "insights.azure.m.upbound.io";
-    public const string KubePluralName = "monitormetricalerts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MonitorMetricAlert> Items { get; set; }
 }

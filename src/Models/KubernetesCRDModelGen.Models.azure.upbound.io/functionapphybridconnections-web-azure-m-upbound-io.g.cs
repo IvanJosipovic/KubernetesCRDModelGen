@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.m.upbound.io;
+/// <summary>FunctionAppHybridConnection is the Schema for the FunctionAppHybridConnections API. Manages a Function App Hybrid Connection.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FunctionAppHybridConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionAppHybridConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FunctionAppHybridConnectionList";
+    public const string KubeGroup = "web.azure.m.upbound.io";
+    public const string KubePluralName = "functionapphybridconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FunctionAppHybridConnection> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionAppHybridConnectionSpecForProviderFunctionAppIdRefPolicy
@@ -512,30 +538,4 @@ public partial class V1beta1FunctionAppHybridConnection : IKubernetesObject<V1Ob
     /// <summary>FunctionAppHybridConnectionStatus defines the observed state of FunctionAppHybridConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1FunctionAppHybridConnectionStatus? Status { get; set; }
-}
-
-/// <summary>FunctionAppHybridConnection is the Schema for the FunctionAppHybridConnections API. Manages a Function App Hybrid Connection.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FunctionAppHybridConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionAppHybridConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FunctionAppHybridConnectionList";
-    public const string KubeGroup = "web.azure.m.upbound.io";
-    public const string KubePluralName = "functionapphybridconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FunctionAppHybridConnection> Items { get; set; }
 }

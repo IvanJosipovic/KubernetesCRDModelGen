@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.firebase.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseAndroidAppMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FirebaseAndroidAppList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1FirebaseAndroidApp>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FirebaseAndroidAppList";
+    public const string KubeGroup = "firebase.cnrm.cloud.google.com";
+    public const string KubePluralName = "firebaseandroidapps";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1FirebaseAndroidApp> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseAndroidAppSpecProjectRef
+public partial class V1alpha1FirebaseAndroidAppSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class FirebaseAndroidAppSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseAndroidAppSpec
+public partial class V1alpha1FirebaseAndroidAppSpec
 {
     /// <summary>The globally unique, Google-assigned identifier (UID) for the Firebase API key associated with the AndroidApp. If apiKeyId is not set during creation, then Firebase automatically associates an apiKeyId with the AndroidApp. This auto-associated key may be an existing valid key or, if no valid key exists, a new one will be provisioned.</summary>
     [JsonPropertyName("apiKeyId")]
@@ -53,7 +73,7 @@ public partial class FirebaseAndroidAppSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public FirebaseAndroidAppSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1FirebaseAndroidAppSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated appId of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -70,7 +90,7 @@ public partial class FirebaseAndroidAppSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseAndroidAppStatusConditions
+public partial class V1alpha1FirebaseAndroidAppStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -95,7 +115,7 @@ public partial class FirebaseAndroidAppStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseAndroidAppStatus
+public partial class V1alpha1FirebaseAndroidAppStatus
 {
     /// <summary>The globally unique, Firebase-assigned identifier of the AndroidApp. This identifier should be treated as an opaque token, as the data format is not specified.</summary>
     [JsonPropertyName("appId")]
@@ -103,7 +123,7 @@ public partial class FirebaseAndroidAppStatus
 
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<FirebaseAndroidAppStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1FirebaseAndroidAppStatusConditions>? Conditions { get; set; }
 
     /// <summary>This checksum is computed by the server based on the value of other fields, and it may be sent with update requests to ensure the client has an up-to-date value before proceeding.</summary>
     [JsonPropertyName("etag")]
@@ -120,25 +140,30 @@ public partial class FirebaseAndroidAppStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class FirebaseAndroidApp
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1FirebaseAndroidApp : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1FirebaseAndroidAppSpec>, IStatus<V1alpha1FirebaseAndroidAppStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "FirebaseAndroidApp";
+    public const string KubeGroup = "firebase.cnrm.cloud.google.com";
+    public const string KubePluralName = "firebaseandroidapps";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public FirebaseAndroidAppMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public FirebaseAndroidAppSpec Spec { get; set; }
+    public V1alpha1FirebaseAndroidAppSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public FirebaseAndroidAppStatus? Status { get; set; }
+    public V1alpha1FirebaseAndroidAppStatus? Status { get; set; }
 }

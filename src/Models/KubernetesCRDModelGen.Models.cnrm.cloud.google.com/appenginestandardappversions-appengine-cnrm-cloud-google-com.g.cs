@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.appengine.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineStandardAppVersionList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AppEngineStandardAppVersion>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineStandardAppVersionList";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appenginestandardappversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AppEngineStandardAppVersion> Items { get; set; }
 }
 
 /// <summary>Scheduler settings for standard environment.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecAutomaticScalingStandardSchedulerSettings
+public partial class V1alpha1AppEngineStandardAppVersionSpecAutomaticScalingStandardSchedulerSettings
 {
     /// <summary>Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.</summary>
     [JsonPropertyName("maxInstances")]
@@ -37,7 +57,7 @@ public partial class AppEngineStandardAppVersionSpecAutomaticScalingStandardSche
 
 /// <summary>Automatic scaling is based on request rate, response latencies, and other application metrics.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecAutomaticScaling
+public partial class V1alpha1AppEngineStandardAppVersionSpecAutomaticScaling
 {
     /// <summary>Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.  Defaults to a runtime-specific value.</summary>
     [JsonPropertyName("maxConcurrentRequests")]
@@ -61,12 +81,12 @@ public partial class AppEngineStandardAppVersionSpecAutomaticScaling
 
     /// <summary>Scheduler settings for standard environment.</summary>
     [JsonPropertyName("standardSchedulerSettings")]
-    public AppEngineStandardAppVersionSpecAutomaticScalingStandardSchedulerSettings? StandardSchedulerSettings { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecAutomaticScalingStandardSchedulerSettings? StandardSchedulerSettings { get; set; }
 }
 
 /// <summary>Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecBasicScaling
+public partial class V1alpha1AppEngineStandardAppVersionSpecBasicScaling
 {
     /// <summary>Duration of time after the last request that an instance must wait before the instance is shut down. A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.</summary>
     [JsonPropertyName("idleTimeout")]
@@ -79,7 +99,7 @@ public partial class AppEngineStandardAppVersionSpecBasicScaling
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecDeploymentFiles
+public partial class V1alpha1AppEngineStandardAppVersionSpecDeploymentFiles
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -96,7 +116,7 @@ public partial class AppEngineStandardAppVersionSpecDeploymentFiles
 
 /// <summary>Zip File.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecDeploymentZip
+public partial class V1alpha1AppEngineStandardAppVersionSpecDeploymentZip
 {
     /// <summary>files count.</summary>
     [JsonPropertyName("filesCount")]
@@ -109,20 +129,20 @@ public partial class AppEngineStandardAppVersionSpecDeploymentZip
 
 /// <summary>Code and application artifacts that make up this version.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecDeployment
+public partial class V1alpha1AppEngineStandardAppVersionSpecDeployment
 {
     /// <summary>Manifest of the files stored in Google Cloud Storage that are included as part of this version. All files must be readable using the credentials supplied with this call.</summary>
     [JsonPropertyName("files")]
-    public IList<AppEngineStandardAppVersionSpecDeploymentFiles>? Files { get; set; }
+    public IList<V1alpha1AppEngineStandardAppVersionSpecDeploymentFiles>? Files { get; set; }
 
     /// <summary>Zip File.</summary>
     [JsonPropertyName("zip")]
-    public AppEngineStandardAppVersionSpecDeploymentZip? Zip { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecDeploymentZip? Zip { get; set; }
 }
 
 /// <summary>The entrypoint for the application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecEntrypoint
+public partial class V1alpha1AppEngineStandardAppVersionSpecEntrypoint
 {
     /// <summary>The format should be a shell command that can be fed to bash -c.</summary>
     [JsonPropertyName("shell")]
@@ -131,7 +151,7 @@ public partial class AppEngineStandardAppVersionSpecEntrypoint
 
 /// <summary>Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecHandlersScript
+public partial class V1alpha1AppEngineStandardAppVersionSpecHandlersScript
 {
     /// <summary>Path to the script from the application root directory.</summary>
     [JsonPropertyName("scriptPath")]
@@ -140,7 +160,7 @@ public partial class AppEngineStandardAppVersionSpecHandlersScript
 
 /// <summary>Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecHandlersStaticFiles
+public partial class V1alpha1AppEngineStandardAppVersionSpecHandlersStaticFiles
 {
     /// <summary>Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged against both your code and static data storage resource quotas.</summary>
     [JsonPropertyName("applicationReadable")]
@@ -173,7 +193,7 @@ public partial class AppEngineStandardAppVersionSpecHandlersStaticFiles
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecHandlers
+public partial class V1alpha1AppEngineStandardAppVersionSpecHandlers
 {
     /// <summary>Actions to take when the user is not logged in. Possible values: ["AUTH_FAIL_ACTION_REDIRECT", "AUTH_FAIL_ACTION_UNAUTHORIZED"].</summary>
     [JsonPropertyName("authFailAction")]
@@ -189,7 +209,7 @@ public partial class AppEngineStandardAppVersionSpecHandlers
 
     /// <summary>Executes a script to handle the requests that match this URL pattern. Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".</summary>
     [JsonPropertyName("script")]
-    public AppEngineStandardAppVersionSpecHandlersScript? Script { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecHandlersScript? Script { get; set; }
 
     /// <summary>Security (HTTPS) enforcement for this URL. Possible values: ["SECURE_DEFAULT", "SECURE_NEVER", "SECURE_OPTIONAL", "SECURE_ALWAYS"].</summary>
     [JsonPropertyName("securityLevel")]
@@ -197,7 +217,7 @@ public partial class AppEngineStandardAppVersionSpecHandlers
 
     /// <summary>Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.</summary>
     [JsonPropertyName("staticFiles")]
-    public AppEngineStandardAppVersionSpecHandlersStaticFiles? StaticFiles { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecHandlersStaticFiles? StaticFiles { get; set; }
 
     /// <summary>URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings. All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.</summary>
     [JsonPropertyName("urlRegex")]
@@ -206,7 +226,7 @@ public partial class AppEngineStandardAppVersionSpecHandlers
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecLibraries
+public partial class V1alpha1AppEngineStandardAppVersionSpecLibraries
 {
     /// <summary>Name of the library. Example "django".</summary>
     [JsonPropertyName("name")]
@@ -219,7 +239,7 @@ public partial class AppEngineStandardAppVersionSpecLibraries
 
 /// <summary>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecManualScaling
+public partial class V1alpha1AppEngineStandardAppVersionSpecManualScaling
 {
     /// <summary>Number of instances to assign to the service at the start.  **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2 Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.</summary>
     [JsonPropertyName("instances")]
@@ -228,7 +248,7 @@ public partial class AppEngineStandardAppVersionSpecManualScaling
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecServiceRef
+public partial class V1alpha1AppEngineStandardAppVersionSpecServiceRef
 {
     /// <summary>Allowed value: The `name` field of an `AppEngineService` resource.</summary>
     [JsonPropertyName("external")]
@@ -245,7 +265,7 @@ public partial class AppEngineStandardAppVersionSpecServiceRef
 
 /// <summary>Enables VPC connectivity for standard apps.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpecVpcAccessConnector
+public partial class V1alpha1AppEngineStandardAppVersionSpecVpcAccessConnector
 {
     /// <summary>The egress setting for the connector, controlling what traffic is diverted through it.</summary>
     [JsonPropertyName("egressSetting")]
@@ -258,7 +278,7 @@ public partial class AppEngineStandardAppVersionSpecVpcAccessConnector
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionSpec
+public partial class V1alpha1AppEngineStandardAppVersionSpec
 {
     /// <summary>Allows App Engine second generation runtimes to access the legacy bundled services.</summary>
     [JsonPropertyName("appEngineApis")]
@@ -266,11 +286,11 @@ public partial class AppEngineStandardAppVersionSpec
 
     /// <summary>Automatic scaling is based on request rate, response latencies, and other application metrics.</summary>
     [JsonPropertyName("automaticScaling")]
-    public AppEngineStandardAppVersionSpecAutomaticScaling? AutomaticScaling { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecAutomaticScaling? AutomaticScaling { get; set; }
 
     /// <summary>Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.</summary>
     [JsonPropertyName("basicScaling")]
-    public AppEngineStandardAppVersionSpecBasicScaling? BasicScaling { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecBasicScaling? BasicScaling { get; set; }
 
     /// <summary>If set to 'true', the service will be deleted if it is the last version.</summary>
     [JsonPropertyName("deleteServiceOnDestroy")]
@@ -278,11 +298,11 @@ public partial class AppEngineStandardAppVersionSpec
 
     /// <summary>Code and application artifacts that make up this version.</summary>
     [JsonPropertyName("deployment")]
-    public AppEngineStandardAppVersionSpecDeployment Deployment { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecDeployment Deployment { get; set; }
 
     /// <summary>The entrypoint for the application.</summary>
     [JsonPropertyName("entrypoint")]
-    public AppEngineStandardAppVersionSpecEntrypoint Entrypoint { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecEntrypoint Entrypoint { get; set; }
 
     /// <summary>Environment variables available to the application.</summary>
     [JsonPropertyName("envVariables")]
@@ -290,7 +310,7 @@ public partial class AppEngineStandardAppVersionSpec
 
     /// <summary>An ordered list of URL-matching patterns that should be applied to incoming requests. The first matching URL handles the request and other request handlers are not attempted.</summary>
     [JsonPropertyName("handlers")]
-    public IList<AppEngineStandardAppVersionSpecHandlers>? Handlers { get; set; }
+    public IList<V1alpha1AppEngineStandardAppVersionSpecHandlers>? Handlers { get; set; }
 
     /// <summary>A list of the types of messages that this application is able to receive. Possible values: ["INBOUND_SERVICE_MAIL", "INBOUND_SERVICE_MAIL_BOUNCE", "INBOUND_SERVICE_XMPP_ERROR", "INBOUND_SERVICE_XMPP_MESSAGE", "INBOUND_SERVICE_XMPP_SUBSCRIBE", "INBOUND_SERVICE_XMPP_PRESENCE", "INBOUND_SERVICE_CHANNEL_PRESENCE", "INBOUND_SERVICE_WARMUP"].</summary>
     [JsonPropertyName("inboundServices")]
@@ -302,11 +322,11 @@ public partial class AppEngineStandardAppVersionSpec
 
     /// <summary>Configuration for third-party Python runtime libraries that are required by the application.</summary>
     [JsonPropertyName("libraries")]
-    public IList<AppEngineStandardAppVersionSpecLibraries>? Libraries { get; set; }
+    public IList<V1alpha1AppEngineStandardAppVersionSpecLibraries>? Libraries { get; set; }
 
     /// <summary>A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.</summary>
     [JsonPropertyName("manualScaling")]
-    public AppEngineStandardAppVersionSpecManualScaling? ManualScaling { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecManualScaling? ManualScaling { get; set; }
 
     /// <summary>If set to 'true', the application version will not be deleted.</summary>
     [JsonPropertyName("noopOnDestroy")]
@@ -334,7 +354,7 @@ public partial class AppEngineStandardAppVersionSpec
 
     /// <summary></summary>
     [JsonPropertyName("serviceRef")]
-    public AppEngineStandardAppVersionSpecServiceRef ServiceRef { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecServiceRef ServiceRef { get; set; }
 
     /// <summary>Whether multiple requests can be dispatched to this version at once.</summary>
     [JsonPropertyName("threadsafe")]
@@ -342,12 +362,12 @@ public partial class AppEngineStandardAppVersionSpec
 
     /// <summary>Enables VPC connectivity for standard apps.</summary>
     [JsonPropertyName("vpcAccessConnector")]
-    public AppEngineStandardAppVersionSpecVpcAccessConnector? VpcAccessConnector { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpecVpcAccessConnector? VpcAccessConnector { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionStatusConditions
+public partial class V1alpha1AppEngineStandardAppVersionStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -372,11 +392,11 @@ public partial class AppEngineStandardAppVersionStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersionStatus
+public partial class V1alpha1AppEngineStandardAppVersionStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AppEngineStandardAppVersionStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AppEngineStandardAppVersionStatusConditions>? Conditions { get; set; }
 
     /// <summary>Full path to the Version resource in the API. Example, "v1".</summary>
     [JsonPropertyName("name")]
@@ -389,25 +409,30 @@ public partial class AppEngineStandardAppVersionStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AppEngineStandardAppVersion
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AppEngineStandardAppVersion : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AppEngineStandardAppVersionSpec>, IStatus<V1alpha1AppEngineStandardAppVersionStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AppEngineStandardAppVersion";
+    public const string KubeGroup = "appengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "appenginestandardappversions";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AppEngineStandardAppVersionMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AppEngineStandardAppVersionSpec Spec { get; set; }
+    public V1alpha1AppEngineStandardAppVersionSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AppEngineStandardAppVersionStatus? Status { get; set; }
+    public V1alpha1AppEngineStandardAppVersionStatus? Status { get; set; }
 }

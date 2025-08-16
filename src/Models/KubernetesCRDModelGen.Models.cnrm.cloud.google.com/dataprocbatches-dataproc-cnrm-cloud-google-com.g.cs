@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
+/// <summary>DataprocBatch is the Schema for the DataprocBatch API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataprocBatchList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataprocBatch>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataprocBatchList";
+    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataprocbatches";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataprocBatch> Items { get; set; }
+}
+
 /// <summary>Optional. The Cloud KMS key to use for encryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataprocBatchSpecEnvironmentConfigExecutionConfigKmsKeyRef
@@ -577,30 +603,4 @@ public partial class V1alpha1DataprocBatch : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>DataprocBatchStatus defines the config connector machine state of DataprocBatch</summary>
     [JsonPropertyName("status")]
     public V1alpha1DataprocBatchStatus? Status { get; set; }
-}
-
-/// <summary>DataprocBatch is the Schema for the DataprocBatch API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataprocBatchList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataprocBatch>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataprocBatchList";
-    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataprocbatches";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DataprocBatch> Items { get; set; }
 }

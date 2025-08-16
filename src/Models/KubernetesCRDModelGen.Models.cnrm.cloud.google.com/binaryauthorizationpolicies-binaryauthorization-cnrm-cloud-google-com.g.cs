@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.binaryauthorization.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicyMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BinaryAuthorizationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BinaryAuthorizationPolicy>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BinaryAuthorizationPolicyList";
+    public const string KubeGroup = "binaryauthorization.cnrm.cloud.google.com";
+    public const string KubePluralName = "binaryauthorizationpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BinaryAuthorizationPolicy> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecAdmissionWhitelistPatterns
+public partial class V1beta1BinaryAuthorizationPolicySpecAdmissionWhitelistPatterns
 {
     /// <summary>An image name pattern to allowlist, in the form `registry/path/to/image`. This supports a trailing `*` as a wildcard, but this is allowed only in text after the `registry/` part.</summary>
     [JsonPropertyName("namePattern")]
@@ -25,7 +45,7 @@ public partial class BinaryAuthorizationPolicySpecAdmissionWhitelistPatterns
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecClusterAdmissionRulesRequireAttestationsBy
+public partial class V1beta1BinaryAuthorizationPolicySpecClusterAdmissionRulesRequireAttestationsBy
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `BinaryAuthorizationAttestor` resource (format: `projects/{{project}}/attestors/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -42,7 +62,7 @@ public partial class BinaryAuthorizationPolicySpecClusterAdmissionRulesRequireAt
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecClusterAdmissionRules
+public partial class V1beta1BinaryAuthorizationPolicySpecClusterAdmissionRules
 {
     /// <summary>Required. The action when a pod creation is denied by the admission rule. Possible values: ENFORCEMENT_MODE_UNSPECIFIED, ENFORCED_BLOCK_AND_AUDIT_LOG, DRYRUN_AUDIT_LOG_ONLY</summary>
     [JsonPropertyName("enforcementMode")]
@@ -54,12 +74,12 @@ public partial class BinaryAuthorizationPolicySpecClusterAdmissionRules
 
     /// <summary></summary>
     [JsonPropertyName("requireAttestationsBy")]
-    public IList<BinaryAuthorizationPolicySpecClusterAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicySpecClusterAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecDefaultAdmissionRuleRequireAttestationsBy
+public partial class V1beta1BinaryAuthorizationPolicySpecDefaultAdmissionRuleRequireAttestationsBy
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `BinaryAuthorizationAttestor` resource (format: `projects/{{project}}/attestors/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -76,7 +96,7 @@ public partial class BinaryAuthorizationPolicySpecDefaultAdmissionRuleRequireAtt
 
 /// <summary>Required. Default admission rule for a cluster without a per-cluster, per-kubernetes-service-account, or per-istio-service-identity admission rule.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecDefaultAdmissionRule
+public partial class V1beta1BinaryAuthorizationPolicySpecDefaultAdmissionRule
 {
     /// <summary>Required. The action when a pod creation is denied by the admission rule. Possible values: ENFORCEMENT_MODE_UNSPECIFIED, ENFORCED_BLOCK_AND_AUDIT_LOG, DRYRUN_AUDIT_LOG_ONLY</summary>
     [JsonPropertyName("enforcementMode")]
@@ -88,12 +108,12 @@ public partial class BinaryAuthorizationPolicySpecDefaultAdmissionRule
 
     /// <summary></summary>
     [JsonPropertyName("requireAttestationsBy")]
-    public IList<BinaryAuthorizationPolicySpecDefaultAdmissionRuleRequireAttestationsBy>? RequireAttestationsBy { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicySpecDefaultAdmissionRuleRequireAttestationsBy>? RequireAttestationsBy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRulesRequireAttestationsBy
+public partial class V1beta1BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRulesRequireAttestationsBy
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `BinaryAuthorizationAttestor` resource (format: `projects/{{project}}/attestors/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -110,7 +130,7 @@ public partial class BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionR
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRules
+public partial class V1beta1BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRules
 {
     /// <summary>Required. The action when a pod creation is denied by the admission rule. Possible values: ENFORCEMENT_MODE_UNSPECIFIED, ENFORCED_BLOCK_AND_AUDIT_LOG, DRYRUN_AUDIT_LOG_ONLY</summary>
     [JsonPropertyName("enforcementMode")]
@@ -122,12 +142,12 @@ public partial class BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionR
 
     /// <summary></summary>
     [JsonPropertyName("requireAttestationsBy")]
-    public IList<BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRulesRequireAttestationsBy
+public partial class V1beta1BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRulesRequireAttestationsBy
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `BinaryAuthorizationAttestor` resource (format: `projects/{{project}}/attestors/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -144,7 +164,7 @@ public partial class BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRu
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRules
+public partial class V1beta1BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRules
 {
     /// <summary>Required. The action when a pod creation is denied by the admission rule. Possible values: ENFORCEMENT_MODE_UNSPECIFIED, ENFORCED_BLOCK_AND_AUDIT_LOG, DRYRUN_AUDIT_LOG_ONLY</summary>
     [JsonPropertyName("enforcementMode")]
@@ -156,12 +176,12 @@ public partial class BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRu
 
     /// <summary></summary>
     [JsonPropertyName("requireAttestationsBy")]
-    public IList<BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRulesRequireAttestationsBy
+public partial class V1beta1BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRulesRequireAttestationsBy
 {
     /// <summary>Allowed value: The Google Cloud resource name of a `BinaryAuthorizationAttestor` resource (format: `projects/{{project}}/attestors/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -178,7 +198,7 @@ public partial class BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmiss
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRules
+public partial class V1beta1BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRules
 {
     /// <summary>Required. The action when a pod creation is denied by the admission rule. Possible values: ENFORCEMENT_MODE_UNSPECIFIED, ENFORCED_BLOCK_AND_AUDIT_LOG, DRYRUN_AUDIT_LOG_ONLY</summary>
     [JsonPropertyName("enforcementMode")]
@@ -190,12 +210,12 @@ public partial class BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmiss
 
     /// <summary></summary>
     [JsonPropertyName("requireAttestationsBy")]
-    public IList<BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRulesRequireAttestationsBy>? RequireAttestationsBy { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpecProjectRef
+public partial class V1beta1BinaryAuthorizationPolicySpecProjectRef
 {
     /// <summary>The project of the resource.  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -212,19 +232,19 @@ public partial class BinaryAuthorizationPolicySpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicySpec
+public partial class V1beta1BinaryAuthorizationPolicySpec
 {
     /// <summary>Optional. Admission policy allowlisting. A matching admission request will always be permitted. This feature is typically used to exclude Google or third-party infrastructure images from Binary Authorization policies.</summary>
     [JsonPropertyName("admissionWhitelistPatterns")]
-    public IList<BinaryAuthorizationPolicySpecAdmissionWhitelistPatterns>? AdmissionWhitelistPatterns { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicySpecAdmissionWhitelistPatterns>? AdmissionWhitelistPatterns { get; set; }
 
     /// <summary>Optional. Per-cluster admission rules. Cluster spec format: location.clusterId. There can be at most one admission rule per cluster spec. A location is either a compute zone (e.g. us-central1-a) or a region (e.g. us-central1). For clusterId syntax restrictions see https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.</summary>
     [JsonPropertyName("clusterAdmissionRules")]
-    public IDictionary<string, BinaryAuthorizationPolicySpecClusterAdmissionRules>? ClusterAdmissionRules { get; set; }
+    public IDictionary<string, V1beta1BinaryAuthorizationPolicySpecClusterAdmissionRules>? ClusterAdmissionRules { get; set; }
 
     /// <summary>Required. Default admission rule for a cluster without a per-cluster, per-kubernetes-service-account, or per-istio-service-identity admission rule.</summary>
     [JsonPropertyName("defaultAdmissionRule")]
-    public BinaryAuthorizationPolicySpecDefaultAdmissionRule DefaultAdmissionRule { get; set; }
+    public V1beta1BinaryAuthorizationPolicySpecDefaultAdmissionRule DefaultAdmissionRule { get; set; }
 
     /// <summary>Optional. A descriptive comment.</summary>
     [JsonPropertyName("description")]
@@ -236,24 +256,24 @@ public partial class BinaryAuthorizationPolicySpec
 
     /// <summary>Optional. Per-istio-service-identity admission rules. Istio service identity spec format: spiffe:///ns//sa/ or /ns//sa/ e.g. spiffe://example.com/ns/test-ns/sa/default</summary>
     [JsonPropertyName("istioServiceIdentityAdmissionRules")]
-    public IDictionary<string, BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRules>? IstioServiceIdentityAdmissionRules { get; set; }
+    public IDictionary<string, V1beta1BinaryAuthorizationPolicySpecIstioServiceIdentityAdmissionRules>? IstioServiceIdentityAdmissionRules { get; set; }
 
     /// <summary>Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format: [a-z.-]+, e.g. 'some-namespace'</summary>
     [JsonPropertyName("kubernetesNamespaceAdmissionRules")]
-    public IDictionary<string, BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRules>? KubernetesNamespaceAdmissionRules { get; set; }
+    public IDictionary<string, V1beta1BinaryAuthorizationPolicySpecKubernetesNamespaceAdmissionRules>? KubernetesNamespaceAdmissionRules { get; set; }
 
     /// <summary>Optional. Per-kubernetes-service-account admission rules. Service account spec format: namespace:serviceaccount. e.g. 'test-ns:default'</summary>
     [JsonPropertyName("kubernetesServiceAccountAdmissionRules")]
-    public IDictionary<string, BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRules>? KubernetesServiceAccountAdmissionRules { get; set; }
+    public IDictionary<string, V1beta1BinaryAuthorizationPolicySpecKubernetesServiceAccountAdmissionRules>? KubernetesServiceAccountAdmissionRules { get; set; }
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public BinaryAuthorizationPolicySpecProjectRef ProjectRef { get; set; }
+    public V1beta1BinaryAuthorizationPolicySpecProjectRef ProjectRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicyStatusConditions
+public partial class V1beta1BinaryAuthorizationPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -278,11 +298,11 @@ public partial class BinaryAuthorizationPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicyStatus
+public partial class V1beta1BinaryAuthorizationPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BinaryAuthorizationPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1BinaryAuthorizationPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -299,25 +319,30 @@ public partial class BinaryAuthorizationPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BinaryAuthorizationPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BinaryAuthorizationPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BinaryAuthorizationPolicySpec>, IStatus<V1beta1BinaryAuthorizationPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BinaryAuthorizationPolicy";
+    public const string KubeGroup = "binaryauthorization.cnrm.cloud.google.com";
+    public const string KubePluralName = "binaryauthorizationpolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BinaryAuthorizationPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BinaryAuthorizationPolicySpec Spec { get; set; }
+    public V1beta1BinaryAuthorizationPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BinaryAuthorizationPolicyStatus? Status { get; set; }
+    public V1beta1BinaryAuthorizationPolicyStatus? Status { get; set; }
 }

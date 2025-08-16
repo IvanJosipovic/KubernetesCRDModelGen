@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.m.upbound.io;
+/// <summary>RedisLinkedServer is the Schema for the RedisLinkedServers API. Manages a Redis Linked Server.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisLinkedServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisLinkedServer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisLinkedServerList";
+    public const string KubeGroup = "cache.azure.m.upbound.io";
+    public const string KubePluralName = "redislinkedservers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisLinkedServer> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisLinkedServerSpecForProviderLinkedRedisCacheIdRefPolicy
@@ -496,30 +522,4 @@ public partial class V1beta1RedisLinkedServer : IKubernetesObject<V1ObjectMeta>,
     /// <summary>RedisLinkedServerStatus defines the observed state of RedisLinkedServer.</summary>
     [JsonPropertyName("status")]
     public V1beta1RedisLinkedServerStatus? Status { get; set; }
-}
-
-/// <summary>RedisLinkedServer is the Schema for the RedisLinkedServers API. Manages a Redis Linked Server.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RedisLinkedServerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisLinkedServer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RedisLinkedServerList";
-    public const string KubeGroup = "cache.azure.m.upbound.io";
-    public const string KubePluralName = "redislinkedservers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RedisLinkedServer> Items { get; set; }
 }

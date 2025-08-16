@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backup.aws.upbound.io;
+/// <summary>Plan is the Schema for the Plans API. Provides an AWS Backup plan resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PlanList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Plan>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PlanList";
+    public const string KubeGroup = "backup.aws.upbound.io";
+    public const string KubePluralName = "plans";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Plan> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PlanSpecForProviderAdvancedBackupSetting
@@ -680,30 +706,4 @@ public partial class V1beta1Plan : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta
     /// <summary>PlanStatus defines the observed state of Plan.</summary>
     [JsonPropertyName("status")]
     public V1beta1PlanStatus? Status { get; set; }
-}
-
-/// <summary>Plan is the Schema for the Plans API. Provides an AWS Backup plan resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PlanList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Plan>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PlanList";
-    public const string KubeGroup = "backup.aws.upbound.io";
-    public const string KubePluralName = "plans";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Plan> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>ProjectDefaultNetworkTier is the Schema for the ProjectDefaultNetworkTiers API. Configures the default network tier for a project.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectDefaultNetworkTierList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectDefaultNetworkTier>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectDefaultNetworkTierList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "projectdefaultnetworktiers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProjectDefaultNetworkTier> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectDefaultNetworkTierSpecForProvider
@@ -193,30 +219,4 @@ public partial class V1beta1ProjectDefaultNetworkTier : IKubernetesObject<V1Obje
     /// <summary>ProjectDefaultNetworkTierStatus defines the observed state of ProjectDefaultNetworkTier.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProjectDefaultNetworkTierStatus? Status { get; set; }
-}
-
-/// <summary>ProjectDefaultNetworkTier is the Schema for the ProjectDefaultNetworkTiers API. Configures the default network tier for a project.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProjectDefaultNetworkTierList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectDefaultNetworkTier>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProjectDefaultNetworkTierList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "projectdefaultnetworktiers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProjectDefaultNetworkTier> Items { get; set; }
 }

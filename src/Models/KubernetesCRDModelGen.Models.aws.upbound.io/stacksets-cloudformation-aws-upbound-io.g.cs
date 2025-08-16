@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudformation.aws.upbound.io;
+/// <summary>StackSet is the Schema for the StackSets API. Manages a CloudFormation StackSet.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1StackSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StackSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "StackSetList";
+    public const string KubeGroup = "cloudformation.aws.upbound.io";
+    public const string KubePluralName = "stacksets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1StackSet> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1StackSetSpecForProviderAdministrationRoleArnRefPolicy
@@ -626,30 +652,4 @@ public partial class V1beta1StackSet : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>StackSetStatus defines the observed state of StackSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1StackSetStatus? Status { get; set; }
-}
-
-/// <summary>StackSet is the Schema for the StackSets API. Manages a CloudFormation StackSet.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1StackSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1StackSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "StackSetList";
-    public const string KubeGroup = "cloudformation.aws.upbound.io";
-    public const string KubePluralName = "stacksets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1StackSet> Items { get; set; }
 }

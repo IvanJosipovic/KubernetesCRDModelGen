@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.applications.azuread.upbound.io;
+/// <summary>AppRole is the Schema for the AppRoles API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppRoleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppRole>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppRoleList";
+    public const string KubeGroup = "applications.azuread.upbound.io";
+    public const string KubePluralName = "approles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppRole> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppRoleSpecForProviderApplicationIdRefPolicy
@@ -369,30 +395,4 @@ public partial class V1beta1AppRole : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>AppRoleStatus defines the observed state of AppRole.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppRoleStatus? Status { get; set; }
-}
-
-/// <summary>AppRole is the Schema for the AppRoles API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppRoleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppRole>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppRoleList";
-    public const string KubeGroup = "applications.azuread.upbound.io";
-    public const string KubePluralName = "approles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppRole> Items { get; set; }
 }

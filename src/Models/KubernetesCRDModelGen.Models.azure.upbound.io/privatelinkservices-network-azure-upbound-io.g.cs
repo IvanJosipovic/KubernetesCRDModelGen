@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>PrivateLinkService is the Schema for the PrivateLinkServices API. Manages a Private Link Service.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateLinkServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateLinkService>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateLinkServiceList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "privatelinkservices";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivateLinkService> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateLinkServiceSpecForProviderNatIpConfigurationSubnetIdRefPolicy
@@ -556,30 +582,4 @@ public partial class V1beta1PrivateLinkService : IKubernetesObject<V1ObjectMeta>
     /// <summary>PrivateLinkServiceStatus defines the observed state of PrivateLinkService.</summary>
     [JsonPropertyName("status")]
     public V1beta1PrivateLinkServiceStatus? Status { get; set; }
-}
-
-/// <summary>PrivateLinkService is the Schema for the PrivateLinkServices API. Manages a Private Link Service.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrivateLinkServiceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateLinkService>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrivateLinkServiceList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "privatelinkservices";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PrivateLinkService> Items { get; set; }
 }

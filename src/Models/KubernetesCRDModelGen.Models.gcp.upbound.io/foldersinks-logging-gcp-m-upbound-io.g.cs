@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.m.upbound.io;
+/// <summary>FolderSink is the Schema for the FolderSinks API. Manages a folder-level logging sink.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FolderSinkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FolderSink>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FolderSinkList";
+    public const string KubeGroup = "logging.gcp.m.upbound.io";
+    public const string KubePluralName = "foldersinks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FolderSink> Items { get; set; }
+}
+
 /// <summary>Options that affect sinks exporting data to BigQuery. Structure documented below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FolderSinkSpecForProviderBigqueryOptions
@@ -418,30 +444,4 @@ public partial class V1beta1FolderSink : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>FolderSinkStatus defines the observed state of FolderSink.</summary>
     [JsonPropertyName("status")]
     public V1beta1FolderSinkStatus? Status { get; set; }
-}
-
-/// <summary>FolderSink is the Schema for the FolderSinks API. Manages a folder-level logging sink.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FolderSinkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FolderSink>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FolderSinkList";
-    public const string KubeGroup = "logging.gcp.m.upbound.io";
-    public const string KubePluralName = "foldersinks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FolderSink> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.waf.aws.upbound.io;
+/// <summary>GeoMatchSet is the Schema for the GeoMatchSets API. Provides a AWS WAF GeoMatchSet resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GeoMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GeoMatchSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GeoMatchSetList";
+    public const string KubeGroup = "waf.aws.upbound.io";
+    public const string KubePluralName = "geomatchsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GeoMatchSet> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GeoMatchSetSpecForProviderGeoMatchConstraint
@@ -236,30 +262,4 @@ public partial class V1beta1GeoMatchSet : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>GeoMatchSetStatus defines the observed state of GeoMatchSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1GeoMatchSetStatus? Status { get; set; }
-}
-
-/// <summary>GeoMatchSet is the Schema for the GeoMatchSets API. Provides a AWS WAF GeoMatchSet resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GeoMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GeoMatchSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GeoMatchSetList";
-    public const string KubeGroup = "waf.aws.upbound.io";
-    public const string KubePluralName = "geomatchsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GeoMatchSet> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>VirtualWAN is the Schema for the VirtualWANs API. Manages a Virtual WAN.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualWANList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualWAN>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualWANList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "virtualwans";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualWAN> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualWANSpecForProviderResourceGroupNameRefPolicy
@@ -313,30 +339,4 @@ public partial class V1beta1VirtualWAN : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>VirtualWANStatus defines the observed state of VirtualWAN.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualWANStatus? Status { get; set; }
-}
-
-/// <summary>VirtualWAN is the Schema for the VirtualWANs API. Manages a Virtual WAN.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualWANList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualWAN>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualWANList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "virtualwans";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualWAN> Items { get; set; }
 }

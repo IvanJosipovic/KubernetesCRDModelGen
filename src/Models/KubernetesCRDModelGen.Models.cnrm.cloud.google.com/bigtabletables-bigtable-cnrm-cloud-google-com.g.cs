@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.bigtable.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTableMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigtableTableList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BigtableTable>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigtableTableList";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtabletables";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BigtableTable> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTableSpecColumnFamily
+public partial class V1beta1BigtableTableSpecColumnFamily
 {
     /// <summary>The name of the column family.</summary>
     [JsonPropertyName("family")]
@@ -25,7 +45,7 @@ public partial class BigtableTableSpecColumnFamily
 
 /// <summary>The name of the Bigtable instance.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTableSpecInstanceRef
+public partial class V1beta1BigtableTableSpecInstanceRef
 {
     /// <summary>Allowed value: The `name` field of a `BigtableInstance` resource.</summary>
     [JsonPropertyName("external")]
@@ -42,7 +62,7 @@ public partial class BigtableTableSpecInstanceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTableSpec
+public partial class V1beta1BigtableTableSpec
 {
     /// <summary>Duration to retain change stream data for the table. Set to 0 to disable. Must be between 1 and 7 days.</summary>
     [JsonPropertyName("changeStreamRetention")]
@@ -50,7 +70,7 @@ public partial class BigtableTableSpec
 
     /// <summary>A group of columns within a table which share a common configuration. This can be specified multiple times.</summary>
     [JsonPropertyName("columnFamily")]
-    public IList<BigtableTableSpecColumnFamily>? ColumnFamily { get; set; }
+    public IList<V1beta1BigtableTableSpecColumnFamily>? ColumnFamily { get; set; }
 
     /// <summary>A field to make the table protected against data loss i.e. when set to PROTECTED, deleting the table, the column families in the table, and the instance containing the table would be prohibited. If not provided, currently deletion protection will be set to UNPROTECTED as it is the API default value.</summary>
     [JsonPropertyName("deletionProtection")]
@@ -58,7 +78,7 @@ public partial class BigtableTableSpec
 
     /// <summary>The name of the Bigtable instance.</summary>
     [JsonPropertyName("instanceRef")]
-    public BigtableTableSpecInstanceRef InstanceRef { get; set; }
+    public V1beta1BigtableTableSpecInstanceRef InstanceRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -71,7 +91,7 @@ public partial class BigtableTableSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTableStatusConditions
+public partial class V1beta1BigtableTableStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -96,11 +116,11 @@ public partial class BigtableTableStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTableStatus
+public partial class V1beta1BigtableTableStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<BigtableTableStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1BigtableTableStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -109,25 +129,30 @@ public partial class BigtableTableStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class BigtableTable
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BigtableTable : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1BigtableTableSpec>, IStatus<V1beta1BigtableTableStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BigtableTable";
+    public const string KubeGroup = "bigtable.cnrm.cloud.google.com";
+    public const string KubePluralName = "bigtabletables";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public BigtableTableMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public BigtableTableSpec Spec { get; set; }
+    public V1beta1BigtableTableSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public BigtableTableStatus? Status { get; set; }
+    public V1beta1BigtableTableStatus? Status { get; set; }
 }

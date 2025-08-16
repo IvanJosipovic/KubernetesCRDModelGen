@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networksecurity.cnrm.cloud.google.com;
+/// <summary>NetworkSecurityAuthorizationPolicy is the Schema for the NetworkSecurityAuthorizationPolicy API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1NetworkSecurityAuthorizationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkSecurityAuthorizationPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "NetworkSecurityAuthorizationPolicyList";
+    public const string KubeGroup = "networksecurity.cnrm.cloud.google.com";
+    public const string KubePluralName = "networksecurityauthorizationpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1NetworkSecurityAuthorizationPolicy> Items { get; set; }
+}
+
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1NetworkSecurityAuthorizationPolicySpecProjectRef
@@ -196,30 +222,4 @@ public partial class V1beta1NetworkSecurityAuthorizationPolicy : IKubernetesObje
     /// <summary>NetworkSecurityAuthorizationPolicyStatus defines the config connector machine state of NetworkSecurityAuthorizationPolicy</summary>
     [JsonPropertyName("status")]
     public V1beta1NetworkSecurityAuthorizationPolicyStatus? Status { get; set; }
-}
-
-/// <summary>NetworkSecurityAuthorizationPolicy is the Schema for the NetworkSecurityAuthorizationPolicy API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1NetworkSecurityAuthorizationPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1NetworkSecurityAuthorizationPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "NetworkSecurityAuthorizationPolicyList";
-    public const string KubeGroup = "networksecurity.cnrm.cloud.google.com";
-    public const string KubePluralName = "networksecurityauthorizationpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1NetworkSecurityAuthorizationPolicy> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.consumption.azure.m.upbound.io;
+/// <summary>BudgetSubscription is the Schema for the BudgetSubscriptions API. Manages a Subscription Consumption Budget.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BudgetSubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetSubscription>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BudgetSubscriptionList";
+    public const string KubeGroup = "consumption.azure.m.upbound.io";
+    public const string KubePluralName = "budgetsubscriptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BudgetSubscription> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BudgetSubscriptionSpecForProviderFilterDimensionValuesRefsPolicy
@@ -799,30 +825,4 @@ public partial class V1beta1BudgetSubscription : IKubernetesObject<V1ObjectMeta>
     /// <summary>BudgetSubscriptionStatus defines the observed state of BudgetSubscription.</summary>
     [JsonPropertyName("status")]
     public V1beta1BudgetSubscriptionStatus? Status { get; set; }
-}
-
-/// <summary>BudgetSubscription is the Schema for the BudgetSubscriptions API. Manages a Subscription Consumption Budget.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BudgetSubscriptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BudgetSubscription>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BudgetSubscriptionList";
-    public const string KubeGroup = "consumption.azure.m.upbound.io";
-    public const string KubePluralName = "budgetsubscriptions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BudgetSubscription> Items { get; set; }
 }

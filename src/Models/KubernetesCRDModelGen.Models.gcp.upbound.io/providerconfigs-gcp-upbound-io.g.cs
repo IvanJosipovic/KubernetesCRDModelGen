@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.gcp.upbound.io;
+/// <summary>A ProviderConfig configures a GCP provider.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProviderConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProviderConfigList";
+    public const string KubeGroup = "gcp.upbound.io";
+    public const string KubePluralName = "providerconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProviderConfig> Items { get; set; }
+}
+
 /// <summary>Env is a reference to an environment variable that contains credentials that must be used to connect to the provider.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProviderConfigSpecCredentialsEnv
@@ -186,30 +212,4 @@ public partial class V1beta1ProviderConfig : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>A ProviderConfigStatus reflects the observed state of a ProviderConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProviderConfigStatus? Status { get; set; }
-}
-
-/// <summary>A ProviderConfig configures a GCP provider.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProviderConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProviderConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProviderConfigList";
-    public const string KubeGroup = "gcp.upbound.io";
-    public const string KubePluralName = "providerconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProviderConfig> Items { get; set; }
 }

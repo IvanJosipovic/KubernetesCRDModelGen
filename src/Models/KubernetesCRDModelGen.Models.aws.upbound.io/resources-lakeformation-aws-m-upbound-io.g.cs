@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lakeformation.aws.m.upbound.io;
+/// <summary>Resource is the Schema for the Resources API. Registers a Lake Formation resource as managed by the Data Catalog.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Resource>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceList";
+    public const string KubeGroup = "lakeformation.aws.m.upbound.io";
+    public const string KubePluralName = "resources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Resource> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceSpecForProviderRoleArnRefPolicy
@@ -364,30 +390,4 @@ public partial class V1beta1Resource : IKubernetesObject<V1ObjectMeta>, ISpec<V1
     /// <summary>ResourceStatus defines the observed state of Resource.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResourceStatus? Status { get; set; }
-}
-
-/// <summary>Resource is the Schema for the Resources API. Registers a Lake Formation resource as managed by the Data Catalog.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResourceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Resource>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResourceList";
-    public const string KubeGroup = "lakeformation.aws.m.upbound.io";
-    public const string KubePluralName = "resources";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Resource> Items { get; set; }
 }

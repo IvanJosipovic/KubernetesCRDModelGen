@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.com;
+/// <summary>Storage version of v1api20220401.TrafficManagerProfilesAzureEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/AzureEndpoints/{endpointName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1api20220401storageTrafficManagerProfilesAzureEndpoint>
+{
+    public const string KubeApiVersion = "v1api20220401storage";
+    public const string KubeKind = "TrafficManagerProfilesAzureEndpointList";
+    public const string KubeGroup = "network.azure.com";
+    public const string KubePluralName = "trafficmanagerprofilesazureendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20220401storageTrafficManagerProfilesAzureEndpoint> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20220401.EndpointProperties_CustomHeaders</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointSpecCustomHeaders
@@ -396,30 +422,4 @@ public partial class V1api20220401storageTrafficManagerProfilesAzureEndpoint : I
     /// <summary>Storage version of v1api20220401.TrafficManagerProfilesAzureEndpoint_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20220401storageTrafficManagerProfilesAzureEndpointStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20220401.TrafficManagerProfilesAzureEndpoint Generator information: - Generated from: /trafficmanager/resource-manager/Microsoft.Network/stable/2022-04-01/trafficmanager.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficmanagerprofiles/{profileName}/AzureEndpoints/{endpointName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20220401storageTrafficManagerProfilesAzureEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1api20220401storageTrafficManagerProfilesAzureEndpoint>
-{
-    public const string KubeApiVersion = "v1api20220401storage";
-    public const string KubeKind = "TrafficManagerProfilesAzureEndpointList";
-    public const string KubeGroup = "network.azure.com";
-    public const string KubePluralName = "trafficmanagerprofilesazureendpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20220401storageTrafficManagerProfilesAzureEndpoint> Items { get; set; }
 }

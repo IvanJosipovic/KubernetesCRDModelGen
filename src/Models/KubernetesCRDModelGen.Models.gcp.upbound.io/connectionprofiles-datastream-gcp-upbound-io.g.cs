@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.gcp.upbound.io;
+/// <summary>ConnectionProfile is the Schema for the ConnectionProfiles API. A set of reusable connection configurations to be used as a source or destination for a stream.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ConnectionProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectionProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ConnectionProfileList";
+    public const string KubeGroup = "datastream.gcp.upbound.io";
+    public const string KubePluralName = "connectionprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ConnectionProfile> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ConnectionProfileSpecForProviderBigqueryProfile
@@ -2081,30 +2107,4 @@ public partial class V1beta1ConnectionProfile : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ConnectionProfileStatus defines the observed state of ConnectionProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1ConnectionProfileStatus? Status { get; set; }
-}
-
-/// <summary>ConnectionProfile is the Schema for the ConnectionProfiles API. A set of reusable connection configurations to be used as a source or destination for a stream.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ConnectionProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ConnectionProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ConnectionProfileList";
-    public const string KubeGroup = "datastream.gcp.upbound.io";
-    public const string KubePluralName = "connectionprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ConnectionProfile> Items { get; set; }
 }

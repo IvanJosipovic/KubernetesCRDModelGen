@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.autoscaling.aws.upbound.io;
+/// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2AutoscalingGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta2AutoscalingGroup>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "AutoscalingGroupList";
+    public const string KubeGroup = "autoscaling.aws.upbound.io";
+    public const string KubePluralName = "autoscalinggroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2AutoscalingGroup> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2AutoscalingGroupSpecForProviderAvailabilityZoneDistribution
@@ -3208,30 +3234,4 @@ public partial class V1beta2AutoscalingGroup : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>AutoscalingGroupStatus defines the observed state of AutoscalingGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta2AutoscalingGroupStatus? Status { get; set; }
-}
-
-/// <summary>AutoscalingGroup is the Schema for the AutoscalingGroups API. Provides an Auto Scaling Group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2AutoscalingGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta2AutoscalingGroup>
-{
-    public const string KubeApiVersion = "v1beta2";
-    public const string KubeKind = "AutoscalingGroupList";
-    public const string KubeGroup = "autoscaling.aws.upbound.io";
-    public const string KubePluralName = "autoscalinggroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta2AutoscalingGroup> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>SubnetNATGatewayAssociation is the Schema for the SubnetNATGatewayAssociations API. Associates a</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SubnetNATGatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubnetNATGatewayAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SubnetNATGatewayAssociationList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "subnetnatgatewayassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SubnetNATGatewayAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubnetNATGatewayAssociationSpecForProviderNatGatewayIdRefPolicy
@@ -460,30 +486,4 @@ public partial class V1beta1SubnetNATGatewayAssociation : IKubernetesObject<V1Ob
     /// <summary>SubnetNATGatewayAssociationStatus defines the observed state of SubnetNATGatewayAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1SubnetNATGatewayAssociationStatus? Status { get; set; }
-}
-
-/// <summary>SubnetNATGatewayAssociation is the Schema for the SubnetNATGatewayAssociations API. Associates a</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SubnetNATGatewayAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubnetNATGatewayAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SubnetNATGatewayAssociationList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "subnetnatgatewayassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SubnetNATGatewayAssociation> Items { get; set; }
 }

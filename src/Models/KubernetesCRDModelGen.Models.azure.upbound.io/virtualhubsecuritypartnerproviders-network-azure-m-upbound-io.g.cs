@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>VirtualHubSecurityPartnerProvider is the Schema for the VirtualHubSecurityPartnerProviders API. Manages a Security Partner Provider which could be associated to virtual hub.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VirtualHubSecurityPartnerProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubSecurityPartnerProvider>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VirtualHubSecurityPartnerProviderList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "virtualhubsecuritypartnerproviders";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VirtualHubSecurityPartnerProvider> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VirtualHubSecurityPartnerProviderSpecForProviderResourceGroupNameRefPolicy
@@ -420,30 +446,4 @@ public partial class V1beta1VirtualHubSecurityPartnerProvider : IKubernetesObjec
     /// <summary>VirtualHubSecurityPartnerProviderStatus defines the observed state of VirtualHubSecurityPartnerProvider.</summary>
     [JsonPropertyName("status")]
     public V1beta1VirtualHubSecurityPartnerProviderStatus? Status { get; set; }
-}
-
-/// <summary>VirtualHubSecurityPartnerProvider is the Schema for the VirtualHubSecurityPartnerProviders API. Manages a Security Partner Provider which could be associated to virtual hub.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VirtualHubSecurityPartnerProviderList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VirtualHubSecurityPartnerProvider>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VirtualHubSecurityPartnerProviderList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "virtualhubsecuritypartnerproviders";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VirtualHubSecurityPartnerProvider> Items { get; set; }
 }

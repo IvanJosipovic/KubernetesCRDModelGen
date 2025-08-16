@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.devices.azure.m.upbound.io;
+/// <summary>IOTHubEndpointServiceBusQueue is the Schema for the IOTHubEndpointServiceBusQueues API. Manages an IotHub ServiceBus Queue Endpoint</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IOTHubEndpointServiceBusQueueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubEndpointServiceBusQueue>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IOTHubEndpointServiceBusQueueList";
+    public const string KubeGroup = "devices.azure.m.upbound.io";
+    public const string KubePluralName = "iothubendpointservicebusqueues";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IOTHubEndpointServiceBusQueue> Items { get; set; }
+}
+
 /// <summary>The connection string for the endpoint. This attribute can only be specified and is mandatory when authentication_type is keyBased.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubEndpointServiceBusQueueSpecForProviderConnectionStringSecretRef
@@ -466,30 +492,4 @@ public partial class V1beta1IOTHubEndpointServiceBusQueue : IKubernetesObject<V1
     /// <summary>IOTHubEndpointServiceBusQueueStatus defines the observed state of IOTHubEndpointServiceBusQueue.</summary>
     [JsonPropertyName("status")]
     public V1beta1IOTHubEndpointServiceBusQueueStatus? Status { get; set; }
-}
-
-/// <summary>IOTHubEndpointServiceBusQueue is the Schema for the IOTHubEndpointServiceBusQueues API. Manages an IotHub ServiceBus Queue Endpoint</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IOTHubEndpointServiceBusQueueList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubEndpointServiceBusQueue>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IOTHubEndpointServiceBusQueueList";
-    public const string KubeGroup = "devices.azure.m.upbound.io";
-    public const string KubePluralName = "iothubendpointservicebusqueues";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IOTHubEndpointServiceBusQueue> Items { get; set; }
 }

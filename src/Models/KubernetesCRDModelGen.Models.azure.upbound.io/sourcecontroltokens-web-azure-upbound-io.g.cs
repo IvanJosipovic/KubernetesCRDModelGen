@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.web.azure.upbound.io;
+/// <summary>SourceControlToken is the Schema for the SourceControlTokens API. Manages an App Service GitHub Token.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SourceControlTokenList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SourceControlToken>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SourceControlTokenList";
+    public const string KubeGroup = "web.azure.upbound.io";
+    public const string KubePluralName = "sourcecontroltokens";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SourceControlToken> Items { get; set; }
+}
+
 /// <summary>The Access Token.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SourceControlTokenSpecForProviderTokenSecretRef
@@ -265,30 +291,4 @@ public partial class V1beta1SourceControlToken : IKubernetesObject<V1ObjectMeta>
     /// <summary>SourceControlTokenStatus defines the observed state of SourceControlToken.</summary>
     [JsonPropertyName("status")]
     public V1beta1SourceControlTokenStatus? Status { get; set; }
-}
-
-/// <summary>SourceControlToken is the Schema for the SourceControlTokens API. Manages an App Service GitHub Token.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SourceControlTokenList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SourceControlToken>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SourceControlTokenList";
-    public const string KubeGroup = "web.azure.upbound.io";
-    public const string KubePluralName = "sourcecontroltokens";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SourceControlToken> Items { get; set; }
 }

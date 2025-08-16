@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.identityplatform.gcp.m.upbound.io;
+/// <summary>TenantDefaultSupportedIdPConfig is the Schema for the TenantDefaultSupportedIdPConfigs API. Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TenantDefaultSupportedIdPConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TenantDefaultSupportedIdPConfig>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TenantDefaultSupportedIdPConfigList";
+    public const string KubeGroup = "identityplatform.gcp.m.upbound.io";
+    public const string KubePluralName = "tenantdefaultsupportedidpconfigs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TenantDefaultSupportedIdPConfig> Items { get; set; }
+}
+
 /// <summary>OAuth client ID</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TenantDefaultSupportedIdPConfigSpecForProviderClientIdSecretRef
@@ -412,30 +438,4 @@ public partial class V1beta1TenantDefaultSupportedIdPConfig : IKubernetesObject<
     /// <summary>TenantDefaultSupportedIdPConfigStatus defines the observed state of TenantDefaultSupportedIdPConfig.</summary>
     [JsonPropertyName("status")]
     public V1beta1TenantDefaultSupportedIdPConfigStatus? Status { get; set; }
-}
-
-/// <summary>TenantDefaultSupportedIdPConfig is the Schema for the TenantDefaultSupportedIdPConfigs API. Configurations options for the tenant for authenticating with a the standard set of Identity Toolkit-trusted IDPs.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TenantDefaultSupportedIdPConfigList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TenantDefaultSupportedIdPConfig>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TenantDefaultSupportedIdPConfigList";
-    public const string KubeGroup = "identityplatform.gcp.m.upbound.io";
-    public const string KubePluralName = "tenantdefaultsupportedidpconfigs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TenantDefaultSupportedIdPConfig> Items { get; set; }
 }

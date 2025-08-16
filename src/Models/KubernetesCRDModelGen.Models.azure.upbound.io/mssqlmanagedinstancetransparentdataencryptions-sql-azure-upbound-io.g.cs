@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.upbound.io;
+/// <summary>MSSQLManagedInstanceTransparentDataEncryption is the Schema for the MSSQLManagedInstanceTransparentDataEncryptions API. Manages the transparent data encryption configuration for a MSSQL Managed Instance</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLManagedInstanceTransparentDataEncryption>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLManagedInstanceTransparentDataEncryptionList";
+    public const string KubeGroup = "sql.azure.upbound.io";
+    public const string KubePluralName = "mssqlmanagedinstancetransparentdataencryptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLManagedInstanceTransparentDataEncryption> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryptionSpecForProviderKeyVaultKeyIdRefPolicy
@@ -405,30 +431,4 @@ public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryption : IKub
     /// <summary>MSSQLManagedInstanceTransparentDataEncryptionStatus defines the observed state of MSSQLManagedInstanceTransparentDataEncryption.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLManagedInstanceTransparentDataEncryptionStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLManagedInstanceTransparentDataEncryption is the Schema for the MSSQLManagedInstanceTransparentDataEncryptions API. Manages the transparent data encryption configuration for a MSSQL Managed Instance</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLManagedInstanceTransparentDataEncryptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLManagedInstanceTransparentDataEncryption>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLManagedInstanceTransparentDataEncryptionList";
-    public const string KubeGroup = "sql.azure.upbound.io";
-    public const string KubePluralName = "mssqlmanagedinstancetransparentdataencryptions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLManagedInstanceTransparentDataEncryption> Items { get; set; }
 }

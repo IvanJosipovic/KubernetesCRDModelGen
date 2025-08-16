@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datashare.azure.m.upbound.io;
+/// <summary>DataSetKustoDatabase is the Schema for the DataSetKustoDatabases API. Manages a Data Share Kusto Database Dataset.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataSetKustoDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetKustoDatabase>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataSetKustoDatabaseList";
+    public const string KubeGroup = "datashare.azure.m.upbound.io";
+    public const string KubePluralName = "datasetkustodatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataSetKustoDatabase> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataSetKustoDatabaseSpecForProviderKustoDatabaseIdRefPolicy
@@ -392,30 +418,4 @@ public partial class V1beta1DataSetKustoDatabase : IKubernetesObject<V1ObjectMet
     /// <summary>DataSetKustoDatabaseStatus defines the observed state of DataSetKustoDatabase.</summary>
     [JsonPropertyName("status")]
     public V1beta1DataSetKustoDatabaseStatus? Status { get; set; }
-}
-
-/// <summary>DataSetKustoDatabase is the Schema for the DataSetKustoDatabases API. Manages a Data Share Kusto Database Dataset.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataSetKustoDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataSetKustoDatabase>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataSetKustoDatabaseList";
-    public const string KubeGroup = "datashare.azure.m.upbound.io";
-    public const string KubePluralName = "datasetkustodatabases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataSetKustoDatabase> Items { get; set; }
 }

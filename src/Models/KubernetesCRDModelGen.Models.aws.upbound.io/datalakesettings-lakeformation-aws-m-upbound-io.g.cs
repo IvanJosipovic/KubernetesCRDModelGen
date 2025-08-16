@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.lakeformation.aws.m.upbound.io;
+/// <summary>DataLakeSettings is the Schema for the DataLakeSettingss API. Manages data lake administrators and default database and table permissions</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataLakeSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataLakeSettings>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataLakeSettingsList";
+    public const string KubeGroup = "lakeformation.aws.m.upbound.io";
+    public const string KubePluralName = "datalakesettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataLakeSettings> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DataLakeSettingsSpecForProviderAdminsRefsPolicy
@@ -510,30 +536,4 @@ public partial class V1beta1DataLakeSettings : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>DataLakeSettingsStatus defines the observed state of DataLakeSettings.</summary>
     [JsonPropertyName("status")]
     public V1beta1DataLakeSettingsStatus? Status { get; set; }
-}
-
-/// <summary>DataLakeSettings is the Schema for the DataLakeSettingss API. Manages data lake administrators and default database and table permissions</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DataLakeSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataLakeSettings>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DataLakeSettingsList";
-    public const string KubeGroup = "lakeformation.aws.m.upbound.io";
-    public const string KubePluralName = "datalakesettings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DataLakeSettings> Items { get; set; }
 }

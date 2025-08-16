@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.azure.m.upbound.io;
+/// <summary>MSSQLDatabaseExtendedAuditingPolicy is the Schema for the MSSQLDatabaseExtendedAuditingPolicys API. Manages a MS SQL Database Extended Auditing Policy.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MSSQLDatabaseExtendedAuditingPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLDatabaseExtendedAuditingPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MSSQLDatabaseExtendedAuditingPolicyList";
+    public const string KubeGroup = "sql.azure.m.upbound.io";
+    public const string KubePluralName = "mssqldatabaseextendedauditingpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MSSQLDatabaseExtendedAuditingPolicy> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MSSQLDatabaseExtendedAuditingPolicySpecForProviderDatabaseIdRefPolicy
@@ -466,30 +492,4 @@ public partial class V1beta1MSSQLDatabaseExtendedAuditingPolicy : IKubernetesObj
     /// <summary>MSSQLDatabaseExtendedAuditingPolicyStatus defines the observed state of MSSQLDatabaseExtendedAuditingPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1MSSQLDatabaseExtendedAuditingPolicyStatus? Status { get; set; }
-}
-
-/// <summary>MSSQLDatabaseExtendedAuditingPolicy is the Schema for the MSSQLDatabaseExtendedAuditingPolicys API. Manages a MS SQL Database Extended Auditing Policy.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MSSQLDatabaseExtendedAuditingPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MSSQLDatabaseExtendedAuditingPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MSSQLDatabaseExtendedAuditingPolicyList";
-    public const string KubeGroup = "sql.azure.m.upbound.io";
-    public const string KubePluralName = "mssqldatabaseextendedauditingpolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MSSQLDatabaseExtendedAuditingPolicy> Items { get; set; }
 }

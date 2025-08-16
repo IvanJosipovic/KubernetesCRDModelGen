@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.eventgrid.azure.com;
+/// <summary>Storage version of v1api20200601.Domain Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20200601storageDomainList : IKubernetesObject<V1ListMeta>, IItems<V1api20200601storageDomain>
+{
+    public const string KubeApiVersion = "v1api20200601storage";
+    public const string KubeKind = "DomainList";
+    public const string KubeGroup = "eventgrid.azure.com";
+    public const string KubePluralName = "domains";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20200601storageDomain> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20200601.InboundIpRule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20200601storageDomainSpecInboundIpRules
@@ -611,30 +637,4 @@ public partial class V1api20200601storageDomain : IKubernetesObject<V1ObjectMeta
     /// <summary>Storage version of v1api20200601.Domain_STATUS EventGrid Domain.</summary>
     [JsonPropertyName("status")]
     public V1api20200601storageDomainStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20200601.Domain Generator information: - Generated from: /eventgrid/resource-manager/Microsoft.EventGrid/stable/2020-06-01/EventGrid.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/domains/{domainName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20200601storageDomainList : IKubernetesObject<V1ListMeta>, IItems<V1api20200601storageDomain>
-{
-    public const string KubeApiVersion = "v1api20200601storage";
-    public const string KubeKind = "DomainList";
-    public const string KubeGroup = "eventgrid.azure.com";
-    public const string KubePluralName = "domains";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20200601storageDomain> Items { get; set; }
 }

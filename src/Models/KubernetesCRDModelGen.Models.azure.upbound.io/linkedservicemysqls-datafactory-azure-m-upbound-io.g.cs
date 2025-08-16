@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datafactory.azure.m.upbound.io;
+/// <summary>LinkedServiceMySQL is the Schema for the LinkedServiceMySQLs API. Manages a Linked Service (connection) between MySQL and Azure Data Factory.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LinkedServiceMySQLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceMySQL>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LinkedServiceMySQLList";
+    public const string KubeGroup = "datafactory.azure.m.upbound.io";
+    public const string KubePluralName = "linkedservicemysqls";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LinkedServiceMySQL> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LinkedServiceMySQLSpecForProviderDataFactoryIdRefPolicy
@@ -300,30 +326,4 @@ public partial class V1beta1LinkedServiceMySQL : IKubernetesObject<V1ObjectMeta>
     /// <summary>LinkedServiceMySQLStatus defines the observed state of LinkedServiceMySQL.</summary>
     [JsonPropertyName("status")]
     public V1beta1LinkedServiceMySQLStatus? Status { get; set; }
-}
-
-/// <summary>LinkedServiceMySQL is the Schema for the LinkedServiceMySQLs API. Manages a Linked Service (connection) between MySQL and Azure Data Factory.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LinkedServiceMySQLList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LinkedServiceMySQL>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LinkedServiceMySQLList";
-    public const string KubeGroup = "datafactory.azure.m.upbound.io";
-    public const string KubePluralName = "linkedservicemysqls";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LinkedServiceMySQL> Items { get; set; }
 }

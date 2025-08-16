@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.cnrm.cloud.google.com;
+/// <summary>DataplexLake is the Schema for the DataplexLake API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataplexLakeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataplexLake>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataplexLakeList";
+    public const string KubeGroup = "dataplex.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataplexlakes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataplexLake> Items { get; set; }
+}
+
 /// <summary>Optional. A relative reference to the Dataproc Metastore (https://cloud.google.com/dataproc-metastore/docs) service associated with the lake: `projects/{project_id}/locations/{location_id}/services/{service_id}`</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexLakeSpecMetastoreServiceRef
@@ -225,30 +251,4 @@ public partial class V1alpha1DataplexLake : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>DataplexLakeStatus defines the config connector machine state of DataplexLake</summary>
     [JsonPropertyName("status")]
     public V1alpha1DataplexLakeStatus? Status { get; set; }
-}
-
-/// <summary>DataplexLake is the Schema for the DataplexLake API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataplexLakeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataplexLake>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataplexLakeList";
-    public const string KubeGroup = "dataplex.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataplexlakes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DataplexLake> Items { get; set; }
 }

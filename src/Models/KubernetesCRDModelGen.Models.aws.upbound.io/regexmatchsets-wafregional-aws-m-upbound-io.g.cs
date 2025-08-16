@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafregional.aws.m.upbound.io;
+/// <summary>RegexMatchSet is the Schema for the RegexMatchSets API. Provides a AWS WAF Regional Regex Match Set resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RegexMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegexMatchSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RegexMatchSetList";
+    public const string KubeGroup = "wafregional.aws.m.upbound.io";
+    public const string KubePluralName = "regexmatchsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RegexMatchSet> Items { get; set; }
+}
+
 /// <summary>The part of a web request that you want to search, such as a specified header or a query string.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RegexMatchSetSpecForProviderRegexMatchTupleFieldToMatch
@@ -414,30 +440,4 @@ public partial class V1beta1RegexMatchSet : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>RegexMatchSetStatus defines the observed state of RegexMatchSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1RegexMatchSetStatus? Status { get; set; }
-}
-
-/// <summary>RegexMatchSet is the Schema for the RegexMatchSets API. Provides a AWS WAF Regional Regex Match Set resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RegexMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RegexMatchSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RegexMatchSetList";
-    public const string KubeGroup = "wafregional.aws.m.upbound.io";
-    public const string KubePluralName = "regexmatchsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RegexMatchSet> Items { get; set; }
 }

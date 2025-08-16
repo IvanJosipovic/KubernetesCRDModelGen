@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backup.aws.upbound.io;
+/// <summary>VaultLockConfiguration is the Schema for the VaultLockConfigurations API. Provides an AWS Backup vault lock configuration resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VaultLockConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VaultLockConfiguration>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VaultLockConfigurationList";
+    public const string KubeGroup = "backup.aws.upbound.io";
+    public const string KubePluralName = "vaultlockconfigurations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VaultLockConfiguration> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VaultLockConfigurationSpecForProviderBackupVaultNameRefPolicy
@@ -357,30 +383,4 @@ public partial class V1beta1VaultLockConfiguration : IKubernetesObject<V1ObjectM
     /// <summary>VaultLockConfigurationStatus defines the observed state of VaultLockConfiguration.</summary>
     [JsonPropertyName("status")]
     public V1beta1VaultLockConfigurationStatus? Status { get; set; }
-}
-
-/// <summary>VaultLockConfiguration is the Schema for the VaultLockConfigurations API. Provides an AWS Backup vault lock configuration resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VaultLockConfigurationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VaultLockConfiguration>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VaultLockConfigurationList";
-    public const string KubeGroup = "backup.aws.upbound.io";
-    public const string KubePluralName = "vaultlockconfigurations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VaultLockConfiguration> Items { get; set; }
 }

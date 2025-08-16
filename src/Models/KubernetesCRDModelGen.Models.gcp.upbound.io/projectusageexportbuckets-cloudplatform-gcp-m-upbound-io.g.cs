@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudplatform.gcp.m.upbound.io;
+/// <summary>ProjectUsageExportBucket is the Schema for the ProjectUsageExportBuckets API. Manages a project's usage export bucket.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectUsageExportBucketList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectUsageExportBucket>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectUsageExportBucketList";
+    public const string KubeGroup = "cloudplatform.gcp.m.upbound.io";
+    public const string KubePluralName = "projectusageexportbuckets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProjectUsageExportBucket> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectUsageExportBucketSpecForProviderBucketNameRefPolicy
@@ -472,30 +498,4 @@ public partial class V1beta1ProjectUsageExportBucket : IKubernetesObject<V1Objec
     /// <summary>ProjectUsageExportBucketStatus defines the observed state of ProjectUsageExportBucket.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProjectUsageExportBucketStatus? Status { get; set; }
-}
-
-/// <summary>ProjectUsageExportBucket is the Schema for the ProjectUsageExportBuckets API. Manages a project's usage export bucket.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProjectUsageExportBucketList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectUsageExportBucket>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProjectUsageExportBucketList";
-    public const string KubeGroup = "cloudplatform.gcp.m.upbound.io";
-    public const string KubePluralName = "projectusageexportbuckets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProjectUsageExportBucket> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.image.toolkit.fluxcd.io;
+/// <summary>ImagePolicy is the Schema for the imagepolicies API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta2ImagePolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta2ImagePolicy>
+{
+    public const string KubeApiVersion = "v1beta2";
+    public const string KubeKind = "ImagePolicyList";
+    public const string KubeGroup = "image.toolkit.fluxcd.io";
+    public const string KubePluralName = "imagepolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta2ImagePolicy> Items { get; set; }
+}
+
 /// <summary>FilterTags enables filtering for only a subset of tags based on a set of rules. If no rules are provided, all the tags from the repository will be ordered and compared.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta2ImagePolicySpecFilterTags
@@ -223,30 +249,4 @@ public partial class V1beta2ImagePolicy : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>ImagePolicyStatus defines the observed state of ImagePolicy</summary>
     [JsonPropertyName("status")]
     public V1beta2ImagePolicyStatus? Status { get; set; }
-}
-
-/// <summary>ImagePolicy is the Schema for the imagepolicies API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta2ImagePolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta2ImagePolicy>
-{
-    public const string KubeApiVersion = "v1beta2";
-    public const string KubeKind = "ImagePolicyList";
-    public const string KubeGroup = "image.toolkit.fluxcd.io";
-    public const string KubePluralName = "imagepolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta2ImagePolicy> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.streamanalytics.azure.upbound.io;
+/// <summary>FunctionJavascriptUda is the Schema for the FunctionJavascriptUdas API. Manages a JavaScript UDA Function within a Stream Analytics Streaming Job.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FunctionJavascriptUdaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionJavascriptUda>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FunctionJavascriptUdaList";
+    public const string KubeGroup = "streamanalytics.azure.upbound.io";
+    public const string KubePluralName = "functionjavascriptudas";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FunctionJavascriptUda> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FunctionJavascriptUdaSpecForProviderInput
@@ -411,30 +437,4 @@ public partial class V1beta1FunctionJavascriptUda : IKubernetesObject<V1ObjectMe
     /// <summary>FunctionJavascriptUdaStatus defines the observed state of FunctionJavascriptUda.</summary>
     [JsonPropertyName("status")]
     public V1beta1FunctionJavascriptUdaStatus? Status { get; set; }
-}
-
-/// <summary>FunctionJavascriptUda is the Schema for the FunctionJavascriptUdas API. Manages a JavaScript UDA Function within a Stream Analytics Streaming Job.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FunctionJavascriptUdaList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FunctionJavascriptUda>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FunctionJavascriptUdaList";
-    public const string KubeGroup = "streamanalytics.azure.upbound.io";
-    public const string KubePluralName = "functionjavascriptudas";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FunctionJavascriptUda> Items { get; set; }
 }

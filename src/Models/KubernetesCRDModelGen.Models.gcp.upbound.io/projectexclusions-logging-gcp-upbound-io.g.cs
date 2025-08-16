@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.logging.gcp.upbound.io;
+/// <summary>ProjectExclusion is the Schema for the ProjectExclusions API. Manages a project-level logging exclusion.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProjectExclusionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectExclusion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProjectExclusionList";
+    public const string KubeGroup = "logging.gcp.upbound.io";
+    public const string KubePluralName = "projectexclusions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProjectExclusion> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProjectExclusionSpecForProvider
@@ -217,30 +243,4 @@ public partial class V1beta1ProjectExclusion : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>ProjectExclusionStatus defines the observed state of ProjectExclusion.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProjectExclusionStatus? Status { get; set; }
-}
-
-/// <summary>ProjectExclusion is the Schema for the ProjectExclusions API. Manages a project-level logging exclusion.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProjectExclusionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProjectExclusion>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProjectExclusionList";
-    public const string KubeGroup = "logging.gcp.upbound.io";
-    public const string KubePluralName = "projectexclusions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProjectExclusion> Items { get; set; }
 }

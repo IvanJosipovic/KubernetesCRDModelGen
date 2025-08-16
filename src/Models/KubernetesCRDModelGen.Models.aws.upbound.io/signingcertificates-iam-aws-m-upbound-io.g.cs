@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iam.aws.m.upbound.io;
+/// <summary>SigningCertificate is the Schema for the SigningCertificates API. Provides an IAM Signing Certificate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SigningCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SigningCertificate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SigningCertificateList";
+    public const string KubeGroup = "iam.aws.m.upbound.io";
+    public const string KubePluralName = "signingcertificates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SigningCertificate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningCertificateSpecForProvider
@@ -188,30 +214,4 @@ public partial class V1beta1SigningCertificate : IKubernetesObject<V1ObjectMeta>
     /// <summary>SigningCertificateStatus defines the observed state of SigningCertificate.</summary>
     [JsonPropertyName("status")]
     public V1beta1SigningCertificateStatus? Status { get; set; }
-}
-
-/// <summary>SigningCertificate is the Schema for the SigningCertificates API. Provides an IAM Signing Certificate</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SigningCertificateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SigningCertificate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SigningCertificateList";
-    public const string KubeGroup = "iam.aws.m.upbound.io";
-    public const string KubePluralName = "signingcertificates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SigningCertificate> Items { get; set; }
 }

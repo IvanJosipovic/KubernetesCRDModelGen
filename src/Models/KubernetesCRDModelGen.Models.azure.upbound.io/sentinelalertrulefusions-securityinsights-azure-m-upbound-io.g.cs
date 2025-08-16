@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityinsights.azure.m.upbound.io;
+/// <summary>SentinelAlertRuleFusion is the Schema for the SentinelAlertRuleFusions API. Manages a Sentinel Fusion Alert Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SentinelAlertRuleFusionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelAlertRuleFusion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SentinelAlertRuleFusionList";
+    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
+    public const string KubePluralName = "sentinelalertrulefusions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SentinelAlertRuleFusion> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleFusionSpecForProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -454,30 +480,4 @@ public partial class V1beta1SentinelAlertRuleFusion : IKubernetesObject<V1Object
     /// <summary>SentinelAlertRuleFusionStatus defines the observed state of SentinelAlertRuleFusion.</summary>
     [JsonPropertyName("status")]
     public V1beta1SentinelAlertRuleFusionStatus? Status { get; set; }
-}
-
-/// <summary>SentinelAlertRuleFusion is the Schema for the SentinelAlertRuleFusions API. Manages a Sentinel Fusion Alert Rule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SentinelAlertRuleFusionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelAlertRuleFusion>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SentinelAlertRuleFusionList";
-    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
-    public const string KubePluralName = "sentinelalertrulefusions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SentinelAlertRuleFusion> Items { get; set; }
 }

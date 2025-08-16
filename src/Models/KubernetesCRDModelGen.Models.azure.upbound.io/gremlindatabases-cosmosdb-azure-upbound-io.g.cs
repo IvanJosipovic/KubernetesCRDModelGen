@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cosmosdb.azure.upbound.io;
+/// <summary>GremlinDatabase is the Schema for the GremlinDatabases API. Manages a Gremlin Database within a Cosmos DB Account.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1GremlinDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GremlinDatabase>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "GremlinDatabaseList";
+    public const string KubeGroup = "cosmosdb.azure.upbound.io";
+    public const string KubePluralName = "gremlindatabases";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1GremlinDatabase> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1GremlinDatabaseSpecForProviderAccountNameRefPolicy
@@ -364,30 +390,4 @@ public partial class V1beta1GremlinDatabase : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>GremlinDatabaseStatus defines the observed state of GremlinDatabase.</summary>
     [JsonPropertyName("status")]
     public V1beta1GremlinDatabaseStatus? Status { get; set; }
-}
-
-/// <summary>GremlinDatabase is the Schema for the GremlinDatabases API. Manages a Gremlin Database within a Cosmos DB Account.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1GremlinDatabaseList : IKubernetesObject<V1ListMeta>, IItems<V1beta1GremlinDatabase>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "GremlinDatabaseList";
-    public const string KubeGroup = "cosmosdb.azure.upbound.io";
-    public const string KubePluralName = "gremlindatabases";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1GremlinDatabase> Items { get; set; }
 }

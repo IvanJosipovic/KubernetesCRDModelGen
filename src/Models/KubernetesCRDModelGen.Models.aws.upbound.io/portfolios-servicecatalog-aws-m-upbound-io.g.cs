@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicecatalog.aws.m.upbound.io;
+/// <summary>Portfolio is the Schema for the Portfolios API. Provides a resource to create a Service Catalog portfolio</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PortfolioList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Portfolio>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PortfolioList";
+    public const string KubeGroup = "servicecatalog.aws.m.upbound.io";
+    public const string KubePluralName = "portfolios";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Portfolio> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PortfolioSpecForProvider
@@ -216,30 +242,4 @@ public partial class V1beta1Portfolio : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>PortfolioStatus defines the observed state of Portfolio.</summary>
     [JsonPropertyName("status")]
     public V1beta1PortfolioStatus? Status { get; set; }
-}
-
-/// <summary>Portfolio is the Schema for the Portfolios API. Provides a resource to create a Service Catalog portfolio</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PortfolioList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Portfolio>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PortfolioList";
-    public const string KubeGroup = "servicecatalog.aws.m.upbound.io";
-    public const string KubePluralName = "portfolios";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Portfolio> Items { get; set; }
 }

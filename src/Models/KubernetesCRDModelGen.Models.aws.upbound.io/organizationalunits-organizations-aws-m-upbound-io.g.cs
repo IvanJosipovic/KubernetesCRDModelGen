@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.organizations.aws.m.upbound.io;
+/// <summary>OrganizationalUnit is the Schema for the OrganizationalUnits API. Provides a resource to create an organizational unit.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1OrganizationalUnitList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OrganizationalUnit>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "OrganizationalUnitList";
+    public const string KubeGroup = "organizations.aws.m.upbound.io";
+    public const string KubePluralName = "organizationalunits";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1OrganizationalUnit> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1OrganizationalUnitSpecForProvider
@@ -217,30 +243,4 @@ public partial class V1beta1OrganizationalUnit : IKubernetesObject<V1ObjectMeta>
     /// <summary>OrganizationalUnitStatus defines the observed state of OrganizationalUnit.</summary>
     [JsonPropertyName("status")]
     public V1beta1OrganizationalUnitStatus? Status { get; set; }
-}
-
-/// <summary>OrganizationalUnit is the Schema for the OrganizationalUnits API. Provides a resource to create an organizational unit.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1OrganizationalUnitList : IKubernetesObject<V1ListMeta>, IItems<V1beta1OrganizationalUnit>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "OrganizationalUnitList";
-    public const string KubeGroup = "organizations.aws.m.upbound.io";
-    public const string KubePluralName = "organizationalunits";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1OrganizationalUnit> Items { get; set; }
 }

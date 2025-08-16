@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.machinelearningservices.azure.upbound.io;
+/// <summary>SynapseSpark is the Schema for the SynapseSparks API. Manages the linked service to link an Azure Machine learning workspace to an Azure Synapse workspace.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SynapseSparkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SynapseSpark>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SynapseSparkList";
+    public const string KubeGroup = "machinelearningservices.azure.upbound.io";
+    public const string KubePluralName = "synapsesparks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SynapseSpark> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SynapseSparkSpecForProviderIdentity
@@ -488,30 +514,4 @@ public partial class V1beta1SynapseSpark : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>SynapseSparkStatus defines the observed state of SynapseSpark.</summary>
     [JsonPropertyName("status")]
     public V1beta1SynapseSparkStatus? Status { get; set; }
-}
-
-/// <summary>SynapseSpark is the Schema for the SynapseSparks API. Manages the linked service to link an Azure Machine learning workspace to an Azure Synapse workspace.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SynapseSparkList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SynapseSpark>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SynapseSparkList";
-    public const string KubeGroup = "machinelearningservices.azure.upbound.io";
-    public const string KubePluralName = "synapsesparks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SynapseSpark> Items { get; set; }
 }

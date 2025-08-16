@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.aquasecurity.github.io;
+/// <summary>ExposedSecretReport summarizes exposed secrets in plaintext files built into container images.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ExposedSecretReportList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ExposedSecretReport>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ExposedSecretReportList";
+    public const string KubeGroup = "aquasecurity.github.io";
+    public const string KubePluralName = "exposedsecretreports";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ExposedSecretReport> Items { get; set; }
+}
+
 /// <summary>Artifact represents a standalone, executable package of software that includes everything needed to run an application.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1ExposedSecretReportReportArtifact
@@ -161,30 +187,4 @@ public partial class V1alpha1ExposedSecretReport : IKubernetesObject<V1ObjectMet
     /// <summary>Report is the actual exposed secret report data.</summary>
     [JsonPropertyName("report")]
     public V1alpha1ExposedSecretReportReport Report { get; set; }
-}
-
-/// <summary>ExposedSecretReport summarizes exposed secrets in plaintext files built into container images.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1ExposedSecretReportList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ExposedSecretReport>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "ExposedSecretReportList";
-    public const string KubeGroup = "aquasecurity.github.io";
-    public const string KubePluralName = "exposedsecretreports";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1ExposedSecretReport> Items { get; set; }
 }

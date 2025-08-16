@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataproc.gcp.upbound.io;
+/// <summary>WorkflowTemplate is the Schema for the WorkflowTemplates API. A Workflow Template is a reusable workflow configuration.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1WorkflowTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkflowTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "WorkflowTemplateList";
+    public const string KubeGroup = "dataproc.gcp.upbound.io";
+    public const string KubePluralName = "workflowtemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1WorkflowTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1WorkflowTemplateSpecForProviderJobsHadoopJobLoggingConfig
@@ -3402,30 +3428,4 @@ public partial class V1beta1WorkflowTemplate : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>WorkflowTemplateStatus defines the observed state of WorkflowTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1WorkflowTemplateStatus? Status { get; set; }
-}
-
-/// <summary>WorkflowTemplate is the Schema for the WorkflowTemplates API. A Workflow Template is a reusable workflow configuration.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1WorkflowTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1WorkflowTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "WorkflowTemplateList";
-    public const string KubeGroup = "dataproc.gcp.upbound.io";
-    public const string KubePluralName = "workflowtemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1WorkflowTemplate> Items { get; set; }
 }

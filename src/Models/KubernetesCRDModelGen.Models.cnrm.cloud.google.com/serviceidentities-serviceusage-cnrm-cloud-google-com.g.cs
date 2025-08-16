@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.serviceusage.cnrm.cloud.google.com;
+/// <summary>ServiceIdentity is the Schema for the ServiceIdentity API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ServiceIdentityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceIdentity>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ServiceIdentityList";
+    public const string KubeGroup = "serviceusage.cnrm.cloud.google.com";
+    public const string KubePluralName = "serviceidentities";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ServiceIdentity> Items { get; set; }
+}
+
 /// <summary>The project that this service identity belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ServiceIdentitySpecProjectRef
@@ -112,30 +138,4 @@ public partial class V1beta1ServiceIdentity : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>ServiceIdentityStatus defines the config connector machine state of ServiceIdentity</summary>
     [JsonPropertyName("status")]
     public V1beta1ServiceIdentityStatus? Status { get; set; }
-}
-
-/// <summary>ServiceIdentity is the Schema for the ServiceIdentity API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ServiceIdentityList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ServiceIdentity>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ServiceIdentityList";
-    public const string KubeGroup = "serviceusage.cnrm.cloud.google.com";
-    public const string KubePluralName = "serviceidentities";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ServiceIdentity> Items { get; set; }
 }

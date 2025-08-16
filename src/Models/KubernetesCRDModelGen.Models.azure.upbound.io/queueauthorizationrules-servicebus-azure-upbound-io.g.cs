@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicebus.azure.upbound.io;
+/// <summary>QueueAuthorizationRule is the Schema for the QueueAuthorizationRules API. Manages an Authorization Rule for a ServiceBus Queue.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1QueueAuthorizationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1QueueAuthorizationRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "QueueAuthorizationRuleList";
+    public const string KubeGroup = "servicebus.azure.upbound.io";
+    public const string KubePluralName = "queueauthorizationrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1QueueAuthorizationRule> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1QueueAuthorizationRuleSpecForProviderQueueIdRefPolicy
@@ -277,30 +303,4 @@ public partial class V1beta1QueueAuthorizationRule : IKubernetesObject<V1ObjectM
     /// <summary>QueueAuthorizationRuleStatus defines the observed state of QueueAuthorizationRule.</summary>
     [JsonPropertyName("status")]
     public V1beta1QueueAuthorizationRuleStatus? Status { get; set; }
-}
-
-/// <summary>QueueAuthorizationRule is the Schema for the QueueAuthorizationRules API. Manages an Authorization Rule for a ServiceBus Queue.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1QueueAuthorizationRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1QueueAuthorizationRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "QueueAuthorizationRuleList";
-    public const string KubeGroup = "servicebus.azure.upbound.io";
-    public const string KubePluralName = "queueauthorizationrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1QueueAuthorizationRule> Items { get; set; }
 }

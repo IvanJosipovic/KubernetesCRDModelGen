@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keyvault.azure.upbound.io;
+/// <summary>CertificateIssuer is the Schema for the CertificateIssuers API. Manages a Key Vault Certificate Issuer.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CertificateIssuerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CertificateIssuer>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CertificateIssuerList";
+    public const string KubeGroup = "keyvault.azure.upbound.io";
+    public const string KubePluralName = "certificateissuers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CertificateIssuer> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CertificateIssuerSpecForProviderAdmin
@@ -462,30 +488,4 @@ public partial class V1beta1CertificateIssuer : IKubernetesObject<V1ObjectMeta>,
     /// <summary>CertificateIssuerStatus defines the observed state of CertificateIssuer.</summary>
     [JsonPropertyName("status")]
     public V1beta1CertificateIssuerStatus? Status { get; set; }
-}
-
-/// <summary>CertificateIssuer is the Schema for the CertificateIssuers API. Manages a Key Vault Certificate Issuer.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CertificateIssuerList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CertificateIssuer>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CertificateIssuerList";
-    public const string KubeGroup = "keyvault.azure.upbound.io";
-    public const string KubePluralName = "certificateissuers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CertificateIssuer> Items { get; set; }
 }

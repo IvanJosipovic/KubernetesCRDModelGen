@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.containerregistry.azure.com;
+/// <summary>Storage version of v1api20230701.Registry Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2023-07-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230701storageRegistryList : IKubernetesObject<V1ListMeta>, IItems<V1api20230701storageRegistry>
+{
+    public const string KubeApiVersion = "v1api20230701storage";
+    public const string KubeKind = "RegistryList";
+    public const string KubeGroup = "containerregistry.azure.com";
+    public const string KubePluralName = "registries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230701storageRegistry> Items { get; set; }
+}
+
 /// <summary>ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as the resource it is on.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230701storageRegistrySpecEncryptionKeyVaultPropertiesIdentityFromConfig
@@ -836,30 +862,4 @@ public partial class V1api20230701storageRegistry : IKubernetesObject<V1ObjectMe
     /// <summary>Storage version of v1api20230701.Registry_STATUS An object that represents a container registry.</summary>
     [JsonPropertyName("status")]
     public V1api20230701storageRegistryStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20230701.Registry Generator information: - Generated from: /containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2023-07-01/containerregistry.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerRegistry/registries/{registryName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230701storageRegistryList : IKubernetesObject<V1ListMeta>, IItems<V1api20230701storageRegistry>
-{
-    public const string KubeApiVersion = "v1api20230701storage";
-    public const string KubeKind = "RegistryList";
-    public const string KubeGroup = "containerregistry.azure.com";
-    public const string KubePluralName = "registries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20230701storageRegistry> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.azure.m.upbound.io;
+/// <summary>SharedImageGallery is the Schema for the SharedImageGallerys API. Manages a Shared Image Gallery.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SharedImageGalleryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SharedImageGallery>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SharedImageGalleryList";
+    public const string KubeGroup = "compute.azure.m.upbound.io";
+    public const string KubePluralName = "sharedimagegalleries";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SharedImageGallery> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SharedImageGallerySpecForProviderResourceGroupNameRefPolicy
@@ -386,30 +412,4 @@ public partial class V1beta1SharedImageGallery : IKubernetesObject<V1ObjectMeta>
     /// <summary>SharedImageGalleryStatus defines the observed state of SharedImageGallery.</summary>
     [JsonPropertyName("status")]
     public V1beta1SharedImageGalleryStatus? Status { get; set; }
-}
-
-/// <summary>SharedImageGallery is the Schema for the SharedImageGallerys API. Manages a Shared Image Gallery.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SharedImageGalleryList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SharedImageGallery>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SharedImageGalleryList";
-    public const string KubeGroup = "compute.azure.m.upbound.io";
-    public const string KubePluralName = "sharedimagegalleries";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SharedImageGallery> Items { get; set; }
 }

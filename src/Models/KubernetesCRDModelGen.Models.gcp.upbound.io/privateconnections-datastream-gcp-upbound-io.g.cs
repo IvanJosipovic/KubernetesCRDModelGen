@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datastream.gcp.upbound.io;
+/// <summary>PrivateConnection is the Schema for the PrivateConnections API. The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrivateConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrivateConnectionList";
+    public const string KubeGroup = "datastream.gcp.upbound.io";
+    public const string KubePluralName = "privateconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrivateConnection> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrivateConnectionSpecForProviderPscInterfaceConfig
@@ -476,30 +502,4 @@ public partial class V1beta1PrivateConnection : IKubernetesObject<V1ObjectMeta>,
     /// <summary>PrivateConnectionStatus defines the observed state of PrivateConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1PrivateConnectionStatus? Status { get; set; }
-}
-
-/// <summary>PrivateConnection is the Schema for the PrivateConnections API. The PrivateConnection resource is used to establish private connectivity between Datastream and a customer's network.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrivateConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrivateConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrivateConnectionList";
-    public const string KubeGroup = "datastream.gcp.upbound.io";
-    public const string KubePluralName = "privateconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PrivateConnection> Items { get; set; }
 }

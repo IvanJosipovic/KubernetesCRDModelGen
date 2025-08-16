@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicelinker.azure.upbound.io;
+/// <summary>SpringCloudConnection is the Schema for the SpringCloudConnections API. Manages a service connector for spring cloud app.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SpringCloudConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudConnection>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SpringCloudConnectionList";
+    public const string KubeGroup = "servicelinker.azure.upbound.io";
+    public const string KubePluralName = "springcloudconnections";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SpringCloudConnection> Items { get; set; }
+}
+
 /// <summary>Service principal certificate for servicePrincipal auth. Should be specified when type is set to servicePrincipalCertificate.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SpringCloudConnectionSpecForProviderAuthenticationCertificateSecretRef
@@ -653,30 +679,4 @@ public partial class V1beta1SpringCloudConnection : IKubernetesObject<V1ObjectMe
     /// <summary>SpringCloudConnectionStatus defines the observed state of SpringCloudConnection.</summary>
     [JsonPropertyName("status")]
     public V1beta1SpringCloudConnectionStatus? Status { get; set; }
-}
-
-/// <summary>SpringCloudConnection is the Schema for the SpringCloudConnections API. Manages a service connector for spring cloud app.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SpringCloudConnectionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SpringCloudConnection>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SpringCloudConnectionList";
-    public const string KubeGroup = "servicelinker.azure.upbound.io";
-    public const string KubePluralName = "springcloudconnections";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SpringCloudConnection> Items { get; set; }
 }

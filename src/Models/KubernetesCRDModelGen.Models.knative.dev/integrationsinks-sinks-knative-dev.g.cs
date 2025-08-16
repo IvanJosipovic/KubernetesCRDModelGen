@@ -8,9 +8,35 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sinks.knative.dev;
+/// <summary>IntegrationSink sends events to generic event sink</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IntegrationSinkList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1IntegrationSink>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IntegrationSinkList";
+    public const string KubeGroup = "sinks.knative.dev";
+    public const string KubePluralName = "integrationsinks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1IntegrationSink> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecLog
+public partial class V1alpha1IntegrationSinkSpecLog
 {
     /// <summary>Name of the logging category to use</summary>
     [JsonPropertyName("loggerName")]
@@ -67,7 +93,7 @@ public partial class IntegrationSinkSpecLog
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAwsS3
+public partial class V1alpha1IntegrationSinkSpecAwsS3
 {
     /// <summary>The S3 Bucket name or Amazon Resource Name (ARN).</summary>
     [JsonPropertyName("arn")]
@@ -132,7 +158,7 @@ public partial class IntegrationSinkSpecAwsS3
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAwsSqs
+public partial class V1alpha1IntegrationSinkSpecAwsSqs
 {
     /// <summary>The SQS Queue Name or ARN</summary>
     [JsonPropertyName("arn")]
@@ -193,7 +219,7 @@ public partial class IntegrationSinkSpecAwsSqs
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAwsSns
+public partial class V1alpha1IntegrationSinkSpecAwsSns
 {
     /// <summary>The SNS topic name name or Amazon Resource Name (ARN).</summary>
     [JsonPropertyName("arn")]
@@ -218,7 +244,7 @@ public partial class IntegrationSinkSpecAwsSns
 
 /// <summary>Secret reference. </summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAwsAuthSecretRef
+public partial class V1alpha1IntegrationSinkSpecAwsAuthSecretRef
 {
     /// <summary>Secret name</summary>
     [JsonPropertyName("name")]
@@ -227,59 +253,59 @@ public partial class IntegrationSinkSpecAwsAuthSecretRef
 
 /// <summary>Auth secret</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAwsAuthSecret
+public partial class V1alpha1IntegrationSinkSpecAwsAuthSecret
 {
     /// <summary>Secret reference. </summary>
     [JsonPropertyName("ref")]
-    public IntegrationSinkSpecAwsAuthSecretRef? Ref { get; set; }
+    public V1alpha1IntegrationSinkSpecAwsAuthSecretRef? Ref { get; set; }
 }
 
 /// <summary>Auth configurations</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAwsAuth
+public partial class V1alpha1IntegrationSinkSpecAwsAuth
 {
     /// <summary>Auth secret</summary>
     [JsonPropertyName("secret")]
-    public IntegrationSinkSpecAwsAuthSecret? Secret { get; set; }
+    public V1alpha1IntegrationSinkSpecAwsAuthSecret? Secret { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpecAws
+public partial class V1alpha1IntegrationSinkSpecAws
 {
     /// <summary></summary>
     [JsonPropertyName("s3")]
-    public IntegrationSinkSpecAwsS3? S3 { get; set; }
+    public V1alpha1IntegrationSinkSpecAwsS3? S3 { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sqs")]
-    public IntegrationSinkSpecAwsSqs? Sqs { get; set; }
+    public V1alpha1IntegrationSinkSpecAwsSqs? Sqs { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("sns")]
-    public IntegrationSinkSpecAwsSns? Sns { get; set; }
+    public V1alpha1IntegrationSinkSpecAwsSns? Sns { get; set; }
 
     /// <summary>Auth configurations</summary>
     [JsonPropertyName("auth")]
-    public IntegrationSinkSpecAwsAuth? Auth { get; set; }
+    public V1alpha1IntegrationSinkSpecAwsAuth? Auth { get; set; }
 }
 
 /// <summary>Spec defines the desired state of the IntegrationSink.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkSpec
+public partial class V1alpha1IntegrationSinkSpec
 {
     /// <summary></summary>
     [JsonPropertyName("log")]
-    public IntegrationSinkSpecLog? Log { get; set; }
+    public V1alpha1IntegrationSinkSpecLog? Log { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("aws")]
-    public IntegrationSinkSpecAws? Aws { get; set; }
+    public V1alpha1IntegrationSinkSpecAws? Aws { get; set; }
 }
 
 /// <summary>IntegrationSink is Addressable. It exposes the endpoints as URIs to get events delivered into the used Kamelet.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkStatusAddress
+public partial class V1alpha1IntegrationSinkStatusAddress
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -300,7 +326,7 @@ public partial class IntegrationSinkStatusAddress
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkStatusAddresses
+public partial class V1alpha1IntegrationSinkStatusAddresses
 {
     /// <summary></summary>
     [JsonPropertyName("name")]
@@ -321,7 +347,7 @@ public partial class IntegrationSinkStatusAddresses
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkStatusPolicies
+public partial class V1alpha1IntegrationSinkStatusPolicies
 {
     /// <summary>The API version of the applied EventPolicy. This indicates, which version of EventPolicy is supported by the resource.</summary>
     [JsonPropertyName("apiVersion")]
@@ -334,7 +360,7 @@ public partial class IntegrationSinkStatusPolicies
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkStatusConditions
+public partial class V1alpha1IntegrationSinkStatusConditions
 {
     /// <summary>LastTransitionTime is the last time the condition transitioned from one status to another. We use VolatileTime in place of metav1.Time to exclude this from creating equality.Semantic differences (all other things held constant).</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -363,15 +389,15 @@ public partial class IntegrationSinkStatusConditions
 
 /// <summary>Status represents the current state of the IntegrationSink. This data may be out of date.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSinkStatus
+public partial class V1alpha1IntegrationSinkStatus
 {
     /// <summary>IntegrationSink is Addressable. It exposes the endpoints as URIs to get events delivered into the used Kamelet.</summary>
     [JsonPropertyName("address")]
-    public IntegrationSinkStatusAddress? Address { get; set; }
+    public V1alpha1IntegrationSinkStatusAddress? Address { get; set; }
 
     /// <summary>IntegrationSink is Addressable. It exposes the endpoints as URIs to get events delivered into the used Kamelet.</summary>
     [JsonPropertyName("addresses")]
-    public IList<IntegrationSinkStatusAddresses>? Addresses { get; set; }
+    public IList<V1alpha1IntegrationSinkStatusAddresses>? Addresses { get; set; }
 
     /// <summary>Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.</summary>
     [JsonPropertyName("annotations")]
@@ -379,11 +405,11 @@ public partial class IntegrationSinkStatus
 
     /// <summary>List of applied EventPolicies</summary>
     [JsonPropertyName("policies")]
-    public IList<IntegrationSinkStatusPolicies>? Policies { get; set; }
+    public IList<V1alpha1IntegrationSinkStatusPolicies>? Policies { get; set; }
 
     /// <summary>Conditions the latest available observations of a resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<IntegrationSinkStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1IntegrationSinkStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -392,13 +418,30 @@ public partial class IntegrationSinkStatus
 
 /// <summary>IntegrationSink sends events to generic event sink</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class IntegrationSink
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1IntegrationSink : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1IntegrationSinkSpec>, IStatus<V1alpha1IntegrationSinkStatus>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "IntegrationSink";
+    public const string KubeGroup = "sinks.knative.dev";
+    public const string KubePluralName = "integrationsinks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ObjectMeta Metadata { get; set; }
+
     /// <summary>Spec defines the desired state of the IntegrationSink.</summary>
     [JsonPropertyName("spec")]
-    public IntegrationSinkSpec? Spec { get; set; }
+    public V1alpha1IntegrationSinkSpec? Spec { get; set; }
 
     /// <summary>Status represents the current state of the IntegrationSink. This data may be out of date.</summary>
     [JsonPropertyName("status")]
-    public IntegrationSinkStatus? Status { get; set; }
+    public V1alpha1IntegrationSinkStatus? Status { get; set; }
 }

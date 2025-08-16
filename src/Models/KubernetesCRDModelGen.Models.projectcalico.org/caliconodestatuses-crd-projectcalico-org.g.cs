@@ -10,6 +10,32 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.crd.projectcalico.org;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1CalicoNodeStatusList : IKubernetesObject<V1ListMeta>, IItems<V1CalicoNodeStatus>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "CalicoNodeStatusList";
+    public const string KubeGroup = "crd.projectcalico.org";
+    public const string KubePluralName = "caliconodestatuses";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1CalicoNodeStatus> Items { get; set; }
+}
+
+/// <summary></summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CalicoNodeStatusSpec
 {
     /// <summary></summary>
@@ -297,30 +323,4 @@ public partial class V1CalicoNodeStatus : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary></summary>
     [JsonPropertyName("status")]
     public V1CalicoNodeStatusStatus? Status { get; set; }
-}
-
-/// <summary></summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1CalicoNodeStatusList : IKubernetesObject<V1ListMeta>, IItems<V1CalicoNodeStatus>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "CalicoNodeStatusList";
-    public const string KubeGroup = "crd.projectcalico.org";
-    public const string KubePluralName = "caliconodestatuses";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1CalicoNodeStatus> Items { get; set; }
 }

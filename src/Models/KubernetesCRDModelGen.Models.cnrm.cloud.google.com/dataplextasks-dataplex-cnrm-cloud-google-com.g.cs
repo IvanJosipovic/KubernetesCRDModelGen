@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dataplex.cnrm.cloud.google.com;
+/// <summary>DataplexTask is the Schema for the DataplexTask API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataplexTaskList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataplexTask>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataplexTaskList";
+    public const string KubeGroup = "dataplex.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataplextasks";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataplexTask> Items { get; set; }
+}
+
 /// <summary>Optional. The Cloud KMS key to use for encryption, of the form: `projects/{project_number}/locations/{location_id}/keyRings/{key-ring-name}/cryptoKeys/{key-name}`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataplexTaskSpecExecutionSpecKmsKeyRef
@@ -534,30 +560,4 @@ public partial class V1alpha1DataplexTask : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>DataplexTaskStatus defines the config connector machine state of DataplexTask</summary>
     [JsonPropertyName("status")]
     public V1alpha1DataplexTaskStatus? Status { get; set; }
-}
-
-/// <summary>DataplexTask is the Schema for the DataplexTask API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataplexTaskList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataplexTask>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataplexTaskList";
-    public const string KubeGroup = "dataplex.cnrm.cloud.google.com";
-    public const string KubePluralName = "dataplextasks";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DataplexTask> Items { get; set; }
 }

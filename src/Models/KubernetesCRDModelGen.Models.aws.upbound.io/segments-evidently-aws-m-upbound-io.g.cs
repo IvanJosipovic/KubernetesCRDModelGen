@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.evidently.aws.m.upbound.io;
+/// <summary>Segment is the Schema for the Segments API. Provides a CloudWatch Evidently Segment resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SegmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Segment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SegmentList";
+    public const string KubeGroup = "evidently.aws.m.upbound.io";
+    public const string KubePluralName = "segments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Segment> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SegmentSpecForProvider
@@ -216,30 +242,4 @@ public partial class V1beta1Segment : IKubernetesObject<V1ObjectMeta>, ISpec<V1b
     /// <summary>SegmentStatus defines the observed state of Segment.</summary>
     [JsonPropertyName("status")]
     public V1beta1SegmentStatus? Status { get; set; }
-}
-
-/// <summary>Segment is the Schema for the Segments API. Provides a CloudWatch Evidently Segment resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SegmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Segment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SegmentList";
-    public const string KubeGroup = "evidently.aws.m.upbound.io";
-    public const string KubePluralName = "segments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Segment> Items { get; set; }
 }

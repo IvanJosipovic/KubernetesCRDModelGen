@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.insights.azure.upbound.io;
+/// <summary>ApplicationInsightsStandardWebTest is the Schema for the ApplicationInsightsStandardWebTests API. Manages a Application Insights Standard WebTest.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ApplicationInsightsStandardWebTestList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsStandardWebTest>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ApplicationInsightsStandardWebTestList";
+    public const string KubeGroup = "insights.azure.upbound.io";
+    public const string KubePluralName = "applicationinsightsstandardwebtests";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ApplicationInsightsStandardWebTest> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ApplicationInsightsStandardWebTestSpecForProviderApplicationInsightsIdRefPolicy
@@ -745,30 +771,4 @@ public partial class V1beta1ApplicationInsightsStandardWebTest : IKubernetesObje
     /// <summary>ApplicationInsightsStandardWebTestStatus defines the observed state of ApplicationInsightsStandardWebTest.</summary>
     [JsonPropertyName("status")]
     public V1beta1ApplicationInsightsStandardWebTestStatus? Status { get; set; }
-}
-
-/// <summary>ApplicationInsightsStandardWebTest is the Schema for the ApplicationInsightsStandardWebTests API. Manages a Application Insights Standard WebTest.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ApplicationInsightsStandardWebTestList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ApplicationInsightsStandardWebTest>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ApplicationInsightsStandardWebTestList";
-    public const string KubeGroup = "insights.azure.upbound.io";
-    public const string KubePluralName = "applicationinsightsstandardwebtests";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ApplicationInsightsStandardWebTest> Items { get; set; }
 }

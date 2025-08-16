@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.m.upbound.io;
+/// <summary>SubscriptionPolicyAssignment is the Schema for the SubscriptionPolicyAssignments API. Manages a Subscription Policy Assignment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SubscriptionPolicyAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubscriptionPolicyAssignment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SubscriptionPolicyAssignmentList";
+    public const string KubeGroup = "authorization.azure.m.upbound.io";
+    public const string KubePluralName = "subscriptionpolicyassignments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SubscriptionPolicyAssignment> Items { get; set; }
+}
+
 /// <summary>An identity block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SubscriptionPolicyAssignmentSpecForProviderIdentity
@@ -706,30 +732,4 @@ public partial class V1beta1SubscriptionPolicyAssignment : IKubernetesObject<V1O
     /// <summary>SubscriptionPolicyAssignmentStatus defines the observed state of SubscriptionPolicyAssignment.</summary>
     [JsonPropertyName("status")]
     public V1beta1SubscriptionPolicyAssignmentStatus? Status { get; set; }
-}
-
-/// <summary>SubscriptionPolicyAssignment is the Schema for the SubscriptionPolicyAssignments API. Manages a Subscription Policy Assignment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SubscriptionPolicyAssignmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SubscriptionPolicyAssignment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SubscriptionPolicyAssignmentList";
-    public const string KubeGroup = "authorization.azure.m.upbound.io";
-    public const string KubePluralName = "subscriptionpolicyassignments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SubscriptionPolicyAssignment> Items { get; set; }
 }

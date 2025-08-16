@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.discoveryengine.cnrm.cloud.google.com;
+/// <summary>DiscoveryEngineDataStoreTargetSite is the Schema for the DiscoveryEngineDataStoreTargetSite API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DiscoveryEngineDataStoreTargetSite>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DiscoveryEngineDataStoreTargetSiteList";
+    public const string KubeGroup = "discoveryengine.cnrm.cloud.google.com";
+    public const string KubePluralName = "discoveryenginedatastoretargetsites";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DiscoveryEngineDataStoreTargetSite> Items { get; set; }
+}
+
 /// <summary>The DataStore this target site should be part of.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteSpecDataStoreRef
@@ -180,30 +206,4 @@ public partial class V1alpha1DiscoveryEngineDataStoreTargetSite : IKubernetesObj
     /// <summary>DiscoveryEngineDataStoreTargetSiteStatus defines the config connector machine state of DiscoveryEngineDataStoreTargetSite</summary>
     [JsonPropertyName("status")]
     public V1alpha1DiscoveryEngineDataStoreTargetSiteStatus? Status { get; set; }
-}
-
-/// <summary>DiscoveryEngineDataStoreTargetSite is the Schema for the DiscoveryEngineDataStoreTargetSite API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DiscoveryEngineDataStoreTargetSiteList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DiscoveryEngineDataStoreTargetSite>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DiscoveryEngineDataStoreTargetSiteList";
-    public const string KubeGroup = "discoveryengine.cnrm.cloud.google.com";
-    public const string KubePluralName = "discoveryenginedatastoretargetsites";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DiscoveryEngineDataStoreTargetSite> Items { get; set; }
 }

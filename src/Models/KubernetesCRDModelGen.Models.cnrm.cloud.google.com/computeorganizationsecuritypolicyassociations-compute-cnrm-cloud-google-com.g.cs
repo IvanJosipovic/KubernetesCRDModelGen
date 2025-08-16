@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.compute.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyAssociationMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ComputeOrganizationSecurityPolicyAssociation>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeOrganizationSecurityPolicyAssociationList";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeorganizationsecuritypolicyassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ComputeOrganizationSecurityPolicyAssociation> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyAssociationSpec
+public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationSpec
 {
     /// <summary>Immutable. The resource that the security policy is attached to.</summary>
     [JsonPropertyName("attachmentId")]
@@ -33,7 +53,7 @@ public partial class ComputeOrganizationSecurityPolicyAssociationSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyAssociationStatusConditions
+public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -58,11 +78,11 @@ public partial class ComputeOrganizationSecurityPolicyAssociationStatusCondition
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyAssociationStatus
+public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociationStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ComputeOrganizationSecurityPolicyAssociationStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ComputeOrganizationSecurityPolicyAssociationStatusConditions>? Conditions { get; set; }
 
     /// <summary>The display name of the security policy of the association.</summary>
     [JsonPropertyName("displayName")]
@@ -75,25 +95,30 @@ public partial class ComputeOrganizationSecurityPolicyAssociationStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ComputeOrganizationSecurityPolicyAssociation
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ComputeOrganizationSecurityPolicyAssociation : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ComputeOrganizationSecurityPolicyAssociationSpec>, IStatus<V1alpha1ComputeOrganizationSecurityPolicyAssociationStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ComputeOrganizationSecurityPolicyAssociation";
+    public const string KubeGroup = "compute.cnrm.cloud.google.com";
+    public const string KubePluralName = "computeorganizationsecuritypolicyassociations";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ComputeOrganizationSecurityPolicyAssociationMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ComputeOrganizationSecurityPolicyAssociationSpec Spec { get; set; }
+    public V1alpha1ComputeOrganizationSecurityPolicyAssociationSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ComputeOrganizationSecurityPolicyAssociationStatus? Status { get; set; }
+    public V1alpha1ComputeOrganizationSecurityPolicyAssociationStatus? Status { get; set; }
 }

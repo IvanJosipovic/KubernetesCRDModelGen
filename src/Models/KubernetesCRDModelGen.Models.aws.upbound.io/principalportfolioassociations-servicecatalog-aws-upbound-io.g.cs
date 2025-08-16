@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicecatalog.aws.upbound.io;
+/// <summary>PrincipalPortfolioAssociation is the Schema for the PrincipalPortfolioAssociations API. Manages a Service Catalog Principal Portfolio Association</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PrincipalPortfolioAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrincipalPortfolioAssociation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PrincipalPortfolioAssociationList";
+    public const string KubeGroup = "servicecatalog.aws.upbound.io";
+    public const string KubePluralName = "principalportfolioassociations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PrincipalPortfolioAssociation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PrincipalPortfolioAssociationSpecForProviderPortfolioIdRefPolicy
@@ -481,30 +507,4 @@ public partial class V1beta1PrincipalPortfolioAssociation : IKubernetesObject<V1
     /// <summary>PrincipalPortfolioAssociationStatus defines the observed state of PrincipalPortfolioAssociation.</summary>
     [JsonPropertyName("status")]
     public V1beta1PrincipalPortfolioAssociationStatus? Status { get; set; }
-}
-
-/// <summary>PrincipalPortfolioAssociation is the Schema for the PrincipalPortfolioAssociations API. Manages a Service Catalog Principal Portfolio Association</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PrincipalPortfolioAssociationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PrincipalPortfolioAssociation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PrincipalPortfolioAssociationList";
-    public const string KubeGroup = "servicecatalog.aws.upbound.io";
-    public const string KubePluralName = "principalportfolioassociations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PrincipalPortfolioAssociation> Items { get; set; }
 }

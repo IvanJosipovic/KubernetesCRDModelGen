@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.serviceusage.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceUsageConsumerQuotaOverrideMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ServiceUsageConsumerQuotaOverrideList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1ServiceUsageConsumerQuotaOverride>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ServiceUsageConsumerQuotaOverrideList";
+    public const string KubeGroup = "serviceusage.cnrm.cloud.google.com";
+    public const string KubePluralName = "serviceusageconsumerquotaoverrides";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1ServiceUsageConsumerQuotaOverride> Items { get; set; }
 }
 
 /// <summary>The project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceUsageConsumerQuotaOverrideSpecProjectRef
+public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpecProjectRef
 {
     /// <summary>Allowed value: The `name` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class ServiceUsageConsumerQuotaOverrideSpecProjectRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceUsageConsumerQuotaOverrideSpec
+public partial class V1alpha1ServiceUsageConsumerQuotaOverrideSpec
 {
     /// <summary>Immutable. If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.</summary>
     [JsonPropertyName("dimensions")]
@@ -57,7 +77,7 @@ public partial class ServiceUsageConsumerQuotaOverrideSpec
 
     /// <summary>The project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public ServiceUsageConsumerQuotaOverrideSpecProjectRef ProjectRef { get; set; }
+    public V1alpha1ServiceUsageConsumerQuotaOverrideSpecProjectRef ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.</summary>
     [JsonPropertyName("resourceID")]
@@ -70,7 +90,7 @@ public partial class ServiceUsageConsumerQuotaOverrideSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceUsageConsumerQuotaOverrideStatusConditions
+public partial class V1alpha1ServiceUsageConsumerQuotaOverrideStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -95,11 +115,11 @@ public partial class ServiceUsageConsumerQuotaOverrideStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceUsageConsumerQuotaOverrideStatus
+public partial class V1alpha1ServiceUsageConsumerQuotaOverrideStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<ServiceUsageConsumerQuotaOverrideStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1ServiceUsageConsumerQuotaOverrideStatusConditions>? Conditions { get; set; }
 
     /// <summary>The server-generated name of the quota override.</summary>
     [JsonPropertyName("name")]
@@ -112,25 +132,30 @@ public partial class ServiceUsageConsumerQuotaOverrideStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class ServiceUsageConsumerQuotaOverride
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1ServiceUsageConsumerQuotaOverride : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1ServiceUsageConsumerQuotaOverrideSpec>, IStatus<V1alpha1ServiceUsageConsumerQuotaOverrideStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "ServiceUsageConsumerQuotaOverride";
+    public const string KubeGroup = "serviceusage.cnrm.cloud.google.com";
+    public const string KubePluralName = "serviceusageconsumerquotaoverrides";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public ServiceUsageConsumerQuotaOverrideMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public ServiceUsageConsumerQuotaOverrideSpec Spec { get; set; }
+    public V1alpha1ServiceUsageConsumerQuotaOverrideSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public ServiceUsageConsumerQuotaOverrideStatus? Status { get; set; }
+    public V1alpha1ServiceUsageConsumerQuotaOverrideStatus? Status { get; set; }
 }

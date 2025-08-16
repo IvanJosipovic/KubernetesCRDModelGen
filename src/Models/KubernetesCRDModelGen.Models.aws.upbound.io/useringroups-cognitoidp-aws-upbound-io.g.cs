@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cognitoidp.aws.upbound.io;
+/// <summary>UserInGroup is the Schema for the UserInGroups API. Adds the specified user to the specified group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserInGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserInGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserInGroupList";
+    public const string KubeGroup = "cognitoidp.aws.upbound.io";
+    public const string KubePluralName = "useringroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1UserInGroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserInGroupSpecForProviderGroupNameRefPolicy
@@ -597,30 +623,4 @@ public partial class V1beta1UserInGroup : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>UserInGroupStatus defines the observed state of UserInGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1UserInGroupStatus? Status { get; set; }
-}
-
-/// <summary>UserInGroup is the Schema for the UserInGroups API. Adds the specified user to the specified group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1UserInGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserInGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "UserInGroupList";
-    public const string KubeGroup = "cognitoidp.aws.upbound.io";
-    public const string KubePluralName = "useringroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1UserInGroup> Items { get; set; }
 }

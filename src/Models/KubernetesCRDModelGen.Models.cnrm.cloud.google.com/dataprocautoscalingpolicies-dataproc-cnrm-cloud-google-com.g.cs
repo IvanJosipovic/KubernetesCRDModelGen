@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dataproc.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicyMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataprocAutoscalingPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DataprocAutoscalingPolicy>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataprocAutoscalingPolicyList";
+    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataprocautoscalingpolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DataprocAutoscalingPolicy> Items { get; set; }
 }
 
 /// <summary>Required. YARN autoscaling configuration.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig
+public partial class V1beta1DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig
 {
     /// <summary>Required. Timeout for YARN graceful decommissioning of Node Managers. Specifies the duration to wait for jobs to complete before forcefully removing workers (and potentially interrupting jobs). Only applicable to downscaling operations.</summary>
     [JsonPropertyName("gracefulDecommissionTimeout")]
@@ -41,7 +61,7 @@ public partial class DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicySpecBasicAlgorithm
+public partial class V1beta1DataprocAutoscalingPolicySpecBasicAlgorithm
 {
     /// <summary>Optional. Duration between scaling events. A scaling period starts after the update operation from the previous event has completed. Bounds: . Default: 2m.</summary>
     [JsonPropertyName("cooldownPeriod")]
@@ -49,12 +69,12 @@ public partial class DataprocAutoscalingPolicySpecBasicAlgorithm
 
     /// <summary>Required. YARN autoscaling configuration.</summary>
     [JsonPropertyName("yarnConfig")]
-    public DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig YarnConfig { get; set; }
+    public V1beta1DataprocAutoscalingPolicySpecBasicAlgorithmYarnConfig YarnConfig { get; set; }
 }
 
 /// <summary>Immutable. The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicySpecProjectRef
+public partial class V1beta1DataprocAutoscalingPolicySpecProjectRef
 {
     /// <summary>The project for the resource  Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).</summary>
     [JsonPropertyName("external")]
@@ -71,7 +91,7 @@ public partial class DataprocAutoscalingPolicySpecProjectRef
 
 /// <summary>Optional. Describes how the autoscaler will operate for secondary workers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicySpecSecondaryWorkerConfig
+public partial class V1beta1DataprocAutoscalingPolicySpecSecondaryWorkerConfig
 {
     /// <summary>Optional. Maximum number of instances for this group. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set. Primary workers - Bounds: [min_instances, ). Secondary workers - Bounds: [min_instances, ). Default: 0.</summary>
     [JsonPropertyName("maxInstances")]
@@ -88,7 +108,7 @@ public partial class DataprocAutoscalingPolicySpecSecondaryWorkerConfig
 
 /// <summary>Required. Describes how the autoscaler will operate for primary workers.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicySpecWorkerConfig
+public partial class V1beta1DataprocAutoscalingPolicySpecWorkerConfig
 {
     /// <summary>Required. Maximum number of instances for this group. Required for primary workers. Note that by default, clusters will not use secondary workers. Required for secondary workers if the minimum secondary instances is set. Primary workers - Bounds: [min_instances, ). Secondary workers - Bounds: [min_instances, ). Default: 0.</summary>
     [JsonPropertyName("maxInstances")]
@@ -105,11 +125,11 @@ public partial class DataprocAutoscalingPolicySpecWorkerConfig
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicySpec
+public partial class V1beta1DataprocAutoscalingPolicySpec
 {
     /// <summary></summary>
     [JsonPropertyName("basicAlgorithm")]
-    public DataprocAutoscalingPolicySpecBasicAlgorithm BasicAlgorithm { get; set; }
+    public V1beta1DataprocAutoscalingPolicySpecBasicAlgorithm BasicAlgorithm { get; set; }
 
     /// <summary>Immutable. The location for the resource</summary>
     [JsonPropertyName("location")]
@@ -117,7 +137,7 @@ public partial class DataprocAutoscalingPolicySpec
 
     /// <summary>Immutable. The Project that this resource belongs to.</summary>
     [JsonPropertyName("projectRef")]
-    public DataprocAutoscalingPolicySpecProjectRef? ProjectRef { get; set; }
+    public V1beta1DataprocAutoscalingPolicySpecProjectRef? ProjectRef { get; set; }
 
     /// <summary>Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.</summary>
     [JsonPropertyName("resourceID")]
@@ -125,16 +145,16 @@ public partial class DataprocAutoscalingPolicySpec
 
     /// <summary>Optional. Describes how the autoscaler will operate for secondary workers.</summary>
     [JsonPropertyName("secondaryWorkerConfig")]
-    public DataprocAutoscalingPolicySpecSecondaryWorkerConfig? SecondaryWorkerConfig { get; set; }
+    public V1beta1DataprocAutoscalingPolicySpecSecondaryWorkerConfig? SecondaryWorkerConfig { get; set; }
 
     /// <summary>Required. Describes how the autoscaler will operate for primary workers.</summary>
     [JsonPropertyName("workerConfig")]
-    public DataprocAutoscalingPolicySpecWorkerConfig WorkerConfig { get; set; }
+    public V1beta1DataprocAutoscalingPolicySpecWorkerConfig WorkerConfig { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicyStatusConditions
+public partial class V1beta1DataprocAutoscalingPolicyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -159,11 +179,11 @@ public partial class DataprocAutoscalingPolicyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicyStatus
+public partial class V1beta1DataprocAutoscalingPolicyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DataprocAutoscalingPolicyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1DataprocAutoscalingPolicyStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -172,25 +192,30 @@ public partial class DataprocAutoscalingPolicyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DataprocAutoscalingPolicy
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DataprocAutoscalingPolicy : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1DataprocAutoscalingPolicySpec>, IStatus<V1beta1DataprocAutoscalingPolicyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DataprocAutoscalingPolicy";
+    public const string KubeGroup = "dataproc.cnrm.cloud.google.com";
+    public const string KubePluralName = "dataprocautoscalingpolicies";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DataprocAutoscalingPolicyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DataprocAutoscalingPolicySpec Spec { get; set; }
+    public V1beta1DataprocAutoscalingPolicySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DataprocAutoscalingPolicyStatus? Status { get; set; }
+    public V1beta1DataprocAutoscalingPolicyStatus? Status { get; set; }
 }

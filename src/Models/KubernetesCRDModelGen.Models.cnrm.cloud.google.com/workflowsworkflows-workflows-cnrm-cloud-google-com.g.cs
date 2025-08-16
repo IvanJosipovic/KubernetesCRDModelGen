@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.workflows.cnrm.cloud.google.com;
+/// <summary>Workflow is the Schema for the Workflow API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1WorkflowsWorkflowList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WorkflowsWorkflow>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "WorkflowsWorkflowList";
+    public const string KubeGroup = "workflows.cnrm.cloud.google.com";
+    public const string KubePluralName = "workflowsworkflows";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1WorkflowsWorkflow> Items { get; set; }
+}
+
 /// <summary>Optional. The resource name of a KMS crypto key used to encrypt or decrypt the data associated with the workflow. If not provided, data associated with the workflow will not be CMEK-encrypted.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1WorkflowsWorkflowSpecKmsCryptoKeyRef
@@ -224,30 +250,4 @@ public partial class V1alpha1WorkflowsWorkflow : IKubernetesObject<V1ObjectMeta>
     /// <summary>WorkflowsWorkflowStatus defines the config connector machine state of Workflow</summary>
     [JsonPropertyName("status")]
     public V1alpha1WorkflowsWorkflowStatus? Status { get; set; }
-}
-
-/// <summary>Workflow is the Schema for the Workflow API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1WorkflowsWorkflowList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1WorkflowsWorkflow>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "WorkflowsWorkflowList";
-    public const string KubeGroup = "workflows.cnrm.cloud.google.com";
-    public const string KubePluralName = "workflowsworkflows";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1WorkflowsWorkflow> Items { get; set; }
 }

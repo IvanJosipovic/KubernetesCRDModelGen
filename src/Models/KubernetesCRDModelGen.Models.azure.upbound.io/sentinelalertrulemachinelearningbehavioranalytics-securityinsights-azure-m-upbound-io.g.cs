@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.securityinsights.azure.m.upbound.io;
+/// <summary>SentinelAlertRuleMachineLearningBehaviorAnalytics is the Schema for the SentinelAlertRuleMachineLearningBehaviorAnalyticss API. Manages a Sentinel Machine Learning Behavior Analytics Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SentinelAlertRuleMachineLearningBehaviorAnalyticsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelAlertRuleMachineLearningBehaviorAnalytics>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SentinelAlertRuleMachineLearningBehaviorAnalyticsList";
+    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
+    public const string KubePluralName = "sentinelalertrulemachinelearningbehavioranalytics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SentinelAlertRuleMachineLearningBehaviorAnalytics> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SentinelAlertRuleMachineLearningBehaviorAnalyticsSpecForProviderLogAnalyticsWorkspaceIdRefPolicy
@@ -340,30 +366,4 @@ public partial class V1beta1SentinelAlertRuleMachineLearningBehaviorAnalytics : 
     /// <summary>SentinelAlertRuleMachineLearningBehaviorAnalyticsStatus defines the observed state of SentinelAlertRuleMachineLearningBehaviorAnalytics.</summary>
     [JsonPropertyName("status")]
     public V1beta1SentinelAlertRuleMachineLearningBehaviorAnalyticsStatus? Status { get; set; }
-}
-
-/// <summary>SentinelAlertRuleMachineLearningBehaviorAnalytics is the Schema for the SentinelAlertRuleMachineLearningBehaviorAnalyticss API. Manages a Sentinel Machine Learning Behavior Analytics Rule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SentinelAlertRuleMachineLearningBehaviorAnalyticsList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SentinelAlertRuleMachineLearningBehaviorAnalytics>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SentinelAlertRuleMachineLearningBehaviorAnalyticsList";
-    public const string KubeGroup = "securityinsights.azure.m.upbound.io";
-    public const string KubePluralName = "sentinelalertrulemachinelearningbehavioranalytics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SentinelAlertRuleMachineLearningBehaviorAnalytics> Items { get; set; }
 }

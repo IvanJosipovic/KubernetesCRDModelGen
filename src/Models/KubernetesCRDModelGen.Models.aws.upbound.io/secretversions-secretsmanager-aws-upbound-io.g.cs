@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsmanager.aws.upbound.io;
+/// <summary>SecretVersion is the Schema for the SecretVersions API. Provides a resource to manage AWS Secrets Manager secret version including its secret value</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretVersion>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretVersionList";
+    public const string KubeGroup = "secretsmanager.aws.upbound.io";
+    public const string KubePluralName = "secretversions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecretVersion> Items { get; set; }
+}
+
 /// <summary>Specifies binary data that you want to encrypt and store in this version of the secret. This is required if secret_string or secret_string_wo is not set. Needs to be encoded to base64.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretVersionSpecForProviderSecretBinarySecretRef
@@ -479,30 +505,4 @@ public partial class V1beta1SecretVersion : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>SecretVersionStatus defines the observed state of SecretVersion.</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretVersionStatus? Status { get; set; }
-}
-
-/// <summary>SecretVersion is the Schema for the SecretVersions API. Provides a resource to manage AWS Secrets Manager secret version including its secret value</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretVersionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretVersion>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretVersionList";
-    public const string KubeGroup = "secretsmanager.aws.upbound.io";
-    public const string KubePluralName = "secretversions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SecretVersion> Items { get; set; }
 }

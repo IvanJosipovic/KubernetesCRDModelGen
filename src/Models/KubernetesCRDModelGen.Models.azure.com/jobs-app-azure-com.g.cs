@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.app.azure.com;
+/// <summary>Storage version of v1api20240301.Job Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/Jobs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20240301storageJobList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageJob>
+{
+    public const string KubeApiVersion = "v1api20240301storage";
+    public const string KubeKind = "JobList";
+    public const string KubeGroup = "app.azure.com";
+    public const string KubePluralName = "jobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20240301storageJob> Items { get; set; }
+}
+
 /// <summary>Storage version of v1api20240301.ScaleRuleAuth Auth Secrets for Scale Rule</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20240301storageJobSpecConfigurationEventTriggerConfigScaleRulesAuth
@@ -1637,30 +1663,4 @@ public partial class V1api20240301storageJob : IKubernetesObject<V1ObjectMeta>, 
     /// <summary>Storage version of v1api20240301.Job_STATUS Container App Job</summary>
     [JsonPropertyName("status")]
     public V1api20240301storageJobStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20240301.Job Generator information: - Generated from: /app/resource-manager/Microsoft.App/stable/2024-03-01/Jobs.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/jobs/{jobName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20240301storageJobList : IKubernetesObject<V1ListMeta>, IItems<V1api20240301storageJob>
-{
-    public const string KubeApiVersion = "v1api20240301storage";
-    public const string KubeKind = "JobList";
-    public const string KubeGroup = "app.azure.com";
-    public const string KubePluralName = "jobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20240301storageJob> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.spanner.cnrm.cloud.google.com;
+/// <summary>SpannerBackupSchedule is the Schema for the SpannerBackupSchedule API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1SpannerBackupScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SpannerBackupSchedule>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "SpannerBackupScheduleList";
+    public const string KubeGroup = "spanner.cnrm.cloud.google.com";
+    public const string KubePluralName = "spannerbackupschedules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1SpannerBackupSchedule> Items { get; set; }
+}
+
 /// <summary>Optional. The Cloud KMS key that will be used to protect the backup. This field should be set only when [encryption_type][google.spanner.admin.database.v1.CreateBackupEncryptionConfig.encryption_type] is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form `projects/&lt;project&gt;/locations/&lt;location&gt;/keyRings/&lt;key_ring&gt;/cryptoKeys/&lt;kms_key_name&gt;`.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SpannerBackupScheduleSpecEncryptionConfigKmsKeyRef
@@ -239,30 +265,4 @@ public partial class V1alpha1SpannerBackupSchedule : IKubernetesObject<V1ObjectM
     /// <summary>SpannerBackupScheduleStatus defines the config connector machine state of SpannerBackupSchedule</summary>
     [JsonPropertyName("status")]
     public V1alpha1SpannerBackupScheduleStatus? Status { get; set; }
-}
-
-/// <summary>SpannerBackupSchedule is the Schema for the SpannerBackupSchedule API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SpannerBackupScheduleList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SpannerBackupSchedule>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SpannerBackupScheduleList";
-    public const string KubeGroup = "spanner.cnrm.cloud.google.com";
-    public const string KubePluralName = "spannerbackupschedules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1SpannerBackupSchedule> Items { get; set; }
 }

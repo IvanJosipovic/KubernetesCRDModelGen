@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deployment.databricks.crossplane.io;
+/// <summary>MwsPrivateAccessSettings is the Schema for the MwsPrivateAccessSettingss API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1MwsPrivateAccessSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsPrivateAccessSettings>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "MwsPrivateAccessSettingsList";
+    public const string KubeGroup = "deployment.databricks.crossplane.io";
+    public const string KubePluralName = "mwsprivateaccesssettings";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1MwsPrivateAccessSettings> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1MwsPrivateAccessSettingsSpecForProvider
@@ -317,30 +343,4 @@ public partial class V1alpha1MwsPrivateAccessSettings : IKubernetesObject<V1Obje
     /// <summary>MwsPrivateAccessSettingsStatus defines the observed state of MwsPrivateAccessSettings.</summary>
     [JsonPropertyName("status")]
     public V1alpha1MwsPrivateAccessSettingsStatus? Status { get; set; }
-}
-
-/// <summary>MwsPrivateAccessSettings is the Schema for the MwsPrivateAccessSettingss API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1MwsPrivateAccessSettingsList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1MwsPrivateAccessSettings>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "MwsPrivateAccessSettingsList";
-    public const string KubeGroup = "deployment.databricks.crossplane.io";
-    public const string KubePluralName = "mwsprivateaccesssettings";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1MwsPrivateAccessSettings> Items { get; set; }
 }

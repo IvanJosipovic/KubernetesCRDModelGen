@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.chime.aws.m.upbound.io;
+/// <summary>VoiceConnectorOrigination is the Schema for the VoiceConnectorOriginations API. Enable origination settings to control inbound calling to your SIP infrastructure.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VoiceConnectorOriginationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorOrigination>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VoiceConnectorOriginationList";
+    public const string KubeGroup = "chime.aws.m.upbound.io";
+    public const string KubePluralName = "voiceconnectororiginations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VoiceConnectorOrigination> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VoiceConnectorOriginationSpecForProviderRoute
@@ -411,30 +437,4 @@ public partial class V1beta1VoiceConnectorOrigination : IKubernetesObject<V1Obje
     /// <summary>VoiceConnectorOriginationStatus defines the observed state of VoiceConnectorOrigination.</summary>
     [JsonPropertyName("status")]
     public V1beta1VoiceConnectorOriginationStatus? Status { get; set; }
-}
-
-/// <summary>VoiceConnectorOrigination is the Schema for the VoiceConnectorOriginations API. Enable origination settings to control inbound calling to your SIP infrastructure.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VoiceConnectorOriginationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VoiceConnectorOrigination>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VoiceConnectorOriginationList";
-    public const string KubeGroup = "chime.aws.m.upbound.io";
-    public const string KubePluralName = "voiceconnectororiginations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VoiceConnectorOrigination> Items { get; set; }
 }

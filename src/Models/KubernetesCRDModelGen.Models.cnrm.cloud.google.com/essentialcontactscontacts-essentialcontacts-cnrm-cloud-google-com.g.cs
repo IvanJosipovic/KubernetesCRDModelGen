@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.essentialcontacts.cnrm.cloud.google.com;
+/// <summary>EssentialContactsContact is the Schema for the EssentialContactsContact API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1EssentialContactsContactList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1EssentialContactsContact>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "EssentialContactsContactList";
+    public const string KubeGroup = "essentialcontacts.cnrm.cloud.google.com";
+    public const string KubePluralName = "essentialcontactscontacts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1EssentialContactsContact> Items { get; set; }
+}
+
 /// <summary>FolderRef represents the Folder that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1EssentialContactsContactSpecFolderRef
@@ -175,30 +201,4 @@ public partial class V1alpha1EssentialContactsContact : IKubernetesObject<V1Obje
     /// <summary>EssentialContactsContactStatus defines the config connector machine state of EssentialContactsContact</summary>
     [JsonPropertyName("status")]
     public V1alpha1EssentialContactsContactStatus? Status { get; set; }
-}
-
-/// <summary>EssentialContactsContact is the Schema for the EssentialContactsContact API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1EssentialContactsContactList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1EssentialContactsContact>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "EssentialContactsContactList";
-    public const string KubeGroup = "essentialcontacts.cnrm.cloud.google.com";
-    public const string KubePluralName = "essentialcontactscontacts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1EssentialContactsContact> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datacatalog.cnrm.cloud.google.com;
+/// <summary>DataCatalogTagTemplate is the Schema for the DataCatalogTagTemplate API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DataCatalogTagTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataCatalogTagTemplate>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DataCatalogTagTemplateList";
+    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
+    public const string KubePluralName = "datacatalogtagtemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DataCatalogTagTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1DataCatalogTagTemplateSpecFieldsTypeEnumTypeAllowedValues
@@ -201,30 +227,4 @@ public partial class V1alpha1DataCatalogTagTemplate : IKubernetesObject<V1Object
     /// <summary>DataCatalogTagTemplateStatus defines the config connector machine state of DataCatalogTagTemplate</summary>
     [JsonPropertyName("status")]
     public V1alpha1DataCatalogTagTemplateStatus? Status { get; set; }
-}
-
-/// <summary>DataCatalogTagTemplate is the Schema for the DataCatalogTagTemplate API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1DataCatalogTagTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DataCatalogTagTemplate>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "DataCatalogTagTemplateList";
-    public const string KubeGroup = "datacatalog.cnrm.cloud.google.com";
-    public const string KubePluralName = "datacatalogtagtemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1DataCatalogTagTemplate> Items { get; set; }
 }

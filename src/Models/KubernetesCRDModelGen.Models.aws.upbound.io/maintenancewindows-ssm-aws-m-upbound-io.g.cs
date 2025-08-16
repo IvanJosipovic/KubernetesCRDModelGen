@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ssm.aws.m.upbound.io;
+/// <summary>MaintenanceWindow is the Schema for the MaintenanceWindows API. Provides an SSM Maintenance Window resource</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1MaintenanceWindowList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MaintenanceWindow>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "MaintenanceWindowList";
+    public const string KubeGroup = "ssm.aws.m.upbound.io";
+    public const string KubePluralName = "maintenancewindows";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1MaintenanceWindow> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1MaintenanceWindowSpecForProvider
@@ -304,30 +330,4 @@ public partial class V1beta1MaintenanceWindow : IKubernetesObject<V1ObjectMeta>,
     /// <summary>MaintenanceWindowStatus defines the observed state of MaintenanceWindow.</summary>
     [JsonPropertyName("status")]
     public V1beta1MaintenanceWindowStatus? Status { get; set; }
-}
-
-/// <summary>MaintenanceWindow is the Schema for the MaintenanceWindows API. Provides an SSM Maintenance Window resource</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1MaintenanceWindowList : IKubernetesObject<V1ListMeta>, IItems<V1beta1MaintenanceWindow>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "MaintenanceWindowList";
-    public const string KubeGroup = "ssm.aws.m.upbound.io";
-    public const string KubePluralName = "maintenancewindows";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1MaintenanceWindow> Items { get; set; }
 }

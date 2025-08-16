@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.compute.gcp.upbound.io;
+/// <summary>VPNTunnel is the Schema for the VPNTunnels API. VPN tunnel resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1VPNTunnelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPNTunnel>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "VPNTunnelList";
+    public const string KubeGroup = "compute.gcp.upbound.io";
+    public const string KubePluralName = "vpntunnels";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1VPNTunnel> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1VPNTunnelSpecForProviderPeerExternalGatewayRefPolicy
@@ -931,30 +957,4 @@ public partial class V1beta1VPNTunnel : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>VPNTunnelStatus defines the observed state of VPNTunnel.</summary>
     [JsonPropertyName("status")]
     public V1beta1VPNTunnelStatus? Status { get; set; }
-}
-
-/// <summary>VPNTunnel is the Schema for the VPNTunnels API. VPN tunnel resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1VPNTunnelList : IKubernetesObject<V1ListMeta>, IItems<V1beta1VPNTunnel>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "VPNTunnelList";
-    public const string KubeGroup = "compute.gcp.upbound.io";
-    public const string KubePluralName = "vpntunnels";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1VPNTunnel> Items { get; set; }
 }

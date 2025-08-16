@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.appautoscaling.aws.upbound.io;
+/// <summary>ScheduledAction is the Schema for the ScheduledActions API. Provides an Application AutoScaling ScheduledAction resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ScheduledActionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ScheduledAction>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ScheduledActionList";
+    public const string KubeGroup = "appautoscaling.aws.upbound.io";
+    public const string KubePluralName = "scheduledactions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ScheduledAction> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ScheduledActionSpecForProviderResourceIdRefPolicy
@@ -712,30 +738,4 @@ public partial class V1beta1ScheduledAction : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>ScheduledActionStatus defines the observed state of ScheduledAction.</summary>
     [JsonPropertyName("status")]
     public V1beta1ScheduledActionStatus? Status { get; set; }
-}
-
-/// <summary>ScheduledAction is the Schema for the ScheduledActions API. Provides an Application AutoScaling ScheduledAction resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ScheduledActionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ScheduledAction>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ScheduledActionList";
-    public const string KubeGroup = "appautoscaling.aws.upbound.io";
-    public const string KubePluralName = "scheduledactions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ScheduledAction> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.security.databricks.crossplane.io;
+/// <summary>SecretScope is the Schema for the SecretScopes API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1SecretScopeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SecretScope>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "SecretScopeList";
+    public const string KubeGroup = "security.databricks.crossplane.io";
+    public const string KubePluralName = "secretscopes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1SecretScope> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SecretScopeSpecForProviderKeyvaultMetadata
@@ -320,30 +346,4 @@ public partial class V1alpha1SecretScope : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>SecretScopeStatus defines the observed state of SecretScope.</summary>
     [JsonPropertyName("status")]
     public V1alpha1SecretScopeStatus? Status { get; set; }
-}
-
-/// <summary>SecretScope is the Schema for the SecretScopes API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SecretScopeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SecretScope>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SecretScopeList";
-    public const string KubeGroup = "security.databricks.crossplane.io";
-    public const string KubePluralName = "secretscopes";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1SecretScope> Items { get; set; }
 }

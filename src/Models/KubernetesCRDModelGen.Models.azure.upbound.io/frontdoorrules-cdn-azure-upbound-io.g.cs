@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cdn.azure.upbound.io;
+/// <summary>FrontdoorRule is the Schema for the FrontdoorRules API. Manages a Front Door (standard/premium) Rule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FrontdoorRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FrontdoorRule>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FrontdoorRuleList";
+    public const string KubeGroup = "cdn.azure.upbound.io";
+    public const string KubePluralName = "frontdoorrules";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FrontdoorRule> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FrontdoorRuleSpecForProviderActionsRequestHeaderAction
@@ -2203,30 +2229,4 @@ public partial class V1beta1FrontdoorRule : IKubernetesObject<V1ObjectMeta>, ISp
     /// <summary>FrontdoorRuleStatus defines the observed state of FrontdoorRule.</summary>
     [JsonPropertyName("status")]
     public V1beta1FrontdoorRuleStatus? Status { get; set; }
-}
-
-/// <summary>FrontdoorRule is the Schema for the FrontdoorRules API. Manages a Front Door (standard/premium) Rule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FrontdoorRuleList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FrontdoorRule>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FrontdoorRuleList";
-    public const string KubeGroup = "cdn.azure.upbound.io";
-    public const string KubePluralName = "frontdoorrules";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FrontdoorRule> Items { get; set; }
 }

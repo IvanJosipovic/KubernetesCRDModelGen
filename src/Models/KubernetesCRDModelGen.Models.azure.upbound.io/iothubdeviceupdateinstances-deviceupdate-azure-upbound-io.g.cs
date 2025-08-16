@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deviceupdate.azure.upbound.io;
+/// <summary>IOTHubDeviceUpdateInstance is the Schema for the IOTHubDeviceUpdateInstances API. Manages an IoT Hub Device Update Instance.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1IOTHubDeviceUpdateInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubDeviceUpdateInstance>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "IOTHubDeviceUpdateInstanceList";
+    public const string KubeGroup = "deviceupdate.azure.upbound.io";
+    public const string KubePluralName = "iothubdeviceupdateinstances";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1IOTHubDeviceUpdateInstance> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1IOTHubDeviceUpdateInstanceSpecForProviderDeviceUpdateAccountIdRefPolicy
@@ -593,30 +619,4 @@ public partial class V1beta1IOTHubDeviceUpdateInstance : IKubernetesObject<V1Obj
     /// <summary>IOTHubDeviceUpdateInstanceStatus defines the observed state of IOTHubDeviceUpdateInstance.</summary>
     [JsonPropertyName("status")]
     public V1beta1IOTHubDeviceUpdateInstanceStatus? Status { get; set; }
-}
-
-/// <summary>IOTHubDeviceUpdateInstance is the Schema for the IOTHubDeviceUpdateInstances API. Manages an IoT Hub Device Update Instance.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1IOTHubDeviceUpdateInstanceList : IKubernetesObject<V1ListMeta>, IItems<V1beta1IOTHubDeviceUpdateInstance>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "IOTHubDeviceUpdateInstanceList";
-    public const string KubeGroup = "deviceupdate.azure.upbound.io";
-    public const string KubePluralName = "iothubdeviceupdateinstances";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1IOTHubDeviceUpdateInstance> Items { get; set; }
 }

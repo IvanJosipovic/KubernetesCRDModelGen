@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.botservice.azure.m.upbound.io;
+/// <summary>BotChannelWebChat is the Schema for the BotChannelWebChats API. Manages a Web Chat integration for a Bot Channel</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1BotChannelWebChatList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotChannelWebChat>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "BotChannelWebChatList";
+    public const string KubeGroup = "botservice.azure.m.upbound.io";
+    public const string KubePluralName = "botchannelwebchats";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1BotChannelWebChat> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1BotChannelWebChatSpecForProviderBotNameRefPolicy
@@ -395,30 +421,4 @@ public partial class V1beta1BotChannelWebChat : IKubernetesObject<V1ObjectMeta>,
     /// <summary>BotChannelWebChatStatus defines the observed state of BotChannelWebChat.</summary>
     [JsonPropertyName("status")]
     public V1beta1BotChannelWebChatStatus? Status { get; set; }
-}
-
-/// <summary>BotChannelWebChat is the Schema for the BotChannelWebChats API. Manages a Web Chat integration for a Bot Channel</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1BotChannelWebChatList : IKubernetesObject<V1ListMeta>, IItems<V1beta1BotChannelWebChat>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "BotChannelWebChatList";
-    public const string KubeGroup = "botservice.azure.m.upbound.io";
-    public const string KubePluralName = "botchannelwebchats";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1BotChannelWebChat> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+/// <summary>A CompositeResourceDefinition defines the schema for a new custom Kubernetes API.  Read the Crossplane documentation for [more information about CustomResourceDefinitions](https://docs.crossplane.io/latest/concepts/composite-resource-definitions).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1CompositeResourceDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1CompositeResourceDefinition>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "CompositeResourceDefinitionList";
+    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubePluralName = "compositeresourcedefinitions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1CompositeResourceDefinition> Items { get; set; }
+}
+
 /// <summary>ClaimNames specifies the names of an optional composite resource claim. When claim names are specified Crossplane will create a namespaced 'composite resource claim' CRD that corresponds to the defined composite resource. This composite resource claim acts as a namespaced proxy for the composite resource; creating, updating, or deleting the claim will create, update, or delete a corresponding composite resource. You may add claim names to an existing CompositeResourceDefinition, but they cannot be changed or removed once they have been set.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositeResourceDefinitionSpecClaimNames
@@ -394,30 +420,4 @@ public partial class V1CompositeResourceDefinition : IKubernetesObject<V1ObjectM
     /// <summary>CompositeResourceDefinitionStatus shows the observed state of the definition.</summary>
     [JsonPropertyName("status")]
     public V1CompositeResourceDefinitionStatus? Status { get; set; }
-}
-
-/// <summary>A CompositeResourceDefinition defines the schema for a new custom Kubernetes API.  Read the Crossplane documentation for [more information about CustomResourceDefinitions](https://docs.crossplane.io/latest/concepts/composite-resource-definitions).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1CompositeResourceDefinitionList : IKubernetesObject<V1ListMeta>, IItems<V1CompositeResourceDefinition>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "CompositeResourceDefinitionList";
-    public const string KubeGroup = "apiextensions.crossplane.io";
-    public const string KubePluralName = "compositeresourcedefinitions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1CompositeResourceDefinition> Items { get; set; }
 }

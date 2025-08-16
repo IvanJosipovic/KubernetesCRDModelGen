@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rds.aws.m.upbound.io;
+/// <summary>ProxyDefaultTargetGroup is the Schema for the ProxyDefaultTargetGroups API. Manage an RDS DB proxy default target group resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProxyDefaultTargetGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProxyDefaultTargetGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProxyDefaultTargetGroupList";
+    public const string KubeGroup = "rds.aws.m.upbound.io";
+    public const string KubePluralName = "proxydefaulttargetgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProxyDefaultTargetGroup> Items { get; set; }
+}
+
 /// <summary>The settings that determine the size and behavior of the connection pool for the target group.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProxyDefaultTargetGroupSpecForProviderConnectionPoolConfig
@@ -407,30 +433,4 @@ public partial class V1beta1ProxyDefaultTargetGroup : IKubernetesObject<V1Object
     /// <summary>ProxyDefaultTargetGroupStatus defines the observed state of ProxyDefaultTargetGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProxyDefaultTargetGroupStatus? Status { get; set; }
-}
-
-/// <summary>ProxyDefaultTargetGroup is the Schema for the ProxyDefaultTargetGroups API. Manage an RDS DB proxy default target group resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProxyDefaultTargetGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProxyDefaultTargetGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProxyDefaultTargetGroupList";
-    public const string KubeGroup = "rds.aws.m.upbound.io";
-    public const string KubePluralName = "proxydefaulttargetgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProxyDefaultTargetGroup> Items { get; set; }
 }

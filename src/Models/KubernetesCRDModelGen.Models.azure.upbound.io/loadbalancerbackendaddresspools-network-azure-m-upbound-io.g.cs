@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>LoadBalancerBackendAddressPool is the Schema for the LoadBalancerBackendAddressPools API. Manages a Load Balancer Backend Address Pool.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1LoadBalancerBackendAddressPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoadBalancerBackendAddressPool>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "LoadBalancerBackendAddressPoolList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "loadbalancerbackendaddresspools";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1LoadBalancerBackendAddressPool> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1LoadBalancerBackendAddressPoolSpecForProviderLoadbalancerIdRefPolicy
@@ -343,30 +369,4 @@ public partial class V1beta1LoadBalancerBackendAddressPool : IKubernetesObject<V
     /// <summary>LoadBalancerBackendAddressPoolStatus defines the observed state of LoadBalancerBackendAddressPool.</summary>
     [JsonPropertyName("status")]
     public V1beta1LoadBalancerBackendAddressPoolStatus? Status { get; set; }
-}
-
-/// <summary>LoadBalancerBackendAddressPool is the Schema for the LoadBalancerBackendAddressPools API. Manages a Load Balancer Backend Address Pool.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1LoadBalancerBackendAddressPoolList : IKubernetesObject<V1ListMeta>, IItems<V1beta1LoadBalancerBackendAddressPool>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "LoadBalancerBackendAddressPoolList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "loadbalancerbackendaddresspools";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1LoadBalancerBackendAddressPool> Items { get; set; }
 }

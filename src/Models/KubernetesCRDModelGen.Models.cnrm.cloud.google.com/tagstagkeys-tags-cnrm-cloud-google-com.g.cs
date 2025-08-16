@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.tags.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagKeyMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagsTagKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TagsTagKey>
 {
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagsTagKeyList";
+    public const string KubeGroup = "tags.cnrm.cloud.google.com";
+    public const string KubePluralName = "tagstagkeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TagsTagKey> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagKeySpec
+public partial class V1beta1TagsTagKeySpec
 {
     /// <summary>User-assigned description of the TagKey. Must not exceed 256 characters.</summary>
     [JsonPropertyName("description")]
@@ -45,7 +65,7 @@ public partial class TagsTagKeySpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagKeyStatusConditions
+public partial class V1beta1TagsTagKeyStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -70,11 +90,11 @@ public partial class TagsTagKeyStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagKeyStatus
+public partial class V1beta1TagsTagKeyStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<TagsTagKeyStatusConditions>? Conditions { get; set; }
+    public IList<V1beta1TagsTagKeyStatusConditions>? Conditions { get; set; }
 
     /// <summary>Output only. Creation time.  A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".</summary>
     [JsonPropertyName("createTime")]
@@ -99,25 +119,30 @@ public partial class TagsTagKeyStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class TagsTagKey
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TagsTagKey : IKubernetesObject<V1ObjectMeta>, ISpec<V1beta1TagsTagKeySpec>, IStatus<V1beta1TagsTagKeyStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TagsTagKey";
+    public const string KubeGroup = "tags.cnrm.cloud.google.com";
+    public const string KubePluralName = "tagstagkeys";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public TagsTagKeyMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public TagsTagKeySpec Spec { get; set; }
+    public V1beta1TagsTagKeySpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public TagsTagKeyStatus? Status { get; set; }
+    public V1beta1TagsTagKeyStatus? Status { get; set; }
 }

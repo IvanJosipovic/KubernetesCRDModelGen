@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.m.upbound.io;
+/// <summary>TrafficManagerProfile is the Schema for the TrafficManagerProfiles API. Manages a Traffic Manager Profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TrafficManagerProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficManagerProfile>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TrafficManagerProfileList";
+    public const string KubeGroup = "network.azure.m.upbound.io";
+    public const string KubePluralName = "trafficmanagerprofiles";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TrafficManagerProfile> Items { get; set; }
+}
+
 /// <summary>This block specifies the DNS configuration of the Profile. One dns_config block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerProfileSpecForProviderDnsConfig
@@ -505,30 +531,4 @@ public partial class V1beta1TrafficManagerProfile : IKubernetesObject<V1ObjectMe
     /// <summary>TrafficManagerProfileStatus defines the observed state of TrafficManagerProfile.</summary>
     [JsonPropertyName("status")]
     public V1beta1TrafficManagerProfileStatus? Status { get; set; }
-}
-
-/// <summary>TrafficManagerProfile is the Schema for the TrafficManagerProfiles API. Manages a Traffic Manager Profile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TrafficManagerProfileList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficManagerProfile>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TrafficManagerProfileList";
-    public const string KubeGroup = "network.azure.m.upbound.io";
-    public const string KubePluralName = "trafficmanagerprofiles";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TrafficManagerProfile> Items { get; set; }
 }

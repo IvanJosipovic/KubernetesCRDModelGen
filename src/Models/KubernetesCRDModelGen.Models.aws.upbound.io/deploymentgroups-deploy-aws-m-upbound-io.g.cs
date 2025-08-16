@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.deploy.aws.m.upbound.io;
+/// <summary>DeploymentGroup is the Schema for the DeploymentGroups API. Provides a CodeDeploy deployment group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DeploymentGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeploymentGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DeploymentGroupList";
+    public const string KubeGroup = "deploy.aws.m.upbound.io";
+    public const string KubePluralName = "deploymentgroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DeploymentGroup> Items { get; set; }
+}
+
 /// <summary>Configuration block of alarms associated with the deployment group (documented below).</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeploymentGroupSpecForProviderAlarmConfiguration
@@ -2244,30 +2270,4 @@ public partial class V1beta1DeploymentGroup : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>DeploymentGroupStatus defines the observed state of DeploymentGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1DeploymentGroupStatus? Status { get; set; }
-}
-
-/// <summary>DeploymentGroup is the Schema for the DeploymentGroups API. Provides a CodeDeploy deployment group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DeploymentGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeploymentGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DeploymentGroupList";
-    public const string KubeGroup = "deploy.aws.m.upbound.io";
-    public const string KubePluralName = "deploymentgroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DeploymentGroup> Items { get; set; }
 }

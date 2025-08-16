@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.iot.aws.upbound.io;
+/// <summary>ThingPrincipalAttachment is the Schema for the ThingPrincipalAttachments API. Provides AWS IoT Thing Principal attachment.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ThingPrincipalAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ThingPrincipalAttachment>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ThingPrincipalAttachmentList";
+    public const string KubeGroup = "iot.aws.upbound.io";
+    public const string KubePluralName = "thingprincipalattachments";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ThingPrincipalAttachment> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ThingPrincipalAttachmentSpecForProviderPrincipalRefPolicy
@@ -457,30 +483,4 @@ public partial class V1beta1ThingPrincipalAttachment : IKubernetesObject<V1Objec
     /// <summary>ThingPrincipalAttachmentStatus defines the observed state of ThingPrincipalAttachment.</summary>
     [JsonPropertyName("status")]
     public V1beta1ThingPrincipalAttachmentStatus? Status { get; set; }
-}
-
-/// <summary>ThingPrincipalAttachment is the Schema for the ThingPrincipalAttachments API. Provides AWS IoT Thing Principal attachment.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ThingPrincipalAttachmentList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ThingPrincipalAttachment>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ThingPrincipalAttachmentList";
-    public const string KubeGroup = "iot.aws.upbound.io";
-    public const string KubePluralName = "thingprincipalattachments";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ThingPrincipalAttachment> Items { get; set; }
 }

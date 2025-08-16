@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.costmanagement.azure.m.upbound.io;
+/// <summary>ResourceGroupCostManagementExport is the Schema for the ResourceGroupCostManagementExports API. Manages an Azure Cost Management Export for a Resource Group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ResourceGroupCostManagementExportList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceGroupCostManagementExport>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ResourceGroupCostManagementExportList";
+    public const string KubeGroup = "costmanagement.azure.m.upbound.io";
+    public const string KubePluralName = "resourcegroupcostmanagementexports";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ResourceGroupCostManagementExport> Items { get; set; }
+}
+
 /// <summary>A export_data_options block as defined below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ResourceGroupCostManagementExportSpecForProviderExportDataOptions
@@ -610,30 +636,4 @@ public partial class V1beta1ResourceGroupCostManagementExport : IKubernetesObjec
     /// <summary>ResourceGroupCostManagementExportStatus defines the observed state of ResourceGroupCostManagementExport.</summary>
     [JsonPropertyName("status")]
     public V1beta1ResourceGroupCostManagementExportStatus? Status { get; set; }
-}
-
-/// <summary>ResourceGroupCostManagementExport is the Schema for the ResourceGroupCostManagementExports API. Manages an Azure Cost Management Export for a Resource Group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ResourceGroupCostManagementExportList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ResourceGroupCostManagementExport>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ResourceGroupCostManagementExportList";
-    public const string KubeGroup = "costmanagement.azure.m.upbound.io";
-    public const string KubePluralName = "resourcegroupcostmanagementexports";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ResourceGroupCostManagementExport> Items { get; set; }
 }

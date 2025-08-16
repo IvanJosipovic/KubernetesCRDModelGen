@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.bigtable.gcp.m.upbound.io;
+/// <summary>TableIAMPolicy is the Schema for the TableIAMPolicys API. Collection of resources to manage IAM policy for a Bigtable Table.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TableIAMPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TableIAMPolicy>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TableIAMPolicyList";
+    public const string KubeGroup = "bigtable.gcp.m.upbound.io";
+    public const string KubePluralName = "tableiampolicies";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TableIAMPolicy> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TableIAMPolicySpecForProvider
@@ -196,30 +222,4 @@ public partial class V1beta1TableIAMPolicy : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>TableIAMPolicyStatus defines the observed state of TableIAMPolicy.</summary>
     [JsonPropertyName("status")]
     public V1beta1TableIAMPolicyStatus? Status { get; set; }
-}
-
-/// <summary>TableIAMPolicy is the Schema for the TableIAMPolicys API. Collection of resources to manage IAM policy for a Bigtable Table.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TableIAMPolicyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TableIAMPolicy>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TableIAMPolicyList";
-    public const string KubeGroup = "bigtable.gcp.m.upbound.io";
-    public const string KubePluralName = "tableiampolicies";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TableIAMPolicy> Items { get; set; }
 }

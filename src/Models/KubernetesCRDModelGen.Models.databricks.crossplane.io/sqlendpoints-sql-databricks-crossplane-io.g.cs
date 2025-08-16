@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.sql.databricks.crossplane.io;
+/// <summary>SQLEndpoint is the Schema for the SQLEndpoints API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1SQLEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SQLEndpoint>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "SQLEndpointList";
+    public const string KubeGroup = "sql.databricks.crossplane.io";
+    public const string KubePluralName = "sqlendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1SQLEndpoint> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1SQLEndpointSpecForProviderChannel
@@ -585,30 +611,4 @@ public partial class V1alpha1SQLEndpoint : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>SQLEndpointStatus defines the observed state of SQLEndpoint.</summary>
     [JsonPropertyName("status")]
     public V1alpha1SQLEndpointStatus? Status { get; set; }
-}
-
-/// <summary>SQLEndpoint is the Schema for the SQLEndpoints API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1SQLEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1SQLEndpoint>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "SQLEndpointList";
-    public const string KubeGroup = "sql.databricks.crossplane.io";
-    public const string KubePluralName = "sqlendpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1SQLEndpoint> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.invitations.azuread.m.upbound.io;
+/// <summary>Invitation is the Schema for the Invitations API.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1InvitationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Invitation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "InvitationList";
+    public const string KubeGroup = "invitations.azuread.m.upbound.io";
+    public const string KubePluralName = "invitations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1Invitation> Items { get; set; }
+}
+
 /// <summary>A message block as documented below, which configures the message being sent to the invited user. If this block is omitted, no message will be sent. Customize the message sent to the invited user</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1InvitationSpecForProviderMessage
@@ -267,30 +293,4 @@ public partial class V1beta1Invitation : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>InvitationStatus defines the observed state of Invitation.</summary>
     [JsonPropertyName("status")]
     public V1beta1InvitationStatus? Status { get; set; }
-}
-
-/// <summary>Invitation is the Schema for the Invitations API.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1InvitationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1Invitation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "InvitationList";
-    public const string KubeGroup = "invitations.azuread.m.upbound.io";
-    public const string KubePluralName = "invitations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1Invitation> Items { get; set; }
 }

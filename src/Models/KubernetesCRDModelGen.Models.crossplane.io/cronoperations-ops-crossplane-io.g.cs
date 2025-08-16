@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.ops.crossplane.io;
+/// <summary>A CronOperation creates Operations on a cron schedule.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1CronOperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1CronOperation>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "CronOperationList";
+    public const string KubeGroup = "ops.crossplane.io";
+    public const string KubePluralName = "cronoperations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1CronOperation> Items { get; set; }
+}
+
 /// <summary>Standard object metadata.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1CronOperationSpecOperationTemplateMetadata
@@ -262,30 +288,4 @@ public partial class V1alpha1CronOperation : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>CronOperationStatus represents the observed state of a CronOperation.</summary>
     [JsonPropertyName("status")]
     public V1alpha1CronOperationStatus? Status { get; set; }
-}
-
-/// <summary>A CronOperation creates Operations on a cron schedule.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1CronOperationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1CronOperation>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "CronOperationList";
-    public const string KubeGroup = "ops.crossplane.io";
-    public const string KubePluralName = "cronoperations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1CronOperation> Items { get; set; }
 }

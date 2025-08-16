@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudwatch.aws.upbound.io;
+/// <summary>CompositeAlarm is the Schema for the CompositeAlarms API. Provides a CloudWatch Composite Alarm resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1CompositeAlarmList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CompositeAlarm>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "CompositeAlarmList";
+    public const string KubeGroup = "cloudwatch.aws.upbound.io";
+    public const string KubePluralName = "compositealarms";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1CompositeAlarm> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1CompositeAlarmSpecForProviderActionsSuppressor
@@ -588,30 +614,4 @@ public partial class V1beta1CompositeAlarm : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>CompositeAlarmStatus defines the observed state of CompositeAlarm.</summary>
     [JsonPropertyName("status")]
     public V1beta1CompositeAlarmStatus? Status { get; set; }
-}
-
-/// <summary>CompositeAlarm is the Schema for the CompositeAlarms API. Provides a CloudWatch Composite Alarm resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1CompositeAlarmList : IKubernetesObject<V1ListMeta>, IItems<V1beta1CompositeAlarm>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "CompositeAlarmList";
-    public const string KubeGroup = "cloudwatch.aws.upbound.io";
-    public const string KubePluralName = "compositealarms";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1CompositeAlarm> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.secretsmanager.aws.upbound.io;
+/// <summary>SecretRotation is the Schema for the SecretRotations API. Provides a resource to manage AWS Secrets Manager secret rotation</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SecretRotationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretRotation>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SecretRotationList";
+    public const string KubeGroup = "secretsmanager.aws.upbound.io";
+    public const string KubePluralName = "secretrotations";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SecretRotation> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SecretRotationSpecForProviderRotationLambdaArnRefPolicy
@@ -536,30 +562,4 @@ public partial class V1beta1SecretRotation : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>SecretRotationStatus defines the observed state of SecretRotation.</summary>
     [JsonPropertyName("status")]
     public V1beta1SecretRotationStatus? Status { get; set; }
-}
-
-/// <summary>SecretRotation is the Schema for the SecretRotations API. Provides a resource to manage AWS Secrets Manager secret rotation</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SecretRotationList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SecretRotation>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SecretRotationList";
-    public const string KubeGroup = "secretsmanager.aws.upbound.io";
-    public const string KubePluralName = "secretrotations";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SecretRotation> Items { get; set; }
 }

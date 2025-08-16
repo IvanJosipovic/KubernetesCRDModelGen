@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedidentity.azure.upbound.io;
+/// <summary>FederatedIdentityCredential is the Schema for the FederatedIdentityCredentials API. Manages a Federated Identity Credential.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1FederatedIdentityCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FederatedIdentityCredential>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "FederatedIdentityCredentialList";
+    public const string KubeGroup = "managedidentity.azure.upbound.io";
+    public const string KubePluralName = "federatedidentitycredentials";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1FederatedIdentityCredential> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1FederatedIdentityCredentialSpecForProviderParentIdRefPolicy
@@ -417,30 +443,4 @@ public partial class V1beta1FederatedIdentityCredential : IKubernetesObject<V1Ob
     /// <summary>FederatedIdentityCredentialStatus defines the observed state of FederatedIdentityCredential.</summary>
     [JsonPropertyName("status")]
     public V1beta1FederatedIdentityCredentialStatus? Status { get; set; }
-}
-
-/// <summary>FederatedIdentityCredential is the Schema for the FederatedIdentityCredentials API. Manages a Federated Identity Credential.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1FederatedIdentityCredentialList : IKubernetesObject<V1ListMeta>, IItems<V1beta1FederatedIdentityCredential>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "FederatedIdentityCredentialList";
-    public const string KubeGroup = "managedidentity.azure.upbound.io";
-    public const string KubePluralName = "federatedidentitycredentials";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1FederatedIdentityCredential> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.managedkafka.cnrm.cloud.google.com;
+/// <summary>ManagedKafkaTopic is the Schema for the ManagedKafkaTopic API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagedKafkaTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagedKafkaTopic>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagedKafkaTopicList";
+    public const string KubeGroup = "managedkafka.cnrm.cloud.google.com";
+    public const string KubePluralName = "managedkafkatopics";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ManagedKafkaTopic> Items { get; set; }
+}
+
 /// <summary>Required. Reference to the Kafka cluster to create the topic in.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagedKafkaTopicSpecClusterRef
@@ -149,30 +175,4 @@ public partial class V1beta1ManagedKafkaTopic : IKubernetesObject<V1ObjectMeta>,
     /// <summary>ManagedKafkaTopicStatus defines the config connector machine state of ManagedKafkaTopic</summary>
     [JsonPropertyName("status")]
     public V1beta1ManagedKafkaTopicStatus? Status { get; set; }
-}
-
-/// <summary>ManagedKafkaTopic is the Schema for the ManagedKafkaTopic API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ManagedKafkaTopicList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagedKafkaTopic>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ManagedKafkaTopicList";
-    public const string KubeGroup = "managedkafka.cnrm.cloud.google.com";
-    public const string KubePluralName = "managedkafkatopics";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ManagedKafkaTopic> Items { get; set; }
 }

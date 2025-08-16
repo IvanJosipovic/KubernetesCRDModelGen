@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.keda.sh;
+/// <summary>TriggerAuthentication defines how a trigger can authenticate</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1TriggerAuthenticationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TriggerAuthentication>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "TriggerAuthenticationList";
+    public const string KubeGroup = "keda.sh";
+    public const string KubePluralName = "triggerauthentications";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1TriggerAuthentication> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1TriggerAuthenticationSpecAwsSecretManagerCredentialsAccessKeyValueFromSecretKeyRef
@@ -711,30 +737,4 @@ public partial class V1alpha1TriggerAuthentication : IKubernetesObject<V1ObjectM
     /// <summary>TriggerAuthenticationStatus defines the observed state of TriggerAuthentication</summary>
     [JsonPropertyName("status")]
     public V1alpha1TriggerAuthenticationStatus? Status { get; set; }
-}
-
-/// <summary>TriggerAuthentication defines how a trigger can authenticate</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1TriggerAuthenticationList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1TriggerAuthentication>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "TriggerAuthenticationList";
-    public const string KubeGroup = "keda.sh";
-    public const string KubePluralName = "triggerauthentications";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1TriggerAuthentication> Items { get; set; }
 }

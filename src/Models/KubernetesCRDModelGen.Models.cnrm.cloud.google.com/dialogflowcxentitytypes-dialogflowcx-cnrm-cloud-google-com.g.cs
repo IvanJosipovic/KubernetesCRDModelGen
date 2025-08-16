@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.dialogflowcx.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityTypeMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DialogflowCXEntityTypeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1DialogflowCXEntityType>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DialogflowCXEntityTypeList";
+    public const string KubeGroup = "dialogflowcx.cnrm.cloud.google.com";
+    public const string KubePluralName = "dialogflowcxentitytypes";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1DialogflowCXEntityType> Items { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityTypeSpecEntities
+public partial class V1alpha1DialogflowCXEntityTypeSpecEntities
 {
     /// <summary>A collection of value synonyms. For example, if the entity type is vegetable, and value is scallions, a synonym could be green onions. For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.</summary>
     [JsonPropertyName("synonyms")]
@@ -29,7 +49,7 @@ public partial class DialogflowCXEntityTypeSpecEntities
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityTypeSpecExcludedPhrases
+public partial class V1alpha1DialogflowCXEntityTypeSpecExcludedPhrases
 {
     /// <summary>The word or phrase to be excluded.</summary>
     [JsonPropertyName("value")]
@@ -38,7 +58,7 @@ public partial class DialogflowCXEntityTypeSpecExcludedPhrases
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityTypeSpec
+public partial class V1alpha1DialogflowCXEntityTypeSpec
 {
     /// <summary>Represents kinds of entities. * AUTO_EXPANSION_MODE_UNSPECIFIED: Auto expansion disabled for the entity. * AUTO_EXPANSION_MODE_DEFAULT: Allows an agent to recognize values that have not been explicitly listed in the entity. Possible values: ["AUTO_EXPANSION_MODE_DEFAULT", "AUTO_EXPANSION_MODE_UNSPECIFIED"].</summary>
     [JsonPropertyName("autoExpansionMode")]
@@ -54,11 +74,11 @@ public partial class DialogflowCXEntityTypeSpec
 
     /// <summary>The collection of entity entries associated with the entity type.</summary>
     [JsonPropertyName("entities")]
-    public IList<DialogflowCXEntityTypeSpecEntities> Entities { get; set; }
+    public IList<V1alpha1DialogflowCXEntityTypeSpecEntities> Entities { get; set; }
 
     /// <summary>Collection of exceptional words and phrases that shouldn't be matched. For example, if you have a size entity type with entry giant(an adjective), you might consider adding giants(a noun) as an exclusion. If the kind of entity type is KIND_MAP, then the phrases specified by entities and excluded phrases should be mutually exclusive.</summary>
     [JsonPropertyName("excludedPhrases")]
-    public IList<DialogflowCXEntityTypeSpecExcludedPhrases>? ExcludedPhrases { get; set; }
+    public IList<V1alpha1DialogflowCXEntityTypeSpecExcludedPhrases>? ExcludedPhrases { get; set; }
 
     /// <summary>Indicates whether the entity type can be automatically expanded. * KIND_MAP: Map entity types allow mapping of a group of synonyms to a canonical value. * KIND_LIST: List entity types contain a set of entries that do not map to canonical values. However, list entity types can contain references to other entity types (with or without aliases). * KIND_REGEXP: Regexp entity types allow to specify regular expressions in entries values. Possible values: ["KIND_MAP", "KIND_LIST", "KIND_REGEXP"].</summary>
     [JsonPropertyName("kind")]
@@ -83,7 +103,7 @@ public partial class DialogflowCXEntityTypeSpec
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityTypeStatusConditions
+public partial class V1alpha1DialogflowCXEntityTypeStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -108,11 +128,11 @@ public partial class DialogflowCXEntityTypeStatusConditions
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityTypeStatus
+public partial class V1alpha1DialogflowCXEntityTypeStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<DialogflowCXEntityTypeStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1DialogflowCXEntityTypeStatusConditions>? Conditions { get; set; }
 
     /// <summary>The unique identifier of the entity type. Format: projects/&lt;Project ID&gt;/locations/&lt;Location ID&gt;/agents/&lt;Agent ID&gt;/entityTypes/&lt;Entity Type ID&gt;.</summary>
     [JsonPropertyName("name")]
@@ -125,25 +145,30 @@ public partial class DialogflowCXEntityTypeStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class DialogflowCXEntityType
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1DialogflowCXEntityType : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1DialogflowCXEntityTypeSpec>, IStatus<V1alpha1DialogflowCXEntityTypeStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "DialogflowCXEntityType";
+    public const string KubeGroup = "dialogflowcx.cnrm.cloud.google.com";
+    public const string KubePluralName = "dialogflowcxentitytypes";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public DialogflowCXEntityTypeMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public DialogflowCXEntityTypeSpec Spec { get; set; }
+    public V1alpha1DialogflowCXEntityTypeSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public DialogflowCXEntityTypeStatus? Status { get; set; }
+    public V1alpha1DialogflowCXEntityTypeStatus? Status { get; set; }
 }

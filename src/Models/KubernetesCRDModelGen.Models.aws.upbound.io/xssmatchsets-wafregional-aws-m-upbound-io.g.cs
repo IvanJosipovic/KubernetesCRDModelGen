@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.wafregional.aws.m.upbound.io;
+/// <summary>XSSMatchSet is the Schema for the XSSMatchSets API. Provides an AWS WAF Regional XSS Match Set resource for use with ALB.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1XSSMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1XSSMatchSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "XSSMatchSetList";
+    public const string KubeGroup = "wafregional.aws.m.upbound.io";
+    public const string KubePluralName = "xssmatchsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1XSSMatchSet> Items { get; set; }
+}
+
 /// <summary>Specifies where in a web request to look for cross-site scripting attacks.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1XSSMatchSetSpecForProviderXssMatchTupleFieldToMatch
@@ -258,30 +284,4 @@ public partial class V1beta1XSSMatchSet : IKubernetesObject<V1ObjectMeta>, ISpec
     /// <summary>XSSMatchSetStatus defines the observed state of XSSMatchSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1XSSMatchSetStatus? Status { get; set; }
-}
-
-/// <summary>XSSMatchSet is the Schema for the XSSMatchSets API. Provides an AWS WAF Regional XSS Match Set resource for use with ALB.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1XSSMatchSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1XSSMatchSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "XSSMatchSetList";
-    public const string KubeGroup = "wafregional.aws.m.upbound.io";
-    public const string KubePluralName = "xssmatchsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1XSSMatchSet> Items { get; set; }
 }

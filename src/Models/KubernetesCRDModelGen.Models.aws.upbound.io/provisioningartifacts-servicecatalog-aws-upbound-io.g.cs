@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.servicecatalog.aws.upbound.io;
+/// <summary>ProvisioningArtifact is the Schema for the ProvisioningArtifacts API. Manages a Service Catalog Provisioning Artifact</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ProvisioningArtifactList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProvisioningArtifact>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ProvisioningArtifactList";
+    public const string KubeGroup = "servicecatalog.aws.upbound.io";
+    public const string KubePluralName = "provisioningartifacts";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ProvisioningArtifact> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ProvisioningArtifactSpecForProviderProductIdRefPolicy
@@ -433,30 +459,4 @@ public partial class V1beta1ProvisioningArtifact : IKubernetesObject<V1ObjectMet
     /// <summary>ProvisioningArtifactStatus defines the observed state of ProvisioningArtifact.</summary>
     [JsonPropertyName("status")]
     public V1beta1ProvisioningArtifactStatus? Status { get; set; }
-}
-
-/// <summary>ProvisioningArtifact is the Schema for the ProvisioningArtifacts API. Manages a Service Catalog Provisioning Artifact</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ProvisioningArtifactList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ProvisioningArtifact>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ProvisioningArtifactList";
-    public const string KubeGroup = "servicecatalog.aws.upbound.io";
-    public const string KubePluralName = "provisioningartifacts";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ProvisioningArtifact> Items { get; set; }
 }

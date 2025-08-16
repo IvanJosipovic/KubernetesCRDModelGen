@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.networkconnectivity.cnrm.cloud.google.com;
+/// <summary>NetworkConnectivityInternalRange is the Schema for the NetworkConnectivityInternalRange API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1NetworkConnectivityInternalRangeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NetworkConnectivityInternalRange>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "NetworkConnectivityInternalRangeList";
+    public const string KubeGroup = "networkconnectivity.cnrm.cloud.google.com";
+    public const string KubePluralName = "networkconnectivityinternalranges";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1NetworkConnectivityInternalRange> Items { get; set; }
+}
+
 /// <summary>Optional. Must be present if usage is set to FOR_MIGRATION. This field is for internal use.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1NetworkConnectivityInternalRangeSpecMigration
@@ -207,30 +233,4 @@ public partial class V1alpha1NetworkConnectivityInternalRange : IKubernetesObjec
     /// <summary>NetworkConnectivityInternalRangeStatus defines the config connector machine state of NetworkConnectivityInternalRange</summary>
     [JsonPropertyName("status")]
     public V1alpha1NetworkConnectivityInternalRangeStatus? Status { get; set; }
-}
-
-/// <summary>NetworkConnectivityInternalRange is the Schema for the NetworkConnectivityInternalRange API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1NetworkConnectivityInternalRangeList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1NetworkConnectivityInternalRange>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "NetworkConnectivityInternalRangeList";
-    public const string KubeGroup = "networkconnectivity.cnrm.cloud.google.com";
-    public const string KubePluralName = "networkconnectivityinternalranges";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1NetworkConnectivityInternalRange> Items { get; set; }
 }

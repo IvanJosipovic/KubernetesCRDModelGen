@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.network.azure.upbound.io;
+/// <summary>TrafficManagerExternalEndpoint is the Schema for the TrafficManagerExternalEndpoints API. Manages an External Endpoint within a Traffic Manager Profile.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1TrafficManagerExternalEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficManagerExternalEndpoint>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "TrafficManagerExternalEndpointList";
+    public const string KubeGroup = "network.azure.upbound.io";
+    public const string KubePluralName = "trafficmanagerexternalendpoints";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1TrafficManagerExternalEndpoint> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1TrafficManagerExternalEndpointSpecForProviderCustomHeader
@@ -439,30 +465,4 @@ public partial class V1beta1TrafficManagerExternalEndpoint : IKubernetesObject<V
     /// <summary>TrafficManagerExternalEndpointStatus defines the observed state of TrafficManagerExternalEndpoint.</summary>
     [JsonPropertyName("status")]
     public V1beta1TrafficManagerExternalEndpointStatus? Status { get; set; }
-}
-
-/// <summary>TrafficManagerExternalEndpoint is the Schema for the TrafficManagerExternalEndpoints API. Manages an External Endpoint within a Traffic Manager Profile.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1TrafficManagerExternalEndpointList : IKubernetesObject<V1ListMeta>, IItems<V1beta1TrafficManagerExternalEndpoint>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "TrafficManagerExternalEndpointList";
-    public const string KubeGroup = "network.azure.upbound.io";
-    public const string KubePluralName = "trafficmanagerexternalendpoints";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1TrafficManagerExternalEndpoint> Items { get; set; }
 }

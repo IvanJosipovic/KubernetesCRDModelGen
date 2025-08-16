@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.apiextensions.crossplane.io;
+/// <summary>A CompositionRevision represents a revision of a Composition. Crossplane creates new revisions when there are changes to the Composition.  Crossplane creates and manages CompositionRevisions. Don't directly edit CompositionRevisions.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1CompositionRevisionList : IKubernetesObject<V1ListMeta>, IItems<V1CompositionRevision>
+{
+    public const string KubeApiVersion = "v1";
+    public const string KubeKind = "CompositionRevisionList";
+    public const string KubeGroup = "apiextensions.crossplane.io";
+    public const string KubePluralName = "compositionrevisions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1CompositionRevision> Items { get; set; }
+}
+
 /// <summary>CompositeTypeRef specifies the type of composite resource that this composition is compatible with.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1CompositionRevisionSpecCompositeTypeRef
@@ -214,30 +240,4 @@ public partial class V1CompositionRevision : IKubernetesObject<V1ObjectMeta>, IS
     /// <summary>CompositionRevisionStatus shows the observed state of the composition revision.</summary>
     [JsonPropertyName("status")]
     public V1CompositionRevisionStatus? Status { get; set; }
-}
-
-/// <summary>A CompositionRevision represents a revision of a Composition. Crossplane creates new revisions when there are changes to the Composition.  Crossplane creates and manages CompositionRevisions. Don't directly edit CompositionRevisions.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1CompositionRevisionList : IKubernetesObject<V1ListMeta>, IItems<V1CompositionRevision>
-{
-    public const string KubeApiVersion = "v1";
-    public const string KubeKind = "CompositionRevisionList";
-    public const string KubeGroup = "apiextensions.crossplane.io";
-    public const string KubePluralName = "compositionrevisions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1CompositionRevision> Items { get; set; }
 }

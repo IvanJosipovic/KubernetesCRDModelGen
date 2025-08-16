@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.redis.cnrm.cloud.google.com;
+/// <summary>RedisCluster is the Schema for the RedisCluster API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RedisClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCluster>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RedisClusterList";
+    public const string KubeGroup = "redis.cnrm.cloud.google.com";
+    public const string KubePluralName = "redisclusters";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RedisCluster> Items { get; set; }
+}
+
 /// <summary>Optional. AOF configuration. This field will be ignored if mode is not AOF.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RedisClusterSpecPersistenceConfigAofConfig
@@ -348,30 +374,4 @@ public partial class V1beta1RedisCluster : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>RedisClusterStatus defines the config connector machine state of RedisCluster</summary>
     [JsonPropertyName("status")]
     public V1beta1RedisClusterStatus? Status { get; set; }
-}
-
-/// <summary>RedisCluster is the Schema for the RedisCluster API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RedisClusterList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RedisCluster>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RedisClusterList";
-    public const string KubeGroup = "redis.cnrm.cloud.google.com";
-    public const string KubePluralName = "redisclusters";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RedisCluster> Items { get; set; }
 }

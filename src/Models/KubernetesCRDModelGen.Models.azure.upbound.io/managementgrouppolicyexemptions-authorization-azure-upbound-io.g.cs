@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.authorization.azure.upbound.io;
+/// <summary>ManagementGroupPolicyExemption is the Schema for the ManagementGroupPolicyExemptions API. Manages a Management Group Policy Exemption.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ManagementGroupPolicyExemptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagementGroupPolicyExemption>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ManagementGroupPolicyExemptionList";
+    public const string KubeGroup = "authorization.azure.upbound.io";
+    public const string KubePluralName = "managementgrouppolicyexemptions";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ManagementGroupPolicyExemption> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ManagementGroupPolicyExemptionSpecForProviderManagementGroupIdRefPolicy
@@ -453,30 +479,4 @@ public partial class V1beta1ManagementGroupPolicyExemption : IKubernetesObject<V
     /// <summary>ManagementGroupPolicyExemptionStatus defines the observed state of ManagementGroupPolicyExemption.</summary>
     [JsonPropertyName("status")]
     public V1beta1ManagementGroupPolicyExemptionStatus? Status { get; set; }
-}
-
-/// <summary>ManagementGroupPolicyExemption is the Schema for the ManagementGroupPolicyExemptions API. Manages a Management Group Policy Exemption.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ManagementGroupPolicyExemptionList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ManagementGroupPolicyExemption>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ManagementGroupPolicyExemptionList";
-    public const string KubeGroup = "authorization.azure.upbound.io";
-    public const string KubePluralName = "managementgrouppolicyexemptions";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ManagementGroupPolicyExemption> Items { get; set; }
 }

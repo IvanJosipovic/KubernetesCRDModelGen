@@ -10,13 +10,33 @@ using System.Text.Json.Serialization;
 namespace KubernetesCRDModelGen.Models.accesscontextmanager.cnrm.cloud.google.com;
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResourceMetadata
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AccessContextManagerServicePerimeterResourceList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1AccessContextManagerServicePerimeterResource>
 {
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AccessContextManagerServicePerimeterResourceList";
+    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "accesscontextmanagerserviceperimeterresources";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1AccessContextManagerServicePerimeterResource> Items { get; set; }
 }
 
 /// <summary>Only the `external` field is supported to configure the reference.  The name of the Service Perimeter to add this resource to.  Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResourceSpecPerimeterNameRef
+public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecPerimeterNameRef
 {
     /// <summary>Allowed value: The `name` field of an `AccessContextManagerServicePerimeter` resource.</summary>
     [JsonPropertyName("external")]
@@ -33,7 +53,7 @@ public partial class AccessContextManagerServicePerimeterResourceSpecPerimeterNa
 
 /// <summary>A GCP resource that is inside of the service perimeter.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResourceSpecResourceRef
+public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpecResourceRef
 {
     /// <summary>Allowed value: string of the format `projects/{{value}}`, where {{value}} is the `number` field of a `Project` resource.</summary>
     [JsonPropertyName("external")]
@@ -50,20 +70,20 @@ public partial class AccessContextManagerServicePerimeterResourceSpecResourceRef
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResourceSpec
+public partial class V1alpha1AccessContextManagerServicePerimeterResourceSpec
 {
     /// <summary>Only the `external` field is supported to configure the reference.  The name of the Service Perimeter to add this resource to.  Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.</summary>
     [JsonPropertyName("perimeterNameRef")]
-    public AccessContextManagerServicePerimeterResourceSpecPerimeterNameRef PerimeterNameRef { get; set; }
+    public V1alpha1AccessContextManagerServicePerimeterResourceSpecPerimeterNameRef PerimeterNameRef { get; set; }
 
     /// <summary>A GCP resource that is inside of the service perimeter.</summary>
     [JsonPropertyName("resourceRef")]
-    public AccessContextManagerServicePerimeterResourceSpecResourceRef ResourceRef { get; set; }
+    public V1alpha1AccessContextManagerServicePerimeterResourceSpecResourceRef ResourceRef { get; set; }
 }
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResourceStatusConditions
+public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatusConditions
 {
     /// <summary>Last time the condition transitioned from one status to another.</summary>
     [JsonPropertyName("lastTransitionTime")]
@@ -88,11 +108,11 @@ public partial class AccessContextManagerServicePerimeterResourceStatusCondition
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResourceStatus
+public partial class V1alpha1AccessContextManagerServicePerimeterResourceStatus
 {
     /// <summary>Conditions represent the latest available observation of the resource's current state.</summary>
     [JsonPropertyName("conditions")]
-    public IList<AccessContextManagerServicePerimeterResourceStatusConditions>? Conditions { get; set; }
+    public IList<V1alpha1AccessContextManagerServicePerimeterResourceStatusConditions>? Conditions { get; set; }
 
     /// <summary>ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.</summary>
     [JsonPropertyName("observedGeneration")]
@@ -101,25 +121,30 @@ public partial class AccessContextManagerServicePerimeterResourceStatus
 
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class AccessContextManagerServicePerimeterResource
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1AccessContextManagerServicePerimeterResource : IKubernetesObject<V1ObjectMeta>, ISpec<V1alpha1AccessContextManagerServicePerimeterResourceSpec>, IStatus<V1alpha1AccessContextManagerServicePerimeterResourceStatus>
 {
-    /// <summary>apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources</summary>
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "AccessContextManagerServicePerimeterResource";
+    public const string KubeGroup = "accesscontextmanager.cnrm.cloud.google.com";
+    public const string KubePluralName = "accesscontextmanagerserviceperimeterresources";
+    /// <summary></summary>
     [JsonPropertyName("apiVersion")]
-    public string? ApiVersion { get; set; }
+    public string ApiVersion { get; set; }
 
-    /// <summary>kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds</summary>
+    /// <summary></summary>
     [JsonPropertyName("kind")]
-    public string? Kind { get; set; }
+    public string Kind { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("metadata")]
-    public AccessContextManagerServicePerimeterResourceMetadata? Metadata { get; set; }
+    public V1ObjectMeta Metadata { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("spec")]
-    public AccessContextManagerServicePerimeterResourceSpec Spec { get; set; }
+    public V1alpha1AccessContextManagerServicePerimeterResourceSpec Spec { get; set; }
 
     /// <summary></summary>
     [JsonPropertyName("status")]
-    public AccessContextManagerServicePerimeterResourceStatus? Status { get; set; }
+    public V1alpha1AccessContextManagerServicePerimeterResourceStatus? Status { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cache.azure.com;
+/// <summary>Storage version of v1api20230801.RedisLinkedServer Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1api20230801storageRedisLinkedServerList : IKubernetesObject<V1ListMeta>, IItems<V1api20230801storageRedisLinkedServer>
+{
+    public const string KubeApiVersion = "v1api20230801storage";
+    public const string KubeKind = "RedisLinkedServerList";
+    public const string KubeGroup = "cache.azure.com";
+    public const string KubePluralName = "redislinkedservers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1api20230801storageRedisLinkedServer> Items { get; set; }
+}
+
 /// <summary>LinkedRedisCacheReference: Fully qualified resourceId of the linked redis cache.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1api20230801storageRedisLinkedServerSpecLinkedRedisCacheReference
@@ -240,30 +266,4 @@ public partial class V1api20230801storageRedisLinkedServer : IKubernetesObject<V
     /// <summary>Storage version of v1api20230801.Redis_LinkedServer_STATUS</summary>
     [JsonPropertyName("status")]
     public V1api20230801storageRedisLinkedServerStatus? Status { get; set; }
-}
-
-/// <summary>Storage version of v1api20230801.RedisLinkedServer Generator information: - Generated from: /redis/resource-manager/Microsoft.Cache/stable/2023-08-01/redis.json - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cache/redis/{name}/linkedServers/{linkedServerName}</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1api20230801storageRedisLinkedServerList : IKubernetesObject<V1ListMeta>, IItems<V1api20230801storageRedisLinkedServer>
-{
-    public const string KubeApiVersion = "v1api20230801storage";
-    public const string KubeKind = "RedisLinkedServerList";
-    public const string KubeGroup = "cache.azure.com";
-    public const string KubePluralName = "redislinkedservers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1api20230801storageRedisLinkedServer> Items { get; set; }
 }

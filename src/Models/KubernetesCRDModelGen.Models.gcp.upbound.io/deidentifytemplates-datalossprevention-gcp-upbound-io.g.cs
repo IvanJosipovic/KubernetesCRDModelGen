@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.datalossprevention.gcp.upbound.io;
+/// <summary>DeidentifyTemplate is the Schema for the DeidentifyTemplates API. Allows creation of templates to de-identify content.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1DeidentifyTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeidentifyTemplate>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "DeidentifyTemplateList";
+    public const string KubeGroup = "datalossprevention.gcp.upbound.io";
+    public const string KubePluralName = "deidentifytemplates";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1DeidentifyTemplate> Items { get; set; }
+}
+
 /// <summary></summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1DeidentifyTemplateSpecForProviderDeidentifyConfigImageTransformationsTransformsAllInfoTypes
@@ -9845,30 +9871,4 @@ public partial class V1beta1DeidentifyTemplate : IKubernetesObject<V1ObjectMeta>
     /// <summary>DeidentifyTemplateStatus defines the observed state of DeidentifyTemplate.</summary>
     [JsonPropertyName("status")]
     public V1beta1DeidentifyTemplateStatus? Status { get; set; }
-}
-
-/// <summary>DeidentifyTemplate is the Schema for the DeidentifyTemplates API. Allows creation of templates to de-identify content.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1DeidentifyTemplateList : IKubernetesObject<V1ListMeta>, IItems<V1beta1DeidentifyTemplate>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "DeidentifyTemplateList";
-    public const string KubeGroup = "datalossprevention.gcp.upbound.io";
-    public const string KubePluralName = "deidentifytemplates";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1DeidentifyTemplate> Items { get; set; }
 }

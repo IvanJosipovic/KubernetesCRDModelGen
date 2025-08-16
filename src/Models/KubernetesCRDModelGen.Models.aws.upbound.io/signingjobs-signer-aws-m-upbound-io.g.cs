@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.signer.aws.m.upbound.io;
+/// <summary>SigningJob is the Schema for the SigningJobs API. Creates a Signer Signing Job.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1SigningJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SigningJob>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "SigningJobList";
+    public const string KubeGroup = "signer.aws.m.upbound.io";
+    public const string KubePluralName = "signingjobs";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1SigningJob> Items { get; set; }
+}
+
 /// <summary>A configuration block describing the S3 Source object: See S3 Source below for details.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1SigningJobSpecForProviderDestinationS3
@@ -587,30 +613,4 @@ public partial class V1beta1SigningJob : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>SigningJobStatus defines the observed state of SigningJob.</summary>
     [JsonPropertyName("status")]
     public V1beta1SigningJobStatus? Status { get; set; }
-}
-
-/// <summary>SigningJob is the Schema for the SigningJobs API. Creates a Signer Signing Job.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1SigningJobList : IKubernetesObject<V1ListMeta>, IItems<V1beta1SigningJob>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "SigningJobList";
-    public const string KubeGroup = "signer.aws.m.upbound.io";
-    public const string KubePluralName = "signingjobs";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1SigningJob> Items { get; set; }
 }

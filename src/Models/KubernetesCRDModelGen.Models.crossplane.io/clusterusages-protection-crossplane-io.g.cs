@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.protection.crossplane.io;
+/// <summary>A ClusterUsage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about usages](https://docs.crossplane.io/latest/concepts/usages).</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1ClusterUsageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterUsage>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "ClusterUsageList";
+    public const string KubeGroup = "protection.crossplane.io";
+    public const string KubePluralName = "clusterusages";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1ClusterUsage> Items { get; set; }
+}
+
 /// <summary>Reference to the resource.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1ClusterUsageSpecByResourceRef
@@ -181,30 +207,4 @@ public partial class V1beta1ClusterUsage : IKubernetesObject<V1ObjectMeta>, ISpe
     /// <summary>UsageStatus defines the observed state of Usage.</summary>
     [JsonPropertyName("status")]
     public V1beta1ClusterUsageStatus? Status { get; set; }
-}
-
-/// <summary>A ClusterUsage defines a deletion blocking relationship between two resources.  Usages prevent accidental deletion of a single resource or deletion of resources with dependent resources.  Read the Crossplane documentation for [more information about usages](https://docs.crossplane.io/latest/concepts/usages).</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1ClusterUsageList : IKubernetesObject<V1ListMeta>, IItems<V1beta1ClusterUsage>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "ClusterUsageList";
-    public const string KubeGroup = "protection.crossplane.io";
-    public const string KubePluralName = "clusterusages";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1ClusterUsage> Items { get; set; }
 }

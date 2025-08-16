@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.cloudfront.aws.upbound.io;
+/// <summary>PublicKey is the Schema for the PublicKeys API. Provides a CloudFront Public Key which you add to CloudFront to use with features like field-level encryption.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1PublicKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PublicKey>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "PublicKeyList";
+    public const string KubeGroup = "cloudfront.aws.upbound.io";
+    public const string KubePluralName = "publickeys";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1PublicKey> Items { get; set; }
+}
+
 /// <summary>The encoded public key that you want to add to CloudFront to use with features like field-level encryption.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1PublicKeySpecForProviderEncodedKeySecretRef
@@ -243,30 +269,4 @@ public partial class V1beta1PublicKey : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>PublicKeyStatus defines the observed state of PublicKey.</summary>
     [JsonPropertyName("status")]
     public V1beta1PublicKeyStatus? Status { get; set; }
-}
-
-/// <summary>PublicKey is the Schema for the PublicKeys API. Provides a CloudFront Public Key which you add to CloudFront to use with features like field-level encryption.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1PublicKeyList : IKubernetesObject<V1ListMeta>, IItems<V1beta1PublicKey>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "PublicKeyList";
-    public const string KubeGroup = "cloudfront.aws.upbound.io";
-    public const string KubePluralName = "publickeys";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1PublicKey> Items { get; set; }
 }

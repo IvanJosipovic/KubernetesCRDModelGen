@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.backupdr.cnrm.cloud.google.com;
+/// <summary>BackupDRManagementServer is the Schema for the BackupDRManagementServer API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1BackupDRManagementServerList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BackupDRManagementServer>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "BackupDRManagementServerList";
+    public const string KubeGroup = "backupdr.cnrm.cloud.google.com";
+    public const string KubePluralName = "backupdrmanagementservers";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1BackupDRManagementServer> Items { get; set; }
+}
+
 /// <summary>Optional. The resource name of the Google Compute Engine VPC network to which the ManagementServer instance is connected.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1BackupDRManagementServerSpecNetworksNetworkRef
@@ -246,30 +272,4 @@ public partial class V1alpha1BackupDRManagementServer : IKubernetesObject<V1Obje
     /// <summary>BackupDRManagementServerStatus defines the config connector machine state of BackupDRManagementServer</summary>
     [JsonPropertyName("status")]
     public V1alpha1BackupDRManagementServerStatus? Status { get; set; }
-}
-
-/// <summary>BackupDRManagementServer is the Schema for the BackupDRManagementServer API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1BackupDRManagementServerList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1BackupDRManagementServer>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "BackupDRManagementServerList";
-    public const string KubeGroup = "backupdr.cnrm.cloud.google.com";
-    public const string KubePluralName = "backupdrmanagementservers";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1BackupDRManagementServer> Items { get; set; }
 }

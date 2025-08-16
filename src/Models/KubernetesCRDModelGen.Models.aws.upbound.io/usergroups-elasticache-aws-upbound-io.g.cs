@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.elasticache.aws.upbound.io;
+/// <summary>UserGroup is the Schema for the UserGroups API. Provides an ElastiCache user group.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1UserGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserGroup>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "UserGroupList";
+    public const string KubeGroup = "elasticache.aws.upbound.io";
+    public const string KubePluralName = "usergroups";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1UserGroup> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1UserGroupSpecForProviderUserIdRefsPolicy
@@ -349,30 +375,4 @@ public partial class V1beta1UserGroup : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>UserGroupStatus defines the observed state of UserGroup.</summary>
     [JsonPropertyName("status")]
     public V1beta1UserGroupStatus? Status { get; set; }
-}
-
-/// <summary>UserGroup is the Schema for the UserGroups API. Provides an ElastiCache user group.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1UserGroupList : IKubernetesObject<V1ListMeta>, IItems<V1beta1UserGroup>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "UserGroupList";
-    public const string KubeGroup = "elasticache.aws.upbound.io";
-    public const string KubePluralName = "usergroups";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1UserGroup> Items { get; set; }
 }

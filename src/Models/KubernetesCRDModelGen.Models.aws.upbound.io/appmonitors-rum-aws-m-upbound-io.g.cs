@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.rum.aws.m.upbound.io;
+/// <summary>AppMonitor is the Schema for the AppMonitors API. Provides a CloudWatch RUM App Monitor resource.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1AppMonitorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppMonitor>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "AppMonitorList";
+    public const string KubeGroup = "rum.aws.m.upbound.io";
+    public const string KubePluralName = "appmonitors";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1AppMonitor> Items { get; set; }
+}
+
 /// <summary>configuration data for the app monitor. See app_monitor_configuration below.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1AppMonitorSpecForProviderAppMonitorConfiguration
@@ -394,30 +420,4 @@ public partial class V1beta1AppMonitor : IKubernetesObject<V1ObjectMeta>, ISpec<
     /// <summary>AppMonitorStatus defines the observed state of AppMonitor.</summary>
     [JsonPropertyName("status")]
     public V1beta1AppMonitorStatus? Status { get; set; }
-}
-
-/// <summary>AppMonitor is the Schema for the AppMonitors API. Provides a CloudWatch RUM App Monitor resource.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1AppMonitorList : IKubernetesObject<V1ListMeta>, IItems<V1beta1AppMonitor>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "AppMonitorList";
-    public const string KubeGroup = "rum.aws.m.upbound.io";
-    public const string KubePluralName = "appmonitors";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1AppMonitor> Items { get; set; }
 }

@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.dns.gcp.m.upbound.io;
+/// <summary>RecordSet is the Schema for the RecordSets API. Manages a set of DNS records within Google Cloud DNS.</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1beta1RecordSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RecordSet>
+{
+    public const string KubeApiVersion = "v1beta1";
+    public const string KubeKind = "RecordSetList";
+    public const string KubeGroup = "dns.gcp.m.upbound.io";
+    public const string KubePluralName = "recordsets";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1beta1RecordSet> Items { get; set; }
+}
+
 /// <summary>Policies for referencing.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1beta1RecordSetSpecForProviderManagedZoneRefPolicy
@@ -1939,30 +1965,4 @@ public partial class V1beta1RecordSet : IKubernetesObject<V1ObjectMeta>, ISpec<V
     /// <summary>RecordSetStatus defines the observed state of RecordSet.</summary>
     [JsonPropertyName("status")]
     public V1beta1RecordSetStatus? Status { get; set; }
-}
-
-/// <summary>RecordSet is the Schema for the RecordSets API. Manages a set of DNS records within Google Cloud DNS.</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1beta1RecordSetList : IKubernetesObject<V1ListMeta>, IItems<V1beta1RecordSet>
-{
-    public const string KubeApiVersion = "v1beta1";
-    public const string KubeKind = "RecordSetList";
-    public const string KubeGroup = "dns.gcp.m.upbound.io";
-    public const string KubePluralName = "recordsets";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1beta1RecordSet> Items { get; set; }
 }

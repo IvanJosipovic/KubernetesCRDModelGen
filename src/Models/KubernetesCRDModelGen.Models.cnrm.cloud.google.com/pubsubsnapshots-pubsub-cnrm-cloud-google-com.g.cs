@@ -8,6 +8,32 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.Models.pubsub.cnrm.cloud.google.com;
+/// <summary>PubSubSnapshot is the Schema for the PubSubSnapshot API</summary>
+[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
+public partial class V1alpha1PubSubSnapshotList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1PubSubSnapshot>
+{
+    public const string KubeApiVersion = "v1alpha1";
+    public const string KubeKind = "PubSubSnapshotList";
+    public const string KubeGroup = "pubsub.cnrm.cloud.google.com";
+    public const string KubePluralName = "pubsubsnapshots";
+    /// <summary></summary>
+    [JsonPropertyName("apiVersion")]
+    public string ApiVersion { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("kind")]
+    public string Kind { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("metadata")]
+    public V1ListMeta Metadata { get; set; }
+
+    /// <summary></summary>
+    [JsonPropertyName("items")]
+    public IList<V1alpha1PubSubSnapshot> Items { get; set; }
+}
+
 /// <summary>The Project that this resource belongs to.</summary>
 [global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class V1alpha1PubSubSnapshotSpecProjectRef
@@ -172,30 +198,4 @@ public partial class V1alpha1PubSubSnapshot : IKubernetesObject<V1ObjectMeta>, I
     /// <summary>PubSubSnapshotStatus defines the config connector machine state of PubSubSnapshot</summary>
     [JsonPropertyName("status")]
     public V1alpha1PubSubSnapshotStatus? Status { get; set; }
-}
-
-/// <summary>PubSubSnapshot is the Schema for the PubSubSnapshot API</summary>
-[global::System.CodeDom.Compiler.GeneratedCode("KubernetesCRDModelGen.Tool", "1.0.0.0"), global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-[KubernetesEntity(Group = KubeGroup, Kind = KubeKind, ApiVersion = KubeApiVersion, PluralName = KubePluralName)]
-public partial class V1alpha1PubSubSnapshotList : IKubernetesObject<V1ListMeta>, IItems<V1alpha1PubSubSnapshot>
-{
-    public const string KubeApiVersion = "v1alpha1";
-    public const string KubeKind = "PubSubSnapshotList";
-    public const string KubeGroup = "pubsub.cnrm.cloud.google.com";
-    public const string KubePluralName = "pubsubsnapshots";
-    /// <summary></summary>
-    [JsonPropertyName("apiVersion")]
-    public string ApiVersion { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("kind")]
-    public string Kind { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("metadata")]
-    public V1ListMeta Metadata { get; set; }
-
-    /// <summary></summary>
-    [JsonPropertyName("items")]
-    public IList<V1alpha1PubSubSnapshot> Items { get; set; }
 }
