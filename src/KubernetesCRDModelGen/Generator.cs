@@ -152,7 +152,6 @@ public class Generator : IGenerator
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{CleanIdentifier(version + " " + name)}>")));
-            types.Add(@classList);
 
             // Create an attribute syntax for the KubernetesEntity attribute
             var kubernetesEntityAttribute = SyntaxFactory.Attribute(
@@ -258,6 +257,7 @@ public class Generator : IGenerator
 
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
             @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
+            types.Add(@classList);
         }
 
         if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var preserve) && preserve is JsonNodeExtension preserve1 && preserve1.Node.GetValueKind() == JsonValueKind.True)
