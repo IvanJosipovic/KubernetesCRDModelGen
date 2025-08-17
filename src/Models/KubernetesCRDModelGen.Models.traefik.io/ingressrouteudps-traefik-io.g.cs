@@ -59,7 +59,7 @@ public partial class V1alpha1IngressRouteUDPSpecRoutesServices
 
     /// <summary>Port defines the port of a Kubernetes Service. This can be a reference to a named port.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Weight defines the weight used when balancing requests between multiple Kubernetes Service.</summary>
     [JsonPropertyName("weight")]

@@ -990,7 +990,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1020,7 +1020,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1092,7 +1092,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1122,7 +1122,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLife
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1224,7 +1224,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1243,7 +1243,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersLive
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1381,7 +1381,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1400,7 +1400,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersRead
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1706,7 +1706,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1725,7 +1725,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecContainersStar
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2171,7 +2171,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2201,7 +2201,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2273,7 +2273,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2303,7 +2303,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2405,7 +2405,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2424,7 +2424,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2562,7 +2562,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2581,7 +2581,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2887,7 +2887,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2906,7 +2906,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecEphemeralConta
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3348,7 +3348,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3378,7 +3378,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3450,7 +3450,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3480,7 +3480,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3582,7 +3582,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3601,7 +3601,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3739,7 +3739,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3758,7 +3758,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -4064,7 +4064,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -4083,7 +4083,7 @@ public partial class V1alpha1ScaledJobSpecJobTargetRefTemplateSpecInitContainers
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 

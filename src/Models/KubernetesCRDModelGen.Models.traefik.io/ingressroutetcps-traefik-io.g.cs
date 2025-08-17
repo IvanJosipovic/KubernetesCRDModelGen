@@ -85,7 +85,7 @@ public partial class V1alpha1IngressRouteTCPSpecRoutesServices
 
     /// <summary>Port defines the port of a Kubernetes Service. This can be a reference to a named port.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>ProxyProtocol defines the PROXY protocol configuration. More info: https://doc.traefik.io/traefik/v3.5/routing/services/#proxy-protocol</summary>
     [JsonPropertyName("proxyProtocol")]

@@ -1231,7 +1231,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1261,7 +1261,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePostStartTcpSock
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1333,7 +1333,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1363,7 +1363,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLifecyclePreStopTcpSocket
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1469,7 +1469,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1488,7 +1488,7 @@ public partial class V1PoolerSpecTemplateSpecContainersLivenessProbeTcpSocket
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1626,7 +1626,7 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1645,7 +1645,7 @@ public partial class V1PoolerSpecTemplateSpecContainersReadinessProbeTcpSocket
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -1951,7 +1951,7 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -1970,7 +1970,7 @@ public partial class V1PoolerSpecTemplateSpecContainersStartupProbeTcpSocket
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2416,7 +2416,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2446,7 +2446,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePostSta
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2518,7 +2518,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2548,7 +2548,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLifecyclePreStop
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2654,7 +2654,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeHtt
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2673,7 +2673,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersLivenessProbeTcp
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -2811,7 +2811,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeHt
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -2830,7 +2830,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersReadinessProbeTc
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3136,7 +3136,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeHttp
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3155,7 +3155,7 @@ public partial class V1PoolerSpecTemplateSpecEphemeralContainersStartupProbeTcpS
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3597,7 +3597,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartHtt
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3627,7 +3627,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePostStartTcp
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3699,7 +3699,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopHttpG
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3729,7 +3729,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLifecyclePreStopTcpSo
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3835,7 +3835,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -3854,7 +3854,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersLivenessProbeTcpSocke
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -3992,7 +3992,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -4011,7 +4011,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersReadinessProbeTcpSock
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 
@@ -4317,7 +4317,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeHttpGet
 
     /// <summary>Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 
     /// <summary>Scheme to use for connecting to the host. Defaults to HTTP.</summary>
     [JsonPropertyName("scheme")]
@@ -4336,7 +4336,7 @@ public partial class V1PoolerSpecTemplateSpecInitContainersStartupProbeTcpSocket
 
     /// <summary>Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.</summary>
     [JsonPropertyName("port")]
-    public IntstrIntOrString Port { get; set; }
+    public IntstrIntOrString? Port { get; set; }
 }
 #nullable disable
 

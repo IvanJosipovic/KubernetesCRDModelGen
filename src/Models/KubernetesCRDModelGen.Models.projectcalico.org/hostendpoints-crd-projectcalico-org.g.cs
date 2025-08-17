@@ -51,7 +51,7 @@ public partial class V1HostEndpointSpecPorts
 
     /// <summary></summary>
     [JsonPropertyName("protocol")]
-    public IntstrIntOrString Protocol { get; set; }
+    public IntstrIntOrString? Protocol { get; set; }
 }
 #nullable disable
 
