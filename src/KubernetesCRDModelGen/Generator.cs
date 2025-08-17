@@ -1,5 +1,4 @@
 using Humanizer;
-using k8s;
 using k8s.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -7,18 +6,16 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
-using System.CodeDom.Compiler;
-using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Xml;
 using System.Xml.Linq;
-using YamlDotNet.Core.Tokens;
 
 namespace KubernetesCRDModelGen;
 
+/// <inheritdoc/>
 public class Generator : IGenerator
 {
     public readonly ILogger<Generator> logger;
@@ -27,11 +24,11 @@ public class Generator : IGenerator
 
     private readonly MetadataReference[] _metadataReferences;
 
-    private const string KubePreserveUnkownFields = "x-kubernetes-preserve-unknown-fields";
+    private const string KubePreserveUnknownFields = "x-kubernetes-preserve-unknown-fields";
 
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
 
-    private const bool EnumSupport = false;
+    private bool EnumSupport = false;
 
     private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
         .WithConcurrentBuild(true)
@@ -47,11 +44,76 @@ public class Generator : IGenerator
             new("CS1702", ReportDiagnostic.Suppress)
         ]);
 
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Generator"/> class.
+    /// </summary>
+    /// <param name="logger">The logger to use for logging messages.</param>
     public Generator(ILogger<Generator> logger)
     {
         this.logger = logger;
 
         _metadataReferences ??= GetReferences();
+    }
+
+    /// <inheritdoc/>
+    public (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
+    {
+        try
+        {
+            var code = GenerateCompilationUnit(crd, @namespace);
+
+            var compilation = CSharpCompilation.Create(
+                crd.Metadata.Name,
+                syntaxTrees: [code.SyntaxTree],
+                references: _metadataReferences,
+                options: _options);
+
+            using var peStream = new MemoryStream();
+            using var xmlDocumentationStream = new MemoryStream();
+
+            var result = compilation.Emit(peStream, xmlDocumentationStream: xmlDocumentationStream);
+
+            if (!result.Success)
+            {
+                var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
+
+                foreach (var diagnostic in failures)
+                {
+                    logger.LogError("Error creating Assembly: {id}: {message}", diagnostic.Id, diagnostic.GetMessage());
+                }
+            }
+            else
+            {
+                peStream.Seek(0, SeekOrigin.Begin);
+                var assembly = Assembly.Load(peStream.ToArray());
+
+                xmlDocumentationStream.Seek(0, SeekOrigin.Begin);
+                var xml = new XmlDocument();
+                xml.Load(xmlDocumentationStream);
+
+                return (assembly, xml);
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex, "Error creating Assembly");
+        }
+
+        return (null, null);
+    }
+
+    /// <inheritdoc/>
+    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
+    {
+        var code = GenerateCompilationUnit(crd, @namespace);
+
+        return code.NormalizeWhitespace().ToFullString();
+    }
+
+    /// <inheritdoc/>
+    public void SetEnumSupport(bool enabled)
+    {
+        EnumSupport = enabled;
     }
 
     private CompilationUnitSyntax GenerateCompilationUnit(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
@@ -266,7 +328,7 @@ public class Generator : IGenerator
             types.Add(@classList);
         }
 
-        if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var preserve) && preserve is JsonNodeExtension preserve1 && preserve1.Node.GetValueKind() == JsonValueKind.True)
+        if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnknownFields, out var preserve) && preserve is JsonNodeExtension preserve1 && preserve1.Node.GetValueKind() == JsonValueKind.True)
         {            // Create property
 
             var property = SyntaxFactory.PropertyDeclaration(
@@ -347,9 +409,9 @@ public class Generator : IGenerator
         return [.. types];
     }
 
-    private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> classes, string parentClassName, string propertyName)
+    private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
-        if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnkownFields, out var value2) && value2 is JsonNodeExtension value3 && value3.Node.GetValueKind() == JsonValueKind.True)
+        if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnknownFields, out var value2) && value2 is JsonNodeExtension value3 && value3.Node.GetValueKind() == JsonValueKind.True)
         {
             return nameof(JsonNode);
         }
@@ -362,10 +424,9 @@ public class Generator : IGenerator
         {
             case JsonSchemaType.Null | JsonSchemaType.Object:
             case JsonSchemaType.Object:
-
                 if (schema.AdditionalProperties != null)
                 {
-                    return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, classes, parentClassName, propertyName)}>";
+                    return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, types, parentClassName, propertyName)}>";
                 }
                 else
                 {
@@ -373,9 +434,9 @@ public class Generator : IGenerator
 
                     foreach (var newClass in nestedClasses)
                     {
-                        if (!classes.Any(x => x.Identifier.Text == newClass.Identifier.Text))
+                        if (!types.Any(x => x.Identifier.Text == newClass.Identifier.Text))
                         {
-                            classes.AddRange(nestedClasses);
+                            types.AddRange(nestedClasses);
                         }
                     }
 
@@ -383,12 +444,8 @@ public class Generator : IGenerator
                 }
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
-
-                if (EnumSupport && schema.Enum.Any())
-                {
-                    return GenerateEnum(schema, classes, parentClassName, propertyName);
-                }
-
+                if (EnumSupport && schema.Enum != null && schema.Enum.Any())
+                    return GenerateEnum(schema, types, parentClassName, propertyName);
                 return "string";
             case JsonSchemaType.Null | JsonSchemaType.Number:
             case JsonSchemaType.Number:
@@ -405,15 +462,15 @@ public class Generator : IGenerator
             case JsonSchemaType.Null | JsonSchemaType.Array:
             case JsonSchemaType.Array:
 
-                if (EnumSupport && schema.Enum.Any())
+                if (EnumSupport && schema.Enum != null && schema.Enum.Any())
                 {
-                    return $"IList<{GenerateEnum(schema, classes, parentClassName, propertyName)}>";
+                    return $"IList<{GenerateEnum(schema, types, parentClassName, propertyName)}>";
                 }
 
-                return $"IList<{GetOrGenerateType(schema.Items, classes, parentClassName, propertyName)}>";
+                return $"IList<{GetOrGenerateType(schema.Items, types, parentClassName, propertyName)}>";
+            default:
+                throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
         }
-
-        throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
     }
 
     private static string GenerateEnum(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
@@ -560,7 +617,7 @@ public class Generator : IGenerator
         return propDecleration;
     }
 
-    public static string? CleanIdentifier(string name, bool @namespace = false)
+    internal static string? CleanIdentifier(string name, bool @namespace = false)
     {
         // trim off leading and trailing whitespace
         name = name.Trim();
@@ -624,53 +681,6 @@ public class Generator : IGenerator
         return result;
     }
 
-    /// <inheritdoc/>
-    public (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
-    {
-        try
-        {
-            var code = GenerateCompilationUnit(crd, @namespace);
-
-            var compilation = CSharpCompilation.Create(
-                crd.Metadata.Name,
-                syntaxTrees: [code.SyntaxTree],
-                references: _metadataReferences,
-                options: _options);
-
-            using var peStream = new MemoryStream();
-            using var xmlDocumentationStream = new MemoryStream();
-
-            var result = compilation.Emit(peStream, xmlDocumentationStream: xmlDocumentationStream);
-
-            if (!result.Success)
-            {
-                var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
-
-                foreach (var diagnostic in failures)
-                {
-                    logger.LogError("Error creating Assembly: {0}: {1}", diagnostic.Id, diagnostic.GetMessage());
-                }
-            }
-            else
-            {
-                peStream.Seek(0, SeekOrigin.Begin);
-                var assembly = Assembly.Load(peStream.ToArray());
-
-                xmlDocumentationStream.Seek(0, SeekOrigin.Begin);
-                var xml = new XmlDocument();
-                xml.Load(xmlDocumentationStream);
-
-                return (assembly, xml);
-            }
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Error creating Assembly");
-        }
-
-        return (null, null);
-    }
-
     private MetadataReference[] GetReferences()
     {
         var references = new List<MetadataReference>();
@@ -687,14 +697,6 @@ public class Generator : IGenerator
         }
 
         return [.. references];
-    }
-
-    /// <inheritdoc/>
-    public string GenerateCode(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
-    {
-        var code = GenerateCompilationUnit(crd, @namespace);
-
-        return code.NormalizeWhitespace().ToString();
     }
 
     private static string XmlString(string text)

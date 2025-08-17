@@ -1,4 +1,3 @@
-
 using k8s.Models;
 using k8s;
 using KubernetesCRDModelGen;
