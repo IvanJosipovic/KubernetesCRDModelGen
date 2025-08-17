@@ -7,8 +7,6 @@ on:
       - 'main'
       - 'alpha'
       - 'beta'
-      - 'dev'
-      - 'sync-charts'
   pull_request:
     types: [opened, reopened, synchronize]
 
