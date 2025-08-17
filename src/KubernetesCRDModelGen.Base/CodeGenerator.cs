@@ -15,7 +15,7 @@ namespace KubernetesCRDModelGen;
 /// <inheritdoc/>
 public class CodeGenerator : ICodeGenerator
 {
-    public readonly ILogger<CodeGenerator> logger;
+    private readonly ILogger<CodeGenerator> logger;
 
     private const string KubePreserveUnknownFields = "x-kubernetes-preserve-unknown-fields";
 

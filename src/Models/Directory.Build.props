@@ -16,6 +16,7 @@
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
+        <NoWarn>CS1591,CS8618</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>

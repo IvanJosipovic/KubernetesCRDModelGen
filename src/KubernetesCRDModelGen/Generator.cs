@@ -1,4 +1,3 @@
-using Humanizer;
 using k8s.Models;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -7,24 +6,21 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using System.Reflection;
-using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using System.Xml;
-using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen;
 
 /// <inheritdoc/>
 public class Generator : IGenerator
 {
-    public readonly ILogger<Generator> logger;
+    public const string ModelNamespace = "KubernetesCRDModelGen.Models";
+
+    private readonly ILogger<Generator> logger;
 
     private readonly CodeGenerator codeGenerator;
 
-    public const string ModelNamespace = "KubernetesCRDModelGen.Models";
-
-    private readonly MetadataReference[] _metadataReferences;
+    private readonly MetadataReference[] metadataReferences;
 
     private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
         .WithConcurrentBuild(true)
@@ -46,9 +42,15 @@ public class Generator : IGenerator
     /// <param name="logger">The logger to use for logging messages.</param>
     public Generator(ILoggerFactory loggerFactory)
     {
-        this.logger = loggerFactory.CreateLogger<Generator>();
-        this.codeGenerator = new CodeGenerator(loggerFactory.CreateLogger<CodeGenerator>());
-        _metadataReferences ??= GetReferences();
+        logger = loggerFactory.CreateLogger<Generator>();
+        codeGenerator = new CodeGenerator(loggerFactory.CreateLogger<CodeGenerator>());
+        metadataReferences ??= GetReferences();
+    }
+
+    /// <inheritdoc/>
+    public void SetEnumSupport(bool enabled)
+    {
+        codeGenerator.SetEnumSupport(enabled);
     }
 
     /// <inheritdoc/>
@@ -61,7 +63,7 @@ public class Generator : IGenerator
             var compilation = CSharpCompilation.Create(
                 crd.Metadata.Name,
                 syntaxTrees: [code.SyntaxTree],
-                references: _metadataReferences,
+                references: metadataReferences,
                 options: _options);
 
             using var peStream = new MemoryStream();
@@ -126,12 +128,6 @@ public class Generator : IGenerator
         var code = codeGenerator.GenerateCompilationUnit(doc, @namespace, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
 
         return code;
-    }
-
-    /// <inheritdoc/>
-    public void SetEnumSupport(bool enabled)
-    {
-        codeGenerator.SetEnumSupport(enabled);
     }
 
     private MetadataReference[] GetReferences()

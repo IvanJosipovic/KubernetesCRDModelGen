@@ -19,7 +19,7 @@ This project contains components which allow generation of C# Classes/Assemblies
   ```
   var crd = KubernetesYaml.LoadAllFromString(yaml);
   var fac = new LoggerFactory();
-  var generator = new Generator(fac.CreateLogger<Generator>());
+  var generator = new Generator(fac);
   var code = generator.GenerateCode(crd);
   var assembly = generator.GenerateAssembly(crd)
   ```

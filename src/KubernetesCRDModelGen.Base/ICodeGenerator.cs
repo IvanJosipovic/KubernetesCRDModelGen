@@ -11,9 +11,14 @@ public interface ICodeGenerator
     /// <summary>
     /// Generates source code from the given schema with the containing types.
     /// </summary>
-    /// <param name="crd">The custom resource definition.</param>
+    /// <param name="schema">Schema to generate</param>
     /// <param name="namespace">The namespace to use for the generated code.</param>
-    /// <returns>A string containing the generated source code.</returns>
+    /// <param name="version">Api Version</param>
+    /// <param name="kind">Kube Kind</param>
+    /// <param name="group">Api Group</param>
+    /// <param name="plural">Kube Plural</param>
+    /// <param name="listKind">Kube List Kind</param>
+    /// <returns>CompilationUnitSyntax with the generated source code.</returns>
     CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind);
 
     /// <summary>
