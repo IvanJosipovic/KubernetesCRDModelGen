@@ -26,6 +26,6 @@
     <ItemGroup>
         <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
         <AdditionalFiles Include="*.yaml" />
-        <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+        <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
     </ItemGroup>
 </Project>

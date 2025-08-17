@@ -18,6 +18,8 @@
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -30,11 +32,32 @@
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\KubernetesCRDModelGen.Base.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <!--<PackageReference Include="System.Collections" Version="4.3.0" GeneratePathProperty="true" PrivateAssets="all" />
-        <None Include="$(PKGSystem_Collections)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />-->
-
         <PackageReference Include="System.Text.Json" Version="9.0.8" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.8" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_Threading_Tasks_Extensions)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_Runtime_CompilerServices_Unsafe)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.IO.Pipelines" Version="9.0.8" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_IO_Pipelines)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.Buffers" Version="4.6.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_Buffers)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.Memory" Version="4.6.3" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_Memory)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.Numerics.Vectors" Version="4.6.1" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_Numerics_Vectors)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+        <PackageReference Include="System.Text.Encodings.Web" Version="9.0.8" GeneratePathProperty="true" PrivateAssets="all" />
+        <None Include="$(PKGSystem_Text_Encodings_Web)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="YamlDotNet" Version="16.3.0" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGYamlDotNet)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
@@ -49,7 +72,31 @@
         <None Include="$(PKGHumanizer_Core)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
+    </PropertyGroup>
+
+    <Target Name="GetDependencyTargetPaths">
+        <ItemGroup>
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGHumanizer_Core)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGMicrosoft_OpenApi)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Buffers)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_IO_Pipelines)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Memory)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Numerics_Vectors)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Runtime_CompilerServices_Unsafe)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Text_Encodings_Web)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGSystem_Threading_Tasks_Extensions)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGYamlDotNet)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+            <TargetPathWithTargetPlatformMoniker Include="$(PKGYamlDotNet_System_Text_Json)\lib\netstandard2.0\*.dll" IncludeRuntimeDependency="false" />
+        </ItemGroup>
+    </Target>
+
     <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
         <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" PrivateAssets="all" />
         <Analyzer Include="..\KubernetesCRDModelGen.Base\bin\$(Configuration)\netstandard2.0\KubernetesCRDModelGen.Base.dll" Pack="true" PackagePath="analyzers/dotnet/cs" />
     </ItemGroup>

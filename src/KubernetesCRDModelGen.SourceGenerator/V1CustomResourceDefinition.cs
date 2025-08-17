@@ -1,6 +1,6 @@
 ﻿using Microsoft.OpenApi;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.SourceGenerator;
@@ -35,7 +35,7 @@ public class V1CustomResourceDefinitionNames
 public class V1CustomResourceValidation
 {
     [JsonPropertyName("openAPIV3Schema")]
-    public IOpenApiSchema OpenAPIV3Schema { get; set; }
+    public JsonNode OpenAPIV3Schema { get; set; }
 }
 
 public class V1CustomResourceDefinitionVersion
