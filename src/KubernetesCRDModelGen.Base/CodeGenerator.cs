@@ -3,7 +3,6 @@ using KubernetesCRDModelGen.Base;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using System.Text;
 using System.Text.Json;
@@ -15,8 +14,6 @@ namespace KubernetesCRDModelGen;
 /// <inheritdoc/>
 public class CodeGenerator : ICodeGenerator
 {
-    private readonly ILogger<CodeGenerator> logger;
-
     private const string KubePreserveUnknownFields = "x-kubernetes-preserve-unknown-fields";
 
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
@@ -26,10 +23,8 @@ public class CodeGenerator : ICodeGenerator
     /// <summary>
     /// Initializes a new instance of the <see cref="CodeGenerator"/> class.
     /// </summary>
-    /// <param name="logger">The logger to use for logging messages.</param>
-    public CodeGenerator(ILogger<CodeGenerator> logger)
+    public CodeGenerator()
     {
-        this.logger = logger;
     }
 
     /// <inheritdoc/>

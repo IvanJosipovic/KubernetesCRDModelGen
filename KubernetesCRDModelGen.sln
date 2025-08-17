@@ -80,6 +80,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.Base", "src\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj", "{A37063BF-96C8-D1D8-E802-29CBE2104ED8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubernetesCRDModelGen.SourceGenerator", "src\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj", "{440FC511-D68E-19CD-3E38-88A018153DB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -450,6 +452,18 @@ Global
 		{A37063BF-96C8-D1D8-E802-29CBE2104ED8}.Release|x64.Build.0 = Release|Any CPU
 		{A37063BF-96C8-D1D8-E802-29CBE2104ED8}.Release|x86.ActiveCfg = Release|Any CPU
 		{A37063BF-96C8-D1D8-E802-29CBE2104ED8}.Release|x86.Build.0 = Release|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Debug|x64.Build.0 = Debug|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Debug|x86.Build.0 = Debug|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Release|x64.ActiveCfg = Release|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Release|x64.Build.0 = Release|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Release|x86.ActiveCfg = Release|Any CPU
+		{440FC511-D68E-19CD-3E38-88A018153DB7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -486,6 +500,7 @@ Global
 		{FB2E82C0-55B7-4DE5-916B-646A9024E2E0} = {56B11293-0CCD-EE49-5B1D-A659D7924B1D}
 		{135D2F52-3256-4D4D-A7C0-0A01171B0575} = {56B11293-0CCD-EE49-5B1D-A659D7924B1D}
 		{A37063BF-96C8-D1D8-E802-29CBE2104ED8} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
+		{440FC511-D68E-19CD-3E38-88A018153DB7} = {ADEAADA0-E242-41C9-8260-01241B2C4D3B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {85C5FEF7-AB6B-473B-8EC8-C2B35531DA80}

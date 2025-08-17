@@ -43,7 +43,7 @@ public class Generator : IGenerator
     public Generator(ILoggerFactory loggerFactory)
     {
         logger = loggerFactory.CreateLogger<Generator>();
-        codeGenerator = new CodeGenerator(loggerFactory.CreateLogger<CodeGenerator>());
+        codeGenerator = new CodeGenerator();
         metadataReferences ??= GetReferences();
     }
 
